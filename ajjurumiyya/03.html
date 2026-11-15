@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>علامات الرفع — الدرس الثالث من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">علاماتُ الرفعِ</h1>
+    <div class="cover-sub">الدرس الثالث: بابُ معرفةِ علاماتِ الإعرابِ — علاماتُ الرفعِ الأربعُ مع التمرينات</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=CQnlI_0mu4k" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس ومراجعةُ الدرسين السابقَين</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتن ونظمُ الشنقيطيِّ</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">الرفعُ يختصُّ بالعُمَدِ، والعلاماتُ أصليّةٌ وفرعيّةٌ</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">العلامةُ الأصليّةُ: الضمّةُ ومواضعُها الأربعةُ</a><span class="dots"></span></li>
+    <li><span class="t-num">٥</span><a href="#s5">العلامةُ الفرعيّةُ الأولى: الواوُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#jamak">الجموعُ: تكسيرٌ وتصحيحٌ</a></li>
+        <li><a href="#khamsa">الأسماءُ الخمسةُ وشروطُ إعرابِها بالحروفِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٦</span><a href="#s6">العلامةُ الفرعيّةُ الثانيةُ: الألفُ في المثنى وملحقاتِه</a><span class="dots"></span></li>
+    <li><span class="t-num">٧</span><a href="#s7">العلامةُ الفرعيّةُ الثالثةُ: النونُ في الأمثلةِ الخمسةِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٨</span><a href="#s8">التمريناتُ والتطبيقاتُ القرآنيّةُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t81">أسئلةٌ على العلاماتِ</a></li>
+        <li><a href="#t82">تأمُّلُ الآياتِ: استخراجُ المرفوعاتِ وعلاماتِها</a></li>
+        <li><a href="#t83">الجدولُ التلخيصيُّ للتطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٩</span><a href="#s9">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١ افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس ومراجعةُ الدرسين السابقَين</h2></div>
+
+  <p>بسمِ اللهِ الرحمنِ الرحيمِ، الحمدُ للهِ كما ينبغي لجلالِه وكمالِه، وصلَّى اللهُ وسلَّمَ على النبيِّ المصطفى وعلى آلِه. وبعدُ: فمرحبًا بكم أيها الإخوةُ الفضلاءُ والأخواتُ الفضلياتُ في هذا اللقاءِ مع الدرسِ الثالثِ من دروسِ متنِ الآجروميّةِ للإمامِ محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ المغربيِّ.</p>
+
+  <p>وكنا في اللقاءَينِ الماضيَينِ قد بيّنّا الكلامَ على الدرسِ الأولِ وهو عن <b>«الكلام»</b>: بيّنّا مفهومَ الكلامِ وقلنا إنه هو <b>اللفظُ المركَّبُ المفيدُ بالوضعِ</b>، ثم تكلمنا بعدُ عن أقسامِ الكلامِ في اللغةِ العربيةِ — أو أقسامِ الكلمةِ في اللغةِ العربيةِ — وقلنا إنها على ثلاثةِ أقسامٍ هي: <b>الاسمُ والفعلُ والحرفُ</b> (والحرفُ الذي جاء لمعنًى)، ولكلِّ قسمٍ علاماتٌ تميِّزُه عن قسمَيهِ الآخرَينِ.</p>
+
+  <p>ثم تكلمنا بعدَ ذلك على <b>بابِ الإعرابِ</b> في اللغةِ العربيةِ — أو في النحوِ العربيِّ — وقلنا إن الإعرابَ هو <b>أهمُّ ظاهرةٍ نحويةٍ تركيبيّةٍ</b> في اللغةِ العربيةِ، وقلنا إن له عدةَ أركانٍ؛ يعني أن الإعرابَ يتكوَّنُ من:</p>
+  <ul>
+    <li><b>العاملِ</b> الذي يؤثِّرُ في الكلمةِ بعدَ ذلك رفعًا أو نصبًا أو جرًّا — يعني يؤثِّرُ فيها إعرابًا.</li>
+    <li>ثم بعدَ العاملِ عندنا <b>الأثرُ الإعرابيُّ نفسُه</b> — يعني هو الرفعُ أو النصبُ أو الجرُّ أو الجزمُ.</li>
+    <li>ثم بعدَ ذلك تكونُ <b>الوظيفةُ النحويّةُ</b> التي تشغلُها الكلمةُ تحتَ الحالةِ الإعرابيّةِ؛ فإذا كانت الكلمةُ في حالةِ رفعٍ فيجبُ أن تكونَ لها وظيفةٌ نحويّةٌ تحتَ هذه الحالةِ: فحالةُ الرفعِ تحتها وظيفةُ الفاعلِ، ووظيفةُ نائبِ الفاعلِ، ووظيفةُ المبتدأِ، ووظيفةُ الخبرِ، إلى آخرِه — كلُّ هذه وظائفُ تندرجُ تحتَ حالةِ الرفعِ.</li>
+    <li>ثم بعدَ الوظائفِ النحويّةِ التي تندرجُ تحتَ الحالاتِ الإعرابيّةِ — أو الأثرِ الإعرابيِّ — عندنا <b>العلامةُ الإعرابيّةُ</b> التي تكونُ دليلًا على الحالةِ الإعرابيّةِ: حالةُ الرفعِ لها علامةٌ، وحالةُ النصبِ لها علامةٌ، وحالةُ الجرِّ لها علامةٌ، والجزمُ علامةٌ، وهكذا.</li>
+  </ul>
+
+  <p>وهذا — أي العلاماتُ الإعرابيّةُ — هو موضوعُ لقائِنا اليومَ: <b>بابُ معرفةِ علاماتِ الإعرابِ</b>.</p>
+
+  <div class="flow-lane">
+    <span class="chip gold">العاملُ</span><span class="fa">←</span>
+    <span class="chip">الأثرُ الإعرابيُّ (رفعٌ / نصبٌ / جرٌّ / جزمٌ)</span><span class="fa">←</span>
+    <span class="chip">الوظيفةُ النحويّةُ</span><span class="fa">←</span>
+    <span class="chip gold">العلامةُ الإعرابيّةُ</span>
+    <div class="lane-note">تذكيرٌ بأركانِ الإعرابِ التي فُصِّلَتْ في الدرسِ الثاني — وموضوعُ هذا الدرسِ الركنُ الأخيرُ: العلامةُ.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢ المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتن ونظمُ الشنقيطيِّ</h2></div>
+
+  <p>سنقرأُ أولًا ما قالَه ابنُ آجرومَ وما قالَه الناظمُ الذي نظمَ الآجروميّةَ <b>محمدُ بنُ آيشَ الشنقيطيُّ</b> — رحم اللهُ الجميعَ:</p>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«بابُ معرفةِ علاماتِ الإعرابِ: للرفعِ أربعُ علاماتٍ: الضمّةُ، والواوُ، والألفُ، والنونُ.<br>
+    فأما الضمّةُ فتكونُ علامةً للرفعِ في أربعةِ مواضعَ: في الاسمِ المفردِ، وجمعِ التكسيرِ، وجمعِ المؤنثِ السالمِ، والفعلِ المضارعِ الذي لم يتصلْ بآخرِه شيءٌ.<br>
+    وأما الواوُ فتكونُ علامةً للرفعِ في موضعَينِ: في جمعِ المذكرِ السالمِ، وفي الأسماءِ الخمسةِ، وهي: أبوك، وأخوك، وحموك، وفوك، وذو مالٍ.<br>
+    وأما الألفُ فتكونُ علامةً للرفعِ في تثنيةِ الأسماءِ خاصّةً.<br>
+    وأما النونُ فتكونُ علامةً للرفعِ في الفعلِ المضارعِ إذا اتصلَ به ضميرُ تثنيةٍ، أو ضميرُ جمعٍ، أو ضميرُ المؤنثةِ المخاطبةِ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">ضمٌّ وواوٌ وألفٌ والنونُ … علامةُ الرفعِ بها تكونْ</div>
+      <div class="ln">فارفعْ بضمٍّ مُفرَدَ الأسماءِ … كجاءَ زيدٌ صاحبُ العلاءِ</div>
+      <div class="ln">وارفعْ به الجمعَ المكسَّرَ وما جُمِعَ من المؤنثِ كذلكْ</div>
+      <div class="ln">كذا المضارعُ الذي لم يتصلْ … شيءٌ بآخرِه من الضمائرِ</div>
+      <div class="ln">وارفعْ بواوٍ خمسةً: أخوكَ، أبوكْ … ذو مالٍ، حموكَ، فوكْ</div>
+      <div class="ln">وهكذا الجمعُ الصحيحُ فاعرِفِ … ورفعُ ما ثُنِّيَهُ بالألفِ</div>
+      <div class="ln">وارفعْ بنونٍ: يفعلانِ، يفعلونَ … وتفعلانِ، تفعلينَ، تفعلونَ</div>
+    </div>
+    <p class="src">— من نظمِ الآجروميّةِ لمحمدِ بنِ آيشَ الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <p>هذا هو الكلامُ على الحالةِ الأولى من حالاتِ الإعرابِ — <b>حالةِ الرفعِ</b> — وعلاماتُها كما في متنِ الآجروميّةِ. وإلى التفصيلِ الآنَ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣ الرفع والعمدة ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>الرفعُ يختصُّ بالعُمَدِ، والعلاماتُ أصليّةٌ وفرعيّةٌ</h2></div>
+
+  <p>أولًا: <b>الرفعُ</b> — كما قلنا — هو الحالةُ الإعرابيّةُ الأولى من حالاتِ الإعرابِ في اللغةِ العربيةِ. و<b>الرفعُ يختصُّ بالعُمَدِ</b>: يعني كلُّ وظيفةٍ نحويّةٍ تكونُ الكلمةُ فيها مرفوعةً تكونُ <b>عُمْدةً</b>؛ فالفاعلُ عمدةٌ، ونائبُ الفاعلِ عمدةٌ، والمبتدأُ عمدةٌ، والخبرُ عمدةٌ، وهكذا.</p>
+  <p>ومعنى كلمةِ «عمدةٍ» أن التركيبَ <b>لا يستغني عنها أبدًا مطلقًا</b>؛ فالجملةُ الفعليّةُ لا يُتصوَّرُ فيها — أو لا يُتصوَّرُ فيها — عدمُ وجودِ الفاعلِ: الفاعلُ لا بدَّ أن يكونَ مذكورًا، وإذا ذُكرَ الفعلُ فحتامً لا بدَّ أن نبحثَ عن الفاعلِ. فلذلك قلنا إن هذه الوظائفَ النحويّةَ تكونُ عُمدًا في التركيبِ. وعكسُ العمدةِ طبعًا <b>الفضلةُ</b>، كما هو في المنصوباتِ والمجروراتِ.</p>
+
+  <p>قال ابنُ آجرومَ رحمه الله: للرفعِ أربعُ علاماتٍ. والعلاماتُ تنقسمُ عادةً إلى قسمَينِ: <b>علاماتٌ أصليّةٌ</b> و<b>علاماتٌ فرعيّةٌ</b> (أو النائبةُ). فلكلِّ حالةٍ إعرابيّةٍ من الحالاتِ الأربعِ التي ذكرناها في الدرسِ الماضي علامةٌ إعرابيّةٌ واحدةٌ <b>أصليّةٌ</b>: فعلامةُ حالةِ الرفعِ الأصليّةُ هي <b>الضمّةُ</b> (بالتاءِ المربوطةِ). وهناك علاماتٌ أخرى تأتي للكلماتِ المرفوعةِ تسمَّى بالعلاماتِ <b>الفرعيّةِ</b> أو العلاماتِ <b>النائبةِ</b>. والضمّةُ لها مواضعُ، والعلاماتُ الفرعيّةُ لها مواضعُ.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">علاماتُ الرفعِ أربعٌ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-4">
+      <div class="node green">
+        <div class="n-title">الضمّةُ</div>
+        <div class="n-sub"><b>العلامةُ الأصليّةُ</b> — في أربعةِ مواضعَ:<br>الاسمُ المفردُ، جمعُ التكسيرِ، جمعُ المؤنثِ السالمُ، والفعلُ المضارعُ الذي لم يتصلْ بآخرِه شيءٌ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الواوُ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في موضعَينِ:<br>جمعُ المذكرِ السالمِ، والأسماءُ الخمسةُ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الألفُ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في موضعٍ واحدٍ:<br>تثنيةُ الأسماءِ خاصّةً (المثنى وملحقاتُه)</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">النونُ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في موضعٍ واحدٍ:<br>الفعلُ المضارعُ من الأمثلةِ الخمسةِ (ثبوتُ النونِ)</div>
+      </div>
+    </div>
+    <figcaption>شكل (١): الخريطةُ العامّةُ لعلاماتِ الرفعِ — علامةٌ أصليّةٌ وثلاثُ علاماتٍ فرعيّةٍ تنوبُ عنها</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤ الضمة ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>العلامةُ الأصليّةُ: الضمّةُ ومواضعُها الأربعةُ</h2></div>
+
+  <p>المواضعُ التي تكونُ فيها الضمّةُ علامةً للرفعِ أربعةٌ: <b>الاسمُ المفردُ</b>، و<b>جمعُ التكسيرِ</b>، و<b>جمعُ المؤنثِ السالمُ</b>، و<b>الفعلُ المضارعُ</b> الذي لم يتصلْ بآخرِه شيءٌ:</p>
+  <ul>
+    <li><b>الاسمُ المفردُ</b>: وكلمةُ «المفردِ» هنا عكسُ «المثنى» و«المجموعِ»؛ يعني المفردُ هو <b>ما ليس مثنًّى ولا مجموعًا</b> — بهذا المفهومِ.</li>
+    <li><b>جمعُ التكسيرِ</b>: أيضًا تكونُ الضمّةُ علامةً للرفعِ فيه.</li>
+    <li><b>جمعُ المؤنثِ السالمُ</b>: كذلك تكونُ الضمّةُ علامةً للرفعِ فيه.</li>
+    <li><b>الفعلُ المضارعُ</b> الذي لم يتصلْ بآخرِه شيءٌ — أي لم يتصلْ به ضميرُ رفعٍ كواوِ الجماعةِ وألفِ الاثنَينِ وياءِ المخاطبةِ.</li>
+  </ul>
+
+  <h3>الموضعُ الأولُ: الاسمُ المفردُ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَوْلٌ مَّعْرُوفٌ وَمَغْفِرَةٌ خَيْرٌ مِّن صَدَقَةٍ يَتْبَعُهَا أَذًى﴾<span class="ref">سورةُ البقرةِ: ٢٦٣</span></p>
+  </div>
+  <p>إذا تاملنا قولَه تعالى: ﴿قولٌ معروفٌ ومغفرةٌ خيرٌ من صدقةٍ يتبعُها أذًى﴾ نلاحظُ أن كلمةَ <span class="mark">«قولٌ»</span> في «قولٌ معروفٌ ومغفرةٌ خيرٌ» وقعتْ هنا <b>مبتدأً</b>، وهي طبعًا مرفوعةٌ وعلامةُ رفعِها <b>الضمّةُ</b>؛ لأن الكلمةَ هنا مفردٌ كما نرى، فتكونُ علامةُ إعرابِها الضمّةَ. ثم نلاحظُ في آخرِ الآيةِ: «يتَّبعُها <span class="mark">أذًى</span>» — كلمةُ «أذًى» آخرُها ألفٌ، والألفُ لا تظهرُ عليها العلامةُ، ونحن تكلمنا في الدرسِ الماضي على أن هناك نوعًا من الإعرابِ وهو <b>الإعرابُ التقديريُّ</b> في مقابلِ الإعرابِ الظاهريِّ الذي تكونُ العلامةُ فيه ظاهرةً؛ فكلمةُ «أذًى» هنا هي <b>الفاعلُ</b> (لأن الأذى هو الذي يتبعُ الصدقةَ) مرفوعةٌ وعلامةُ رفعِها الضمّةُ المقدَّرةُ على الألفِ <b>للتعذُّرِ</b> — أي مُنِعَ من ظهورِها التعذُّرُ. فهنا أيضًا كلمةُ «أذًى» كانت مرفوعةً وعلامةُ رفعِها الضمّةُ لأنها مفردٌ، وإن كانت الضمّةُ كما رأينا مقدَّرةً.</p>
+  <div class="box note">
+    <span class="tag">تنبيهٌ مهمٌّ</span>
+    <p style="margin:0">هذه نقطةٌ مهمةٌ يجبُ أن ننتبهَ لها ونحن نُعربُ: أن الضمّةَ <b>قد تكونُ ظاهرةً وقد تكونُ مقدَّرةً</b>، والتقديرُ له أسبابٌ متعددةٌ (فُصِّلَتْ في الدرسِ الثاني) وسنعرضُ لها تطبيقًا إن شاء اللهُ.</p>
+  </div>
+
+  <h3>الموضعُ الثاني: جمعُ المؤنثِ السالمُ</h3>
+  <p>جمعُ المؤنثِ السالمِ أيضًا يُرفعُ وتكونُ علامةُ رفعِه الضمّةَ — يعني يُرفعُ بالعلامةِ الأصليّةِ:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَالْوَالِدَاتُ يُرْضِعْنَ أَوْلَادَهُنَّ حَوْلَيْنِ كَامِلَيْنِ لِمَنْ أَرَادَ أَن يُتِمَّ الرَّضَاعَةَ﴾<span class="ref">سورةُ البقرةِ: ٢٣٣</span></p>
+  </div>
+  <p>«الوالداتُ» هنا هي <b>مبتدأٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه</b>، كما رأينا؛ فهي طبعًا العلامةُ هنا أصليّةٌ.</p>
+
+  <h3>الموضعُ الثالثُ: جمعُ التكسيرِ</h3>
+  <p>جمعُ التكسيرِ من الجموعِ التي <b>تُعامَلُ معاملةَ المفردِ في الإعرابِ</b> فتُعرَبُ بالعلاماتِ الأصليّةِ؛ فهنا في حالةِ الرفعِ يكونُ جمعُ التكسيرِ مرفوعًا وعلامةُ رفعِه الضمّةُ:</p>
+  <div class="box example">
+    <span class="tag">مثالٌ</span>
+    <p style="margin:0">إذا قلتَ مثلًا: <span class="mark">«نجحَ الطلابُ جميعُهم»</span> — «الطلابُ» هنا هي <b>الفاعلُ مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه</b>؛ وطبعًا أُعربَ — كما قلنا — بالعلامةِ الأصليّةِ لحالةِ الرفعِ.</p>
+  </div>
+
+  <h3>الموضعُ الرابعُ: الفعلُ المضارعُ الذي لم يتصلْ بآخرِه شيءٌ</h3>
+  <p>أي الفعلُ المضارعُ المرفوعُ الذي لم يتصلْ بآخرِه <b>ضميرُ رفعٍ</b> — كمثلِ واوِ الجماعةِ وألفِ الاثنَينِ وياءِ المخاطبةِ (وسيأتي بيانه).</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الضمّةُ (العلامةُ الأصليّةُ) في أربعةِ مواضعَ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-4">
+      <div class="node green">
+        <div class="n-title">الاسمُ المفردُ</div>
+        <div class="n-sub">ما ليس مثنًّى ولا مجموعًا<br>﴿قولٌ معروفٌ﴾ — «أذًى» (ضمّةٌ مقدَّرةٌ للتعذُّرِ)</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">جمعُ التكسيرِ</div>
+        <div class="n-sub">يُعامَلُ معاملةَ المفردِ<br>«نجحَ الطلابُ جميعُهم»</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">جمعُ المؤنثِ السالمُ</div>
+        <div class="n-sub">﴿والوالداتُ يرضعنَ أولادَهنَّ…﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الفعلُ المضارعُ</div>
+        <div class="n-sub">الذي لم يتصلْ بآخرِه ضميرُ رفعٍ: واوُ الجماعةِ، ألفُ الاثنَينِ، ياءُ المخاطبةِ</div>
+      </div>
+    </div>
+    <figcaption>شكل (٢): مواضعُ الضمّةِ الأربعةُ — وبها ننتهي من الكلامِ على العلامةِ الأصليّةِ الأولى</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥ الواو ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>العلامةُ الفرعيّةُ الأولى: الواوُ</h2></div>
+
+  <p>بعدَ ذلك ننتقلُ إلى <b>العلاماتِ الفرعيّةِ</b>. العلاماتُ الفرعيّةُ ثلاثُ علاماتٍ: العلامةُ الفرعيّةُ الأولى هي <b>الواوُ</b>، والثانيةُ هي <b>الألفُ</b>، والثالثةُ هي <b>النونُ</b>. و<b>الواوُ تكونُ علامةً للرفعِ في موضعَينِ اثنَينِ: في جمعِ المذكرِ السالمِ، وفي الأسماءِ الخمسةِ</b>.</p>
+
+  <h3>الموضعُ الأولُ: جمعُ المذكرِ السالمُ</h3>
+  <p>جمعُ المذكرِ السالمِ هو <b>كلُّ جمعٍ كان مختومًا بالواوِ والنونِ أو الياءِ والنونِ ودلَّ على الجمعِ</b>، وهو طبعًا من نوعَيِ <b>جمعِ التصحيحِ</b>؛ لأن الجموعَ في اللغةِ العربيةِ نوعانِ: <b>جمعُ تكسيرٍ</b> و<b>جمعُ تصحيحٍ</b>:</p>
+
+  <h3 id="jamak">الجموعُ في العربيةِ: تكسيرٌ وتصحيحٌ</h3>
+  <ul>
+    <li><b>جمعُ التكسيرِ</b>: هو الذي <b>تتغيَّرُ بنيةُ المفردِ</b> فتتحوَّلُ إلى بنيةٍ أخرى دالّةٍ على الجمعِ؛ يعني كمثلِ: «طالبٍ / طلابِ»، و«قلمٍ / أقلامِ»، وهكذا — نجدُ أن البنيةَ تكسَّرَتْ في المفردِ فتحوَّلَتْ إلى صيغةٍ أخرى دلَّتْ على معنى الجمعيّةِ بها.</li>
+    <li><b>جمعُ التصحيحِ</b> (أو جموعُ السلامةِ): وهو نوعانِ؛ جمعُ السلامةِ إما أن يكونَ <b>مذكرًا</b> وإما أن يكونَ <b>مؤنثًا</b> — يعني جمعَ المذكرِ السالمَ وجمعَ المؤنثِ السالمَ:
+      <ul>
+        <li><b>جمعُ المؤنثِ السالمُ</b>: قلنا إنه يُعرَبُ بالعلامةِ الأصليّةِ في حالةِ الرفعِ وهي الضمّةُ.</li>
+        <li><b>جمعُ المذكرِ السالمُ</b>: وهو كلُّ جمعٍ اتصلتْ به (لحقتْه) واوٌ ونونٌ أو ياءٌ ونونٌ — طبعًا بحسبِ الإعرابِ، ولكن ما نريده هنا هو حالةُ الرفعِ حين يكونُ بالواوِ والنونِ: <b>الواوُ فيه هي علامةُ الرفعِ</b>.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الجموعُ في اللغةِ العربيةِ نوعانِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node maroon">
+        <div class="n-title">جمعُ التكسيرِ</div>
+        <div class="n-sub">تتغيَّرُ بنيةُ المفردِ إلى صيغةٍ أخرى دالّةٍ على الجمعِ:<br>«طالبٌ / طلابُ» — «قلمٌ / أقلامُ»<br><b>يُعرَبُ بالعلامةِ الأصليّةِ</b> (في الرفعِ: الضمّةُ)</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">جمعُ التصحيحِ (السلامةُ)</div>
+        <div class="n-sub">بنيةُ المفردِ سالمةٌ، ويُلحَقُها زيادةٌ:
+          <ul>
+            <li><b>جمعُ المؤنثِ السالمُ</b> (ألفٌ وتاءٌ): بالضمّةِ في الرفعِ</li>
+            <li><b>جمعُ المذكرِ السالمُ</b> (واوٌ ونونٌ أو ياءٌ ونونٌ): <b>بالواوِ في الرفعِ</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (٣): نوعا الجموعِ — وجمعُ المذكرِ السالمِ يُرفعُ بالواوِ نيابةً عن الضمّةِ</figcaption>
+  </figure>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَدْ أَفْلَحَ الْمُؤْمِنُونَ﴾<span class="ref">سورةُ المؤمنونَ: ١</span></p>
+  </div>
+  <p>إذا تاملنا مثلًا قولَه تعالى: ﴿قد أفلحَ المؤمنونَ﴾ سنجدُ أن لفظَةَ <span class="mark">«المؤمنونَ»</span> هي <b>الفاعلُ للفعلِ «أفلحَ»</b>. وطبعًا «أفلحَ» فعلٌ ماضٍ مبنيٌّ على الفتحِ، و«قد» قبله <b>حرفُ تحقيقٍ</b> مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ — وإذا دخلَ على الماضي أفادَ التأكيدَ والتحقيقَ (كما مرَّ في الدرسِ الأولِ). أما كلمةُ «المؤمنونَ» فهي الفاعلُ <b>مرفوعٌ وعلامةُ رفعِه الواوُ لأنه جمعُ مذكرٍ سالمٌ</b>. إذًا جمعُ المذكرِ السالمِ يُعرَبُ رفعًا بعلامةٍ فرعيّةٍ هي <b>الواوُ</b>.</p>
+
+  <h3 id="khamsa">الموضعُ الثاني: الأسماءُ الخمسةُ</h3>
+  <p>الموضعُ الثاني الذي تكونُ الواوُ فيه علامةً للرفعِ هو <b>الأسماءُ الخمسةُ</b>، والأسماءُ الخمسةُ معروفةٌ، وهي: <span class="mark">«أبوك، وأخوك، وحموك، وفوك، وذو مالٍ»</span>. وهذه لها <b>شروطٌ</b> لكي تُعرَبَ بالحروفِ وتكونَ علامتُها في الرفعِ مثلًا هي الواوُ:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الأسماءُ الخمسةُ وشروطُ إعرابِها بالحروفِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node goldb">
+        <div class="n-title">الأسماءُ الخمسةُ</div>
+        <div class="n-sub">أبوكَ — أخوكَ — حموكَ — فوكَ — ذو مالٍ<br>(الرفعُ بالواوِ، وعلاماتُ النصبِ والجرِّ تأتي في الدرسِ القادمِ)</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">شروطُ الإعرابِ بالحروفِ</div>
+        <div class="n-sub">
+          <ul>
+            <li>أن تكونَ <b>مضافةً لغيرِ ياءِ المتكلمِ</b> (يكونُ بعدَها مضافٌ إليه ليس ياءَ المتكلمِ)</li>
+            <li>أن تكونَ <b>مفردةً</b> — ليست مجموعةً ولا مثنًّاة</li>
+            <li>أن تكونَ <b>مكبَّرةً</b> — ليست مصغَّرةً</li>
+            <li>شرطٌ خاصٌّ بـ«فوكَ»: <b>ألّا تصاحبَها الميمُ</b> («فمٌ» تُعرَبُ بالحركاتِ)</li>
+            <li>شرطٌ خاصٌّ بـ«ذو»: أن تكونَ <b>بمعنى صاحبٍ</b>، وتلازمُ الإضافةَ للاسمِ الظاهرِ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (٤): الأسماءُ الخمسةُ — لا تُعرَبُ بالحروفِ (فرعيًّا) إلا بهذه الشروطِ، وإلا عادتْ إلى الحركاتِ الأصليّةِ</figcaption>
+  </figure>
+
+  <p>بيانُ ذلك: <b>يجبُ أن تكونَ مضافةً لغيرِ ياءِ المتكلمِ</b> — يعني أن يكونَ بعدَها مضافٌ إليه ولكنْ ليس ياءَ المتكلمِ؛ لأنها إذا أُضيفتْ إلى ياءِ المتكلمِ أُعربتْ <b>بالحركاتِ المقدَّرةِ</b>. وإذا لم تُضَفْ أصلًا أيضًا تُعرَبُ <b>بالحركاتِ الظاهرةِ</b>. وإذا <b>جُمِعَتْ</b> أو <b>صُغِّرَتْ</b> أيضًا تُعرَبُ بالحركاتِ لا بالحروفِ. إذًا: متى تُعرَبُ الأسماءُ الخمسةُ بالحروفِ — يعني تكونُ علامةُ رفعِها الواوُ؟ <b>إذا كانت مضافةً لغيرِ ياءِ المتكلمِ، وأن تكونَ مفردةً</b> (يعني ليست مجموعةً أو مثنًّاة)، <b>وكذلك أن تكونَ مكبَّرةً</b> (يعني ليست مصغَّرةً؛ لأنها إذا صُغِّرَتْ ستُعرَبُ بالحركاتِ العاديّةِ).</p>
+
+  <h3>الأمثلةُ الموافقةُ للشروطِ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنِّي أَنَاْ أَخُوكَ فَلَا تَبْتَئِسْ﴾<span class="ref">سورةُ يوسفَ: ٦٩</span></p>
+  </div>
+  <p>لو قلتَ مثلًا في قولِه تعالى: «إني أنا أخوكَ فلا تبتئس» — كلمةُ <span class="mark">«أخوكَ»</span> هنا هي <b>خبرٌ مرفوعٌ وعلامةُ رفعِه الواوُ لأنه من الأسماءِ الخمسةِ</b>، وهي طبعًا مضافةٌ هنا لغيرِ ياءِ المتكلمِ: مضافةٌ إلى الكافِ؛ الكافُ بعدَها ضميرٌ — ضميرُ مخاطبٍ مضافٌ إليه مبنيٌّ على الفتحِ في محلِّ جرٍّ مضافٍ إليه. وأيضًا هي ليست جمعًا بل هي مفردةٌ، وكذلك هي مكبَّرةٌ ليست مصغَّرةً؛ <b>فصحَّ أن تكونَ علامةُ رفعِها هي الواوُ</b> — يعني العلامةُ الفرعيّةُ. وإنما هذه الكلماتُ ما تُعرَبُ بالعلامةِ الأصليّةِ إذا خالفتْ هذه الشروطَ أو شرطًا من هذه الشروطِ.</p>
+
+  <div class="box example">
+    <span class="tag">تطبيقٌ: «أبونا شيخٌ كبيرٌ»</span>
+    <p style="margin:0">على معنى قولِه تعالى في يوسفَ: ﴿إِنَّ لَهُ أَبًا شَيْخًا كَبِيرًا﴾ [يوسف: ٧٨]. إذا أردنا أن نُعرِبَ «<span class="mark">وأبونا شيخٌ كبيرٌ</span>» بالتفصيلِ سنقولُ: كلمةُ «أبونا» هي <b>مبتدأٌ مرفوعٌ وعلامةُ رفعِه الواوُ لأنه من الأسماءِ الخمسةِ</b>، و«نا» في «أبونا» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٌ إليه. ونلاحظُ طبعًا أن «أبونا» أُعربتْ بعلامةٍ فرعيّةٍ هي الواوُ <b>لأنه انطبقتْ عليها شروطُ الأسماءِ الخمسةِ</b> لكي تُعرَبَ بالحروفِ: هي مضافةٌ لغيرِ ياءِ المتكلمِ، ليست جمعًا بل هي مفردةٌ وليست مثنًّاة، وليست مصغَّرةً وإنما هي مكبَّرةٌ — فصحَّ أن نُعرِبَها بالحروفِ فتكونَ مرفوعةً وعلامةُ رفعِها الواوُ. و«شيخٌ» هي الخبرُ: خبرٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه — طبعًا لأنه مفردٌ. و«كبيرٌ» نعتٌ لكلمةِ «شيخٍ» وهو مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه أيضًا.</p>
+  </div>
+
+  <div class="box example">
+    <span class="tag">تطبيقٌ: «فلمّا دخلوا من حيثُ أمرَهم أبوهم»</span>
+    <p style="margin:0">«أمرَهم»: هذا <b>فعلٌ ماضٍ مبنيٌّ على الفتحِ</b>، والضميرُ «هم» فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ <b>مفعولٌ به</b> — لأنه طبعًا متصلٌ بالفعلِ. و«<span class="mark">أبوهم</span>» هو الآمِرُ، هو الذي أمرَ، فهو <b>الفاعلُ مرفوعٌ وعلامةُ رفعِه الواوُ لأنه من الأسماءِ الخمسةِ</b>، و«هم» في «أبوهم» هنا اتصلَ بالاسمِ فيكونُ مبنيا على السكونِ في محلِّ جرٍّ <b>مضافًا إليه</b>.</p>
+  </div>
+
+  <div class="box note">
+    <span class="tag">قاعدةٌ مهمّةٌ: مواقعِ الضمائرِ الثلاثةِ</span>
+    <p style="margin:0">الضميرُ — وهو الهاءُ، ومعه الكافُ، ومعه ياءُ المتكلمِ — هذه الضمائرُ الثلاثةُ إذا اتصلتْ <b>بأيِّ فعلٍ فهي في محلِّ نصبٍ مفعولٌ به</b>، وإذا اتصلتْ <b>بأيِّ اسمٍ فهي في محلِّ جرٍّ مضافٌ إليه</b>؛ هذا هو الأصلُ.</p>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَإِنَّهُ لَذُو عِلْمٍ لِّمَا عَلَّمْنَاهُ﴾<span class="ref">سورةُ يوسفَ: ٦٨</span></p>
+  </div>
+  <p>في قولِه تعالى: «وإنه لذو علمٍ»: إذا أردنا أن نُعرِبَ هنا سنجدُ أن عندنا: «الواوَ» بحسبِ ما قبلَها: حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. و«إنَّ» حرفُ توكيدٍ ونصبٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، والهاءُ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ نصبٍ اسمُ إنَّ. و«إنه لذو علمٍ»: اللامُ هنا هي حرفُ توكيدٍ تسمَّى <b>باللامِ المزحلقةِ</b> — حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ (ويمكنُ أن نعرضَ لها إن شاء اللهُ في الكلامِ على النواسخِ «إنَّ» وأخواتِها). و<span class="mark">«ذو»</span> هي <b>خبرُ إنَّ</b> — وهذا هو الشاهدُ هنا — خبرُ إنَّ <b>مرفوعٌ وعلامةُ رفعِه الواوُ لأنه من الأسماءِ الخمسةِ</b>، وهي طبعًا انطبقتْ على الشروطِ: أُضيفتْ لاسمٍ ظاهرٍ وهي بمعنى صاحبٍ — «إنه لذو علمٍ» يعني <b>صاحبُ علمٍ</b> — وكلمةُ «علمٍ» ها هنا هي <b>مضافٌ إليه مجرورٌ وعلامةُ جرِّه الكسرةَ الظاهرةَ على آخرِه</b>.</p>
+
+  <h3>متى تعودُ الأسماءُ الخمسةُ إلى الحركاتِ؟</h3>
+  <ul>
+    <li><b>إذا أُضيفتْ إلى ياءِ المتكلمِ</b>: أقولُ مثلًا: <span class="mark">«هذا أبي»</span> — كلمةُ «أبي» هنا هي خبرٌ عن المبتدأِ «هذا» مرفوعٌ وعلامةُ رفعِه <b>الضمّةُ المقدَّرةُ لمناسبةِ ياءِ المتكلمِ</b> (أو لاشتغالِ المحلِّ بحركةِ المناسبةِ). فهي هنا تُعرَبُ بالحركةِ لأنها فقدتْ شرطًا من الشروطِ: أُضيفتْ إلى ياءِ المتكلمِ، ومن شروطِها لكي تُعرَبَ بالحروفِ ألّا تُضافَ إلى ياءِ المتكلمِ.</li>
+    <li><b>إذا جُمِعَتْ</b>: مثلًا إذا قلنا: <span class="mark">«الآباءُ يؤثرونَ الأبناءَ على أنفسِهم»</span> — «الآباءُ» هنا جمعٌ لكلمةِ «أبٍ»، وهي تُعرَبُ بعلامةٍ أصليّةٍ هي الضمّةُ: هي هنا مبتدأٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ؛ لأنها جُمِعَتْ وهي هنا جمعُ تكسيرٍ، فتدخلُ في إطارِ العلامةِ الأصليّةِ.</li>
+    <li><b>إذا صُغِّرَتْ</b> هذه الكلماتُ أيضًا فتُعرَبُ بالحركاتِ الأصليّةِ؛ فتُعرَبُ في حالةِ الرفعِ بالضمّةِ وتكونُ علامةُ رفعِها الضمّةَ.</li>
+    <li><b>إذا لم تُضَفْ أصلًا</b> — يعني إذا لم يأتِِ بعدَها مضافٌ إليه — فهي تُعرَبُ كما قلنا بالعلامةِ الأصليّةِ وهي الضمّةُ: مثلًا كما نقولُ: <span class="mark">«هذا أبٌ فاضلٌ»</span> — «أبٌ» هي خبرٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه.</li>
+  </ul>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِن يَسْرِقْ فَقَدْ سَرَقَ أَخٌ لَّهُ مِن قَبْلُ﴾<span class="ref">سورةُ يوسفَ: ٧٧</span></p>
+  </div>
+  <p>في قولِه تعالى: «فقد سرقَ أخٌ له من قبلُ» — كلمةُ <span class="mark">«أخٌ»</span> هنا هي <b>الفاعلُ للفعلِ «سرقَ» مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه</b>. وطبعًا: لماذا لم تُعرَبْ هنا بالواوِ رفعًا — يعني بالعلامةِ الفرعيّةِ؟ <b>لأنها لم تُضَفْ</b>: خالفتْ شرطًا من شروطِ إعرابِ الأسماءِ الخمسةِ بالحروفِ، فهي لم تُضَفْ ولم يأتِِ بعدَها مضافٌ إليه، وقيلَ «أخٌ»، فتُعرَبُ بالحركاتِ العاديّةِ.</p>
+
+  <div class="box note">
+    <span class="tag">تنبيهانِ خاصّانِ</span>
+    <p style="margin:0 0 6px"><b>«فوكَ»</b>: يشترطُ فيها ألّا تصاحبَها الميمُ — يعني لا نقولُ كلمةَ «فمٍ»؛ فإذا صاحبتْها الميمُ وقلنا كلمةَ «فمٍ» فهي تُعرَبُ بالحركاتِ العاديّةِ؛ أقولُ: <span class="mark">«هذا فمٌ»</span> — فيكونُ مرفوعًا وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه.</p>
+    <p style="margin:0"><b>«ذو»</b> التي بمعنى صاحبٍ: يشترطُ فيها أن تكونَ <b>بمعنى صاحبٍ</b>، وطبعًا هي تلازمُ <b>الإضافةَ للاسمِ الظاهرِ</b> (كما مرَّ في «لذو علمٍ» أي صاحبِ علمٍ).</p>
+  </div>
+
+  <h3>إذا ثُنِّيَتِ الأسماءُ الخمسةُ</h3>
+  <p>طيبْ: هذه الأسماءُ مثلًا إذا ثُنِّيَتْ، هل يصحُّ أن تُعرَبَ بالواوِ — يعني أن تكونَ مرفوعةً بالواوِ؟ طبعًا لا؛ هي ستدخلُ في إعرابِ <b>المثنى</b>: ستكونُ مثنًّاةً فتُعرَبُ إعرابَ المثنى، كما في قولِه تعالى مثلًا:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَأَصْلِحُوا بَيْنَ أَخَوَيْكُمْ﴾<span class="ref">سورةُ الحجراتِ: ١٠</span></p>
+  </div>
+  <p>فـ«<span class="mark">أخويكم</span>» هنا <b>مضافٌ إليه مجرورٌ وعلامةُ جرِّه الياءُ</b>؛ أُعربَ إعرابَ المثنى كما سيأتي.</p>
+  <p>فخلاصةُ القولِ: إن الأسماءَ الخمسةَ، لكي تُعرَبَ إعرابًا فرعيًّا وتكونَ علامتُها في الرفعِ هي الواوُ، لا بدَّ: <b>أن تُضافَ لغيرِ ياءِ المتكلمِ، وأن تكونَ مفردةً (ليست جمعًا)، وأن تكونَ مكبَّرةً (ليست مصغَّرةً)</b>. وهذا فيما يخصُّ الواوَ حين تكونُ علامةً للرفعِ — كما قلنا: تكونُ في موضعَينِ: في جمعِ المذكرِ السالمِ، وفي الأسماءِ الخمسةِ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦ الألف ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>العلامةُ الفرعيّةُ الثانيةُ: الألفُ في المثنى وملحقاتِه</h2></div>
+
+  <p>العلامةُ الفرعيّةُ الثانيةُ من علاماتِ الرفعِ بعدَ الواوِ هي <b>الألفُ</b>، ولها موضعٌ واحدٌ تكونُ الألفُ فيه علامةً للرفعِ: هو <b>الأسماءُ المثنّاةُ</b> — «في تثنيةِ الأسماءِ خاصّةً» كما قال ابنُ آجرومَ رحمه الله. فكلُّ اسمٍ كان مثنًّى فإنما يُرفعُ وتكونُ علامةُ رفعِه <b>الألفَ</b> لأنه مثنًّى؛ فالألفُ هنا <b>تنوبُ عن الضمّةِ</b> في الرفعِ.</p>
+  <p>والمثنى علامتُه أن يكونَ اسمًا خُتمَ <b>بألفٍ ونونٍ في حالةِ الرفعِ</b>، أو <b>بياءٍ ونونٍ في حالتَيِ النصبِ والجرِّ</b>. فلو قلتُ مثلًا: <span class="mark">«جاءَ الطالبانِ»</span> — «الطالبانِ» هي <b>الفاعلُ مرفوعٌ وعلامةُ رفعِه الألفُ نيابةً عن الضمّةِ لأنه مثنًّى</b>. هذا هو الموضعُ الوحيدُ الخاصُّ بكونِ الألفِ علامةً للرفعِ.</p>
+
+  <h3>الملحقُ بالمثنى</h3>
+  <p>وطبعًا هناك أسماءٌ — أو كلماتٌ — تلحقُ بالمثنى:</p>
+  <ul>
+    <li><b>اسما الإشارةِ الدالّانِ على المثنى</b>: «هذانِ» و«هاتانِ». أقولُ: <span class="mark">«جاءَ هذانِ الطالبانِ»</span> أو <span class="mark">«نجحَ هذانِ الطالبانِ»</span>؛ فـ«هذانِ» اسمُ إشارةٍ هنا وهو <b>معربٌ وليس مبنيًّا</b>؛ لأنه طبعًا ثُنِّيَ — فإذا ثُنِّيَ كان معربًا — فهو هنا <b>الفاعلُ مرفوعٌ وعلامةُ رفعِه الألفُ لأنه ملحقٌ بالمثنى</b>.</li>
+    <li><b>الاسمانِ الموصولانِ الدالّانِ على المثنى</b>: «اللذانِ» و«اللتانِ»؛ كلاهما يُعرَبُ إعرابَ المثنى لأنه يلحقُ به، فيكونُ مرفوعًا وعلامةُ رفعِه <b>الألفُ</b> أيضًا لأنه ملحقٌ بالمثنى.</li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الألفُ علامةُ رفعٍ في موضعٍ واحدٍ: المثنى</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">المثنى الحقيقيُّ</div>
+        <div class="n-sub">اسمٌ خُتمَ بألفٍ ونونٍ في الرفعِ، أو ياءٍ ونونٍ في النصبِ والجرِّ<br>«جاءَ الطالبانِ»</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">اسما الإشارةِ</div>
+        <div class="n-sub">«هذانِ» و«هاتانِ» — ثُنِّيا فصارا معربَينِ ملحقَينِ بالمثنى<br>«نجحَ هذانِ الطالبانِ»</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الاسمانِ الموصولانِ</div>
+        <div class="n-sub">«اللذانِ» و«اللتانِ» — يُعرَبانِ إعرابَ المثنى لأنهما ملحقانِ به</div>
+      </div>
+    </div>
+    <figcaption>شكل (٥): الألفُ نيابةً عن الضمّةِ في المثنى وملحقاتِه</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧ النون ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>العلامةُ الفرعيّةُ الثالثةُ: النونُ في الأمثلةِ الخمسةِ</h2></div>
+
+  <p>العلامةُ الفرعيّةُ الثالثةُ والأخيرةُ من علاماتِ الرفعِ هي <b>النونُ</b>. والنونُ تكونُ علامةً للرفعِ في الفعلِ المضارعِ الذي نسمِّيه نحنُ — وهو من «الأفعالِ الخمسةِ»، أو التسميةُ الدقيقةُ: من <b>الأمثلةِ الخمسةِ</b> أو <b>الأبنيةِ الخمسةِ</b> أو <b>الصيغِ الخمسةِ</b> — وهي <b>كلُّ فعلٍ مضارعٍ اتصلتْ به واوُ الجماعةِ، أو ألفُ الاثنَينِ، أو ياءُ المخاطبةِ</b>. وسُمِّيَتْ بالخمسةِ لأنها <b>خمسُ صيغٍ</b>:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الأمثلةُ الخمسةُ (الأبنيةُ/الصيغُ الخمسةُ)</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node blue">
+        <div class="n-title">مع واوِ الجماعةِ</div>
+        <div class="n-sub"><span class="mark">«يفعلونَ»</span> — <span class="mark">«تفعلونَ»</span><br>الاحتمالانِ الواردانِ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">مع ألفِ الاثنَينِ</div>
+        <div class="n-sub"><span class="mark">«يفعلانِ»</span> — <span class="mark">«تفعلانِ»</span></div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">مع ياءِ المخاطبةِ</div>
+        <div class="n-sub"><span class="mark">«تفعلينَ»</span></div>
+      </div>
+    </div>
+    <div class="dcap">شكل (٦): الأمثلةُ الخمسةُ — وعلامةُ رفعِها <b>ثبوتُ النونِ</b> نيابةً عن الضمّةِ</div>
+  </figure>
+
+  <div class="box note">
+    <span class="tag">دقّةُ التسميةِ</span>
+    <p style="margin:0">هذه الصيغِ يأتي عليها ما لا حصرَ له من الأفعالِ؛ لذلك <b>ليس دقيقًا</b> أن نقولَ إن المصطلحَ «الأفعالُ الخمسةُ» هي أفعالٌ بعينِها؛ فالتسميةُ الدقيقةُ: <b>الأمثلةُ الخمسةُ</b> أو الأوزانُ/الأبنيةُ/الصيغُ الخمسةُ؛ لأنها أوزانٌ أو صيغٌ تأتي عليها أفعالٌ لا حصرَ لها.</p>
+  </div>
+
+  <p>هذه الأفعالُ حين نُعرِبُها وتكونُ مرفوعةً تُرفعُ وتكونُ علامةُ الرفعِ <b>ثبوتَ النونِ</b>؛ فالنونُ هنا هي علامةُ الرفعِ في الفعلِ المضارعِ الذي هو من الأمثلةِ الخمسةِ — أو الأبنيةِ الخمسةِ أو الأوزانِ الخمسةِ كما قلنا — <b>وهي تنوبُ طبعًا عن الضمّةِ</b>.</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّ الَّذِينَ يُحِبُّونَ أَن تَشِيعَ الْفَاحِشَةُ فِي الَّذِينَ آمَنُوا﴾<span class="ref">سورةُ النورِ: ١٩</span></p>
+  </div>
+  <p>في قولِه تعالى: «إن الذين <span class="mark">يحبونَ</span> أن تشيعَ الفاحشةُ…» — «يحبونَ» هذا <b>فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ</b> لأنه من الأمثلةِ الخمسةِ (الأوزانِ الخمسةِ)، أو أتى على صيغةٍ من صيغِ الأوزانِ الخمسةِ. وطبعًا دائمًا الأفعالُ الخمسةُ — أو الأمثلةُ الخمسةُ — <b>فاعلُها فيها</b>؛ يعني لا نبحثُ عن فاعلِها لأنه هو الضميرُ الموجودُ فيها، سواءٌ كان واوَ الجماعةِ أو ياءَ المخاطبةِ أو ألفَ الاثنَينِ. فهنا مثلًا: «يحبونَ» فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ، والواوُ — واوُ الجماعةِ — ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ. هذا هو.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨ التمرينات ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>التمريناتُ والتطبيقاتُ القرآنيّةُ</h2></div>
+
+  <p>والآن مع التدريباتِ الخاصّةِ بعلاماتِ الرفعِ؛ نقرأُ معًا بعضَ الأسئلةِ ثم نحاولُ الإجابةَ عليها معًا:</p>
+
+  <h3 id="t81">أولًا: أسئلةٌ على العلاماتِ</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «عليٌّ مجتهدٌ» — ما نوعُ إعرابِ «عليٍّ»؟ هل هو رفعٌ أم نصبٌ أم خفضٌ أم جزمٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>رفعٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «جاءتْ سلمى» — كلمةُ «سلمى» هنا مرفوعةٌ، فعلامةُ رفعِها: الضمّةُ الظاهرةُ أم الضمّةُ المقدَّرةُ على الألفِ أم الياءُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا علامةُ رفعِها <b>الضمّةُ المقدَّرةُ [على الألفِ] للتعذُّرِ</b>؛ لأن آخرَ الكلمةِ ألفٌ كما نرى، والألفَ يتعذَّرُ ظهورُ العلامةِ عليها — يُستحيلُ أن تظهرَ عليها العلامةُ لأنها دائمًا ساكنةٌ — فنقولُ: إنها مقدَّرةٌ للتعذُّرِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «جاءَ رجالٌ» — «رجالٌ» هنا مرفوعةٌ، وعلامةُ رفعِها: الضمّةُ أم الألفُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا علامةُ رفعِها <b>الضمّةُ</b> كما هو ظاهرٌ؛ لأنها جمعُ تكسيرٍ كما رأينا، وجمعُ التكسيرِ — كما قلنا في الشرحِ — يُعامَلُ معاملةَ المفردِ، أو يُعرَبُ بالعلامةِ الأصليّةِ وهي الضمّةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: ﴿وَإِذَا حَضَرَ الْقِسْمَةَ أُولُو الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينُ فَارْزُقُوهُم مِّنْهَا﴾ [النساء: ٨] — إذا علمتَ أنَّ «المساكينَ» جمعُ تكسيرٍ، فما نوعُ إعرابِه في هذه الآيةِ وما علامةُ الإعرابِ؟ هل هو مرفوعٌ وعلامةُ رفعِه الضمّةُ، أم مرفوعٌ وعلامةُ رفعِه النونُ، أم مرفوعٌ وعلامةُ رفعِه الياءُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا طبقًا لما درسناه: هو <b>مرفوعٌ وعلامةُ رفعِه الضمّةُ</b>؛ لأنه جمعُ تكسيرٍ، وكما قلنا: جمعُ التكسيرِ يُعرَبُ بالعلامةِ الأصليّةِ وهي الضمّةُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: ﴿وَالْوَالِدَاتُ يُرْضِعْنَ أَوْلَادَهُنَّ…﴾ — «الوالداتُ» مرفوعٌ، والعلامةُ: الضمّةُ الظاهرةُ أم الضمّةُ المقدَّرةُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا «الوالداتُ» جمعُ مؤنثٍ سالمٍ، وقلنا إن جمعَ المؤنثِ السالمِ أيضًا يُرفعُ وتكونُ علامةُ رفعِه العلامةُ الأصليّةُ وهي <b>الضمّةُ [الظاهرةُ]</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ما نوعُ إعرابِ الفعلِ «يأكلُ» في قولِنا: «عليٌّ يأكلُ فطورَه»؟ هل هو رفعٌ أم نصبٌ أم خفضٌ أم جزمٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا الفعلُ المضارعُ «يأكلُ» لم يُسبَقْ بناصبٍ أو جازمٍ، ولأنه فعلٌ فلا يمكنُ أن يكونَ مخفوضًا — لا يدخلُه الخفضُ؛ فلذلك هو مرفوعٌ — يعني حالتُه الإعرابيّةُ هي <b>الرفعُ</b> — وطبعًا علامتُه الإعرابيّةُ هي <b>الضمّةُ</b> («يأكلُ»)، لأنه لم تلحقْه واوُ الجماعةِ ولا ألفُ الاثنَينِ ولا ياءُ المخاطبةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «حموكَ رجلٌ صالحٌ» — كلمةُ «حموكَ» مرفوعةٌ، وعلامةُ رفعِها: الضمّةُ الظاهرةُ على الميمِ، أم الضمّةُ المقدَّرةُ، أم الواوُ، أم ثبوتُ النونِ، أم غيرُ ذلك؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا علامةُ رفعِها <b>الواوُ</b>؛ لأنه من الأسماءِ الخمسةِ وانطبقتْ عليه الشروطُ: حيثُ إنه أُضيفَ لغيرِ ياءِ المتكلمِ، وأتى مفردًا غيرَ جمعٍ ولا مثنًّى، وكذلك أتى مكبَّرًا وليس مصغَّرًا.</div>
+  </div>
+
+  <h3 id="t82">ثانيًا: تأمُّلُ الآياتِ — استخراجُ المرفوعاتِ وعلاماتِها</h3>
+
+  <p>إذا تاملنا هذه الآياتِ الكريمةَ نريدُ أن نستخرجَ منها الكلماتِ المرفوعةَ ونبِّينَ علامةَ رفعِها ولماذا كانت مرفوعةً بهذه العلامةِ:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَإِذْ قَالَ إِبْرَاهِيمُ﴾</span> [البقرة: ٢٦٠] — أينَ الكلمةُ المرفوعةُ ها هنا وما علامةُ رفعِها؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا المرفوعةُ هي كلمةُ <b>«إبراهيمَ»</b>، وعلامةُ رفعِها <b>الضمّةُ</b> لأنها طبعًا — كما هو واضحٌ — <b>اسمٌ مفردٌ</b> (وهي فاعلُ «قالَ»).</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿وَإِذْ قَالَ مُوسَىٰ لِقَوْمِهِ﴾</span> [البقرة: ٦٧]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«موسى» هي طبعًا المرفوعةُ لأنها هي هنا <b>فاعلٌ</b> — هو الذي قالَ؛ إذًا هو فاعلُ القولِ — فكلمةُ «موسى» هي فاعلٌ مرفوعةٌ، ولكن علامةُ الرفعِ هنا هي <b>الضمّةُ المقدَّرةُ للتعذُّرِ</b>؛ لأن آخرَ الكلمةِ ألفٌ، فلا يمكنُ أن تظهرَ عليها العلامةُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِنا: «قالَ أصحابُ موسى»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«أصحابُ» طبعًا هي المرفوعةُ هنا؛ لأنها <b>فاعلٌ</b> طبعًا لـ«قالَ»، وعلامةُ الرفعِ <b>الضمّةُ</b>؛ ولماذا كانت علامةُ الرفعِ هي الضمّةَ الأصليّةَ؟ يعني لأن كلمةَ «أصحابِ» هي <b>جمعُ تكسيرٍ</b>، وجمعُ التكسيرِ — كما قلنا — يُعرَبُ بعلامةٍ أصليّةٍ في الرفعِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿وَإِذَا جَاءَكَ الْمُؤْمِنَاتُ مُهَاجِرَاتٍ﴾</span> [الممتحنة: ١٠] — أينَ الاسمُ المرفوعُ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>المرفوعُ هو <b>«المؤمناتُ»</b>، وهي فاعلٌ للفعلِ «جاءَ» — هنَّ اللاتي جئنَ؛ يعني جاءكَ المؤمناتُ — فـ«المؤمناتُ» مرفوعةٌ لأنها فاعلٌ، وعلامةُ رفعِها <b>الضمّةُ الظاهرةُ على آخرِها</b>؛ طبعًا رُفِعَتْ وكانت علامةُ الرفعِ الضمّةَ لأنها <b>جمعُ مؤنثٍ سالمٌ</b>، وجمعُ المؤنثِ السالمُ يُعرَبُ — أو يُرفعُ — بالعلامةِ الأصليّةِ وهي الضمّةُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿نَرْفَعُ دَرَجَاتٍ مَّن نَّشَاءُ﴾</span> [الأنعام: ٨٣] — ما الكلماتُ المرفوعةُ ها هنا في هذه الجملةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الملاحَظُ أن هنا كلمتَينِ مرفوعتَينِ: هما كلمةُ <b>«نرفعُ»</b> وكلمةُ <b>«نشاءُ»</b>. والملاحَظُ أنهما <b>فعلانِ مضارعانِ مرفوعانِ وعلامةُ رفعِهما الضمّةُ</b>؛ لأنهما طبعًا فعلانِ: أولًا لم يُسبَقا بناصبٍ أو جازمٍ، وثانيًا لم يتصلْ بهما ضميرُ رفعٍ كواوِ الجماعةِ أو ألفِ الاثنَينِ أو ياءِ المخاطبةِ؛ لأنه طبعًا إذا اتصلتْ بهذه الضمائرِ فسيكونُ إعرابُ الأمثلةِ الخمسةِ — أو ما نسمِّيه تجوُزًا بالأفعالِ الخمسةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿وَاللَّهُ يَدْعُو إِلَىٰ دَارِ السَّلَامِ﴾</span> [يونس: ٢٥] — أينَ الكلماتُ المرفوعةُ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا كلمتانِ: الكلمةُ الأولى اسمٌ وهي لفظُ الجلالةِ «اللهُ» وهي <b>مبتدأٌ</b> هنا؛ فهي مرفوعةٌ طبعًا وعلامةُ رفعِها <b>الضمّةُ الظاهرةُ على آخرِه</b>. و«<b>يدعو</b>» هذه الكلمةُ الثانيةُ المرفوعةُ — وهي خبرٌ — ولكن علامةُ الرفعِ <b>مقدَّرةٌ للثقلِ</b>؛ لأن آخرَ الكلمةِ واوٌ: فإذا كان آخرُ الكلمةِ واوًا أو ياءً فإن علامةَ الرفعِ تُقدَّرُ للثقلِ، أما علامةُ النصبِ (الفتحةُ) فتظهرُ لأنها خفيفةً (وستأتي إن شاء اللهُ). فأصلُه «يدعوُ»: يعني العلامةُ كانت على الواوِ ضمّةً، لكن قُدِّرَتْ — أو حُذِفَتْ — طبعًا للثقلِ؛ فنقولُ: هي علامةُ الرفعِ الضمّةُ وهي <b>مقدَّرةٌ للثقلِ</b>: فـ«يدعو» فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ المقدَّرةُ للثقلِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿وَيَوْمَئِذٍ يَفْرَحُ الْمُؤْمِنُونَ ۝ بِنَصْرِ اللَّهِ﴾</span> [الروم: ٤–٥]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا كلمتانِ مرفوعتانِ: الكلمةُ الأولى هي <b>«يفرحُ»</b>، وهي فعلٌ مضارعٌ وهو مرفوعٌ وعلامةُ رفعِه <b>الضمّةُ الظاهرةُ على آخرِه</b>. والكلمةُ الثانيةُ هي كلمةُ <b>«المؤمنونَ»</b>، ونلاحظُ أنها هنا مرفوعةٌ ولكن علامةُ الرفعِ <b>علامةٌ فرعيّةٌ وهي الواوُ</b>؛ «المؤمنونَ» هي جمعُ مذكرٍ سالمٌ، ونحن اتفقنا على أن جمعَ المذكرِ السالمِ يُعرَبُ بعلامةٍ فرعيّةٍ — أو يُرفعُ وتكونُ علامةُ رفعِه هي الواوُ. وطبعًا هي مرفوعةٌ هنا لأنها هي <b>الفاعلُ</b>: هم الذين يفرحونَ؛ فهي فاعلٌ مرفوعٌ وعلامةُ رفعِه الواوُ لأنه جمعُ مذكرٍ سالمٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿إِن يَكُن مِّنكُمْ عِشْرُونَ صَابِرُونَ﴾</span> [الأنفال: ٦٥]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الكلماتُ المرفوعةُ هنا كلمتانِ: كلمةُ <b>«عشرونَ»</b> وكلمةُ <b>«صابرونَ»</b>، وهما مرفوعتانِ. طبعًا كلمةُ «عشرونَ» مرفوعةٌ لأنها <b>اسمُ «يكنْ»</b>، وهي مرفوعةٌ وعلامةُ رفعِها <b>الواوُ</b> لأنها <b>ملحقةٌ بجمعِ المذكرِ السالمِ</b>؛ يعني <b>ألفاظَ العقودِ</b> من الأعدادِ كلُّها ملحقةٌ بجمعِ المذكرِ السالمِ — ألفاظُ العقودِ يعني: عشرونَ، وثلاثونَ، وأربعونَ، وخمسونَ، إلى تسعينَ؛ كلُّها حين تُرفعُ تكونُ مرفوعةً وعلامةُ رفعِها الواوُ لأنها ملحقةٌ بجمعِ المذكرِ السالمِ. وكذلك عندنا كلمةُ <b>«صابرونَ»</b>: هي طبعًا <b>نعتٌ</b> لكلمةِ «عشرينَ» — وهي صفةٌ لها — وهي مرفوعةٌ وعلامةُ رفعِها <b>الواوُ</b> أيضًا لأنها جمعُ مذكرٍ سالمٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿لَيُوسُفُ وَأَخُوهُ أَحَبُّ إِلَىٰ أَبِينَا مِنَّا﴾</span> [يوسف: ٨]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا عندنا ثلاثُ كلماتٍ مرفوعةٍ: <b>«ليوسفُ»</b>، و<b>«وأخوهُ»</b>، و<b>«أحبُّ»</b>:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li>«يوسفُ» هي <b>مبتدأٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ</b>؛ طبعًا علامةُ الرفعِ الضمّةُ لأنه <b>اسمٌ مفردٌ</b>؛ فلذلك كانت العلامةُ هي الأصليّةَ.</li>
+        <li>«أخوهُ» أُعرِبَ — أو رُفِعَ — وكانت علامةُ رفعِه <b>فرعيّةً هي الواوُ</b>؛ لأنه من الأسماءِ الخمسةِ، فكلمةُ «أخوهُ» اسمٌ من الأسماءِ الخمسةِ وانطبقتْ عليها الشروطُ — شروطُ إعرابِ الأسماءِ الخمسةِ بالحروفِ — لأنها طبعًا هنا أُضيفتْ وإضافتُها لغيرِ ياءِ المتكلمِ، وهي مفردةٌ وليست مصغَّرةً؛ فلذلك تُعرَبُ بالحروفِ كما قلنا. وهي مرفوعةٌ هنا لأنها <b>اسمٌ معطوفٌ على «يوسفَ»</b> الذي هو مبتدأٌ؛ فـ«أخو» اسمٌ معطوفٌ مرفوعٌ وعلامةُ رفعِه الواوُ لأنه من الأسماءِ الخمسةِ.</li>
+        <li>«أحبُّ» هي <b>الخبرُ</b> («ليوسفُ وأخوهُ أحبُّ»)؛ فهي طبعًا مرفوعةٌ أيضًا، ولكن علامةُ رفعِها هي العلامةُ الأصليّةُ وهي <b>الضمّةُ</b>؛ لأنها أيضًا <b>مفردةٌ</b>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿إِنَّ عِدَّةَ الشُّهُورِ عِندَ اللَّهِ اثْنَا عَشَرَ شَهْرًا﴾</span> [التوبة: ٣٦]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>كلمةُ <b>«اثنا عشرَ»</b> هي هنا المرفوعةُ، وهذه من <b>الملحقاتِ بالمثنى</b>؛ يعني هي ليست مثنًّى على الحقيقةِ لأنها لا مفردَ لها من لفظِها كما سيأتي، ولكنها أُعربتْ إعرابَه. وهي هنا <b>خبرُ «إنَّ»</b> (لأن خبرَ «إنَّ» يكونُ مرفوعًا كما سيأتي إن شاء اللهُ تفصيلًا)؛ فهي مرفوعةٌ هنا وعلامةُ رفعِها <b>الألفُ</b> لأنها ملحقٌ بالمثنى، ونحن اتفقنا على أن المثنى يُعرَبُ بعلامةٍ فرعيّةٍ في حالةِ الرفعِ وهي الألفُ <b>نيابةً عن الضمّةِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿قَالَ رَجُلَانِ مِنَ الَّذِينَ يَخَافُونَ﴾</span> [المائدة: ٢٣]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا نلاحظُ أن عندنا كلمتَينِ مرفوعتَينِ:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li>الكلمةُ الأولى هي كلمةُ <b>«رجلانِ»</b>: هي الفاعلُ للفعلِ «قالَ»؛ فلذلك هي مرفوعةٌ وعلامةُ رفعِها <b>الألفُ</b> لأنها <b>مثنًّى</b> — نيابةً طبعًا عن الضمّةِ.</li>
+        <li>الكلمةُ التي عندنا مرفوعةٌ بعدَ ذلك هي كلمةُ <b>«يخافونَ»</b>، وهو فعلٌ مضارعٌ من الأمثلةِ الخمسةِ — أو الأفعالِ الخمسةِ (تسامحًا) — وطبعًا الأمثلةُ الخمسةُ كيف تُعرَبُ في الرفعِ؟ تكونُ علامةُ رفعِها <b>ثبوتَ النونِ</b>. إذًا: «يخافونَ» فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ لأنه من الأمثلةِ الخمسةِ كما قلنا.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿وَالنَّجْمُ وَالشَّجَرُ يَسْجُدَانِ﴾</span> [الرَّحمن: ٦]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا الكلماتُ الثلاثُ هي طبعًا مرفوعةٌ: «النجمُ» و«الشجرُ» — يعني كلتا الكلمتَينِ مرفوعةٌ وعلامةُ رفعِها <b>الضمّةُ</b> العلامةُ الأصليّةُ لأنها <b>مفردةٌ</b>. وكلمةُ <b>«يسجدانِ»</b>: هذا فعلٌ مضارعٌ وهو طبعًا اتصلتْ به ألفُ الاثنَينِ — ضميرُ الألفِ — فلذلك هو من الأمثلةِ الخمسةِ، والأمثلةُ الخمسةُ كما اتفقنا قلنا إنها تكونُ معربةً — أو مرفوعةً — بعلامةٍ فرعيّةٍ هي <b>ثبوتُ النونِ</b>. فـ«يسجدانِ» فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ لأنه من الأمثلةِ الخمسةِ. طبْ كيف عرفتَ أنه من الأمثلةِ الخمسةِ؟ هو متصلٌ بألفِ الاثنَينِ، وقلنا إن أيَّ فعلٍ مضارعٍ يتصلُ بألفِ الاثنَينِ أو واوِ الجماعةِ أو ياءِ المخاطبةِ فهو من الأمثلةِ الخمسةِ؛ يعني يكونُ مرفوعًا وعلامةُ رفعِه ثبوتَ النونِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿أَتَبْنُونَ بِكُلِّ رِيعٍ آيَةً تَعْبُثُونَ ۝ وَتَتَّخِذُونَ مَصَانِعَ لَعَلَّكُمْ تَخْلُدُونَ﴾</span> [الشعراء: ١٢٨–١٢٩]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا نلاحظُ أن ثمة أفعالًا مضارعةً من الأمثلةِ الخمسةِ متعددةً، وهي مرفوعةٌ وستكونُ علامةُ رفعِها ثبوتَ النونِ: عند الفعلِ <b>«تبنونَ»</b>، ثم <b>«تعبثونَ»</b>، ثم <b>«تتخذونَ»</b>، ثم <b>«تخلدونَ»</b>. «تبنونَ» هذا فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه <b>ثبوتُ النونِ</b> لأنه من الأمثلةِ الخمسةِ — وطبعًا عرفتَ أنه من الأمثلةِ الخمسةِ لاتصالِ واوِ الجماعةِ به، وواوُ الجماعةِ طبعًا هي ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ كما اتفقنا. وكذلك «تعبثونَ» هي لها الإعرابُ نفسُه، و«تتخذونَ» و«تخلدونَ» نفسُ الإعرابِ: فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ لأنه من الأمثلةِ الخمسةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ﴾</span> [البقرة: ٣]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الكلمةُ المرفوعةُ ها هنا هي كلمةُ <b>«يؤمنونَ»</b>، وهي فعلٌ مضارعٌ من الأمثلةِ الخمسةِ مرفوعٌ وعلامةُ رفعِه <b>ثبوتُ النونِ</b> — كما قلنا في الأفعالِ التي تتصلُ بواوِ الجماعةِ. وطبعًا واوُ الجماعةِ في «يؤمنونَ» هي الفاعلُ: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ. وطبعًا سنأتي للفاعلِ بالتفصيلِ إن شاء اللهُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>وفي قولِه تعالى: <span class="ayq">﴿قَالُوا أَتَعْجَبِينَ مِنْ أَمْرِ اللَّهِ﴾</span> [هود: ٧٣] — أينَ الكلمةُ المرفوعةُ ها هنا وما علامةُ رفعِها؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الكلمةُ المرفوعةُ هي قولُه تعالى: <b>«تعجبينَ»</b>؛ هذا فعلٌ مضارعٌ وهو مرفوعٌ وعلامةُ رفعِه <b>ثبوتُ النونِ</b> — علامةٌ فرعيّةٌ. طبْ كيف — أو لماذا — كانت علامتُه علامةً فرعيّةً؟ لأنه من الأمثلةِ الخمسةِ — أو الأفعالِ الخمسةِ — وكما اتفقنا أن هذه الأفعالَ علامتُها أن تتصلَ بواوِ الجماعةِ أو بألفِ الاثنَينِ أو بياءِ المخاطبةِ؛ وهي هنا — هذا الفعلُ — متصلٌ <b>بياءِ المخاطبةِ</b>: «أتعجبينَ من أمرِ اللهِ». فبناءً على هذا يكونُ إعرابُه: مرفوعًا وعلامةُ رفعِه ثبوتُ النونِ لأنه من الأمثلةِ الخمسةِ. وطبعًا الياءُ قبلَ النونِ هي <b>ياءُ المخاطبةِ</b>: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ. وكما قلتُ: دائمًا الأفعالُ الخمسةُ — أو الأمثلةُ الخمسةُ — فاعلُها هو الضميرُ الموجودُ فيها: واوُ الجماعةِ أو ألفُ الاثنَينِ أو ياءُ المخاطبةِ.</div>
+  </div>
+
+  <h3 id="t83">الجدولُ التلخيصيُّ للتطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الشاهدُ</th><th>الكلمةُ المرفوعةُ</th><th>وظيفتُها</th><th>علامتُها</th><th>وجهُ العلامةِ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>﴿وإذ قال إبراهيمُ﴾</td><td>إبراهيمُ</td><td>فاعلٌ</td><td>الضمّةُ الظاهرةُ</td><td>اسمٌ مفردٌ</td></tr>
+        <tr><td>﴿وإذ قال موسى﴾</td><td>موسى</td><td>فاعلٌ</td><td>الضمّةُ المقدَّرةُ للتعذُّرِ</td><td>مفردٌ آخرُه ألفٌ</td></tr>
+        <tr><td>«قال أصحابُ موسى»</td><td>أصحابُ</td><td>فاعلٌ</td><td>الضمّةُ الظاهرةُ</td><td>جمعُ تكسيرٍ</td></tr>
+        <tr><td>﴿إذا جاءك المؤمناتُ مهاجراتٍ﴾</td><td>المؤمناتُ</td><td>فاعلٌ</td><td>الضمّةُ الظاهرةُ</td><td>جمعُ مؤنثٍ سالمٌ</td></tr>
+        <tr><td>﴿قولٌ معروفٌ… يتبعُها أذًى﴾</td><td>قولٌ / أذًى</td><td>مبتدأٌ / فاعلٌ</td><td>الضمّةُ (الظاهرةُ / المقدَّرةُ للتعذُّرِ)</td><td>مفردٌ</td></tr>
+        <tr><td>﴿نرفعُ درجاتٍ من نشاءُ﴾</td><td>نرفعُ / نشاءُ</td><td>فعلانِ مضارعانِ</td><td>الضمّةُ الظاهرةُ</td><td>لم يُسبَقا بناصبٍ أو جازمٍ، ولم يتصلْ بهما ضميرُ رفعٍ</td></tr>
+        <tr><td>﴿واللهُ يدعو إلى دارِ السلامِ﴾</td><td>اللهُ / يدعو</td><td>مبتدأٌ / خبرٌ</td><td>الضمّةُ الظاهرةُ / المقدَّرةُ للثقلِ</td><td>مفردٌ / آخرُه واوٌ</td></tr>
+        <tr><td>﴿ويومئذٍ يفرحُ المؤمنونَ﴾</td><td>يفرحُ / المؤمنونَ</td><td>فعلٌ / فاعلٌ</td><td>الضمّةُ الظاهرةُ / الواوُ</td><td>مضارعٌ متجرِّدٌ / جمعُ مذكرٍ سالمٌ</td></tr>
+        <tr><td>﴿إن يكن منكم عشرونَ صابرونَ﴾</td><td>عشرونَ / صابرونَ</td><td>اسمُ «يكنْ» / نعتٌ</td><td>الواوُ / الواوُ</td><td>ملحقٌ بجمعِ المذكرِ السالمِ (من ألفاظِ العقودِ) / جمعُ مذكرٍ سالمٌ</td></tr>
+        <tr><td>﴿ليوسفُ وأخوهُ أحبُّ إلى أبينا منا﴾</td><td>يوسفُ / أخوهُ / أحبُّ</td><td>مبتدأٌ / معطوفٌ / خبرٌ</td><td>الضمّةُ / الواوُ / الضمّةُ</td><td>مفردٌ / من الأسماءِ الخمسةِ / مفردٌ</td></tr>
+        <tr><td>﴿إن عدةَ الشهورِ… اثنا عشرَ شهرًا﴾</td><td>اثنا عشرَ</td><td>خبرُ «إنَّ»</td><td>الألفُ</td><td>ملحقٌ بالمثنى</td></tr>
+        <tr><td>﴿قال رجلانِ من الذين يخافونَ﴾</td><td>رجلانِ / يخافونَ</td><td>فاعلٌ / فعلٌ مضارعٌ</td><td>الألفُ / ثبوتُ النونِ</td><td>مثنًّى / من الأمثلةِ الخمسةِ</td></tr>
+        <tr><td>﴿والنجمُ والشجرُ يسجدانِ﴾</td><td>النجمُ والشجرُ / يسجدانِ</td><td>مرفوعانِ / فعلٌ مضارعٌ</td><td>الضمّةُ / ثبوتُ النونِ</td><td>مفردانِ / اتصلتْ به ألفُ الاثنَينِ</td></tr>
+        <tr><td>﴿أتبنونَ… تعبثونَ وتتخذونَ… تخلدونَ﴾</td><td>تبنونَ، تعبثونَ، تتخذونَ، تخلدونَ</td><td>أفعالٌ مضارعةٌ</td><td>ثبوتُ النونِ</td><td>من الأمثلةِ الخمسةِ (واوُ الجماعةِ فاعلٌ)</td></tr>
+        <tr><td>﴿الذين يؤمنونَ بالغيبِ﴾</td><td>يؤمنونَ</td><td>فعلٌ مضارعٌ</td><td>ثبوتُ النونِ</td><td>من الأمثلةِ الخمسةِ</td></tr>
+        <tr><td>﴿قالوا أتعجبينَ من أمرِ اللهِ﴾</td><td>تعجبينَ</td><td>فعلٌ مضارعٌ</td><td>ثبوتُ النونِ</td><td>اتصلتْ به ياءُ المخاطبةِ (وهي الفاعلُ)</td></tr>
+        <tr><td>﴿إن الذين يحبونَ…﴾</td><td>يحبونَ</td><td>فعلٌ مضارعٌ</td><td>ثبوتُ النونِ</td><td>واوُ الجماعةِ ضميرٌ متصلٌ في محلِّ رفعٍ فاعلٌ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩ الخلاصة ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>خلاصةُ الدرس</h2></div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>العلامةُ</th><th>نوعُها</th><th>مواضعُها</th><th>أمثلةٌ</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>الضمّةُ</b></td>
+          <td>أصليّةٌ</td>
+          <td>① الاسمُ المفردُ ② جمعُ التكسيرِ ③ جمعُ المؤنثِ السالمُ ④ الفعلُ المضارعُ الذي لم يتصلْ بآخرِه ضميرُ رفعٍ</td>
+          <td>«جاءَ محمدٌ» — «نجحَ الطلابُ» — ﴿والوالداتُ يرضعنَ﴾ — «يفرحُ»</td>
+        </tr>
+        <tr>
+          <td><b>الواوُ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>① جمعُ المذكرِ السالمِ (ومن ملحقاتِه ألفاظُ العقودِ) ② الأسماءُ الخمسةُ (بشروطِها: مضافةً لغيرِ ياءِ المتكلمِ، مفردةً، مكبَّرةً؛ مع شرطِ «فو» و«ذو»)</td>
+          <td>﴿قد أفلحَ المؤمنونَ﴾ — ﴿إني أنا أخوكَ﴾ — «عشرونَ»</td>
+        </tr>
+        <tr>
+          <td><b>الألفُ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>تثنيةُ الأسماءِ خاصّةً — والملحقُ بالمثنى (هذانِ/هاتانِ، اللذانِ/اللتانِ، اثنا عشرَ)</td>
+          <td>«جاءَ الطالبانِ» — ﴿قال رجلانِ﴾</td>
+        </tr>
+        <tr>
+          <td><b>النونُ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>الأمثلةُ الخمسةُ: كلُّ مضارعٍ اتصلتْ به واوُ الجماعةِ أو ألفُ الاثنَينِ أو ياءُ المخاطبةِ — وعلامةُ الرفعِ فيه ثبوتُ النونِ</td>
+          <td>﴿يحبونَ﴾ — ﴿يسجدانِ﴾ — ﴿أتعجبينَ﴾</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="summary-points">
+    <li><b>الرفعُ يختصُّ بالعُمَدِ</b> — وكلُّ وظيفةٍ نحويّةٍ تكونُ الكلمةُ فيها مرفوعةً تكونُ عمدةً لا يستغني عنها التركيبُ (الفاعلُ، نائبُ الفاعلِ، المبتدأُ، الخبرُ…)؛ وعكسُ العمدةِ الفضلةُ.</li>
+    <li>لكلِّ حالةٍ إعرابيّةٍ <b>علامةٌ أصليّةٌ واحدةٌ</b> — وعلامةُ الرفعِ الأصليّةُ هي <b>الضمّةُ</b> (بالتاءِ المربوطةِ) — ويليها علاماتٌ <b>فرعيّةٌ (نائبةٌ)</b> تنوبُ عنها في مواضعَ محددةٍ: الواوُ والألفُ والنونُ.</li>
+    <li>الضمّةُ <b>قد تكونُ ظاهرةً وقد تكونُ مقدَّرةً</b> (للتعذُّرِ نحو «أذًى» و«موسى»، وللثقلِ نحو «يدعو») — وهذه نكتةٌ لا يغفُلُ عنها المُعرِبُ.</li>
+    <li><b>جمعُ المذكرِ السالمُ</b> كلُّ جمعٍ مختومٍ بالواوِ والنونِ أو الياءِ والنونِ دلَّ على الجمعِ، ويُرفعُ بالواوِ؛ و<b>جمعُ التكسيرِ يُعامَلُ معاملةَ المفردِ</b> فتُرفعُ بالضمّةِ.</li>
+    <li><b>الأسماءُ الخمسةُ</b> (أبوكَ وأخوكَ وحموكَ وفوكَ وذو مالٍ) تُرفعُ بالواوِ بثلاثةِ شروطٍ: الإضافةُ لغيرِ ياءِ المتكلمِ، والافرادُ، والتكبيرُ؛ وتعودُ إلى الحركاتِ إذا أُضيفتْ لياءِ المتكلمِ («هذا أبي») أو لم تُضَفْ (﴿فقد سرقَ أخٌ له من قبلُ﴾) أو جُمِعَتْ («الآباءُ») أو صُغِّرَتْ؛ وفي «فو» شرطُ انتفاءِ الميمِ، وفي «ذو» شرطُ معنى «صاحبٍ» مع ملازمةِ الإضافةِ للاسمِ الظاهرِ.</li>
+    <li>المثنى يُرفعُ <b>بالألفِ</b>، ويلحقُ به «هذانِ/هاتانِ» و«اللذانِ/اللتانِ» و«اثنا عشرَ» وألفاظُ العقودِ تلحقُ بجمعِ المذكرِ السالمِ.</li>
+    <li><b>الأمثلةُ الخمسةُ</b> (التسميةُ الدقيقةُ؛ وإلا فـ«الأفعالُ الخمسةُ» تجوُزًا) خمسُ صيغٍ: يفعلانِ، تفعلانِ، يفعلونَ، تفعلونَ، تفعلينَ — علامةُ رفعِها <b>ثبوتُ النونِ</b>، وفاعلُها الضميرُ المتصلُ فيها.</li>
+    <li>ومن قواعدِ الضمائرِ: <b>الهاءُ والكافُ وياءُ المتكلمِ</b> إذا اتصلتْ بفعلٍ فهي في محلِّ نصبٍ مفعولٌ به، وإذا اتصلتْ باسمٍ فهي في محلِّ جرٍّ مضافٌ إليه.</li>
+  </ul>
+
+  <div class="box note">
+    <span class="tag">تمَّ الدرسُ</span>
+    <p style="margin:0">بهذا نكونُ قد أنهينا الكلامَ على <b>علاماتِ الرفعِ</b> وتطبيقاتِها بالتفصيلِ. وحاصلُها — كما رأينا — أربعُ علاماتٍ: علامةٌ أصليّةٌ هي <b>الضمّةُ</b>، وثلاثُ علاماتٍ فرعيّةٍ (نائبةٍ) تنوبُ عن الضمّةِ ولمواضعِها المحددةِ: <b>الواوُ</b> في جمعِ المذكرِ السالمِ والأسماءِ الخمسةِ، و<b>الألفُ</b> في التثنيةِ خاصّةً، و<b>النونُ</b> في الفعلِ المضارعِ من الأمثلةِ الخمسةِ.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ الثالثِ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=CQnlI_0mu4k" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

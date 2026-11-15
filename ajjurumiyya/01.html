@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الكلام — الدرس الأول من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:60px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.ex-lead{color:var(--gold-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:23px;font-weight:700;margin:0;color:#4a3b12;line-height:2.1}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.hadith{background:#fbf5ea;border:1px solid #e3cf9d;border-right:5px solid var(--gold-700)}
+.hadith .tag{background:var(--gold-700);color:#fff}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:400px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.maroon{background:var(--maroon-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+.dist-bar{
+  height:9px;border-radius:99px;margin:34px 6px 4px;
+  background:linear-gradient(to left,#1e6a4f,#c9a227);
+}
+.dist-labels{display:flex;justify-content:space-between;font-size:16px;font-weight:700;color:var(--green-900)}
+.dist-labels small{display:block;font-weight:400;color:var(--muted);font-size:14px}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17.5px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 13px;border:1px solid #10402c;font-size:17px;
+}
+td{border:1px solid var(--line);padding:9px 13px;background:#fff;vertical-align:top;line-height:1.95}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+.pill{display:inline-block;padding:1px 13px;border-radius:99px;font-size:14.5px;font-weight:700;white-space:nowrap}
+.pill.yes{background:#e0efe6;color:#0d5136;border:1px solid #9fcbaf}
+.pill.no{background:#f7e3e6;color:#8c2f39;border:1px solid #d9aab1}
+.mark{color:var(--gold-900);font-weight:700}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">الكَلَامُ</h1>
+    <div class="cover-sub">الدرس الأول: حدُّ الكلام وأقسامُه وعلاماتُها — مع التمرينات</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=INwEdA0xMl8" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس والتعريفُ بابنِ آجروم</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">المقدّماتُ النحويةُ الثلاث</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">حدُّ الكلامِ وشرحُ قيودِه</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">أقسامُ الكلام: نظرةٌ عامّة</a><span class="dots"></span></li>
+    <li><span class="t-num">٥</span><a href="#s5">الاسمُ وعلاماتُه</a><span class="dots"></span></li>
+    <li><span class="t-num">٦</span><a href="#s6">الفعلُ: مدلولاه وعلاماتُه</a><span class="dots"></span></li>
+    <li><span class="t-num">٧</span><a href="#s7">الحرفُ: حروفُ المباني وحروفُ المعاني</a><span class="dots"></span></li>
+    <li><span class="t-num">٨</span><a href="#s8">التمريناتُ على الدرس الأول</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t81">تطبيقُ حدِّ الكلام: أيُّ العباراتِ كلامٌ؟</a></li>
+        <li><a href="#t82">علاماتُ الأقسام: أسئلةٌ وأجوبة</a></li>
+        <li><a href="#t83">تأمُّلاتٌ في جُمَلٍ وألفاظٍ من النصوص</a></li>
+        <li><a href="#t84">تحديدُ المصطلحِ من مفهومِه</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٩</span><a href="#s9">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١ افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس والتعريفُ بابنِ آجروم</h2></div>
+
+  <p>بسمِ اللهِ الرحمنِ الرحيمِ، الحمدُ للهِ كما ينبغي لجلالِه وكمالِه، وصلَّى اللهُ وسلَّمَ على نبيِّهِ المصطفى وعلى آلِه. وبعدُ:</p>
+
+  <p>فهذا أولُ درسٍ من دروسِ هذا المتنِ — متنِ الآجروميّةِ — وهو <b>«الكلامُ»</b>. وقبلَ الشروعِ في الشرحِ نُعرِّفُ بصاحبِ المتنِ رحمه الله.</p>
+
+  <div class="box note">
+    <span class="tag">ترجمةُ المؤلف</span>
+    <p style="margin:0">هو الإمامُ النحويُّ <b>محمدُ بنُ محمدِ بنِ داودَ الصنهاجيُّ</b>، أبو عبدِ اللهِ، المشهورُ بـ<b>«ابنِ آجروم»</b>. وكلمةُ «آجروم» معناها <b>الفقيرُ الصوفيُّ</b> بلغةِ البربرِ. وهو صاحبُ هذه المقدّمةِ الشهيرةِ: <b>«المقدّمةِ الآجروميّةِ»</b>.</p>
+    <p style="margin:6px 0 0">وُلدَ رحمهُ اللهُ سنةَ <b>٦٧٢هـ</b> بمدينةِ فاسَ بالمغربِ، وتوفي فيها أيضًا سنةَ <b>٧٢٣هـ</b>. وقد رُزِقَتْ مقدمتُه النحويةُ هذه من الذيوعِ والشهرةِ ما لم يَتِحْ لغيرِها من المقدّماتِ والمتونِ النحويةِ — إلا أن يكونَ <b>ألفيةَ ابنِ مالكٍ</b> مثلًا. وهذا دليلٌ على <b>إخلاصِ الرجلِ</b>، ونحسبُه كذلك، رحمه الله تعالى.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢ المقدمات الثلاث ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>المقدّماتُ النحويةُ الثلاث</h2></div>
+
+  <p>بابُ «الكلامِ» مقدّمةٌ عادةً ما يبدأُ بها النحاةُ تأليفَهم وتصنيفَهم على اختلافِه؛ فيبدؤون بمقدّماتٍ تُسمَّى <b>«المقدّماتِ النحويةَ الثلاث»</b>:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">المقدّماتُ النحويةُ الثلاثُ في تصانيفِ النحاةِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الأولى: أقسامُ الكلمةِ</div>
+        <div class="n-sub">الكلامُ على أقسامِ الكلمةِ في العربيةِ، ومنها يتكلمونَ على الفرقِ بين <b>الكلامِ</b> و<b>الكلمِ</b></div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الثانية: الإعرابُ والبناءُ</div>
+        <div class="n-sub">مقدّمةٌ خاصّةٌ بالإعرابِ والبناءِ وحدودِهما</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الثالثة: التعريفُ والتنكيرُ</div>
+        <div class="n-sub">مقدّمةٌ خاصّةٌ بالتعريفِ والتنكيرِ</div>
+      </div>
+    </div>
+    <figcaption>شكل (١): المقدّماتُ التي يفتتحُ بها النحاةُ مصنفاتَهم</figcaption>
+  </figure>
+
+  <p>وأوّلُ هذه المقدّماتِ — وهي موضعُ درسِنا — بدأَها ابنُ آجرومَ رحمه الله بتوضيحِ مصطلحِ <span class="term">«الكلام»</span> وبيانِ مفهومِ هذا المصطلحِ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣ حد الكلام ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>حدُّ الكلامِ وشرحُ قيودِه</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«الكلامُ: هو اللفظُ المركَّبُ، المفيدُ بالوضعِ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <p>هذا حدُّ الكلامِ عند ابنِ آجرومَ، وقد قيَّدَ «اللفظَ» بأربعةِ قيودٍ: أنه <b>مركَّبٌ</b>، وأنه <b>مفيدٌ</b>، وأنه كائنٌ <b>بالوضعِ</b>. وفيما يلي تفصيلُ كلِّ قيدٍ من هذه القيودِ:</p>
+
+  <figure class="diagram">
+    <div class="tree-root">الكلامُ = اللفظُ المركَّبُ المفيدُ بالوضعِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-4">
+      <div class="node goldb">
+        <div class="n-title">اللفظُ</div>
+        <div class="n-sub">كلُّ ما يُنطقُ به، مفيدًا كان أو غيرَ مفيدٍ:<br>«زيدٌ» له معنًى، و«ديزٌ» لا معنَى له في العربيةِ</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">المركَّبُ</div>
+        <div class="n-sub">لا مفردَ؛ فاللفظُ المفردُ هو «الكلمةُ»، والتركيبُ ارتباطُ اللفظِ بما قبلَه أو بعدَه بعلاقةٍ نحويةٍ</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">المفيدُ</div>
+        <div class="n-sub">ذو معنًى تامٍّ يحسُنُ السكوتُ عليه؛ ولذلك خرجَ ما لا معنَى له</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">بالوضعِ</div>
+        <div class="n-sub">قولانِ:<br>• بالقصدِ: فخرجَ كلامُ الساهي والنائمِ<br>• بالوضعِ العربيِّ: فخرجَ الكلامُ الأعجميُّ</div>
+      </div>
+    </div>
+    <figcaption>شكل (٢): تفكيكُ حدِّ الكلامِ وقيودِه الأربعةِ</figcaption>
+  </figure>
+
+  <h3>القيدُ الأولُ: «اللفظُ»</h3>
+  <p>اللفظُ في اللغةِ العربيةِ هو <b>كلُّ ما يُلفَظُ به</b>، أي كلُّ ما يُنطقُ به. وقد يكونُ هذا اللفظُ مفهومًا وقد يكونُ غيرَ مفهومٍ؛ يعني قد يكونُ مفيدًا وضعًا وقد لا يكونُ مفيدًا وضعًا.</p>
+  <div class="box example">
+    <span class="tag">مثال</span>
+    <p style="margin:0">لو قلتَ مثلًا كلمةَ <span class="mark">«زيدٌ»</span> فهذه الكلمةُ مفيدةٌ، أي لفظٌ له معنًى. ولو قلبتَ حروفَها فقلتَ مثلًا <span class="mark">«ديزٌ»</span> فهو لفظٌ لا معنَى له في العربيةِ.</p>
+  </div>
+  <p>فاللفظُ يشملُ ما له معنًى وما ليس له معنًى، والمقصودُ به هنا في النحوِ العربيِّ هو <b>اللفظُ المفيدُ الذي له معنًى</b>؛ ولذلك قيَّدَه ابنُ آجرومَ بقولِه <span class="term">«المفيد»</span>.</p>
+
+  <h3>القيدُ الثاني: «المركَّبُ»</h3>
+  <p>قيَّدَه تقييدًا آخرَ بقولِه <span class="term">«المركَّبُ»</span>؛ لأن اللفظَ المفردَ هو <b>الكلمةُ</b>، وإنما الكلامُ لا بدَّ وأن يكونَ مركَّبًا؛ يعني أن يرتبطَ اللفظُ بما قبلَه أو بما بعدَه من خلالِ <b>علاقةٍ نحويةٍ</b> معيّنةٍ، وسيكونُ الكلامُ عنها تفصيلًا لاحقًا إن شاء الله. فالكلامُ هو: اللفظُ المركَّبُ المفيدُ بالوضعِ.</p>
+
+  <h3>القيدُ الثالثُ: «بالوضعِ»</h3>
+  <p>وطبعًا اختلفَ المفسرونَ والشرّاحُ لمثلِ هذه الكلمةِ على قولَينِ:</p>
+  <p><b>القولُ الأولُ:</b> أن المرادَ بـ«بالوضعِ» <b>بالقصدِ</b>؛ أي أن يكونَ الكلامُ لفظًا مركَّبًا مفيدًا <b>مقصودًا</b>، فخرجَ من ذلكَ كلامُ <b>الساهي والنائمِ</b>؛ فهذا لا يُعدُّ كلامًا طبقًا لهذا المفهومِ.</p>
+  <p><b>القولُ الثاني:</b> أن المرادَ بـ«بالوضعِ» <b>الوضعُ العربيُّ</b>؛ فلو كانَ الكلامُ أعجميًّا — ككلامِ التركِ والرومِ وما إلى آخرِه — فهذا ليس داخلًا في مفهومِ مصطلحِ الكلامِ (العربيِّ).</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤ أقسام الكلام ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>أقسامُ الكلام: نظرةٌ عامّة</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«وأقسامُه ثلاثةٌ: اسمٌ، وفعلٌ، وحرفٌ جاء لمعنًى»</p>
+  </div>
+
+  <p>ثم انتقلَ ابنُ آجرومَ رحمه الله إلى بيانِ <b>أقسامِ الكلامِ</b>. وبعضُ النحاةِ يرى أنها أقسامُ <b>الكلمةِ</b> لا أقسامُ الكلامِ؛ لأن كلَّ واحدٍ من هذه الأقسامِ الثلاثةِ إنما يقعُ عليه اسمُ «الكلمةِ» مفردًا.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">أقسامُ الكلامِ (الكلمةِ) ثلاثةٌ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الاسمُ</div>
+        <div class="n-sub">يدلُّ على مسمًّى، والزمنُ ليس جزءًا منه<br><b>علاماتُه:</b>
+          <ul>
+            <li>الخفضُ (الجرُّ)</li>
+            <li>التنوينُ</li>
+            <li>دخولُ الألفِ واللامِ</li>
+            <li>حروفُ الخفضِ</li>
+            <li>حروفُ القسمِ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الفعلُ</div>
+        <div class="n-sub">يدلُّ على مسمًّى والزمنُ جزءٌ منه (حدثٌ + زمنٌ)<br><b>علاماتُه:</b>
+          <ul>
+            <li>«قد»</li>
+            <li>السينُ</li>
+            <li>«سوفَ»</li>
+            <li>تاءُ التأنيثِ الساكنةُ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node maroon">
+        <div class="n-title">الحرفُ</div>
+        <div class="n-sub">ما دلَّ على معنًى في غيرِه (حرفُ المعنى)<br><b>علامتُه:</b> علامةٌ عدميّةٌ — لا يصحُّ معه دليلُ الاسمِ ولا دليلُ الفعلِ</div>
+      </div>
+    </div>
+    <figcaption>شكل (٣): الشجرةُ العامّةُ لأقسامِ الكلامِ وعلاماتِها — وسيفصَّلُ كلُّ قسمٍ في فقراتِ الدرسِ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥ الاسم ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>الاسمُ وعلاماتُه</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«فالاسمُ يُعرَفُ: بالخفضِ، والتنوينِ، ودخولِ الألفِ واللامِ، وحروفِ الخفضِ، وهي: مِنْ، وإلى، وعنْ، وعلى، وفي، وربَّ، والباءُ، والكافُ، واللامُ، وحروفُ القسمِ، وهي: الواوُ، والباءُ، والتاءُ»</p>
+  </div>
+
+  <p>نلاحظُ أن ابنَ آجرومَ لم يذكرْ تعريفًا لكلِّ قسمٍ، وإنما دخلَ مباشرةً في الكلامِ على <b>العلاماتِ التي يتميّزُ بها كلُّ قسمٍ</b> من الأقسامِ ولم يُعرَّفْها. وسنعرضُ في أثناءِ الشرحِ للتعريفِ حتى يكونَ الأمرُ واضحًا.</p>
+  <p>فبدأَ بالاسمِ، فعدَّدَ بعضَ علاماتِ الاسمِ التي يُعرَفُ بها في العربيةِ، وهي <b>علاماتٌ شكليّةٌ</b> توجدُ في لفظِ الاسمِ:</p>
+
+  <h3>العلامةُ الأولى: الخفضُ (الجرُّ)</h3>
+  <p>المقصودُ بالخفضِ هو <b>الجرُّ</b>؛ فـ«الخفضُ» مصطلحٌ <b>كوفيٌّ</b>، يقابلُه «الجرُّ» في الاصطلاحِ <b>البصريِّ</b> الشائعِ في النحوِ العربيِّ. والخفضُ طبعًا حالةٌ إعرابيّةٌ <b>يختصُّ بها الاسمُ</b> في العربيةِ؛ يعني الجرَّ أو الخفضَ لا يدخلُ الأفعالَ ولا يدخلُ الحروفَ، وإنما يختصُّ بالأسماءِ فقط.</p>
+
+  <h3>العلامةُ الثانية: التنوينُ</h3>
+  <p>وكذلك التنوينُ؛ يعني أن يكونَ الاسمُ <b>منوَّنًا</b>. فإذا نُوِّنَتِ الكلمةُ فهذا دليلٌ على أنها اسمٌ في العربيةِ؛ لأن التنوينَ أيضًا لا يدخلُ الأفعالَ ولا يدخلُ الحروفَ.</p>
+
+  <h3>العلامةُ الثالثةُ: دخولُ الألفِ واللامِ</h3>
+  <div class="box example">
+    <span class="tag">مثال</span>
+    <p style="margin:0">كقولِنا مثلًا: <span class="mark">«رجلٌ»</span>، فإن أردنا أن نُعرِّفَها قلنا: <span class="mark">«الرجلُ»</span>؛ فدخولُ الألفِ واللامِ على كلمةِ «رجلٍ» دليلٌ على كونِها اسمًا في العربيةِ.</p>
+  </div>
+
+  <h3>العلامةُ الرابعةُ: حروفُ الخفضِ (دخولُها على الاسمِ)</h3>
+  <p>ثم ذكرَ ابنُ آجرومَ أيضًا أن من علاماتِ الاسمِ <b>حروفَ الخفضِ</b>، أي دخولَ حروفِ الخفضِ عليه. والفرقُ بين كلامِه هنا على «حروفِ الخفضِ» والعلامةِ الأولى التي ذكرَها («الخفضِ»): أن <b>الخفضَ</b> هو الحالةُ الإعرابيّةُ ذاتُها التي يشغلُها الاسمُ، أما <b>حروفُ الخفضِ</b> فهي <b>العواملُ</b> التي تدخلُ على الاسمِ فتُؤثِّرُ فيه الجرَّ، وهي حروفٌ معروفةٌ (حروفُ الجرِّ): من، وإلى، وعن، وعلى، وفي، وربَّ، والباءُ. فإذا رأينا حرفًا من هذه الحروفِ داخلًا على كلمةٍ، فلنعلمْ تمامًا أن هذه الكلمةَ التي أتتْ بعدَ هذا الحرفِ <b>اسمٌ</b> مباشرةً.</p>
+  <p>وقد عدَّدَ ابنُ آجرومَ رحمه الله حروفَ الخفضِ فقال: وهي <b>مِنْ، وإلى، وعنْ، وعلى، وفي، وربَّ، والباءُ، والكافُ، واللامُ</b>.</p>
+
+  <h3>ومنها: حروفُ القسمِ</h3>
+  <p>وجعلَ ابنُ آجرومَ منها أيضًا قسمًا آخرَ هو حروفُ القسمِ؛ فحروفُ القسمِ من حروفِ الخفضِ، وهي: <b>الواوُ، والباءُ، والتاءُ</b>؛ كان تقولَ مثلًا: <span class="mark">«واللهِ»</span>، و<span class="mark">«تاللهِ»</span>، و<span class="mark">«باللهِ»</span>. فهذه حروفٌ تأتي في أسلوبِ القسمِ، وهي <b>تجرُّ الاسمَ بعدَها</b>؛ ولذلك لا يكونُ بعدَها إلا اسمٌ؛ فهي أيضًا علامةٌ — إذا وُجدتْ — على أن الكلمةَ بعدَها اسمٌ.</p>
+
+  <div class="box note">
+    <span class="tag">تنبيهٌ</span>
+    <p style="margin:0">هذه العلاماتُ التي ذكرَها ابنُ آجرومَ — وهي الخفضُ والتنوينُ ودخولُ الألفِ واللامِ وحروفُ الخفضِ ومعها حروفُ القسمِ — ليستْ كلَّ العلاماتِ؛ فلاسمِ علاماتٌ أخرى، ولكن هذه هي التي اختارَها رحمه الله لسهولتِها ووضوحِها.</p>
+  </div>
+
+  <figure class="diagram">
+    <div class="tree-root gold">علاماتُ الاسمِ في المتنِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الخفضُ = الجرُّ</div>
+        <div class="n-sub">حالةٌ إعرابيّةٌ يختصُّ بها الاسمُ — مصطلحٌ كوفيٌّ يقابلُه «الجرُّ» البصريُّ</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">التنوينُ</div>
+        <div class="n-sub">تنوينُ الكلمةِ دليلٌ اسميّتِها؛ فالتنوينُ لا يدخلُ الأفعالَ ولا الحروفَ</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">دخولُ الألفِ واللامِ</div>
+        <div class="n-sub">«رجلٌ» ← «الرجلُ»؛ فـ«ال» للتعريفِ من خواصِّ الأسماءِ</div>
+      </div>
+    </div>
+    <div class="tree-stem" style="height:20px"></div>
+    <div class="tree-row cols-2">
+      <div class="node green">
+        <div class="n-title">حروفُ الخفضِ (العواملُ الداخلةُ)</div>
+        <div class="n-sub">من، إلى، عن، على، في، ربَّ، الباءُ، الكافُ، اللامُ — إذا دخلتْ على كلمةٍ فهي اسمٌ</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">حروفُ القسمِ</div>
+        <div class="n-sub">الواوُ، والباءُ، والتاءُ — «واللهِ / تاللهِ / باللهِ» — تجرُّ الاسمَ بعدَها، فلا يكونُ بعدَها إلا اسمٌ</div>
+      </div>
+    </div>
+    <figcaption>شكل (٤): علاماتُ الاسمِ الخمسُ كما عدَّدَها ابنُ آجرومَ</figcaption>
+  </figure>
+
+  <div class="box note">
+    <span class="tag">تفرقةٌ مهمّةٌ</span>
+    <p style="margin:0"><b>الخفضُ</b> هو الحالةُ الإعرابيّةُ ذاتُها (الجرُّ) التي يشغلُها الاسمُ، أما <b>حروفُ الخفضِ</b> فهي العواملُ التي تدخلُ على الاسمِ فتُؤثِّرُ فيه الجرَّ.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦ الفعل ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>الفعلُ: مدلولاه وعلاماتُه</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«والفعلُ يُعرَفُ بـ: قَدْ، والسينِ، وسوفَ، وتاءِ التأنيثِ الساكنةِ»</p>
+  </div>
+
+  <h3>الفرقُ بين الاسمِ والفعلِ: مدلولا الفعلِ</h3>
+  <p>تكلمَ ابنُ آجرومَ هنا على الفعلِ <b>بعمومِه</b>؛ لأن الفعلَ عندنا ينقسمُ إلى عددٍ من الأقسامِ. وقبلَ ذلك يجبُ أن نوضّحَ أمرًا مهمًّا <b>نفرِّقُ به بين الفعلِ والاسمِ</b>. قالوا: <b>الاسمُ</b> هو ما دلَّ على مسمًّى <b>وليس الزمنُ جزءًا منه</b>، و<b>الفعلُ</b> ما دلَّ على مسمًّى <b>والزمنُ جزءٌ منه</b>. ولذلك الفعلُ له مدلولانِ في العربيةِ؛ لا بدَّ أن يدلَّ على شيئَينِ: كلُّ فعلٍ تامٍّ في اللغةِ العربيةِ لا بدَّ أن يدلَّ على <b>الحدثِ</b> وعلى <b>الزمنِ</b>.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الفعلُ التامُّ له مدلولانِ لازمانِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node blue">
+        <div class="n-title">الحدثُ</div>
+        <div class="n-sub">لا يختلفُ باختلافِ نوعِ الفعلِ؛ فالحدثُ في الماضي والمضارعِ والأمرِ واحدٌ: «كتبَ / يكتبُ / اُكتُبْ» — الحدثُ فيها واحدٌ هو <b>الكتابةُ</b></div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الزمنُ</div>
+        <div class="n-sub">يتغيرُ بتغيرِ صيغةِ الفعلِ؛ فكلُّ صيغةٍ من صيغِ الأفعالِ تدلُّ على زمانٍ معيّنٍ: «كتبَ» للماضي، و«يكتبُ» للحالِ، و«اُكتُبْ» للمستقبلِ</div>
+      </div>
+    </div>
+    <div class="dcap">شكل (٥): مدلولا الفعلِ — الحدثُ ثابتٌ والزمنُ متغيِّرٌ</div>
+  </figure>
+
+  <p>فالحدثُ لا يختلفُ باختلافِ نوعِ الفعلِ؛ فالحدثُ في الماضي والمضارعِ والأمرِ واحدٌ. مثلًا الفعلُ <span class="mark">«كَتَبَ / يَكْتُبُ / اُكْتُبْ»</span>: الحدثُ فيها واحدٌ وهو <b>الكتابةُ</b>، لم يتغيرْ؛ وإنما <b>تتغيرُ صيغةُ الفعلِ بتغيرِ زمانِه</b>. يعني أن انتقالَ الفعلِ من صيغةٍ إلى أخرى دليلٌ على تغيّرِ الزمنِ: فحينَ تقولُ «كتبَ» فالزمنُ من حيثُ اختلفتْ عن «يكتبُ» واختلفتْ عن «اُكتُبْ»:</p>
+  <ul>
+    <li>الفعلُ <span class="mark">«كتبَ»</span> يدلُّ على <b>الزمانِ الماضي</b>.</li>
+    <li>والفعلُ <span class="mark">«يكتبُ»</span> يدلُّ على <b>الزمانِ الحاضرِ (الحالِ)</b>، وقد يدلُّ على <b>المستقبلِ</b> ويُخصَّصُ بالمستقبلِ إذا سبقَه حرفٌ يخصِّصُه بذلك كالسينِ وسوفَ — وهما من الحروفِ التي ذكرَها ابنُ آجرومَ علامةً على الفعلِ، وهي علامةٌ شكليّةٌ أيضًا.</li>
+    <li>ثم <b>الأمرُ</b> يدلُّ على <b>المستقبلِ دائمًا</b>.</li>
+  </ul>
+
+  <p>فاختفلافُ زمانِ الفعلِ يؤدي إلى اختلافِ صيغتِه، أو نستطيعُ القولَ: إن اختلافَ صيغةِ الفعلِ دليلٌ على اختلافِ زمانِه؛ فكلُّ صيغةٍ من صيغِ الأفعالِ تدلُّ على زمانٍ معيّنٍ. وهذا أهمُّ ما يميّزُ الفعلَ عن قسيمَيهِ (الأسماءِ والحروفِ): <b>الفعلُ يدلُّ على الزمنِ مع الحدثِ</b>. وإذا نقصَ واحدٌ من الشيئَينِ (المدلولَينِ) سُمِّيَ الفعلُ <b>ناقصًا</b> — كما في «كانَ» وأخواتِها — وسيأتي ذلك لاحقًا إن شاء الله.</p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 780 250" role="img" aria-label="محور أزمنة الفعل الثلاثة" style="width:100%;height:auto;display:block">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+          <path d="M9,0 L1,4 L9,8 z" fill="#b08a2e"/>
+        </marker>
+      </defs>
+      <line x1="730" y1="140" x2="50" y2="140" stroke="#b08a2e" stroke-width="3" marker-end="url(#arrow)"/>
+      <text x="46" y="170" text-anchor="middle" font-size="15" fill="#8a6414" font-weight="700">اتجاهُ الزمنِ ←</text>
+
+      <!-- الماضي -->
+      <line x1="620" y1="108" x2="620" y2="130" stroke="#175139" stroke-width="2"/>
+      <rect x="560" y="68" width="120" height="40" rx="20" fill="#175139"/>
+      <text x="620" y="96" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">كَتَبَ</text>
+      <circle cx="620" cy="140" r="9" fill="#175139"/>
+      <text x="620" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#26241d">زمنٌ ماضٍ</text>
+      <text x="620" y="198" text-anchor="middle" font-size="15" fill="#6b6455">«قَدْ ذاكرتُ» — تحقيقٌ وتوكيدٌ</text>
+      <text x="620" y="222" text-anchor="middle" font-size="15" fill="#6b6455">«قالَتْ فاطمةُ» — تاءُ التأنيثِ</text>
+
+      <!-- المضارع -->
+      <line x1="390" y1="108" x2="390" y2="130" stroke="#31567d" stroke-width="2"/>
+      <rect x="330" y="68" width="120" height="40" rx="20" fill="#31567d"/>
+      <text x="390" y="96" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">يَكْتُبُ</text>
+      <circle cx="390" cy="140" r="9" fill="#31567d"/>
+      <text x="390" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#26241d">زمنُ الحالِ</text>
+      <text x="390" y="198" text-anchor="middle" font-size="15" fill="#6b6455">وبالسينِ أو «سوفَ»: استقبالٌ خالصٌ</text>
+      <text x="390" y="222" text-anchor="middle" font-size="15" fill="#6b6455">«سَيَكْتُبُ» و«سَوْفَ يَكْتُبُ»</text>
+
+      <!-- الأمر -->
+      <line x1="150" y1="108" x2="150" y2="130" stroke="#8a6414" stroke-width="2"/>
+      <rect x="90" y="68" width="120" height="40" rx="20" fill="#8a6414"/>
+      <text x="150" y="96" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">اُكْتُبْ</text>
+      <circle cx="150" cy="140" r="9" fill="#8a6414"/>
+      <text x="150" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#26241d">المستقبلُ دائمًا</text>
+      <text x="150" y="198" text-anchor="middle" font-size="15" fill="#6b6455">لأنه طلبٌ لما لم يقعْ بعدُ</text>
+    </svg>
+    <figcaption>شكل (٦): محورُ أزمنةِ الفعلِ — تتغيرُ صيغةُ الفعلِ بتغيرِ زمنِه، والحدثُ في الجميعِ واحدٌ</figcaption>
+  </figure>
+
+  <h3>العلامةُ الأولى: «قد»</h3>
+  <p>ذكرَ ابنُ آجرومَ رحمه الله عددًا من <b>العلاماتِ العامّةِ للفعلِ</b>، لم يفرِّقْ فيها بين العلاماتِ الداخلةِ على الماضي أو المضارعِ أو الأمرِ. فذكرَ أولًا <span class="term">«قد»</span>: تدخلُ على الفعلِ الماضي وتدخلُ على الفعلِ المضارعِ، لكن دلالتَها يختلفُ — أو معناها يختلفُ — إذا دخلتْ على أيٍّ من الفعلَينِ:</p>
+
+  <div class="flow-lane">
+    <span class="chip">«قد» + الماضي</span><span class="fa">←</span>
+    <span class="chip plain">«نعم، قَدْ ذاكرتُ»</span><span class="fa">←</span>
+    <span class="chip">التحقيقُ والتوكيدُ</span>
+    <div class="lane-note">توكيدُ وقوعِ الحدثِ: يؤكِّدُ أنه قد حدثَ وصدرَ عنه هذا الحدثُ وهو المذاكرةُ.</div>
+  </div>
+  <div class="flow-lane">
+    <span class="chip blue">«قد» + المضارعُ</span><span class="fa">←</span>
+    <span class="chip plain">«قَدْ أُذاكِرُ اليومَ»</span><span class="fa">←</span>
+    <span class="chip blue">الشكُّ أو التقريبُ</span>
+    <div class="lane-note">فيه معنى الشكِّ: ليس تحقيقًا ولا توكيدًا، وقد يحدثُ وقد لا يحدثُ — أي عدمُ اليقينِ.</div>
+  </div>
+
+  <div class="box example">
+    <span class="tag">مثالٌ تطبيقيٌّ</span>
+    <p style="margin:0">هناك فرقٌ بين حين أسألُ طالبًا فأقولُ له: <span class="mark">«هل ذاكرتَ اليومَ؟»</span> فيجيبُ: <span class="mark">«نعم، قَدْ ذاكرتُ»</span> — فـ«قد» هنا تفيدُ التحقيقَ والتوكيدَ — وبين أن يكونُ جوابُه: <span class="mark">«قَدْ أُذاكِرُ اليومَ»</span>، فهذا فيه معنى الشكِّ.</p>
+  </div>
+
+  <p>وطبعًا هناك <b>استثناءاتٌ معيّنةٌ</b> في التعبيراتِ؛ كأن تدخلَ «قد» على الفعلِ [المضارعِ] الذي فاعلُه هو اللهُ سبحانه وتعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنكُمْ لِوَاذًا﴾<span class="ref">سورةُ النورِ: ٦٣</span></p>
+  </div>
+  <p>فعلمُ اللهِ متحققٌ متأكّدٌ، فخالفتِ «قد» هنا هذا الأصلَ. ولكن على أيِّ حالٍ، هذا هو <b>الأصلُ</b> الذي تكونُ عليه «قد» حين تدخلُ على الفعلِ المضارعِ: أنها تفيدُ معنى الشكِّ، يعني عدمَ اليقينِ.</p>
+
+  <h3>العلامتانِ الثانيةُ والثالثةُ: حرفا التنفيسِ «السينُ» و«سوفَ»</h3>
+  <p>ثم ذكرَ ابنُ آجرومَ <b>حرْفَي التنفيسِ</b> في اللغةِ العربيةِ، الدالَّينِ على <b>الاستقبالِ دائمًا</b>، وهما: <span class="term">السينُ</span> و<span class="term">«سوفَ»</span>. السينُ تدخلُ على الفعلِ المضارعِ، و«سوفَ» تدخلُ أيضًا على الفعلِ المضارعِ؛ فهذان الحرفانِ <b>خاصّانِ بالفعلِ المضارعِ</b>: لا يدخلانِ على الماضي أبدًا ولا على الأمرِ مطلقًا. وكلاهما — كما قلنا — يفيدُ معنى الاستقبالِ، لكن ثمّة فرقٌ بينهما في الدلالةِ على معنى الاستقبالِ: أن <b>السينَ تفيدُ المستقبلَ القريبَ</b>، أما <b>«سوفَ» فتفيدُ المستقبلَ البعيدَ</b>.</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالَ سَوْفَ أَسْتَغْفِرُ لَكُمْ رَبِّي﴾<span class="ref">سورةُ يوسفَ: ٩٨</span></p>
+  </div>
+  <p>في قولِه تعالى على لسانِ <b>يعقوبَ عليه السلامُ</b> — حينَ طلبَ منه بنوه أن يستغفرَ لهم اللهَ ليعفوَ عنهم عن خطيئتِهم — هنا دلالةٌ على <b>المستقبلِ البعيدِ</b>: أنه ليس إلى هذه اللحظةِ التي يكلِّمُهم فيها راضيًا عما فعلوا، وفي قلبِه شيءٌ، فهو يمنِّيهِم ويقولُ لهم إنه سيكونُ منه استغفارٌ، ولكن ليس على النحوِ القريبِ.</p>
+  <p>فهذا هو الفرقُ بين السينِ و«سوفَ»: أن السينَ للمستقبلِ القريبِ و«سوفَ» للمستقبلِ البعيدِ. <b>وهذا متناسبٌ مع بنيةِ كلٍّ منهما</b>: فالسينُ حرفٌ واحدٌ، و«سوفَ» مكوَّنةٌ من ثلاثةِ أحرفٍ — وهي حرفُ معنًى كما هو معلومٌ.</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node blue">
+        <div class="n-title">السينُ</div>
+        <div class="n-sub">حرفٌ واحدٌ ← <b>المستقبلُ القريبُ</b><br>تختصُّ بالفعلِ المضارعِ فحسب<br>﴿وَعَلِمَ أَنْ سَيَكُونُ مِنكُم مَّرْضَى﴾</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">سوفَ</div>
+        <div class="n-sub">ثلاثةُ أحرفٍ ← <b>المستقبلُ البعيدُ</b><br>تختصُّ بالفعلِ المضارعِ فحسب<br>﴿قَالَ سَوْفَ أَسْتَغْفِرُ لَكُمْ رَبِّي﴾</div>
+      </div>
+    </div>
+    <div class="dist-labels">
+      <div>سوفَ<small>المستقبلُ البعيدُ</small></div>
+      <div>السينُ<small>المستقبلُ القريبُ</small></div>
+    </div>
+    <div class="dist-bar"></div>
+    <div class="dist-labels" style="margin-top:2px">
+      <div><small>كلُّ واحدٍ منهما لا يدخلُ إلا المضارعَ</small></div>
+      <div><small>ولا يدخلُ الماضيَ ولا الأمرَ مطلقًا</small></div>
+    </div>
+    <figcaption>شكل (٧): حرفا التنفيسِ — القربُ والبعدُ في دلالةِ الاستقبالِ</figcaption>
+  </figure>
+
+  <h3>العلامةُ الرابعةُ: تاءُ التأنيثِ الساكنةُ</h3>
+  <p>ثم ذكرَ ابنُ آجرومَ بعدَ ذلك أن من علاماتِ الفعلِ <b>تاءَ التأنيثِ الساكنةَ</b>. وتاءُ التأنيثِ الساكنةُ <b>مختصّةٌ بالدخولِ على الفعلِ الماضي</b>؛ يعني لا تدخلُ على المضارعِ ولا تدخلُ على الأمرِ — تاءَ التأنيثِ الساكنةَ تحديدًا. وتُرسَمُ طبعًا <b>تاءً مفتوحةً</b> لاحقةً بالفعلِ الماضي لتدلَّ على أن الفاعلَ مؤنثٌ.</p>
+  <p>فلماذا تلحقُ تاءُ التأنيثِ الفعلَ الماضي؟ تلحقُه لتدلَّ على أن <b>الفاعلَ الذي سيأتي بعدَ الفعلِ مؤنثٌ</b>؛ فحين تسمعُ <span class="mark">«قالَتْ»</span> فعليك أن تعلمَ أن الفاعلَ الذي سيأتي مؤنثٌ: <span class="mark">«قالَتْ فاطمةُ»</span>. ولا يصحُّ أن أقولَ «قالَتْ» ثم أقولَ «محمدٌ» مثلًا؛ لا يصحُّ؛ لأن التاءَ دليلُ تأنيثِ الفاعلِ كما هو معلومٌ.</p>
+  <div class="box note">
+    <span class="tag">تنبيهٌ</span>
+    <p style="margin:0">ولا يصحُّ أيضًا أن تقولَ إن الفعلَ هنا مؤنثٌ — أي إذا لحقتْه تاءُ التأنيثِ نقولُ «الفعلُ مؤنثٌ»؟ لا؛ <b>الفعلُ لا يوصفُ بتذكيرٍ ولا تأنيثٍ</b>، وإنما الذي يوصفُ بهذا الوصفِ هو <b>الاسمُ</b>. لذلك — كما ذكرنا — تلحقُ تاءُ التأنيثِ الفعلَ للدلالةِ على أن الفاعلَ الذي سيأتي مؤنثٌ.</p>
+  </div>
+
+  <h3>جدولُ العلاماتِ بحسبِ نوعِ الفعلِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>العلامةُ</th><th>مع الماضي</th><th>مع المضارعِ</th><th>مع الأمرِ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>قد</b></td><td>تدخلُ — وتفيدُ <b>التحقيقَ والتوكيدَ</b></td><td>تدخلُ — وتفيدُ في الأصلِ <b>الشكَّ والتقريبَ</b> (ويُستثنَى ما فاعلُه اللهُ تعالى)</td><td>لا تدخلُ</td></tr>
+        <tr><td><b>السينُ</b></td><td>لا تدخلُ أبدًا</td><td>تدخلُ — وتفيدُ <b>الاستقبالَ القريبَ</b></td><td>لا تدخلُ مطلقًا</td></tr>
+        <tr><td><b>سوفَ</b></td><td>لا تدخلُ أبدًا</td><td>تدخلُ — وتفيدُ <b>الاستقبالَ البعيدَ</b></td><td>لا تدخلُ مطلقًا</td></tr>
+        <tr><td><b>تاءُ التأنيثِ الساكنةُ</b></td><td>تدخلُ — وتدلُّ على أن <b>الفاعلَ مؤنثٌ</b> («قالَتْ»)</td><td>لا تدخلُ</td><td>لا تدخلُ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧ الحرف ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>الحرفُ: حروفُ المباني وحروفُ المعاني</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«والحرفُ: ما لا يَصلُحُ معه دليلُ الاسمِ ولا دليلُ الفعلِ»</p>
+  </div>
+
+  <h3>علامةُ الحرفِ: علامةٌ عدميّةٌ</h3>
+  <p>ثم ذكرَ ابنُ آجرومَ القسمَ الثالثَ من أقسامِ الكلامِ العربيِّ — أو الكلمةِ العربيةِ إن أردنا الدقةَ — وهو <b>الحرفُ</b>. ونصُّ المتنِ: «والحرفُ ما لا يصلحُ معه دليلُ الاسمِ ولا دليلُ الفعلِ». فيصحُّ أن نقولَ إن العلامةَ هنا للحرفِ <b>علامةٌ عدميّةٌ</b>: أنه <b>لا يقبلُ علاماتِ الأسماءِ ولا يقبلُ علاماتِ الأفعالِ</b>. وكما هو واضحٌ، لم يُعرِّفِ ابنُ آجرومَ الحرفَ أيضًا، وإنما ذكرَ علامتَه مباشرةً — وأحيانًا علامةُ الشيءِ تكونُ دليلًا عليه. ولم يذكرِ التعريفَ، وإن كان الحرفُ طبعًا معروفًا بأنه: <b>ما يدلُّ على معنًى في غيرِه</b>.</p>
+
+  <h3>المرادُ: حرفُ المعنى لا حرفُ المبنى</h3>
+  <p>والمقصودُ بالحرفِ ههنا هو <b>حرفُ المعنى</b> لا حرفُ المبنى؛ فالحروفُ في العربيةِ نوعانِ: حروفُ المباني، وحروفُ المعاني:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الحروفُ في العربيةِ نوعانِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node maroon">
+        <div class="n-title">حروفُ المباني</div>
+        <div class="n-sub">الحروفُ الهجائيّةُ المعروفةُ التي تُبنى منها الكلماتُ العربيةُ، وهي <b>٢٨ حرفًا</b> كما هو معلومٌ. مثلًا حين أقولُ: الفعلُ «ضَرَبَ» مكوَّنٌ من الضادِ والراءِ والباءِ — فهذه حروفُ مبانٍ تُبنى منها الكلمةُ العربيةُ</div>
+      </div>
+      <div class="node maroon">
+        <div class="n-title">حروفُ المعاني</div>
+        <div class="n-sub">هي المقصودةُ في القسمِ الثالثِ من أقسامِ الكلامِ: الحرفُ الذي يدلُّ على معنًى فيما بعدَه — في غيرِه — وهو دائمًا مفتقرٌ إلى ما بعدَه ليبِّينَ معناهُ. مثلُ: حروفِ الجرِّ، والاستفهامِ، والشرطِ، والجزمِ، والنصبِ، إلى آخرِها</div>
+      </div>
+    </div>
+    <figcaption>شكل (٨): نوعا الحروفِ — والمرادُ في بابِ أقسامِ الكلامِ حروفُ المعاني</figcaption>
+  </figure>
+
+  <h3>تعدُّدُ معاني الحرفِ بتعدُّدِ سياقاتِه: «في» نموذجًا</h3>
+  <p>وكما قلنا: لا يتحدَّدُ معنى حروفِ المعاني إلا بما بعدَها، ولذلك يمكنُ أن <b>تتعدَّدَ معانيها</b>. على سبيلِ المثالِ حروفُ الجرِّ: فعندنا حرفُ الجرِّ <span class="mark">«في»</span> قد يكونُ بمعنى <b>الظرفيّةِ</b>، وقد يكونُ بمعنى <b>السببيّةِ</b>:</p>
+
+  <div class="box hadith">
+    <span class="tag">حديثٌ شريفٌ</span>
+    <p style="margin:0">قال رسولُ اللهِ ﷺ: «دخلتِ امرأةٌ النارَ <span class="mark">في هُرَّةٍ</span> حبستْها؛ فلا هي أطعمتْها، ولا تركتْها تأكلُ من خشاشِ الأرضِ».</p>
+    <p style="margin:6px 0 0;font-size:16px;color:var(--muted)">«في هُرَّةٍ» أي: <b>بسببِ</b> هُرَّةٍ — فـ«في» هنا للسببِ.</p>
+  </div>
+
+  <div class="box hadith">
+    <span class="tag">حديثٌ شريفٌ — رواه مسلمٌ</span>
+    <p style="margin:0">«رأيتُ رجلًا يتقلَّبُ <span class="mark">في الجنةِ</span> <span class="mark">في غُصنِ شوكٍ</span> أزاحَه عن الطريقِ»؛ قال: حتى لا يؤذيَ أحدًا من المسلمين.</p>
+    <p style="margin:6px 0 0;font-size:16px;color:var(--muted)">«رأيتُ رجلًا يتقلَّبُ في الجنةِ»: «في» هنا تفيدُ <b>الظرفيّةَ</b> — مكانًا وعاءً للمكانِ. ثم «في غُصنِ شوكٍ أزاحَه عن الطريقِ»: أي <b>بسببِ</b> غُصنِ شوكٍ أزاحَه عن الطريقِ.</p>
+  </div>
+
+  <p>فكلُّ هذه المعاني لا تتحدَّدُ إلا في سياقاتِها أو بما بعدَها؛ ولذلك <b>الحرفُ دائمًا مبنيٌّ</b>؛ لأنه يفتقرُ إلى ما بعدَه ليبِّينَ معناهُ.</p>
+
+  <div class="box note">
+    <span class="tag">الدرسُ القادمُ</span>
+    <p style="margin:0">وسنتكلمُ على تفصيلِ الكلامِ على <b>الإعرابِ والبناءِ</b> في هذه الأقسامِ في الدرسِ القادمِ إن شاء اللهُ تعالى.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨ التمرينات ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>التمريناتُ على الدرس الأول</h2></div>
+
+  <p>عندنا الآن بعضُ التمريناتِ على الدرسِ الأولِ — وهو «الكلامُ» وأقسامُه — من دروسِ الآجروميّةِ. وقد درسْنا الكلامَ وقلنا إنه هو <b>اللفظُ المركَّبُ المفيدُ بالوضعِ</b>، فنريدُ أن نطبِّقَ هذا المفهومَ على بعضِ العباراتِ لكي نرى: هل تصلحُ أن تكونَ كلامًا أو لا تصلحُ؟</p>
+
+  <h3 id="t81">أولًا: تطبيقُ حدِّ الكلامِ — أيُّ العباراتِ كلامٌ؟</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>«لا يَفلحُ الكسولُ» — هل يصحُّ أن تكونَ كلامًا؟ يعني: هل هي لفظٌ مركَّبٌ مفيدٌ بالوضعِ، مفيدٌ فائدةً تامّةً؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نعم، هي كذلك؛ فهي <b>كلامٌ</b>: فهمتُ منها معنًى تامًّا ومفيدًا إفادةً تامّةً. وطبعًا في مفهومِ الكلامِ لا بدَّ أن يكونَ مفيدًا <b>إفادةً يحسُنُ السكوتُ عليها</b> — إفادةً تامّةً.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ماذا لو قلتُ مثلًا: «لو أنصفَ الناسُ»؟ هل يصحُّ أن يكونَ كلامًا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>لا، لا يصحُّ. لماذا؟ لأن المعنى هنا غيرُ تامٍّ؛ ليست الجملةُ مفيدةً إفادةً تامّةً: «لو أنصفَ الناسُ» — ماذا يحدثُ؟ المعنى لم يكتملْ. وطالما أن المعنى لم يكتملْ فهو ليس كلامًا؛ <b>فيُشترطُ في الكلامِ أن يفيدَ فائدةً تامّةً</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلتُ: «محمدٌ صفوةُ المرسَلينَ صلى اللهُ عليه وسلَّم» — هل هذا كلامٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نعم، هذا <b>كلامٌ</b>؛ لأنه أفادَ فائدةً يحسُنُ السكوتُ عليها.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلتُ: «يُضيءُ القمرُ ليلًا» — هل هذا كلامٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نعم، هو <b>كلامٌ</b>؛ لأنه أفادَ إفادةً تامّةً.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلتُ: «مدينةُ طنطا» وسكتُّ — هل هذا كلامٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>لا، ليس كلامًا؛ لأنه لم يفدْ إفادةً تامّةً، كما قلنا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>وكذلك إذا قلتُ مثلًا: «إذا طلعتِ الشمسُ» — هل هذا كلامٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>لا، ليس كلامًا؛ لأنه لم يفدْ إفادةً تامّةً.</div>
+  </div>
+
+  <h3 id="t82">ثانيًا: علاماتُ الأقسامِ — أسئلةٌ وأجوبة</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>إذا سألتُ سؤالًا وقلتُ: القسمُ الذي يدلُّ على الزمنِ والحدثِ من أقسامِ الكلامِ في العربيةِ هو: الاسمُ أم الفعلُ أم الحرفُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا طالما فيه دلالةٌ على الزمنِ، إذن هو <b>الفعلُ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>اذكرْ ثلاثَ علاماتٍ يتميّزُ بها الاسمُ عن قسيمَيهِ الفعلِ والحرفِ، مع ذكرِ جُمَلٍ مفيدةٍ دالّةٍ عليها.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>ابنُ آجرومَ ذكرَ عددًا من العلاماتِ؛ ومنها ثلاثُ علاماتٍ نجيبُ بها:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li><b>الخفضُ</b>: يعني أن يكونَ الاسمُ مجرورًا، سواءٌ بحرفِ الجرِّ أو بالإضافةِ.</li>
+        <li><b>أن يكونَ الاسمُ معرَّفًا بـ«ال»</b>: أي دخلتْ عليه «ال».</li>
+        <li><b>دخولُ حرفِ الجرِّ</b> على الاسمِ.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box example">
+    <span class="tag">مثالٌ تطبيقيٌّ</span>
+    <p style="margin:0">لو ذكرنا مثلًا أمثلةً على هذا نقولُ: <span class="mark">«محمدٌ في البيتِ»</span>. هنا علامةُ <b>التنوينِ</b> في «محمدٍ»، وفي «البيتِ» <b>حرفُ الجرِّ</b>، ثم الاسمُ نفسُه <b>حالةُ الجرِّ</b> التي يتلبَّسُ بها الاسمُ — فهذه علاماتٌ تميّزُ الاسمَ هنا؛ فكلُّ هذا دليلٌ على أن «محمدًا» اسمٌ و«البيتَ» اسمٌ كذلك.</p>
+    <p style="margin:8px 0 0">وكذلك كلمةُ <span class="mark">«البيتِ»</span> هنا فيها <b>ثلاثُ علاماتٍ</b>: أولًا دخولُ حرفِ الجرِّ عليها («في»)، ثانيًا هي نفسُها مجرورةٌ، ثالثًا فيها «ال». وإنما كلمةُ «محمدٍ» الأولى هي اسمٌ؛ دليلُ اسميّتِها أن فيها <b>تنوينًا</b>.</p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>إذا قلتُ: ما هو الحرفُ في اصطلاحِ النحويين؟ أو: بماذا يتميّزُ الحرفُ عن قسيمِه؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الحرفُ هو <b>ما يدلُّ على معنًى في غيرِه</b>، وعلاماتُه — كما قلنا — <b>علامةٌ عدميّةٌ</b>: لا يقبلُ علاماتِ الأسماءِ ولا علاماتِ الأفعالِ؛ فهذا هو الحرفُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>الفعلُ المضارعُ في اللغةِ العربيةِ إما أن يدلَّ على الحالِ أو الاستقبالِ؛ اذكرْ علامتَينِ مميّزتَينِ له في اللغةِ العربيةِ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>العلامتانِ اللتانِ ذكرَهما ابنُ آجرومَ وتختصّانِ بالمضارعِ هما: <b>السينُ</b> و<b>«سوفَ»</b> حين تدخلانِ عليه. و«قد» أيضًا يمكنُ أن تكونَ علامةً للمضارعِ بأن تدخلَ عليه، ولكنها يُشترَكُ فيها مع المضارعِ <b>الماضي</b> أيضًا في دخولِ «قد».
+      <div class="box quran" style="margin:12px 0 6px">
+        <span class="tag">آيةٌ كريمةٌ</span>
+        <p class="ayah">﴿وَعَلِمَ أَنْ سَيَكُونُ مِنكُم مَّرْضَى﴾<span class="ref">سورةُ المزَّمِّلِ: ٢٠</span></p>
+      </div>
+      فـ«سيكونُ»: دخولُ السينِ على الكلمةِ بعدَها دالٌّ على أنها فعلٌ، وفعلٌ مضارعٌ بالتحديدِ. وطبعًا دخولُ «سوفَ» — كما ذكرنا في الشرحِ: ﴿قَالَ سَوْفَ أَسْتَغْفِرُ لَكُمْ رَبِّي﴾ — فـ«أستغفرُ» كما ترونَ فعلٌ مضارعٌ؛ ما دليلُ ذلك؟ ما علامةُ ذلك؟ علامةُ ذلك دخولُ «سوفَ» عليه قبلَه.
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>طيب، ما مفهومُ الفعلِ الماضي وما العلاماتُ؟ أو: بماذا يتميّزُ الفعلُ الماضي؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>ابنُ آجرومَ ذكرَ — كما قلنا في الشرحِ — علامةً واحدةً تختصُّ بالدخولِ على الماضي، وهي <b>تاءُ التأنيثِ الساكنةُ</b>؛ تلحقُ الفعلَ الماضي لتدلَّ على أن الفاعلَ مؤنثٌ.
+      <div class="box quran" style="margin:12px 0 6px">
+        <span class="tag">آيةٌ كريمةٌ — من دعاءِ امرأةِ فرعونَ</span>
+        <p class="ayah">﴿إِذْ قَالَتْ رَبِّ ابْنِ لِي عِندَكَ بَيْتًا فِي الْجَنَّةِ وَنَجِّنِي مِن فِرْعَوْنَ وَعَمَلِهِ وَنَجِّنِي مِنَ الْقَوْمِ الظَّالِمِينَ﴾<span class="ref">سورةُ التحريمِ: ١١</span></p>
+      </div>
+      «إذ قالَتْ»: دخولُ التاءِ — كما قلنا — دليلٌ على أن الفاعلَ مؤنثٌ، وهي دليلٌ أيضًا على أن الفعلَ قبلَها فعلٌ <b>ماضٍ</b>.
+    </div>
+  </div>
+
+  <h3 id="t83">ثالثًا: تأمُّلاتٌ في جُمَلٍ وألفاظٍ</h3>
+
+  <p>علينا أن نتأمَّلَ الجملَ الآتيةَ؛ لنبِّينَ هل ينطبقُ عليها حدُّ الكلامِ عند النحاةِ أم هي مجردُ كلمةٍ:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تأمُّلٌ</span>«المؤذِّنُ» — هل ينطبقُ عليها مفهومُ الكلامِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>لا ينطبقُ عليها مفهومُ الكلامِ؛ إنما هي <b>كلمةٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تأمُّلٌ</span>ماذا لو قلتُ: «اجتهدْ»؟ هل هي كلامٌ أم كلمةٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>لا، هي <b>كلامٌ</b>؛ لأنها جملةٌ أفادتْ معنًى تامًّا: الفاعلُ <b>ضميرٌ مستترٌ</b> تقديرُه «أنتَ» — يعني هنا كلمةٌ غيرُ ظاهرةٍ، وكلمةٌ ظاهرةٌ هي «اجتهدْ»؛ فهي في النهايةِ تكونُ جملةً مفيدةً إفادةً تامّةً.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تأمُّلٌ</span>ماذا لو قلتُ: «إذَنْ المؤذِّنُ» (بضمِّ النونِ)؟ هل هذه جملةٌ تامّةٌ — يعني كلامٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نعم، هي جملةٌ كاملةٌ تفيدُ معنًى تامًّا، ومن ثمَّ فهي <b>كلامٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تأمُّلٌ</span>«إذَنْ المؤذِّنَ» (بفتحِ النونِ) — هل هذا كلامٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>لو تأمَّلنا المعنى وجدْناه <b>غيرَ تامٍّ</b>؛ يعني يحتاجُ إلى ما يتمِّمُ معناهُ، فلذلك هذه العبارةُ <b>ليست كلامًا</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: ﴿فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ﴾ [النصر: ٣]: ما نوعُ الهاءِ والكافِ في هذا القولِ الكريمِ — الهاءِ في آخرِ «واستغفرْهُ» والكافِ في آخرِ «ربِّكَ»؟ هل هما اسمانِ أم فعلانِ أم حرفانِ أم ليسا بكلمةٍ أصلًا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>إذا دققنا سنجدُ أنهما <b>ضميرانِ</b>، والضمائرُ كلُّها <b>أسماءٌ</b> في اللغةِ العربيةِ.</div>
+  </div>
+
+  <p>دقِّقوا معنا النظرَ في هذين المثالَينِ: في قولِه تعالى ﴿يَزِيدُ فِي الْخَلْقِ مَا يَشَاءُ﴾، وفي قولِنا: «هذا كتابُ يزيدَ». وسؤالُنا: كلمةُ «يزيدُ» في الجملتَينِ ما نوعُها؟</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في الآيةِ الكريمةِ «يزيدُ في الخلقِ ما يشاءُ»: ما نوعُ «يزيدُ»؟ هل هي اسمٌ أم فعلٌ أم حرفٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي <b>فعلٌ</b>. لكن في المثالِ الثاني «هذا كتابُ يزيدَ»: «يزيدُ» هنا <b>اسمٌ</b> — عَلَمٌ على ذاتٍ على شخصٍ؛ فهو اسمٌ وليس فعلًا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أيضًا إذا قلتُ: «صَدَقَ أفلحُ» — بحيث يكونُ «أفلحُ» اسمَ شخصٍ — وقولُنا: «أفلحَ إنْ صدَقَ»: فما نوعُ لفظِ «أفلحُ» في كلٍّ منهما؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>إذا كان «أفلحُ» اسمَ شخصٍ فهو طبعًا ليس فعلًا؛ هو <b>اسمٌ</b> — يعني في «صدَقَ أفلحُ» ليست «أفلحُ» فيها فعلًا، وإنما الفعلُ «صدَقَ». أما «أفلحَ إنْ صدَقَ» في هذا القولِ الشهيرِ — كما نرى — فهو <b>فعلٌ ماضٍ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «نِعْمَ الفتاةَ هندُ»: لفظُ «نِعْمَ» هل هو اسمٌ أم فعلٌ أم حرفٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هو <b>فعلٌ</b> — هذا هو الرأيُ الشائعُ، وهو رأيُ الجمهورِ. ولكن بعضَ النحاةِ يرى أنه يمكنُ أن يكونَ <b>اسمًا</b>، واستدلُّوا على ذلك بأنه قد دخلَ عليه حرفُ الجرِّ في كلامِ الأعرابيِّ حين بُشِّرَ بأنثى فقال: «ما هي بِنِعْمَ الولدُ»؛ فاستدلُّوا بأن باءَ الجرِّ دخلتْ على «نِعْمَ»، وباءُ الجرِّ لا تدخلُ إلا على الأسماءِ.
+      <p style="margin:10px 0 0">وطبعًا النحاةُ الذين رأوا أن «نِعْمَ» دائمًا فعلٌ أوَّلوا هذا على <b>تقديرِ محذوفٍ</b> — اسمٍ محذوفٍ — يعني: «ما هي بِنِعْمَ الولدُ» أي: بولدٍ مقولٍ فيه: نِعْمَ الولدُ.</p>
+      <p style="margin:10px 0 0">واستُدلَّ أيضًا بكلامِ أحدِ الأعرابِ كان ذاهبًا إلى محبوبتِه على بعيرٍ، لكنه كان بطيءَ السيرِ، فقال: <span class="mark">«نِعْمَ السيرُ على بِئْسَ العيرُ»</span>. فـ«على بِئْسَ» — هنا طبعًا حرفُ الجرِّ «على» دخلَ على «بِئْسَ»، فدليلٌ على اسميّتِها طبقًا لهذا الرأيِ. ولكن طبعًا — كما قلنا — الرأيُ الشائعُ والمعروفُ أن كلمةَ «نِعْمَ» هي فعلٌ، وبعدَها يكونُ الفاعلُ.</p>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: ﴿وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَى﴾ [الضحى: ٥]: ما الذي دلَّ على فعليّةِ كلمةِ «يُعطيكَ» وأنها فعلٌ في الآيةِ الكريمةِ؟ هل دخولُ الكافِ [الخطابِ] عليها، أم الإسنادُ — أي أن لها فاعلًا — أم دخولُ «سوفَ» قبلَها؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>دخولُ «سوفَ» قبلَها</b>.</div>
+  </div>
+
+  <h3 id="t84">رابعًا: تحديدُ المصطلحِ من مفهومِه</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>كلمةٌ تدلُّ على معنًى في نفسِها ولا ترتبطُ بزمنٍ — ما المصطلحُ المقابلُ لهذا المفهومِ؟ هل هو الاسمُ أم الفعلُ أم الحرفُ من أقسامِ الكلمةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>الاسمُ</b>؛ لأنه ليس فيه زمنٌ، وهو يدلُّ على معنًى في نفسِه؛ فهو ليس حرفًا — لأن الحرفَ يدلُّ على معنًى في غيرِه. فكلمةٌ تدلُّ على معنًى في نفسِها ولا ترتبطُ بزمانٍ: هذا هو الاسمُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>كلمةٌ معربةٌ غالبًا، وتكونُ للحالِ أو للاستقبالِ مع السينِ أو «سوفَ» — يعني تدخلُ عليها السينُ أو «سوفَ» — فما هي؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هذا هو <b>الفعلُ المضارعُ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>كلمةٌ ترتبطُ بالزمنِ دائمًا — فما هي من أقسامِ الكلمةِ في العربيةِ: الاسمِ أم الفعلِ أم الحرفِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طالما أن فيها زمنًا فلا بدَّ أن تكونَ فعلًا؛ فهي <b>الفعلُ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>من علاماتِ هذه الكلمةِ: التنوينُ ودخولُ «ال» — فما هي؟ هل هي اسمٌ أم فعلٌ أم حرفٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي <b>اسمٌ</b>؛ فالتنوينُ و«ال» من علاماتِ الاسمِ ولا يدخلانِ على الفعلِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>حرفٌ من الحروفِ العلاماتِ الدالّةِ على الفعلِ التي ذكرَها ابنُ آجرومَ، ومن معانيهِ أنه قد يفيدُ التحقيقَ والتوكيدَ، وقد يفيدُ معنى الشكِّ أو التقريبِ — فما هو هذا الحرفُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هو الحرفُ <b>«قد»</b>: يدخلُ على الفعلِ الماضي فيفيدُ التحقيقَ [والتوكيدَ]، ويدخلُ على الفعلِ المضارعِ فيفيدُ الشكَّ والتقريبَ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>حرفٌ يدلُّ على المستقبلِ القريبِ، ويدخلُ على الفعلِ المضارعِ فحسبَ — فما هو؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هذا الحرفُ هو طبعًا <b>السينُ</b>؛ وعكسُه — كما قلنا — الدالُّ على المستقبلِ البعيدِ هو <b>«سوفَ»</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>كلمةٌ لا تدلُّ على معنًى في نفسِها، وليس لها علامةٌ لفظيّةٌ أو شكليّةٌ تقبلُها، وتدلُّ على معنًى في غيرِها — فما هي من أقسامِ الكلمةِ العربيةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي <b>الحرفُ</b>.</div>
+  </div>
+
+  <h3>جدولُ الحكمِ على العباراتِ — خلاصةُ التمارينِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th style="width:34%">العبارةُ</th><th style="width:17%">الحكمُ</th><th>العلّةُ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>«لا يَفلحُ الكسولُ»</td><td><span class="pill yes">كلامٌ</span></td><td>أفادتْ معنًى تامًّا يحسُنُ السكوتُ عليه</td></tr>
+        <tr><td>«لو أنصفَ الناسُ»</td><td><span class="pill no">ليست كلامًا</span></td><td>المعنى غيرُ تامٍّ: «ماذا يحدثُ؟» — لم يكتملْ</td></tr>
+        <tr><td>«محمدٌ صفوةُ المرسَلينَ ﷺ»</td><td><span class="pill yes">كلامٌ</span></td><td>أفادتْ فائدةً يحسُنُ السكوتُ عليها</td></tr>
+        <tr><td>«يُضيءُ القمرُ ليلًا»</td><td><span class="pill yes">كلامٌ</span></td><td>أفادتْ إفادةً تامّةً</td></tr>
+        <tr><td>«مدينةُ طنطا» (مع السكوتِ)</td><td><span class="pill no">ليست كلامًا</span></td><td>لم تُفدْ إفادةً تامّةً</td></tr>
+        <tr><td>«إذا طلعتِ الشمسُ»</td><td><span class="pill no">ليست كلامًا</span></td><td>لم تُفدْ إفادةً تامّةً</td></tr>
+        <tr><td>«المؤذِّنُ»</td><td><span class="pill no">كلمةٌ</span></td><td>لفظٌ مفردٌ، لا ينطبقُ عليه مفهومُ الكلامِ</td></tr>
+        <tr><td>«اجتهدْ»</td><td><span class="pill yes">كلامٌ</span></td><td>جملةٌ تامّةٌ: الفاعلُ ضميرٌ مستترٌ تقديرُه «أنتَ»</td></tr>
+        <tr><td>«إذَنْ المؤذِّنُ» (بضمِّ النونِ)</td><td><span class="pill yes">كلامٌ</span></td><td>جملةٌ كاملةٌ تفيدُ معنًى تامًّا</td></tr>
+        <tr><td>«إذَنْ المؤذِّنَ» (بفتحِ النونِ)</td><td><span class="pill no">ليست كلامًا</span></td><td>المعنى غيرُ تامٍّ ويحتاجُ إلى ما يتمِّمُه</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩ الخلاصة ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>خلاصةُ الدرس</h2></div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th style="width:12%">القسمُ</th><th>مفهومُه</th><th>علاماتُه في المتنِ</th><th>أمثلةٌ سريعةٌ</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>الاسمُ</b></td>
+          <td>ما دلَّ على معنًى في نفسِه، والزمنُ ليس جزءًا منه</td>
+          <td>الخفضُ (الجرُّ) — التنوينُ — دخولُ «ال» — حروفُ الخفضِ — حروفُ القسمِ (الواوُ والباءُ والتاءُ)</td>
+          <td>«رجلٌ / الرجلُ / في البيتِ / تاللهِ»</td>
+        </tr>
+        <tr>
+          <td><b>الفعلُ</b></td>
+          <td>ما دلَّ على حدثٍ وزمنٍ؛ فالزمنُ جزءٌ من مدلولِه</td>
+          <td>«قد» — السينُ — «سوفَ» — تاءُ التأنيثِ الساكنةُ</td>
+          <td>«قد ذاكرتُ / سيكتبُ / سوف أستغفرُ / قالَتْ»</td>
+        </tr>
+        <tr>
+          <td><b>الحرفُ</b></td>
+          <td>ما دلَّ على معنًى في غيرِه (حرفُ المعنى لا المبنى)، ومفتقرٌ إلى ما بعدَه</td>
+          <td>علامةٌ عدميّةٌ: لا يصحُّ معه دليلُ الاسمِ ولا دليلُ الفعلِ</td>
+          <td>«في / مِن / هل / لم»</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="summary-points">
+    <li><b>الكلامُ</b> هو اللفظُ المركَّبُ المفيدُ بالوضعِ؛ و«بالوضعِ» فيها قولانِ: بالقصدِ (فيخرجُ كلامُ الساهي والنائمِ)، أو بالوضعِ العربيِّ (فيخرجُ الكلامُ الأعجميُّ).</li>
+    <li>أقسامُ الكلامِ ثلاثةٌ: اسمٌ وفعلٌ وحرفٌ جاء لمعنًى؛ وابنُ آجرومَ سلكَ في بيانِها مسلكَ <b>العلاماتِ</b> لا التعريفاتِ.</li>
+    <li><b>الخفضُ</b> مصطلحٌ كوفيٌّ يقابلُه <b>الجرُّ</b> البصريُّ، وهو حالةٌ تختصُّ بالاسمِ؛ أما <b>حروفُ الخفضِ</b> فهي العواملُ الداخلةُ فتُجرُّ الاسمَ.</li>
+    <li>كلُّ فعلٍ تامٍّ يدلُّ على <b>حدثٍ</b> و<b>زمنٍ</b>؛ الحدثُ لا يتغيرُ («كتبَ / يكتبُ / اُكتُبْ» حدثُها واحدٌ) والزمنُ هو الذي يغيِّرُ الصيغةَ. وبنقصِ أحدِ المدلولَينِ سُمِّيَ الفعلُ ناقصًا (كانَ وأخواتُها).</li>
+    <li><b>«قد»</b> مع الماضي للتحقيقِ والتوكيدِ، ومع المضارعِ للشكِّ والتقريبِ (إلا ما فاعلُه اللهُ تعالى فعلمُه متحققٌ)؛ و<b>السينُ</b> للاستقبالِ القريبِ و<b>«سوفَ»</b> للاستقبالِ البعيدِ، وكلاهما لا يدخلُ إلا المضارعَ؛ و<b>تاءُ التأنيثِ الساكنةُ</b> للماضي وحدهُ وتدلُّ على تأنيثِ الفاعلِ — والفعلُ لا يوصفُ بتذكيرٍ ولا تأنيثٍ.</li>
+    <li><b>الحرفُ</b> يدلُّ على معنًى في غيرِه، ولا يتحدَّدُ معناهُ إلا بسياقِه؛ كـ«في» تكونُ للظرفيّةِ («يتقلَّبُ في الجنةِ») وللسببِ («في هُرَّةٍ» أي بسببِها)؛ ولذلك كان مبنيًّا مفتقرًا إلى ما بعدَه.</li>
+    <li><b>الضمائرُ كلُّها أسماءٌ</b>؛ واللفظُ الواحدُ قد يكونُ اسمًا أو فعلًا بحسبِ سياقِه: «يزيدُ» في ﴿يزيدُ في الخلقِ ما يشاءُ﴾ فعلٌ، وفي «هذا كتابُ يزيدَ» اسمُ علمٍ.</li>
+  </ul>
+
+  <div class="box note">
+    <span class="tag">الدرسُ القادمُ إن شاء اللهُ</span>
+    <p style="margin:0">تفصيلُ الكلامِ على <b>الإعرابِ والبناءِ</b> في أقسامِ الكلمةِ الثلاثةِ.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ الأولِ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=INwEdA0xMl8" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

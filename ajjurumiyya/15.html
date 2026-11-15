@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كانَ وأخواتُها — الدرس ١٥ من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">كانَ وأخواتُها</h1>
+    <div class="cover-sub">الدرس ١٥: أوّلُ النواسخِ — معنى النسخِ والنقصانِ، ودلالاتُ الأفعالِ الثلاثةَ عشرَ، وشروطُ عملِها وتصرُّفُها، مع تطبيقاتٍ قرآنيةٍ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=vzdf1yE7QmU" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتنِ ونظمُ الشنقيطيِّ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s2a">نصُّ ابنِ آجرومَ</a></li>
+        <li><a href="#s2b">أبياتُ الناظمِ ومقابلتُها بالمتنِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٣</span><a href="#s3">النواسخُ: أقسامُها ومعنى النسخِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s3a">أقسامُ النواسخِ الثلاثةُ من حيثُ العملُ</a></li>
+        <li><a href="#s3b">معنى النسخِ: التغييرُ في الوظيفةِ والإعرابِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٤</span><a href="#s4">لماذا سُمِّيتْ «ناقصةً»؟</a><span class="dots"></span></li>
+    <li><span class="t-num">٥</span><a href="#s5">دلالاتُ الأفعالِ الثلاثةَ عشرَ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s5a">كانَ: الماضي معَ الانقطاعِ أو الاستمرارِ</a></li>
+        <li><a href="#s5b">أفعالُ الأوقاتِ: أمسى، أصبحَ، أضحى، ظلَّ، باتَ</a></li>
+        <li><a href="#s5c">صارَ وليسَ</a></li>
+        <li><a href="#s5d">أفعالُ الاستمرارِ وما دامَ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٦</span><a href="#s6">أقسامُها من حيثُ شروطُ العملِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٧</span><a href="#s7">أقسامُها من حيثُ الجمودُ والتصرُّفُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s7a">شواهدُ المتصرِّفِ تصرُّفًا ناقصًا وإعرابُها</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٨</span><a href="#s8">تطبيقاتٌ على كانَ وأخواتِها</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s8a">الماضي والمضارعُ والأمرُ في التطبيقِ</a></li>
+        <li><a href="#s8b">التقديمُ والتأخيرُ في الجملةِ المنسوخةِ</a></li>
+        <li><a href="#s8c">تطبيقاتٌ متنوعةٌ</a></li>
+        <li><a href="#s8d">أسئلةُ الختامِ</a></li>
+        <li><a href="#s8e">جدولُ تلخيصِ التطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٩</span><a href="#s9">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١: افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+  <p>الحمدُ للهِ حمدًا كما ينبغي لجلالِه وكمالِه، والصلاةُ والسلامُ على النبيِّ المصطفى وعلى آلِه وبعدُ: فحيَّاكم اللهُ أيها الكرامُ وأيتها الكريماتُ، معَ درسٍ جديدٍ من دروسِ الآجروميةِ، وهو درسُ <b>«النواسخِ»</b> أو <b>«العواملِ الداخلةِ على المبتدأِ والخبرِ»</b>.</p>
+  <p>وهذا البابُ من <b>الأبوابِ السيّارةِ المستعملةِ كثيرًا في الكلامِ العربيِّ</b>؛ فلا تكادُ تخلو منه صفحةٌ من كتابِ اللهِ ولا من كلامِ العربِ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢: المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتنِ ونظمُ الشنقيطيِّ</h2></div>
+
+  <h3 id="s2a">نصُّ ابنِ آجرومَ</h3>
+  <p>قالَ ابنُ آجرومٍ رحمهُ اللهُ:</p>
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«بابُ العواملِ الداخلةِ على المبتدأِ والخبرِ: وهي ثلاثةُ أشياءَ: كانَ وأخواتُها، وإنَّ وأخواتُها، وظننتُ وأخواتُها.<br>
+    فأمّا كانَ وأخواتُها فإنها ترفعُ الاسمَ وتنصبُ الخبرَ، وهي: كانَ، وأمسى، وأصبحَ، وأضحى، وظلَّ، وباتَ، وصارَ، وليسَ، وما زالَ، وما انفكَّ، وما فتِئَ، وما برِحَ، وما دامَ، وما تصرَّفَ منها نحوُ: كانَ ويكونُ وكُنْ، وأصبحَ ويُصبحُ وأَصبِحْ؛ تقولُ: كانَ زيدٌ قائمًا، وليسَ عمرٌو شاخصًا، وما أشبهَ ذلكَ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <h3 id="s2b">أبياتُ الناظمِ ومقابلتُها بالمتنِ</h3>
+  <p>وقالَ الناظمُ محمدُ بنُ آبِّه الشنقيطيُّ — النواسخُ: بابُ كانَ وأخواتِها —:</p>
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">ورفعُكَ الاسمَ ونصبُكَ الخبرْ … بهذه الأفعالِ حكمٌ مُعتبَرْ</div>
+      <div class="ln">كانَ وأمسى ظلَّ باتَ أصبحا … أضحى وصارَ ليسَ معْ ما برِحا</div>
+      <div class="ln">ما زالَ ما انفكَّ وما فتِئَ ما … دامَ وما منها تصرَّفَ احكُما</div>
+      <div class="ln">لهُ بما لها ككانَ قائما … زيدٌ وكُنْ بَرًّا وأصبِحْ صائما</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>البيتُ</th><th>مضمونُهُ</th><th>ما يقابلُهُ في المتنِ</th></tr></thead>
+      <tbody>
+        <tr><td>١</td><td>عملُ هذه الأفعالِ: <b>رفعُ الاسمِ ونصبُ الخبرِ</b>، وهو حكمٌ معتبَرٌ</td><td>«فإنها ترفعُ الاسمَ وتنصبُ الخبرَ»</td></tr>
+        <tr><td>٢ – ٣</td><td>عدُّ الأفعالِ الثلاثةَ عشرَ: كانَ، أمسى، ظلَّ، باتَ، أصبحَ، أضحى، صارَ، ليسَ، ما برِحَ، ما زالَ، ما انفكَّ، ما فتِئَ، ما دامَ</td><td>«وهي: كانَ وأمسى… وما دامَ»</td></tr>
+        <tr><td>٣ – ٤</td><td>«وما منها تصرَّفَ احكُما لهُ بما لها»: المتصرِّفُ منها <b>يعملُ عملَها</b></td><td>«وما تصرَّفَ منها نحوُ: كانَ ويكونُ وكُنْ، وأصبحَ ويُصبحُ وأَصبِحْ»</td></tr>
+        <tr><td>٤</td><td>أمثلتُهُ: «كانَ قائمًا زيدٌ» بالماضي — وفيه الخبرُ «قائمًا» مقدَّمٌ على الاسمِ «زيدٌ» —، و«كُنْ بَرًّا» و«أَصبِحْ صائمًا» بالأمرِ</td><td>«تقولُ: كانَ زيدٌ قائمًا، وليسَ عمرٌو شاخصًا»</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣: النواسخ ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>النواسخُ: أقسامُها ومعنى النسخِ</h2></div>
+
+  <h3 id="s3a">أقسامُ النواسخِ الثلاثةُ من حيثُ العملُ</h3>
+  <p>النواسخُ — كما أشارَ ابنُ آجرومٍ رحمهُ اللهُ — على <b>ثلاثةِ أقسامٍ</b>، وهي مقسَّمةٌ <b>من حيثُ العملُ</b>:</p>
+  <figure class="diagram">
+    <div class="tree-root gold">العواملُ الداخلةُ على المبتدأِ والخبرِ (النواسخُ)</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green"><div class="n-title">كانَ وأخواتُها</div><div class="n-sub"><b>أفعالٌ</b> ترفعُ المبتدأَ وتنصبُ الخبرَ<br>ويُلحَقُ بها «كادَ وأخواتُها»: أفعالُ المقاربةِ والرجاءِ والشروعِ</div></div>
+      <div class="node blue"><div class="n-title">إنَّ وأخواتُها</div><div class="n-sub"><b>حروفٌ</b> تنصبُ المبتدأَ وترفعُ الخبرَ</div></div>
+      <div class="node maroon"><div class="n-title">ظنَّ وأخواتُها</div><div class="n-sub"><b>أفعالٌ</b> تنصبُ المبتدأَ والخبرَ معًا على أنهما مفعولانِ لها</div></div>
+    </div>
+    <figcaption>شكل (١): أقسامُ النواسخِ الثلاثةُ من حيثُ العملُ — وبكانَ وأخواتِها بدأَ المؤلفُ</figcaption>
+  </figure>
+  <p>فالقسمُ الأوّلُ <b>أفعالٌ</b> ترفعُ المبتدأَ وتنصبُ الخبرَ، وهو كانَ وأخواتُها، ويُلحَقُ بها «كادَ وأخواتُها» أو ما تُسمّى بأفعالِ المقاربةِ والرجاءِ والشروعِ. والقسمُ الثاني ينصبُ المبتدأَ ويرفعُ الخبرَ، وهو <b>حروفٌ</b>: إنَّ وأخواتُها. والقسمُ الثالثُ ينصبُ المبتدأَ والخبرَ معًا على أنهما مفعولانِ لهذا الفعلِ، ويمثِّلُهُ الأفعالُ: ظنَّ وأخواتُها، وهي أفعالٌ كما هو معروفٌ. وبكانَ وأخواتِها بدأَ المؤلفُ، وبها يبدأُ الكلامُ في النواسخِ، وهي من <b>النواسخِ الفعليةِ</b>.</p>
+
+  <h3 id="s3b">معنى النسخِ: التغييرُ في الوظيفةِ والإعرابِ</h3>
+  <p>قبلَ أن نشرعَ في كانَ وأخواتِها أحبُّ أولًا أن أوضِّحَ معنى كلمةِ «النسخِ»:</p>
+  <div class="box note"><span class="tag">تعريفٌ</span><p style="margin:0"><b>النسخُ في اللغةِ</b>: التغييرُ والإزالةُ. وكونُ هذه الأدواتِ — سواءٌ كانتْ أفعالًا أو حروفًا — <b>ناسخةً</b>: أنها تدخلُ على الجملةِ الاسميةِ فتنسخُها، يعني <b>تغيِّرُ أحكامَها الإعرابيةَ</b>.</p></div>
+  <p>المبتدأُ والخبرُ هما ركنا الجملةِ الاسميةِ؛ فإن دخلتْ «كانَ» أو «إنَّ» أو «ظنَّ» فإنها تنسخُ حكمَ المبتدأِ والخبرِ، وهذا النسخُ تغييرانِ:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الناسخُ</th><th>المبتدأُ يصيرُ…</th><th>الخبرُ يصيرُ…</th><th>التغييرُ في الإعرابِ</th></tr></thead>
+      <tbody>
+        <tr><td>كانَ وأخواتُها</td><td>اسمًا لكانَ</td><td>خبرًا لكانَ</td><td>الخبرُ يصيرُ <b>منصوبًا</b> بعدَ أن كانَ في الجملةِ الاسميةِ مرفوعًا</td></tr>
+        <tr><td>إنَّ وأخواتُها</td><td>اسمًا لإنَّ</td><td>خبرًا لإنَّ</td><td>الاسمُ يصيرُ <b>منصوبًا</b> بعدَ أن كانَ في الجملةِ الاسميةِ مبتدأً مرفوعًا</td></tr>
+        <tr><td>ظنَّ وأخواتُها</td><td>مفعولًا أوّلَ لظنَّ</td><td>مفعولًا ثانيًا لظنَّ</td><td>يُنصبانِ <b>معًا</b> على أنهما مفعولانِ بهِ للفعلِ «ظنَّ»</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box example"><span class="tag">التغييرانِ</span><p style="margin:0">• <b>التغييرُ الأوّلُ: في الوظيفةِ النحويةِ</b>: بعدَ أن كانَ المبتدأُ وظيفتُهُ النحويةُ «مبتدأٌ» صارَ اسمًا لكانَ، واسمًا لإنَّ، ومفعولًا أوّلَ لظنَّ؛ والخبرُ بعدَ أن كانَ خبرًا للمبتدأِ صارَ خبرًا لكانَ أو خبرًا لإنَّ، أو مفعولًا ثانيًا في ظنَّ.<br>
+  • <b>التغييرُ الثاني: في الإعرابِ</b>: بعضُ الوظائفِ النحويةِ هنا سيتغيَّرُ إعرابُها: خبرُ كانَ سيكونُ منصوبًا بعدَ أن كانَ في الجملةِ الاسميةِ مرفوعًا، واسمُ إنَّ سيكونُ منصوبًا بعدَ أن كانَ مبتدأً مرفوعًا، والمبتدأُ والخبرُ كلاهما إذا دخلتْ عليهما «ظنَّ» نسختْ حكمَهما الإعرابيَّ فيُنصبانِ معًا.<br>
+  فهذا هو <b>مفهومُ النسخِ</b>.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤: الناقصة ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>لماذا سُمِّيتْ «ناقصةً»؟</h2></div>
+  <p>كانَ وأخواتُها — كما قلْنا — ترفعُ الاسمَ وتنصبُ الخبرَ، وتُسمّى <b>«أفعالًا ناسخةً ناقصةً»</b>: أمّا «ناسخةٌ» فقد فهمْناها؛ يعني أنها تغيِّرُ الأحكامَ الإعرابيةَ والوظائفَ النحويةَ لركنَيِ الجملةِ الاسميةِ: المبتدأِ والخبرِ. وأمّا <b>النقصانُ</b> فيها فمعناه:</p>
+  <div class="box note"><span class="tag">معنى النقصانِ</span><p style="margin:0">أنه قد <b>نقصَ منها أحدُ مدلولَيِ الفعلِ</b>؛ فالفعلُ في اللغةِ العربيةِ يدلُّ على شيئينِ: <b>حدثٍ وزمنٍ</b>، فإن نقصَ واحدٌ منهما في الفعلِ فهو فعلٌ ناقصٌ. والأصلُ في الأفعالِ <b>التمامُ</b>: أن تكونَ تامةً، يعني تحتوي على المدلولينِ: الحدثِ والزمنِ.</p></div>
+  <p>و<b>غالبُ الأفعالِ في كانَ وأخواتِها تدلُّ على الزمنِ ولا تدلُّ على الحدثِ</b>، وقد ينقصُ منها الزمنُ ويكونُ فيها الحدثُ؛ المهمُّ أنَّ فيها نقصانًا حاصلًا؛ فبناءً عليه سُمِّيتْ «ناقصةً»، وبناءً على ذلك <b>لم يكنْ لها فاعلٌ أو مفعولٌ، وإنما كانَ لها اسمٌ وخبرٌ</b>، ونعوِّضُ النقصَ فيها <b>بالخبرِ</b>؛ يعني الخبرُ هو الذي يعوِّضُ النقصانَ فيها.</p>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">كانَ محمدٌ مجتهدًا</span><span class="fa">←</span>
+      <span class="chip blue">«كانَ»: زمنٌ ماضٍ بلا حدثٍ</span><span class="fa">←</span>
+      <span class="chip">الحدثُ في الخبرِ: الاجتهادُ</span>
+      <div class="lane-note">«كانَ» ليس فيها حدثٌ؛ فـ«كانَ محمدٌ مجتهدًا» تدلُّ على اجتهادِ محمدٍ في الماضي، فأينَ الحدثُ؟ الحدثُ موجودٌ في الخبرِ؛ فالخبرُ هو الذي يُكمِلُ النقصانَ الموجودَ في هذه الأفعالِ، فالاجتهادُ هنا هو الحدثُ الناقصُ في «كانَ».</div>
+    </div>
+    <div class="dcap">شكل (٢): نقصانُ «كانَ» وتعويضُهُ بالخبرِ — ولذلك كانَ لها اسمٌ وخبرٌ لا فاعلٌ ومفعولٌ</div>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥: الدلالات ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>دلالاتُ الأفعالِ الثلاثةَ عشرَ</h2></div>
+  <p>أمّا عن دلالاتِ هذه الأفعالِ — يعني كانَ وأخواتِها — فلكلِّ واحدٍ منها دلالةٌ معيَّنةٌ:</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">كانَ</div><div class="n-sub">اتصافُ الاسمِ بالخبرِ <b>في الماضي</b>، معَ الانقطاعِ أو الاستمرارِ</div></div>
+      <div class="node blue"><div class="n-title">أمسى</div><div class="n-sub">اتصافُ الاسمِ بالخبرِ <b>في المساءِ</b></div></div>
+      <div class="node blue"><div class="n-title">أصبحَ</div><div class="n-sub">عكسُ أمسى: <b>في الصباحِ</b></div></div>
+      <div class="node blue"><div class="n-title">أضحى</div><div class="n-sub"><b>في وقتِ الضحى</b></div></div>
+      <div class="node blue"><div class="n-title">ظلَّ</div><div class="n-sub"><b>في جميعِ النهارِ</b> (وقتِ الظلِّ)</div></div>
+      <div class="node blue"><div class="n-title">باتَ</div><div class="n-sub">عكسُ ظلَّ: <b>وقتَ البياتِ</b>، وهو الليلُ</div></div>
+      <div class="node maroon"><div class="n-title">صارَ</div><div class="n-sub"><b>التحوُّلُ</b>: تحوُّلُ الاسمِ إلى الحالةِ التي يدلُّ عليها الخبرُ</div></div>
+      <div class="node maroon"><div class="n-title">ليسَ</div><div class="n-sub"><b>نفيُ الخبرِ عن الاسمِ</b> في وقتِ الحالِ</div></div>
+      <div class="node goldb"><div class="n-title">ما زالَ — ما انفكَّ — ما فتِئَ — ما برِحَ</div><div class="n-sub">أفعالُ <b>الاستمرارِ</b>: ملازمةُ الخبرِ للاسمِ حسبما يقتضيه الحالُ</div></div>
+      <div class="node goldb"><div class="n-title">ما دامَ</div><div class="n-sub">ملازمةُ الخبرِ للاسمِ، ويزيدُ <b>معنى الظرفيةِ</b> (الوقتِ والزمانِ)</div></div>
+    </div>
+    <div class="dcap">شكل (٣): دلالاتُ كانَ وأخواتِها الثلاثةَ عشرَ</div>
+  </figure>
+
+  <h3 id="s5a">كانَ: الماضي معَ الانقطاعِ أو الاستمرارِ</h3>
+  <p>«كانَ» تفيدُ أو تدلُّ على <b>اتصافِ الاسمِ بالخبرِ في الماضي</b>، إمّا <b>معَ الانقطاعِ</b>، وإمّا <b>معَ الاستمرارِ</b>:</p>
+  <div class="box example"><span class="tag">معَ الانقطاعِ</span><p style="margin:0">لو قلتُ مثلًا: <b>«كانَ محمدٌ مجتهدًا»</b> — المثالُ الذي ذكرتُهُ منذُ قليلٍ —، فـ«كانَ محمدٌ مجتهدًا» يعني: في الماضي ثم انقطعَ، يعني لم يستمرَّ.</p></div>
+  <p>ومعَ الاستمرارِ مثلًا كما في قولِهِ تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيتانِ كريمتانِ</span>
+    <p class="ayah">﴿وَكَانَ رَبُّكَ قَدِيرًا﴾<span class="ref">سورةُ الفرقانِ: ٥٤</span></p>
+    <p class="ayah" style="margin-top:10px">﴿وَكَانَ اللَّهُ غَفُورًا رَحِيمًا﴾<span class="ref">سورةُ النساءِ: ٩٦</span></p>
+  </div>
+  <div class="box note"><span class="tag">ملحظٌ</span><p style="margin:0">طبعًا معَ اللهِ عزَّ وجلَّ هناك <b>استمراريةٌ في الزمانِ</b>؛ فدلالةُ «كانَ» هنا: الماضي <b>معَ استمرارِهِ في الحالِ والمستقبلِ</b>.</p></div>
+
+  <h3 id="s5b">أفعالُ الأوقاتِ: أمسى، أصبحَ، أضحى، ظلَّ، باتَ</h3>
+  <div class="box example"><span class="tag">أمسى — في المساءِ</span><p style="margin:0">أمّا الفعلُ الثاني «أمسى» فهو يفيدُ <b>اتصافَ الاسمِ بالخبرِ في المساءِ</b> تحديدًا؛ لو قلتُ مثلًا: <b>«أمسى الجوُّ باردًا»</b>: «الجوُّ» هي اسمُ أمسى، و«باردًا» هي خبرُها منصوبٌ، و«أمسى» طبعًا فعلٌ ماضٍ ناسخٌ ناقصٌ مبنيٌّ على الفتحِ المقدَّرِ للتعذُّرِ.</p></div>
+  <div class="box example"><span class="tag">أصبحَ — في الصباحِ</span><p style="margin:0">الفعلُ الثالثُ عندَنا هو عكسُ «أمسى»: «أصبحَ» يفيدُ <b>اتصافَ الاسمِ بالخبرِ في الصباحِ</b>؛ لو قلْنا: <b>«أصبحَ الجوُّ حارًّا»</b>: «أصبحَ» فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و«الجوُّ» اسمُ أصبحَ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«حارًّا» هي خبرُ أصبحَ منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</p></div>
+  <div class="box example"><span class="tag">أضحى — في وقتِ الضحى</span><p style="margin:0">الفعلُ الرابعُ بعدَ ذلك من أخواتِ كانَ الفعلُ «أضحى»، وهو أيضًا يفيدُ <b>اتصافَ الاسمِ بالخبرِ في الضحى</b>، في وقتِ الضحى؛ لو قلتُ: <b>«أضحى طالبُ العلمِ نشيطًا»</b>: «أضحى» فعلٌ ماضٍ ناقصٌ ناسخٌ — لأنه من أخواتِ كانَ — وهو مبنيٌّ على الفتحِ المقدَّرِ للتعذُّرِ على الألفِ، و«طالبُ» اسمُ أضحى مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«العلمِ» مضافٌ إليهِ مجرورٌ وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ، و«نشيطًا» هي خبرُ أضحى منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</p></div>
+  <div class="box example"><span class="tag">ظلَّ — في جميعِ النهارِ</span><p style="margin:0">ثم بعدَ ذلك عندَنا الفعلُ الخامسُ «ظلَّ»، وهذا الفعلُ من أخواتِ كانَ، وهو يفيدُ <b>اتصافَ الاسمِ بالخبرِ في جميعِ النهارِ</b> — وقتِ الظلِّ، يعني في النهارِ —، كما في قولِنا مثلًا: <b>«ظلَّ الطالبُ مذاكرًا»</b> — أي يذاكرُ طوالَ النهارِ —، أو «ظلَّ محمدٌ مذاكرًا»: «محمدٌ» اسمُ ظلَّ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«مذاكرًا» خبرُها منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</p></div>
+  <div class="box example"><span class="tag">باتَ — وقتَ البياتِ</span><p style="margin:0">بعدَ ذلك عندَنا الفعلُ «باتَ»، وهو <b>عكسُ «ظلَّ» في الدلالةِ</b>: يفيدُ اتصافَ الاسمِ بالخبرِ <b>وقتَ البياتِ</b> — وقتَ البيتوتةِ —، ووقتُ البياتِ هو <b>الليلُ</b>. فلو قلتُ مثلًا: <b>«باتَ محمدٌ ساهرًا»</b> — يعني لم ينمْ —، أو «باتَ محمدٌ مسرورًا» أو «سعيدًا» أيًّا كانَ؛ هنا نقولُ: «باتَ» فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و«محمدٌ» اسمُ باتَ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«ساهرًا» أو «مسرورًا» أو «سعيدًا» هي خبرُ باتَ منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</p></div>
+
+  <h3 id="s5c">صارَ وليسَ</h3>
+  <div class="box example"><span class="tag">صارَ — التحوُّلُ</span><p style="margin:0">الفعلُ السابعُ معنا «صارَ»، و«صارَ» معناه <b>التحوُّلُ</b>؛ يعني يفيدُ تحوُّلَ الاسمِ من حالتِهِ إلى الحالةِ التي يدلُّ عليها الخبرُ. لو قلْنا: <b>«صارَ الطينُ حجرًا»</b>: «صارَ» فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و«الطينُ» اسمُ صارَ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«حجرًا» خبرُ صارَ منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ؛ هنا تحوَّلَ الاسمُ — وهو الطينُ — إلى حالةٍ أخرى، وهي التي يدلُّ عليها الخبرُ، وهو الحجرُ.</p></div>
+  <div class="box example"><span class="tag">ليسَ — نفيُ الخبرِ في الحالِ</span><p style="margin:0">الفعلُ الثامنُ بعدَ ذلك من أخواتِ كانَ هو الفعلُ «ليسَ»، والفعلُ «ليسَ» يفيدُ <b>نفيَ الخبرِ عن الاسمِ في وقتِ الحالِ</b>؛ فلو قلْنا مثلًا: <b>«ليسَ الطالبُ راسبًا»</b>: فـ«ليسَ» فعلٌ ماضٍ — طبعًا هو ناسخٌ ناقصٌ — مبنيٌّ على الفتحِ، و«الطالبُ» اسمُ ليسَ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«راسبًا» هي خبرُ ليسَ منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</p></div>
+
+  <h3 id="s5d">أفعالُ الاستمرارِ وما دامَ</h3>
+  <div class="box example"><span class="tag">ما زالَ، ما انفكَّ، ما فتِئَ، ما برِحَ</span><p style="margin:0">بعدَ ذلك عندَنا <b>أفعالٌ أربعةٌ تُسمّى بأفعالِ الاستمرارِ</b>، وهي: ما زالَ، وما انفكَّ، وما فتِئَ، وما برِحَ؛ وهذه الأفعالُ تدلُّ على <b>ملازمةِ الخبرِ للاسمِ حسبما يقتضيه الحالُ</b>، يعني استمرارَ وجودِ الخبرِ معَ الاسمِ حسبَ السياقِ. مثلًا لو قلْنا: <b>«ما برِحَ محمدٌ ناصحًا أمينًا»</b>، أو «ما زالَ محمدٌ ناصحًا أمينًا»، أو «ما فتِئَ محمدٌ ناصحًا أمينًا»: كلُّ هذه الأفعالِ تدلُّ على استمرارِ وجودِ الخبرِ ملازمًا للمبتدأِ؛ فـ«ما زالَ محمدٌ ناصحًا أمينًا» يعني: مستمرٌّ في نصحِهِ الأمينِ لمن حولَهُ، وهكذا.</p></div>
+  <div class="box example"><span class="tag">ما دامَ — الاستمرارُ معَ الظرفيةِ</span><p style="margin:0">ثم عندَنا بعدَ ذلك الفعلُ الثالثَ عشرَ والأخيرُ من أخواتِ كانَ، وهو الفعلُ «ما دامَ»: يفيدُ طبعًا <b>ملازمةَ الخبرِ للاسمِ</b>، وهو أيضًا من أفعالِ الاستمرارِ، ولكنه <b>يزيدُ أنه دالٌّ على معنى الظرفيةِ</b>، يعني معنى الوقتِ أو الزمانِ. أقولُ مثلًا: <b>«لا أكلِّمُكَ ما دمتَ عاصيًا للهِ»</b>، يعني: <b>مدّةَ دوامِكَ عاصيًا للهِ</b>؛ فهو فيه معنى الظرفيةِ، وفيه معنى الاستمراريةِ أيضًا، أو ملازمةِ الخبرِ للاسمِ قبلَهُ.</p></div>
+  <p>إذن هذه هي الأفعالُ التي هي من أخواتِ كانَ — أو كانَ وأخواتُها —، وعملُها كما قلْنا: أنها <b>ترفعُ الاسمَ وتنصبُ الخبرَ</b>.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦: شروط العمل ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>أقسامُها من حيثُ شروطُ العملِ</h2></div>
+  <p>يمكنُ أن نقسِّمَ هذه الأفعالَ <b>من حيثُ شروطُ العملِ فيها</b>: هي تعملُ هذا العملَ — أي رفعَ الاسمِ ونصبَ الخبرِ —، لكنَّ بعضَها يعملُ بشرطٍ وبعضَها يعملُ بلا شرطٍ، و<b>غالبُ هذه الأفعالِ يعملُ بلا شرطٍ</b>:</p>
+  <figure class="diagram">
+    <div class="tree-root">كانَ وأخواتُها من حيثُ شروطُ العملِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green"><div class="n-title">تعملُ بلا شرطٍ</div><div class="n-sub">وهي ثمانيةٌ — غالبُ الأفعالِ —:<br><b>كانَ، أصبحَ، أمسى، أضحى، ظلَّ، باتَ، صارَ، ليسَ</b></div></div>
+      <div class="node blue"><div class="n-title">بشرطِ تقدُّمِ «ما» المصدريةِ</div><div class="n-sub">وهو فعلٌ واحدٌ فقط:<br><b>دامَ</b> — لا بدَّ أن تُسبقَ بـ«ما» المصدريةِ حتى تعملَ عملَ كانَ</div></div>
+      <div class="node maroon"><div class="n-title">بشرطِ تقدُّمِ نفيٍ أو استفهامٍ أو نهيٍ</div><div class="n-sub">أفعالُ الاستمرارِ الأربعةُ:<br><b>زالَ، انفكَّ، برِحَ، فتِئَ</b><br>كالنفيِ بـ«ما» أو «لا»: «ما زالَ»</div></div>
+    </div>
+    <figcaption>شكل (٤): أقسامُ كانَ وأخواتِها الثلاثةُ من حيثُ شروطُ العملِ</figcaption>
+  </figure>
+  <div class="box example"><span class="tag">تفصيلٌ</span><p style="margin:0">• <b>كانَ، وأصبحَ، وأمسى، وأضحى، وظلَّ، وباتَ، وصارَ، وليسَ</b>: هذه الأفعالُ الثمانيةُ كلُّها تعملُ دونَ شرطٍ.<br>
+  • وهناك فعلٌ يعملُ <b>بشرطِ أن يُسبقَ بـ«ما» المصدريةِ</b>، وهو «دامَ»: لا بدَّ أن تُسبقَ بـ«ما» المصدريةِ حتى تعملَ عملَ كانَ، يعني ترفعُ الاسمَ وتنصبُ الخبرَ.<br>
+  • وهناك قسمٌ ثالثٌ يعملُ <b>بشرطِ أن يُسبقَ بنفيٍ أو استفهامٍ أو نهيٍ</b>، وهو أفعالُ الاستمرارِ الأربعةُ التي تدلُّ على ملازمةِ الخبرِ للاسمِ: «زالَ، وانفكَّ، وبرِحَ، وفتِئَ»؛ لا بدَّ لهذه الأفعالِ أن تُسبقَ بنفيٍ — بـ«ما» أو «لا» مثلًا: «لا زالَ» و«ما زالَ» —، أو تُسبقَ باستفهامٍ أو نهيٍ، حتى تعملَ عملَ كانَ وتدلَّ على الاستمراريةِ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧: الجمود والتصرف ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>أقسامُها من حيثُ الجمودُ والتصرُّفُ</h2></div>
+  <p>ويمكنُ أيضًا أن نقسِّمَ هذه الأفعالَ قسمةً أخرى <b>من حيثُ الجمودُ والتصرُّفُ</b>؛ فهي هنا نوعانِ: أفعالٌ جامدةٌ، وأفعالٌ متصرِّفةٌ، والمتصرِّفةُ قسمانِ:</p>
+  <figure class="diagram">
+    <div class="tree-root gold">كانَ وأخواتُها من حيثُ الجمودُ والتصرُّفُ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node maroon"><div class="n-title">جامدةٌ</div><div class="n-sub"><b>ليسَ</b> — بلا خلافٍ بينَ النحاةِ<br><b>دامَ</b> — على الأصحِّ، وفيه خلافٌ<br>تلزمُ صورةً واحدةً في الاستعمالِ</div></div>
+      <div class="node green"><div class="n-title">متصرِّفةٌ تصرُّفًا تامًّا</div><div class="n-sub">سبعةُ أفعالٍ:<br><b>كانَ، أصبحَ، أمسى، أضحى، باتَ، ظلَّ، صارَ</b><br>يأتي منها الماضي والمضارعُ والأمرُ والمصدرُ والمشتقاتُ</div></div>
+      <div class="node blue"><div class="n-title">متصرِّفةٌ تصرُّفًا ناقصًا</div><div class="n-sub">أفعالُ الاستمرارِ الأربعةُ:<br><b>فتِئَ، انفكَّ، برِحَ، زالَ</b><br>يُقتصَرُ فيها على الماضي والمضارعِ فقط</div></div>
+    </div>
+    <figcaption>شكل (٥): أقسامُ كانَ وأخواتِها من حيثُ الجمودُ والتصرُّفُ</figcaption>
+  </figure>
+  <div class="box note"><span class="tag">الجامدُ</span><p style="margin:0">الأفعالُ الجامدةُ منها: الفعلُ <b>«ليسَ»</b> بلا خلافٍ بينَ النحاةِ في أنه فعلٌ جامدٌ، و<b>«دامَ»</b> على الأصحِّ أنه جامدٌ — يعني هناك خلافٌ، ولكنَّ الأصحَّ أنه فعلٌ جامدٌ أيضًا. ومعنى الجامدِ: الذي <b>يلزمُ صورةً واحدةً في الاستعمالِ العربيِّ</b>؛ فـ«ليسَ» مثلًا لم تُستعملْ في اللغةِ العربيةِ إلا بصورةٍ واحدةٍ وهي «ليسَ»، يعني لم نسمعْ منها مضارعًا أو أمرًا أو اسمَ فاعلٍ أو مصدرًا، ولذلك سُمِّيتْ بفعلٍ جامدٍ ليس له إلا استعمالٌ واحدٌ في العربيةِ؛ كذلك الفعلُ «دامَ» إذا سُبقَ بـ«ما» طبعًا: «ما دامَ» الدالُّ على معنى الاستمرارِ والظرفيةِ في الوقتِ ذاتِهِ.</p></div>
+  <div class="box note"><span class="tag">المتصرِّفُ</span><p style="margin:0">القسمُ الثاني من كانَ وأخواتِها: <b>الأفعالُ المتصرِّفةُ</b>، وهي التي تتغيَّرُ صورتُها من الماضي إلى المضارعِ إلى الأمرِ إلى المصدرِ إلى اسمِ الفاعلِ أو المشتقاتِ؛ وهي قسمانِ:<br>
+  • قسمٌ <b>يتصرَّفُ تصرُّفًا تامًّا كاملًا</b>، وهي سبعةُ أفعالٍ: كانَ، وأصبحَ، وأمسى، وأضحى، وباتَ، وظلَّ، وصارَ. ومعنى التصرُّفِ الكاملِ: أنها متغيِّرةٌ يأتي منها الماضي والمضارعُ والأمرُ والمصدرُ — «كانَ، يكونُ، كَوْنٌ» — واسمُ الفاعلِ… إلى آخرِهِ، بخلافِ الجامدةِ التي تلزمُ صورةً واحدةً.<br>
+  • وقسمٌ <b>يتصرَّفُ تصرُّفًا ناقصًا</b>، وهي أفعالُ الاستمرارِ: ما فتِئَ، ما انفكَّ، ما برِحَ، ما زالَ؛ يمكنُ أن تُستعملَ في المضارعِ، ولكن لا تأتي منها تصاريفُ الكلمةِ جميعًا؛ يُقتصَرُ فيها على <b>الماضي والمضارعِ فقط</b>.</p></div>
+
+  <h3 id="s7a">شواهدُ المتصرِّفِ تصرُّفًا ناقصًا وإعرابُها</h3>
+  <p>أفعالُ الاستمرارِ يمكنُ أن تُستعملَ في المضارعِ، تقولُ — كما في قولِهِ تعالى —:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالُوا لَنْ نَبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّى يَرْجِعَ إِلَيْنَا مُوسَى﴾<span class="ref">سورةُ طه: ٩١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أعربْ ﴿لَنْ نَبْرَحَ عَلَيْهِ عَاكِفِينَ﴾ — وقد سُبِقَ «نبرحَ» هنا بنفيٍ هو «لن».</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«لن»</b> أداةُ نصبٍ وتدلُّ على الاستقبالِ: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>«نبرحَ»</b> فعلٌ مضارعٌ منصوبٌ بـ«لن» وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و«نبرحُ» من أخواتِ كانَ، فهي لها اسمٌ مرفوعٌ ولها خبرٌ: <b>اسمُها هنا ضميرٌ مستترٌ تقديرُهُ «نحنُ»</b> — يعني «لن نبرحَ نحنُ عليه عاكفينَ» —، وأصلُ التركيبِ «عاكفينَ عليه»؛ و<b>«عاكفينَ» هي الخبرُ — خبرُ «نبرحَ» — منصوبٌ وعلامةُ نصبِهِ الياءُ لأنه جمعُ مذكرٍ سالمٌ</b>. و«عليه» شبهُ جملةٍ: «على» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، والهاءُ فيه ضميرٌ متصلٌ مبنيٌّ على الكسرِ في محلِّ جرٍّ اسمٌ مجرورٌ، وهو متعلِّقٌ بـ«عاكفينَ» في المعنى، يعني «عاكفينَ عليه».</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَا يَزَالُونَ مُخْتَلِفِينَ﴾<span class="ref">سورةُ هودٍ: ١١٨</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أعربْ ﴿وَلَا يَزَالُونَ مُخْتَلِفِينَ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>الواوُ</b> بحسبِ ما قبلَها حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>«لا»</b> هنا نافيةٌ: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>«يزالونَ»</b> هذا فعلٌ من الأمثلةِ الخمسةِ أو من الأفعالِ الخمسةِ لأنه متصلٌ به واوُ الجماعةِ؛ فهو فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ ثبوتُ النونِ. و«يزالُ» هذا من أخواتِ كانَ، يعني <b>ليس له فاعلٌ وإنما له اسمٌ وخبرٌ</b>: فالواوُ في «يزالونَ» <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ اسمُ «يزالُ»</b>، و<b>«مختلفينَ» هي خبرُها منصوبٌ وعلامةُ نصبِهِ الياءُ لأنه جمعُ مذكرٍ سالمٌ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالُوا تَاللَّهِ تَفْتَأُ تَذْكُرُ يُوسُفَ حَتَّى تَكُونَ حَرَضًا﴾<span class="ref">سورةُ يوسفَ: ٨٥</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>«تفتأُ» لا تعملُ إلا مسبوقةً بنفيٍ؛ فأينَ النفيُ هنا؟ وما إعرابُ الآيةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>قالَ النحاةُ: إنَّ هنا <b>نفيًا مقدَّرًا</b>، يعني: «تاللهِ <b>ما</b> تفتأُ» أو «<b>لا</b> تفتأُ تذكرُ يوسفَ». والإعرابُ:<br>
+    • <b>«تفتأُ»</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، وهو — كما رأينا — متصرِّفٌ تصرُّفًا ناقصًا، يعني يأتي منه المضارعُ معَ الماضي فقط.<br>
+    • و<b>اسمُهُ هنا ضميرٌ مستترٌ تقديرُهُ «أنتَ»</b>؛ لأنَّ هذا الكلامَ في سياقِ قصةِ يوسفَ عليه السلامُ، والكلامُ على لسانِ إخوةِ يوسفَ مخاطبينَ أباهم يعقوبَ عليه السلامُ أبا يوسفَ: «تفتأُ أنتَ».<br>
+    • <b>«تذكرُ»</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، والفاعلُ ضميرٌ مستترٌ تقديرُهُ «أنتَ»، و<b>«يوسفَ»</b> مفعولٌ بهِ للفعلِ «تذكرُ» منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.<br>
+    • و<b>الجملةُ الفعليةُ «تذكرُ يوسفَ» في محلِّ نصبٍ خبرُ «تفتأُ»</b>.</div>
+  </div>
+
+  <div class="box note"><span class="tag">وقفةُ مراجعةٍ</span><p style="margin:0">إذن نحن الآن تكلَّمْنا على كانَ وأخواتِها: من حيثُ <b>عملُها</b>، و<b>دلالاتُها</b> — وكلُّ واحدةٍ منها تدلُّ على دلالةٍ معيَّنةٍ —، ومن حيثُ <b>شروطُ العملِ</b>: فهناك ما يعملُ بلا شرطٍ، وما يعملُ بشرطِ سبقِ «ما» المصدريةِ وهو «دامَ»، وما يعملُ بشرطِ أن يُسبقَ بنفيٍ أو استفهامٍ أو نهيٍ وهي أفعالُ الاستمرارِ: زالَ وبرِحَ وفتِئَ وانفكَّ؛ وقسَّمْناها أيضًا من حيثُ <b>الجمودُ والتصرُّفُ</b>: جامدةٌ وهما فعلانِ جامدانِ: ليسَ ودامَ، ومتصرِّفةٌ: هناك أفعالٌ متصرِّفةٌ تصرُّفًا كاملًا، وهناك أفعالٌ متصرِّفةٌ تصرُّفًا ناقصًا، وهي أفعالُ الاستمرارِ: فتِئَ وانفكَّ وبرِحَ وزالَ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨: تطبيقات ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>تطبيقاتٌ على كانَ وأخواتِها</h2></div>
+  <p>نريدُ أمثلةً على كانَ وأخواتِها نطبِّقُها:</p>
+
+  <h3 id="s8a">الماضي والمضارعُ والأمرُ في التطبيقِ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿هَلْ أَتَى عَلَى الْإِنْسَانِ حِينٌ مِنَ الدَّهْرِ لَمْ يَكُنْ شَيْئًا مَذْكُورًا﴾<span class="ref">سورةُ الإنسانِ: ١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿لَمْ يَكُنْ شَيْئًا مَذْكُورًا﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«يكنْ» هذا فعلٌ مضارعٌ من «كانَ» الماضي، وهو كما ترونَ <b>متصرِّفٌ</b>، وهو مجزومٌ بـ«لم»: <b>«لم»</b> حرفُ جزمٍ ونفيٍ وقلبٍ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>«يكنْ»</b> فعلٌ مضارعٌ مجزومٌ بـ«لم» وعلامةُ جزمِهِ السكونُ، و<b>اسمُ «يكنْ» ضميرٌ مستترٌ تقديرُهُ «هو» يعودُ على الإنسانِ</b> قبلَهُ، و<b>«شيئًا» خبرُ «يكنْ» منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و<b>«مذكورًا» نعتٌ لـ«شيئًا»</b> منصوبٌ أيضًا وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَكَانَتْ هَبَاءً مُنْبَثًّا﴾<span class="ref">سورةُ الواقعةِ: ٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿فَكَانَتْ هَبَاءً مُنْبَثًّا﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>الفاءُ</b> بحسبِ ما قبلَها حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>«كانَ»</b> فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و<b>التاءُ</b> فيه تاءُ التأنيثِ: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>اسمُ «كانتْ» ضميرٌ مستترٌ تقديرُهُ «هي»</b>، و<b>«هباءً» خبرُ «كانتْ» منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و<b>«منبثًّا» نعتٌ لـ«هباءً»</b> منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَإِذَا بُشِّرَ أَحَدُهُمْ بِالْأُنْثَى ظَلَّ وَجْهُهُ مُسْوَدًّا وَهُوَ كَظِيمٌ﴾<span class="ref">سورةُ النحلِ: ٥٨</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿ظَلَّ وَجْهُهُ مُسْوَدًّا﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا <b>«ظلَّ»</b> من أخواتِ كانَ: فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و<b>«وجهُ» اسمُ «ظلَّ» مرفوعٌ</b> وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، والهاءُ بعدَهُ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ، و<b>«مسودًّا» خبرُ «ظلَّ» منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَأَوْصَانِي بِالصَّلَاةِ وَالزَّكَاةِ مَا دُمْتُ حَيًّا﴾<span class="ref">سورةُ مريمَ: ٣١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿مَا دُمْتُ حَيًّا﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«ما»</b> هنا مصدريةٌ: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ — وهي شرطُ عملِ «دامَ» —، و<b>«دُمْتُ»</b> من «دامَ» أختِ كانَ: وهو هنا فعلٌ ماضٍ مبنيٌّ على السكونِ، أو على الفتحِ المقدَّرِ، لاتصالِهِ بتاءِ الفاعلِ، و<b>التاءُ</b> هنا ضميرٌ متصلٌ مبنيٌّ على الضمِّ <b>في محلِّ رفعٍ اسمُ «دامَ»</b>، و<b>«حيًّا» هي خبرُ «دامَ»</b> — أو خبرُ «دُمْتُ» — منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قُلْ كُونُوا حِجَارَةً أَوْ حَدِيدًا﴾<span class="ref">سورةُ الإسراءِ: ٥٠</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿كُونُوا حِجَارَةً أَوْ حَدِيدًا﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«كونوا»</b> هذا فعلُ أمرٍ مبنيٌّ على حذفِ النونِ؛ لأنَّ مضارعَهُ من الأفعالِ الخمسةِ أو من الأمثلةِ الخمسةِ («يكونونَ»)، و«كُنْ» هذا أمرٌ من الفعلِ «كانَ»، وهذا <b>دليلٌ على أنه فعلٌ متصرِّفٌ</b> كما ذكرْنا. و<b>واوُ الجماعةِ</b> فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ اسمُ «كونوا»</b>، و<b>«حجارةً» هي خبرُ الفعلِ «كونوا» منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و<b>«أو»</b> حرفُ عطفٍ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>«حديدًا»</b> اسمٌ معطوفٌ على «حجارةً» منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿أَفَأَنْتَ تُكْرِهُ النَّاسَ حَتَّى يَكُونُوا مُؤْمِنِينَ﴾<span class="ref">سورةُ يونسَ: ٩٩</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿حَتَّى يَكُونُوا مُؤْمِنِينَ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ المضارعُ بعدَ «حتى» يكونُ منصوبًا بـ«أنْ» المضمرةِ — كما هو معروفٌ وقلْناه في درسٍ سابقٍ —: <b>«حتى»</b> حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>«يكونوا»</b> فعلٌ مضارعٌ منصوبٌ بـ«أنْ» المضمرةِ وجوبًا بعدَ «حتى»، وعلامةُ نصبِهِ <b>حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ أو من الأفعالِ الخمسةِ، و<b>واوُ الجماعةِ</b> فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ اسمُ «يكونُ»</b>، و<b>«مؤمنينَ» هي خبرُ «يكونُ» منصوبٌ وعلامةُ نصبِهِ الياءُ لأنه جمعُ مذكرٍ سالمٌ</b> كما هو معلومٌ.</div>
+  </div>
+
+  <h3 id="s8b">التقديمُ والتأخيرُ في الجملةِ المنسوخةِ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَكَانَ حَقًّا عَلَيْنَا نَصْرُ الْمُؤْمِنِينَ﴾<span class="ref">سورةُ الرومِ: ٤٧</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>إذا تأمَّلْنا قولَ اللهِ تعالى ﴿وَكَانَ حَقًّا عَلَيْنَا نَصْرُ الْمُؤْمِنِينَ﴾ — هذه «كانَ» ولها اسمٌ ولها خبرٌ؛ فماذا نلاحظُ؟ وكيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>سنلاحظُ شيئًا: أنَّ <b>خبرَها قد قُدِّمَ على اسمِها</b>؛ أصلُ التركيبِ: «وكانَ نصرُ المؤمنينَ حقًّا علينا»، لكنه قُدِّمَ لأسبابٍ وأغراضٍ بلاغيةٍ. والإعرابُ: <b>«كانَ»</b> فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و<b>«حقًّا» خبرُ «كانَ» مقدَّمٌ منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و«علينا»: «على» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و«نا» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ اسمٌ مجرورٌ بـ«على»، وشبهُ الجملةِ «علينا» متعلِّقٌ بالمصدرِ «حقًّا»؛ و<b>«نصرُ» هي اسمُ «كانَ» مؤخَّرٌ مرفوعٌ</b> وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«المؤمنينَ» مضافٌ إليهِ مجرورٌ وعلامةُ جرِّهِ الياءُ لأنه جمعُ مذكرٍ سالمٌ.</div>
+  </div>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">الأصلُ: كانَ + الاسمُ + الخبرُ</span><span class="fa">←</span>
+      <span class="chip blue">كانَ نصرُ المؤمنينَ حقًّا علينا</span><span class="fa">←</span>
+      <span class="chip">﴿وكانَ حقًّا علينا نصرُ المؤمنينَ﴾</span>
+    </div>
+    <div class="flow-lane">
+      <span class="chip plain">كانَ قلبٌ له</span><span class="fa">←</span>
+      <span class="chip">﴿لمَنْ كانَ له قلبٌ﴾</span>
+      <span class="chip plain" style="margin-right:14px">ليسَ هداهم عليكَ</span><span class="fa">←</span>
+      <span class="chip">﴿ليسَ عليكَ هداهم﴾</span>
+      <div class="lane-note">يجوزُ أن يتقدَّمَ خبرُ كانَ وأخواتِها على اسمِها، فيُقالُ: «خبرُ كانَ مقدَّمٌ» و«اسمُها مؤخَّرٌ»؛ وإذا كانَ الخبرُ شبهَ جملةٍ قيلَ: «في محلِّ نصبٍ خبرُ كانَ مقدَّمٌ» — ومنه مثالُ الناظمِ: «كانَ قائمًا زيدٌ».</div>
+    </div>
+    <div class="dcap">شكل (٦): تقديمُ خبرِ كانَ وأخواتِها على اسمِها في الشواهدِ</div>
+  </figure>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّ فِي ذَلِكَ لَذِكْرَى لِمَنْ كَانَ لَهُ قَلْبٌ أَوْ أَلْقَى السَّمْعَ وَهُوَ شَهِيدٌ﴾<span class="ref">سورةُ ق: ٣٧</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>الذي نريدُهُ في هذه الآيةِ: ﴿لِمَنْ كَانَ لَهُ قَلْبٌ﴾ — أعربْ «كانَ له قلبٌ».</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>أصلُ التركيبِ: «كانَ قلبٌ له»؛ يعني حدثَ هنا <b>تقديمٌ وتأخيرٌ أيضًا بينَ الاسمِ والخبرِ</b> لكانَ: <b>«كانَ»</b> فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و<b>«له»</b>: اللامُ حرفُ جرٍّ <b>مبنيٌّ على الفتحِ</b> — هذه اللامُ تُبنى أصلًا على الكسرِ إذا أتى بعدَها اسمٌ ظاهرٌ مجرورٌ بها، لكن إذا أتى بعدَها الضميرُ — يعني هاءَ الغائبِ أو كافَ الخطابِ — تكونُ مبنيةً على الفتحِ كما هو الحالُ هنا —، فـ«له»: اللامُ حرفُ جرٍّ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، والهاءُ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ اسمٌ مجرورٌ باللامِ، و<b>شبهُ الجملةِ «له» من الجارِّ والمجرورِ في محلِّ نصبٍ خبرُ «كانَ» مقدَّمٌ</b>، و<b>«قلبٌ» هي اسمُ «كانَ» مؤخَّرٌ مرفوعٌ</b> وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿لَيْسَ عَلَيْكَ هُدَاهُمْ وَلَكِنَّ اللَّهَ يَهْدِي مَنْ يَشَاءُ﴾<span class="ref">سورةُ البقرةِ: ٢٧٢</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿لَيْسَ عَلَيْكَ هُدَاهُمْ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«ليسَ»</b> فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ — وهو طبعًا فعلٌ جامدٌ، لكن ليس شرطًا أن نقولَ في الإعرابِ إنه فعلٌ جامدٌ؛ لأنَّ «جامدٌ» هذه <b>وصفٌ صرفيٌّ</b> له وليستْ وصفًا نحويًّا —. وهنا أيضًا <b>تقديمٌ وتأخيرٌ بينَ الاسمِ والخبرِ</b>: فـ«عليكَ» جارٌّ ومجرورٌ: «على» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، والكافُ ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ جرٍّ اسمٌ مجرورٌ بـ«على»، و<b>شبهُ الجملةِ «عليكَ» في محلِّ نصبٍ خبرُ «ليسَ» مقدَّمٌ</b>. و«هداهم»: «هدى» اسمٌ <b>مقصورٌ</b> كما نرى — يعني آخرُهُ ألفٌ، فالعلامةُ ستكونُ مقدَّرةً —: <b>اسمُ «ليسَ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ على الألفِ للتعذُّرِ</b>، و«هم» في «هداهم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَمَا كَانَ اللَّهُ لِيَظْلِمَهُمْ وَلَكِنْ كَانُوا أَنْفُسَهُمْ يَظْلِمُونَ﴾<span class="ref">سورةُ العنكبوتِ: ٤٠</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿وَلَكِنْ كَانُوا أَنْفُسَهُمْ يَظْلِمُونَ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>أصلُ التركيبِ: «كانوا يظلمونَ أنفسَهم». والإعرابُ: <b>«كانوا»</b> فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ لعُروضِ الضمِّ المناسبِ لواوِ الجماعةِ، ويمكنُ أن نقولَ — في رأيٍ شائعٍ في الإعرابِ —: إنَّ «كانوا» فعلٌ ماضٍ مبنيٌّ على الضمِّ لاتصالِهِ بواوِ الجماعةِ، و<b>واوُ الجماعةِ</b> فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ اسمُ «كانَ»</b>. و<b>«أنفسَهم»</b> — كما قلتُ: أصلُ التركيبِ «يظلمونَ أنفسَهم» —: «أنفسَ» <b>مفعولٌ بهِ منصوبٌ للفعلِ «يظلمونَ»</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ، و«هم» في «أنفسَهم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ — كما قلتُ: هذه الضمائرُ إذا اتصلتْ بأيِّ اسمٍ فهي في محلِّ جرٍّ مضافٍ إليهِ —. و<b>«يظلمونَ»</b> كما نرى فعلٌ مضارعٌ من الأمثلةِ الخمسةِ أو من الأفعالِ الخمسةِ؛ إذن هو فعلٌ مضارعٌ مرفوعٌ لأنه لم يُسبقْ هنا بناصبٍ أو جازمٍ، وعلامةُ رفعِهِ <b>ثبوتُ النونِ</b> لأنه من الأمثلةِ الخمسةِ أو الأفعالِ الخمسةِ، وواوُ الجماعةِ فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ، و<b>الجملةُ الفعليةُ «أنفسَهم يظلمونَ» في محلِّ نصبٍ خبرُ «كانَ»</b>.</div>
+  </div>
+
+  <h3 id="s8c">تطبيقاتٌ متنوعةٌ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَادْعُوا شُهَدَاءَكُمْ مِنْ دُونِ اللَّهِ إِنْ كُنْتُمْ صَادِقِينَ﴾<span class="ref">سورةُ البقرةِ: ٢٣</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿إِنْ كُنْتُمْ صَادِقِينَ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«كنتم»</b> هذا فعلٌ ماضٍ مبنيٌّ على السكونِ لاتصالِهِ بتاءِ الفاعلِ، أو نقولُ: مبنيٌّ على الفتحِ المقدَّرِ لوجودِ السكونِ كراهةَ توالي أربعةِ متحركاتٍ، و<b>«تُمْ»</b> هذه في «كنتم» هي تاءُ الفاعلِ: ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ اسمُ «كانَ»</b>، و<b>«صادقينَ» هي خبرُ «كانَ» منصوبٌ وعلامةُ نصبِهِ الياءُ</b> لأنه من جمعِ المذكرِ السالمِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَيْسَ الذَّكَرُ كَالْأُنْثَى﴾<span class="ref">سورةُ آلِ عمرانَ: ٣٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿وَلَيْسَ الذَّكَرُ كَالْأُنْثَى﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«ليسَ»</b> فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و<b>«الذكرُ» اسمُ «ليسَ» مرفوعٌ</b> وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«كالأنثى»: <b>الكافُ</b> حرفُ جرٍّ يفيدُ التشبيهَ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>«الأنثى»</b> اسمٌ مجرورٌ بالكافِ وعلامةُ جرِّهِ الكسرةُ المقدَّرةُ على الألفِ للتعذُّرِ، و<b>شبهُ الجملةِ «كالأنثى» في محلِّ نصبٍ خبرُ «ليسَ»</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿لِتَكُونُوا شُهَدَاءَ عَلَى النَّاسِ وَيَكُونَ الرَّسُولُ عَلَيْكُمْ شَهِيدًا﴾<span class="ref">سورةُ البقرةِ: ١٤٣</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿لِتَكُونُوا شُهَدَاءَ عَلَى النَّاسِ وَيَكُونَ الرَّسُولُ عَلَيْكُمْ شَهِيدًا﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>• «لتكونوا»: <b>اللامُ</b> طبعًا لامُ التعليلِ، يُنصبُ الفعلُ المضارعُ بعدَها بـ«أنْ» مضمرةٍ <b>جوازًا</b> — كما تقرَّرَ في درسِ نواصبِ المضارعِ —؛ فاللامُ حرفُ تعليلٍ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ، و<b>«تكونوا»</b> فعلٌ مضارعٌ منصوبٌ بـ«أنْ» المضمرةِ بعدَ لامِ التعليلِ الجارّةِ، وعلامةُ نصبِهِ حذفُ النونِ لأنه من الأمثلةِ الخمسةِ أو الأفعالِ الخمسةِ، و<b>واوُ الجماعةِ</b> فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ اسمُ «تكونُ»</b>، و<b>«شهداءَ» هي الخبرُ — خبرُ «تكونُ» — منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.<br>
+    • «ويكونَ الرسولُ عليكم شهيدًا»: <b>«يكونَ»</b> منصوبٌ لأنه معطوفٌ على «تكونوا» المنصوبِ، وعلامةُ نصبِهِ طبعًا الفتحةُ، و<b>«الرسولُ» هو اسمُ «يكونُ» مرفوعٌ</b> وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«عليكم» هذا شبهُ جملةٍ متعلِّقٌ بـ«شهيدًا» — يعني أصلُ التركيبِ: «ويكونَ الرسولُ شهيدًا عليكم»، لكنه قُدِّمَ للعنايةِ والاهتمامِ —، و<b>«شهيدًا» هي الخبرُ — خبرُ «يكونُ» — منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿ذَلِكَ بِأَنَّهُمْ قَالُوا لَيْسَ عَلَيْنَا فِي الْأُمِّيِّينَ سَبِيلٌ﴾<span class="ref">سورةُ آلِ عمرانَ: ٧٥</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ اسمُ «ليسَ» وخبرُها في ﴿لَيْسَ عَلَيْنَا فِي الْأُمِّيِّينَ سَبِيلٌ﴾؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>أصلُ التركيبِ: «ليسَ سبيلٌ علينا في الأمّيّينَ»؛ إذن <b>«سبيلٌ» هي اسمُ «ليسَ» مؤخَّرٌ</b>، و<b>«علينا» شبهُ جملةٍ في محلِّ نصبٍ خبرُ «ليسَ» مقدَّمٌ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَأَخَذَتْهُمُ الرَّجْفَةُ فَأَصْبَحُوا فِي دَارِهِمْ جَاثِمِينَ﴾<span class="ref">سورةُ الأعرافِ: ٧٨</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿فَأَصْبَحُوا فِي دَارِهِمْ جَاثِمِينَ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>الفاءُ</b> طبعًا بحسبِ ما قبلَها حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>«أصبحوا»</b> هذا فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ لوجودِ ضمةِ المناسبةِ معَ واوِ الجماعةِ، أو نقولُ: إنه مبنيٌّ على الضمِّ لاتصالِهِ بواوِ الجماعةِ في الإعرابِ الشائعِ، و<b>واوُ الجماعةِ</b> فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ اسمُ «أصبحَ»</b>. و«في دارِهم»: «في» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و«دارِ» اسمٌ مجرورٌ بـ«في» وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ، و«هم» في «دارِهم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ. و<b>«جاثمينَ» هي خبرُ «أصبحوا» منصوبٌ وعلامةُ نصبِهِ الياءُ لأنه جمعُ مذكرٍ سالمٌ</b>، وطبعًا شبهُ الجملةِ «في دارِهم» متعلِّقٌ بـ«جاثمينَ»، يعني: «جاثمينَ في دارِهم».</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَأَصْبَحَ فُؤَادُ أُمِّ مُوسَى فَارِغًا﴾<span class="ref">سورةُ القصصِ: ١٠</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿وَأَصْبَحَ فُؤَادُ أُمِّ مُوسَى فَارِغًا﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>الواوُ</b> بحسبِ ما قبلَها — قد تكونُ عاطفةً وقد تكونُ استئنافيةً — حرفٌ مبنيٌّ على الفتحِ في كلِّ الأحوالِ لا محلَّ له من الإعرابِ، و<b>«أصبحَ»</b> فعلٌ ماضٍ ناقصٌ ناسخٌ مبنيٌّ على الفتحِ، و<b>«فؤادُ» اسمُ «أصبحَ» مرفوعٌ</b> وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«أمِّ» مضافٌ إليهِ مجرورٌ وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ، و«موسى» مضافٌ إليهِ أيضًا مجرورٌ وعلامةُ جرِّهِ الفتحةُ المقدَّرةُ على الألفِ للتعذُّرِ نيابةً عن الكسرةِ؛ لأنه ممنوعٌ من الصرفِ للعلميةِ والعجمةِ، و<b>«فارغًا» هي خبرُ «أصبحَ» منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالُوا نَعْبُدُ أَصْنَامًا فَنَظَلُّ لَهَا عَاكِفِينَ﴾<span class="ref">سورةُ الشعراءِ: ٧١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿فَنَظَلُّ لَهَا عَاكِفِينَ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«نظلُّ»</b> طبعًا هو فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، وهو من أخواتِ كانَ، إذن له اسمٌ: <b>اسمُهُ ضميرٌ مستترٌ تقديرُهُ «نحنُ»</b> — لأنه قالَ «نظلُّ» بالنونِ، فتقديرُهُ «نحنُ» —، و<b>«عاكفينَ» هي خبرُها منصوبٌ وعلامةُ نصبِهِ الياءُ لأنه جمعُ مذكرٍ سالمٌ</b>، و«لها» شبهُ جملةٍ متعلِّقٌ بـ«عاكفينَ»: «عاكفينَ لها».</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿لَا يَزَالُ بُنْيَانُهُمُ الَّذِي بَنَوْا رِيبَةً فِي قُلُوبِهِمْ﴾<span class="ref">سورةُ التوبةِ: ١١٠</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ اسمُ «يزالُ» وأينَ خبرُهُ؟ وأعربِ الآيةَ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا الفعلُ «يزالُ» <b>متصرِّفٌ تصرُّفًا ناقصًا</b>؛ أتى مضارعًا، قبلَهُ <b>«لا» النافيةُ</b>: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>«يزالُ»</b> نفسُهُ فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ. أينَ اسمُهُ وأينَ خبرُهُ؟ <b>اسمُهُ «بنيانُهم»</b>: «بنيانُ» اسمُ «يزالُ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«هم» في «بنيانُهم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ؛ و<b>الخبرُ هو «ريبةً»</b>: خبرُ «يزالُ» منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.<br>
+    وطبعًا «بنيانُهم الذي بنَوا»: <b>«الذي»</b> نعتٌ لكلمةِ «بنيانُ»: اسمٌ موصولٌ مبنيٌّ على السكونِ في محلِّ رفعٍ نعتٌ لـ«بنيانُ»، و<b>«بنَوا»</b> فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ على الألفِ المحذوفةِ لالتقاءِ الساكنينِ — لأنه أصلُهُ «بنى»، زيدتْ واوُ الجماعةِ فحُذفتِ الألفُ لالتقاءِ الساكنينِ، والفتحُ المقدَّرُ هنا على الألفِ المحذوفةِ —، وواوُ الجماعةِ ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ في «بنَوا»، و<b>جملةُ «بنَوا» صلةُ الموصولِ بعدَ «الذي» لا محلَّ لها من الإعرابِ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَا يَزَالُونَ يُقَاتِلُونَكُمْ حَتَّى يَرُدُّوكُمْ عَنْ دِينِكُمْ إِنِ اسْتَطَاعُوا﴾<span class="ref">سورةُ البقرةِ: ٢١٧</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿وَلَا يَزَالُونَ يُقَاتِلُونَكُمْ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«لا»</b> هنا نافيةٌ، وهي <b>شرطٌ قبلَ «يزالُ»</b>: لا بدَّ أن يُسبقَ بنفيٍ أو نهيٍ أو استفهامٍ. و<b>«يزالُ»</b> فعلٌ مضارعٌ ناقصٌ ناسخٌ، وهو هنا من الأمثلةِ الخمسةِ، فهو مرفوعٌ وعلامةُ رفعِهِ ثبوتُ النونِ، و<b>واوُ الجماعةِ</b> فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ اسمُ «يزالُ»</b>. و<b>«يقاتلونَ»</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ ثبوتُ النونِ لأنه من الأمثلةِ الخمسةِ أو الأفعالِ الخمسةِ، وواوُ الجماعةِ فيه هي الفاعلُ: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ، و«كم» في «يقاتلونكم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ مفعولٌ بهِ، و<b>جملةُ «يقاتلونكم» جملةٌ في محلِّ نصبٍ خبرُ «يزالُ»</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَأَشَارَتْ إِلَيْهِ قَالُوا كَيْفَ نُكَلِّمُ مَنْ كَانَ فِي الْمَهْدِ صَبِيًّا﴾<span class="ref">سورةُ مريمَ: ٢٩</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ «كانَ» هنا، وأينَ اسمُها وخبرُها؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>﴿مَنْ كَانَ فِي الْمَهْدِ صَبِيًّا﴾: <b>اسمُ «كانَ» ضميرٌ مستترٌ تقديرُهُ «هو» يعودُ على «مَنْ»</b> اسمِ الموصولِ السابقِ عليها، و<b>خبرُها «صبيًّا»</b>؛ و«في المهدِ» شبهُ جملةٍ متعلِّقٌ بـ«صبيًّا»، و<b>«صبيًّا» هي خبرُ «كانَ» منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <h3 id="s8d">أسئلةُ الختامِ</h3>
+  <p>نتأمَّلُ معًا هذه الآياتِ أيضًا، وهذه الأسئلةَ، حتى نختمَ الدرسَ:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿كَانَ النَّاسُ أُمَّةً وَاحِدَةً﴾<span class="ref">سورةُ البقرةِ: ٢١٣</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِهِ تعالى ﴿كَانَ النَّاسُ أُمَّةً وَاحِدَةً﴾: خبرُ «كانَ» هو «الناسُ» أم «أمّةً»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا <b>«أمّةً»</b> هي خبرُ «كانَ» منصوبٌ، و«الناسُ» اسمُها مرفوعٌ: ﴿كانَ الناسُ أمّةً﴾.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَأَمَّا الْغُلَامُ فَكَانَ أَبَوَاهُ مُؤْمِنَيْنِ﴾<span class="ref">سورةُ الكهفِ: ٨٠</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِهِ تعالى ﴿فَكَانَ أَبَوَاهُ مُؤْمِنَيْنِ﴾: أينَ اسمُ «كانَ» وما إعرابُهُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>اسمُ «كانَ» هو <b>«أبواهُ»</b>، وهو <b>مرفوعٌ وعلامةُ رفعِهِ الألفُ</b>. لماذا؟ <b>لأنه مثنًّى</b>: «أبواهُ» مثنًّى، والهاءُ فيه ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ، و<b>«مؤمنَيْنِ» هي خبرُ «كانَ» منصوبٌ وعلامةُ نصبِهِ الياءُ لأنه مثنًّى أيضًا</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span><b>«ظلَّ زيدٌ صائمًا»</b>: كلمةُ «زيدٌ» هي اسمُ «ظلَّ» مرفوعٌ، أم هي مبتدأٌ مرفوعٌ، أم هي خبرٌ مرفوعٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي <b>اسمُ «ظلَّ» مرفوعٌ</b>؛ فالمبتدأُ إذا دخلتْ عليه «ظلَّ» نُسخَ فصارَ اسمًا لها، و«صائمًا» خبرُها منصوبٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>نقولُ: <b>«ما زالَ الطلابُ مجتهدونَ»</b>، أو نقولُ: <b>«ما زالَ الطلابُ مجتهدينَ»</b>؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا «ما زالَ» من أخواتِ كانَ، لها اسمٌ مرفوعٌ وخبرٌ منصوبٌ: اسمُها هو «الطلابُ»، يبقى الخبرُ، والخبرُ لا بدَّ أن يكونَ منصوبًا؛ وكلمةُ «مجتهدونَ» أو «مجتهدينَ» هي جمعُ مذكرٍ سالمٌ، وجمعُ المذكرِ السالمِ في حالةِ النصبِ تكونُ علامتُهُ الياءَ؛ فنقولُ: <b>«ما زالَ الطلابُ مجتهدينَ»</b>.</div>
+  </div>
+
+  <h3 id="s8e">جدولُ تلخيصِ التطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الشاهدُ / المثالُ</th><th>الناسخُ وصيغتُهُ</th><th>الاسمُ</th><th>الخبرُ</th><th>ملحظٌ</th></tr></thead>
+      <tbody>
+        <tr><td>﴿لن نبرحَ عليه عاكفينَ﴾ [طه: ٩١]</td><td>نبرحَ: مضارعٌ منصوبٌ بـ«لن»</td><td>«نحنُ» المستترُ</td><td>عاكفينَ (بالياءِ)</td><td>النفيُ بـ«لن» شرطٌ</td></tr>
+        <tr><td>﴿ولا يزالونَ مختلفينَ﴾ [هودٍ: ١١٨]</td><td>يزالونَ: مضارعٌ بثبوتِ النونِ</td><td>واوُ الجماعةِ</td><td>مختلفينَ (بالياءِ)</td><td>النفيُ بـ«لا»</td></tr>
+        <tr><td>﴿تاللهِ تفتأُ تذكرُ يوسفَ﴾ [يوسفَ: ٨٥]</td><td>تفتأُ: مضارعٌ</td><td>«أنتَ» المستترُ</td><td>جملةُ «تذكرُ يوسفَ»</td><td>نفيٌ مقدَّرٌ</td></tr>
+        <tr><td>﴿لم يكنْ شيئًا مذكورًا﴾ [الإنسانِ: ١]</td><td>يكنْ: مضارعٌ مجزومٌ بـ«لم»</td><td>«هو» المستترُ</td><td>شيئًا</td><td>«مذكورًا» نعتٌ</td></tr>
+        <tr><td>﴿فكانتْ هباءً منبثًّا﴾ [الواقعةِ: ٦]</td><td>كانَ + تاءُ التأنيثِ</td><td>«هي» المستترُ</td><td>هباءً</td><td>«منبثًّا» نعتٌ</td></tr>
+        <tr><td>﴿ظلَّ وجهُهُ مسودًّا﴾ [النحلِ: ٥٨]</td><td>ظلَّ: ماضٍ</td><td>وجهُ</td><td>مسودًّا</td><td>—</td></tr>
+        <tr><td>﴿ما دُمْتُ حيًّا﴾ [مريمَ: ٣١]</td><td>دامَ مسبوقةٌ بـ«ما» المصدريةِ</td><td>تاءُ الفاعلِ</td><td>حيًّا</td><td>«ما» شرطُ العملِ</td></tr>
+        <tr><td>﴿كونوا حجارةً أو حديدًا﴾ [الإسراءِ: ٥٠]</td><td>كونوا: أمرٌ مبنيٌّ على حذفِ النونِ</td><td>واوُ الجماعةِ</td><td>حجارةً</td><td>دليلُ التصرُّفِ</td></tr>
+        <tr><td>﴿حتى يكونوا مؤمنينَ﴾ [يونسَ: ٩٩]</td><td>يكونوا: منصوبٌ بأنْ مضمرةٍ بعدَ حتى</td><td>واوُ الجماعةِ</td><td>مؤمنينَ (بالياءِ)</td><td>—</td></tr>
+        <tr><td>﴿وكانَ حقًّا علينا نصرُ المؤمنينَ﴾ [الرومِ: ٤٧]</td><td>كانَ</td><td>نصرُ (مؤخَّرٌ)</td><td>حقًّا (مقدَّمٌ)</td><td>تقديمٌ لغرضٍ بلاغيٍّ</td></tr>
+        <tr><td>﴿لمَنْ كانَ له قلبٌ﴾ [ق: ٣٧]</td><td>كانَ</td><td>قلبٌ (مؤخَّرٌ)</td><td>له (مقدَّمٌ)</td><td>لامُ الجرِّ مفتوحةٌ معَ الضميرِ</td></tr>
+        <tr><td>﴿ليسَ عليكَ هداهم﴾ [البقرةِ: ٢٧٢]</td><td>ليسَ: جامدٌ</td><td>هدى (بضمةٍ مقدَّرةٍ)</td><td>عليكَ (مقدَّمٌ)</td><td>«جامدٌ» وصفٌ صرفيٌّ</td></tr>
+        <tr><td>﴿ولكنْ كانوا أنفسَهم يظلمونَ﴾ [العنكبوتِ: ٤٠]</td><td>كانوا</td><td>واوُ الجماعةِ</td><td>جملةُ «يظلمونَ»</td><td>تقديمُ المفعولِ «أنفسَهم»</td></tr>
+        <tr><td>﴿إنْ كنتم صادقينَ﴾ [البقرةِ: ٢٣]</td><td>كنتم</td><td>«تُمْ»</td><td>صادقينَ (بالياءِ)</td><td>—</td></tr>
+        <tr><td>﴿وليسَ الذكرُ كالأنثى﴾ [آلِ عمرانَ: ٣٦]</td><td>ليسَ</td><td>الذكرُ</td><td>كالأنثى (شبهُ جملةٍ)</td><td>—</td></tr>
+        <tr><td>﴿لتكونوا شهداءَ… ويكونَ الرسولُ عليكم شهيدًا﴾ [البقرةِ: ١٤٣]</td><td>تكونوا (بأنْ مضمرةٍ جوازًا بعدَ لامِ التعليلِ) / يكونَ (معطوفٌ)</td><td>واوُ الجماعةِ / الرسولُ</td><td>شهداءَ / شهيدًا</td><td>«عليكم» قُدِّمَ للعنايةِ</td></tr>
+        <tr><td>﴿ليسَ علينا في الأمّيّينَ سبيلٌ﴾ [آلِ عمرانَ: ٧٥]</td><td>ليسَ</td><td>سبيلٌ (مؤخَّرٌ)</td><td>علينا (مقدَّمٌ)</td><td>—</td></tr>
+        <tr><td>﴿فأصبحوا في دارِهم جاثمينَ﴾ [الأعرافِ: ٧٨]</td><td>أصبحوا</td><td>واوُ الجماعةِ</td><td>جاثمينَ (بالياءِ)</td><td>—</td></tr>
+        <tr><td>﴿وأصبحَ فؤادُ أمِّ موسى فارغًا﴾ [القصصِ: ١٠]</td><td>أصبحَ</td><td>فؤادُ</td><td>فارغًا</td><td>«موسى» ممنوعٌ من الصرفِ</td></tr>
+        <tr><td>﴿فنظلُّ لها عاكفينَ﴾ [الشعراءِ: ٧١]</td><td>نظلُّ: مضارعٌ</td><td>«نحنُ» المستترُ</td><td>عاكفينَ (بالياءِ)</td><td>—</td></tr>
+        <tr><td>﴿لا يزالُ بنيانُهم… ريبةً﴾ [التوبةِ: ١١٠]</td><td>يزالُ: مضارعٌ مسبوقٌ بـ«لا»</td><td>بنيانُ</td><td>ريبةً</td><td>«بنَوا»: فتحٌ مقدَّرٌ على ألفٍ محذوفةٍ</td></tr>
+        <tr><td>﴿ولا يزالونَ يقاتلونكم﴾ [البقرةِ: ٢١٧]</td><td>يزالونَ</td><td>واوُ الجماعةِ</td><td>جملةُ «يقاتلونكم»</td><td>—</td></tr>
+        <tr><td>﴿مَنْ كانَ في المهدِ صبيًّا﴾ [مريمَ: ٢٩]</td><td>كانَ</td><td>«هو» العائدُ على «مَنْ»</td><td>صبيًّا</td><td>—</td></tr>
+        <tr><td>﴿كانَ الناسُ أمّةً واحدةً﴾ [البقرةِ: ٢١٣]</td><td>كانَ</td><td>الناسُ</td><td>أمّةً</td><td>—</td></tr>
+        <tr><td>﴿فكانَ أبواهُ مؤمنَيْنِ﴾ [الكهفِ: ٨٠]</td><td>كانَ</td><td>أبواهُ (بالألفِ)</td><td>مؤمنَيْنِ (بالياءِ)</td><td>مثنًّى في الموضعينِ</td></tr>
+        <tr><td>«ظلَّ زيدٌ صائمًا» / «ما زالَ الطلابُ مجتهدينَ»</td><td>ظلَّ / ما زالَ</td><td>زيدٌ / الطلابُ</td><td>صائمًا / مجتهدينَ</td><td>الخبرُ منصوبٌ دائمًا</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩: الخلاصة ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>خلاصةُ الدرس</h2></div>
+  <p>وبهذا نكونُ قد أنهينا الكلامَ على أوّلِ العواملِ الداخلةِ على المبتدأِ والخبرِ، وهو كانَ وأخواتُها، وناقشْناها من عدّةِ نقاطٍ؛ نوجزُ الدرسَ الآنَ فنقولُ:</p>
+  <ul class="summary-points">
+    <li>النواسخُ ثلاثةٌ: <b>كانَ وأخواتُها</b> (أفعالٌ ترفعُ وتنصبُ، ويُلحَقُ بها كادَ وأخواتُها)، و<b>إنَّ وأخواتُها</b> (حروفٌ تنصبُ وترفعُ)، و<b>ظنَّ وأخواتُها</b> (أفعالٌ تنصبُ المبتدأَ والخبرَ مفعولينِ).</li>
+    <li>كانَ وأخواتُها <b>تدخلُ على الجملةِ الاسميةِ فتنسخُها</b>، يعني تغيِّرُ حكمَها الإعرابيَّ وتغيِّرُ الوظيفةَ النحويةَ للمبتدأِ والخبرِ؛ فهي <b>ترفعُ المبتدأَ ويصيرُ اسمَها، وتنصبُ الخبرَ ويصيرُ خبرَها</b>.</li>
+    <li>هي أفعالٌ <b>ناقصةٌ</b>: نقصَ منها أحدُ مدلولَيِ الفعلِ (الحدثُ غالبًا)، فكانَ لها اسمٌ وخبرٌ — والخبرُ يعوِّضُ الحدثَ الناقصَ — لا فاعلٌ ومفعولٌ.</li>
+    <li>أخواتُها متعددةٌ: كانَ، وأصبحَ، وأمسى، وأضحى، وظلَّ، وباتَ، وصارَ، وليسَ، وما دامَ، وما زالَ، وما انفكَّ، وما برِحَ، وما فتِئَ؛ و<b>لكلِّ فعلٍ منها دلالةٌ خاصةٌ</b>.</li>
+    <li>من حيثُ <b>شروطُ العملِ</b>: غالبُها — وهي ثمانيةٌ: كانَ وأصبحَ وأمسى وأضحى وظلَّ وباتَ وصارَ وليسَ — يعملُ <b>بلا شرطٍ</b>، ومنها ما يعملُ <b>بشرطِ أن يُسبقَ بـ«ما» المصدريةِ</b> وهو «دامَ» فقط، وقسمٌ ثالثٌ يعملُ <b>بشرطِ أن يُسبقَ بنفيٍ أو استفهامٍ أو نهيٍ</b>، وهي أفعالُ الاستمرارِ: زالَ وانفكَّ وبرِحَ وفتِئَ.</li>
+    <li>من حيثُ <b>الجمودُ والتصرُّفُ</b>: الجامدةُ فعلانِ اثنانِ فقط: <b>ليسَ</b>، و<b>دامَ</b> (ما دامَ)؛ والمتصرِّفةُ قسمانِ: <b>تامّةُ التصرُّفِ</b> وهي سبعةُ أفعالٍ: كانَ وأصبحَ وأمسى وأضحى وباتَ وظلَّ وصارَ، و<b>ناقصةُ التصرُّفِ</b> وهي أربعةُ أفعالٍ: أفعالُ الاستمرارِ — ما فتِئَ، ما انفكَّ، ما برِحَ، ما زالَ.</li>
+    <li>التصرُّفُ الناقصُ معناه: أنها لا تأتي منها تصاريفُ الكلمةِ جميعًا، بل <b>اقتصرَ الاستعمالُ فيها على الماضي والمضارعِ فقط</b>؛ والجامدةُ معناها أنها <b>تلزمُ صورةً واحدةً</b> في الاستعمالِ العربيِّ لا تتغيَّرُ عنها؛ فلم نسمعْ من «ليسَ» المضارعَ ولا الأمرَ ولا المصدرَ، إنما لزمتْ صيغةً واحدةً هي صيغةُ الماضي، ومن ثَمَّ سُمِّيتْ جامدةً.</li>
+    <li>ثم طبَّقْنا على كانَ وأخواتِها من حيثُ إعرابُها وإعرابُ ما بعدَها — اسمِها وخبرِها —، ورأينا أنَّ خبرَها قد <b>يتقدَّمُ على اسمِها</b>، وأنَّ المتصرِّفَ منها <b>يعملُ عملَ الماضي</b> مضارعًا وأمرًا.</li>
+  </ul>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الفعلُ</th><th>دلالتُهُ</th><th>شرطُ عملِهِ</th><th>تصرُّفُهُ</th></tr></thead>
+      <tbody>
+        <tr><td>كانَ</td><td>الماضي معَ الانقطاعِ أو الاستمرارِ</td><td>بلا شرطٍ</td><td>تامُّ التصرُّفِ</td></tr>
+        <tr><td>أمسى</td><td>في المساءِ</td><td>بلا شرطٍ</td><td>تامُّ التصرُّفِ</td></tr>
+        <tr><td>أصبحَ</td><td>في الصباحِ</td><td>بلا شرطٍ</td><td>تامُّ التصرُّفِ</td></tr>
+        <tr><td>أضحى</td><td>في الضحى</td><td>بلا شرطٍ</td><td>تامُّ التصرُّفِ</td></tr>
+        <tr><td>ظلَّ</td><td>في جميعِ النهارِ</td><td>بلا شرطٍ</td><td>تامُّ التصرُّفِ</td></tr>
+        <tr><td>باتَ</td><td>في الليلِ</td><td>بلا شرطٍ</td><td>تامُّ التصرُّفِ</td></tr>
+        <tr><td>صارَ</td><td>التحوُّلُ</td><td>بلا شرطٍ</td><td>تامُّ التصرُّفِ</td></tr>
+        <tr><td>ليسَ</td><td>نفيُ الخبرِ في الحالِ</td><td>بلا شرطٍ</td><td>جامدٌ بلا خلافٍ</td></tr>
+        <tr><td>زالَ، انفكَّ، فتِئَ، برِحَ</td><td>الاستمرارُ: ملازمةُ الخبرِ للاسمِ</td><td>تقدُّمُ نفيٍ أو استفهامٍ أو نهيٍ</td><td>ناقصُ التصرُّفِ (ماضٍ ومضارعٌ)</td></tr>
+        <tr><td>دامَ</td><td>الاستمرارُ معَ الظرفيةِ</td><td>تقدُّمُ «ما» المصدريةِ</td><td>جامدٌ على الأصحِّ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box note"><span class="tag">تمَّ الدرسُ</span><p style="margin:0">وإن شاءَ اللهُ تعالى نلقاكم على خيرٍ في الدرسِ القادمِ عن <b>«إنَّ وأخواتِها»</b> بإذنِ اللهِ تعالى — القسمِ الثاني من النواسخِ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ ١٥ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=vzdf1yE7QmU" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

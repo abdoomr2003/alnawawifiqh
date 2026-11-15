@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إنَّ وأخواتُها — الدرس ١٦ من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">إنَّ وأخواتُها</h1>
+    <div class="cover-sub">الدرس ١٦: النوعُ الثاني من العواملِ الداخلةِ على المبتدأِ والخبرِ — نواسخٌ حرفيّةٌ تنصبُ الاسمَ وترفعُ الخبرَ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=kNQE6oiKHLw" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتنِ ونظمُ الشنقيطيِّ</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">الحروفُ الستّةُ: معانيها وأعمالُها</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s3a">إنَّ وأنَّ — التوكيدُ</a></li>
+        <li><a href="#s3b">لكنَّ — الاستدراكُ</a></li>
+        <li><a href="#s3c">كأنَّ — التشبيهُ</a></li>
+        <li><a href="#s3d">ليتَ — التمنّي</a></li>
+        <li><a href="#s3e">لعلَّ — الترجّي والتوقّعُ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٤</span><a href="#s4">تطبيقاتٌ وإعراباتٌ من كتابِ اللهِ وشعرِ العربِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">على كأنَّ ولكنَّ وليتَ</a></li>
+        <li><a href="#s4b">على لعلَّ</a></li>
+        <li><a href="#s4c">على إنَّ وأنَّ</a></li>
+        <li><a href="#s4d">جدولُ التطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١: افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+
+  <p>الحمدُ للهِ كما ينبغي لجلالِه وكمالِه، وصلاتُه وسلامُه على النبيِّ المصطفى وآلِه، وبعدُ: فحيّاكم اللهُ أيها الكرامُ وأيّتها الكريماتُ مع درسٍ جديدٍ من دروسِ متنِ الآجروميّةِ.</p>
+  <p>وهذا الدرسُ <b>تتمّةُ الكلامِ على العواملِ الداخلةِ على المبتدأِ والخبرِ</b>، أو هو <b>النوعُ الثاني</b> من أنواعِ هذه العواملِ، وهو <span class="mark">«الحروفُ الناسخةُ»</span>، وهي: <b>إنَّ وأخواتُها</b>.</p>
+  <p>وهي ناسخةٌ لأنها تغيّرُ <b>الحكمَ الإعرابيَّ</b> للمبتدأِ والخبرِ، وتغيّرُ <b>الوظيفةَ النحويّةَ</b> لكليهما: فيصيرُ المبتدأُ <b>اسمًا لها منصوبًا</b>، ويصيرُ الخبرُ <b>خبرًا لها مرفوعًا</b>. فهي <b>تنصبُ الاسمَ وترفعُ الخبرَ</b>؛ أو بصياغةٍ أخرى: تنصبُ المبتدأَ فيصيرُ اسمَها، وترفعُ الخبرَ فيصيرُ خبرَها.</p>
+
+  <div class="box note"><span class="tag">ملحظٌ</span><p style="margin:0">نلاحظُ أنَّ ابنَ آجرومٍ رحمه الله <b>فصَّلَ القولَ في معاني «إنَّ» وأخواتِها</b> وذكرَها هنا، ولم يذكرْ هذه المعانيَ في «كانَ» وأخواتِها — وهذا حسنٌ أنه ذكرَ هذه المعانيَ في هذا البابِ.</p></div>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢: المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتنِ ونظمُ الشنقيطيِّ</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«وأمّا إنَّ وأخواتُها فإنّها تنصِبُ الاسمَ وتَرفَعُ الخبرَ، وهي: إنَّ، وأنَّ، ولكنَّ، وكأنَّ، وليتَ، ولعلَّ، تقول: إنَّ زيدًا قائمٌ، وليتَ عمرًا شاخصٌ، وما أشبه ذلك، ومعنى إنَّ وأنَّ للتوكيد، ولكنَّ للاستدراك، وكأنَّ للتشبيه، وليتَ للتمنّي، ولعلَّ للترجّي والتوقّع.»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <p>وأنشدَ الناظمُ العلامةُ محمدُ بنُ آبِّه الشنقيطيِّ بابَ إنَّ وأخواتِها فقال:</p>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">عَمَلُ كانَ عَكْسُهُ لِـ«إنَّ» «أنْ» … «لَكِنْ» «لَيْتَ» وَ«لَعَلَّ» وَ«كَأَنْ»</div>
+      <div class="ln">تَقُولُ: «إنَّ مَالِكًا لَعَالِمُ» … وَمِثْلُهُ: «لَيْتَ الحَبِيبَ قَادِمُ»</div>
+      <div class="ln">أَكِّدْ بِـ«إنَّ» «أنَّ» شَبِّهْ بِـ«كَأَنْ» … «لَكِنْ» يَا صَاحِ لِلِاسْتِدْرَاكِ عَنْ</div>
+      <div class="ln">وَلِلتَّمَنِّي «لَيْتَ» عِنْدَهُمْ حَصَلْ … وَلِلتَّرَجِّي وَالتَّوَقُّعِ «لَعَلْ»</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <p>وبيانُ البيتِ الأولِ أنَّ <b>عملَ «إنَّ» وأخواتِها عكسُ عملِ «كانَ» وأخواتِها</b>: فكانَ ترفعُ الاسمَ وتنصبُ الخبرَ، وإنَّ تنصبُ الاسمَ وترفعُ الخبرَ. ثم ضربَ الناظمُ مثالينِ على العملِ: <span class="mark">«إنَّ مالكًا لعالمُ»</span> — بلامٍ مُزحلقةٍ يُبيَّنُ شأنُها في التطبيقاتِ — <span class="mark">«وليتَ الحبيبَ قادمُ»</span>. وبقيّةُ الأبياتِ تلخّصُ المعاني التي فصّلَها ابنُ آجرومَ: التوكيدُ بـ«إنَّ» و«أنَّ»، والتشبيهُ بـ«كأنْ»، والاستدراكُ بـ«لكنْ»، والتمنّي بـ«ليتَ»، والترجّي والتوقّعِ بـ«لعلْ».</p>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣: الحروف الستة ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>الحروفُ الستّةُ: معانيها وأعمالُها</h2></div>
+
+  <p>إنَّ وأخواتُها من <b>النواسخِ الحرفيّةِ</b> التي تنصبُ الاسمَ وترفعُ الخبرَ، وكلُّها يعملُ هذا العملَ، <b>ولكلٍّ منها معنًى ودلالةٌ</b> كما يلي:</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">إنَّ</div><div class="n-sub"><b>التوكيدُ</b><br>«إنَّ زيدًا قائمٌ»</div></div>
+      <div class="node green"><div class="n-title">أنَّ</div><div class="n-sub"><b>التوكيدُ</b><br>«علمتُ أنَّ أباك حاضرٌ»<br>مفتوحةُ الهمزةِ ولها مواضعُ مخصوصةٌ</div></div>
+      <div class="node blue"><div class="n-title">لكنَّ</div><div class="n-sub"><b>الاستدراكُ</b><br>«لكنَّ صديقَه جبانٌ»</div></div>
+      <div class="node goldb"><div class="n-title">كأنَّ</div><div class="n-sub"><b>التشبيهُ</b><br>«كأنَّ زيدًا أسدٌ»</div></div>
+      <div class="node maroon"><div class="n-title">ليتَ</div><div class="n-sub"><b>التمنّي</b><br>طلبُ المستحيلِ أو ما فيه عُسرٌ<br>«ليتَ الشبابَ عائدٌ»</div></div>
+      <div class="node maroon"><div class="n-title">لعلَّ</div><div class="n-sub"><b>الترجّي والتوقّعُ</b><br>الترجّي في المحبوبِ، والتوقّعِ في المكروهِ<br>«لعلَّ الخيرَ قريبٌ»</div></div>
+    </div>
+    <figcaption>شكل (١): بطاقاتُ الحروفِ الستّةِ الناسخةِ ومعانيها — وكلُّها تنصبُ الاسمَ وترفعُ الخبرَ</figcaption>
+  </figure>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">«محمدٌ مجتهدٌ»</span><span class="fa">←</span>
+      <span class="chip">دخولُ «إنَّ»</span><span class="fa">←</span>
+      <span class="chip gold">«إنَّ محمدًا مجتهدٌ»</span>
+      <div class="lane-note">النسخُ يقعُ على الركنينِ معًا: المبتدأُ يصيرُ اسمًا للناسخِ منصوبًا، والخبرُ يصيرُ خبرًا له مرفوعًا — تغييرٌ للحكمِ الإعرابيِّ والوظيفةِ النحويّةِ في آنٍ واحدٍ.</div>
+    </div>
+    <div class="dcap">شكل (٢): آليّةُ النسخِ بالحروفِ الناسخةِ</div>
+  </figure>
+
+  <h3 id="s3a">إنَّ وأنَّ — التوكيدُ</h3>
+  <p>تدلُّ «إنَّ» و«أنَّ» على معنى <b>التوكيدِ</b>. والتوكيدُ هنا معناه أنَّ الحرفَ <b>يقوّي نسبةَ الخبرِ إلى المبتدأِ</b>. وبيانُ ذلك أنك حين تقولُ: <span class="mark">«محمدٌ مجتهدٌ»</span> فقد نسبتَ الاجتهادَ إلى محمدٍ بالابتداءِ؛ فإذا أدخلتَ «إنَّ» فإنك <b>تقوّي هذه النسبةَ وتؤكّدُها</b> — تؤكّدُ نسبةَ الاجتهادِ إلى المبتدأِ محمدٍ — فتقولُ: <span class="mark">«إنَّ محمدًا مجتهدٌ»</span>.</p>
+  <div class="box example"><span class="tag">مثالٌ / تطبيقٌ</span><p style="margin:0">«إنَّ محمدًا مجتهدٌ»: <b>إنَّ</b> حرفُ توكيدٍ ونصبٍ، ناسخٌ، مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ — وهو حرفٌ لا فعلٌ، والحروفُ كلُّها مبنيةٌ ولا محلَّ لها من الإعرابِ، يفيدُ التوكيدَ. <b>محمدًا</b> اسمُ إنَّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>مجتهدٌ</b> خبرُ إنَّ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه.</p></div>
+  <p>و«أنَّ» مثلُ «إنَّ» تمامًا في العملِ والمعنى، ولكنَّها <b>مفتوحةُ الهمزةِ، ولها مواضعُ مخصوصةٌ</b> تقعُ فيها.</p>
+  <div class="box example"><span class="tag">مثالٌ / تطبيقٌ</span><p style="margin:0">«علمتُ أنَّ أباك حاضرٌ»: <b>أنَّ</b> حرفُ توكيدٍ، ناسخٌ ناصبٌ، مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>أباك</b> اسمُ أنَّ منصوبٌ وعلامةُ نصبِه الألفُ لأنه من <b>الأسماءِ الخمسةِ</b>، والكافُ فيه ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ جرٍّ مضافٌ إليه. <b>حاضرٌ</b> خبرُ أنَّ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه.</p></div>
+
+  <h3 id="s3b">لكنَّ — الاستدراكُ</h3>
+  <p>معنى «لكنَّ» <b>الاستدراكُ</b>. والاستدراكُ معناه أن <b>تُعقِّبَ الكلامَ بنفيِ ما يُتوهَّمُ ثبوتُه، أو إثباتِ ما يُتوهَّمُ نفيُه</b>. فلو قلتَ مثلًا: <span class="mark">«محمدٌ شجاعٌ»</span>، فُهِمَ من ذلك ثبوتُ الشجاعةِ لمحمدٍ؛ وقد يُتوهَّمُ من ذلك أنَّ صديقَه شجاعٌ أيضًا؛ فنريدُ أن ننفيَ هذا التوهمَ فنستدركُ على المعنى ونقولُ: <span class="mark">«لكنَّ صديقَه جبانٌ»</span>.</p>
+  <div class="box example"><span class="tag">مثالٌ / تطبيقٌ</span><p style="margin:0">«البيتُ محترقٌ لكنَّ الأثاثَ سليمٌ» — والأثاثُ بالثاءِ المثلثةِ —: «البيتُ محترقٌ» جملةٌ اسميّةٌ من مبتدأٍ وخبرٍ. <b>لكنَّ</b> حرفُ استدراكٍ، ناسخٌ ناصبٌ، مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>الأثاثَ</b> اسمُ لكنَّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>سليمٌ</b> خبرُ لكنَّ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه.</p></div>
+
+  <h3 id="s3c">كأنَّ — التشبيهُ</h3>
+  <p>معنى «كأنَّ» <b>التشبيهُ</b>، أي <b>تشبيهُ المبتدأِ بالخبرِ</b>. فإذا قلتَ: <span class="mark">«كأنَّ زيدًا أسدٌ»</span> فقد شبَّهتَ زيدًا — وهو المبتدأُ في الأصلِ — بالأسدِ، وهو الخبرُ في الأصلِ.</p>
+  <div class="box example"><span class="tag">مثالٌ / تطبيقٌ</span><p style="margin:0">«كأنَّ زيدًا أسدٌ»: <b>كأنَّ</b> حرفُ تشبيهٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>زيدًا</b> اسمُها منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>أسدٌ</b> خبرُها مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه.</p></div>
+
+  <h3 id="s3d">ليتَ — التمنّي</h3>
+  <p>«ليتَ» من أخواتِ إنَّ ومعناها <b>التمنّي</b>. والتمنّي معناه <b>طلبُ المستحيلِ أو ما فيه عُسرٌ</b>. فإذا قلتَ: <span class="mark">«ليتَ الشبابَ عائدٌ»</span> فهذا أمرٌ مستحيلُ الحدوثِ؛ فليتَ تُستعملُ في معنى التمنّي، وهو معنًى يدلُّ على استحالةِ حدوثِ الشيءِ، كما في قولِه تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿يَا لَيْتَنِي كُنْتُ تُرَابًا﴾<span class="ref">سورةُ النبأِ: ٤٠</span></p>
+  </div>
+  <div class="box example"><span class="tag">مثالٌ / تطبيقٌ</span><p style="margin:0">«ليتَ الشبابَ عائدٌ»: <b>ليتَ</b> حرفُ تمنٍّ، ناسخٌ ناصبٌ، مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>الشبابَ</b> اسمُ ليتَ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>عائدٌ</b> خبرُ ليتَ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه.</p></div>
+
+  <h3 id="s3e">لعلَّ — الترجّي والتوقّعُ</h3>
+  <p>«لعلَّ» من أخواتِ إنَّ أيضًا، وقد أشارَ ابنُ آجرومٍ إلى أنها تفيدُ معنيينِ: <b>الترجّي</b> و<b>التوقّعَ</b>.</p>
+  <p><b>الترجّي</b> معناه أن <b>نطلبَ الأمرَ المحبَّبَ إلينا والذي يمكنُ حدوثُه</b> — وهو أمرٌ مرجوُّ الحدوثِ نريدُه أن يقعَ ونتوقّعُ وقوعَه، أي أنه يكونُ في <b>الممكنِ</b>. تقولُ مثلًا: <span class="mark">«لعلَّ رحمةَ اللهِ تصيبُني»</span>، فهذا رجاءٌ في أمرٍ ممكنٍ.</p>
+  <div class="box example"><span class="tag">مثالٌ / تطبيقٌ</span><p style="margin:0">«لعلَّ رحمةَ اللهِ تصيبُني»: <b>لعلَّ</b> حرفُ ترجٍّ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>رحمةَ</b> اسمُ لعلَّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه، و<b>اللهِ</b> لفظُ الجلالةِ مضافٌ إليه مجرورٌ وعلامةُ جرِّه الكسرةُ الظاهرةُ على آخرِه. <b>تصيبُني</b>: تصيبُ فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه، والفاعلُ ضميرٌ مستترٌ تقديرُه «هي» يعودُ على الرحمةِ، والنونُ <b>نونُ الوقايةِ</b>، والياءُ بعدها <b>ياءُ المتكلمِ</b> ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ مفعولٌ به، والجملةُ من الفعلِ وفاعلِه في محلِّ رفعٍ خبرُ لعلَّ.</p></div>
+  <div class="box note"><span class="tag">تنبيهٌ — نونُ الوقايةِ</span><p style="margin:0">نونُ الوقايةِ تأتي <b>لتقيَ الفعلَ من الكسرِ</b> إذا أتى بعدَه ياءُ المتكلمِ؛ إذ لا بدَّ قبلَ ياءِ المتكلمِ من الكسرِ، والفعلُ لا يُكسَّرُ، فتُؤتى بنونٍ تسمّى نونَ الوقايةِ لأنها تحمي الفعلَ من الكسرِ. وهي حرفٌ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ. و<b>ياءُ المتكلمِ</b>: إذا اتصلت بالفعلِ فهي في محلِّ نصبٍ مفعولٌ به، وإذا اتصلت بالاسمِ فهي في محلِّ جرٍّ مضافٌ إليه. ومع ياءِ المتكلمِ ضميرُ الهاءِ (هاءِ الغيبةِ) وضميرُ الكافِ (كافُ الخطابِ) بكلِّ أشكالِها.</p></div>
+  <p>وأما <b>التوقّعُ</b> فمعناه <b>ظنُّ وقوعِ الأمرِ المكروهِ عادةً</b>، وهو عكسُ الترجّي: فالترجّي يكونُ في المحبوبِ، والتوقّعُ يكونُ في المكروهِ في ذاتِه. فلو قلتَ: <span class="mark">«لعلَّ عمرًا راسبٌ»</span> فهذا توقّعٌ لا ترجٍّ؛ إذ لا يُرجى الرسوبُ — أما «لعلَّ عمرًا ناجحٌ» فهو ترجٍّ ورجاءٌ لأنَّ النجاحَ أمرٌ محبوبٌ.</p>
+  <div class="box example"><span class="tag">مثالٌ / تطبيقٌ</span><p style="margin:0">«لعلَّ عمرًا راسبٌ»: <b>لعلَّ</b> حرفُ توقّعٍ هنا مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>عمرًا</b> اسمُ لعلَّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>راسبٌ</b> خبرُ لعلَّ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه — والإعرابُ ذاتُه في «لعلَّ عمرًا ناجحٌ» غيرَ أنَّها هنا للترجّيِ.</p></div>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤: التطبيقات ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>تطبيقاتٌ وإعراباتٌ من كتابِ اللهِ وشعرِ العربِ</h2></div>
+
+  <h3 id="s4a">تطبيقاتٌ على كأنَّ ولكنَّ وليتَ</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿الزُّجاجَةُ كَأَنَّها كَوْكَبٌ دُرِّيٌّ﴾</span> [النور: ٣٥] — أين اسمُ كأنَّ وأين خبرُها هنا، وكيف يُعربان؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«كأنَّها كوكبٌ درِّيٌّ»: <b>كأنَّ</b> حرفُ تشبيهٍ، ناسخٌ ناصبٌ، مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>ها</b>: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ اسمُ كأنَّ، و<b>كوكبٌ</b> خبرُ كأنَّ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه، و<b>درِّيٌّ</b> نعتٌ لـ«كوكبٍ» مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه. وجملةُ «كأنَّها كوكبٌ درِّيٌّ» في محلِّ رفعٍ خبرٌ للمبتدأِ «الزُّجاجةُ».</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَلَكِنَّ الشَّيَاطِينَ كَفَرُوا﴾</span> [البقرة: ١٠٢] — كيف نُعربُ هذا التركيبَ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>لكنَّ</b> حرفُ استدراكٍ، ناسخٌ ناصبٌ، مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>الشياطينَ</b> اسمُ لكنَّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. و<b>كفروا</b>: فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ لوجودِ ضمّةِ المناسبةِ لواوِ الجماعةِ، أو نقولُ: مبنيٌّ على الضمِّ لاتصالِه بواوِ الجماعةِ، وواوُ الجماعةِ ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ، والجملةُ من الفعلِ والفاعلِ في محلِّ رفعٍ خبرُ لكنَّ.</div>
+  </div>
+  <div class="box note"><span class="tag">تنبيهٌ</span><p style="margin:0">«الشياطينُ» هذه <b>جمعُ تكسيرٍ</b> وليست جمعَ مذكرٍ سالمًا؛ فلا يتوهَّمَنَّ طالبُ العلمِ أنها جمعٌ مذكرٌ سالمٌ لأنها مختومةٌ بالياءِ والنونِ — فلا يقالُ «الشياطيونَ» في حالةِ الرفعِ — بل هي مثلُ «المساكينِ»: جمعُ تكسيرٍ، وجمعُ التكسيرِ كما قدَّمنا يُعربُ بالعلامةِ الأصليّةِ، فالشياطينَ اسمُ لكنَّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ.</p></div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>قولُ الشاعرِ: <span class="mark">«ألا لَيْتَ الشَّبابَ يَعُودُ يَوْمًا … فَأَخْبِرْهُ بِما فَعَلَ المَشِيبُ»</span> — والشاهدُ في قولِه: «ليتَ الشبابَ يعودُ يومًا».</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>ألا</b>: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ. و<b>ليتَ</b> حرفُ تمنٍّ، ناسخٌ ناصبٌ، مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>الشبابَ</b> اسمُ ليتَ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. و<b>يعودُ</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه، والفاعلُ ضميرٌ مستترٌ تقديرُه «هو» يعودُ على الشبابِ. و<b>يومًا</b> ظرفُ زمانٍ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ — والتقديرُ: يعودُ في يومٍ — ويُسمّى <b>مفعولًا فيه</b>؛ فالظرفُ نقولُ عنه مفعولًا فيه. والجملةُ الفعليّةُ «يعودُ يومًا» في محلِّ رفعٍ خبرُ ليتَ.</div>
+  </div>
+
+  <h3 id="s4b">تطبيقاتٌ على لعلَّ</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>في قولِنا: <span class="mark">«لعلَّ الخيرَ قريبٌ»</span> — بيِّن إعرابَ التركيبِ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«لعلَّ» من أخواتِ إنَّ، وهي هنا <b>تفيدُ الترجّي</b> لأنها وردت في أمرٍ محبوبٍ: حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>الخيرَ</b> اسمُها منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>قريبٌ</b> خبرُها مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>لو قلنا: <span class="mark">«محمدٌ أسدٌ»</span> — فأيُّ أخواتِ إنَّ يناسبُ الجملةَ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نُدخلُ عليها ما يناسبُها من أخواتِ إنَّ، فنقولُ: <span class="mark">«كأنَّ محمدًا أسدٌ»</span> — لأنَّ التركيبَ يفيدُ <b>التشبيهَ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿لَعَلَّ اللهَ يُحْدِثُ بَعْدَ ذلِكَ أَمْرًا﴾</span> [الطلاق: ١] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>لعلَّ</b> هنا قد تكونُ للترجّي وقد تكونُ للتوقّعِ، لكنَّ الأولى أنَّها <b>للترجّي</b>: حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>اللهَ</b> لفظُ الجلالةِ اسمُ لعلَّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. و<b>يُحدِثُ</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه، والفاعلُ ضميرٌ مستترٌ تقديرُه «هو» يعودُ على لفظِ الجلالةِ. و<b>بعدَ</b> ظرفُ زمانٍ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه، و<b>ذلك</b> اسمُ إشارةٍ مبنيٌّ على الفتحِ في محلِّ جرٍّ مضافٌ إليه. و<b>أمرًا</b> مفعولٌ به للفعلِ «يُحدِثُ» منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه، والجملةُ الفعليّةُ «يُحدِثُ بعدَ ذلك أمرًا» في محلِّ رفعٍ خبرُ لعلَّ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿لَعَلَّكَ باخِعٌ نَفْسَكَ﴾</span> [الكهف: ٦، وتردُ أيضًا في الشعراء: ٣] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>لعلَّ</b> هنا حرفُ <b>توقّعٍ</b> مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>الكافُ</b> ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ نصبٍ اسمُ لعلَّ، و<b>باخعٌ</b> خبرُها مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه. و<b>نفسَك</b>: «باخعٌ» اسمُ فاعلٍ يعملُ عملَ الفعلِ فله مفعولٌ به بعدَه وهو «نفسَ» — مفعولٌ به منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه — والكافُ ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ جرٍّ مضافٌ إليه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿لَعَلَّكُمْ تَتَّقُونَ﴾</span> [البقرة: ١٨٣، وتتكرَّرُ في مواضعَ أُخَرَ] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>لعلَّ</b> حرفُ ترجٍّ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>كم</b> ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ اسمُ لعلَّ. و<b>تتَّقونَ</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ لأنه من الأمثلةِ الخمسةِ (الأفعالِ الخمسةِ)، والواوُ فيه واوُ الجماعةِ: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ، وجملةُ «تتَّقونَ» من الفعلِ والفاعلِ في محلِّ رفعٍ خبرُ لعلَّ.</div>
+  </div>
+
+  <h3 id="s4c">تطبيقاتٌ على إنَّ وأنَّ</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿إنَّ لَدَيْنا أَنْكالًا وَجَحِيمًا﴾</span> [المزمل: ١٢] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>إنَّ</b> حرفُ توكيدٍ ونصبٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>لدينا</b>: «لدى» ظرفُ مكانٍ مبنيٌّ على السكونِ في محلِّ نصبٍ، و«نا» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٌ إليه، وهذا <b>شبهُ جملةٍ</b> هو <b>خبرُ إنَّ مقدَّمٌ</b> — في محلِّ رفعٍ. <b>أنكالًا</b> اسمُ إنَّ <b>مؤخَّرٌ</b> منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. و<b>وجحيمًا</b>: الواوُ حرفُ عطفٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ عاطفةٌ مفرداتٍ، و«جحيمًا» اسمٌ معطوفٌ على «أنكالًا» الذي هو اسمُ إنَّ المؤخَّرُ، فيكونُ معطوفًا عليه منصوبًا أيضًا؛ لأنَّ <b>المعطوفَ على المنصوبِ منصوبٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿إنَّ في ذلِكَ لَعِبْرَةً لِمَنْ يَخْشى﴾</span> [النازعات: ٢٦] — كيف نُعربُ التركيبَ كلَّه؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>إنَّ</b> حرفُ توكيدٍ ونصبٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>في</b> حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>ذلك</b> اسمُ إشارةٍ مبنيٌّ على الفتحِ في محلِّ جرٍّ اسمٌ مجرورٌ بـ«في»، وهذا شبهُ الجملةِ <b>خبرُ إنَّ مقدَّمٌ</b> في محلِّ رفعٍ؛ وأصلُ التركيبِ: «إنَّ عبرةً في ذلك». <b>لَعِبْرَةً</b>: اسمُ إنَّ مؤخَّرٌ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه، ودخلت عليه اللامُ المزحلقةُ (انظر التنبيهَ التاليَ).</div>
+  </div>
+  <div class="box note"><span class="tag">تنبيهٌ — اللامُ المزحلقةُ</span><p style="margin:0">اللامُ في «لَعِبْرَةً» أصلُها <b>لامُ التوكيدِ</b>، وكانت تُسمّى بـ<b>لامِ الابتداءِ</b> — «لعبرةٌ في ذلك» — لكن لما دخلت «إنَّ» على الجملةِ — و«إنَّ» أيضًا تفيدُ التوكيدَ — <b>زُحلقتْ</b> هذه اللامُ حتى لا يجتمعَ مؤكِّدانِ؛ لأنَّ منطقَ العربيّةِ يقولُ إنه لا يجتمعُ مثلانِ، ولا تجتمعُ أداتانِ لمعنًى واحدٍ؛ فلذلك أُخِّرتْ أو زُحلقتْ، وسُمِّيتْ <b>باللامِ المزحلقةِ</b>. وهي حرفٌ يفيدُ التوكيدَ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، وإذا دخلت في الركنِ الثاني في آخرِ الجملةِ — أي بعدَ «إنَّ» — أفادت <b>زيادةَ توكيدٍ</b>؛ لأنَّ «إنَّ» تفيدُ التوكيدَ، وتدخلُ اللامُ المزحلقةُ لتُفيدَ زيادةَ التوكيدِ. وهي تدخلُ على الركنِ الأخيرِ — الخبرِ المؤخَّرِ في الغالبِ — نحوُ: «إنَّ محمدًا <b>لـ</b>مجتهدٌ»، وهي في كلِّ أحوالِها حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ.</p></div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿إنَّا أَعْطَيْناكَ الْكَوْثَرَ﴾</span> [الكوثر: ١] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«إنَّا» مكوَّنةٌ من كلمتينِ: «إنَّ» مع «نا» الضميرِ. <b>إنَّ</b> حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>نا</b> ضميرٌ متصلٌ بها مبنيٌّ على السكونِ في محلِّ نصبٍ اسمُ إنَّ. و<b>أعطيناكَ</b>: «أعطى» فعلٌ ماضٍ مبنيٌّ على السكونِ أو على الفتحِ المقدَّرِ لاتصالِه بضميرِ رفعٍ متحرِّكٍ هو «نا» الفاعلينَ، و<b>نا</b> ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ، و<b>الكافُ</b> ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ نصبٍ <b>مفعولٌ به أولُ</b>؛ لأنَّ الفعلَ «أعطى» ينصبُ مفعولينِ كما سيأتي إن شاء اللهُ. و<b>الكوثرَ</b> هو <b>المفعولُ به الثاني</b> للفعلِ «أعطى» منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. وجملةُ «أعطيناكَ الكوثرَ» جملةٌ في محلِّ رفعٍ خبرُ إنَّ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿لا جَرَمَ أَنَّ لَهُمُ النَّارَ﴾</span> [النحل: ٦٢] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>إنَّ</b> حرفُ توكيدٍ ونصبٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ. <b>لهم</b>: اللامُ حرفُ جرٍّ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و«هم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ اسمٌ مجرورٌ باللامِ، وشبهُ الجملةِ من الجارِّ والمجرورِ <b>خبرُ إنَّ مقدَّمٌ</b> في محلِّ رفعٍ. <b>النارَ</b> اسمُ إنَّ مؤخَّرٌ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَلا تَخافُونَ أَنَّكُمْ أَشْرَكْتُمْ بِاللهِ﴾</span> [الأنعام: ٨١] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«لا تخافون»: <b>لا</b> نافيةٌ، حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>تخافونَ</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ لأنه من الأمثلةِ الخمسةِ (الأفعالِ الخمسةِ)، والواوُ فيه واوُ الجماعةِ: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ. ثم «إنَّكم أشركتم بالله»: <b>إنَّ</b> حرفُ توكيدٍ ونصبٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>كم</b> ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ اسمُ إنَّ. و<b>أشركتم</b>: فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ لاتصالِه بتاءِ الفاعلِ، أو مبنيٌّ على السكونِ لاتصالِه بتاءِ الفاعلِ، و<b>تاءُ الفاعلِ</b> ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ. و<b>باللهِ</b>: الباءُ حرفُ جرٍّ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ، و«اللهُ» لفظُ الجلالةِ اسمٌ مجرورٌ بالباءِ وعلامةُ جرِّه الكسرةُ الظاهرةُ على آخرِه. وجملةُ «أشركتم باللهِ» في محلِّ رفعٍ خبرُ إنَّ. وجملةُ «إنَّكم أشركتم باللهِ» كلُّها في محلِّ نصبٍ <b>مفعولٌ به</b> للفعلِ «تخافونَ».</div>
+  </div>
+
+  <h3 id="s4d">جدولُ التطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>التركيبُ</th><th>الناسخُ ومعناه</th><th>اسمُه</th><th>خبرُه</th></tr></thead>
+      <tbody>
+        <tr><td>﴿كأنَّها كوكبٌ درِّيٌّ﴾</td><td>كأنَّ — التشبيهُ</td><td>الضميرُ «ها»</td><td>كوكبٌ درِّيٌّ (والجملةُ خبرُ «الزجاجةُ»)</td></tr>
+        <tr><td>﴿ولكنَّ الشياطينَ كفروا﴾</td><td>لكنَّ — الاستدراكُ</td><td>الشياطينَ</td><td>جملةُ «كفروا»</td></tr>
+        <tr><td>«ليتَ الشبابَ يعودُ يومًا»</td><td>ليتَ — التمنّي</td><td>الشبابَ</td><td>جملةُ «يعودُ يومًا»</td></tr>
+        <tr><td>«لعلَّ الخيرَ قريبٌ»</td><td>لعلَّ — الترجّي</td><td>الخيرَ</td><td>قريبٌ</td></tr>
+        <tr><td>﴿لعلَّ اللهَ يُحدِثُ بعدَ ذلك أمرًا﴾</td><td>لعلَّ — الترجّي</td><td>لفظُ الجلالةِ</td><td>جملةُ «يُحدِثُ…»</td></tr>
+        <tr><td>﴿لعلَّكَ باخعٌ نفسَك﴾</td><td>لعلَّ — التوقّعُ</td><td>الكافُ</td><td>باخعٌ</td></tr>
+        <tr><td>﴿لعلَّكم تتَّقونَ﴾</td><td>لعلَّ — الترجّي</td><td>كم</td><td>جملةُ «تتَّقونَ»</td></tr>
+        <tr><td>﴿إنَّ لدينا أنكالًا وجحيمًا﴾</td><td>إنَّ — التوكيدُ</td><td>أنكالًا (مؤخَّرٌ)</td><td>لدينا (مقدَّمٌ)</td></tr>
+        <tr><td>﴿إنَّ في ذلك لعبرةً﴾</td><td>إنَّ — التوكيدُ</td><td>عبرةً (مؤخَّرٌ، بلامٍ مزحلقةٍ)</td><td>في ذلك (مقدَّمٌ)</td></tr>
+        <tr><td>﴿إنَّا أعطيناكَ الكوثرَ﴾</td><td>إنَّ — التوكيدُ</td><td>نا</td><td>جملةُ «أعطيناكَ الكوثرَ»</td></tr>
+        <tr><td>﴿لا جرمَ أنَّ لهم النارَ﴾</td><td>أنَّ — التوكيدُ</td><td>النارَ (مؤخَّرٌ)</td><td>لهم (مقدَّمٌ)</td></tr>
+        <tr><td>﴿ولا تخافونَ أنَّكم أشركتم﴾</td><td>أنَّ — التوكيدُ</td><td>كم</td><td>جملةُ «أشركتم» (وجملتُها مفعولُ «تخافونَ»)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥: الخلاصة ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>خلاصةُ الدرس</h2></div>
+
+  <ul class="summary-points">
+    <li>«إنَّ» وأخواتُها من <b>العواملِ الداخلةِ على المبتدأِ والخبرِ</b>، أو من النواسخِ التي تغيّرُ حكمَ المبتدأِ والخبرِ: <b>تنصبُ المبتدأَ فيصيرُ اسمَها، وترفعُ الخبرَ فيصيرُ خبرَها</b>.</li>
+    <li>لها أخواتٌ متعدّدةٌ: <b>إنَّ وأنَّ</b> وكلتاهما تفيدُ معنى <b>التوكيدِ</b> — تقويةَ نسبةِ الخبرِ إلى المبتدأِ — و«أنَّ» مفتوحةُ الهمزةِ لها مواضعُ مخصوصةٌ؛ و<b>لكنَّ</b> تفيدُ <b>الاستدراكَ</b>: تعقيبَ الكلامِ بنفيِ ما يُتوهَّمُ ثبوتُه أو إثباتِ ما يُتوهَّمُ نفيُه؛ و<b>كأنَّ</b> تفيدُ <b>التشبيهَ</b>: تشبيهَ المبتدأِ بالخبرِ؛ و<b>ليتَ</b> تفيدُ <b>التمنّي</b> وهو طلبُ المستحيلِ أو ما فيه عُسرٌ؛ و<b>لعلَّ</b> قد تكونُ <b>للترجّي</b> في الأمرِ المحبوبِ المتوقَّعِ الحدوثِ الذي يمكنُ حدوثُه، وقد تفيدُ <b>التوقّعَ</b> للأمرِ المكروهِ الذي يمكنُ أن يحدُثَ.</li>
+    <li>كلُّ هذه الحروفِ <b>مبنيةٌ على الفتحِ لا محلَّ لها من الإعرابِ</b>، وتعملُ عملًا واحدًا: نصبُ الاسمِ ورفعُ الخبرِ.</li>
+    <li>من لوازمِ البابِ: <b>نونُ الوقايةِ</b> تقي الفعلَ من الكسرِ عندَ اتصالِ ياءِ المتكلمِ، و<b>اللامُ المزحلقةُ</b> أصلُها لامُ التوكيدِ (لامُ الابتداءِ) زُحلقتْ كراهةَ اجتماعِ مؤكِّدَينِ مع «إنَّ»، فتدخلُ على الركنِ المؤخَّرِ وتفيدُ زيادةَ توكيدٍ.</li>
+  </ul>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الحرفُ</th><th>معناه</th><th>عملُه</th><th>مثالُه</th></tr></thead>
+      <tbody>
+        <tr><td>إنَّ / أنَّ</td><td>التوكيدُ</td><td>تنصبُ الاسمَ وترفعُ الخبرَ</td><td>إنَّ زيدًا قائمٌ</td></tr>
+        <tr><td>لكنَّ</td><td>الاستدراكُ</td><td>تنصبُ الاسمَ وترفعُ الخبرَ</td><td>لكنَّ صديقَه جبانٌ</td></tr>
+        <tr><td>كأنَّ</td><td>التشبيهُ</td><td>تنصبُ الاسمَ وترفعُ الخبرَ</td><td>كأنَّ زيدًا أسدٌ</td></tr>
+        <tr><td>ليتَ</td><td>التمنّي (المستحيلُ أو ما فيه عُسرٌ)</td><td>تنصبُ الاسمَ وترفعُ الخبرَ</td><td>ليتَ الشبابَ عائدٌ</td></tr>
+        <tr><td>لعلَّ</td><td>الترجّي (المحبوبُ) والتوقّعُ (المكروهُ)</td><td>تنصبُ الاسمَ وترفعُ الخبرَ</td><td>لعلَّ عمرًا ناجحٌ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box note"><span class="tag">تمَّ الدرسُ</span><p style="margin:0">بهذا انتهى الكلامُ تمامًا على «إنَّ» وأخواتِها — النوعِ الثاني من النواسخِ — والدرسُ القادمُ بإذنِ اللهِ عن <b>النوعِ الثالثِ من النواسخِ وهو «ظنَّ» وأخواتُها</b>.</p></div>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ ١٦ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=kNQE6oiKHLw" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

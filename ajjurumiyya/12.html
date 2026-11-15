@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بابُ الفاعل — الدرس ١٢ من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">بابُ الفاعلِ</h1>
+    <div class="cover-sub">الدرس ١٢: أوّلُ المرفوعاتِ وأصلُها — الصريحُ والمؤوَّلُ، والظاهرُ والمضمرُ، مع تطبيقاتٍ قرآنيةٍ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=sriHnSJBHww" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتنِ ونظمُ الشنقيطيِّ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s2a">نصُّ ابنِ آجرومَ</a></li>
+        <li><a href="#s2b">بيتا الناظمِ ومثالاهما</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٣</span><a href="#s3">الفاعلُ عمدةٌ لا يستغني عنه التركيبُ</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">شرحُ التعريفِ: الفاعلُ لا يكونُ إلا اسمًا</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">الاسمُ الصريحُ وأمثلةُ ابنِ آجرومَ</a></li>
+        <li><a href="#s4b">الاسمُ المؤوَّلُ بالصريحِ (المصدرُ المؤوَّلُ)</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">القسمةُ الثانيةُ: الفاعلُ الظاهرُ وشواهدُه</a><span class="dots"></span></li>
+    <li><span class="t-num">٦</span><a href="#s6">الفاعلُ المضمرُ: اثنا عشرَ ضميرًا</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s6a">تاءُ الفاعلِ بأشكالِها و«نا» الفاعلينَ</a></li>
+        <li><a href="#s6b">الضميرُ المستترُ وتاءُ التأنيثِ الساكنةُ</a></li>
+        <li><a href="#s6c">ألفُ الاثنينِ وواوُ الجماعةِ ونونُ النسوةِ</a></li>
+        <li><a href="#s6d">ياءُ المخاطبةِ: ما لم يذكرْه ابنُ آجرومَ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٧</span><a href="#s7">تطبيقاتٌ على بابِ الفاعلِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٨</span><a href="#s8">استخراجُ الفاعلِ من الآياتِ وإعرابُه</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s8a">الفاعلُ المؤخَّرُ عن المفعولِ</a></li>
+        <li><a href="#s8b">تأنيثُ الفعلِ معَ جمعِ التكسيرِ</a></li>
+        <li><a href="#s8c">جدولُ تلخيصِ التطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٩</span><a href="#s9">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١: افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+  <p>الحمدُ للهِ حمدًا كما ينبغي لجلالِه وكمالِه، والصلاةُ والسلامُ على النبيِّ المصطفى وعلى آلِه وبعدُ: فحيَّاكم اللهُ أيها الكرامُ وأيتها الكريماتُ، ومعَ <b>درسٍ مهمٍّ من دروسِ العربيةِ</b>، وهو <b>درسُ الفاعلِ</b>: أوّلُ أبوابِ المرفوعاتِ، وأصلُ المرفوعاتِ.</p>
+  <p>ومنهجُنا فيه — كما جرَتْ عادةُ السلسلةِ —: نسوقُ أولًا ما قالَهُ <b>ابنُ آجرومٍ</b> رحمهُ اللهُ في متنِهِ، ثم ما قالَهُ <b>الناظمُ الشنقيطيُّ</b> في نظمِهِ، ثم نشرحُ ونطبِّقُ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢: المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتنِ ونظمُ الشنقيطيِّ</h2></div>
+
+  <h3 id="s2a">نصُّ ابنِ آجرومَ</h3>
+  <p>قالَ ابنُ آجرومٍ رحمهُ اللهُ:</p>
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«بابُ الفاعلِ: الفاعلُ هو الاسمُ المرفوعُ المذكورُ قبلَهُ فعلُهُ، وهو على قسمينِ: ظاهرٍ ومضمرٍ.<br>
+    فالظاهرُ نحوُ قولِكَ: قامَ زيدٌ، ويقومُ زيدٌ، وقامَ الزيدانِ، ويقومُ الزيدانِ، وقامَ الزيدونَ، ويقومُ الزيدونَ، وقامَ الرجالُ، ويقومُ الرجالُ، وقامتْ هندٌ، وتقومُ هندٌ، وقامتِ الهندانِ، وتقومُ الهندانِ، وقامتِ الهنداتُ، وتقومُ الهنداتُ، وقامتِ الهنودُ، وتقومُ الهنودُ، وقامَ أخوكَ، ويقومُ أخوكَ، وقامَ غلامي، ويقومُ غلامي، وما أشبهَ ذلكَ.<br>
+    والمضمرُ اثنا عشرَ، نحوُ قولِكَ: ضربْتُ، وضربْنا، وضربْتَ، وضربْتِ، وضربْتُما، وضربْتُمْ، وضربْتُنَّ، وضربَ، وضربَتْ، وضربا، وضربوا، وضربْنَ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+  <div class="box note"><span class="tag">تنبيهٌ على قراءةِ الشيخِ</span><p style="margin:0">اقتصرَ الشيخُ في قراءةِ أمثلةِ الظاهرِ وشرحِها على أزواجِ: <b>زيدٍ، والزيدانِ، والزيدونَ، وأخيكَ</b>؛ وأُثبتتْ بقيةُ أمثلةِ المتنِ (الرجالُ، وهندٌ، والهندانِ، والهنداتُ، والهنودُ، وغلامي) من نصِّ المتنِ المعتمدِ؛ وهي جاريةٌ على القواعدِ نفسِها التي قرَّرَها الشيخُ في هذا الدرسِ — وستأتي في الشرحِ تتمّتُها.</p></div>
+
+  <h3 id="s2b">بيتا الناظمِ ومثالاهما</h3>
+  <p>وقالَ الشنقيطيُّ في نظمِهِ — بابُ الفاعلِ —:</p>
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">الفاعلَ ارفعْ وهْوَ ما قدْ أُسْنِدا … إليهِ فِعْلٌ قبلَهُ قدْ وُجِدا</div>
+      <div class="ln">وظاهرًا يأتي ويأتي مُضْمَرا … كاصطادَ زيدٌ واشتريْتُ أَعْفَرا</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <p>فالبيتُ الأوّلُ تعريفُ الفاعلِ وحكمُهُ: هو ما <b>أُسنِدَ إليه فعلٌ وُجِدَ قبلَهُ</b>، وحكمُهُ <b>الرفعُ</b>. والبيتُ الثاني قسمتُهُ إلى <b>ظاهرٍ ومضمرٍ</b> بمثالينِ:</p>
+  <div class="cards">
+    <div class="node green"><div class="n-title">«اصطادَ زيدٌ»</div><div class="n-sub">مثالُ <b>الظاهرِ</b>: «زيدٌ» فاعلٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</div></div>
+    <div class="node blue"><div class="n-title">«اشتريْتُ أعفرا»</div><div class="n-sub">مثالُ <b>المضمرِ</b>: التاءُ تاءُ الفاعلِ، وهي هنا ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ</div></div>
+  </div>
+  <div class="box note" style="margin-top:16px"><span class="tag">شرحُ مفردةٍ</span><p style="margin:0">«أعفرا»: أي ظبيًا أعفرَ، وهو الظبيُ الذي يعلو بياضَهُ حُمرةٌ، والألفُ في آخرِهِ للإطلاقِ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣: الفاعل عمدة ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>الفاعلُ عمدةٌ لا يستغني عنه التركيبُ</h2></div>
+  <p>هذا البابُ — كما قدَّمَ الشيخُ — <b>من أهمِّ أنواعِ العُمَدِ في العربيةِ</b>؛ فوجودُ الفاعلِ في التركيبِ الفعليِّ لا بدَّ منه، لأنه يأتي بعدَ الفعلِ، وكلُّ فعلٍ لا بدَّ أن يشتملَ على فاعلٍ. والعلةُ في ذلك:</p>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">الفعلُ حَدَثٌ</span><span class="fa">←</span>
+      <span class="chip blue">وكلُّ حدثٍ لا بدَّ له من مُحْدِثٍ</span><span class="fa">←</span>
+      <span class="chip">الفاعلُ: مُحدِثُ الحدثِ أو الذي قامَ به</span><span class="fa">←</span>
+      <span class="chip gold">فلا بدَّ من ذكرِهِ في التركيبِ</span>
+      <div class="lane-note">فإذا حُذفَ الفاعلُ فلا بدَّ أن ينوبَ عنه شيءٌ يقومُ مقامَهُ — وهو «نائبُ الفاعلِ» الآتي في الدرسِ اللاحقِ بإذنِ اللهِ تعالى —، وإذا لم يوجدْ في اللفظِ قُدِّرَ ضميرًا مستترًا كما سيأتي.</div>
+    </div>
+    <div class="dcap">شكل (١): لماذا كانَ الفاعلُ عمدةً لا يستغني عنه التركيبُ الفعليُّ</div>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤: شرح التعريف ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>شرحُ التعريفِ: الفاعلُ لا يكونُ إلا اسمًا</h2></div>
+  <p>عرَّفَهُ ابنُ آجرومٍ فقالَ: <span class="mark">«هو الاسمُ المرفوعُ المذكورُ قبلَهُ فعلُهُ»</span>. فإن أردنا أن نشرحَ التعريفَ: فكلمةُ <b>«الاسمُ»</b> تعني أنَّ الفاعلَ <b>لا يكونُ إلا اسمًا</b>، وهذا الاسمُ قد يكونُ <b>صريحًا</b>، وقد يكونُ <b>مؤوَّلًا بالصريحِ</b>.</p>
+
+  <figure class="diagram">
+    <div class="tree-root">الفاعلُ لا يكونُ إلا اسمًا</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node green"><div class="n-title">اسمٌ صريحٌ</div><div class="n-sub">لفظٌ اسميٌّ ظاهرٌ يقعُ بعدَ فعلِهِ<br><b>﴿وإذْ يرفعُ إبراهيمُ القواعدَ﴾</b><br>«قامَ زيدٌ» — «قامَ أخوكَ»</div></div>
+      <div class="node blue"><div class="n-title">مؤوَّلٌ بالصريحِ</div><div class="n-sub">حرفٌ مصدريٌّ وما بعدَهُ يُسبكُ منهما مصدرٌ<br><b>﴿أَوَلَمْ يكفِهِم أنّا أنزلْنا﴾</b> = إنزالُنا<br><b>﴿أنْ تخشعَ قلوبُهم﴾</b> = خشوعُ قلوبِهم</div></div>
+    </div>
+    <figcaption>شكل (٢): قسمةُ الفاعلِ من حيثُ الصراحةُ والتأويلُ</figcaption>
+  </figure>
+
+  <h3 id="s4a">الاسمُ الصريحُ وأمثلةُ ابنِ آجرومَ</h3>
+  <p>مثالُ الاسمِ الصريحِ قولُ اللهِ تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَإِذْ يَرْفَعُ إِبْرَاهِيمُ الْقَوَاعِدَ مِنَ الْبَيْتِ وَإِسْمَاعِيلُ﴾<span class="ref">سورةُ البقرةِ: ١٢٧</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أينَ الاسمُ الصريحُ الواقعُ فاعلًا في الآيةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الاسمُ الصريحُ هنا كلمةُ <b>«إبراهيمُ»</b>؛ فهي <b>الفاعلُ للفعلِ «يرفعُ»، مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>، وقد أتى الفعلُ قبلَهُ، أي ذُكِرَ الفعلُ قبلَهُ — وهذا معنى قولِ ابنِ آجرومٍ: «المذكورُ قبلَهُ فعلُهُ».</div>
+  </div>
+
+  <p>وكلُّ الأمثلةِ التي ذكرَها ابنُ آجرومٍ أمثلةً على الظاهرِ هي أمثلةٌ <b>للاسمِ الصريحِ</b>، وقد شرحَ الشيخُ منها ما يلي:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>المثالُ</th><th>الفعلُ</th><th>الفاعلُ</th><th>علامةُ رفعِهِ وسببُها</th></tr></thead>
+      <tbody>
+        <tr><td>قامَ زيدٌ / يقومُ زيدٌ</td><td>«قامَ» فعلٌ ماضٍ مبنيٌّ على الفتحِ، و«يقومُ» فعلٌ مضارعٌ مرفوعٌ</td><td>زيدٌ</td><td>الضمةُ الظاهرةُ — اسمٌ مفردٌ</td></tr>
+        <tr><td>قامَ الزيدانِ / يقومُ الزيدانِ</td><td>قامَ / يقومُ</td><td>الزيدانِ</td><td>الألفُ — لأنَّ الكلمةَ أتتْ مثنّاةً</td></tr>
+        <tr><td>قامَ الزيدونَ / يقومُ الزيدونَ</td><td>قامَ / يقومُ</td><td>الزيدونَ</td><td>الواوُ — لأنه جمعُ مذكرٍ سالمٌ</td></tr>
+        <tr><td>قامَ أخوكَ / يقومُ أخوكَ</td><td>قامَ / يقومُ</td><td>أخو</td><td>الواوُ — لأنها من الأسماءِ الخمسةِ، والكافُ في محلِّ جرٍّ مضافٍ إليهِ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note"><span class="tag">تتمّةٌ على بقيةِ أمثلةِ المتنِ</span><p style="margin:0">وعلى القواعدِ نفسِها تجري بقيةُ أمثلةِ ابنِ آجرومٍ: «قامَ الرجالُ» جمعُ تكسيرٍ مرفوعٌ بالضمةِ الظاهرةِ — إذ جمعُ التكسيرِ يُعاملُ معاملةَ المفردِ في الإعرابِ كما سيأتي في شاهدِ ﴿وقالَ نسوةٌ﴾ —، و«قامتْ هندٌ» مفردٌ مؤنثٌ بالضمةِ الظاهرةِ ولحقتِ الفعلَ تاءُ التأنيثِ، و«قامتِ الهندانِ» مثنًّى بالألفِ، و«قامتِ الهنداتُ» جمعُ مؤنثٍ سالمٌ بالضمةِ الظاهرةِ، و«قامتِ الهنودُ» جمعُ تكسيرٍ بالضمةِ الظاهرةِ، و«قامَ غلامي» بالضمةِ المقدَّرةِ لمناسبةِ ياءِ المتكلمِ — كما في تطبيقِ «جاءَ أبي» الآتي.</p></div>
+  <p>هذا كلُّهُ فاعلٌ <b>اسمٌ صريحٌ</b>.</p>
+
+  <h3 id="s4b">الاسمُ المؤوَّلُ بالصريحِ (المصدرُ المؤوَّلُ)</h3>
+  <p>وقد يكونُ الفاعلُ <b>مؤوَّلًا بالصريحِ</b>، كما في قولِ اللهِ تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿أَوَلَمْ يَكْفِهِمْ أَنَّا أَنْزَلْنَا عَلَيْكَ الْكِتَابَ يُتْلَى عَلَيْهِمْ﴾<span class="ref">سورةُ العنكبوتِ: ٥١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أينَ الفاعلُ في ﴿أَوَلَمْ يَكْفِهِمْ أَنَّا أَنْزَلْنَا﴾ [العنكبوتِ: ٥١]؟ وكيف يُعربُ المصدرُ المؤوَّلُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>التقديرُ: <span class="mark">«أَوَلَمْ يكفِهِم إنزالُنا»</span>؛ فـ«أنّا أنزلْنا» تُؤوَّلُ إلى مصدرٍ صريحٍ يكونُ هو الفاعلَ. وتفصيلُ إعرابِها:<br>
+    • «أنّا» مكوَّنةٌ من «أنَّ» واسمِها: <b>«أنَّ»</b> حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، واتصلَ بها الضميرُ <b>«نا»</b> وهو اسمُها: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ اسمُ «أنَّ».<br>
+    • <b>«أنزلْ»</b> فعلٌ ماضٍ مبنيٌّ على السكونِ، أو مبنيٌّ على الفتحِ المقدَّرِ لعُروضِ السكونِ حتى لا يتواليَ أربعُ متحركاتٍ، و<b>«نا»</b> في «أنزلْنا» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ.<br>
+    • وجملةُ «أنزلْنا» <b>في محلِّ رفعٍ خبرُ «أنَّ»</b>.<br>
+    • و<b>«أنَّ» وما دخلتْ عليه من اسمِها وخبرِها في تأويلِ مصدرٍ هو الفاعلُ للفعلِ «يكفي»، مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ للحكايةِ</b> — هكذا نقولُ في إعرابِ المصدرِ المؤوَّلِ.<br>
+    • و<b>«لمْ»</b> حرفُ جزمٍ ونفيٍ وقلبٍ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>«يكفِ»</b> أصلُهُ «يكفي»، ولكن لما جُزمَ الفعلُ وكان معتلَّ الآخرِ حُذفَ حرفُ العلةِ لأنه علامةُ الجزمِ؛ فهو فعلٌ مضارعٌ مجزومٌ بـ«لمْ» وعلامةُ جزمِهِ حذفُ حرفِ العلةِ، والضميرُ <b>«هم»</b> في «يكفِهِم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ مفعولٌ بهِ.<br>
+    فأينَ الفاعلُ إذن؟ «أَوَلَمْ يكفِهِم <b>إنزالُنا</b>».</div>
+  </div>
+
+  <p>وأيضًا في قولِهِ تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَنْ تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ﴾<span class="ref">سورةُ الحديدِ: ١٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أينَ الفاعلُ في ﴿أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَنْ تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ﴾ [الحديدِ: ١٦]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«أنْ تخشعَ» هنا هي الفاعلُ، ولكنه <b>ليس اسمًا صريحًا</b> وإنما هو <b>مصدرٌ مؤوَّلٌ</b>، أو اسمٌ مؤوَّلٌ بالصريحِ؛ والمعنى والتقديرُ: <span class="mark">«ألمْ يأنِ للذينَ آمنوا خشوعُ قلوبِهم لذكرِ اللهِ»</span>. وإعرابُها:<br>
+    • <b>«أنْ»</b> حرفٌ مصدريٌّ ناصبٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ.<br>
+    • <b>«تخشعَ»</b> فعلٌ مضارعٌ منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ.<br>
+    • <b>«قلوبُهم»</b>: «قلوبُ» هي الفاعلُ (لـ«تخشعَ») مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«هم» فيها ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ.<br>
+    • و<b>«أنْ» وما دخلتْ عليه («أنْ تخشعَ قلوبُهم») في تأويلِ مصدرٍ فاعلٌ للفعلِ «يأنِ»، مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ للحكايةِ</b>.</div>
+  </div>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">أنْ تخشعَ قلوبُهم</span><span class="fa">←</span>
+      <span class="chip blue">خشوعُ قلوبِهم</span><span class="fa">←</span>
+      <span class="chip">فاعلُ «يأنِ»</span>
+      <div class="lane-note">الحرفُ المصدريُّ («أنْ» أو «أنَّ») وما بعدَهُ يُسبكانِ مصدرًا صريحًا يقعُ موقعَ الفاعلِ، ويُقالُ فيه: «في تأويلِ مصدرٍ فاعلٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ للحكايةِ».</div>
+    </div>
+    <div class="flow-lane">
+      <span class="chip plain">أنّا أنزلْنا</span><span class="fa">←</span>
+      <span class="chip blue">إنزالُنا</span><span class="fa">←</span>
+      <span class="chip">فاعلُ «يكفِ»</span>
+    </div>
+    <div class="dcap">شكل (٣): سبكُ المصدرِ المؤوَّلِ الواقعِ فاعلًا</div>
+  </figure>
+  <p>إذن: الفاعلُ اسمٌ، ولكن قد يكونُ <b>اسمًا صريحًا</b>، أو <b>مؤوَّلًا بالصريحِ</b>، على ما ذكرْنا.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥: الظاهر ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>القسمةُ الثانيةُ: الفاعلُ الظاهرُ وشواهدُه</h2></div>
+  <p>قسَّمَ ابنُ آجرومٍ الفاعلَ قسمةً أخرى فقالَ: <span class="mark">«الفاعلُ على قسمينِ: ظاهرٍ ومضمرٍ»</span>، وذكرَ الظاهرَ الذي فصَّلْنا القولَ فيه. ومن الفاعلِ الظاهرِ أيضًا في كتابِ اللهِ:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿يَوْمَ يَقُومُ النَّاسُ لِرَبِّ الْعَالَمِينَ﴾<span class="ref">سورةُ المطففينَ: ٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ الفاعلُ في ﴿يَوْمَ يَقُومُ النَّاسُ لِرَبِّ الْعَالَمِينَ﴾ [المطففينَ: ٦]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ <b>«الناسُ»</b> بعدَ الفعلِ المضارعِ «يقومُ»؛ فـ<b>«الناسُ» فاعلٌ للفعلِ «يقومُ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَقَالَ نِسْوَةٌ فِي الْمَدِينَةِ امْرَأَتُ الْعَزِيزِ تُرَاوِدُ فَتَاهَا عَنْ نَفْسِهِ﴾<span class="ref">سورةُ يوسفَ: ٣٠</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ الفاعلُ ها هنا في ﴿وَقَالَ نِسْوَةٌ فِي الْمَدِينَةِ﴾ [يوسفَ: ٣٠]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ <b>«نسوةٌ»</b>: فهي <b>فاعلٌ للفعلِ «قالَ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>. و«نسوةٌ» <b>جمعُ تكسيرٍ</b>، وجمعُ التكسيرِ يُعاملُ <b>معاملةَ المفردِ في الإعرابِ</b>: أي يُعربُ وتكونُ علاماتُ الإعرابِ فيه هي <b>الأصليةَ</b>؛ فحين يكونُ مرفوعًا — كمثلِ ما هنا — تكونُ علامةُ رفعِهِ الضمةَ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَيَوْمَئِذٍ يَفْرَحُ الْمُؤْمِنُونَ ۝ بِنَصْرِ اللَّهِ﴾<span class="ref">سورةُ الرومِ: ٤–٥</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ الفاعلُ هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ <b>«المؤمنونَ»</b> — هم الذين يفرحونَ —؛ فهو <b>فاعلٌ مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه جمعُ مذكرٍ سالمٌ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَمَّا فَصَلَتِ الْعِيرُ قَالَ أَبُوهُمْ إِنِّي لَأَجِدُ رِيحَ يُوسُفَ﴾<span class="ref">سورةُ يوسفَ: ٩٤</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ الفاعلُ في ﴿قَالَ أَبُوهُمْ﴾؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ <b>«أبوهم»</b> — هو الذي قالَ —؛ فـ<b>«أبو» فاعلٌ مرفوعٌ وعلامةُ رفعِهِ هنا الواوُ لأنه من الأسماءِ الخمسةِ</b>، والضميرُ «هم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالَ رَجُلَانِ مِنَ الَّذِينَ يَخَافُونَ أَنْعَمَ اللَّهُ عَلَيْهِمَا﴾<span class="ref">سورةُ المائدةِ: ٢٣</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في هذه الآيةِ عددٌ من الكلماتِ المرفوعةِ على أنها فاعلٌ؛ فما هي؟ وما الفرقُ بينها في علامةِ الإعرابِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندَنا كلمةُ <b>«رجلانِ»</b>، وعندَنا لفظُ الجلالةِ <b>«اللهُ»</b> في ﴿أنعمَ اللهُ عليهما﴾، وعندَنا من المضمراتِ — وستأتي — <b>واوُ الجماعةِ</b> في «يخافونَ» وهي الفاعلُ. والذي يعنينا هنا في الكلامِ على القسمِ الظاهرِ: «رجلانِ» هي الفاعلُ لـ«قالَ»، و«اللهُ» لفظُ الجلالةِ هو الفاعلُ أيضًا بعدَ «أنعمَ». <b>كلاهما مرفوعٌ طبعًا، لكنَّ علامةَ الإعرابِ مختلفةٌ بينهما</b>: علامةُ الإعرابِ في «رجلانِ» هي <b>الألفُ لأنه مثنًّى</b>، وعلامةُ الإعرابِ في لفظِ الجلالةِ «اللهُ» هي <b>الضمةُ</b> — أي العلامةُ الأصليةُ — <b>لأنه اسمٌ مفردٌ</b> كما هو واضحٌ.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦: المضمر ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>الفاعلُ المضمرُ: اثنا عشرَ ضميرًا</h2></div>
+  <p>أما <b>المضمرُ</b> — أي الذي يكونُ الفاعلُ فيه ضميرًا — فذكرَ ابنُ آجرومٍ أنه <b>اثنا عشرَ نمطًا</b>، أي شكلًا من أشكالِ الضميرِ، مثَّلَ لها كلِّها بالفعلِ «ضربَ»:</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">ضربْتُ</div><div class="n-sub">تاءُ المتكلمِ المفردِ<br>مبنيٌّ على <b>الضمِّ</b></div></div>
+      <div class="node green"><div class="n-title">ضربْنا</div><div class="n-sub">«نا» الفاعلينَ (المتكلمونَ)<br>مبنيٌّ على <b>السكونِ</b></div></div>
+      <div class="node green"><div class="n-title">ضربْتَ</div><div class="n-sub">تاءُ المخاطبِ المفردِ المذكرِ<br>مبنيٌّ على <b>الفتحِ</b></div></div>
+      <div class="node green"><div class="n-title">ضربْتِ</div><div class="n-sub">تاءُ المخاطبةِ المفردةِ المؤنثةِ<br>مبنيٌّ على <b>الكسرِ</b></div></div>
+      <div class="node blue"><div class="n-title">ضربْتُما</div><div class="n-sub">تاءُ المثنى المخاطبِ (مذكرًا ومؤنثًا)<br>«تما» على <b>السكونِ</b>، أو التاءُ على الضمِّ و«ما» حرفٌ</div></div>
+      <div class="node blue"><div class="n-title">ضربْتُمْ</div><div class="n-sub">تاءُ جمعِ الذكورِ المخاطبينَ<br>«تم» على <b>السكونِ</b>، أو التاءُ على الضمِّ والميمُ حرفٌ</div></div>
+      <div class="node blue"><div class="n-title">ضربْتُنَّ</div><div class="n-sub">تاءُ جمعِ الإناثِ المخاطباتِ<br>«تنَّ» على <b>الفتحِ</b>، أو التاءُ على الضمِّ والنونُ حرفٌ</div></div>
+      <div class="node maroon"><div class="n-title">ضربَ</div><div class="n-sub">ضميرٌ <b>مستترٌ</b><br>تقديرُهُ «هو»</div></div>
+      <div class="node maroon"><div class="n-title">ضربَتْ</div><div class="n-sub">ضميرٌ <b>مستترٌ</b> تقديرُهُ «هي»<br>والتاءُ حرفُ تأنيثٍ ساكنٌ</div></div>
+      <div class="node goldb"><div class="n-title">ضربا</div><div class="n-sub">ألفُ الاثنينِ<br>مبنيٌّ على <b>السكونِ</b></div></div>
+      <div class="node goldb"><div class="n-title">ضربوا</div><div class="n-sub">واوُ الجماعةِ<br>مبنيٌّ على <b>السكونِ</b></div></div>
+      <div class="node goldb"><div class="n-title">ضربْنَ</div><div class="n-sub">نونُ النسوةِ<br>مبنيٌّ على <b>الفتحِ</b></div></div>
+    </div>
+    <div class="dcap">شكل (٤): الضمائرُ الاثنا عشرَ الواقعةُ فاعلًا عند ابنِ آجرومٍ — وكلُّها في محلِّ رفعٍ فاعلٌ</div>
+  </figure>
+
+  <h3 id="s6a">تاءُ الفاعلِ بأشكالِها و«نا» الفاعلينَ</h3>
+  <p>أولًا: <b>تاءُ الفاعلِ</b> بأشكالِها المتعددةِ:</p>
+  <div class="box example"><span class="tag">١ — ضربْتُ</span><p style="margin:0">تاءُ الفاعلِ <b>للمتكلمِ</b>: أقولُ «ضربْتُ» — أي ضربتُ أنا —: تاءُ الفاعلِ للمتكلمِ المفردِ، والتاءُ فيه <b>ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ</b>.</p></div>
+  <div class="box example"><span class="tag">٢ — ضربْنا</span><p style="margin:0">وعندَنا أيضًا <b>«نا» الفاعلينَ</b> — «نا» التي تدلُّ على الفاعلينَ — مثلُ «ضربْنا». كيف نُعربُ «ضربْنا»؟ «ضربْنا» فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ، أو على السكونِ مباشرةً، و<b>«نا» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>. وهذا هو الشكلُ الثاني من أشكالِ المضمراتِ التي تقعُ فاعلًا.</p></div>
+  <div class="box example"><span class="tag">٣ — ضربْتَ</span><p style="margin:0">وعندَنا «ضربْتَ»، وهو شكلٌ من أشكالِ تاءِ الفاعلِ للمخاطبِ: التاءُ هنا دالّةٌ على <b>المخاطبِ المفردِ المذكرِ</b>، ومن ثَمَّ فهي <b>ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ رفعٍ فاعلٌ</b>.</p></div>
+  <div class="box example"><span class="tag">٤ — ضربْتِ</span><p style="margin:0">ثم «ضربْتِ»: هذا ضميرُ تاءِ الفاعلِ <b>للمفردةِ المخاطبةِ المؤنثةِ</b>. كيف يُعربُ؟ التاءُ هنا تاءُ الفاعلِ: <b>ضميرٌ متصلٌ مبنيٌّ على الكسرِ في محلِّ رفعٍ فاعلٌ</b>.</p></div>
+  <div class="box example"><span class="tag">٥ — ضربْتُما</span><p style="margin:0">ثم «ضربْتُما»: هذا الفعلُ اتصلَ به ضميرُ رفعٍ — تاءُ الفاعلِ —، لكنه دالٌّ على <b>المثنى</b>. كيف نُعربُ التاءَ؟ لنا طريقانِ:<br>
+  • <b>إجمالًا</b>: «تُما» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ؛ أي نُعربُها كاملةً كلَّها.<br>
+  • <b>تفصيلًا</b> — إن أردتَ التفصيلَ في الإعرابِ ففرَّقتَ بينَ التاءِ وحدَها و«ما» التي بعدَها الدالّةِ على التثنيةِ —: التاءُ تاءُ الفاعلِ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ، و«ما» حرفٌ يدلُّ على معنى التثنيةِ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ.</p></div>
+  <div class="box example"><span class="tag">٦ — ضربْتُمْ</span><p style="margin:0">كذلك عندَنا «ضربْتُمْ»: تاءُ الفاعلِ هنا للدلالةِ على <b>الجمعِ المذكرِ المخاطبِ</b>:<br>
+  • <b>تفصيلًا</b>: التاءُ هي تاءُ الفاعلِ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ، والميمُ بعدَها علامةٌ على الجمعِ: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ.<br>
+  • <b>إجمالًا</b>: «تُمْ» كاملةً ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ.</p></div>
+  <div class="box example"><span class="tag">٧ — ضربْتُنَّ</span><p style="margin:0">وعندَنا أيضًا «ضربْتُنَّ»، وهو الشكلُ الأخيرُ لتاءِ الفاعلِ، وهو الدالُّ على <b>جماعةِ الإناثِ</b>:<br>
+  • <b>تفصيلًا</b>: تاءُ الفاعلِ هنا ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ، والنونُ المشدَّدةُ بعدَها حرفٌ دالٌّ على معنى الجمعِ المؤنثِ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ.<br>
+  • <b>إجمالًا</b>: «تُنَّ» ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ رفعٍ فاعلٌ.</p></div>
+
+  <h3 id="s6b">الضميرُ المستترُ وتاءُ التأنيثِ الساكنةُ</h3>
+  <div class="box example"><span class="tag">٨ — ضربَ</span><p style="margin:0">ثم ذكرَ ابنُ آجرومٍ «ضربَ»: و«ضربَ» هنا سيكونُ فاعلُهُ <b>ضميرًا مستترًا</b> ليس ظاهرًا؛ هو صحيحٌ ضميرٌ، ولكنه ليس ضميرًا ظاهرًا، وإنما هو ضميرٌ مستترٌ: فإن قلتَ «ضربَ» ففاعلُهُ <b>ضميرٌ مستترٌ تقديرُهُ «هو»</b>.</p></div>
+  <div class="box example"><span class="tag">٩ — ضربَتْ</span><p style="margin:0">و«ضربَتْ» أيضًا فاعلُها <b>ضميرٌ مستترٌ تقديرُهُ «هي»</b>؛ لوجودِ <b>تاءِ التأنيثِ الساكنةِ</b> الموجودةِ في الفعلِ «ضربَتْ».</p></div>
+  <div class="box note"><span class="tag">تذكيرٌ — تاءُ التأنيثِ الساكنةُ</span><p style="margin:0">اتفقْنا على أنَّ هذه التاءَ التي تلحقُ هي <b>من علاماتِ الفعلِ الماضي</b>، لا تدخلُ إلا على الماضي فقط: تلحقُهُ، وتُرسمُ <b>مفتوحةً ساكنةً</b>، وتدلُّ على أنَّ الفاعلَ الذي سيأتي مؤنثٌ. فحين أقولُ «ضربَتْ» فلا بدَّ أن يكونَ الفاعلُ <b>مؤنثًا أو ما في حكمِ المؤنثِ</b>.</p></div>
+
+  <h3 id="s6c">ألفُ الاثنينِ وواوُ الجماعةِ ونونُ النسوةِ</h3>
+  <div class="box example"><span class="tag">١٠ — ضربا</span><p style="margin:0">ثم قالَ «ضربا»: هذا فعلٌ ماضٍ اتصلتْ به <b>ألفُ الاثنينِ</b>، وهي الضميرُ الفاعلُ هنا: «ضربَ» فعلٌ ماضٍ مبنيٌّ على الفتحِ، وبعدَهُ ألفُ الاثنينِ <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</p></div>
+  <div class="box example"><span class="tag">١١ — ضربوا</span><p style="margin:0">كذلك «ضربوا» للدلالةِ على الجمعِ: والواوُ هنا <b>واوُ الجماعةِ</b>، وهي <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</p></div>
+  <div class="box example"><span class="tag">١٢ — ضربْنَ</span><p style="margin:0">و«ضربْنَ»: هنا الفعلُ اتصلتْ به <b>نونُ النسوةِ</b>، ونونُ النسوةِ تجعلُ الفعلَ قبلَها <b>مبنيًّا على السكونِ</b>؛ فنقولُ: «ضربْنَ» فعلٌ مبنيٌّ على السكونِ، أو مبنيٌّ على الفتحِ المقدَّرِ لعُروضِ السكونِ كراهةَ توالي أربعِ متحركاتٍ، ونونُ النسوةِ هي <b>ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ رفعٍ فاعلٌ</b> — لأنَّ هذه كلَّها ضمائرُ رفعٍ.</p></div>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الفاعلُ المضمرُ (اثنا عشرَ)</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green"><div class="n-title">تاءُ الفاعلِ بأشكالِها + «نا»</div><div class="n-sub">المتكلمُ المفردُ (ضربْتُ)، والمتكلمونَ (ضربْنا)، والمخاطبُ (ضربْتَ)، والمخاطبةُ (ضربْتِ)، والمثنى (ضربْتُما)، وجمعُ الذكورِ (ضربْتُمْ)، وجمعُ الإناثِ (ضربْتُنَّ)</div></div>
+      <div class="node maroon"><div class="n-title">الضميرُ المستترُ</div><div class="n-sub">«هو» في ضربَ<br>«هي» في ضربَتْ<br><b>يُقدَّرُ لأنه لا غنى للتركيبِ عن الفاعلِ</b></div></div>
+      <div class="node goldb"><div class="n-title">ضمائرُ الرفعِ المتصلةُ</div><div class="n-sub">ألفُ الاثنينِ (ضربا) وواوُ الجماعةِ (ضربوا) — وهما ساكنتانِ —<br>ونونُ النسوةِ (ضربْنَ) مبنيةٌ على الفتحِ</div></div>
+    </div>
+    <figcaption>شكل (٥): خريطةُ المضمراتِ الواقعةِ فاعلًا كما رتَّبَها الشيخُ</figcaption>
+  </figure>
+
+  <p>فكما نلاحظُ: هذه المضمراتُ عددُها <b>اثنا عشرَ ضميرًا</b>؛ تشملُ تاءَ الفاعلِ بكلِّ أشكالِها المتنوعةِ الدالّةِ على المتكلمِ المفردِ، أو المتكلمينَ الجمعِ («نا»)، أو المفردةِ المخاطبةِ المؤنثةِ، أو المفردِ المخاطبِ المذكرِ، أو المثنى المذكرِ والمؤنثِ، أو الجمعِ المخاطبِ المذكرِ (ضربْتُمْ)، والجمعِ المخاطبِ المؤنثِ (ضربْتُنَّ). ثم قد يكونُ الفاعلُ <b>ضميرًا مستترًا</b>.</p>
+  <div class="box note"><span class="tag">قاعدةٌ</span><p style="margin:0">ولذلك قلْنا إنَّ الفاعلَ <b>عمدةٌ</b>: إذا لم يوجدْ في اللفظِ فلا بدَّ أن يُقدَّرَ بضميرٍ مستترٍ؛ لأنه لا غنى للتركيبِ عنه. ثم ذكرَ ابنُ آجرومٍ أيضًا ضمائرَ الرفعِ المتصلةَ: ألفَ الاثنينِ وواوَ الجماعةِ — وهذانِ معَ الفعلِ الماضي هنا — ونونَ النسوةِ.</p></div>
+
+  <h3 id="s6d">ياءُ المخاطبةِ: ما لم يذكرْه ابنُ آجرومَ</h3>
+  <div class="box note"><span class="tag">تنبيهٌ</span><p style="margin:0">ويوجدُ أيضًا <b>ياءُ المخاطبةِ</b>، لم يذكرْها ابنُ آجرومٍ هنا، وهي <b>تقعُ فاعلًا</b>، ولكنها <b>لا تدخلُ الماضيَ</b>؛ تدخلُ <b>المضارعَ والأمرَ فقط</b> — ولهذا لم تَرِدْ في أمثلتِهِ المبنيةِ كلِّها على الماضي «ضربَ». فأقولُ: «أنتِ تكتبينَ الدرسَ» أو «تضربينَ»: الياءُ في «تضربينَ» هي الفاعلُ، <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</p></div>
+  <p>هذا بالنسبةِ للكلامِ النظريِّ على بابِ الفاعلِ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧: تطبيقات ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>تطبيقاتٌ على بابِ الفاعلِ</h2></div>
+  <p>إن أردْنا أن نطبِّقَ على هذا البابِ فعندَنا عددٌ من الأمثلةِ على النحوِ الآتي:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلتُ: <b>«جاءَ أبي مساءً»</b> — ما الحكمُ الإعرابيُّ لكلمةِ «أبي»؟ هل هي مرفوعةٌ أم منصوبةٌ أم مجرورةٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هي هنا <b>مرفوعةٌ لأنها الفاعلُ</b> — هو الذي جاءَ —، ولكنَّ العلامةَ <b>مقدَّرةٌ</b>: <span class="mark">فاعلٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ على الباءِ لمناسبةِ ياءِ المتكلمِ</span>، أو لاشتغالِ المحلِّ بحركةِ المناسبةِ لياءِ المتكلمِ، وياءُ المتكلمِ نفسُها ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: <b>«أكرمَكَ محمدٌ»</b> — الفاعلُ في هذه الجملةِ هل هو ظاهرٌ أم مضمرٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ <b>ظاهرٌ</b> وهو <b>«محمدٌ»</b>؛ أما الكافُ في «أكرمَكَ» فهي ضميرٌ متصلٌ مبنيٌّ على الفتحِ <b>في محلِّ نصبٍ مفعولٌ بهِ، ليستْ فاعلًا</b> — على قاعدةِ: الكافُ إذا اتصلتْ بالفعلِ كانتْ في محلِّ نصبٍ. فكلمةُ «محمدٌ» هي الفاعلُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: <b>«الهنداتُ قُمْنَ»</b> — كلمةُ «قُمْنَ» فعلٌ فيه فاعلٌ؛ فهل هو ظاهرٌ أم مضمرٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هو <b>مضمرٌ</b>، وهو <b>نونُ النسوةِ</b> في «قُمْنَ»: فالنونُ في «قُمْنَ» <b>ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ رفعٍ فاعلٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِهِ تعالى ﴿قَالَ رَجُلَانِ﴾ [المائدةِ: ٢٣]: هل «رجلانِ» اسمٌ مجرورٌ وعلامةُ جرِّهِ الكسرةُ التي تحتَ النونِ؟ أم هو اسمٌ منصوبٌ وعلامةُ نصبِهِ الألفُ نيابةً عن الفتحةِ؟ أم أنه فاعلٌ مرفوعٌ والعلامةُ الألفُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هو <b>فاعلٌ مرفوعٌ</b>: ﴿قالَ رجلانِ﴾ — هما اللذانِ قالا —، إذن هو <b>الفاعلُ، مرفوعٌ وعلامةُ رفعِهِ الألفُ لأنه مثنًّى</b>؛ والكسرةُ التي على النونِ ليست علامةَ إعرابٍ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَدْ أَفْلَحَ الْمُؤْمِنُونَ﴾<span class="ref">سورةُ المؤمنونَ: ١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>«المؤمنونَ» هي الفاعلُ وهو مرفوعٌ؛ فما علامةُ رفعِهِ: الواوُ، أم الضمةُ، أم ثبوتُ النونِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>ثبوتُ النونِ علامةٌ <b>في الأفعالِ</b> — الأفعالِ الخمسةِ — وليستْ معنا هنا مطلقًا؛ والنونُ الموجودةُ في «المؤمنونَ» <b>ليستْ هي النونَ الموجودةَ في «يؤمنونَ»</b>: فـ«يؤمنونَ» فعلٌ مضارعٌ من الأفعالِ الخمسةِ أو الأمثلةِ الخمسةِ، لكنَّ النونَ في «المؤمنونَ» <b>تقابلُ التنوينَ الموجودَ في المفردِ «مؤمنٌ»</b>؛ ففي الجمعِ أتينا بالنونِ لتعوِّضَ عن التنوينِ في المفردِ، أو لتقابلَ التنوينَ في المفردِ. فكيف نُعربُ ﴿قد أفلحَ المؤمنونَ﴾؟ <span class="mark">«المؤمنونَ» هي الفاعلُ، مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه جمعُ مذكرٍ سالمٌ</span>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِذْ قَالَ لَهُ رَبُّهُ أَسْلِمْ قَالَ أَسْلَمْتُ لِرَبِّ الْعَالَمِينَ﴾<span class="ref">سورةُ البقرةِ: ١٣١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ الفاعلُ ها هنا في ﴿أَسْلَمْتُ لِرَبِّ الْعَالَمِينَ﴾؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ هو <b>تاءُ الفاعلِ</b> في «أسلمْتُ»؛ فالتاءُ هنا <b>ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَإِذَا تَطَهَّرْنَ فَأْتُوهُنَّ مِنْ حَيْثُ أَمَرَكُمُ اللَّهُ﴾<span class="ref">سورةُ البقرةِ: ٢٢٢</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ الفاعلُ في ﴿فَإِذَا تَطَهَّرْنَ﴾؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ هنا هو <b>نونُ النسوةِ</b> في «تطهَّرْنَ». والفعلُ هنا فعلٌ ماضٍ: «تطهَّرْنَ» <b>مبنيٌّ على الفتحِ المقدَّرِ، أو على السكونِ</b>؛ لاتصالِهِ بنونِ النسوةِ — وهي ضميرُ رفعٍ متحركٌ —، ونونُ النسوةِ نفسُها <b>ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ رفعٍ فاعلٌ</b>، كما يظهرُ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَبَشِّرِ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أَنَّ لَهُمْ جَنَّاتٍ﴾<span class="ref">سورةُ البقرةِ: ٢٥</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>الفاعلُ — كما قلْنا — قد يكونُ مستترًا؛ فأينَ فاعلُ «بشِّرْ» في الآيةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ <b>«بشِّرْ»</b> فعلُ أمرٍ مبنيٌّ على السكونِ على الأصلِ — وحُرِّكَ بالكسرِ في الآيةِ لالتقاءِ الساكنينِ —، لكن أينَ الفاعلُ؟ تقديرُهُ: «وبشِّرْ أنتَ»؛ أي <b>ضميرٌ مستترٌ تقديرُهُ «أنتَ»</b>.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨: استخراج الفاعل ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>استخراجُ الفاعلِ من الآياتِ وإعرابُه</h2></div>
+  <p>هناكَ بعضُ الآياتِ التي ساقَها الشيخُ لنستخرجَ منها الفاعلَ ثم نُعربَ:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَجَاءَ الْمُعَذِّرُونَ مِنَ الْأَعْرَابِ لِيُؤْذَنَ لَهُمْ﴾<span class="ref">سورةُ التوبةِ: ٩٠</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>استخرجِ الفاعلَ وأعربْهُ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ هنا <b>«المعذِّرونَ»</b> بعدَ الفعلِ «جاءَ»: هو <b>فاعلُ الفعلِ «جاءَ» مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه جمعُ مذكرٍ سالمٌ</b>.</div>
+  </div>
+
+  <h3 id="s8a">الفاعلُ المؤخَّرُ عن المفعولِ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَإِذَا مَسَّ الْإِنْسَانَ ضُرٌّ دَعَانَا﴾<span class="ref">سورةُ الزمرِ: ٤٩</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ الفاعلُ في ﴿مَسَّ الْإِنْسَانَ ضُرٌّ﴾؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ هو «مسَّ»، و<b>«الإنسانَ» مفعولٌ بهِ مقدَّمٌ</b>، أما الفاعلُ للفعلِ «مسَّ» هنا فهو كلمةُ <b>«ضرٌّ»</b>: فـ«ضرٌّ» هي الفاعلُ لكنه <b>مؤخَّرٌ</b>، أي قُدِّمَ عليه المفعولُ بهِ؛ فـ<span class="mark">«ضرٌّ» فاعلٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</span>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَإِذِ ابْتَلَى إِبْرَاهِيمَ رَبُّهُ بِكَلِمَاتٍ فَأَتَمَّهُنَّ﴾<span class="ref">سورةُ البقرةِ: ١٢٤</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>هنا فعلٌ هو «ابتلى»؛ فأينَ فاعلُهُ؟ أهو «إبراهيمَ»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا <b>ليستْ كلمةُ «إبراهيمَ» الفاعلَ لأنها منصوبةٌ</b> ها هنا: فـ«إبراهيمَ» <b>مفعولٌ بهِ مقدَّمٌ</b>، و<b>«ربُّهُ» هو الفاعلُ</b>، لأنَّ ربَّهُ هو الذي ابتلاه؛ فالتقديرُ: «ابتلى ربُّ إبراهيمَ إبراهيمَ»، وقد أُخِّرَ الفاعلُ وقُدِّمَ المفعولُ بهِ «إبراهيمَ». فالفاعلُ <span class="mark">«ربُّ» فاعلٌ مؤخَّرٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</span>، والهاءُ في «ربُّهُ» ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">مسَّ</span><span class="fa">←</span>
+      <span class="chip blue">الإنسانَ: مفعولٌ بهِ مقدَّمٌ</span><span class="fa">←</span>
+      <span class="chip">ضرٌّ: فاعلٌ مؤخَّرٌ</span>
+    </div>
+    <div class="flow-lane">
+      <span class="chip plain">ابتلى</span><span class="fa">←</span>
+      <span class="chip blue">إبراهيمَ: مفعولٌ بهِ مقدَّمٌ</span><span class="fa">←</span>
+      <span class="chip">ربُّهُ: فاعلٌ مؤخَّرٌ</span>
+      <div class="lane-note">ليس الفاعلُ أوّلَ اسمٍ يلي الفعلَ دائمًا؛ وإنما الحَكَمُ <b>المعنى</b> (مَنْ أحدثَ الفعلَ؟) و<b>العلامةُ</b> (المرفوعُ هو الفاعلُ والمنصوبُ هو المفعولُ).</div>
+    </div>
+    <div class="dcap">شكل (٦): الفاعلُ المؤخَّرُ عن المفعولِ بهِ المقدَّمِ</div>
+  </figure>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّا أَنْزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ﴾<span class="ref">سورةُ القدرِ: ١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ الفاعلُ هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>لا بدَّ أن نبحثَ أولًا عن <b>الفعلِ</b>؛ لأنَّ الفعلَ لا بدَّ أن يكونَ له فاعلٌ، <b>فالفاعلُ مرتبطٌ بفعلِهِ</b>. فالفعلُ «أنزلْنا»، و<b>«نا»</b> هنا الضميرُ الدالُّ على جماعةِ المتكلمينَ: <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَقَالَ الظَّالِمُونَ إِنْ تَتَّبِعُونَ إِلَّا رَجُلًا مَسْحُورًا﴾<span class="ref">سورةُ الفرقانِ: ٨</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ الفاعلُ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندَنا هنا <b>فاعلانِ</b>:<br>
+    • ﴿وقالَ الظالمونَ﴾: <b>«الظالمونَ» فاعلٌ للفعلِ «قالَ» مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه جمعُ مذكرٍ سالمٌ</b>.<br>
+    • والفاعلُ الثاني في الفعلِ <b>«تتَّبعونَ»</b>: هذا فعلٌ من الأفعالِ الخمسةِ أو الأمثلةِ الخمسةِ، والفاعلُ فيه هو الضميرُ <b>واوُ الجماعةِ: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَوَرِثَ سُلَيْمَانُ دَاوُودَ﴾<span class="ref">سورةُ النملِ: ١٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ الفاعلُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ هنا كلمةُ <b>«سليمانُ»</b>: <b>فاعلٌ للفعلِ «ورثَ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>.</div>
+  </div>
+
+  <h3 id="s8b">تأنيثُ الفعلِ معَ جمعِ التكسيرِ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالَتِ الْأَعْرَابُ آمَنَّا﴾<span class="ref">سورةُ الحجراتِ: ١٤</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>«الأعرابُ» هي الفاعلُ التي قالتْ؛ فلماذا لحقتْ تاءُ التأنيثِ الفعلَ وهم عقلاءُ ذكورٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نلاحظُ هنا أنَّ الفعلَ «قالَ» لحقتْهُ تاءُ التأنيثِ للدلالةِ على أنَّ الفاعلَ مؤنثٌ كما نعرفُ؛ ولكنَّ الفاعلَ هنا هو «الأعرابُ»: فهل كلمةُ «الأعرابُ» مؤنثةٌ؟ هي <b>ليستْ جمعَ تكسيرٍ لغيرِ العاقلِ</b>، بل هي <b>جمعُ تكسيرٍ للعقلاءِ</b> — وجمعُ التكسيرِ لغيرِ العاقلِ هو الذي يمكنُ أن يُعاملَ معاملةَ المفردِ المؤنثِ فنقولُ «قالتْ» مثلًا —. لذلك <b>قدَّرَ النحاةُ محذوفًا</b>؛ قالوا: التقديرُ <span class="mark">«قالتْ جماعةُ الأعرابِ»</span>، على تقديرِ أنَّ الفاعلَ المحذوفَ أصلًا هو المضافُ «جماعةُ»، وكان مؤنثًا فأُنِّثَ الفعلُ له، ثم حُذفَ المضافُ «جماعةُ» وأقيمَ المضافُ إليهِ مقامَهُ، وهو «الأعرابُ».</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿سَيَقُولُ لَكَ الْمُخَلَّفُونَ مِنَ الْأَعْرَابِ شَغَلَتْنَا أَمْوَالُنَا وَأَهْلُونَا﴾<span class="ref">سورةُ الفتحِ: ١١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ الفاعلُ ها هنا في ﴿شَغَلَتْنَا أَمْوَالُنَا﴾؟ وما «نا» المتصلةُ بالفعلِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفاعلُ هو <b>«أموالُنا»</b>. و«شغلتْنا» اتصلتْ به <b>«نا» المفعولينَ</b> — لا «نا» الفاعلينَ —: ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ نصبٍ مفعولٌ بهِ</b>. والتاءُ في «شغلتْنا» هي <b>تاءُ التأنيثِ الساكنةُ</b> الدالّةُ على أنَّ الفاعلَ الذي سيأتي مؤنثٌ، أو ما يقومُ مقامَ المؤنثِ، أو ما هو في حكمِ المؤنثِ. فالفاعلُ هنا «أموالُنا»: و<b>«أموالٌ» جمعُ تكسيرٍ لغيرِ العاقلِ</b>، وكما قلْنا منذُ قليلٍ: جمعُ التكسيرِ لغيرِ العاقلِ <b>يُعاملُ معاملةَ المفردةِ المؤنثةِ</b>؛ ولذلك قالَ «شغلتْنا» بتأنيثِ الفعلِ، أي بإلحاقِ تاءِ التأنيثِ الساكنةِ بالفعلِ للدلالةِ على أنَّ الفاعلَ مؤنثٌ — فصحَّ أن تأتيَ تاءُ التأنيثِ في الفعلِ الماضي معَ هذا الفاعلِ.</div>
+  </div>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">جمعُ تكسيرٍ لغيرِ العاقلِ</div><div class="n-sub">يُعاملُ معاملةَ <b>المفردةِ المؤنثةِ</b><br>فيُؤنَّثُ له الفعلُ مباشرةً<br>﴿شغلَتْنا أموالُنا﴾</div></div>
+      <div class="node maroon"><div class="n-title">جمعُ تكسيرٍ للعقلاءِ</div><div class="n-sub">جاءَ الفعلُ معه مؤنثًا في ﴿قالتِ الأعرابُ﴾<br>فقُدِّرَ مضافٌ مؤنثٌ محذوفٌ:<br><b>«قالتْ جماعةُ الأعرابِ»</b></div></div>
+    </div>
+    <div class="dcap">شكل (٧): تعليلُ تأنيثِ الفعلِ معَ الفاعلِ جمعِ التكسيرِ في الشاهدينِ</div>
+  </figure>
+
+  <h3 id="s8c">جدولُ تلخيصِ التطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الشاهدُ / المثالُ</th><th>الفاعلُ</th><th>نوعُهُ</th><th>علامةُ رفعِهِ أو محلُّهُ</th></tr></thead>
+      <tbody>
+        <tr><td>﴿وإذْ يرفعُ إبراهيمُ القواعدَ﴾ [البقرةِ: ١٢٧]</td><td>إبراهيمُ</td><td>اسمٌ صريحٌ ظاهرٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿أَوَلَمْ يكفِهِم أنّا أنزلْنا﴾ [العنكبوتِ: ٥١]</td><td>أنّا أنزلْنا (= إنزالُنا)</td><td>مصدرٌ مؤوَّلٌ</td><td>الضمةُ المقدَّرةُ للحكايةِ</td></tr>
+        <tr><td>﴿ألمْ يأنِ للذينَ آمنوا أنْ تخشعَ قلوبُهم﴾ [الحديدِ: ١٦]</td><td>أنْ تخشعَ (= خشوعُ)</td><td>مصدرٌ مؤوَّلٌ</td><td>الضمةُ المقدَّرةُ للحكايةِ (و«قلوبُ» فاعلُ «تخشعَ» بالضمةِ الظاهرةِ)</td></tr>
+        <tr><td>﴿يومَ يقومُ الناسُ﴾ [المطففينَ: ٦]</td><td>الناسُ</td><td>ظاهرٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿وقالَ نسوةٌ﴾ [يوسفَ: ٣٠]</td><td>نسوةٌ</td><td>ظاهرٌ — جمعُ تكسيرٍ</td><td>الضمةُ الظاهرةُ (علامةٌ أصليةٌ)</td></tr>
+        <tr><td>﴿ويومئذٍ يفرحُ المؤمنونَ﴾ [الرومِ: ٤]</td><td>المؤمنونَ</td><td>ظاهرٌ</td><td>الواوُ (جمعُ مذكرٍ سالمٌ)</td></tr>
+        <tr><td>﴿قالَ أبوهم﴾ [يوسفَ: ٩٤]</td><td>أبو</td><td>ظاهرٌ</td><td>الواوُ (من الأسماءِ الخمسةِ)</td></tr>
+        <tr><td>﴿قالَ رجلانِ… أنعمَ اللهُ عليهما﴾ [المائدةِ: ٢٣]</td><td>رجلانِ / اللهُ / واوُ «يخافونَ»</td><td>ظاهرانِ ومضمرٌ</td><td>الألفُ (مثنى) / الضمةُ (مفردٌ) / في محلِّ رفعٍ</td></tr>
+        <tr><td>«جاءَ أبي مساءً»</td><td>أبي</td><td>ظاهرٌ</td><td>الضمةُ المقدَّرةُ لمناسبةِ ياءِ المتكلمِ</td></tr>
+        <tr><td>«أكرمَكَ محمدٌ»</td><td>محمدٌ (والكافُ مفعولٌ بهِ)</td><td>ظاهرٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>«الهنداتُ قُمْنَ»</td><td>نونُ النسوةِ</td><td>مضمرٌ</td><td>مبنيٌّ على الفتحِ في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿قد أفلحَ المؤمنونَ﴾ [المؤمنونَ: ١]</td><td>المؤمنونَ</td><td>ظاهرٌ</td><td>الواوُ — والنونُ عوضٌ عن تنوينِ المفردِ</td></tr>
+        <tr><td>﴿أسلمْتُ لربِّ العالمينَ﴾ [البقرةِ: ١٣١]</td><td>تاءُ الفاعلِ</td><td>مضمرٌ</td><td>مبنيٌّ على الضمِّ في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿فإذا تطهَّرْنَ﴾ [البقرةِ: ٢٢٢]</td><td>نونُ النسوةِ</td><td>مضمرٌ</td><td>مبنيٌّ على الفتحِ في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿وبشِّرِ الذينَ آمنوا﴾ [البقرةِ: ٢٥]</td><td>«أنتَ» المستترُ</td><td>مضمرٌ مستترٌ</td><td>في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿وجاءَ المعذِّرونَ﴾ [التوبةِ: ٩٠]</td><td>المعذِّرونَ</td><td>ظاهرٌ</td><td>الواوُ (جمعُ مذكرٍ سالمٌ)</td></tr>
+        <tr><td>﴿فإذا مسَّ الإنسانَ ضرٌّ﴾ [الزمرِ: ٤٩]</td><td>ضرٌّ</td><td>ظاهرٌ مؤخَّرٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿إنّا أنزلْناه في ليلةِ القدرِ﴾ [القدرِ: ١]</td><td>«نا» المتكلمينَ</td><td>مضمرٌ</td><td>مبنيٌّ على السكونِ في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿وقالَ الظالمونَ إنْ تتَّبعونَ﴾ [الفرقانِ: ٨]</td><td>الظالمونَ / واوُ الجماعةِ</td><td>ظاهرٌ ومضمرٌ</td><td>الواوُ / مبنيٌّ على السكونِ في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿قالتِ الأعرابُ آمنّا﴾ [الحجراتِ: ١٤]</td><td>الأعرابُ (بتقديرِ: جماعةُ الأعرابِ)</td><td>ظاهرٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿ووَرِثَ سليمانُ داوودَ﴾ [النملِ: ١٦]</td><td>سليمانُ</td><td>ظاهرٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿شغلَتْنا أموالُنا﴾ [الفتحِ: ١١]</td><td>أموالُ (و«نا» مفعولٌ بهِ)</td><td>ظاهرٌ — جمعُ تكسيرٍ لغيرِ العاقلِ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿وإذِ ابتلى إبراهيمَ ربُّهُ﴾ [البقرةِ: ١٢٤]</td><td>ربُّ</td><td>ظاهرٌ مؤخَّرٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩: الخلاصة ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>خلاصةُ الدرس</h2></div>
+  <ul class="summary-points">
+    <li>الفاعلُ: <b>الاسمُ المرفوعُ المذكورُ قبلَهُ فعلُهُ</b>، وهو أوّلُ المرفوعاتِ وأصلُها، و<b>عمدةٌ</b> لا يستغني عنه التركيبُ: لأنَّ الفعلَ حدثٌ، ولكلِّ حدثٍ مُحدِثٌ.</li>
+    <li>إذا حُذفَ الفاعلُ نابَ عنه غيرُهُ (نائبُ الفاعلِ)، وإذا لم يظهرْ في اللفظِ <b>قُدِّرَ ضميرًا مستترًا</b>.</li>
+    <li>الفاعلُ لا يكونُ إلا اسمًا: <b>صريحًا</b> (﴿يرفعُ إبراهيمُ﴾)، أو <b>مؤوَّلًا بالصريحِ</b> من حرفٍ مصدريٍّ وما بعدَهُ (﴿أنّا أنزلْنا﴾ = إنزالُنا) ويُقالُ فيه: في تأويلِ مصدرٍ فاعلٌ مرفوعٌ بضمةٍ مقدَّرةٍ للحكايةِ.</li>
+    <li>وهو أيضًا قسمانِ: <b>ظاهرٌ</b>، وتتنوعُ علامتُهُ بحسبِ نوعِهِ (الضمةُ للمفردِ وجمعِ التكسيرِ وجمعِ المؤنثِ السالمِ، والألفُ للمثنى، والواوُ لجمعِ المذكرِ السالمِ والأسماءِ الخمسةِ، والمقدَّرةُ معَ ياءِ المتكلمِ)، و<b>مضمرٌ</b> وهو اثنا عشرَ.</li>
+    <li>المضمرُ: تاءُ الفاعلِ بأشكالِها (ضربْتُ، ضربْتَ، ضربْتِ، ضربْتُما، ضربْتُمْ، ضربْتُنَّ) و«نا» (ضربْنا)، والمستترُ (هو في ضربَ، وهي في ضربَتْ)، وألفُ الاثنينِ (ضربا)، وواوُ الجماعةِ (ضربوا)، ونونُ النسوةِ (ضربْنَ) — ويُزادُ عليها <b>ياءُ المخاطبةِ</b> في المضارعِ والأمرِ.</li>
+    <li>نونُ «المؤمنونَ» <b>عوضٌ عن تنوينِ المفردِ</b>، وليستْ نونَ الأفعالِ الخمسةِ؛ فلا يُقالُ فيها «ثبوتُ النونِ».</li>
+    <li>قد <b>يتأخرُ الفاعلُ عن المفعولِ بهِ</b> (﴿مسَّ الإنسانَ ضرٌّ﴾، ﴿ابتلى إبراهيمَ ربُّهُ﴾)، والحَكَمُ المعنى والعلامةُ.</li>
+    <li>جمعُ التكسيرِ لغيرِ العاقلِ يُعاملُ معاملةَ المفردةِ المؤنثةِ (﴿شغلَتْنا أموالُنا﴾)، وفي ﴿قالتِ الأعرابُ﴾ قدَّرَ النحاةُ «جماعةُ الأعرابِ».</li>
+  </ul>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>المسألةُ</th><th>الحكمُ</th><th>المثالُ</th></tr></thead>
+      <tbody>
+        <tr><td>حكمُ الفاعلِ</td><td>الرفعُ دائمًا</td><td>«الفاعلَ ارفعْ» — الناظمُ</td></tr>
+        <tr><td>موقعُهُ</td><td>بعدَ فعلِهِ («المذكورُ قبلَهُ فعلُهُ»)</td><td>قامَ زيدٌ — يقومُ زيدٌ</td></tr>
+        <tr><td>من حيثُ الصراحةُ</td><td>صريحٌ / مؤوَّلٌ بالصريحِ</td><td>﴿يرفعُ إبراهيمُ﴾ / ﴿أنْ تخشعَ قلوبُهم﴾</td></tr>
+        <tr><td>من حيثُ الظهورُ</td><td>ظاهرٌ / مضمرٌ (١٢)</td><td>اصطادَ زيدٌ / اشتريْتُ أعفرا</td></tr>
+        <tr><td>المضمرُ البارزُ</td><td>ضميرٌ متصلٌ في محلِّ رفعٍ</td><td>ضربْتُ، ضربْنا، ضربا، ضربوا، ضربْنَ</td></tr>
+        <tr><td>المضمرُ المستترُ</td><td>يُقدَّرُ: هو / هي / أنتَ</td><td>ضربَ — ضربَتْ — ﴿وبشِّرْ﴾</td></tr>
+        <tr><td>تأخيرُهُ</td><td>جائزٌ بتقديمِ المفعولِ بهِ</td><td>﴿وإذِ ابتلى إبراهيمَ ربُّهُ﴾</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box note"><span class="tag">تمَّ الدرسُ</span><p style="margin:0">وبهذا نكونُ قد أنهينا الكلامَ على <b>الفاعلِ</b>، وإن شاءَ اللهُ تعالى نشرعُ في الدرسِ القادمِ في درسِ <b>«النائبِ عن الفاعلِ»</b>، أو «المفعولِ الذي لم يُسَمَّ فاعلُهُ» كما اصطلحَ عليه ابنُ آجرومٍ رحمهُ اللهُ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ ١٢ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=sriHnSJBHww" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

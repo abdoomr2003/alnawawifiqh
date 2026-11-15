@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نواصب المضارع — الدرس التاسع من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:56px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">نواصبُ المضارعِ</h1>
+    <div class="cover-sub">الدرس التاسع: نواصبُ الفعلِ المضارعِ العشرةُ — ما ينصبُ بنفسِه وما ينصبُ بـ«أنْ» المضمرةِ — مع التطبيقاتِ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=9MhmOIQrXos" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتن ونظمُ الشنقيطيِّ</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">الخريطةُ العامّةُ: النواصبُ عشرةٌ في قسمَينِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">القسمُ الأولُ: ما ينصبُ المضارعَ بنفسِه (أربعةٌ)</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">أنْ المصدريّةُ — أمُّ البابِ</a></li>
+        <li><a href="#s4b">لنْ</a></li>
+        <li><a href="#s4c">إذنْ وشروطُها الثلاثةُ</a></li>
+        <li><a href="#s4d">كي ولامُ التعليلِ المقدَّرةُ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">القسمُ الثاني: ما ينصبُ بـ«أنْ» المضمرةِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s5a">جوازًا: لامُ التعليلِ (لامُ كي)</a></li>
+        <li><a href="#s5b">وجوبًا: لامُ الجحودِ</a></li>
+        <li><a href="#s5c">وجوبًا: حتى الغائيّةُ</a></li>
+        <li><a href="#s5d">وجوبًا: فاءُ السببيّةِ والطلباتُ الثمانيةُ</a></li>
+        <li><a href="#s5e">وجوبًا: واوُ المعيّةِ (وفرقُها عن واوِ المفعولِ معه)</a></li>
+        <li><a href="#s5f">وجوبًا: أوْ بمعنى «إلّا» أو «إلى أنْ»</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٦</span><a href="#s6">التطبيقاتُ والشواهدُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t63">الجدولُ التلخيصيُّ للتطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٧</span><a href="#s7">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١ افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+
+  <p>بسمِ اللهِ الرحمنِ الرحيمِ، حمدًا للهِ كما ينبغي لجلالِه وكمالِه، وصلًّى اللهُ وسلَّمَ على النبيِّ المصطفى وعلى آلِه. وبعدُ: فحياكم اللهُ جميعًا أيها الكرامُ وأيتها الكريماتُ، وما زالَ حديثُنا موصولًا عن <b>إعرابِ الفعلِ المضارعِ</b> في إطارِ شرحِنا لمتنِ الآجروميّةِ. وكنّا في اللقاءِ الماضي قد تكلمنا على <b>رفعِ الفعلِ المضارعِ</b> بعدَ أن بَيَّنّا كُنْهَهُ وعلامتَه، واليومَ إن شاء اللهُ تعالى سنتكلمُ على <b>نواصبِ هذا الفعلِ المضارعِ</b>.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢ المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتن ونظمُ الشنقيطيِّ</h2></div>
+
+  <p>نبدأُ أولًا بنصِّ ابنِ آجرومَ في متنِ الآجروميّةِ حيث قال:</p>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«والمضارعُ ما كانَ في أولِه إحدى الزوائدِ الأربعِ يجمعُها قولُك «أنيت»، وهو مرفوعٌ أبدًا حتى يدخلَ عليه ناصبٌ أو جازمٌ.<br>
+    فالنواصبُ: أنْ، ولنْ، وإذنْ، وكي، ولامُ كي، ولامُ الجحودِ، وحتى، والجوابُ بالفاءِ والواوِ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <p>أما الناظمُ <b>محمدُ بنُ آبِّه الشنقيطيُّ</b> فقد ذكرَ المضارعَ وأحكامَه الإعرابيّةَ بدءًا من البيتِ الأربعينَ فقال:</p>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">ثم المضارعُ الذي في صدرِهِ … إحدى زوائدِ أنيتَ فادْرِهْ</div>
+      <div class="ln">وحكمُهُ الرفعُ إذا يُجرَّدُ … من ناصبٍ وجازمٍ كتَسْعَدُ</div>
+      <div class="ln">ونصبُهُ بأنْ ولنْ وإذنْ وكي … ولامِ كي لامِ الجحودِ يا أخي</div>
+      <div class="ln">كذلك حتى والجوابُ بالفا … والواوِ ثم أو رُزقتَ اللُّطفا</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣ الخريطة العامة ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>الخريطةُ العامّةُ: النواصبُ عشرةٌ في قسمَينِ</h2></div>
+
+  <p>مما ذكرَه ابنُ آجرومَ والناظمُ الشنقيطيُّ نجدُ أنَّ <b>نواصبَ الفعلِ المضارعِ عشرةٌ</b>، ويمكنُ أن نقسِّمَها إلى <b>قسمَينِ كبيرَينِ</b>: <b>ما ينصبُ بنفسِه</b>، و<b>ما ينصبُ بـ«أنْ» المضمرةِ</b> — والقسمُ الثاني نوعانِ: ما ينصبُ بـ«أنْ» المضمرةِ <b>جوازًا</b> وما ينصبُ بها <b>وجوبًا</b>:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">نواصبُ المضارعِ عشرةٌ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node green">
+        <div class="n-title">① ما ينصبُ بنفسِه — أربعةٌ</div>
+        <div class="n-sub">
+          <ul>
+            <li><b>أنْ</b> المصدريّةُ (أمُّ البابِ)</li>
+            <li><b>لنْ</b></li>
+            <li><b>إذنْ</b> (بشروطِها الثلاثةِ)</li>
+            <li><b>كي</b> (بتقديرِ لامِ التعليلِ لفظًا أو معنى)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">② ما ينصبُ بـ«أنْ» المضمرةِ — ستةٌ</div>
+        <div class="n-sub">
+          <b>جوازًا (حرفٌ واحدٌ):</b>
+          <ul>
+            <li><b>لامُ التعليلِ</b> (لامُ كي) — «لنعبدَ» = «لأنْ نعبدَ» = «للعبادةِ»</li>
+          </ul>
+          <b>وجوبًا (خمسةٌ):</b>
+          <ul>
+            <li><b>لامُ الجحودِ</b> (بعدَ كونٍ منفيٍّ)</li>
+            <li><b>حتى</b> الغائيّةُ</li>
+            <li><b>فاءُ السببيّةِ</b> (بعدَ نفيٍ أو طلبٍ)</li>
+            <li><b>واوُ المعيّةِ</b> (بعدَ نفيٍ أو طلبٍ)</li>
+            <li><b>أوْ</b> بمعنى «إلّا» أو «إلى أنْ»</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (١): الخريطةُ العامّةُ لنواصبِ المضارعِ العشرةِ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤ النواصب بنفسها ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>القسمُ الأولُ: ما ينصبُ المضارعَ بنفسِه (أربعةٌ)</h2></div>
+
+  <h3 id="s4a">أنْ المصدريّةُ — أمُّ البابِ</h3>
+  <p>أولًا: ما ينصبُ بنفسِه من هذه النواصبِ أربعةٌ: <b>أنْ، ولنْ، وإذنْ، وكي</b>. أما <span class="mark">«أنْ»</span> فهي <b>أمُّ البابِ</b>؛ وأمُّ البابِ معناها <b>أصلُ البابِ</b> — كلمةُ «أمٍّ» هنا معناها أصله؛ فهي الأصلُ في هذه النواصبِ جميعًا، في أدواتِ النصبِ جميعِها للفعلِ المضارعِ، وهي تدخلُ على الفعلِ المضارعِ فتنصبُه <b>وتؤوَّلُ معناه إلى المصدرِ</b>؛ ولذلك يسمُّونها <b>«أنْ» المصدريّةَ</b> — فهي أنْ المصدريّةُ الناصبةُ، والفعلُ المضارعُ معها يكونُ دالًّا على المستقبلِ — على الزمانِ المستقبلِ. ومثالُها:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَن تَسْتَطِيعُوا أَن تَعْدِلُوا بَيْنَ النِّسَاءِ وَلَوْ حَرَصْتُمْ﴾<span class="ref">سورةُ النساءِ: ١٢٩</span></p>
+  </div>
+  <p>فقولُه «<span class="mark">أنْ تعدلوا</span>»: «أنْ» هنا هي <b>حرفٌ مصدريٌّ ناصبٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ</b> — طبعًا لأنه حرفُ معنًى، وحروفُ المعاني كلُّها مبنيةٌ ولا محلَّ لها من الإعرابِ. والفعلُ «تعدلوا» بعده نلاحظُ أنَّ فيه <b>واوَ جماعةٍ</b>؛ فإذا هو من الأمثلةِ الخمسةِ (أو كما نقولُ من الأفعالِ الخمسةِ)؛ فهذا الفعلُ يكونُ <b>منصوبًا وعلامةُ نصبِه حذفَ النونِ</b>. ولكي أعرفَ هل هو من الأمثلةِ الخمسةِ أم لا: <b>أنظرُ في فاعلِه: هل هو ضميرُ رفعٍ — واوُ جماعةٍ أو ياءُ مخاطبةٍ أو ألفُ اثنَينِ؟ فإن كانَ كذلك فهو من الأمثلةِ الخمسةِ</b> — وهذا ما حدثَ هنا في «تعدلوا»؛ فنقولُ في إعرابِ «تعدلوا»: <b>فعلٌ مضارعٌ منصوبٌ بأنْ المصدريّةِ وعلامةُ نصبِه حذفُ النونِ لأنه من الأمثلةِ الخمسةِ</b> (أو من الأفعالِ الخمسةِ كما نقولُ تعليميًّا)، وطبعًا واوُ الجماعةِ هي <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</p>
+
+  <h3 id="s4b">لنْ</h3>
+  <p>ثم الناصبُ الثاني الذي ينصبُ الفعلَ المضارعَ بنفسِه هو <span class="mark">«لنْ»</span>: ناصبةٌ للفعلِ المضارعِ بنفسِها، وهي حرفٌ <b>يدلُّ على شيئَينِ: يدلُّ على النفي والزمانِ المستقبلِ</b>؛ فلنْ مختصّةٌ بالدخولِ على الفعلِ المضارعِ، وتجعلُ زمنَه <b>خالصًا للاستقبالِ</b>، وهي أيضًا دالةٌ على النفي: فهي تنفي حدثَ الفعلِ المضارعِ في المستقبلِ — كما ذكرنا في الآيةِ الكريمةِ منذُ قليلٍ: ﴿ولن تستطيعوا أن تعدلوا بين النساء ولو حرصتم﴾: <span class="mark">«تستطيعوا»</span> أيضًا هنا من الأفعالِ (الأمثلةِ) الخمسةِ؛ ومن ثَمَّ فهو <b>فعلٌ مضارعٌ منصوبٌ بلنْ وعلامةُ نصبِه حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ، والواوُ واوُ الجماعةِ ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ. وأيضًا في قولِه تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالُوا لَن نَّبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ﴾<span class="ref">سورةُ طه: ٩١</span></p>
+  </div>
+  <p>«قالوا لن نبرحَ عليه عاكفين»: الفعلُ <span class="mark">«نبرحَ»</span> هنا هو فعلٌ مضارعٌ <b>منصوبٌ بلنْ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، وطبعًا الفاعلُ ضميرٌ مستترٌ تقديرُه «نحنُ». أما «لنْ» نفسُها فكيف نُعرِبُها؟ طبعًا هي أيضًا من حروفِ المعاني فهي حرفٌ يفيدُ <b>النفي والاستقبالِ</b>، وهو <b>مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ</b> — أو نقولُ: <b>حرفُ نفيٍ ونصبٍ واستقبالٍ</b> مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ.</p>
+
+  <h3 id="s4c">إذنْ وشروطُها الثلاثةُ</h3>
+  <p>الحرفُ الثالثُ الذي ينصبُ بنفسِه الفعلَ المضارعَ هو <span class="mark">«إذنْ»</span>، وهي <b>حرفُ جوابٍ وجزاءٍ</b> (يعني شرطٍ) <b>ونصبٍ</b> — يعني فيها معنى الشرطِ، وهي حرفُ جوابٍ يعني لا تكونُ إلا في <b>جوابِ كلامٍ</b>، وهي حرفُ نصبٍ لأنَّ الفعلَ المضارعَ بعدَها يكونُ منصوبًا؛ ولكنْ ثمّة <b>شروطٌ</b> لكي ينصبَ الفعلُ المضارعُ بها:</p>
+  <ul>
+    <li><b>أولًا</b>: لا بدَّ أن تكونَ «إذنْ» هذه <b>في صدرِ جملةِ الجوابِ</b> — يعني في بدايتِها.</li>
+    <li><b>ثم</b>: لا بدَّ وأن يكونَ <b>المضارعُ بعدَها دالًّا على الاستقبالِ</b>.</li>
+    <li><b>ثم شرطٌ ثالثٌ</b>: وهو أنه <b>لا يفصلُ بين «إذنْ» والفعلِ المضارعِ بعدَها فاصلٌ — باستثناءِ</b> يعني بعضِ الأشياءِ مثلِ <b>القسمِ أو النداءِ أو «لا» النافيةِ</b>؛ فهذه يجوزُ الفصلُ بها بين «إذنْ» والفعلِ المضارعِ وتعملُ «إذنْ» كما هي — لا بأسَ.</li>
+  </ul>
+  <div class="box example">
+    <span class="tag">مثالٌ تطبيقيٌّ</span>
+    <p style="margin:0 0 6px">طبعًا هذا ليس له مثلٌ في القرآنِ — حرفِ النصبِ «إذنْ» — ولكن يمكننا مثلًا أن نقولَ: <span class="mark">«أسأخلصُ للهِ في عملي؟»</span> فيجيبُ واحدٌ فيقولُ: <span class="mark">«إذنْ يوفِّقَكَ اللهُ»</span>.</p>
+    <p style="margin:0">ويجوزُ أن أفصلَ بالقسمِ: <span class="mark">«إذنْ واللهِ يوفِّقَكَ اللهُ»</span>، و<span class="mark">«إذنْ يا محمدُ يوفِّقَكَ اللهُ»</span> — الفصلُ بالنداءِ أيضًا جائزٌ — وطبعًا كما قلنا: الفصلُ بالنفيِ («لا» النافيةِ) لو أنَّ ثمّة معنًى يمكنُ أن ننفيَ بالفعلِ بعدَ «إذنْ» فهذا جائزٌ.</p>
+  </div>
+
+  <h3 id="s4d">كي ولامُ التعليلِ المقدَّرةُ</h3>
+  <p>ثم الحرفُ الرابعُ الذي ينصبُ الفعلَ المضارعَ مباشرةً هو <span class="mark">«كي»</span>؛ طبعًا «كي» <b>بعضُ النحاةِ اشترطَ فيها شرطًا</b> وهي أن تُسبَقَ <b>باللامِ — لامِ التعليلِ</b>؛ ولكنهم قالوا: يعني أنه يمكنُ أن <b>تُقدَّرَ هذه اللامُ</b>: يعني لا تكونَ موجودةً في اللفظِ ولكنها تُقدَّرُ في المعنى؛ فإن لم تُقدَّرْ لا لفظًا ولا معنًى تكونُ هي مباشرةً <b>دالّةً على معنى التعليلِ</b>؛ ولكن طبعًا هي إذا لم تكنِ اللامُ موجودةً في اللفظِ <b>فيصحُّ تقديرُها مطلقًا</b>. ومثالُ ذلك قولُه تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَرَجَعْنَاكَ إِلَىٰ أُمِّكَ كَي تَقَرَّ عَيْنُهَا وَلَا تَحْزَنْ﴾<span class="ref">سورةُ طه: ٤٠</span></p>
+  </div>
+  <p>«فرجعناك إلى أمك كي تقرَّ عينُها»: «<span class="mark">كي</span>» هنا <b>حرفُ نصبٍ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ</b>، و<span class="mark">«تقرَّ»</span> هي <b>فعلٌ مضارعٌ منصوبٌ بكي وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، وطبعًا الفاعلُ «عينُها» بعدَ ذلك: <b>عينُ</b> هي الفاعلُ مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه، والهاءُ في «عينها» ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ جرٍّ مضافٌ إليه</b>.</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green">
+        <div class="n-title">أنْ</div>
+        <div class="n-sub"><b>أمُّ البابِ</b> — المصدريّةُ الناصبةُ: تنصبُ المضارعَ ويؤوَّلُ معناها إلى المصدرِ، والمضارعُ معها للمستقبلِ<br>﴿أنْ تعدلوا بين النساءِ﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">لنْ</div>
+        <div class="n-sub">حرفُ نفيٍ ونصبٍ واستقبالٍ — تجعلُ زمنَ المضارعِ خالصًا للاستقبالِ وتنفي حدثَه فيه<br>﴿لن نبرحَ عليه عاكفينَ﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">إذنْ</div>
+        <div class="n-sub">حرفُ جوابٍ وجزاءٍ ونصبٍ — بثلاثةِ شروطٍ: صدرُ الجوابِ، ودلالةُ المضارعِ على الاستقبالِ، وعدمُ الفاصلِ (إلا القسمَ أو النداءَ أو «لا» النافيةَ)<br>«إذنْ يوفِّقَكَ اللهُ»</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">كي</div>
+        <div class="n-sub">حرفُ نصبٍ — يُشترطُ أن تُسبَقَ بلامِ التعليلِ لفظًا أو تقديرًا؛ فإن لم تُقدَّرْ كانت هي ذاتَها دالّةً على التعليلِ<br>﴿كي تقرَّ عينُها﴾ — «لكي نسبِّحَكَ»</div>
+      </div>
+    </div>
+    <div class="dcap">شكل (٢): النواصبُ الأربعةُ التي تنصبُ المضارعَ بنفسِها</div>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥ النواصب بأن المضمرة ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>القسمُ الثاني: ما ينصبُ بـ«أنْ» المضمرةِ</h2></div>
+
+  <p>هذه هي النواصبُ الأربعةُ التي تنصبُ الفعلَ المضارعَ بنفسِها. ثم القسمُ الثاني من نواصبِ المضارعِ هو <b>النواصبُ التي تنصبُ بـ«أنْ» المضمرةِ</b>، وهذا القسمُ يمكنُ أن نُنوِّعَه إلى نوعَينِ: نوعٍ ينصبُ بـ«أنْ» المضمرةِ <b>جوازًا</b>، ونوعٍ آخرَ ينصبُ بـ«أنْ» المضمرةِ <b>وجوبًا</b>.</p>
+
+  <h3 id="s5a">جوازًا: لامُ التعليلِ (لامُ كي)</h3>
+  <p>الذي ينصبُ بـ«أنْ» المضمرةِ جوازًا هو <b>حرفٌ واحدٌ</b> وهو <b>لامُ التعليلِ</b> — أو «لامُ كي» كما سمّاها ابنُ آجرومَ، لأنَّ كليهما يمكنُ أن يدلَّ على معنى التعليلِ. هذه اللامُ هي اللامُ التي يمكنُ أن تسبقَ «كي» أيضًا التي ذكرناها منذُ قليلٍ؛ لكنْ هنا نحنُ نتكلمُ عن <b>ورودِها وحدَها</b>: إذا وردتْ وحدَها قبلَ الفعلِ المضارعِ فإنَّ الفعلَ المضارعَ ينصبُ بعدَها <b>بأنْ مضمرةٍ جوازًا</b> — جوازًا يعني <b>يصحُّ ظهورُها</b>. ومثالُ هذه اللامِ الناصبةِ للفعلِ المضارعِ قولُه تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالُوا أَجِئْتَنَا لِنَعْبُدَ اللَّهَ وَحْدَهُ وَنَذَرَ مَا كَانَ يَعْبُدُ آبَاؤُنَا﴾<span class="ref">سورةُ الأعرافِ: ٧٠</span></p>
+  </div>
+  <p>«قالوا أجئتنا <span class="mark">لنعبدَ</span> اللهَ وحدَه»: هنا اللامُ هي <b>لامُ التعليلِ (أو لامُ كي): حرفٌ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ</b>، و<span class="mark">«نعبدَ»</span> فعلٌ مضارعٌ <b>منصوبٌ بأنْ مضمرةٍ جوازًا بعدَ لامِ التعليلِ (لامِ كي) وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، والفاعلُ ضميرٌ مستترٌ تقديرُه «نحنُ». وطبعًا <b>هذه اللامُ لا تنصبُ بنفسِها</b>؛ لا بدَّ وأن يكونَ الفعلُ المضارعُ بعدَها منصوبًا بأنْ مضمرةٍ جوازًا؛ <b>لأنَّ هذه اللامَ لامُ جرٍّ: يُقدَّرُ بعدَها «أنْ» ويؤوَّلُ «أنْ» مع الفعلِ المضارعِ بعدَها إلى مصدرٍ، وهذا المصدرُ يكونُ مجرورًا باللامِ</b>؛ فحين نقولُ «لنعبدَ» فالتقديرُ «لأنْ نعبدَ» — يعني <b>«للعبادةِ»</b>: نؤوِّلُ الفعلَ المضارعَ مع «أنْ» إلى مصدرٍ يكونُ هو مجرورًا باللامِ (إعرابًا تقديريًّا).</p>
+
+  <h3 id="s5b">وجوبًا (١): لامُ الجحودِ</h3>
+  <p>ثم النوعُ الثاني من النواصبِ التي تنصبُ بـ«أنْ» المضمرةِ هو <b>ما ينصبُ بها وجوبًا</b> — يعني لا يمكنُ أن تظهرَ «أنْ» المضمرةُ: مضمرةٌ يعني غيرُ ظاهرةٍ، ولكنْ <b>عدمَ ظهورِها واجبٌ</b> يعني لا يمكنُ أن تظهرَ — وعندنا فيه <b>خمسةُ أحرفٍ</b>: <b>لامُ الجحودِ، حتى، الجوابُ بفاءِ السببيّةِ، ثم الجوابُ بواوِ المعيّةِ، ثم أوْ</b>. والمقصودُ بـ«أوْ» ليست أوْ العاطفةَ وإنما أوْ الناصبةُ التي ينصبُ بعدَها الفعلُ المضارعُ كما سنبينُ بعدَ قليلٍ.</p>
+  <p><b>أولًا: لامُ الجحودِ</b>: هي لامٌ لا بدَّ وأن تُسبَقَ <b>بعلامةٍ لفظيّةٍ وهي كونٌ منفيٌّ</b> — يعني الفعلُ «كانَ» منفيًّا، سواءٌ كانَ الماضي أو المضارعَ، المهمُّ أن يكونَ منفيًّا؛ ففيها إذًا <b>شرطانِ</b>: الأولُ أن تُسبَقَ بكونٍ، والثاني أن يكونَ هذا الكونُ <b>منفيًّا</b>. مثالُها:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَمَا كَانَ اللَّهُ لِيُضِيعَ إِيمَانَكُمْ﴾<span class="ref">سورةُ البقرةِ: ١٤٣</span></p>
+  </div>
+  <p>«وما كان اللهُ <span class="mark">ليضيعَ</span> إيمانَكم»: هنا الفعلُ «يضيعَ» قبله اللامُ — وقد يختلطُ الأمرُ ونظنُّ أنَّ هذه اللامَ لامُ التعليلِ؛ لكنَّ <b>العلامةَ الشكليةَ</b> كما قلتُ هي أن ننظرَ قبلَها: <b>هل هي مسبوقةٌ بكونٍ منفيٍّ؟</b> إن كانَ الأمرُ كذلك فهي لامُ الجحودِ التي معنا، وينصبُ الفعلُ المضارعُ بعدَها بأنْ مضمرةٍ وجوبًا. فكيف نُعرِبُ الفعلَ «ليضيعَ»؟ اللامُ نفسُها حرفٌ من حروفِ المعاني <b>مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ</b>، و<span class="mark">«يضيعَ»</span> هو <b>فعلٌ مضارعٌ منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ لامِ الجحودِ</b> وعلامةُ نصبِه الفتحةُ الظاهرةُ، والفاعلُ ضميرٌ مستترٌ تقديرُه «هو» يعودُ على اللهِ — على لفظِ الجلالةِ.</p>
+
+  <h3 id="s5c">وجوبًا (٢): حتى الغائيّةُ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالُوا لَن نَّبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ﴾<span class="ref">سورةُ طه: ٩١</span></p>
+  </div>
+  <p>الشاهدُ في قولِه «<span class="mark">حتى يرجعَ</span> إلينا موسى»: «حتى» حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ — يقولونَ <b>حرفُ غايةٍ</b>؛ وحتى إذا كانتْ دالّةً على الغايةِ فهي أيضًا <b>من حروفِ الجرِّ</b>؛ ولذلك يشترطُ في الفعلِ المضارعِ بعدَها أن يكونَ منصوبًا بأنْ مضمرةٍ <b>حتى يُؤوَّلَ مع «أنْ» هذه إلى مصدرٍ يكونُ مجرورًا بحتى</b>. فخلاصةُ القولِ أنَّ حتى <b>حرفُ غايةٍ وجرٍّ</b> مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، ولذلك هي <b>لا تنصبُ الفعلَ المضارعَ</b> بعدَها لأنها ليست حرفَ نصبٍ — هي حرفُ جرٍّ — أما الناصبُ بعدَها للفعلِ المضارعِ فهو <b>أنْ المضمرةُ وجوبًا</b> (يعني لا يمكنُ أن تظهرَ). فهنا «يرجعَ» فعلٌ مضارعٌ <b>منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ حتى وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، والفاعلُ هو «موسى»: حتى يرجعَ إلينا موسى — طبعًا «موسى» هنا <b>فاعلٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ المقدَّرةُ على الألفِ للتعذُّرِ</b>، و«إلينا»: إلى حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و«نا» ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ جرٍّ اسمٌ مجرورٌ بإلى</b>.</p>
+
+  <h3 id="s5d">وجوبًا (٣): فاءُ السببيّةِ والطلباتُ الثمانيةُ</h3>
+  <p>ثم الحرفُ الثالثُ من الحروفِ التي ينصبُ الفعلُ المضارعُ بعدَها بأنْ مضمرةٍ وجوبًا هو <b>فاءُ السببيّةِ</b>؛ يأتي بعدَها الفعلُ المضارعُ منصوبًا بأنْ مضمرةٍ وجوبًا. فما علامةُ الفاءِ السببيّةِ — التي تكونُ للسببِ؟ طبعًا الفاءُ أنواعٌ في اللغةِ العربيةِ، لكنْ فاءَ السببيّةِ لها <b>علامةٌ شكليّةٌ وهي أن تُسبَقَ بنفيٍ أو طلبٍ</b>؛ والطلبُ أمورٌ عدّةٌ تصلُ إلى <b>ثمانيةٍ</b>: منها <b>الأمرُ</b>، ومنها <b>الدعاءُ</b>، ومنها <b>النهيُ</b>، ومنها <b>الاستفهامُ</b>، ومنها <b>العرضُ أو التحضيضُ</b>، ثم <b>التمنّي أو الترجّي</b>. وهناك شاهدٌ من القرآنِ الكريمِ على نصبِ الفعلِ المضارعِ بعدَ فاءِ السببيّةِ بأنْ مضمرةٍ وجوبًا هو قولُه تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قَالُوا لَوْ أَنَّ لَنَا كَرَّةً فَنَكُونَ مِنَ الْمُؤْمِنِينَ﴾<span class="ref">سورةُ الشعراءِ: ١٠٢</span></p>
+  </div>
+  <p>«فلو أنَّ لنا كرةً <span class="mark">فنكونَ</span> من المؤمنينَ»: هنا هذه الفاءُ هي <b>فاءُ السببيّةِ</b> في قولِه «فنكونَ»؛ كيف عرفتُ هذا؟ عرفتُه <b>لأنها مسبوقةٌ بتمنٍّ وهو «لو»</b>: لأنَّ «لو» هنا تفيدُ معنى التمنّي — فهي ليست «لو» المعروفةَ الشرطيّةَ وإنما هي «لو» التي تفيدُ معنى التمنّي — يعني هم يتمنَّونَ أن تكونَ لهم كرةٌ، ثم قالوا «فنكونَ من المؤمنينَ». فـ«فنكونَ» هنا: الفاءُ فاءُ السببيّةِ <b>حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ</b>، والفعلُ المضارعُ بعدَها «نكونَ» <b>منصوبٌ بأنْ مضمرةٍ وجوبًا وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، والفاعلُ ضميرٌ مستترٌ تقديرُه «نحنُ». فهذا مثالٌ أو شاهدٌ على الجوابِ بفاءِ السببيّةِ، والفعلُ المضارعُ بعدَها يكونُ منصوبًا بأنْ مضمرةٍ وجوبًا، وهي تكونُ مسبوقةً بطلبٍ — والطلبُ هنا في هذه الآيةِ الكريمةِ كان <b>تمنّيًا</b>.</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">الأمرُ</div><div class="n-sub">﴿ولا تطغوا فيه فيحلَّ عليكم غضبي﴾</div></div>
+      <div class="node green"><div class="n-title">الدعاءُ</div><div class="n-sub">«ربِّ وفِّقْني فلا أعدلَ عن سننِ الساعينَ»</div></div>
+      <div class="node green"><div class="n-title">النهيُ</div><div class="n-sub">«لا تقصصْ رؤياك على إخوتِك فيكيدوا لك كيدًا»</div></div>
+      <div class="node green"><div class="n-title">الاستفهامُ</div><div class="n-sub">«ألمْ أكُ جارَكم ويكونَ بيني وبينكم المودةُ والإخاءُ»</div></div>
+      <div class="node green"><div class="n-title">العرضُ والتحضيضُ</div><div class="n-sub">«هلاّ» و«لولا» و«ألّا» في الطلبِ برفقٍ أو حثٍّ</div></div>
+      <div class="node green"><div class="n-title">التمنّي</div><div class="n-sub">﴿فلو أنَّ لنا كرةً فنكونَ من المؤمنينَ﴾ — و«ليتَ» و«لو» التمنّيّةُ</div></div>
+      <div class="node green"><div class="n-title">الترجّي</div><div class="n-sub">«لعلَّ» و«عسى» في طلبِ الأمرِ المرجوِّ</div></div>
+      <div class="node green"><div class="n-title">النفيُ (مع الطلبِ)</div><div class="n-sub">﴿حتى لا تكونَ فتنةٌ﴾ — ويُشترطُ النفيُ أو أحدُ الطلباتِ الثمانيةِ قبلَ الفاءِ والواوِ</div></div>
+    </div>
+    <div class="dcap">شكل (٣): الطلباتُ الثمانيةُ (ومعها النفيُ) التي تُسبِقُ فاءَ السببيّةِ وواوَ المعيّةِ</div>
+  </figure>
+
+  <h3 id="s5e">وجوبًا (٤): واوُ المعيّةِ — وفرقُها عن واوِ المفعولِ معه</h3>
+  <p>مثلُها أيضًا الجوابُ بـ<b>واوِ المعيّةِ</b>: واوُ المعيّةِ أيضًا فيها الشرطُ نفسُه الذي ذكرناه في فاءِ السببيّةِ، وهو أن تُسبَقَ <b>بنفيٍ أو بطلبٍ</b> — أحدِ الأمورِ الثمانيةِ التي ذكرناها (الأمرِ أو الدعاءِ أو النهيِ أو الاستفهامِ أو العرضِ أو التحضيضِ أو التمنّي أو الترجّي). وواوُ المعيّةِ تكونُ <b>بمعنى «مع»</b> وتسبقُ الفعلَ المضارعَ فيكونُ منصوبًا بعدَها بأنْ مضمرةٍ وجوبًا. ومثالُها قولُ الشاعرِ <b>أبي الأسودِ الدؤليِّ</b> — مؤسِّسِ علمِ العربيّةِ رحمه اللهُ ورضي عنه — وله مقطوعةٌ مشهورةٌ يقولُ فيها:</p>
+
+  <div class="box matn">
+    <span class="tag">شاهدٌ شعريٌّ — لأبي الأسودِ الدؤليِّ</span>
+    <div class="poem">
+      <div class="ln">يا أيُّها الرجلُ المعلِّمُ غيرَهُ … هلا لنفسِك كان ذا التعليمُ</div>
+      <div class="ln">ابدأ بنفسِك فانهَها عن غيِّها … فإذا انتهتْ عنه فأنتَ حكيمُ</div>
+      <div class="ln">هناك يُسمِعُ ما تقولُ وتشتفي … بالقولِ منه وينفعُ التعليمُ</div>
+      <div class="ln">لا تنهَ عن خُلُقٍ وتأتي مثلَهُ … عارٌ عليك إذا فعلتَ عظيمُ</div>
+    </div>
+    <p class="src">— الشاهدُ في البيتِ الأخيرِ: «لا تنهَ عن خلقٍ وتأتِ مثله»</p>
+  </div>
+  <p>«<span class="mark">لا تنهَ</span> عن خلقٍ <span class="mark">وتأتِ</span> مثله»: «لا تنهَ» هذا نهيٌ بـ«لا» الناهيةِ: «تنهَ» فعلٌ مضارعٌ <b>مجزومٌ بلا الناهيةِ وعلامةُ جزمِه حذفُ حرفِ العلةِ</b> لأنه معتلُّ الآخرِ — إذًا هذا <b>طلبٌ</b> لأنه نهيٌ، طيبْ، والنهيُ طلبٌ؛ ثم بعدَ ذلك قالَ «لا تنهَ عن خلقٍ <b>وتأتِ</b> مثله» يعني <b>مع إتيانِك إياه</b>؛ فها هنا الواوُ <b>بمعنى «مع» وهي واوُ المعيّةِ</b>، ويكونُ الفعلُ المضارعُ منصوبًا بعدَها بأنْ مضمرةٍ وجوبًا: فإذا أردنا أن نُعرِبَ «وتأتِ مثله»: الواوُ واوُ المعيّةِ <b>حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ</b>، و<span class="mark">«تأتي»</span> فعلٌ مضارعٌ <b>منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ واوِ المعيّةِ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، والفاعلُ ضميرٌ مستترٌ تقديرُه «أنتَ».</p>
+
+  <div class="box note">
+    <span class="tag">تنبيهٌ مهمٌّ: واوُ المعيّةِ ≠ واوُ المفعولِ معه</span>
+    <p style="margin:0"><b>واوُ المعيّةِ</b> — كما رأينا — تُسبَقُ بطلبٍ أو نفيٍ، ويكونُ بعدَها <b>فعلٌ مضارعٌ منصوبٌ بأنْ مضمرةٍ وجوبًا</b>؛ لكنْ <b>واوَ المفعولِ معه</b> يكونُ بعدَها <b>اسمٌ</b> وقبلَها فعلٌ عاديٌّ — وقد يكونُ ماضيًا أو مضارعًا أو أمرًا — ولكنْ بعدَ الواوِ اسمٌ يكونُ <b>منصوبًا على المفعوليّةِ نسمِّيهِ «المفعولَ معه»</b>؛ كما تقولُ مثلًا: <span class="mark">«سرتُ والنيلَ»</span>، <span class="mark">«استيقظتُ والصبحَ»</span>: فها هنا «النيلُ» و«الصبحُ» منصوبانِ بعدَ الواوِ <b>منصوبٌ على المفعوليّةِ نسميهِ المفعولَ معه</b>؛ فهناك فرقٌ بين واوِ المفعولِ معه التي تسبقُ الاسمَ، وواوِ المعيّةِ التي تسبقُ الفعلَ المضارعَ ويكونُ الفعلُ المضارعُ بعدَها منصوبًا بأنْ مضمرةٍ وجوبًا.</p>
+  </div>
+
+  <h3 id="s5f">وجوبًا (٥): أوْ بمعنى «إلّا» أو «إلى أنْ»</h3>
+  <p>آخرُ حرفٍ ناصبٍ من النواصبِ التي ينصبُ المضارعُ بعدَها بأنْ مضمرةٍ وجوبًا هو <span class="mark">«أوْ»</span> — والمقصودةُ هنا <b>التي بمعنى «إلّا» أو بمعنى «إلى أنْ»</b>؛ يُشترطُ فيها أن تكونَ بمعنًى من هذَينِ المعنيَينِ أو بأحدِ هذَينِ المعنيَينِ. وطبعًا الفرقُ بينهما أنَّ <b>ما بعدَ «إلّا» ينقضي دفعةً واحدةً</b> — يكونُ فعلًا يحدثُ دفعةً واحدةً، يعني لا يتدرَّجُ فيه — وأما <b>«إلى أنْ» فما بعدَها يتدرَّجُ</b>. وكمثلٍ لذلك قولُ الإمامِ الشافعيِّ — المنسوبُ للإمامِ الشافعيِّ رحمه اللهُ:</p>
+
+  <div class="box matn">
+    <span class="tag">شاهدٌ شعريٌّ — منسوبٌ للإمامِ الشافعيِّ</span>
+    <div class="poem">
+      <div class="ln">سأضربُ في طولِ البلادِ وعرضِها … أنالُ مرادي أوْ أموتَ غريبًا</div>
+      <div class="ln">فإنْ تلفتْ نفسي فللهِ درُّها … وإنْ سلِمَتْ كانَ الرجوعُ قريبًا</div>
+    </div>
+  </div>
+  <p>الشاهدُ عندي في قولِه «<span class="mark">أوْ أموتَ</span> غريبًا»: «أوْ» هنا <b>بمعنى «إلّا أنْ أموتَ»</b> — يعني سأحقِّقُ مرادي <b>إلا إذا كانتِ الوفاةُ</b> وكانَ الموتُ؛ فساعةَ إذٍ يكونُ لي العذرُ. فالشاهدُ فيه «أو أموتَ»: «أوْ» هنا بمعنى «إلّا»، <b>نُصِبَ الفعلُ المضارعُ بعدَها بأنْ مضمرةٍ وجوبًا</b>؛ فنقولُ في إعرابِه: «أموتَ» <b>فعلٌ مضارعٌ منصوبٌ بعدَ «أوْ» بأنْ مضمرةٍ وجوبًا</b> وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه، والفاعلُ ضميرٌ مستترٌ تقديرُه «أنا».</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦ التطبيقات ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>التطبيقاتُ والشواهدُ</h2></div>
+
+  <p>بهذا نكونُ قد أنهينا تفصيلَ القولِ في نواصبِ الفعلِ المضارعِ نظريًّا. ننتقلُ الآن إلى بعضِ التطبيقاتِ التي نُثبِّتُ بها القواعدَ التي ذكرناها في أنفسِنا:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَالَّذِي أَطْمَعُ أَن يَغْفِرَ لِي خَطِيئَتِي يَوْمَ الدِّينِ﴾</span> [الشعراءِ: ٨٢] — هنا الفعلُ «يغفرَ»: هل هو مضارعٌ مرفوعٌ وعلامةُ رفعِه الفتحةُ، أم هو مضارعٌ منصوبٌ وعلامةُ نصبِه الفتحةُ، أم فعلٌ ماضٍ مبنيٌّ على الفتحِ لأنه قالَ «يغفرَ»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>فعلٌ مضارعٌ منصوبٌ</b> لأنه مسبوقٌ <b>بأنْ المصدريّةِ</b>؛ وأنْ المصدريّةُ — كما قلتُ — هي <b>أمُّ البابِ</b>؛ <b>وعلامةُ نصبِه طبعًا الفتحةُ الظاهرةُ على آخرِه</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قالَ قائلٌ: «سأزورُكَ»، فأجابهُ المجيبُ فقالَ: «إذنْ أكرمَكَ» — الفعلُ «أكرمَكَ» هنا: هل هو مضارعٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ، أم مضارعٌ منصوبٌ وعلامةُ نصبِه الفتحةُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو بعدَ «إذنْ»، وإذنْ <b>حرفُ جوابٍ وجزاءٍ ونصبٍ</b> ينصبُ الفعلَ المضارعَ بعدَها <b>بشروطِها</b> التي قلناها: أن تكونَ هي في <b>صدرِ الجوابِ</b>، وأن يكونَ الفعلُ المضارعُ بعدَها <b>دالًّا على الاستقبالِ</b>، وألّا يُفصَلَ بينها وبين الفعلِ المضارعِ بفاصلٍ <b>إلا بالقسمِ أو النداءِ أو «لا» النافيةِ</b>. طبعًا هنا انطبقتْ عليها الشروطُ: فهي في صدرِ الجوابِ وليسَ بينها وبين الفعلِ المضارعِ فاصلٌ والفعلُ دالٌّ على المستقبلِ؛ فإذا هو <b>فعلٌ مضارعٌ منصوبٌ بإذنْ</b> وهي من النواصبِ بنفسِها.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلنا: «ذاكروا كي تنجحوا» — الفعلُ هنا «تنجحوا»: هل هو منصوبٌ وعلامةُ نصبِه الفتحةُ، أم منصوبٌ وعلامةُ نصبِه حذفُ النونِ، أم مرفوعٌ وعلامةُ رفعِه الضمّةُ على الحاءِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو مسبوقٌ بكي: «ذاكروا كي تنجحوا»؛ فـ«كي» هنا هي <b>الناصبةُ بنفسِها</b>، و<span class="mark">«تنجحوا»</span> فعلٌ مضارعٌ <b>منصوبٌ بكي وعلامةُ نصبِه حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ — لأنَّ فيه واوَ جماعةٍ، وكلُّ فعلٍ مضارعٍ كانَ فيه واوُ جماعةٍ فهو من الأمثلةِ الخمسةِ؛ وطبعًا واوُ الجماعةِ هي الفاعلُ: <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَمَا كَانَ اللَّهُ لِيُطْلِعَكُمْ عَلَى الْغَيْبِ﴾</span> [آل عمرانَ: ١٧٩] — الفعلُ «يطلعَ» هو مضارعٌ: هل هو منصوبٌ أم مجزومٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا واضحٌ هنا أنه مسبوقٌ بلامٍ؛ فما هذه اللامُ؟ انظرْ قبلَها: هي مسبوقةٌ بقولِه <b>«ما كانَ»</b> — إذًا مسبوقةٌ <b>بكونٍ منفيٍّ</b>؛ فهذا دليلٌ على أنَّ هذه اللامَ ليست هي لامَ التعليلِ وإنما هي <b>لامُ الجحودِ</b>؛ ولامُ الجحودِ — كما ذكرنا — ينصبُ الفعلُ المضارعُ بعدَها <b>بأنْ مضمرةٍ وجوبًا</b>؛ فنقولُ: <span class="mark">«يطلعَ»</span> فعلٌ مضارعٌ منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ لامِ الجحودِ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَلَا تَطْغَوْا فِيهِ فَيَحِلَّ عَلَيْكُمْ غَضَبِي﴾</span> [طه: ٨١]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا الفعلُ المضارعُ المنصوبُ هو <span class="mark">«يحلَّ»</span>، وهو مسبوقٌ بفاءٍ؛ هذه الفاءُ هي <b>فاءُ السببيّةِ</b> — وكيف عرفتُ أنها فاءُ السببيّةِ؟ أنها مسبوقةٌ <b>بطلبٍ وهو النهيُ</b> في قولِه «ولا تطغوا فيه»؛ «فيحلَّ» هنا فعلٌ مضارعٌ <b>منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ فاءِ السببيّةِ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِ الشاعرِ: «ألمْ أكُ جارَكم ويكونَ بيني وبينكم المودةُ والإخاءُ»:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا الفعلُ <span class="mark">«يكونَ»</span> هو الفعلُ المضارعُ المنصوبُ بعدَ <b>واوِ المعيّةِ</b> — طبعًا بأنْ مضمرةٍ وجوبًا: يعني «يكونَ» فعلٌ مضارعٌ منصوبٌ بعدَ واوِ المعيّةِ بأنْ مضمرةٍ وجوبًا وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. طيبْ كيف عرفتَ أنَّ هذه الواوَ واوُ المعيّةِ وليست واوَ العطفِ؟ <b>أنها سُبِقَتْ باستفهامٍ وسُبِقَتْ بنفيٍّ أيضًا</b>: «ألمْ أكُ جارَكم» — فالاستفهامُ طلبٌ، والنفيُ أيضًا من <b>الضوابطِ أو المعاييرِ التي بناءً عليها نحكمُ على هذه الواوِ بأنها واوُ المعيّةِ</b> وينصبُ الفعلُ المضارعُ بعدَها بأنْ مضمرةٍ وجوبًا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>وفي قولِه تعالى: <span class="ayq">﴿وَمَا كَانَ الْمُؤْمِنُونَ لِيَنفِرُوا كَافَّةً﴾</span> [التوبةِ: ١٢٢] — أريدُ أن أُحدِّدَ هذه اللامَ: هل هي لامُ التعليلِ أم لامُ الجحودِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>كما قلتُ هناك <b>علامةٌ شكليّةٌ للامِ الجحودِ: هي أن تُسبَقَ بكونٍ منفيٍّ</b>؛ طبعًا الآيةُ في بدايتِها هنا قالَ: «وما كانَ المؤمنونَ لينفروا كافّةً» — فها هنا مسبوقةٌ <b>بكونٍ منفيٍّ</b>؛ فدليلٌ على أنها <b>لامُ الجحودِ</b>؛ والفعلُ <span class="mark">«ينفروا»</span> هنا هو فعلٌ مضارعٌ منصوبٌ <b>بأنْ مضمرةٍ وجوبًا بعدَ لامِ الجحودِ وعلامةُ نصبِه حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ — وواوُ الجماعةِ فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ — وطبعًا «كافّةً» <b>حالٌ منصوبةٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَإِذْ قُلْتُمْ يَا مُوسَىٰ لَن نُّؤْمِنَ لَكَ حَتَّىٰ نَرَى اللَّهَ جَهْرَةً﴾</span> [البقرةِ: ٥٥] — كم فعلًا مضارعًا منصوبًا في هذه الآيةِ الكريمةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندنا فعلانِ: الأولُ <b>«لن نؤمنَ»</b> والثاني <b>«حتى نرى»</b>:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li>طبعًا <span class="mark">«نؤمنَ»</span> فعلٌ مضارعٌ <b>منصوبٌ بلنْ</b> — لأنَّ «لنْ» من النواصبِ بنفسِها مباشرةً — <b>وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، وطبعًا الفاعلُ ضميرٌ مستترٌ تقديرُه «نحنُ» (وأنا أحرصُ على إعرابِ الفاعلِ لأنَّ كلَّ فعلٍ لا بدَّ له من فاعلٍ، فإذا ذكرتُ الفعلَ فلا بدَّ أن أذكرَ الفاعلَ).</li>
+        <li>وفي قولِه «<span class="mark">حتى نرى</span> اللهَ جهرةً»: هنا «حتى» — كما قلتُ أيضًا — <b>حرفُ غايةٍ</b> من الحروفِ التي ينصبُ الفعلُ المضارعُ بعدَها بأنْ مضمرةٍ وجوبًا؛ فحتى حرفُ غايةٍ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<span class="mark">«نرى»</span> فعلٌ مضارعٌ منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ حتى <b>وعلامةُ نصبِه الفتحةُ المقدَّرةُ على الألفِ للتعذُّرِ</b> — لأنه منتهٍ طبعًا معتلُّ الآخرِ بالألفِ — والفاعلُ ضميرٌ مستترٌ تقديرُه «نحنُ» (نرى: نحنُ)، و«اللهَ» لفظُ الجلالةِ <b>مفعولٌ به منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿يَا بُنَيَّ لَا تَقْصُصْ رُؤْيَاكَ عَلَىٰ إِخْوَتِكَ فَيَكِيدُوا لَكَ كَيْدًا﴾</span> [يوسفَ: ٥]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا «<span class="mark">فيكيدوا</span>»: لأنها سُبِقَتْ بطلبٍ وهو <b>النهيُ</b> — نهيُ يعقوبَ عليه السلامُ لابنِه يوسفَ بـ«لا تقصُصْ» على إخوتِه رؤياه؛ قال «يا بُنيَّ لا تقصصْ رؤياك على إخوتك فيكيدوا»؛ <b>الفاءُ هنا فاءُ السببيّةِ: حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ</b>، و<span class="mark">«يكيدوا»</span> فعلٌ مضارعٌ <b>منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ فاءِ السببيّةِ، وعلامةُ نصبِه هنا حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ — وعلامةُ ذلكَ أنَّ فيه واوَ الجماعةِ، وكلَّ فعلٍ مضارعٍ اتصلتْ به واوُ الجماعةِ فهو من الأمثلةِ الخمسةِ (الأفعالِ الخمسةِ)، وواوُ الجماعةِ هي الفاعلُ — ودائمًا الأمثلةُ الخمسةُ — كما قلتُ — <b>فاعلُها فيها وهو الضميرُ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿هَارُونَ أَخِي * اشْدُدْ بِهِ أَزْرِي * وَأَشْرِكْهُ فِي أَمْرِي * كَيْ نُسَبِّحَكَ كَثِيرًا * وَنَذْكُرَكَ كَثِيرًا﴾</span> [طه: ٣٠–٣٤]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا الفعلُ المضارعُ <span class="mark">«نسبِّحَكَ»</span> هو فعلٌ مضارعٌ <b>منصوبٌ بكي</b> — و«كي» من الأدواتِ (النواصبِ) التي تنصبُ المضارعَ <b>بنفسِها</b>؛ وطبعًا هي هنا <b>بتقديرِ لامِ التعليلِ قبلَها</b>: يعني التقديرُ «<b>لكي</b> نسبِّحَكَ كثيرًا» — حتى تفيدَ معنى التعليلِ وتكونَ «كي» هي الناصبةَ مباشرةً. وطبعًا <b>الكافُ في «نسبِّحَكَ» ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ نصبٍ مفعولٌ به</b>؛ وهذه الكافُ — دائمًا هي والهاءُ (هاءُ الغائبِ) وياءُ المتكلمِ — إذا اتصلتْ بأيِّ فعلٍ فهي <b>في محلِّ نصبٍ مفعولٌ به</b>، وإذا اتصلتْ بأيِّ اسمٍ فهي <b>في محلِّ جرٍّ مضافٌ إليه</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَقَاتِلُوهُمْ حَتَّىٰ لَا تَكُونَ فِتْنَةٌ وَيَكُونَ الدِّينُ لِلَّهِ﴾</span> [البقرةِ: ١٩٣]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا «حتى لا تكونَ فتنةٌ»: «حتى» هي <b>الغائيّةُ المعروفةُ</b>، ويكونُ الفعلُ المضارعُ بعدَها منصوبًا <b>بأنْ مضمرةٍ وجوبًا</b>؛ وطبعًا «لا» هنا <b>نافيةٌ لا عملَ لها</b> — لكنها طبعًا تفيدُ النفي — <b>حرفٌ مبنيٌّ على السكونِ لا محلَّ لها من الإعرابِ</b>؛ و<span class="mark">«تكونَ»</span> فعلٌ مضارعٌ <b>منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ حتى وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، و«فتنةٌ» هي فاعلٌ للفعلِ «تكونُ» — <b>تكونُ هنا تامّةٌ وليست ناقصةً</b> — يعني.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِ الشاعرِ: «لأستسهلنَّ الصعبَ أو أدركَ المنى … فمن قادتِ الآمالُ إلا لصابرِ»:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا نحنُ قلنا إنَّ <b>«أوْ» ينصبُ الفعلَ المضارعَ بعدَها بشرطِ أن تكونَ بمعنى «إلّا» أو بمعنى «إلى أنْ»</b>، وقلنا إنَّ الفرقَ بين المعنيَينِ أن يكونَ ما بعدَ «إلّا» ينقضي دفعةً واحدةً — فساعةَ إذٍ تكونُ هي بمعنى «إلّا» — وإذا كانَ ينقضي تدرُّجًا فتكونُ بمعنى «إلى أنْ». هنا طبعًا: «لأستسهلنَّ الصعبَ أو أدركَ المنى» — <b>إدراكُ المنى يكونُ متدرِّجًا ولا يُؤتَى دفعةً واحدةً</b>، فبناءً على هذا تكونُ «أوْ» <b>بمعنى «إلى أنْ»</b>؛ وطبعًا في النهايةِ العملُ واحدٌ — يعني سواءٌ كانتْ بمعنى «إلّا» أو بمعنى «إلى أنْ»، في النهايةِ سيكونُ الفعلُ المضارعُ بعدَها منصوبًا بأنْ مضمرةٍ وجوبًا، كما هو الحالُ هنا: <span class="mark">«أو أدركَ»</span> — «أدركَ» فعلٌ مضارعٌ <b>منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ «أوْ» وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، والفاعلُ ضميرٌ مستترٌ تقديرُه «أنا»، و«المنى» مفعولٌ به منصوبٌ وعلامةُ نصبِه الفتحةُ المقدَّرةُ على الألفِ للتعذُّرِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَلَوْ تَرَىٰ إِذْ وُقِفُوا عَلَى النَّارِ فَقَالُوا يَا لَيْتَنَا نُرَدُّ وَلَا نُكَذِّبَ بِآيَاتِ رَبِّنَا﴾</span> [الأنعامِ: ٢٧]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا «<span class="mark">ولا نكذِّبَ</span>»: الواوُ هي <b>واوُ المعيّةِ</b>؛ ما دليلُ ذلك؟ دليلُ ذلك أنها سُبِقَتْ <b>بطلبٍ، وهذا الطلبُ هو التمنّي</b> حينَ قالوا «يا ليتنا نُرَدُّ» — هذا تمنٍّ — بعده واوُ المعيّةِ؛ ومن ثَمَّ يكونُ الفعلُ المضارعُ <span class="mark">«نكذِّبَ»</span> بعدَها <b>منصوبًا بأنْ مضمرةٍ وجوبًا بعدَ واوِ المعيّةِ</b>؛ وطبعًا «لا» نافيةٌ: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِ الشاعرِ: «ربِّ وفِّقْني فلا أعدلَ عن سننِ الساعينَ في خيرِ سننْ»:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا الشاهدُ عندي في قولِه «<span class="mark">فلا أعدلَ</span>»: الفاءُ هنا <b>للسببيّةِ</b>؛ كيف عرفتَ؟ أنها سُبِقَتْ بطلبٍ: هو <b>النداءُ</b> («ربِّ») وسُبِقَتْ بالأمرِ أيضًا «وفِّقْني» — أو دعاءٍ يعني. فـ«فلا أعدلَ»: الفاءُ فاءُ السببيّةِ <b>حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ</b>، و«لا» نافيةٌ حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<span class="mark">«أعدلَ»</span> فعلٌ مضارعٌ <b>منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ فاءِ السببيّةِ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، والفاعلُ ضميرٌ مستترٌ تقديرُه «أنا».</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أيضًا في قولِه تعالى: <span class="ayq">﴿مَّا كَانَ اللَّهُ لِيَذَرَ الْمُؤْمِنِينَ عَلَىٰ مَا أَنتُمْ عَلَيْهِ حَتَّىٰ يَمِيزَ الْخَبِيثَ مِنَ الطَّيِّبِ﴾</span> [آل عمرانَ: ١٧٩] — هنا فعلانِ مضارعانِ منصوبانِ:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هما <b>«ليذرَ»</b> و<b>«حتى يميزَ»</b> — يميزَ:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li>طبعًا <span class="mark">«يذرَ»</span> مسبوقٌ باللامِ؛ هل هذه اللامُ للتعليلِ أم هي لامُ الجحودِ؟ ننظرُ قبلَها: إذا كانتْ مسبوقةً <b>بكونٍ منفيٍّ فهي لامُ الجحودِ</b> — وهذا هو الحاصلُ هنا: هي سُبِقَتْ بقولِه «ما كانَ اللهُ» إذًا هي <b>لامُ الجحودِ</b>؛ والفعلُ المضارعُ بعدَها منصوبٌ <b>بأنْ مضمرةٍ وجوبًا</b>. طبعًا <b>لو كانتْ لامَ التعليلِ</b> — لو كانتْ لامَ التعليلِ — فسيكونُ الفعلُ المضارعُ بعدَها منصوبًا <b>بأنْ مضمرةٍ جوازًا</b>؛ وقلنا إنَّ لامَ التعليلِ هي <b>الوحيدةَ</b> التي ينصبُ الفعلُ المضارعُ بعدَها بأنْ مضمرةٍ جوازًا.</li>
+        <li>و<span class="mark">«يميزَ»</span>: فعلٌ مضارعٌ منصوبٌ <b>بأنْ مضمرةٍ وجوبًا بعدَ حتى</b>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِ النبيِّ ﷺ: <span class="ayq">«لا يؤمنُ أحدُكم حتى يحبَّ لأخيهِ ما يحبُّ لنفسِه»</span>:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>أينَ الشاهدُ هنا على الفعلِ المضارعِ المنصوبِ؟ طبعًا <span class="mark">«حتى يحبَّ»</span>: منصوبٌ بعدَ حتى <b>بأنْ مضمرةٍ وجوبًا وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، وفاعلُه ضميرٌ مستترٌ تقديرُه «هو».</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِ الشاعرِ: «لا تحسبِ المجدَ تمرًا أنتَ آكلُهُ … لن تبلغَ المجدَ حتى تلعقَ الصبرا»:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا الفعلُ <span class="mark">«تبلغَ»</span> منصوبٌ <b>بلنْ</b> وهي من النواصبِ بنفسِها، ثم «حتى تلعقَ»: هو فعلٌ مضارعٌ — <span class="mark">«تلعقَ»</span> — <b>منصوبٌ بأنْ مضمرةٍ وجوبًا بعدَ حتى</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِ الشاعرِ: «وكنتُ إذا غمزتُ قناةَ قومٍ … كسرتُ كعوبَها أو تستقيمَا»:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا <b>«أوْ» بمعنى «إلى أنْ»</b> تستقيمَ؛ طبعًا يكونُ الفعلُ المضارعُ بعدَها منصوبًا <b>بأنْ مضمرةٍ وجوبًا</b>؛ ولذلك قالَ <span class="mark">«تستقيمَ»</span>، والفاعلُ ضميرٌ مستترٌ تقديرُه «هي» — تستقيمُ هي — يعني الكعوبَ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَمَا كَانَ رَبُّكَ لِيُهْلِكَ الْقُرَىٰ بِظُلْمٍ وَأَهْلُهَا مُصْلِحُونَ﴾</span> [هود: ١١٧] — أينَ الشاهدُ هنا على نصبِ الفعلِ المضارعِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>قولُه <span class="mark">«ليهلكَ»</span>: أيضًا هو مسبوقٌ <b>بكونٍ منفيٍّ</b> («ما كانَ ربُّكَ»)؛ فتكونُ اللامُ هنا هي <b>لامَ الجحودِ</b> — والفعلُ بعدها منصوبٌ <b>بأنْ مضمرةٍ وجوبًا</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ﴾</span> [آل عمرانَ: ٩٢]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا أيضًا فعلانِ مضارعانِ منصوبانِ <b>وهما من الأمثلةِ الخمسةِ</b>: الفعلُ <span class="mark">«تنالوا»</span> منصوبٌ <b>بلنْ</b>، والفعلُ <span class="mark">«تنفقوا»</span> منصوبٌ <b>بعدَ حتى بأنْ مضمرةٍ وجوبًا</b>؛ وطبعًا علامةُ النصبِ في كلٍّ منهما هي <b>حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ (الأفعالِ الخمسةِ).</div>
+  </div>
+
+  <h3 id="t63">الجدولُ التلخيصيُّ للتطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الشاهدُ</th><th>الفعلُ المنصوبُ</th><th>الناصبُ</th><th>نوعُه</th><th>علامةُ النصبِ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>﴿أطمع أن يغفر لي خطيئتي يوم الدين﴾</td><td>يغفرَ</td><td>أنْ المصدريّةُ</td><td>ناصبٌ بنفسِه</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«إذنْ أكرمَكَ»</td><td>أكرمَ</td><td>إذنْ (بشروطِها)</td><td>ناصبٌ بنفسِه</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«ذاكروا كي تنجحوا»</td><td>تنجحوا</td><td>كي</td><td>ناصبٌ بنفسِه</td><td>حذفُ النونِ</td></tr>
+        <tr><td>﴿كي نسبِّحَك كثيرًا﴾ (التقدير: لكي)</td><td>نسبِّحَ</td><td>كي (بتقديرِ لامِ التعليلِ)</td><td>ناصبٌ بنفسِه</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿لن نبرحَ عليه عاكفينَ﴾ / ﴿لن تنالوا البرَّ﴾</td><td>نبرحَ / تنالوا</td><td>لنْ</td><td>ناصبٌ بنفسِه</td><td>الفتحةُ / حذفُ النونِ</td></tr>
+        <tr><td>﴿قالوا أجئتنا لنعبدَ اللهَ وحدَه﴾</td><td>نعبدَ</td><td>لامُ التعليلِ (لامُ كي) — «لأنْ نعبدَ» = «للعبادةِ»</td><td>أنْ مضمرةٌ <b>جوازًا</b></td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿وما كان اللهُ ليضيعَ إيمانَكم﴾</td><td>يضيعَ</td><td>لامُ الجحودِ (بعدَ «ما كانَ»)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿وما كان اللهُ ليطلعَكم على الغيبِ﴾</td><td>يطلعَ</td><td>لامُ الجحودِ</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿وما كان المؤمنونَ لينفروا كافّةً﴾</td><td>ينفروا</td><td>لامُ الجحودِ</td><td>أنْ مضمرةٌ وجوبًا</td><td>حذفُ النونِ (من الأمثلةِ الخمسةِ)</td></tr>
+        <tr><td>﴿وما كان ربُّك ليهلكَ القرى بظلمٍ﴾</td><td>يهلكَ</td><td>لامُ الجحودِ</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿حتى يرجعَ إلينا موسى﴾</td><td>يرجعَ</td><td>حتى الغائيّةُ</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿حتى نرى اللهَ جهرةً﴾</td><td>نرى</td><td>حتى</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ المقدَّرةُ على الألفِ للتعذُّرِ</td></tr>
+        <tr><td>﴿وقاتلوهم حتى لا تكونَ فتنةٌ﴾ (وتكونُ هنا تامّةٌ)</td><td>تكونَ</td><td>حتى (و«لا» نافيةٌ لا عملَ لها)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«حتى يحبَّ لأخيه ما يحبُّ لنفسه» ﷺ</td><td>يحبَّ</td><td>حتى</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«لن تبلغَ المجدَ حتى تلعقَ الصبرا»</td><td>تبلغَ / تلعقَ</td><td>لنْ / حتى</td><td>بنفسِها / أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ في كلَيهما</td></tr>
+        <tr><td>﴿فلو أنَّ لنا كرةً فنكونَ من المؤمنينَ﴾</td><td>نكونَ</td><td>فاءُ السببيّةِ (مسبوقةٌ بتمنٍّ هو «لو»)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿ولا تطغوا فيه فيحلَّ عليكم غضبي﴾</td><td>يحلَّ</td><td>فاءُ السببيّةِ (مسبوقةٌ بالنهيِ)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿لا تقصصْ رؤياك على إخوتك فيكيدوا لك كيدًا﴾</td><td>يكيدوا</td><td>فاءُ السببيّةِ (مسبوقةٌ بالنهيِ)</td><td>أنْ مضمرةٌ وجوبًا</td><td>حذفُ النونِ</td></tr>
+        <tr><td>«ربِّ وفِّقْني فلا أعدلَ عن سننِ الساعينَ»</td><td>أعدلَ</td><td>فاءُ السببيّةِ (مسبوقةٌ بالنداءِ والدعاءِ)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«لا تنهَ عن خلقٍ وتأتي مثلَه» (أبو الأسودِ الدؤليُّ)</td><td>تأتي</td><td>واوُ المعيّةِ (مسبوقةٌ بالنهيِ)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«ألمْ أكُ جارَكم ويكونَ بيني وبينكم المودةُ»</td><td>يكونَ</td><td>واوُ المعيّةِ (مسبوقةٌ باستفهامٍ ونفيٍ)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>﴿يا ليتنا نُرَدُّ ولا نكذِّبَ بآياتِ ربنا﴾</td><td>نكذِّبَ</td><td>واوُ المعيّةِ (مسبوقةٌ بالتمنّي)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«أنالُ مرادي أو أموتَ غريبًا» (المنسوبُ للشافعيِّ)</td><td>أموتَ</td><td>أوْ بمعنى «إلّا»</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«لأستسهلنَّ الصعبَ أو أدركَ المنى»</td><td>أدركَ</td><td>أوْ بمعنى «إلى أنْ» (إدراكُ المنى متدرِّجٌ)</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+        <tr><td>«كسرتُ كعوبَها أو تستقيمَا»</td><td>تستقيمَ</td><td>أوْ بمعنى «إلى أنْ»</td><td>أنْ مضمرةٌ وجوبًا</td><td>الفتحةُ الظاهرةُ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧ الخلاصة ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>خلاصةُ الدرس</h2></div>
+
+  <p>بهذا نكونُ قد أنهينا الحديثَ تمامًا عن نواصبِ الفعلِ المضارعِ بتطبيقاتِه. وأُعيدُ مجملَ — أو خلاصةَ — نواصبِ الفعلِ المضارعِ: هي كما قلتُ قسمانِ: <b>نواصبُ بنفسِها</b> و<b>نواصبُ بـ«أنْ» المضمرةِ</b>:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>القسمُ</th><th>الحرفُ</th><th>معناه وشرطُه</th><th>مثالٌ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td rowspan="4"><b>ناصبٌ بنفسِه</b> (أربعةٌ)</td><td><b>أنْ</b></td><td>«أمُّ البابِ» — مصدريّةٌ ناصبةٌ: يُؤوَّلُ المضارعُ معها إلى مصدرٍ، وتخلِّصُه للاستقبالِ</td><td>﴿أنْ تعدلوا بين النساءِ﴾</td></tr>
+        <tr><td><b>لنْ</b></td><td>نفيٌ ونصبٌ واستقبالٌ: تنفي حدثَ المضارعِ في المستقبلِ وتجعلُ زمنَه خالصًا للاستقبالِ</td><td>﴿لن نبرحَ عليه عاكفينَ﴾</td></tr>
+        <tr><td><b>إذنْ</b></td><td>جوابٌ وجزاءٌ ونصبٌ — بثلاثةِ شروطٍ: صدرُ الجوابِ، واستقبالُ المضارعِ، وعدمُ الفاصلِ (إلا القسمَ والنداءَ و«لا» النافيةَ)</td><td>«إذنْ يوفِّقَكَ اللهُ»</td></tr>
+        <tr><td><b>كي</b></td><td>يُشترطُ سبقُها بلامِ التعليلِ لفظًا أو تقديرًا؛ فإن لم تُقدَّرْ كانت هي ذاتَها للتعليلِ</td><td>﴿كي تقرَّ عينُها ولا تحزنْ﴾</td></tr>
+        <tr><td><b>أنْ مضمرةٌ جوازًا</b> (حرفٌ واحدٌ)</td><td><b>لامُ التعليلِ</b> (لامُ كي)</td><td>لامُ جرٍّ يُقدَّرُ بعدها «أنْ» ويُؤوَّلُ المصدرُ مجرورًا بها: «لنعبدَ» = «للعبادةِ» — ويصحُّ ظهورُ «أنْ»</td><td>﴿أجئتنا لنعبدَ اللهَ وحدَه﴾</td></tr>
+        <tr><td rowspan="5"><b>أنْ مضمرةٌ وجوبًا</b> (خمسةٌ)</td><td><b>لامُ الجحودِ</b></td><td>شرطُها: أن تُسبَقَ بكونٍ منفيٍّ («ما كانَ…» / «لا يكونَ…»)</td><td>﴿وما كان اللهُ ليضيعَ إيمانَكم﴾</td></tr>
+        <tr><td><b>حتى</b></td><td>حرفُ غايةٍ وجرٍّ — يُؤوَّلُ المضارعُ بعدَها بمصدرٍ مجرورٍ بها</td><td>﴿حتى يرجعَ إلينا موسى﴾</td></tr>
+        <tr><td><b>فاءُ السببيّةِ</b></td><td>شرطُها: أن تُسبَقَ بنفيٍ أو طلبٍ (الطلباتُ ثمانيةٌ: الأمرُ والدعاءُ والنهيُ والاستفهامُ والعرضُ والتحضيضُ والتمنّي والترجّي)</td><td>﴿فلو أنَّ لنا كرةً فنكونَ من المؤمنينَ﴾</td></tr>
+        <tr><td><b>واوُ المعيّةِ</b></td><td>بمعنى «مع» — وبنفسِ شرطِ الفاءِ (نفيٌ أو طلبٌ)، وينبغي التفريقُ بينها وبين واوِ المفعولِ معه التي يكونُ بعدَها اسمٌ</td><td>«لا تنهَ عن خلقٍ وتأتي مثلَه»</td></tr>
+        <tr><td><b>أوْ</b></td><td>بمعنى «إلّا» (ما بعدَها ينقضي دفعةً واحدةً) أو «إلى أنْ» (ما بعدَها يتدرَّجُ)</td><td>«أنالُ مرادي أو أموتَ غريبًا»</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="summary-points">
+    <li><b>نواصبُ المضارعِ عشرةٌ</b>: أربعةٌ تنصبُ بنفسِها (أنْ، لنْ، إذنْ، كي)، وستةٌ تنصبُ بـ«أنْ» المضمرةِ: واحدٌ <b>جوازًا</b> (لامُ التعليلِ) وخمسةٌ <b>وجوبًا</b> (لامُ الجحودِ، حتى، فاءُ السببيّةِ، واوُ المعيّةِ، أوْ).</li>
+    <li><b>أنْ المصدريّةُ «أمُّ البابِ»</b> أي أصلُ أدواتِ النصبِ: تنصبُ المضارعَ ويُؤوَّلُ معها إلى مصدرٍ وتخلِّصُه للمستقبلِ؛ ولكشفِ الأمثلةِ الخمسةِ <b>انظرْ في فاعلِ الفعلِ</b>: واوُ جماعةٍ أو ياءُ مخاطبةٍ أو ألفُ اثنَينِ.</li>
+    <li><b>لنْ</b> حرفُ نفيٍ ونصبٍ واستقبالٍ؛ و<b>إذنْ</b> حرفُ جوابٍ وجزاءٍ ونصبٍ بثلاثةِ شروطٍ؛ و<b>كي</b> يُشترطُ فيها سبقُ لامِ التعليلِ لفظًا أو تقديرًا.</li>
+    <li><b>لامُ التعليلِ هي الوحيدةُ</b> التي ينصبُ المضارعُ بعدَها بأنْ مضمرةٍ <b>جوازًا</b>؛ و<b>لامُ الجحودِ</b> علامتُها الشكليّةُ: كونٌ منفيٌّ قبلَها؛ و<b>حتى</b> حرفُ غايةٍ وجرٍّ لا تنصبُ بنفسِها؛ و<b>فاءُ السببيّةِ وواوُ المعيّةِ</b> يُشترطُ فيهما النفيُ أو أحدُ الطلباتِ الثمانيةِ؛ و<b>أوْ</b> بمعنى «إلّا» أو «إلى أنْ».</li>
+    <li><b>فرِّقْ بين واوِ المعيّةِ وواوِ المفعولِ معه</b>: المعيّةُ بعدَها مضارعٌ منصوبٌ بأنْ مضمرةٍ وجوبًا، والمفعولِ معه بعدَها اسمٌ منصوبٌ بعدَ فعلٍ («سرتُ والنيلَ»).</li>
+    <li><b>الضمائرُ الثلاثةُ</b> — الكافُ والهاءُ وياءُ المتكلمِ — إذا اتصلتْ بفعلٍ فهي في محلِّ نصبٍ مفعولٌ به، وإذا اتصلتْ باسمٍ فهي في محلِّ جرٍّ مضافٌ إليه (كالكافِ في ﴿نسبِّحَكَ﴾).</li>
+  </ul>
+
+  <div class="box note">
+    <span class="tag">تمَّ الدرسُ</span>
+    <p style="margin:0">وبهذا تكونُ نواصبُ الفعلِ المضارعِ جميعُها <b>عشرةً</b> على النحوِ الذي بيَّنّا. وشكرًا جزيلًا، وأقولُ قولي هذا وأستغفرُ اللهَ لي ولكم، والسلامُ عليكم ورحمةِ اللهِ وبركاتُه.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ التاسعِ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=9MhmOIQrXos" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

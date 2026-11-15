@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ظنَّ وأخواتُها — الدرس ١٧ من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">ظنَّ وأخواتُها</h1>
+    <div class="cover-sub">الدرس ١٧: النوعُ الثالثُ من النواسخِ — أفعالٌ تنصبُ المبتدأَ والخبرَ على أنَّهما مفعولانِ لها</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=s_SqFuS6c_w" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتنِ ونظمُ الشنقيطيِّ</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">أقسامُ الأفعالِ العشرةِ ومعانيها</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">تنبيهٌ: الرؤيةُ القلبيّةُ والرؤيةُ الحسّيّةُ</a><span class="dots"></span></li>
+    <li><span class="t-num">٥</span><a href="#s5">تطبيقاتٌ وإعراباتٌ من القرآنِ والشعرِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s5a">على أفعالِ القلوبِ</a></li>
+        <li><a href="#s5b">على أفعالِ التحولِ والصيرورةِ وعلى «سمِعتُ»</a></li>
+        <li><a href="#s5c">جدولُ التطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٦</span><a href="#s6">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١: افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+
+  <p>الحمدُ للهِ وصلاتُه وسلامُه على رسولِه مصطفاه، وبعدُ: فحيّاكم اللهُ أيها الكرامُ وأيّتها الكريماتُ مع درسٍ جديدٍ من دروسِ متنِ الآجروميّةِ. وهذا الدرسُ هو <b>المتمِّمُ للعواملِ الداخلةِ على المبتدأِ والخبرِ</b> — أي النواسخِ — وهو <b>النواسخُ الفعليّةُ</b> من النواسخِ الفعليّةِ، وهو: <span class="mark">«ظنَّ وأخواتُها»</span>.</p>
+  <p>عملُ هذه الأفعالِ — طبقًا لكلامِ ابنِ آجرومٍ — أنَّها <b>تنصبُ المبتدأَ والخبرَ على أنَّهما مفعولانِ لها</b>، وهذا هو عملُها ونسخُها: فنسخُها للجملةِ الاسميّةِ يكونُ على أنها تنصبُ المبتدأَ والخبرَ، <b>تغيِّرُ حكمَهما الإعرابيَّ من حالةِ الرفعِ إلى حالةِ النصبِ، وتغيِّرُ وظيفتَهما النحويّةَ من المبتدأِ والخبرِ إلى المفعولينِ</b> لفعلِ الظنِّ.</p>
+
+  <div class="box note"><span class="tag">تنبيهٌ جوهريٌّ</span><p style="margin:0">أفعالُ الظنِّ <b>ليس لها اسمٌ ولا خبرٌ</b> كما كان ذلك لـ«كانَ» و«إنَّ»؛ إنما <b>لها مفعولانِ</b>: المبتدأُ يصيرُ <b>مفعولًا به أولَ</b>، والخبرُ يصيرُ <b>مفعولًا به ثانيًا</b>. فهي تنسخُ المبتدأَ والخبرَ على أنَّهما مفعولانِ لها، لا على أنَّ أحدهما اسمُها والآخرُ خبرُها.</p></div>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">«زيدٌ منطلقٌ»</span><span class="fa">←</span>
+      <span class="chip">دخولُ «ظننتُ»</span><span class="fa">←</span>
+      <span class="chip gold">«ظننتُ زيدًا منطلقًا»</span>
+      <div class="lane-note">الركنانِ ينتقلانِ من الرفعِ إلى النصبِ، ومن كونِهما مبتدأً وخبرًا إلى كونِهما مفعولينِ — وهذا الفرقُ الجوهريُّ عن «كانَ» و«إنَّ» وأخواتِهما.</div>
+    </div>
+    <div class="dcap">شكل (١): آليّةُ النسخِ بأفعالِ ظنَّ وأخواتِها</div>
+  </figure>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢: المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتنِ ونظمُ الشنقيطيِّ</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«وأمّا ظَنَنتُ وأخواتُها فإنّها تنصِبُ المبتدأَ والخبرَ على أنّهما مفعولان لها، وهي: ظَنَنتُ، وحَسِبتُ، وخِلتُ، وزَعمتُ، ورأيتُ، وعَلِمتُ، ووَجَدتُ، واتَّخذتُ، وجَعَلتُ، وسَمِعتُ، تقول: ظننتُ زيدًا قائمًا، ورأيتُ عمرًا شاخصًا، وما أشبه ذلك.»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <p>وأنشدَ الناظمُ العلامةُ محمدُ بنُ آبِّه الشنقيطيِّ بابَ ظنَّ وأخواتِها فقال:</p>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">انْصِبْ بِأَفْعَالِ القُلُوبِ مُبْتَدَا … وَخَبَرًا وَهْيَ: ظَنَنْتُ، جَدَا</div>
+      <div class="ln">رَأَى حَسِبْتُ، جَعَلْتُ، زَعَمَا … كَذَاكَ خِلْتُ وَاتَّخَذْتُ عَلِمَا</div>
+      <div class="ln">تَقُولُ قَدْ ظَنَنْتُ زَيْدًا صَادِقًا … فِي قَوْلِهِ وَخِلْتُ عَمْرًا حَاذِقًا</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <div class="box note"><span class="tag">تنبيهٌ</span><p style="margin:0">نلاحظُ أنَّ الناظمَ هنا <b>لم يذكرِ الفعلَ «سمِعتُ»</b> الذي ذكرَه ابنُ آجرومٍ؛ وذلك أنَّ «سمِعَ» في الأشهرِ منه <b>لا ينصبُ مفعولينِ</b>، وابنُ آجرومٍ أدخلَه هنا في أخواتِ ظنَّ. ولعلَّ هذا هو السببُ في استبعادِ الناظمِ له من هذه الأفعالِ؛ لأنه في استعمالِه العاديِّ غالبًا يكونُ ناصبًا لمفعولٍ به واحدٍ، وليس من أفعالِ ظنَّ وأخواتِها.</p></div>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣: أقسام الأفعال ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>أقسامُ الأفعالِ العشرةِ ومعانيها</h2></div>
+
+  <p>هذه الأفعالُ طبقًا لرأيِ ابنِ آجرومٍ <b>عشرةٌ</b>: ظنَّ، وحسِبَ، وخالَ، وزعمَ، ورأى، وعلِمَ، ووجدَ، واتخذَ، وجعلَ، وسمِعَ. ويمكنُ أن نقسِّمَها إلى <b>أربعةِ أقسامٍ</b>:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">ظنَّ وأخواتُها — النواسخُ الفعليّةُ (عشرةُ أفعالٍ)</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-4">
+      <div class="node green"><div class="n-title">أفعالُ الرجحانِ</div><div class="n-sub">من أفعالِ القلوبِ<br>ظننتُ، حسبتُ، خِلتُ، زعمتُ<br><b>الشكُّ مع ترجيحِ وقوعِ الخبرِ</b><br>«ظننتُ زيدًا منطلقًا»</div></div>
+      <div class="node blue"><div class="n-title">أفعالُ اليقينِ</div><div class="n-sub">من أفعالِ القلوبِ<br>رأيتُ، علمتُ، وجدتُ<br><b>تأكيدُ وقوعِ الخبرِ وتحقيقُه</b><br>«علمتُ الصدقَ منجيًا»</div></div>
+      <div class="node maroon"><div class="n-title">أفعالُ التحولِ والصيرورةِ</div><div class="n-sub">التحويلُ والانتقالُ<br>اتخذتَ، جعلتَ<br><b>صيرورةُ الأولِ إلى الثاني</b><br>«جعلتُ الدقيقَ خبزًا»</div></div>
+      <div class="node goldb"><div class="n-title">سمِعتَ</div><div class="n-sub">أفرده ابنُ آجرومٍ وحدَه<br><b>يفيدُ النسبةَ في السمعِ</b><br>«سمعتُ محمدًا يخطبُ»</div></div>
+    </div>
+    <figcaption>شكل (٢): خريطةُ أفعالِ ظنَّ العشرةِ عند ابنِ آجرومٍ — ومن غيرِ «سمِعتَ» تنقسمُ قسمينِ كبيرينِ: أفعالِ القلوبِ (سبعةٍ) وأفعالِ التحولِ والصيرورةِ (اثنينِ)</figcaption>
+  </figure>
+
+  <h3>أولًا: أفعالُ الرجحانِ</h3>
+  <p>ما يفيدُ منها <b>ترجيحَ وقوعِ الخبرِ</b>، وهي: <span class="mark">ظننتُ، وحسبتُ، وخِلتُ، وزعمتُ</span>. هذه الأفعالُ تفيدُ <b>الشكَّ مع الترجيحِ</b> — أي ترجيحَ وقوعِ الخبرِ — ويسمّونها <b>بأفعالِ الرجحانِ</b>.</p>
+
+  <h3>ثانيًا: أفعالُ اليقينِ</h3>
+  <p>هي التي تدلُّ على <b>تأكيدِ وقوعِ الخبرِ وتحقيقِه</b>، وعندنا هنا ثلاثةُ أفعالٍ: <span class="mark">رأيتُ، وعلمتُ، ووجدتُ</span>. وطبعًا هناك أفعالٌ أخرى لليقينِ، لكنَّ ابنَ آجرومٍ اقتصرَ على هذه أو ذكرَ هذه، ولعلَّ هذا مناسبٌ في مثلِ هذا المستوى الذي نحن فيه.</p>
+
+  <h3>ثالثًا: أفعالُ التحولِ والصيرورةِ</h3>
+  <p>وهي التي تفيدُ <b>التحويلَ والانتقالَ</b> — أي أفعالَ التحولِ والصيرورةِ — وهي طبقًا لما ذكرَه ابنُ آجرومٍ: <span class="mark">اتخذتُ، وجعلتُ</span>.</p>
+
+  <h3>رابعًا: الفعلُ «سمِعتُ»</h3>
+  <p>وهو الفعلُ الذي ذكرَه ابنُ آجرومٍ <b>وحيدًا</b>، وهو الذي يفيدُ <b>النسبةَ في السمعِ</b>. وكما قلنا: هذا الفعلُ الأولى به ألّا يُدخَلَ في هذه الأفعالِ، لكنَّ ابنَ آجرومٍ ذكرَه كما رأينا.</p>
+
+  <div class="box note"><span class="tag">خلاصةُ القسمةِ</span><p style="margin:0">نستطيعُ أن نقسِّمَ هذه الأفعالَ — من غير وجودِ «سمِعتَ» معها — إلى <b>قسمينِ كبيرينِ</b>: أفعالٍ نسمّيها <b>بأفعالِ القلوبِ</b> — وتشملُ أفعالَ الرجحانِ الأربعةَ وأفعالَ اليقينِ الثلاثةَ — وأفعالٍ نسمّيها <b>بأفعالِ التحولِ والصيرورةِ</b> وهما «اتخذَ» و«جعلَ». فأفعالُ القلوبِ تنقسمُ إذن إلى قسمينِ: قسمٍ يدلُّ على معنى الرجحانِ وهو أربعةُ أفعالٍ، وقسمٍ يدلُّ على معنى اليقينِ وتحقيقِ وقوعِ الخبرِ وهو «رأى» و«علِمَ» و«وجدَ».</p></div>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤: الرؤية القلبية والحسية ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>تنبيهٌ: الرؤيةُ القلبيّةُ والرؤيةُ الحسّيّةُ</h2></div>
+
+  <p>في قولِ المتنِ: <span class="mark">«رأيتُ عمرًا شاخصًا»</span> نفرِّقُ هنا بين <b>الرؤيةِ القلبيّةِ</b> و<b>الرؤيةِ الحسّيّةِ البصريّةِ</b>:</p>
+  <ul style="margin:0 0 14px;padding-right:26px">
+    <li>فإذا كانت «رأى» <b>رؤيةً حسّيّةً بصريّةً</b> فإنَّ الفعلَ لا ينصبُ إلا <b>مفعولًا واحدًا</b>، ولو جاءَ بعدَه منصوبٌ ثانٍ فسيكونُ <b>حالًا</b>؛ كما في قولِنا: <span class="mark">«رأيتُ الكتابَ مفتوحًا»</span> — هذه رؤيةٌ حسّيّةٌ بصريّةٌ: «الكتابَ» مفعولٌ به، و«مفتوحًا» حالٌ.</li>
+    <li>وإذا كانت <b>رؤيةً قلبيّةً</b> — من أفعالِ القلوبِ — فإنها <b>تنصبُ مفعولينِ</b>؛ كما في قولِ المتنِ: <span class="mark">«رأيتُ عمرًا شاخصًا»</span>: «عمرًا» مفعولٌ به أولُ، و«شاخصًا» مفعولٌ به ثانٍ. ومثلُه: <span class="mark">«رأيتُ الحياءَ جميلًا»</span>: «الحياءَ» مفعولٌ به أولُ، و«جميلًا» مفعولٌ به ثانٍ.</li>
+  </ul>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥: التطبيقات ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>تطبيقاتٌ وإعراباتٌ من القرآنِ والشعرِ</h2></div>
+
+  <h3 id="s5a">تطبيقاتٌ على أفعالِ القلوبِ</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعرِبْ: <span class="mark">«ظننتُ زيدًا منطلقًا»</span></div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>ظننتُ</b>: فعلٌ وفاعلٌ؛ «ظنَّ» فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ أو على السكونِ لاتصالِه بتاءِ الفاعلِ، وتاءُ الفاعلِ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ. <b>زيدًا</b> مفعولٌ به أولُ لـ«ظنَّ» منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>منطلقًا</b> مفعولٌ به ثانٍ لـ«ظننتُ» منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه أيضًا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعرِبْ: <span class="mark">«خِلتُ عمرًا حاذقًا»</span> — وهو مثالُ الناظمِ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ اتصلَ بتاءِ الفاعلِ وهي <b>في محلِّ رفعٍ فاعلُه</b>. <b>عمرًا</b> مفعولٌ به أولُ للفعلِ «خِلتُ»، و<b>حاذقًا</b> مفعولٌ به ثانٍ للفعلِ «خِلتُ»، وكلاهما منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>ونلاحظُ هنا نسخًا</b>: فأصلُ «عمرًا حاذقًا» هو <span class="mark">«عمروٌ حاذقٌ»</span> — جملةٌ اسميّةٌ من مبتدأٍ وخبرٍ — فلما دخلتْ «خِلتُ» نسختها: غيَّرتْ حكمَها الإعرابيَّ وغيَّرتْ وظيفتَها النحويّةَ على النحوِ الذي رأيناه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعرِبْ: <span class="mark">«رأيتُ إبراهيمَ عزيزًا»</span></div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هذه <b>الرؤيةُ القلبيّةُ</b> — لتكونَ من أفعالِ القلوبِ — وليستِ الرؤيةَ الحسّيّةَ البصريّةَ. <b>رأيتُ</b> فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ أو على السكونِ لاتصالِه بتاءِ الفاعلِ، وتاءُ الفاعلِ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ. <b>إبراهيمَ</b> مفعولٌ به أولُ للفعلِ «رأى» القلبيِّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. <b>عزيزًا</b> مفعولٌ به ثانٍ للفعلِ «رأى» القلبيِّ اليقينيِّ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعرِبْ: <span class="mark">«زعمتُ محمدًا صديقًا»</span></div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>زعمتُ</b> فعلٌ وفاعلٌ: «زعمَ» فعلٌ ماضٍ، وتاءُ الفاعلِ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ. <b>محمدًا</b> مفعولٌ به أولُ، و<b>صديقًا</b> مفعولٌ به ثانٍ، وكلاهما منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعرِبْ: <span class="mark">«علمتُ الصدقَ منجيًا»</span></div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«علمتُ» من <b>الأفعالِ اليقينيّةِ</b> التي تنصبُ مفعولينِ: <b>الصدقَ</b> مفعولٌ به أولُ، و<b>منجيًا</b> مفعولٌ به ثانٍ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعرِبْ: <span class="mark">«وجدتُ حسنَ الخلقِ أثقلَ شيءٍ في ميزانِ العبدِ يومَ القيامةِ»</span></div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«وجدتُ» من الأفعالِ التي تدلُّ على <b>اليقينِ والعلمِ اليقينيِّ</b>، فهو ينصبُ مفعولينِ: المفعولُ به الأولُ هو <b>حسنَ الخلقِ</b> (وحسنُ مضافٌ، والخلقِ مضافٌ إليه)، والمفعولُ به الثاني هو <b>أثقلَ</b>.</div>
+  </div>
+
+  <h3 id="s5b">تطبيقاتٌ على أفعالِ التحولِ والصيرورةِ وعلى «سمِعتُ»</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعرِبْ: <span class="mark">«جعلتُ الدقيقَ خبزًا»</span></div>
+    <div class="a"><span class="q-badge">الجوابُ</span>دلَّ «جعلَ» هنا على معنى <b>التحولِ والصيرورةِ</b>؛ فالفعلُ «جعلَ» إذا دلَّ على معنى التحولِ والصيرورةِ فهو فعلٌ وفاعلٌ: تاءُ الفاعلِ في محلِّ رفعٍ فاعلٌ، و<b>الدقيقَ</b> مفعولٌ به أولُ، و<b>خبزًا</b> مفعولٌ به ثانٍ، وكلاهما منصوبٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>طبقًا لما قالَه ابنُ آجرومٍ: <span class="mark">«سمعتُ محمدًا يخطبُ في الناسِ»</span> — بيِّن ما فيه.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>يبدو أنَّ ابنَ آجرومٍ يرى أنَّ هذا الفعلَ <b>ينصبُ مفعولينِ</b>: المفعولُ به الأولُ «محمدًا»، ويجوزُ أن نقولَ: <span class="mark">«سمعتُ محمدًا خطيبًا في الناسِ»</span> على أساسِ أنَّ «محمدًا» مفعولٌ به أولُ للفعلِ «سمِعَ» و«خطيبًا» مفعولٌ به ثانٍ. ويمكنُ أيضًا أن تُحمَلَ «خطيبًا» على <b>الحاليّةِ</b>: أنَّها حالٌ منصوبةٌ، و«محمدًا» هي مفعولٌ به فقط، والفعلُ ينصبُ مفعولًا واحدًا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَجَعَلُوا المَلائِكَةَ الَّذِينَ هُمْ عِبادُ الرَّحْمَنِ إنَاثًا﴾</span> [الزخرف: ١٩] — أين مفعولا «جعلَ» هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ «جعلَ» هنا دالٌّ على معنى <b>التحولِ والصيرورةِ</b>. <b>جعلوا</b>: فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ أو على الضمِّ لاتصالِه بواوِ الجماعةِ، والواوُ ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ. <b>الملائكةَ</b> هي <b>المفعولُ به الأولُ</b>. و<b>الذينَ</b> اسمٌ موصولٌ مبنيٌّ على الفتحِ في محلِّ نصبٍ نعتٌ لـ«الملائكةِ». وجملةُ <b>«هم عبادُ الرحمنِ»</b> جملةٌ اسميّةٌ صلةُ الموصولِ لا محلَّ لها من الإعرابِ: «هم» مبتدأٌ في محلِّ رفعٍ، و«عبادٌ» خبرُها مرفوعٌ، و«الرحمنِ» مضافٌ إليه. ثم <b>إناثًا</b> هي <b>المفعولُ به الثاني</b> للفعلِ «جعلَ» الذي هو بمعنى التحولِ والصيرورةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>قولُ الشاعرِ: <span class="mark">«زَعَمَتْنِي شَيْخًا»</span></div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>زعمَ</b> فعلٌ ماضٍ مبنيٌّ على الفتحِ، و<b>التاءُ</b> بعدَه <b>تاءُ التأنيثِ</b>: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ. و<b>النونُ</b> بعدَها <b>نونُ الوقايةِ</b>: حرفٌ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ. و<b>الياءُ</b> <b>ياءُ المتكلمِ</b>: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ نصبٍ مفعولٌ به أولُ. و<b>شيخًا</b>: مفعولٌ به ثانٍ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَاتَّخَذَ اللهُ إِبْرَاهِيمَ خَلِيلًا﴾</span> [النساء: ١٢٥] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>اتخذَ</b> فعلٌ ماضٍ مبنيٌّ على الفتحِ، و<b>اللهُ</b> لفظُ الجلالةِ فاعلٌ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه. و<b>إبراهيمَ</b> مفعولٌ به أولُ لـ«اتخذَ» — كأنَّه قال: صيَّرَ اللهُ إبراهيمَ خليلًا؛ ففي «اتخذَ» معنى <b>الصيرورةِ</b> — منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. و<b>خليلًا</b> مفعولٌ به ثانٍ منصوبٌ أيضًا وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿فَجَعَلْنَاهُ هَباءً مَنْثُورًا﴾</span> [الفرقان: ٢٣] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«جعلَ» هنا بمعنى <b>صيَّرناه أو حوَّلناه</b>، فهي تنصبُ مفعولينِ: المفعولُ به الأولُ هو <b>الهاءُ</b> في «جعلناه»: <b>نا</b> الفاعلُ — ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ — والهاءُ بعدَها ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ نصبٍ مفعولٌ به أولُ للفعلِ «جعلَ» الدالِّ على معنى الصيرورةِ والتحولِ. و<b>هباءً</b> هي المفعولُ به الثاني منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. و<b>منثورًا</b> نعتٌ لـ«هباءٍ» منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَما أَظُنُّ السَّاعَةَ قائِمَةً﴾</span> [الكهف: ٣٦، وفصلت: ٥٠] — كيف نُعربُ «قائمةً»؟ هل هي اسمُ «ظنَّ» منصوبٌ، أم خبرُ «ظنَّ» منصوبٌ، أم مفعولٌ به؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هي <b>مفعولٌ به ثانٍ للفعلِ «أظنُّ»</b>؛ فـ«ظنَّ» تنسخُ صحيحًا، ولكن <b>ليس لها اسمٌ ولا خبرٌ</b>، إنما هي تنسخُ المبتدأَ والخبرَ على أنَّهما مفعولانِ لها؛ فـ«الساعةَ» مفعولٌ به أولُ، و«قائمةً» مفعولٌ به ثانٍ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعرِبْ: <span class="mark">«وجدتُ محمدًا عالمًا»</span></div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>محمدًا</b> مفعولٌ به أولُ للفعلِ «وجدتُ»، و<b>عالمًا</b> مفعولٌ به ثانٍ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿إنَّهُمْ يَرَوْنَهُ بَعِيدًا * وَنَرَاهُ قَرِيبًا﴾</span> [المعارج: ٦–٧] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ «يرى» هنا بمعنى <b>الرؤيةِ القلبيّةِ</b>، وهو ينصبُ مفعولينِ: <b>يرونَ</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ لأنه من الأمثلةِ الخمسةِ (الأفعالِ الخمسةِ)، والواوُ فيه واوُ الجماعةِ: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ، و<b>الهاءُ</b> فيه — «يرونَه» — ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ نصبٍ مفعولٌ به أولُ، و<b>بعيدًا</b> مفعولٌ به ثانٍ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. ومثلُها ﴿ونراهُ قريبًا﴾.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿لا تَحْسَبُوهُ شَرًّا لَكُمْ﴾</span> [النور: ١١] — كيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>لا</b> الناهيةُ الجازمةُ: حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ. و<b>تحسبوهُ</b>: فعلٌ مضارعٌ <b>مجزومٌ بلا الناهيةِ</b> وعلامةُ جزمِه <b>حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ (الأفعالِ الخمسةِ) — وأصلُه «تحسبونَ» فحُذفتِ النونُ للجزمِ — وواوُ الجماعةِ فيه هي الفاعلُ: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ. و<b>الهاءُ</b> فيه ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ نصبٍ مفعولٌ به أولُ. و<b>شرًّا</b> مفعولٌ به ثانٍ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه. و<b>لكم</b>: اللامُ حرفُ جرٍّ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و«كم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ اسمٌ مجرورٌ باللامِ، والجارُّ والمجرورُ متعلِّقٌ بـ«شرٍّ».</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>في قولِنا: <span class="mark">«خِلتُ البستانَ مثمرًا»</span> — أين مفعولا «خِلتُ»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>المفعولُ به الأولُ هو <b>البستانَ</b>، والمفعولُ به الثاني هو <b>مثمرًا</b>.</div>
+  </div>
+
+  <h3 id="s5c">جدولُ التطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>التركيبُ</th><th>الفعلُ وقسمُه</th><th>المفعولُ الأولُ</th><th>المفعولُ الثاني</th></tr></thead>
+      <tbody>
+        <tr><td>«ظننتُ زيدًا منطلقًا»</td><td>ظننتُ — رجحانُ</td><td>زيدًا</td><td>منطلقًا</td></tr>
+        <tr><td>«خِلتُ عمرًا حاذقًا»</td><td>خِلتُ — رجحانُ (أصلُها: عمروٌ حاذقٌ)</td><td>عمرًا</td><td>حاذقًا</td></tr>
+        <tr><td>«رأيتُ إبراهيمَ عزيزًا»</td><td>رأيتُ — يقينُ (رؤيةٌ قلبيّةٌ)</td><td>إبراهيمَ</td><td>عزيزًا</td></tr>
+        <tr><td>«زعمتُ محمدًا صديقًا»</td><td>زعمتُ — رجحانُ</td><td>محمدًا</td><td>صديقًا</td></tr>
+        <tr><td>«علمتُ الصدقَ منجيًا»</td><td>علمتُ — يقينُ</td><td>الصدقَ</td><td>منجيًا</td></tr>
+        <tr><td>«وجدتُ حسنَ الخلقِ أثقلَ»</td><td>وجدتُ — يقينُ</td><td>حسنَ الخلقِ</td><td>أثقلَ</td></tr>
+        <tr><td>«جعلتُ الدقيقَ خبزًا»</td><td>جعلتُ — تحوُّلٌ وصيرورةٌ</td><td>الدقيقَ</td><td>خبزًا</td></tr>
+        <tr><td>«سمعتُ محمدًا خطيبًا»</td><td>سمعتُ — عند ابنِ آجرومٍ (ويجوزُ حملُ «خطيبًا» على الحاليّةِ)</td><td>محمدًا</td><td>خطيبًا</td></tr>
+        <tr><td>﴿وجعلوا الملائكةَ… إناثًا﴾</td><td>جعلوا — تحوُّلٌ وصيرورةٌ</td><td>الملائكةَ</td><td>إناثًا</td></tr>
+        <tr><td>«زعمتْني شيخًا»</td><td>زعمتْ — رجحانُ</td><td>ياءُ المتكلمِ (النونُ وقايةٌ)</td><td>شيخًا</td></tr>
+        <tr><td>﴿واتخذَ اللهُ إبراهيمَ خليلًا﴾</td><td>اتخذَ — تحوُّلٌ وصيرورةٌ</td><td>إبراهيمَ</td><td>خليلًا</td></tr>
+        <tr><td>﴿فجعلناهُ هباءً منثورًا﴾</td><td>جعلنا — تحوُّلٌ وصيرورةٌ</td><td>الهاءُ</td><td>هباءً (ومنثورًا نعتٌ له)</td></tr>
+        <tr><td>﴿وما أظنُّ الساعةَ قائمةً﴾</td><td>أظنُّ — رجحانُ</td><td>الساعةَ</td><td>قائمةً</td></tr>
+        <tr><td>﴿يرونَهُ بعيدًا﴾</td><td>يرونَ — يقينُ (رؤيةٌ قلبيّةٌ)</td><td>الهاءُ</td><td>بعيدًا</td></tr>
+        <tr><td>﴿لا تحسبوهُ شرًّا لكم﴾</td><td>تحسبوا — رجحانُ (مجزومٌ بحذفِ النونِ)</td><td>الهاءُ</td><td>شرًّا</td></tr>
+        <tr><td>«خِلتُ البستانَ مثمرًا»</td><td>خِلتُ — رجحانُ</td><td>البستانَ</td><td>مثمرًا</td></tr>
+        <tr><td>«رأيتُ الكتابَ مفتوحًا» (بصريّةٌ)</td><td>رأيتُ — رؤيةٌ حسّيّةٌ: مفعولٌ واحدٌ</td><td>الكتابَ</td><td>مفتوحًا <b>حالٌ</b> لا مفعولٌ ثانٍ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦: الخلاصة ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>خلاصةُ الدرس</h2></div>
+
+  <ul class="summary-points">
+    <li>«ظنَّ» وأخواتُها هي <b>النوعُ الثالثُ من النواسخِ</b> — النواسخُ الفعليّةُ — وهي أفعالٌ تنسخُ المبتدأَ والخبرَ أو الجملةَ الاسميّةَ على اعتبارِ أنَّهما <b>مفعولانِ لها</b>: ليس لها اسمٌ ولا خبرٌ؛ المبتدأُ يصيرُ مفعولًا به أولَ، والخبرُ مفعولًا به ثانيًا.</li>
+    <li>هي عند ابنِ آجرومٍ <b>عشرةُ أفعالٍ</b>: ظننتُ، وحسبتُ، وخِلتُ، وزعمتُ، ورأيتُ، وعلمتُ، ووجدتُ، واتخذتُ، وجعلتُ، وسمعتُ — ولم يذكرِ الناظمُ الشنقيطيُّ «سمعتَ» لأنه في الأشهرِ لا ينصبُ مفعولينِ.</li>
+    <li>تنقسمُ — من غيرِ «سمعتَ» — قسمينِ كبيرينِ: <b>أفعالَ القلوبِ</b> وهي سبعةٌ (أفعالُ الرجحانِ: ظننتُ وحسبتُ وخِلتُ وزعمتُ، وأفعالُ اليقينِ: رأيتُ وعلمتُ ووجدتُ)، و<b>أفعالَ التحولِ والصيرورةِ</b> وهما اتخذتَ وجعلتَ؛ وأفردَ ابنُ آجرومٍ «سمعتَ» وهو يفيدُ النسبةَ في السمعِ.</li>
+    <li>«رأى» إن كانت <b>قلبيّةً</b> نصبتْ مفعولينِ، وإن كانت <b>حسّيّةً بصريّةً</b> نصبتْ مفعولًا واحدًا وما بعدَه حالٌ.</li>
+  </ul>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>القسمُ</th><th>أفعالُه</th><th>معناه</th><th>مثالُه</th></tr></thead>
+      <tbody>
+        <tr><td>أفعالُ الرجحانِ (من القلوبِ)</td><td>ظننتُ، حسبتُ، خِلتُ، زعمتُ</td><td>الشكُّ مع ترجيحِ وقوعِ الخبرِ</td><td>ظننتُ زيدًا منطلقًا</td></tr>
+        <tr><td>أفعالُ اليقينِ (من القلوبِ)</td><td>رأيتُ، علمتُ، وجدتُ</td><td>تأكيدُ وقوعِ الخبرِ وتحقيقُه</td><td>علمتُ الصدقَ منجيًا</td></tr>
+        <tr><td>أفعالُ التحولِ والصيرورةِ</td><td>اتخذتَ، جعلتَ</td><td>التحويلُ والانتقالُ</td><td>جعلتُ الدقيقَ خبزًا</td></tr>
+        <tr><td>النسبةُ في السمعِ</td><td>سمعتُ (عند ابنِ آجرومٍ وحدَه)</td><td>إثباتُ النسبةِ في السمعِ</td><td>سمعتُ محمدًا يخطبُ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box note"><span class="tag">تمَّ الدرسُ</span><p style="margin:0">بهذا نكونُ قد أنهينا الكلامَ عن <b>العواملِ الداخلةِ على المبتدأِ والخبرِ</b> — أي النواسخِ — كلِّها. وسننتقلُ بإذنِ اللهِ تعالى في الدرسِ القادمِ إلى الكلامِ على <b>التوابعِ</b>، وأولِ التوابعِ <b>النعتُ</b> إن شاء اللهُ تعالى.</p></div>
+
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ ١٧ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=s_SqFuS6c_w" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

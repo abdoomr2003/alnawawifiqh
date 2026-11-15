@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>علامات النصب — الدرس الرابع من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">علاماتُ النصبِ</h1>
+    <div class="cover-sub">الدرس الرابع: بابُ معرفةِ علاماتِ الإعرابِ — علاماتُ النصبِ الخمسُ مع التمريناتِ والتطبيقاتِ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=55rY4U8azKk" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتن ونظمُ الشنقيطيِّ</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">النصبُ: الحالةُ الإعرابيّةُ الثانيةُ ووظائفُها وعلاماتُها الخمسُ</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">العلامةُ الأصليّةُ: الفتحةُ ومواضعُها الثلاثةُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">الموضعُ الأولُ: الاسمُ المفردُ</a></li>
+        <li><a href="#s4b">الموضعُ الثاني: جمعُ التكسيرِ</a></li>
+        <li><a href="#s4c">الموضعُ الثالثُ: الفعلُ المضارعُ المسبوقُ بناصبٍ</a></li>
+        <li><a href="#s4d">متى تظهرُ الفتحةُ ومتى تُقدَّرُ؟</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">العلامةُ الفرعيّةُ الأولى: الألفُ في الأسماءِ الخمسةِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٦</span><a href="#s6">العلامةُ الفرعيّةُ الثانية: الكسرةُ في جمعِ المؤنثِ السالمِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٧</span><a href="#s7">العلامةُ الفرعيّةُ الثالثةُ: الياءُ في التثنيةِ والجمعِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٨</span><a href="#s8">العلامةُ الفرعيّةُ الرابعةُ: حذفُ النونِ في الأمثلةِ الخمسةِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٩</span><a href="#s9">التمريناتُ والتطبيقاتُ القرآنيّةُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t91">أسئلةٌ على العلاماتِ</a></li>
+        <li><a href="#t92">تأمُّلُ الآياتِ: استخراجُ المنصوباتِ وعلاماتِها</a></li>
+        <li><a href="#t93">الجدولُ التلخيصيُّ للتطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">١٠</span><a href="#s10">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١ افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+
+  <p>الحمدُ للهِ كما ينبغي لجلالِه وكمالِه، وصلَّى اللهُ وسلَّمَ على النبيِّ المصطفى وعلى آلِه. وبعدُ: فحيّاكم اللهُ أيها الإخوةُ الأفاضلُ والأخواتُ الفضلياتُ، وموعدُنا الآنَ مع <b>الدرسِ الرابعِ</b> من دروسِ متنِ الآجروميّةِ في النحوِ العربيِّ، وهو خاصٌّ <b>بعلاماتِ النصبِ</b>، بعدَ أن أنهينا الحديثَ في اللقاءِ الماضي عن علاماتِ الرفعِ. ننتقلُ الآنَ إلى الكلامِ على علاماتِ النصبِ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢ المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتن ونظمُ الشنقيطيِّ</h2></div>
+
+  <p>نقرأُ أولًا ما قالَه ابنُ آجرومَ رحمه اللهُ في علاماتِ النصبِ، ثم ما قالَه ناظمُ الآجروميّةِ العلامةُ <b>محمدُ بنُ آبِّه الشنقيطيُّ</b> — رحم اللهُ الجميعَ:</p>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«وللنصبِ خمسُ علاماتٍ: الفتحةُ، والألفُ، والكسرةُ، والياءُ، وحذفُ النونِ.<br>
+    فأما الفتحةُ فتكونُ علامةً للنصبِ في ثلاثةِ مواضعَ: في الاسمِ المفردِ، وجمعِ التكسيرِ، والفعلِ المضارعِ إذا دخلَ عليه ناصبٌ ولم يتصلْ بآخرِه شيءٌ.<br>
+    وأما الألفُ فتكونُ علامةً للنصبِ في الأسماءِ الخمسةِ، نحو: رأيتُ أباكَ وأخاكَ، وما أشبهَ ذلك.<br>
+    وأما الكسرةُ فتكونُ علامةً للنصبِ في جمعِ المؤنثِ السالمِ.<br>
+    وأما الياءُ فتكونُ علامةً للنصبِ في التثنيةِ والجمعِ.<br>
+    وأما حذفُ النونِ فيكونُ علامةً للنصبِ في الأفعالِ الخمسةِ التي رفعُها بثبوتِ النونِ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">علامةُ النَّصبِ لها كُنْ مُحصِيا … الفتحُ والألفُ والكسرُ واليا</div>
+      <div class="ln">وحذفُ نونٍ فالَّذي الفتحُ بهِ … علامةٌ يا ذا النُّهى لنصبِهِ</div>
+      <div class="ln">مُكسَّرُ الجموعِ ثمَّ المفردُ … ثمَّ المضارعُ الَّذي كتَسعَدْ</div>
+      <div class="ln">بالألفِ الخمسةُ نصبُها التُزِمْ … وانصبْ بكسرٍ جمعَ تأنيثٍ سَلِمْ</div>
+      <div class="ln">واعلمْ بأنَّ الجمعَ والمثنى … نصبُهما بالياءِ حيثُ عَنَّا</div>
+      <div class="ln">وخمسةُ الأفعالِ نصبُها ثَبَتْ … بحذفِ نونِها إذا ما نُصِبَتْ</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <p>والآنَ إلى الشرحِ والتفصيلِ لعلاماتِ النصبِ كما ذكرَ ابنُ آجرومَ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣ النصب ووظائفه وعلاماته ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>النصبُ: الحالةُ الإعرابيّةُ الثانيةُ ووظائفُها وعلاماتُها الخمسُ</h2></div>
+
+  <p>علاماتُ النصبِ — كما ذكرَ ابنُ آجرومَ — <b>خمسُ علاماتٍ</b>. و<b>النصبُ هو الحالةُ الإعرابيّةُ الثانيةُ</b> من حالاتِ الإعرابِ، ويندرجُ تحتها عددٌ من الوظائفِ النحويّةِ أهمُّها <b>المفاعيلُ الخمسةُ</b>: <b>المفعولُ به</b>، و<b>المفعولُ المطلقُ</b>، و<b>المفعولُ لأجلِه</b>، و<b>المفعولُ فيه</b>، و<b>المفعولُ معه</b>. ثم بعدَ ذلك عندنا من المنصوباتِ أيضًا <b>الحالُ</b>، و<b>التمييزُ</b>، و<b>اسمُ إنَّ</b>، و<b>خبرُ كانَ</b>. فهذه الوظائفُ كلُّها حينَ تُنصَبُ تكونُ علامتُها واحدةً من خمسِ علاماتٍ.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">النصبُ — الحالةُ الإعرابيّةُ الثانيةُ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node green">
+        <div class="n-title">المفاعيلُ الخمسةُ</div>
+        <div class="n-sub">
+          <ul>
+            <li>المفعولُ به</li>
+            <li>المفعولُ المطلقُ</li>
+            <li>المفعولُ لأجلِه</li>
+            <li>المفعولُ فيه</li>
+            <li>المفعولُ معه</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node green">
+        <div class="n-title">منصوباتٌ أُخرى</div>
+        <div class="n-sub">
+          <ul>
+            <li>الحالُ</li>
+            <li>التمييزُ</li>
+            <li>اسمُ إنَّ</li>
+            <li>خبرُ كانَ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (١): الوظائفُ النحويّةُ التي تندرجُ تحتَ حالةِ النصبِ — وكلُّها حين تُنصَبُ تكونُ علامتُها واحدةً من خمسٍ</figcaption>
+  </figure>
+
+  <p>العلامةُ الأصليّةُ لحالةِ النصبِ هي <b>الفتحةُ</b>، ولها مواضعُ. وهناك علاماتٌ أخرى فرعيّةٌ للنصبِ وهي <b>أربعُ علاماتٍ</b>: <b>الألفُ</b>، و<b>الكسرةُ</b>، و<b>الياءُ</b>، و<b>حذفُ النونِ</b> — ولكلٍّ منها مواضعُها كما سيأتي تفصيلُه.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">علاماتُ النصبِ خمسٌ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-5">
+      <div class="node green">
+        <div class="n-title">الفتحةُ</div>
+        <div class="n-sub"><b>العلامةُ الأصليّةُ</b> — في ثلاثةِ مواضعَ:<br>الاسمُ المفردُ، وجمعُ التكسيرِ، والفعلُ المضارعُ المسبوقُ بناصبٍ لم يتصلْ بآخرِه شيءٌ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الألفُ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في موضعٍ واحدٍ:<br>الأسماءُ الخمسةُ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الكسرةُ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في موضعٍ واحدٍ:<br>جمعُ المؤنثِ السالمُ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الياءُ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في موضعَينِ:<br>التثنيةُ والجمعُ (جمعُ المذكرِ السالمُ)</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">حذفُ النونِ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في موضعٍ واحدٍ:<br>الأمثلةُ الخمسةُ (الأفعالُ الخمسةُ)</div>
+      </div>
+    </div>
+    <figcaption>شكل (٢): الخريطةُ العامّةُ لعلاماتِ النصبِ — علامةٌ أصليّةٌ واحدةٌ وأربعُ علاماتٍ فرعيّةٍ تنوبُ عنها</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤ الفتحة ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>العلامةُ الأصليّةُ: الفتحةُ ومواضعُها الثلاثةُ</h2></div>
+
+  <p>الفتحةُ هي <b>العلامةُ الأصليّةُ</b> لحالةِ النصبِ، وتكونُ علامةً للنصبِ في <b>ثلاثةِ مواضعَ</b>: <b>الاسمِ المفردِ</b>، و<b>جمعِ التكسيرِ</b>، و<b>الفعلِ المضارعِ</b> إذا دخلَ عليه ناصبٌ ولم يتصلْ بآخرِه شيءٌ:</p>
+
+  <h3 id="s4a">الموضعُ الأولُ: الاسمُ المفردُ</h3>
+  <p>والمرادُ بالمفردِ <b>الذي ليس مثنًّى ولا مجموعًا</b>:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ﴾<span class="ref">سورةُ الفاتحةِ: ٦</span></p>
+  </div>
+  <p>في قولِه تعالى: «اهدِنا الصراطَ المستقيمَ» نلاحظُ أن كلمةَ <span class="mark">«الصراطَ»</span> هي <b>مفعولٌ به ثانٍ</b> للفعلِ «اهدِنا»، وهي <b>منصوبةٌ وعلامةُ نصبِها الفتحةُ الظاهرةُ على آخرِها</b>. وكذلك كلمةُ <span class="mark">«المستقيمَ»</span>: «الصراطِ المستقيمِ» — «المستقيمَ» <b>نعتٌ</b> لكلمةِ «الصراطِ»، صفةٌ لها، فلذلك كانت منصوبةً مثلَها، وعلامةُ النصبِ فيها الفتحةُ. والفتحةُ هي العلامةُ الأصليّةُ لأن الكلمتَينِ — كما رأينا — <b>مفردتانِ</b>.</p>
+
+  <div class="box example">
+    <span class="tag">مثالٌ: «إنَّ سلمى متفوِّقةٌ»</span>
+    <p style="margin:0">الاسمُ المنصوبُ هنا هو كلمةُ <span class="mark">«سلمى»</span>؛ لأنها وقعتْ بعدَ «إنَّ» فهي <b>اسمُ إنَّ</b>، واسمُ إنَّ منصوبٌ، وعلامةُ نصبِها <b>الفتحةُ</b> — لكن الفتحةَ لم تظهرْ: هي <b>مقدَّرةٌ للتعذُّرِ</b>. ونحنُ اتفقنا على أن الكلمةَ إذا انتهتْ بالألفِ فإن هذه الألفَ تُقدَّرُ عليها علامةُ الإعرابِ <b>للتعذُّرِ</b> — أي لاستحالةِ ظهورِ العلامةِ. فـ«سلمى» هنا منصوبةٌ وعلامةُ نصبِها الفتحةُ المقدَّرةُ للتعذُّرِ.</p>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَتَرَى النَّاسَ سُكَارَىٰ وَمَا هُم بِسُكَارَىٰ﴾<span class="ref">سورةُ الحجِّ: ٢</span></p>
+  </div>
+  <p>كذلك في قولِه تعالى: «وترى الناسَ سكارى»: سنجدُ أن كلمةَ <span class="mark">«الناسَ»</span> هي <b>مفردةٌ في اللفظِ</b>، فهي منصوبةٌ وعلامةُ نصبِها <b>الفتحةُ الظاهرةُ على آخرِها</b> كما رأينا. وكلمةُ <span class="mark">«سكارى»</span> — «وترى الناسَ سكارى» — هي هنا <b>منصوبةٌ لأنها حالٌ</b>، وعلامةُ نصبِها الفتحةُ، لكن الفتحةَ غيرُ ظاهرةٍ: هي <b>مقدَّرةٌ</b>؛ قُدِّرَتْ لأن آخرَ الكلمةِ ألفٌ، فتُقدَّرُ للتعذُّرِ.</p>
+
+  <div class="box note">
+    <span class="tag">تنبيهٌ مهمٌّ</span>
+    <p style="margin:0">فعلامةُ النصبِ الأصليّةُ — وهي الفتحةُ — تأتي في الاسمِ المفردِ وفي جمعِ التكسيرِ (كما يأتي)، <b>وقد تكونُ ظاهرةً وقد تكونُ مقدَّرةً</b>؛ فكلُّ كلمةٍ آخرُها ألفٌ فالعلامةُ عليها مقدَّرةٌ للتعذُّرِ.</p>
+  </div>
+
+  <h3 id="s4b">الموضعُ الثاني: جمعُ التكسيرِ</h3>
+  <p>جمعُ التكسيرِ أيضًا من المواضعِ التي تكونُ فيها الفتحةُ علامةً للنصبِ؛ فإذا كانت الكلمةُ منصوبةً وهي جمعُ تكسيرٍ فتكونُ علامةُ النصبِ فيها الفتحةَ، وهذا هو الموضعُ الثاني من المواضعِ الثلاثةِ التي تكونُ الفتحةُ فيها علامةً للنصبِ:</p>
+
+  <div class="box example">
+    <span class="tag">مثالٌ</span>
+    <p style="margin:0">في قولِنا: <span class="mark">«قرأتُ الكتبَ»</span> — نلاحظُ أن كلمةَ «الكتبَ» <b>جمعُ تكسيرٍ</b>؛ فهي هنا <b>مفعولٌ به منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>، والكلمةُ كما رأينا جمعُ تكسيرٍ فكانت علامةُ النصبِ فيها هي العلامةُ الأصليّةُ وهي الفتحةُ.</p>
+  </div>
+
+  <h3 id="s4c">الموضعُ الثالثُ: الفعلُ المضارعُ المسبوقُ بناصبٍ</h3>
+  <p>الموضعُ الثالثُ الذي تكونُ فيه الفتحةُ علامةً للنصبِ — وهي العلامةُ الأصليّةُ كما قلنا — هو <b>الفعلُ المضارعُ إذا دخلَ عليه ناصبٌ</b>: أي إذا كان منصوبًا بأداةِ نصبٍ، وفي الوقتِ ذاتِه <b>لم يتصلْ بآخرِه شيءٌ</b> — أي لم يتصلْ به ضميرُ رفعٍ ساكنٌ كواوِ الجماعةِ وألفِ الاثنَينِ وياءِ المخاطبةِ — <b>حتى لا يكونَ من الأفعالِ الخمسةِ</b> (الأمثلةِ الخمسةِ).</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَرَجَعْنَاكَ إِلَىٰ أُمِّكَ كَي تَقَرَّ عَيْنُهَا وَلَا تَحْزَنْ﴾<span class="ref">سورةُ طه: ٤٠</span></p>
+  </div>
+  <p>في قولِه تعالى: «فرجعناك إلى أمك كي تقرَّ عينها ولا تحزنْ» نجدُ أن الفعلَ <span class="mark">«تقرَّ»</span> سبقَ بـ<b>«كي»</b> وهي ناصبةٌ، فالفعلُ المضارعُ منصوبٌ بعدَ «كي» <b>وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b> كما نرى. و<span class="mark">«لا تحزنْ»</span> هو <b>معطوفٌ طبعًا على «كي تقرَّ»</b>، فهو منصوبٌ مثلَه: فعلٌ مضارعٌ منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه — طبعًا لأنه معطوفٌ على منصوبٍ. فالفعلُ المضارعُ أيضًا من المواضعِ التي تُنصَبُ فيها الكلماتُ إذا كانت فعلًا مضارعًا مسبوقًا بناصبٍ ينصبُها.</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَن تَرْضَىٰ عَنكَ الْيَهُودُ وَلَا النَّصَارَىٰ حَتَّىٰ تَتَّبِعَ مِلَّتَهُمْ﴾<span class="ref">سورةُ البقرةِ: ١٢٠</span></p>
+  </div>
+  <p>في قولِه تعالى: «ولن ترضى عنك اليهودُ ولا النصارى حتى تتبعَ ملتهم»: «لن» هنا <b>ناصبةٌ</b> — أداةُ نصبٍ — و<span class="mark">«ترضى»</span> فعلٌ مضارعٌ أتى بعدَ «لن» الناصبةِ فيكونُ <b>منصوبًا بها وعلامةُ نصبِه الفتحةُ</b>، لكن الفتحةَ هنا <b>مقدَّرةٌ أيضًا للتعذُّرِ</b>؛ لأن آخرَ الكلمةِ ألفٌ، وإذا كان آخرُها ألفًا فعلامةُ النصبِ لا تظهرُ: الفتحةُ لا تظهرُ ولا تظهرُ أيُّ علامةٍ.</p>
+  <p>لكنْ إذا كان آخرُ الفعلِ <b>واوًا أو ياءً</b> فإن الفتحةَ <b>تظهرُ</b> في حالةِ النصبِ؛ يعني مثلًا أقولُ: <span class="mark">«لن أدعوَ»</span> و<span class="mark">«لن أقضيَ»</span> — هنا الفعلُ انتهى بواوٍ أو ياءٍ وهو منصوبٌ وعلامةُ النصبِ تظهرُ؛ لأن علامةَ النصبِ هي الفتحةُ <b>والفتحةُ حركةٌ خفيفةٌ فلا تُقدَّرُ</b>، فلا يكونُ هناك ثقلٌ؛ إنما الذي يُقدَّرُ للثقلِ على الياءِ والواوِ هي حركةُ <b>الضمّةِ</b> وحركةُ <b>الكسرةِ</b>، أما الفتحةُ فتظهرُ في حالةِ النصبِ كما قلنا لأنها حركةٌ خفيفةٌ. وفي الآيةِ نفسِها: «حتى تتبعَ مِلَّتَهم» — فـ<span class="mark">«تتبعَ»</span> هنا أيضًا فعلٌ مضارعٌ <b>منصوبٌ بعدَ «حتى» وعلامةُ نصبِه الفتحةُ الظاهرةُ</b>.</p>
+
+  <h3 id="s4d">متى تظهرُ الفتحةُ ومتى تُقدَّرُ؟</h3>
+  <p>خلاصةُ ما قررناه في حركةِ الفتحةِ — ظهورًا وتقديرًا — بحسبِ آخرِ الكلمةِ المنصوبةِ:</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>آخرُ الكلمةِ المنصوبةِ</th><th>الفتحةُ (علامةُ النصبِ)</th><th>الضمّةُ والكسرةُ</th><th>أمثلةٌ</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>ألفٌ</b></td>
+          <td>مقدَّرةٌ <b>للتعذُّرِ</b> (لا تظهرُ ولا غيرُها)</td>
+          <td>مقدَّرتانِ للتعذُّرِ</td>
+          <td>«إنَّ سلمى» — ﴿وترى الناسَ سكارى﴾ — ﴿لن ترضى﴾ — ﴿واعدنا موسى﴾</td>
+        </tr>
+        <tr>
+          <td><b>واوٌ أو ياءٌ</b></td>
+          <td><b>ظاهرةٌ</b> — لأن الفتحةَ حركةٌ خفيفةٌ لا تُقدَّرُ</td>
+          <td>مقدَّرتانِ <b>للثقلِ</b></td>
+          <td>«لن أدعوَ» — «لن أقضيَ» — «كلمتُ القاضيَ» (وضمَّةُ «جاء القاضي» مقدَّرةٌ للثقلِ)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الفتحةُ (العلامةُ الأصليّةُ) في ثلاثةِ مواضعَ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الاسمُ المفردُ</div>
+        <div class="n-sub">ما ليس مثنًّى ولا مجموعًا<br>﴿اهدِنا الصراطَ المستقيمَ﴾ — «إنَّ سلمى» — ﴿وترى الناسَ سكارى﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">جمعُ التكسيرِ</div>
+        <div class="n-sub">يُعامَلُ معاملةَ المفردِ في العلامةِ الأصليّةِ<br>«قرأتُ الكتبَ»</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الفعلُ المضارعُ</div>
+        <div class="n-sub">إذا دخلَ عليه ناصبٌ ولم يتصلْ بآخرِه ضميرُ رفعٍ (واوُ الجماعةِ، ألفُ الاثنَينِ، ياءُ المخاطبةِ)<br>﴿كي تقرَّ عينُها ولا تحزنْ﴾ — ﴿حتى تتبعَ مِلَّتَهم﴾</div>
+      </div>
+    </div>
+    <figcaption>شكل (٣): مواضعُ الفتحةِ الثلاثةُ — وقد تكونُ ظاهرةً وقد تكونُ مقدَّرةً للتعذُّرِ إذا كان آخرُ الكلمةِ ألفًا</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥ الألف ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>العلامةُ الفرعيّةُ الأولى: الألفُ في الأسماءِ الخمسةِ</h2></div>
+
+  <p>هناك علاماتٌ أخرى <b>فرعيّةٌ</b> للنصبِ وهي أربعٌ، أولُها <b>الألفُ</b>. متى تكونُ الألفُ علامةً للنصبِ؟ تكونُ الألفُ علامةً للنصبِ في <b>الأسماءِ الخمسةِ</b> التي ذكرناها في حالةِ الرفعِ: أنها تُرفعُ وعلامةُ رفعِها الواوُ؛ فهنا — في النصبِ — تُنصَبُ وعلامةُ نصبِها <b>الألفُ</b>، طبعًا إذا انطبقتْ عليها <b>الشروطُ</b> التي ذكرناها في حالةِ الرفعِ: أن تُضافَ <b>لغيرِ ياءِ المتكلمِ</b>، وأن تكونَ <b>مفردةً</b> غيرَ مجموعةٍ ولا مثنًّاةٍ، وأن تكونَ <b>مكبَّرةً</b> لا مصغَّرةً، وأن تكونَ كلمةُ «ذو» <b>بمعنى صاحبٍ</b>. وهنا — في حالةِ النصبِ — تكونُ <b>«ذا»</b> بمعنى صاحبٍ، وكلمةُ <b>«فاكَ»</b> منزوعةَ الميمِ. فالأسماءُ الخمسةُ إذا كانت منصوبةً فستكونُ علامةُ نصبِها هي الألفَ:</p>
+
+  <div class="box example">
+    <span class="tag">مثالٌ</span>
+    <p style="margin:0">إذا قلتَ مثلًا: <span class="mark">«رأيتُ أباكَ»</span> — «أباكَ» <b>مفعولٌ به للفعلِ «رأى» منصوبٌ وعلامةُ نصبِه الألفُ</b> لأنه من الأسماءِ الخمسةِ.</p>
+  </div>
+
+  <div class="box example">
+    <span class="tag">تطبيقٌ: «أحترمُ ذا الخلقِ الرفيعِ»</span>
+    <p style="margin:0">«أحترمُ» طبعًا <b>فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه</b>، والفاعلُ <b>ضميرٌ مستترٌ تقديرُه «أنا»</b> (أحترمُ: أنا). و<span class="mark">«ذا»</span> — أحترمُ ذا الخلقِ — هي <b>مفعولٌ به</b> ولذلك هي منصوبةٌ <b>وعلامةُ نصبِها الألفُ لأنها من الأسماءِ الخمسةِ</b>. وبعدَها «الخلقِ» <b>مضافٌ إليه مجرورٌ وعلامةُ جرِّه الكسرةُ الظاهرةُ على آخرِه</b>، و«الرفيعِ» <b>نعتٌ أو صفةٌ لكلمةِ «الخلقِ»</b> مجرورةٌ مثلَها. إذًا هنا موضعٌ واحدٌ للألفِ حين تكونُ علامةً للنصبِ هو الأسماءُ الخمسةُ: نصبُ الأسماءِ الخمسةِ تكونُ علامتُه فيه هي الألفَ.</p>
+  </div>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الألفُ علامةُ نصبٍ في موضعٍ واحدٍ: الأسماءُ الخمسةُ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node goldb">
+        <div class="n-title">الأسماءُ الخمسةُ منصوبةً</div>
+        <div class="n-sub">«رأيتُ أباكَ» — «أحترمُ ذا الخلقِ الرفيعِ»<br>وفي النصبِ تأتي <b>«ذا»</b> (بمعنى صاحبٍ)، و<b>«فاكَ»</b> منزوعةَ الميمِ</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">شروطُ الإعرابِ بالألفِ (كما في الرفعِ)</div>
+        <div class="n-sub">
+          <ul>
+            <li>أن تُضافَ <b>لغيرِ ياءِ المتكلمِ</b></li>
+            <li>أن تكونَ <b>مفردةً</b> — لا مجموعةً ولا مثنًّاةً</li>
+            <li>أن تكونَ <b>مكبَّرةً</b> — لا مصغَّرةً</li>
+            <li>و«ذو»: أن تكونَ <b>بمعنى صاحبٍ</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (٤): الأسماءُ الخمسةُ تُنصَبُ بالألفِ نيابةً عن الفتحةِ متى صحَّتْ فيها شروطُ الإعرابِ بالحروفِ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦ الكسرة ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>العلامةُ الفرعيّةُ الثانية: الكسرةُ في جمعِ المؤنثِ السالمِ</h2></div>
+
+  <p>العلامةُ الفرعيّةُ التي بعدَ ذلك هي <b>الكسرةُ</b>، وتكونُ علامةً للنصبِ في <b>موضعٍ واحدٍ</b> وهو <b>جمعُ المؤنثِ السالمُ</b>: إذا كانت الكلمةُ جمعَ مؤنثٍ سالمًا فهي حين تكونُ منصوبةً وعلامةُ نصبِها الكسرةُ؛ فجمعُ المؤنثِ السالمِ يُنصَبُ وعلامةُ نصبِه الكسرةُ:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّ الْحَسَنَاتِ يُذْهِبْنَ السَّيِّئَاتِ﴾<span class="ref">سورةُ هود: ١١٤</span></p>
+  </div>
+  <p>في قولِه تعالى: «إن الحسناتِ يذهبن السيئاتِ» نلاحظُ أن <span class="mark">«الحسناتِ»</span> أتتْ <b>منصوبةً لأنها اسمُ إنَّ</b>، واسمُ إنَّ منصوبٌ، <b>وعلامةُ نصبِها الكسرةُ الظاهرةُ على آخرِها</b> لأنها طبعًا <b>جمعُ مؤنثٍ سالمٌ</b>. وكذلك في «يذهبن السيئاتِ»: <span class="mark">«السيئاتِ»</span> هي <b>مفعولٌ به للفعلِ «يذهبنَ» منصوبٌ وعلامةُ نصبِه الكسرةُ الظاهرةُ على آخرِه</b> لأنه أيضًا جمعُ مؤنثٍ سالمٌ. يعني: إذا <b>الموضعُ الوحيدُ الذي تكونُ فيه الكسرةُ علامةً للنصبِ هو جمعُ المؤنثِ السالمِ</b>.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧ الياء ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>العلامةُ الفرعيّةُ الثالثةُ: الياءُ في التثنيةِ والجمعِ</h2></div>
+
+  <p>العلامةُ الفرعيّةُ التي بعدَ ذلك التي تكونُ علامةً للنصبِ هي <b>الياءُ</b>، وتكونُ علامةً للنصبِ في <b>موضعَينِ</b>: <b>في التثنيةِ وفي الجمعِ</b> — والمقصودُ بالجمعِ هنا <b>جمعُ المذكرِ السالمُ</b> كما سيأتي بيانُه — يعني إذا كان الاسمُ مثنًّى أو مجموعًا وهو منصوبٌ فستكونُ علامةُ نصبِه هي الياءَ:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿رَبَّنَا وَاجْعَلْنَا مُسْلِمَيْنِ لَكَ﴾<span class="ref">سورةُ البقرةِ: ١٢٨</span></p>
+  </div>
+  <p>في قولِه تعالى: «ربنا واجعلنا مسلمين لك»: <span class="mark">«مسلمين»</span> <b>مفعولٌ به لـ«اجعلْ» منصوبٌ وعلامةُ نصبِه الياءُ</b> لأنه <b>جمعُ مذكرٍ سالمٌ</b>.</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّ الْمُتَّقِينَ فِي جَنَّاتٍ وَنَهَرٍ﴾<span class="ref">سورةُ القمر: ٥٤</span></p>
+  </div>
+  <p>وكذلك في قولِه تعالى: «إن المتقين في جناتٍ ونهرٍ» — <span class="mark">«المتقين»</span> هذا <b>جمعُ مذكرٍ سالمٌ</b> وهو يُنصَبُ وعلامةُ نصبِه الياءَ؛ فـ«المتقين» <b>اسمُ إنَّ منصوبٌ وعلامةُ نصبِه الياءُ</b> لأنه جمعُ مذكرٍ سالمٌ.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الياءُ علامةُ نصبٍ في موضعَينِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node green">
+        <div class="n-title">التثنيةُ</div>
+        <div class="n-sub">المثنى منصوبٌ وعلامةُ نصبِه الياءُ نيابةً عن الفتحةِ<br>﴿ورفع أبويهِ على العرشِ﴾ — ﴿إلا أن تكونا ملكَينِ﴾ (من التطبيقاتِ)</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الجمعُ</div>
+        <div class="n-sub">والمقصودُ به جمعُ المذكرِ السالمُ<br>﴿واجعلنا مسلمين لك﴾ — ﴿إن المتقين في جناتٍ ونهرٍ﴾</div>
+      </div>
+    </div>
+    <figcaption>شكل (٥): المثنى وجمعُ المذكرِ السالمِ يُنصَبانِ بالياءِ — علامةٍ فرعيّةٍ نائبةٍ عن الفتحةِ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨ حذف النون ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>العلامةُ الفرعيّةُ الرابعةُ: حذفُ النونِ في الأمثلةِ الخمسةِ</h2></div>
+
+  <p>بقيتِ العلامةُ الأخيرةُ من علاماتِ النصبِ، وهي علامةٌ فرعيّةٌ أيضًا: <b>حذفُ النونِ</b>. وهي مختصّةٌ بالفعلِ المضارعِ الذي هو من <b>الأفعالِ الخمسةِ</b> — أو <b>الأمثلةِ الخمسةِ</b> كما ذكرنا في درسِ علاماتِ الرفعِ، وهي كلُّ مضارعٍ اتصلتْ به واوُ الجماعةِ أو ألفُ الاثنَينِ أو ياءُ المخاطبةِ. هذه الأفعالُ كما أنها تُرفعُ وتكونُ علامةُ رفعِها <b>ثبوتَ النونِ</b>، كذلك هي تُنصَبُ وتكونُ علامةُ نصبِها <b>حذفَ النونِ</b>:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَإِن لَّمْ تَفْعَلُوا وَلَن تَفْعَلُوا فَاتَّقُوا النَّارَ﴾<span class="ref">سورةُ البقرةِ: ٢٤</span></p>
+  </div>
+  <p>إذا تاملنا قولَه تعالى: «فإن لم تفعلوا ولن تفعلوا»: طبعًا اتفقنا على أن <b>«لن»</b> من <b>نواصبِ الفعلِ المضارعِ</b> — من الأدواتِ الناصبةِ له — فإذا سبقَ بها الفعلُ المضارعُ فلا بدَّ أن يكونَ منصوبًا بعدَها. و«لن تفعلوا» — الفعلُ <span class="mark">«تفعلوا»</span> أصلُه <b>«تفعلونَ»</b>، فلما دخلتْ «لن» نصبَتْه <b>فحُذِفَتِ النونُ، وحذفُ النونِ هو علامةُ النصبِ ها هنا</b>. فنقولُ في إعرابِ الفعلِ «تفعلوا» بعدَ «لن»: <b>فعلٌ مضارعٌ منصوبٌ بلن وعلامةُ نصبِه حذفُ النونِ لأنه من الأفعالِ الخمسةِ</b> — أو من الأمثلةِ الخمسةِ — وهذا واضحٌ.</p>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">تفعلونَ (مرفوعٌ بثبوتِ النونِ)</span>
+      <span class="fa">+</span>
+      <span class="chip gold">لن (ناصبةٌ)</span>
+      <span class="fa">←</span>
+      <span class="chip">لن تفعلوا: منصوبٌ بحذفِ النونِ</span>
+      <div class="lane-note">أصلُ الفعلِ من الأمثلةِ الخمسةِ مرفوعٌ بثبوتِ النونِ؛ فإذا دخلَ عليه ناصبٌ (لن، أنْ، كي، حتى، لامِ الجحود، فاءِ السببيّةِ…) حُذِفَتِ النونُ فصار حذفُها علامةَ النصبِ.</div>
+    </div>
+    <div class="dcap">شكل (٦): آليّةُ نصبِ الأمثلةِ الخمسةِ — دخولُ الناصبِ يقتضي حذفَ النونِ</div>
+  </figure>
+
+  <div class="box note">
+    <span class="tag">تمَّ الشرحُ</span>
+    <p style="margin:0">وبهذا نكونُ قد أنهينا الحديثَ عن <b>علاماتِ النصبِ الخمسِ</b>: العلامةُ الأصليّةُ هي <b>الفتحةُ</b>، وهناك علاماتٌ فرعيّةٌ وهي أربعٌ: <b>الألفُ والكسرةُ والياءُ وحذفُ النونِ</b>. وسننتقلُ إلى التطبيقاتِ إن شاء اللهُ تعالى على هذا الدرسِ.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩ التمرينات ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>التمريناتُ والتطبيقاتُ القرآنيّةُ</h2></div>
+
+  <p>والآنَ مع التطبيقاتِ على درسِ علاماتِ النصبِ؛ نقرأُ معًا الأسئلةَ ثم نحاولُ الإجابةَ عليها:</p>
+
+  <h3 id="t91">أولًا: أسئلةٌ على العلاماتِ</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «كسرْتُ العصا» — كلمةُ «العصا» منصوبةٌ، وعلامةُ النصبِ: الألفُ، أم الفتحةُ الظاهرةُ على الصادِ، أم الفتحةُ المقدَّرةُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا «العصا» آخرُها ألفٌ، والألفُ كما اتفقنا لا تظهرُ عليها العلامةُ؛ تُقدَّرُ للتعذُّرِ. إذًا علامةُ النصبِ <b>الفتحةُ المقدَّرةُ</b>، وطبعًا هي تُعربُ <b>بعلامةٍ أصليّةٍ</b> وهي الفتحةُ لأنها <b>اسمٌ مفردٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «كلمتُ القاضيَ» — «القاضي» منصوبةٌ وعلامةُ نصبِها الفتحةُ الظاهرةُ: هل هذا كلامٌ صحيحٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا <b>نعم، صحيحٌ</b>. قلتُ: إذا كانت الكلمةُ منتهيةً بياءٍ فإن الفتحةَ لا تُقدَّرُ عليها بل تظهرُ؛ لأن الأصلَ أن الكلمةَ المنتهيةَ بياءٍ تُقدَّرُ عليها العلامةُ للثقلِ، لكن هذا في <b>علامتَينِ اثنتَينِ فقط: الضمّةِ والكسرةِ</b>؛ أما الفتحةُ فليست ثقيلةً وإنما هي خفيفةٌ <b>فتظهرُ</b>. أقولُ: «كلمتُ القاضيَ» بالفتحةِ. لكن لو كانت مرفوعةً مثلًا: «جاءَ القاضي» فطبعًا سيكونُ هنا ثقلٌ، فلذلك <b>تُقدَّرُ الضمّةُ للثقلِ</b>؛ أما في حالةِ النصبِ فالفتحةُ — وهي علامةُ النصبِ — حركةٌ خفيفةٌ <b>فلا تُقدَّرُ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «الجنديُّ لن يرميَ قبلَ الإذنِ» — الفعلُ «يرمي» طبعًا فعلٌ مضارعٌ منصوبٌ، لكن ما علامةُ النصبِ: هل هي الفتحةُ الظاهرةُ أم الفتحةُ المقدَّرةُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا كما قلتُ منذُ قليلٍ: «يرمي» أيضًا منتهٍ <b>بياءٍ</b>، والياءُ تُقدَّرُ عليها العلامةُ للثقلِ <b>إلا الفتحةَ</b>؛ لأن الفتحةَ ليست ثقيلةً فتظهرُ. طيبْ — علامةُ النصبِ هنا <b>الفتحةُ الظاهرةُ</b>؛ فـ«يرميَ» ستكونُ فعلًا مضارعًا <b>منصوبًا بلن وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «أحترمُ المسلماتِ» — «المسلماتُ» هنا منصوبةٌ، وعلامةُ نصبِها ماذا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي هنا كما نرى <b>جمعُ مؤنثٍ سالمٌ</b>، ونحن قلنا في الشرحِ إن جمعَ المؤنثِ السالمِ تكونُ علامتُه <b>فرعيّةً</b> في حالةِ النصبِ وهي <b>الكسرةُ</b>. فهي هنا — كما نطقتُ: «أحترمُ المسلماتِ» — <b>مفعولٌ به منصوبٌ وعلامةُ نصبِه الكسرةُ</b>؛ وهنا لا بدَّ أن أذكرَ <b>السببَ</b>: لأنه جمعُ مؤنثٍ سالمٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَكُنتُمْ أَمْوَاتًا فَأَحْيَاكُمْ﴾</span> [البقرة: ٢٨] — كلمةُ «أمواتًا» منصوبةٌ وعلامةُ النصبِ الفتحةُ لأنها جمعُ مؤنثٍ سالمٌ: هل هذا الكلامُ صحيحٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>خطأٌ</b>: الكلمةُ ليست جمعًا مؤنثًا سالمًا؛ فكلمةُ «أموات» وإن كانت منتهيةً بألفٍ وتاءٍ فإنها ليست جمعًا مؤنثًا سالمًا؛ لأن <b>التاءَ في «أموات» ليست زائدةً</b> — «أموات» من «الموتِ» فالتاءُ أصليةٌ وليست زائدةً — ويُشترطُ في جمعِ المؤنثِ السالمِ أن ينتهيَ <b>بألفٍ وتاءٍ زائدتَينِ</b>. إذًا كلمةُ «أمواتٍ» <b>جمعُ تكسيرٍ</b>، وجمعُ التكسيرِ كما اتفقنا يكونُ منصوبًا وعلامةُ نصبِه <b>الفتحةُ الظاهرةُ</b>؛ يعني يُعربُ <b>بالعلامةِ الأصليّةِ</b> كما اتفقنا مع الاسمِ المفردِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَرَفَعَ أَبَوَيْهِ عَلَى الْعَرْشِ﴾</span> [يوسف: ١٠٠] — «أبويهِ» هنا منصوبٌ، وعلامةُ النصبِ: الياءُ، أم حذفُ النونِ، أم الكسرةُ تحتَ الهاءِ، أم الفتحةُ على الباءِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ورفعَ أبويهِ» طبعًا هو منصوبٌ <b>وعلامةُ نصبِه الياءُ</b>؛ لماذا؟ لأنه <b>مثنًى</b> — «أبويهِ» مثنًى — والمثنى كما اتفقنا أيضًا من الكلماتِ التي تُعربُ <b>بالعلامةِ الفرعيّةِ</b>، وهو في حالةِ النصبِ تكونُ علامتُه <b>الياءَ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَأَن تَصُومُوا خَيْرٌ لَّكُمْ﴾</span> [البقرة: ١٨٤] — الفعلُ «تصوموا» فعلٌ مضارعٌ منصوبٌ طبعًا بـ«أنْ» قبله (قبله أداةُ نصبٍ هي «أنْ»)، فما العلامةُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«وأن تصوموا خيرٌ لكم» — طبعًا إذا دققنا النظرَ سنجدُ أن هذا الفعلَ «تصوموا» هو فعلٌ من <b>الأفعالِ الخمسةِ أو من الأمثلةِ الخمسةِ</b>؛ لأنه <b>مُسنَدٌ إلى واوِ الجماعةِ</b>، وطالما اتصلتْ به واوُ الجماعةِ فهو يكونُ من الأمثلةِ الخمسةِ أو الأفعالِ الخمسةِ. وهذه الأفعالُ كما قلنا تكونُ منصوبةً <b>بعلامةٍ فرعيّةٍ هي حذفُ النونِ</b>؛ كما أنها كانت مرفوعةً بثبوتِ النونِ — فعندَ النصبِ <b>تُحذفُ هذه النونُ</b>؛ فالعلامةُ هنا لا شكَّ أنها <b>حذفُ النونِ</b>.</div>
+  </div>
+
+  <h3 id="t92">ثانيًا: تأمُّلُ الآياتِ — استخراجُ المنصوباتِ وعلاماتِها</h3>
+
+  <p>طيبْ: إذا أردنا أن نطبِّقَ أكثرَ فنتأمَّلْ معًا هذه الآياتِ القرآنيّةَ التي سنذكرُها الآنَ، ونريدُ أن نستخرجَ منها الأسماءَ المنصوبةَ ونبيِّنَ علامةَ النصبِ فيها:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَاتَّقُوا اللَّهَ﴾</span> [آل عمران: ٢٠٠]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا الاسمُ المنصوبُ هو لفظُ الجلالةِ <b>«اللهَ»</b>، وهو <b>مفعولٌ به هنا منصوبٌ وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَوَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ﴾</span> [الأنبياء: ٧٢]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الأسماءُ المنصوبةُ ها هنا هي كلمةُ <b>«إسحاقَ»</b> وكلمةُ <b>«يعقوبَ»</b>. طبعًا «إسحاقَ» منصوبةٌ لأنها <b>مفعولٌ به للفعلِ «وهبَ»</b>، وهي منصوبةٌ <b>وعلامةُ نصبِها الفتحةُ الظاهرةُ</b> لأنها طبعًا <b>اسمٌ مفردٌ</b>؛ وكذلك كلمةُ «يعقوبَ» هي <b>معطوفةٌ على «إسحاقَ»</b> منصوبةٌ وعلامةُ نصبِها الفتحةُ الظاهرةُ على آخرِها؛ وطبعًا أُعربَتْ بالعلامةِ الأصليّةِ لأنها مفردةٌ والعلامةُ طبعًا ظاهرةٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَإِذْ وَاعَدْنَا مُوسَىٰ أَرْبَعِينَ لَيْلَةً﴾</span> [البقرة: ٥١]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«موسى» هنا <b>مفعولٌ به منصوبٌ وعلامةُ نصبِه الفتحةُ</b> — لكن الفتحةَ هنا <b>مقدَّرةٌ للتعذُّرِ</b>؛ لأن آخرَ الكلمةِ ألفٌ. فكلمةُ «موسى» هنا هي مفعولٌ به منصوبٌ وعلامةُ نصبِه الفتحةُ المقدَّرةُ للتعذُّرِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَتَرَى الْجِبَالَ تَحْسَبُهَا جَامِدَةً وَهِيَ تَمُرُّ مَرَّ السَّحَابِ﴾</span> [النمل: ٨٨]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندي هنا كلمةُ <b>«الجبالَ»</b> منصوبةٌ <b>وعلامةُ نصبِها الفتحةُ الظاهرةُ على آخرِها</b>؛ طبعًا أُعربَتْ بالعلامةِ الأصليّةِ الفتحةِ لأنها <b>جمعُ تكسيرٍ</b> — «الجبالُ» جمعُ تكسيرٍ، وجمعُ التكسيرِ يُعرَبُ بالعلامةِ الأصليّةِ تمامًا كالمفردِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿لَّن يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا﴾</span> [الحج: ٣٧]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندي هنا <b>منصوبانِ</b>: لفظُ الجلالةِ <b>«اللهَ»</b>، والفعلُ <b>«ينالَ»</b> منصوبٌ بلن. فـ«ينالُ» فعلٌ مضارعٌ <b>منصوبٌ بلن وعلامةُ نصبِه الفتحةُ الظاهرةُ على آخرِه</b>؛ لأنه طبعًا <b>ليس من الأفعالِ الخمسةِ</b> أو من الأمثلةِ الخمسةِ، فتكونُ علامةُ نصبِه هي الفتحةَ. وطبعًا «اللهُ» لفظُ الجلالةِ هو <b>مفردٌ</b> فيُعربُ بالعلامةِ الأصليّةِ؛ فتكونُ علامةُ نصبِه هي <b>الفتحةَ الظاهرةَ</b> كما نرى.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَعَدَكُمُ اللَّهُ مَغَانِمَ كَثِيرَةً﴾</span> [الفتح: ٢٠]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«مغانمَ» أيضًا هي <b>منصوبةٌ وعلامةُ نصبِها العلامةُ الأصليّةُ وهي الفتحةُ</b> لأنها <b>جمعُ تكسيرٍ</b>؛ فعلامةُ نصبِ «مغانمَ» الفتحةُ الظاهرةُ طبعًا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَأَنكِحُوا الْأَيَامَىٰ مِنكُمْ﴾</span> [النور: ٣٢]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«الأيامى» هي <b>مفعولٌ به</b> إذًا ستكونُ منصوبةً؛ فما علامةُ النصبِ؟ علامةُ النصبِ هي الفتحةُ، <b>لكن الفتحةَ مقدَّرةٌ</b> لأن آخرَ الكلمةِ ألفٌ، والألفُ يتعذَّرُ ظهورُ العلامةِ عليها. فكلمةُ «الأيامى» ها هنا هي مفعولٌ به منصوبٌ وعلامةُ نصبِه الفتحةُ المقدَّرةُ، وطبعًا هي أُعربَتْ <b>بالعلامةِ الأصليّةِ</b> وهي الفتحةُ لأنها <b>جمعُ تكسيرٍ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ﴾</span> [الأحزاب: ٤٠]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ما كان محمدٌ أبا أحدٍ من رجالكم» — المنصوبُ هنا كلمةُ <b>«أبا»</b> («أبا أحدٍ»). طبعًا هي <b>خبرُ كانَ</b>، وخبرُ كانَ يكونُ منصوبًا. «أبا» هي خبرُ كانَ وهي <b>من الأسماءِ الخمسةِ</b>؛ وخبرُ كانَ يكونُ منصوبًا ولكن علامةُ النصبِ هنا <b>علامةٌ فرعيّةٌ هي الألفُ</b> لأن الكلمةَ من الأسماءِ الخمسةِ. إذًا كلمةُ «أبا» خبرُ كانَ منصوبٌ وعلامةُ نصبِه الألفُ لأنه من الأسماءِ الخمسةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَنَمِيرُ أَهْلَنَا وَنَحْفَظُ أَخَانَا﴾</span> [يوسف: ٦٥]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ونميرَ أهلَنا ونحفظُ أخانا»: «أهلَنا» هي <b>مفعولٌ به لـ«نميرَ»</b> وهو طبعًا منصوبٌ <b>وعلامةُ نصبِه الفتحةُ</b> لأنه <b>مفردٌ في اللفظِ</b>. و«ونحفظُ أخانا»: «أخانا» هي <b>مفعولٌ به أيضًا لـ«نحفظُ»</b> لكنها منصوبةٌ <b>وعلامةُ نصبِها فرعيّةٌ وهي الألفُ</b> لأنها <b>من الأسماءِ الخمسةِ</b> كما نرى.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿أَن كَانَ ذَا مَالٍ وَبَنِينَ﴾</span> [القلم: ١٤]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الشاهدُ عندي هنا في كلمةِ <b>«ذا»</b>: وأنها وقعتْ <b>خبرًا لكانَ</b>، وخبرُ كانَ منصوبٌ. فما علامةُ النصبِ ها هنا في «ذا»؟ علامةُ النصبِ هي <b>الألفُ</b>، وهي <b>علامةٌ فرعيّةٌ</b> لأن الكلمةَ من الأسماءِ الخمسةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَإِن كُنَّ أُولَاتِ حَمْلٍ﴾</span> [الطلاق: ٤]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>كلمةُ <b>«أولاتِ»</b> من <b>الملحقاتِ بجمعِ المؤنثِ السالمِ</b>؛ «أولاتِ» من الملحقاتِ بجمعِ المؤنثِ السالمِ، إذًا هي <b>تُعربُ إعرابَه</b>. فـ«أولاتُ» هي <b>خبرُ «كنَّ» منصوبٌ</b> — لأن خبرَ «كانَ» وأخواتِها يكونُ منصوبًا — <b>وعلامةُ نصبِه الكسرةُ الظاهرةُ</b> لأنه بمنزلةِ <b>جمعِ مؤنثٍ سالمٍ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿خَلَقَ اللَّهُ السَّمَاوَاتِ وَالْأَرْضَ بِالْحَقِّ﴾</span> [العنكبوت: ٤٤]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا كلمتانِ منصوبتانِ: <b>«السماواتُ»</b> و<b>«الأرضُ»</b>. «السماواتُ» طبعًا منصوبةٌ لأنها هي <b>مفعولٌ به</b>: «خلقَ اللهُ السماواتِ» — وهي منصوبةٌ وعلامةُ نصبِها <b>الكسرةُ</b> لأنها <b>جمعُ مؤنثٍ سالمٌ</b> كما نرى؛ «السماواتُ» منتهيةٌ بألفٍ وتاءٍ <b>زائدتَينِ</b> فمن ثَمَّ هي جمعُ مؤنثٍ سالمٌ، وقلنا إن جمعَ المؤنثِ السالمِ يُنصَبُ وتكونُ علامةُ نصبِه فرعيّةً هي الكسرةَ. و<b>«الأرضَ»</b> طبعًا لأنها <b>اسمٌ مفردٌ</b> فتكونُ علامةُ النصبِ فيها هي العلامةُ الأصليّةُ وهي <b>الفتحةُ</b>، وهي <b>معطوفةٌ طبعًا على «السماواتِ»</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿إِذْ أَرْسَلْنَا إِلَيْهِمُ اثْنَيْنِ﴾</span> [يس: ١٤] — أينَ المنصوبُ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«أرسلنا إليهم اثنَينِ» — كلمةُ <b>«اثنَينِ»</b> هذه <b>مفعولٌ به</b> للفعلِ «أرسلَ»، منصوبةٌ <b>وعلامةُ نصبِها الياءُ لأنها ملحقةٌ بالمثنى</b>؛ فكلمةُ «اثنانِ» و«اثنتانِ» من الكلماتِ <b>الملحقةِ بالمثنى</b> أي تُعربُ إعرابَه، فهي «اثنَينِ» هنا منصوبةٌ وعلامةُ نصبِها الياءُ لأنها ملحقةٌ بالمثنى.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿رَبَّنَا أَرِنَا الَّذَيْنِ أَضَلَّانَا﴾</span> [فصلت: ٢٩]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ربنا أرِنا اللذَينِ أضلَّانا» — الكلمةُ المنصوبةُ هنا هي كلمةُ <b>«اللذَينِ»</b>، وهي <b>مفعولٌ به للفعلِ «أرِنا» منصوبٌ وعلامةُ نصبِه الياءُ لأنه ملحقٌ بالمثنى</b>. و«اللذانِ» و«اللتانِ» و«هذانِ» و«هاتانِ» — من أسماءِ الإشارةِ وأسماءِ الموصولِ — هذه كلُّها <b>تلحقُ بالمثنى وليست مثنًّى على الأصلِ فتُعربُ إعرابَ المثنى</b>؛ ها هنا «اللذينِ» مفعولٌ به منصوبٌ وعلامةُ نصبِه الياءُ لأنه ملحقٌ بالمثنى.</div>
+  </div>
+
+  <div class="box note">
+    <span class="tag">تنبيهٌ: ملحقاتُ المثنى الواردةُ في الدرسِ</span>
+    <p style="margin:0">«اثنانِ واثنتانِ»، و«اللذانِ واللتانِ»، و«هذانِ وهاتانِ» من أسماءِ الإشارةِ وأسماءِ الموصولِ — كلُّها تلحقُ بالمثنى وليست مثنًّى على الأصلِ، فتُعربُ إعرابَه: <b>رفعًا بالألفِ، ونصبًا وجرًّا بالياءِ</b>.</p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَكَذَٰلِكَ نُنجِي الْمُؤْمِنِينَ﴾</span> [الأنبياء: ٨٨]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«وكذلك نُنجي المؤمنينَ» — الكلمةُ المنصوبةُ ها هنا هي كلمةُ <b>«المؤمنينَ»</b>؛ هي <b>مفعولٌ به للفعلِ «نُنجي» منصوبٌ وعلامةُ نصبِه الياءُ</b>. لماذا؟ لأنه <b>جمعُ مذكرٍ سالمٌ</b>؛ الكلمةُ هنا أتتْ جمعَ مذكرٍ سالمًا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿إِلَّا أَن تَكُونَا مَلَكَيْنِ﴾</span> [الأعراف: ٢٠]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نلاحظُ هنا أن الفعلَ <b>«تكونا»</b> منصوبٌ، وكلمةُ <b>«ملكَينِ»</b> أيضًا منصوبةٌ لأنها <b>خبرُ «تكونَ»</b>، وهي منصوبةٌ وعلامةُ نصبِها <b>الياءُ لأنها مثنًّى</b> — كما اتفقنا أن المثنى يُعربُ بعلامةٍ فرعيّةٍ في حالةِ النصبِ وهي الياءُ. طيبْ: الفعلُ «تكونا» أتى بعدَ أداةِ نصبٍ هي <b>«أنْ»</b> — «إلا أنْ تكونا» — إذًا هو <b>منصوبٌ بها وعلامةُ نصبِه حذفُ النونِ</b>؛ لأن أصلَه <b>«تكونانِ»</b> — فهو من الأمثلةِ الخمسةِ — لكن لما دخلتْ «أنْ» عليه ونصبَتْه <b>حُذِفَتِ النونُ</b>، وحذفُ النونِ طبعًا هو ها هنا <b>علامةُ النصبِ</b>. فنقولُ في إعرابِه: «تكونا» <b>فعلٌ مضارعٌ منصوبٌ بأنْ وعلامةُ نصبِه حذفُ النونِ لأنه من الأمثلةِ الخمسةِ أو من الأفعالِ الخمسةِ</b>، والألفُ فيه — في «تكونا» — <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b> كما نرى.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>في قولِنا: «احرصي على أن تكوني من العابداتِ القانتاتِ»:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«احرصي على أن تكوني من العابداتِ القانتاتِ» — الكلمةُ المنصوبةُ هنا في هذه العبارةِ هي كلمةُ <b>«تكوني»</b>، وهي <b>فعلٌ مضارعٌ منصوبٌ بأنْ قبله</b>، وطبعًا هو <b>من الأفعالِ الخمسةِ أو من الأمثلةِ الخمسةِ</b> لأنه <b>اتصلتْ به ياءُ المخاطبةِ</b>؛ فأصلُه «تكونينَ»، لكن لما دخلتْ «أنْ» ونصبَتْه <b>حُذِفَتِ النونُ</b> — لأن حذفَ النونِ هو علامةُ النصبِ. فنقولُ في إعرابِها: «تكوني» <b>فعلٌ مضارعٌ منصوبٌ بأنْ وعلامةُ نصبِه حذفُ النونِ لأنه من الأمثلةِ الخمسةِ أو من الأفعالِ الخمسةِ</b>. وطبعًا — كما قلتُ — <b>فاعلُ الأفعالِ الخمسةِ دائمًا فيها هو الضميرُ</b>؛ فالضميرُ هنا هو <b>ياءُ المخاطبةِ</b>: ياءُ المخاطبةِ ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ.</div>
+  </div>
+
+  <h3 id="t93">الجدولُ التلخيصيُّ للتطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الشاهدُ</th><th>الكلمةُ المنصوبةُ</th><th>وظيفتُها</th><th>علامتُها</th><th>وجهُ العلامةِ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>«كسرْتُ العصا»</td><td>العصا</td><td>مفعولٌ به</td><td>الفتحةُ المقدَّرةُ</td><td>مفردٌ آخرُه ألفٌ (تُقدَّرُ للتعذُّرِ)</td></tr>
+        <tr><td>«كلمتُ القاضيَ»</td><td>القاضيَ</td><td>مفعولٌ به</td><td>الفتحةُ الظاهرةُ</td><td>منتهٍ بياءٍ، والفتحةُ خفيفةٌ تظهرُ (ولا تُقدَّرُ إلا الضمّةُ والكسرةُ للثقلِ)</td></tr>
+        <tr><td>«الجنديُّ لن يرميَ قبلَ الإذنِ»</td><td>يرميَ</td><td>فعلٌ مضارعٌ</td><td>الفتحةُ الظاهرةُ</td><td>منصوبٌ بلن، ومنتهٍ بياءٍ فالفتحةُ تظهرُ</td></tr>
+        <tr><td>«أحترمُ المسلماتِ»</td><td>المسلماتِ</td><td>مفعولٌ به</td><td>الكسرةُ الظاهرةُ</td><td>جمعُ مؤنثٍ سالمٌ</td></tr>
+        <tr><td>﴿وكنتم أمواتًا فأحياكم﴾</td><td>أمواتًا</td><td>خبرُ «كنتم»</td><td>الفتحةُ الظاهرةُ</td><td>جمعُ تكسيرٍ (التاءُ أصليةٌ من «الموتِ» لا زائدةٌ)</td></tr>
+        <tr><td>﴿ورفع أبويهِ على العرشِ﴾</td><td>أبويهِ</td><td>مفعولٌ به</td><td>الياءُ</td><td>مثنًّى</td></tr>
+        <tr><td>﴿وأن تصوموا خيرٌ لكم﴾</td><td>تصوموا</td><td>فعلٌ مضارعٌ</td><td>حذفُ النونِ</td><td>منصوبٌ بأنْ، ومن الأمثلةِ الخمسةِ (اتصلتْ به واوُ الجماعةِ)</td></tr>
+        <tr><td>﴿واتقوا اللهَ﴾</td><td>اللهَ</td><td>مفعولٌ به</td><td>الفتحةُ الظاهرةُ</td><td>اسمٌ مفردٌ</td></tr>
+        <tr><td>﴿ووهبنا له إسحاقَ ويعقوبَ﴾</td><td>إسحاقَ / يعقوبَ</td><td>مفعولٌ به / معطوفٌ</td><td>الفتحةُ الظاهرةُ</td><td>اسمانِ مفردانِ</td></tr>
+        <tr><td>﴿وإذ واعدنا موسى أربعين ليلةً﴾</td><td>موسى</td><td>مفعولٌ به</td><td>الفتحةُ المقدَّرةُ</td><td>مفردٌ آخرُه ألفٌ (للتعذُّرِ)</td></tr>
+        <tr><td>﴿وترى الجبالَ تحسبها جامدةً﴾</td><td>الجبالَ</td><td>مفعولٌ به</td><td>الفتحةُ الظاهرةُ</td><td>جمعُ تكسيرٍ</td></tr>
+        <tr><td>﴿لن ينالَ اللهَ لحومها ولا دماؤها﴾</td><td>ينالَ / اللهَ</td><td>فعلٌ مضارعٌ / مفعولٌ به</td><td>الفتحةُ الظاهرةُ</td><td>ليس من الأمثلةِ الخمسةِ / مفردٌ</td></tr>
+        <tr><td>﴿وعدكم اللهُ مغانمَ كثيرةً﴾</td><td>مغانمَ</td><td>مفعولٌ به</td><td>الفتحةُ الظاهرةُ</td><td>جمعُ تكسيرٍ</td></tr>
+        <tr><td>﴿وأنكحوا الأيامى منكم﴾</td><td>الأيامى</td><td>مفعولٌ به</td><td>الفتحةُ المقدَّرةُ</td><td>جمعُ تكسيرٍ آخرُه ألفٌ</td></tr>
+        <tr><td>﴿ما كان محمدٌ أبا أحدٍ من رجالكم﴾</td><td>أبا</td><td>خبرُ كانَ</td><td>الألفُ</td><td>من الأسماءِ الخمسةِ</td></tr>
+        <tr><td>﴿ونميرَ أهلَنا ونحفظُ أخانا﴾</td><td>أهلَنا / أخانا</td><td>مفعولٌ به / مفعولٌ به</td><td>الفتحةُ الظاهرةُ / الألفُ</td><td>مفردٌ في اللفظِ / من الأسماءِ الخمسةِ</td></tr>
+        <tr><td>﴿أن كان ذا مالٍ وبنين﴾</td><td>ذا</td><td>خبرُ كانَ</td><td>الألفُ</td><td>من الأسماءِ الخمسةِ</td></tr>
+        <tr><td>﴿وإن كنَّ أولاتِ حملٍ﴾</td><td>أولاتِ</td><td>خبرُ «كنَّ»</td><td>الكسرةُ الظاهرةُ</td><td>ملحقٌ بجمعِ المؤنثِ السالمِ</td></tr>
+        <tr><td>﴿خلق اللهُ السماواتِ والأرضَ﴾</td><td>السماواتِ / الأرضَ</td><td>مفعولٌ به / معطوفٌ</td><td>الكسرةُ / الفتحةُ الظاهرةُ</td><td>جمعُ مؤنثٍ سالمٌ / مفردٌ</td></tr>
+        <tr><td>﴿إذ أرسلنا إليهم اثنَينِ﴾</td><td>اثنَينِ</td><td>مفعولٌ به</td><td>الياءُ</td><td>ملحقٌ بالمثنى</td></tr>
+        <tr><td>﴿ربنا أرِنا اللذينِ أضلَّانا﴾</td><td>اللذينِ</td><td>مفعولٌ به</td><td>الياءُ</td><td>ملحقٌ بالمثنى</td></tr>
+        <tr><td>﴿وكذلك نُنجي المؤمنينَ﴾</td><td>المؤمنينَ</td><td>مفعولٌ به</td><td>الياءُ</td><td>جمعُ مذكرٍ سالمٌ</td></tr>
+        <tr><td>﴿إلا أن تكونا ملكَينِ﴾</td><td>تكونا / ملكَينِ</td><td>فعلٌ مضارعٌ / خبرُ «تكونَ»</td><td>حذفُ النونِ / الياءُ</td><td>منصوبٌ بأنْ من الأمثلةِ الخمسةِ (أصلُه تكونانِ، والألفُ فاعلٌ) / مثنًّى</td></tr>
+        <tr><td>«احرصي على أن تكوني من العابداتِ القانتاتِ»</td><td>تكوني</td><td>فعلٌ مضارعٌ</td><td>حذفُ النونِ</td><td>منصوبٌ بأنْ، من الأمثلةِ الخمسةِ (أصلُه تكونينَ، وياءُ المخاطبةِ فاعلٌ)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ١٠ الخلاصة ==================== -->
+<section id="s10">
+  <div class="sec-head"><span class="sec-num">١٠</span><h2>خلاصةُ الدرس</h2></div>
+
+  <p>بهذا نكونُ قد أنهينا الحديثَ عن علاماتِ النصبِ، وقد ذكرنا أنها <b>خمسُ علاماتٍ</b>: هناك علامةٌ أصليّةٌ وهي <b>الفتحةُ</b>، وهناك أربعُ علاماتٍ فرعيّةٍ هي <b>الألفُ والكسرةُ والياءُ وحذفُ النونِ</b>، وقلنا إن لكلِّ علامةٍ مواضعَها:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>العلامةُ</th><th>نوعُها</th><th>مواضعُها</th><th>أمثلةٌ</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>الفتحةُ</b></td>
+          <td>أصليّةٌ</td>
+          <td>ثلاثةٌ: ① الاسمُ المفردُ ② جمعُ التكسيرِ ③ الفعلُ المضارعُ إذا دخلَ عليه ناصبٌ ولم يتصلْ بآخرِه شيءٌ</td>
+          <td>﴿اهدِنا الصراطَ المستقيمَ﴾ — «قرأتُ الكتبَ» — ﴿كي تقرَّ عينُها ولا تحزنْ﴾ — ﴿حتى تتبعَ مِلَّتَهم﴾</td>
+        </tr>
+        <tr>
+          <td><b>الألفُ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>موضعٌ واحدٌ: الأسماءُ الخمسةُ (بشروطِها المتقدمةِ في بابِ الرفعِ؛ وفي النصبِ تكونُ «ذا» و«فاكَ» منزوعةَ الميمِ)</td>
+          <td>«رأيتُ أباكَ» — «أحترمُ ذا الخلقِ الرفيعِ» — ﴿ما كان محمدٌ أبا أحدٍ﴾</td>
+        </tr>
+        <tr>
+          <td><b>الكسرةُ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>موضعٌ واحدٌ: جمعُ المؤنثِ السالمُ (بشرطِ انتهائِه بألفٍ وتاءٍ زائدتَينِ)</td>
+          <td>﴿إن الحسناتِ يذهبن السيئاتِ﴾ — «أحترمُ المسلماتِ»</td>
+        </tr>
+        <tr>
+          <td><b>الياءُ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>موضعانِ: التثنيةُ، والجمعُ — والمقصودُ بالجمعِ جمعُ المذكرِ السالمُ</td>
+          <td>﴿واجعلنا مسلمين لك﴾ — ﴿إن المتقين في جناتٍ ونهرٍ﴾</td>
+        </tr>
+        <tr>
+          <td><b>حذفُ النونِ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>موضعٌ واحدٌ: الأفعالُ الخمسةُ (الأمثلةُ الخمسةُ) التي رفعُها بثبوتِ النونِ</td>
+          <td>﴿فإن لم تفعلوا ولن تفعلوا﴾ — ﴿وأن تصوموا خيرٌ لكم﴾</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="summary-points">
+    <li><b>النصبُ هو الحالةُ الإعرابيّةُ الثانيةُ</b>، وتندرجُ تحتها وظائفُ أهمُّها المفاعيلُ الخمسةُ (المفعولُ به، والمطلقُ، ولأجلِه، وفيه، ومعه)، ثم الحالُ والتمييزُ واسمُ إنَّ وخبرُ كانَ — وكلُّها حين تُنصَبُ تكونُ علامتُها واحدةً من خمسٍ.</li>
+    <li><b>الفتحةُ</b> العلامةُ الأصليّةُ للنصبِ: تكونُ في الاسمِ المفردِ وجمعِ التكسيرِ والفعلِ المضارعِ المسبوقِ بناصبٍ الذي لم يتصلْ بآخرِه ضميرُ رفعٍ؛ <b>وقد تكونُ ظاهرةً وقد تكونُ مقدَّرةً</b>: تُقدَّرُ على الألفِ <b>للتعذُّرِ</b> («إنَّ سلمى» — ﴿لن ترضى﴾)، أما على الواوِ والياءِ <b>فتظهرُ لأنها حركةٌ خفيفةٌ</b> («لن أدعوَ» — «لن أقضيَ»)؛ إنما يُقدَّرُ للثقلِ على الياءِ والواوِ حركتا <b>الضمّةِ والكسرةِ</b> فقط.</li>
+    <li><b>الألفُ</b> علامةُ نصبِ <b>الأسماءِ الخمسةِ</b> وحدها (أبٌ، أخٌ، حمٌ، فمٌ، ذو) متى صحَّتْ فيها الشروطُ: الإضافةُ لغيرِ ياءِ المتكلمِ، والإفرادُ، والتكبيرُ، وكونُ «ذو» بمعنى صاحبٍ؛ وتكونُ في النصبِ «ذا»، و«فاكَ» منزوعةَ الميمِ.</li>
+    <li><b>الكسرةُ</b> علامةُ نصبِ <b>جمعِ المؤنثِ السالمِ</b> وحده، ويُشترطُ أن ينتهيَ بألفٍ وتاءٍ <b>زائدتَينِ</b>؛ فأما «أمواتٌ» ونحوُه فتاؤُه أصليةٌ فهو <b>جمعُ تكسيرٍ</b> يُنصَبُ بالفتحةِ.</li>
+    <li><b>الياءُ</b> علامةُ نصبٍ في موضعَينِ: <b>التثنيةُ</b> — ويُلحَقُ بها «اثنانِ واثنتانِ» و«اللذانِ واللتانِ» و«هذانِ وهاتانِ» — و<b>الجمعُ</b>، والمقصودُ به جمعُ المذكرِ السالمُ.</li>
+    <li><b>حذفُ النونِ</b> علامةُ نصبِ <b>الأفعالِ الخمسةِ (الأمثلةِ الخمسةِ)</b> التي رفعُها بثبوتِ النونِ؛ فإذا دخلتْ عليها ناصبٌ حُذِفَتِ النونُ، والضميرُ المتصلُ فيها (الواوُ أو الألفُ أو الياءُ) هو الفاعلُ في محلِّ رفعٍ.</li>
+    <li>يكونُ إن شاء اللهُ تعالى لقاؤُنا في الدرسِ القادمِ مع <b>علاماتِ الخفضِ أو الجرِّ</b>.</li>
+  </ul>
+
+  <div class="box note">
+    <span class="tag">تمَّ الدرسُ</span>
+    <p style="margin:0">بهذا نكونُ قد أنهينا الكلامَ على <b>علاماتِ النصبِ</b>: علامةٌ أصليّةٌ هي <b>الفتحةُ</b>، وأربعُ علاماتٍ فرعيّةٍ: <b>الألفُ</b> في الأسماءِ الخمسةِ، و<b>الكسرةُ</b> في جمعِ المؤنثِ السالمِ، و<b>الياءُ</b> في التثنيةِ والجمعِ، و<b>حذفُ النونِ</b> في الأفعالِ الخمسةِ التي رفعُها بثبوتِ النونِ. وان شاء اللهُ مع الدرسِ القادمِ: <b>علاماتِ الخفضِ أو الجرِّ</b>.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ الرابعِ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=55rY4U8azKk" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>باب الأفعال — الدرس الثامن من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">بابُ الأفعالِ</h1>
+    <div class="cover-sub">الدرس الثامن: أقسامُ الأفعالِ الثلاثةُ (الماضي والمضارعُ والأمرُ) وعلاماتُها وأحكامُ بنائِها مع التطبيقاتِ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=Q1H4_nLmQuQ" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتن ونظمُ الشنقيطيِّ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s2a">جدولُ النواصبِ والجوازمِ في المتنِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٣</span><a href="#s3">أقسامُ الأفعالِ الثلاثةُ ودلالتُها الزمنيّةُ</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">علاماتُ الأفعالِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">علامتا الفعلِ الماضي: التاءانِ</a></li>
+        <li><a href="#s4b">علامةُ المضارعِ: حروفُ «أنيت»</a></li>
+        <li><a href="#s4c">علامةُ الأمرِ: الدلالةُ على الطلبِ بصيغتِه</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">أحكامُ الأفعالِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s5a">الماضي: مبنيٌّ على الفتحِ أبدًا</a></li>
+        <li><a href="#s5b">الأمرُ: مجزومٌ أبدًا — يُبنى على ما يُجزَمُ به مضارعُه</a></li>
+        <li><a href="#s5c">المضارعُ: مرفوعٌ أبدًا حتى يدخلَ عليه ناصبٌ أو جازمٌ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٦</span><a href="#s6">التطبيقاتُ: الشواهدُ القرآنيّةُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t63">الجدولُ التلخيصيُّ للتطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٧</span><a href="#s7">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١ افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+
+  <p>بسمِ اللهِ الرحمنِ الرحيمِ، حمدًا للهِ كما ينبغي لجلالِه وكمالِه، وصلًّى اللهُ وسلَّمَ على النبيِّ المصطفى وعلى آلِه. وبعدُ: فمرحبًا بكم أيها الكرامُ وأيتها الكريماتُ مع <b>درسٍ جديدٍ</b> من دروسِ شرحِ متنِ الآجروميّةِ للإمامِ ابنِ آجرومَ الصنهاجيِّ المغربيِّ رحمه اللهُ. وموضوعُ درسِنا اليومَ هو <b>بابُ الأفعالِ</b>: هو الأفعالُ بأنواعِها الثلاثةِ: <b>الماضي والمضارعُ والأمرُ</b>. سنقرأُ ما قالَه ابنُ آجرومَ، ثم ننتقلُ إلى النظمِ ونقرأُ ما قالَه الناظمُ <b>محمدُ بنُ آبِّه الشنقيطيُّ</b>، وبعدَ ذلك نشرعُ في تفصيلِ وشرحِ كلامِهما.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢ المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتن ونظمُ الشنقيطيِّ</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«الأفعالُ ثلاثةٌ: ماضٍ، ومضارعٌ، وأمرٌ؛ نحو: ضربَ، ويضربُ، واضربْ.<br>
+    فالماضي مفتوحُ الآخرِ أبدًا، والأمرُ مجزومٌ أبدًا، والمضارعُ ما كانَ في أولِه إحدى الزوائدِ الأربعِ التي يجمعُها قولُك «أنيت»، وهو مرفوعٌ أبدًا حتى يدخلَ عليه ناصبٌ أو جازمٌ.<br>
+    فالنواصبُ: أنْ، ولنْ، وإذنْ، وكي، ولامُ كي، ولامُ الجحودِ، وحتى، والجوابُ بالفاءِ والواوِ.<br>
+    والجوازمُ ثمانيةَ عشرَ: وهي: لمْ، ولمّا، وألمْ، وألمّا، ولامُ الأمرِ والدعاءِ، و«لا» في النهيِ والدعاءِ، وإنْ، وما، ومَن، ومهما، وإذ ما، وأينَ، ومتى، وأيّانَ، وأنّى، وحيثما، وكيفما، وإذا في الشعرِ خاصّةً»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">بابُ الأفعالِ وهي ثلاثهْ … مضي قد خلا وفعلُ أمرٍ ومضارعٌ علا</div>
+      <div class="ln">فالماضي مفتوحُ الأخيرِ أبدًا … والأمرُ بالجزمِ لدى البعضِ ارتدى</div>
+      <div class="ln">ثم المضارعُ الذي في صدرِهِ … إحدى زوائدِ أنيتَ فادْرِهْ</div>
+      <div class="ln">وحكمُهُ الرفعُ إذا يُجرَّدُ … من ناصبٍ وجازمٍ كتَسْعَدُ</div>
+      <div class="ln">ونصبُهُ بأنْ ولنْ وإذنْ وكي … ولامِ كي لامِ الجحودِ يا أخي</div>
+      <div class="ln">كذلك حتى والجوابُ بالفا … والواوِ ثم أو رُزقتَ اللُّطفا</div>
+      <div class="ln">وجزمُهُ إذا أردتَ الجزما … بلمْ ولمّا وألمْ ألما</div>
+      <div class="ln">ولامِ الأمرِ والدعاءِ ثم لا … في النهيِ والدعاءِ نِلْتَ الأملا</div>
+      <div class="ln">وإنْ وما ومَنْ وأنّى مهما … أيْ متى أيّانَ أينَ إذ ما</div>
+      <div class="ln">وحيثما وكيفما ثم إذا … في الشعرِ لا في النثرِ فادْرِ المأخذا</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <h3 id="s2a">جدولُ النواصبِ والجوازمِ في المتنِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>نواصبُ المضارعِ (ثمانيةٌ)</th><th>جوازمُ المضارعِ (ثمانيةَ عشرَ)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            ١ أنْ — ٢ لنْ — ٣ إذنْ — ٤ كي — ٥ لامُ كي — ٦ لامُ الجحودِ — ٧ حتى — ٨ الجوابُ بالفاءِ والواوِ
+          </td>
+          <td>
+            ١ لمْ — ٢ لمّا — ٣ ألمْ — ٤ ألمّا — ٥ لامُ الأمرِ والدعاءِ — ٦ «لا» في النهيِ والدعاءِ — ٧ إنْ — ٨ ما — ٩ مَن — ١٠ مهما — ١١ إذ ما — ١٢ أينَ — ١٣ متى — ١٤ أيّانَ — ١٥ أنّى — ١٦ حيثما — ١٧ كيفما — ١٨ وإذا في الشعرِ خاصّةً
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <span class="tag">تنبيهٌ</span>
+    <p style="margin:0">النواصبُ والجوازمُ المذكورةُ هنا في المتنِ هي موضوعُ <b>الدرسَينِ القادمَينِ</b> بإذنِ اللهِ؛ وإنما ذكرَها ابنُ آجرومَ في هذا البابِ على سبيلِ الإجمالِ لتكملةِ الكلامِ على الفعلِ المضارعِ وأنه «مرفوعٌ أبدًا حتى يدخلَ عليه ناصبٌ أو جازمٌ».</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣ أقسام الأفعال ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>أقسامُ الأفعالِ الثلاثةُ ودلالتُها الزمنيّةُ</h2></div>
+
+  <p>تكلمَ ابنُ آجرومَ والناظمُ على أن <b>أنواعَ الأفعالِ ثلاثةٌ</b>: فقد ذكرَ ابنُ آجرومَ قسمةَ الأفعالِ وقسَّمَها إلى ثلاثةٍ؛ فالأفعالُ في اللغةِ العربيةِ تنقسمُ إلى <b>ثلاثةِ أقسامٍ بناءً على دلالتِها الزمنيّةِ المبنيّةِ على صيغتِها</b>: يعني تختلفُ صيغةُ الأفعالِ فيختلفُ زمانُها: صيغةُ الماضي، وصيغةُ المضارعِ، وصيغةُ الأمرِ؛ ولكلِّ صيغةٍ منهنَّ دلالةٌ خاصّةٌ على الزمنِ. فالفعلُ — كما نعلمُ — لا بدَّ أن يدلَّ على <b>شيئَينِ: على حدثٍ وزمنٍ</b>:</p>
+  <ul>
+    <li><b>الحدثُ</b> موجودٌ في كلِّ أنواعِ الفعلِ — في الماضي والمضارعِ والأمرِ — كما هو لا يتغيرُ.</li>
+    <li>أما <b>الذي يتغيرُ بتغيُّرِ صيغةِ الفعلِ فهو الزمنُ</b>: فزمنُ الماضي يختلفُ عن زمنِ المضارعِ عن زمنِ الأمرِ إلى آخرِه.</li>
+  </ul>
+  <p>فلو قلتُ مثلًا الفعلَ «كتبَ»: الحدثُ هو <b>الكتابةُ</b> موجودٌ في كلِّ صيغِ الفعلِ — في الماضي «كتبَ» والمضارعِ «يكتبُ» والأمرِ «اكتبْ» — حدثُ الكتابةِ موجودٌ فيها جميعًا لم يتخلفْ ولم يختلفْ؛ ولكنْ كلُّ صيغةٍ تدلُّ على <b>زمانٍ محددٍ</b>:</p>
+  <ul>
+    <li><b>الفعلُ الماضي</b> هو ما دلَّ على <b>الزمانِ الماضي</b>.</li>
+    <li><b>الفعلُ المضارعُ</b> هو ما دلَّ على <b>الزمانِ الحالِّ (الحاضرِ) أو المستقبلِ</b>؛ وأحيانًا يخلُصُّ الفعلُ المضارعُ للمستقبلِ — يعني يكونُ دالًّا على المستقبلِ فقط — <b>إذا سبقَتْه حروفٌ تخلِّصُه للاستقبالِ: كالسينِ وسوفَ و«لن» النافيةِ الناصبةِ</b>.</li>
+    <li><b>الفعلُ الأمرُ</b> فيدلُّ على <b>المستقبلِ دائمًا</b>؛ لأنه طلبٌ بفعلِ شيءٍ في المستقبلِ — ولو كانَ هذا المستقبلُ قريبًا يعني دقيقةً واحدةً، لا مشكلةَ؛ المهمُّ أنه في المستقبلِ.</li>
+  </ul>
+  <p>وقد ضربَ ابنُ آجرومَ أمثلةً على هذا فقال: <span class="mark">«ضربَ، ويضربُ، واضربْ»</span>: «ضربَ» فعلٌ ماضٍ، و«يضربُ» فعلٌ مضارعٌ، و«اضربْ» فعلُ أمرٍ. وقد سبقَ له أن تكلمَ عن العلاماتِ في الأفعالِ إجمالًا وإن لم يخصِّصْ كلَّ نوعٍ منها بعلاماتٍ معينةٍ — وسنفصِّلُ ذلك الآنَ.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الأفعالُ ثلاثةٌ — والحدثُ واحدٌ والزمنُ هو المتغيرُ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الماضي</div>
+        <div class="n-sub">ما دلَّ على <b>الزمانِ الماضي</b><br>«ضربَ — كتبَ»<br>علامتُه الشهيرتانِ: تاءُ التأنيثِ الساكنةُ وتاءُ الفاعلِ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">المضارعُ</div>
+        <div class="n-sub">ما دلَّ على <b>الحالِّ أو الاستقبالِ</b> — ويخلُصُّ للمستقبلِ بالسينِ وسوفَ و«لن»<br>«يضربُ — يكتبُ»<br>علامتُه: حروفُ المضارعةِ «أنيت» في أولِه</div>
+      </div>
+      <div class="node maroon">
+        <div class="n-title">الأمرُ</div>
+        <div class="n-sub">ما دلَّ على <b>الطلبِ بصيغتِه</b> — وزمنُه المستقبلُ دائمًا ولو بعدَ دقيقةٍ<br>«اضربْ — اكتبْ»</div>
+      </div>
+    </div>
+    <figcaption>شكل (١): أقسامُ الفعلِ الثلاثةُ بناءً على دلالتِها الزمنيّةِ المبنيّةِ على الصيغةِ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤ علامات الأفعال ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>علاماتُ الأفعالِ</h2></div>
+
+  <h3 id="s4a">علامتا الفعلِ الماضي: التاءانِ</h3>
+  <p><b>للفعلِ الماضي علامتانِ شهيرتانُ</b>: هما أن تتصلَ به <b>إحدى التاءينِ: تاءُ التأنيثِ الساكنةِ، أو تاءُ الفاعلِ</b>:</p>
+  <ul>
+    <li><b>تاءُ التأنيثِ الساكنةُ</b> مختصّةٌ بالدخولِ على الفعلِ الماضي، وكذلك <b>تاءُ الفاعلِ</b>؛ فلا تدخلانِ على المضارعِ ولا الأمرِ؛ فإذا لحقتا فعلًا فلنعلمْ أنَّ هذا الفعلَ <b>فعلٌ ماضٍ</b>؛ فلو قلتَ <span class="mark">«قالتْ»</span> أو <span class="mark">«كتبتُ»</span> — دخولُ تاءِ التأنيثِ ودخولُ تاءِ الفاعلِ على الفعلِ دليلٌ على أنَّ هذا الفعلَ ماضٍ. و<b>تاءُ التأنيثِ ساكنةٌ دائمًا</b>، تُبنى على السكونِ، وهي <b>حرفٌ لا محلَّ له من الإعرابِ</b>، وتأتي لتدلَّ على أنَّ الفاعلَ <b>مؤنثٌ</b>؛ ولكنها أحيانًا <b>تُحرَّكُ بالكسرِ إذا أتى بعدَها ساكنٌ</b>، كما في قولِه تعالى:
+      <div class="quran" style="margin:12px 0">
+        <p class="ayah" style="font-size:21px">﴿وَقَالَتِ الْأَعْرَابُ آمَنَّا﴾<span class="ref">سورةُ الحجراتِ: ١٤</span></p>
+      </div>
+      «قالتِ الأعرابُ»: التاءَ هنا حُرِّكَتْ بالكسرِ لأن بعدَها ساكنًا (همزةِ وصلِ «الأعرابِ»)؛ فتخلُّصًا من هذا الالتقاءِ — من التقاءِ الساكنَينِ — حُرِّكَتِ التاءُ بالكسرِ. ونقولُ في إعرابِها: «قالتِ»: التاءُ تاءُ التأنيثِ، حرفٌ <b>مبنيٌّ على السكونِ المحرَّكِ بالكسرِ تخلُّصًا من التقاءِ الساكنَينِ</b>.</li>
+    <li><b>أما تاءُ الفاعلِ</b> فهي <b>ضميرُ اسمٌ</b>، تُعربُ — يعني تُبنى — <b>على الضمِّ أو الكسرِ أو الفتحةِ أو السكونِ</b> إلى آخرِه بحسبِ ما تدلُّ عليه، وتكونُ <b>في محلِّ رفعٍ فاعلٌ عادةً</b>؛ وهي طبعًا متعددةٌ ويختلفُ شكلُها بناءً على دلالتِها:
+      <ul>
+        <li>تاءُ الفاعلِ <b>للمتكلمِ المفردِ</b>: أقولُ «كتبتُ» — مبنيةٌ <b>على الضمِّ</b>.</li>
+        <li>وتاءُ الفاعلِ <b>للمخاطبةِ المفردةِ المؤنثةِ</b>: مبنيةٌ <b>على الكسرِ</b>؛ أقولُ: «أنتِ كتبتِ».</li>
+        <li>وللمثنَّى المخاطبِ: «كتبتُما»، ولجمعِ المذكرِ المخاطبِ: «كتبتُم»، وفي جمعِ المؤنثِ: «كتبتُنَّ».</li>
+      </ul>
+      ففي كلِّ الأحوالِ هي التاءُ — تاءُ الفاعلِ — تكونُ <b>في محلِّ رفعٍ فاعلًا غالبًا</b>، وقد تكونُ <b>في محلِّ رفعٍ نائبَ فاعلٍ</b> إذا كانَ الفعلُ قبلَها مبنيًّا للمجهولِ أو لما لم يُسمَّعْ فاعلُه.</li>
+  </ul>
+
+  <h3 id="s4b">علامةُ المضارعِ: حروفُ «أنيت»</h3>
+  <p>ثم المضارعُ — وأشهرُ علاماتِه ما ذكرَه ابنُ آجرومَ: «والمضارعُ ما كانَ في أولِه إحدى الزوائدِ الأربعِ يجمعُها قولُك «أنيت»». فالفعلُ المضارعُ لا بدَّ وأن يكونَ <b>مبدوءًا بحرفٍ من حروفِ المضارعةِ</b> وهي المجموعةُ في قولِهم <b>«أنيت»</b> أو <b>«نايت»</b>؛ وكلُّ حرفٍ من هذه الحروفِ له دلالةٌ خاصّةٌ:</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green">
+        <div class="n-title">أ — الهمزةُ</div>
+        <div class="n-sub">«أكتبُ»: دليلٌ على <b>المتكلمِ المفردِ</b> (أنا)</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">ن — النونُ</div>
+        <div class="n-sub">«نكتبُ»: دليلٌ على <b>المثنَّى أو الجمعِ المتكلمِ</b> (نحن)</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">ي — الياءُ</div>
+        <div class="n-sub">«يكتبُ»: دليلٌ على <b>الغائبِ</b> (هو)</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">ت — التاءُ</div>
+        <div class="n-sub">«تكتبُ»: تدلُّ على <b>المخاطبِ بأنواعِه</b> (المفردِ أو المثنَّى أو الجمعِ، مذكرًا أو مؤنثًا) — ووجودُها في «هي تكتبُ» دلالةٌ على <b>المفردةِ الغائبةِ</b></div>
+      </div>
+    </div>
+    <div class="dcap">شكل (٢): حروفُ المضارعةِ «أنيت» — زوائدُ في أولِ المضارعِ لكلٍّ منها دلالةٌ خاصّةٌ</div>
+  </figure>
+
+  <div class="box note">
+    <span class="tag">تنبيهٌ مهمٌّ</span>
+    <p style="margin:0">هذه الحروفُ <b>هي أهمُّ علامةٍ تميِّزُ الفعلَ المضارعَ عن غيرِه، بشرطِ أن تكونَ لها الدلالةُ المعينةُ المحددةُ</b> التي ذكرناها الآنَ؛ لأن الفعلَ قد يكونُ ماضيًا ويبدأُ بالتاءِ — مثلًا كالفعلِ «تقدَّمَ» والفعلِ «تشاركَ» — لكنْ هذه التاءُ ليستْ تاءَ المضارعةِ، وقد يبدأُ بالهمزةِ وليستْ همزةَ المضارعةِ — كالفعلِ «أخذَ» و«أكلَ». فحروفُ المضارعةِ عمومًا <b>حروفٌ زائدةٌ في أولِ الفعلِ المضارعِ لها دلالاتٌ خاصّةٌ</b>: إما للمتكلمِ المفردِ أو الجمعِ أو المثنَّى، وإما للغائبِ، وإما للمخاطبِ — بحسبِ كلِّ حرفٍ. وهناك طبعًا علاماتٌ أخرى للفعلِ المضارعِ ذكرتُ بعضَها في درسٍ سابقٍ حين تكلمَّنا عن أقسامِ الكلمةِ أو الكلامِ: منها <b>السينُ وسوفَ</b>، ومنها <b>دخولُ «قد»</b>، ومنها <b>دخولُ نونِ التوكيدِ في آخرِه</b> — هذه كلُّها علاماتٌ، لكنْ — كما قلتُ — العلامةُ التي تميِّزُ المضارعَ عن قسمَيهِ الماضي والأمرِ هي أن يكونَ في أولِه حرفٌ من حروفِ المضارعةِ.</p>
+  </div>
+
+  <h3 id="s4c">علامةُ الأمرِ: الدلالةُ على الطلبِ بصيغتِه</h3>
+  <p>أما <b>الأمرُ</b> فهو <b>ما دلَّ على الطلبِ بصيغتِه</b>؛ فالفعلُ الأمرُ لا بدَّ أن يكونَ دالًّا على الطلبِ، ولذلك قالوا إنَّ علامتَه الرئيسةَ هي أن يدلَّ على الطلبِ <b>بصيغتِه</b> — هو يعني الصيغةُ ذاتُها تدلُّ على معنى الطلبِ؛ فحين أقولُ <span class="mark">«اكتبْ»</span>: الذي دلَّ على معنى الطلبِ هو <b>الصيغةُ — صيغةُ «اكتبْ»</b>؛ لأن الفعلَ المضارعَ مثلًا قد يدلُّ على الطلبِ لكنْ <b>بلامِ الأمرِ أو بـ«لا» الناهيةِ</b> — فها هنا لم نستفدْ دلالةَ الطلبِ من الفعلِ المضارعِ وإنما استفدناها من اللامِ ومن «لا» الناهيةِ — من الحرفِ قبلَه.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥ أحكام الأفعال ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>أحكامُ الأفعالِ</h2></div>
+
+  <p>انتقلَ بعدَ ذلك ابنُ آجرومَ للكلامِ على <b>أحكامِ هذه الأفعالِ</b>: يعني بعدَ أن تكلمَ عن أقسامِها تكلمَ عن الأحكامِ — فكلُّ فعلٍ من الأفعالِ أنواعِ الثلاثةِ له حكمٌ خاصٌّ به.</p>
+
+  <h3 id="s5a">الماضي: مبنيٌّ على الفتحِ أبدًا</h3>
+  <p>قال ابنُ آجرومَ عن الفعلِ الماضي: هو <b>«مفتوحُ الآخرِ أبدًا»</b>؛ وكلمةُ «أبدًا» هنا تشيرُ إلى أنَّه <b>ثابتٌ</b> — يعني شكلُه ثابتٌ لا يتغيرُ — وهذا يعني أنه <b>مبنيٌّ</b>، وهو <b>مبنيٌّ على الفتحِ أبدًا دائمًا</b>؛ حتى إنْ عُرِضَتْ حركةٌ أخرى أو سكونٌ أو ما شاء — تُقدَّرُ الفتحةُ أو يُقدَّرُ الفتحُ لهذا الشيءِ العارضِ؛ يعني إنما هو مفتوحٌ أبدًا أو مبنيٌّ على الفتحِ:</p>
+  <ul>
+    <li>لو قلتَ مثلًا <span class="mark">«كتبَ محمدٌ درسَه»</span>: فالفعلُ «كتبَ» فعلٌ ماضٍ <b>مبنيٌّ على الفتحِ</b>.</li>
+    <li>طيبْ ماذا لو قلتَ <span class="mark">«كتبْتُ»</span> أو «الطلابُ <span class="mark">كتبوا</span> الدرسَ»؟
+      <ul>
+        <li><b>«كتبْتُ»</b>: هنا سنلاحظُ أنَّ الباءَ — وهي الحرفُ الأخيرُ من الفعلِ «كتبْتُ» — <b>سكنتْ</b>، مع أنَّ الفعلَ الماضي مفترضٌ أنه مبنيٌّ على الفتحِ؛ الحاصلُ أنه لما دخلتْ <b>تاءُ الفاعلِ</b> سُكِّنَتْ لامُ الفعلِ — يعني آخرُ الفعلِ — أصبحَ ساكنًا <b>حتى لا يتوالى أربعُ متحركاتٍ</b>؛ لأنني لو قلتُ «كتبَتُ» فها هنا توالي أربعِ متحركاتٍ وهذا يؤدي إلى ثقلٍ تكرَهُه اللغةُ العربيةُ، فلا بدَّ من التخفيفِ؛ فحُوِّلَتْ فتحةُ الباءِ — وهي علامةُ البناءِ في الفعلِ الماضي — إلى سكونٍ أو قُدِّرَتْ، وأُتينا بالسكونِ حتى يكونَ هناك تخفيفٌ للنطقِ في الكلمةِ. فكيف نُعرِبُ؟ — يعني التوجيهُ: أحيانًا بعضُ الناسِ يقولونَ «هو فعلٌ ماضٍ مبنيٌّ على السكونِ لاتصالِه بتاءِ الفاعلِ» وهذا <b>إعرابٌ شائعٌ</b>؛ لكنْ طبقًا لكلامِ ابنِ آجرومَ — أنَّ الماضي مفتوحُ الآخرِ أبدًا — إذًا هو لا بدَّ وأن يكونَ مبنيًّا على الفتحِ، ولكنْ هنا <b>قُدِّرَ الفتحُ لوجودِ السكونِ أو لعروضِ السكونِ</b> الذي أتى لكراهيةِ توالي المتحركاتِ.</li>
+        <li><b>«كتبوا»</b>: الطلابُ كتبوا الدرسَ بواوِ الجماعةِ؛ فأما أن نُعرِبَ — والإعرابُ الشائعُ يقولُ: «كتبوا» فعلٌ ماضٍ <b>مبنيٌّ على الضمِّ لاتصالِه بواوِ الجماعةِ</b> — يجعلونَ واوَ الجماعةِ سببًا في بنائِه على الضمِّ؛ ولكنْ هناك <b>الرأيُ الثاني الموافقُ لما ذكرَه ابنُ آجرومَ</b> من أنَّ الماضي مفتوحُ الآخرِ أبدًا: هو أنَّ الفعلَ الماضي هنا «كتبوا» <b>فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ لعروضِ الضمةِ</b> — الضمةِ المناسبةِ لواوِ الجماعةِ التي أتتْ مناسبةً لواوِ الجماعةِ.</li>
+        <li>وكما أنَّ الفتحةَ تُقدَّرُ في الفعلِ الماضي <b>إذا كانَ معتلَّ الآخرِ بالألفِ</b>: فإذا قلتَ مثلًا الفعلَ «نادى» والفعلَ «هدى»: <span class="mark">«هدى اللهُ الناسَ جميعًا»</span> — الفعلُ «هدى» <b>فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ للتعذُّرِ</b>؛ لأن آخرَه ألفٌ؛ فنقولُ في إعرابِه: فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ على الألفِ للتعذُّرِ.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الماضي مبنيٌّ على الفتحِ أبدًا — وأحوالُ الفتحِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-4">
+      <div class="node green">
+        <div class="n-title">فتحٌ ظاهرٌ</div>
+        <div class="n-sub">الأصلُ فيه<br>«كتبَ محمدٌ درسَه» — ﴿كتبَ اللهُ لأغلبنَّ أنا ورسلي﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">فتحٌ مقدَّرٌ لعروضِ السكونِ</div>
+        <div class="n-sub">لاتصالِه بتاءِ الفاعلِ — لكراهيةِ توالي أربعِ متحركاتٍ<br>«كتبْتُ» — «قضيتُ» — ﴿سمعْنا﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">فتحٌ مقدَّرٌ لعروضِ الضمةِ</div>
+        <div class="n-sub">المناسبةِ لواوِ الجماعةِ<br>«كتبوا» — ﴿جاهدوا﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">فتحٌ مقدَّرٌ للتعذُّرِ</div>
+        <div class="n-sub">إذا كانَ معتلَّ الآخرِ بالألفِ<br>«هدى اللهُ الناسَ» — «نادى»</div>
+      </div>
+    </div>
+    <figcaption>شكل (٣): أحوالُ بناءِ الفعلِ الماضي على الفتحِ — طبقًا لرأيِ ابنِ آجرومَ «مفتوحُ الآخرِ أبدًا» (وهناك إعرابٌ شائعٌ يبنيه على السكونِ مع تاءِ الفاعلِ وعلى الضمِّ مع واوِ الجماعةِ)</figcaption>
+  </figure>
+
+  <h3 id="s5b">الأمرُ: مجزومٌ أبدًا — يُبنى على ما يُجزَمُ به مضارعُه</h3>
+  <p>أما الفعلُ الأمرُ فابنُ آجرومَ ذكرَ أنه <b>«مجزومٌ أبدًا»</b>؛ وهذا المصطلحُ — «مجزومٌ» — تعني أنَّ الفعلَ الأمرَ <b>مُعرَبٌ</b>، وهذا <b>رأيٌ لبعضِ أهلِ العلمِ في النحوِ</b> أنَّ الفعلَ الأمرَ مُعرَبٌ مجزومٌ دائمًا — يعني وهو محمولٌ طبعًا على الفعلِ المضارعِ لأنه مأخوذٌ منه، فهو يُعرَبُ إعرابَ المضارعِ المجزومِ. ولكنْ لعلَّ كلمةَ «مجزومٍ» هذه يقصدُ بها أيضًا أنه <b>مبنيٌّ على السكونِ أو حالتُه كحالةِ الجزمِ</b> في الفعلِ المضارعِ؛ ولذلك بناءً على هذا قالَ <b>بعضُ النحاةِ: إنَّ الفعلَ الأمرَ يُبنى على ما يُجزَمُ به مضارعُه</b>، وهذا هو <b>الرأيُ الشائعُ في النحوِ التعليميِّ</b>: أنَّ الأمرَ مثلَ المضارعِ مبنيٌّ دائمًا ولكنَّه مبنيٌّ <b>على ما يُجزَمُ به مضارعُه</b>:</p>
+  <ul>
+    <li><b>والأصلُ فيه أنه مبنيٌّ على السكونِ</b>؛ لأن أصلَ الجزمِ في المضارعِ هو السكونُ (علامةُ الجزمِ الأصليّةُ)، ثم هناك علاماتٌ أخرى فرعيّةٌ — التي ذكرناها — وهي الحذفُ.
+      <ul>
+        <li>فإذا كانَ الفعلُ الأمرُ <b>معتلَّ الآخرِ</b> كانت علامةُ بنائِه هي <b>البناءَ على حذفِ حرفِ العلةِ</b>.</li>
+        <li>وإذا كانَ <b>مضارعُه من الأفعالِ الخمسةِ</b> (الأمثلةِ الخمسةِ) — يعني اتصلتْ به واوُ الجماعةِ أو ألفُ الاثنَينِ أو ياءُ المخاطبةِ — <b>بُني على حذفِ النونِ</b> كالمضارعِ.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>فمثلًا: <span class="mark">«اكتبْ درسَك يا محمد»</span>: «اكتبْ» فعلُ أمرٍ <b>مبنيٌّ على السكونِ</b>. وإذا قلتَ <span class="mark">«اكتبِ الدرسَ يا محمد»</span> — «اكتبِ الدرسَ» — سنلاحظُ أنَّ الباءَ هنا تحتها كسرةٌ؛ فكيف نُعرِبُ إذا كانَ الأمرُ على هذا النحوِ؟ نقولُ: «اكتبِ» فعلُ أمرٍ <b>مبنيٌّ على السكونِ المحرَّكِ بالكسرِ تخلُّصًا من التقاءِ الساكنَينِ</b> — يعني لأن بعدَه ساكنًا (لامَ «الدرسِ»). ولو كانَ الفعلُ الأمرُ <b>معتلَّ الآخرِ</b> كانت علامةُ بنائِه (أو جزمِه) هي <b>حذفَ حرفِ العلةِ</b>:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَاقْضِ مَا أَنتَ قَاضٍ﴾<span class="ref">سورةُ طه: ٧٢</span></p>
+  </div>
+  <p>وفي قولِه تعالى: <span class="mark">﴿اهدِنا الصراطَ المستقيمَ﴾</span> [الفاتحةِ: ٦]: الفعلُ «اهدِنا» أصلُه «اهدِي» — «اهدينا» — ولكنْ حُذِفَتِ الياءُ لأن هذا <b>فعلُ أمرٍ وهو معتلُّ الآخرِ</b>، والفعلُ الأمرُ يُبنى على ما يُجزَمُ به مضارعُه، ومضارعُه يُجزَمُ بحذفِ حرفِ العلةِ إذا كانَ معتلَّ الآخرِ؛ فكذلك الحالُ ها هنا؛ فـ«اهدِ» و«فاقضِ» فعلُ أمرٍ نقولُ في إعرابِه: <b>فعلُ أمرٍ مبنيٌّ على حذفِ حرفِ العلةِ</b> لأنه معتلُّ الآخرِ.</p>
+  <p>ثم إذا كانَ الفعلُ الأمرُ — يعني مضارعُه — <b>من الأفعالِ الخمسةِ</b> — يعني اتصلتْ به واوُ الجماعةِ أو ألفُ الاثنَينِ أو ياءُ المخاطبةِ — فساعةَ إذٍ <b>يُبنى على حذفِ حرفِ النونِ</b> لأن مضارعَه من الأفعالِ الخمسةِ:</p>
+  <ul>
+    <li><span class="mark">«يا هندُ اكتبي درسَك»</span>: هنا اتصلتْ به <b>ياءُ المخاطبةِ</b>؛ فهو فعلُ أمرٍ <b>مبنيٌّ على حذفِ النونِ لأن مضارعَه من الأفعالِ الخمسةِ</b> — هكذا نقولُ في الإعرابِ.</li>
+    <li>وإذا قلتَ <span class="mark">«اكتبا درسيما أو درسكما»</span>: فعلُ أمرٍ <b>مبنيٌّ على حذفِ النونِ</b> لأن مضارعَه من الأفعالِ الخمسةِ أيضًا — اتصلتْ به هنا <b>ألفُ الاثنَينِ</b>.</li>
+    <li>وإذا قلتَ <span class="mark">«اكتبوا دروسَكم»</span>: فكذلك أيضًا هو فعلُ أمرٍ <b>مبنيٌّ على حذفِ النونِ</b> لأن مضارعَه من الأفعالِ الخمسةِ. وكما كررتُ كثيرًا: هنا <b>الفاعلُ دائمًا في الأفعالِ الخمسةِ موجودٌ فيها</b>؛ فهو الضميرُ — واوُ الجماعةِ أو ألفُ الاثنَينِ أو ياءُ المخاطبةِ — كلُّها ضمائرُ مبنيةٌ على السكونِ <b>في محلِّ رفعٍ فاعلٌ</b>.</li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الأمرُ يُبنى على ما يُجزَمُ به مضارعُه</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">السكونُ — الأصلُ</div>
+        <div class="n-sub">إذا كانَ صحيحَ الآخرِ<br>«اكتبْ درسَك» — ﴿وأقمنَ الصلاةَ﴾ — ﴿فتقبَّلْ مني﴾<br>وقد يُحرَّكُ بالكسرِ لالتقاءِ الساكنَينِ: «اكتبِ الدرسَ»</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">حذفُ حرفِ العلةِ</div>
+        <div class="n-sub">إذا كانَ معتلَّ الآخرِ<br>«اهدِنا» (أصلُها اهدي) — ﴿فاقضِ ما أنت قاضٍ﴾ — ﴿ادعُ إلى سبيلِ ربِّك﴾ — ﴿ائتِنا﴾ (أصلُها ائتِيَ)</div>
+      </div>
+      <div class="node maroon">
+        <div class="n-title">حذفُ النونِ</div>
+        <div class="n-sub">إذا كانَ مضارعُه من الأمثلةِ الخمسةِ<br>«اكتبي» (ياءُ المخاطبةِ) — «اكتبا» (ألفُ الاثنَينِ) — «اكتبوا» (واوُ الجماعةِ) — ﴿اقنتي واسجدي واركعي﴾ — ﴿كلوا واشربوا﴾</div>
+      </div>
+    </div>
+    <figcaption>شكل (٤): علاماتُ بناءِ الفعلِ الأمرِ — وهي بعينِها علاماتُ جزمِ المضارعِ</figcaption>
+  </figure>
+
+  <h3 id="s5c">المضارعُ: مرفوعٌ أبدًا حتى يدخلَ عليه ناصبٌ أو جازمٌ</h3>
+  <p>أما الكلامُ على المضارعِ فسنفصِّلُ القولَ فيه — لأنه هو <b>الوحيدُ المُعرَبُ من أنواعِ الأفعالِ</b>: يعني الماضي مبنيٌّ والأمرُ مبنيٌّ كذلك، أما المضارعُ فهو المُعرَبُ من الأفعالِ؛ وهو <b>يُرفعُ وقد يُنصَبُ وقد يُجزَمُ</b>. قال ابنُ آجرومَ: «وهو <b>مرفوعٌ أبدًا</b>» — يعني هذه الحالةُ الأصليّةُ له أن يكونَ مرفوعًا — <b>حتى يدخلَ عليه ناصبٌ أو جازمٌ</b>؛ فإذا سبقَ بأداةِ نصبٍ أو أداةِ جزمٍ فساعةَ إذٍ يعني يُنصَبُ أو يُجزَمُ — أو يكونُ إعرابُه يعني نصبًا أو جزمًا. <b>وسنتكلمُ عن المضارعِ وتفصيلِ نواصبِه وجوازمِه في الدرسَينِ القادمَينِ إن شاء اللهُ تعالى</b>.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦ التطبيقات ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>التطبيقاتُ: الشواهدُ القرآنيّةُ</h2></div>
+
+  <p>وأريدُ الآن أن أطبِّقَ معكم على الفعلَينِ الماضي والأمرِ — ويمكنُ أيضًا معهما المضارعُ — أن نطبِّقَ سريعًا على هذه الأفعالِ بعضَ الأمثلةِ والآياتِ والشواهدِ؛ لنرى <b>ما علاماتُ البناءِ في الفعلِ الماضي والفعلِ الأمرِ</b>:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «جاء محمدٌ» — عندنا الفعلُ «جاءَ» هو فعلُ ماضٍ مبنيٌّ على ماذا: هل هو مبنيٌّ على الفتحِ، أم منصوبٌ وعلامةُ نصبِه الفتحةُ، أم منصوبٌ وعلامةُ نصبِه الألفُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>مبنيٌّ على الفتحِ</b> على أصلِ الفعلِ الماضي.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿قَالُوا سَمِعْنَا فَتًى يَذْكُرُهُمْ يُقَالُ لَهُ إِبْرَاهِيمُ﴾</span> [الأنبياءِ: ٦٠] — هنا الفعلُ «سمعَ»: هل هو فعلُ ماضٍ مجزومٌ وعلامتُه السكونُ، أم مبنيٌّ على فتحٍ مقدَّرٍ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>مبنيٌّ على الفتحِ المقدَّرِ لعروضِ السكونِ</b>؛ حتى لا يتوالى — حتى لا يتوالى أربعُ متحركاتٍ — يعني لأن هذا — كما قلنا — تكرَهُه العربيةُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَأَقِمْنَ الصَّلَاةَ وَآتِينَ الزَّكَاةَ وَأَقْرِضْنَ اللَّهَ قَرْضًا حَسَنًا﴾</span> [المزملِ: ٢٠] — «أقمنَ» هذا فعلُ أمرٍ طبعًا، مبنيٌّ على ماذا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>مبنيٌّ على السكونِ</b> لأنه صحيحُ الآخرِ؛ وأقمنَ — أو اتصلتْ به طبعًا <b>نونُ النسوةِ</b>؛ ونونُ النسوةِ إذا اتصلتْ بأيِّ فعلٍ — سواءٌ الماضي أو المضارعِ أو الأمرِ — فهي تتصلُ بجميعِ الأفعالِ — يكونُ الفعلُ قبلَها <b>مبنيًّا على السكونِ</b>، حتى المضارعُ كما سنرى إن شاء اللهُ في الدرسِ القادمِ؛ فـ«أقمنَ» هو فعلُ أمرٍ مبنيٌّ على السكونِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ﴾</span> [النحلِ: ١٢٥] — الفعلُ «ادعُ» هذا فعلُ أمرٍ: هل هو مبنيٌّ على السكونِ، أم مبنيٌّ على حذفِ حرفِ العلةِ، أم مبنيٌّ على حذفِ النونِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ادعُ» طبعًا هو <b>مبنيٌّ على حذفِ حرفِ العلةِ</b>؛ لأنه معتلُّ الآخرِ وأصلُه «ادعو»؛ فهنا حرفُ العلةِ محذوفٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿كُلُوا وَاشْرَبُوا مِن رِّزْقِ اللَّهِ﴾</span> [البقرةِ: ٦٠] — الفعلُ «كلوا» والفعلُ «اشربوا» أيضًا: كلاهما فعلُ أمرٍ مبنيٌّ على أيِّ شيءٍ: مبنيٌّ على السكونِ، أم على حذفِ النونِ، أم على الضمِّ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا فعلُ الأمرِ إذا اتصلتْ به <b>واوُ الجماعةِ</b> فهذا يعني أنَّ <b>مضارعَه من الأفعالِ الخمسةِ</b>؛ فالفعلُ «كلوا» والفعلُ «اشربوا» كلاهما مضارعُه من الأفعالِ الخمسةِ، ونحنُ اتفقنا على أنَّ <b>الفعلَ الأمرَ يُبنى على ما يُجزَمُ به مضارعُه</b>؛ فالمضارعُ إذا كانَ من الأفعالِ الخمسةِ تكونُ علامةُ جزمِه حذفَ النونِ؛ فكذلك هنا في الفعلِ الأمرِ يكونُ <b>مبنيًّا على حذفِ النونِ لأن مضارعَه من الأفعالِ الخمسةِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِ اللهِ تعالى: <span class="ayq">﴿كَتَبَ اللَّهُ لَأَغْلِبَنَّ أَنَا وَرُسُلِي﴾</span> [المجادلةِ: ٢١]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ <span class="mark">«كتبَ»</span> هذا فعلُ ماضٍ طبعًا <b>مبنيٌّ على الفتحِ</b> كما هو واضحٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>وفي قولِه تعالى: <span class="ayq">﴿وَالنَّجْمُ وَالشَّجَرُ يَسْجُدَانِ﴾</span> [الرحمنِ: ٦]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ المضارعُ هنا طبعًا هو <b>مرفوعٌ وعلامةُ رفعِه ثبوتُ النونِ</b>؛ لأنه من الأمثلةِ الخمسةِ أو الأفعالِ الخمسةِ — طبعًا اتصلتْ به <b>ألفُ الاثنَينِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>طيبْ في قولِه تعالى: <span class="ayq">﴿أَيَّمَا الْأَجَلَيْنِ قَضَيْتُ فَلَا عُدْوَانَ عَلَيَّ﴾</span> [القصصِ: ٢٨] — أينَ الفعلُ الماضي هنا؟ وكيف نُعرِبُه؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ الماضي هو <span class="mark">«قضيتُ»</span> — الفعلُ «قضى» ولكنَّه اتصلتْ به <b>تاءُ الفاعلِ فسكنَ الحرفُ الأخيرُ منه</b>؛ ولذلك هو <b>فعلُ ماضٍ مبنيٌّ على فتحٍ مقدَّرٍ — على الفتحِ المقدَّرِ — لعروضِ السكونِ</b> الذي أتى <b>لكراهيةِ توالي المتحركاتِ الأربعةِ</b>. طبعًا كما أشرتُ هناك إعرابٌ شائعٌ أنهم يقولون: «قضيتُ» فعلُ ماضٍ <b>مبنيٌّ على السكونِ لاتصالِه بتاءِ الفاعلِ</b>، ويعتبرونَ علامةَ البناءِ هنا علامةً فرعيّةً بخلافِ العلامةِ الأصليّةِ وهي أنه مبنيٌّ على الفتحِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا﴾</span> [العنكبوتِ: ٦٩] — أينَ الفعلُ الماضي ها هنا؟ وعلى أيِّ شيءٍ هو مبنيٌّ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ الماضي هو <span class="mark">«جاهدوا»</span>؛ وهو مبنيٌّ هنا على أيِّ شيءٍ؟ طبعًا <b>اتصلتْ به واوُ الجماعةِ فيكونُ مبنيًّا على فتحٍ مقدَّرٍ</b>؛ لأنَّ الواوَ سبقتها ضمةٌ تناسبُها — <b>الضمةُ المناسبةُ للواوِ</b> — فأين الفتحةُ؟ <b>قُدِّرَتْ</b>؛ فالفعلُ «جاهدوا» <b>فعلُ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ لاتصالِه بواوِ الجماعةِ</b> — أو لوجودِ الضمةِ المناسبةِ لواوِ الجماعةِ بعدَه — يعني وأيضًا هناك إعرابٌ شائعٌ يقولونَ فيه: إنَّ «جاهدوا» فعلُ ماضٍ <b>مبنيٌّ على الضمِّ لاتصالِه بواوِ الجماعةِ</b>، وهي كذلك علامةُ بناءٍ فرعيّةٌ على العلامةِ الأصليّةِ وهي الفتحةُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿يَا مَرْيَمُ اقْنُتِي لِرَبِّكِ وَاسْجُدِي وَارْكَعِي مَعَ الرَّاكِعِينَ﴾</span> [آل عمرانَ: ٤٣]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندي هنا <b>ثلاثةُ أفعالٍ</b> وهي أفعالُ أمرٍ: <span class="mark">«اقنتي»</span> و<span class="mark">«اسجدي»</span> و<span class="mark">«اركعي»</span>؛ كلُّها اتصلتْ بها <b>ياءُ المخاطبةِ</b> — وهذا دليلٌ على أنَّ مضارعَها من الأفعالِ الخمسةِ؛ فتكونُ هذه كلُّها أفعالُ أمرٍ <b>مبنيةٌ على حذفِ النونِ</b> لأن مضارعَها من الأفعالِ الخمسةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿ادْخُلُوا عَلَيْهِمُ الْبَابَ﴾</span> [المائدةِ: ٢٣]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ادخلوا» هذا أيضًا فعلُ أمرٍ <b>مبنيٌّ على حذفِ النونِ</b> لأن مضارعَه من الأفعالِ الخمسةِ. كيف عرفتَ هذا؟ <b>من خلالِ اتصالِه بواوِ الجماعةِ</b>: فالأمرُ والفعلُ المضارعُ إذا اتصلتْ به واوُ الجماعةِ فهذا دليلٌ على أنَّ المضارعَ من الأفعالِ الخمسةِ؛ وبناءً على هذا في الفعلِ الأمرِ نقولُ: هو مبنيٌّ على حذفِ النونِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿إِنِّي نَذَرْتُ لَكَ مَا فِي بَطْنِي مُحَرَّرًا فَتَقَبَّلْ مِنِّي﴾</span> [آل عمرانَ: ٣٥]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ <span class="mark">«تقبَّلْ»</span>: فعلُ أمرٍ <b>مبنيٌّ على السكونِ</b>؛ وهذا هو الأصلُ في بناءِ الفعلِ الأمرِ: أن يكونَ مبنيًّا على السكونِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿لَهُ أَصْحَابٌ يَدْعُونَهُ إِلَى الْهُدَىٰ ائْتِنَا﴾</span> [الأنعامِ: ٧١] — أينَ فعلُ الأمرِ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>فعلُ الأمرِ هو <span class="mark">«ائتِنا»</span>؛ وأصلُه «ائتِيَنا» — <b>الياءُ هي الحرفُ الذي خُتمَ به الفعلُ أصلًا</b>؛ فعندَ البناءِ — عندما نأمرُ به «ائتِنا» — <b>يُحذفُ هذا الحرفُ</b>؛ لأنَّ الفعلَ إذا كانَ معتلَّ الآخرِ وهو أمرٌ <b>بُني على حذفِ حرفِ العلةِ</b>؛ فنقولُ في إعرابِ «ائتِ»: فعلُ أمرٍ <b>مبنيٌّ على حذفِ حرفِ العلةِ</b> لأنه معتلُّ الآخرِ.</div>
+  </div>
+
+  <h3 id="t63">الجدولُ التلخيصيُّ للتطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الشاهدُ</th><th>الفعلُ</th><th>نوعُه</th><th>حكمُه</th><th>التوجيهُ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>«جاء محمدٌ»</td><td>جاءَ</td><td>ماضٍ</td><td>مبنيٌّ على الفتحِ</td><td>على الأصلِ — لا نصبَ في الأفعالِ</td></tr>
+        <tr><td>﴿قالوا سمعنا فتى يذكرهم﴾</td><td>سمعْنا</td><td>ماضٍ</td><td>مبنيٌّ على الفتحِ المقدَّرِ</td><td>لعروضِ السكونِ (كراهيةَ توالي أربعِ متحركاتٍ مع تاءِ الفاعلِ)</td></tr>
+        <tr><td>﴿أيّمَا الأجلَينِ قضيتُ فلا عدوانَ عليّ﴾</td><td>قضيتُ</td><td>ماضٍ</td><td>مبنيٌّ على الفتحِ المقدَّرِ</td><td>لعروضِ السكونِ؛ (الشائعُ: مبنيٌّ على السكونِ لاتصالِه بتاءِ الفاعلِ — علامةٌ فرعيّةٌ)</td></tr>
+        <tr><td>﴿والذين جاهدوا فينا لنهدينهم سبلنا﴾</td><td>جاهدوا</td><td>ماضٍ</td><td>مبنيٌّ على الفتحِ المقدَّرِ</td><td>لعروضِ الضمةِ المناسبةِ لواوِ الجماعةِ؛ (الشائعُ: مبنيٌّ على الضمِّ لاتصالِه بالواوِ)</td></tr>
+        <tr><td>﴿كتب اللهُ لأغلبنَّ أنا ورسلي﴾</td><td>كتبَ</td><td>ماضٍ</td><td>مبنيٌّ على الفتحِ</td><td>ظاهرٌ على الأصلِ</td></tr>
+        <tr><td>«هدى اللهُ الناسَ جميعًا»</td><td>هدى</td><td>ماضٍ</td><td>مبنيٌّ على الفتحِ المقدَّرِ</td><td>على الألفِ <b>للتعذُّرِ</b> (معتلُّ الآخرِ)</td></tr>
+        <tr><td>﴿والنجمُ والشجرُ يسجدانِ﴾</td><td>يسجدانِ</td><td>مضارعٌ</td><td>مرفوعٌ بثبوتِ النونِ</td><td>من الأمثلةِ الخمسةِ (ألفُ الاثنَينِ)</td></tr>
+        <tr><td>﴿وأقمنَ الصلاةَ وآتينَ الزكاةَ﴾</td><td>أقمنَ</td><td>أمرٌ</td><td>مبنيٌّ على السكونِ</td><td>صحيحُ الآخرِ؛ ونونُ النسوةِ تتصلُ بجميعِ الأفعالِ ويُبنى الفعلُ قبلَها على السكونِ</td></tr>
+        <tr><td>«اكتبْ درسَك» / ﴿فتقبَّلْ مني﴾</td><td>اكتبْ / تقبَّلْ</td><td>أمرٌ</td><td>مبنيٌّ على السكونِ</td><td>الأصلُ في بناءِ الأمرِ</td></tr>
+        <tr><td>«اكتبِ الدرسَ»</td><td>اكتبِ</td><td>أمرٌ</td><td>مبنيٌّ على السكونِ المحرَّكِ بالكسرِ</td><td>تخلُّصًا من التقاءِ الساكنَينِ</td></tr>
+        <tr><td>﴿ادعُ إلى سبيلِ ربِّك﴾</td><td>ادعُ</td><td>أمرٌ</td><td>مبنيٌّ على حذفِ حرفِ العلةِ</td><td>معتلُّ الآخرِ — أصلُه «ادعو»</td></tr>
+        <tr><td>﴿فاقضِ ما أنت قاضٍ﴾ / ﴿اهدِنا الصراطَ المستقيمَ﴾</td><td>فاقضِ / اهدِ</td><td>أمرٌ</td><td>مبنيٌّ على حذفِ حرفِ العلةِ</td><td>أصلُهما «فاقضي» و«اهدي» — يُبنى على ما يُجزَمُ به مضارعُه</td></tr>
+        <tr><td>﴿له أصحابٌ يدعونهُ إلى الهدى ائتِنا﴾</td><td>ائتِ</td><td>أمرٌ</td><td>مبنيٌّ على حذفِ حرفِ العلةِ</td><td>أصلُه «ائتِيَ» — حُذفَتِ الياءُ لأنه معتلُّ الآخرِ</td></tr>
+        <tr><td>﴿كلوا واشربوا من رزقِ اللهِ﴾ / ﴿ادخلوا عليهم البابَ﴾ / «اكتبوا دروسَكم»</td><td>كلوا، اشربوا، ادخلوا، اكتبوا</td><td>أمرٌ</td><td>مبنيٌّ على حذفِ النونِ</td><td>مضارعُه من الأفعالِ الخمسةِ (واوُ الجماعةِ — وهي الفاعلُ)</td></tr>
+        <tr><td>﴿يا مريمُ اقنتي واسجدي واركعي﴾ / «يا هندُ اكتبي درسَك»</td><td>اقنتي، اسجدي، اركعي، اكتبي</td><td>أمرٌ</td><td>مبنيٌّ على حذفِ النونِ</td><td>اتصلتْ بها ياءُ المخاطبةِ — ومضارعُها من الأفعالِ الخمسةِ</td></tr>
+        <tr><td>«اكتبا درسيما»</td><td>اكتبا</td><td>أمرٌ</td><td>مبنيٌّ على حذفِ النونِ</td><td>اتصلتْ به ألفُ الاثنَينِ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧ الخلاصة ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>خلاصةُ الدرس</h2></div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>النوعُ</th><th>دلالتُه الزمنيّةُ</th><th>علامتُه</th><th>حكمُه</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>الماضي</b></td>
+          <td>يدلُّ على الزمانِ الماضي</td>
+          <td>تاءُ التأنيثِ الساكنةُ، وتاءُ الفاعلِ — لا تدخلانِ على المضارعِ ولا الأمرِ</td>
+          <td>مبنيٌّ على <b>الفتحِ أبدًا</b>: ظاهرًا («كتبَ»)، أو مقدَّرًا لعروضِ السكونِ («كتبْتُ») أو لعروضِ ضمةِ الواوِ («كتبوا») أو للتعذُّرِ في المعتلِّ بالألفِ («هدى»)</td>
+        </tr>
+        <tr>
+          <td><b>المضارعُ</b></td>
+          <td>يدلُّ على الحالِّ أو الاستقبالِ — ويخلُصُّ للمستقبلِ بالسينِ وسوفَ و«لن»</td>
+          <td>همزةٌ أو نونٌ أو ياءٌ أو تاءٌ في أولِه («أنيت») ولكلٍّ دلالتُه</td>
+          <td><b>مرفوعٌ أبدًا</b> حتى يدخلَ عليه ناصبٌ أو جازمٌ — وهو الوحيدُ المُعرَبُ من الأفعالِ</td>
+        </tr>
+        <tr>
+          <td><b>الأمرُ</b></td>
+          <td>يدلُّ على الطلبِ — وزمنُه المستقبلُ دائمًا</td>
+          <td>أن تدلَّ صيغتُه نفسُها على الطلبِ (لا بلامٍ أو «لا» قبله)</td>
+          <td>«مجزومٌ أبدًا»: على رأيِ من أعربَه محمولًا على المضارعِ؛ والرأيُ الشائعُ: مبنيٌّ <b>على ما يُجزَمُ به مضارعُه</b>: السكونَ (الأصلَ)، أو حذفَ حرفِ العلةِ (المعتلُّ الآخرِ)، أو حذفَ النونِ (مضارعُه من الأمثلةِ الخمسةِ)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="summary-points">
+    <li><b>الفعلُ يدلُّ على حدثٍ وزمنٍ</b>: فالحدثُ ثابتٌ في الأنواعِ الثلاثةِ لا يتغيرُ («كتبَ/يكتبُ/اكتبْ» — حدثُ الكتابةِ واحدٌ)، والمتغيرُ بتغيرِ الصيغةِ هو <b>الزمنُ</b>.</li>
+    <li><b>علامتا الماضي</b>: تاءُ التأنيثِ الساكنةُ (حرفٌ لا محلَّ له من الإعرابِ، تدلُّ على تأنيثِ الفاعلِ، وتُحرَّكُ بالكسرِ لالتقاءِ الساكنَينِ نحو ﴿قالتِ الأعرابُ﴾)، وتاءُ الفاعلِ (ضميرُ اسمٌ مبنيٌّ بحسبِ دلالتِه، في محلِّ رفعٍ فاعلٌ — أو نائبُ فاعلٍ مع المبنيِّ للمجهولِ).</li>
+    <li><b>حروفُ المضارعةِ «أنيت»</b> زوائدُ في أولِ الفعلِ لكلٍّ منها دلالتُه: الهمزةُ للمتكلمِ المفردِ، والنونُ للمتكلمِ المثنَّى أو الجمعِ، والياء للغائبِ، والتاءُ للمخاطبِ — وتدلُّ أيضًا على المفردةِ الغائبةِ («هي تكتبُ»)؛ فإذا أتى حرفٌ في أولِ فعلٍ بلا هذه الدلالةِ فليس من حروفِ المضارعةِ («تقدَّمَ، تشاركَ، أخذَ، أكلَ»).</li>
+    <li><b>الماضي مفتوحُ الآخرِ أبدًا</b> حتى مع العوارضِ: فالسكونُ مع تاءِ الفاعلِ («كتبْتُ» — لعروضِ السكونِ لكراهيةِ توالي أربعِ متحركاتٍ) والضمُّ مع واوِ الجماعةِ («كتبوا» — لعروضِ الضمةِ المناسبةِ) تُقدَّرُ فيهما الفتحةُ طبقًا لرأيِ ابنِ آجرومَ، وإنْ كان الإعرابُ الشائعُ يبنيه على السكونِ والضمِّ مباشرةً.</li>
+    <li><b>الأمرُ «مجزومٌ أبدًا»</b>: لعلَّ المرادَ أنه حالُه كحالِ المضارعِ المجزومِ؛ والرأيُ الشائعُ في النحوِ التعليميِّ: <b>يُبنى على ما يُجزَمُ به مضارعُه</b>: الأصلُ السكونُ («اكتبْ»)، وحذفُ حرفِ العلةِ في المعتلِّ («اهدِ — فاقضِ — ادعُ — ائتِ»)، وحذفُ النونِ إذا كانَ مضارعُه من الأمثلةِ الخمسةِ («اكتبي — اكتبا — اكتبوا — ﴿كلوا واشربوا﴾ — ﴿اقنتي واسجدي واركعي﴾»)، والضميرُ في هذه الأخيرةِ فاعلٌ في محلِّ رفعٍ.</li>
+    <li><b>نونُ النسوةِ</b> تتصلُ بجميعِ الأفعالِ — الماضي والمضارعِ والأمرِ — والفعلُ قبلَها <b>مبنيٌّ على السكونِ</b> («أقمنَ — آتينَ — أقرضنَ»)، حتى المضارعُ كما سيأتي في الدرسِ القادمِ.</li>
+    <li><b>المضارعُ هو الوحيدُ المُعرَبُ من الأفعالِ</b>: مرفوعٌ أبدًا حتى يدخلَ عليه <b>ناصبٌ</b> (أنْ، لنْ، إذنْ، كي، لامُ كي، لامُ الجحودِ، حتى، والجوابُ بالفاءِ والواوِ) أو <b>جازمٌ</b> (ثمانيةَ عشرَ: لمْ، لمّا، ألمْ، ألمّا، لامُ الأمرِ، لا الناهيةُ، إنْ، ما، مَن، مهما، إذ ما، أينَ، متى، أيّانَ، أنّى، حيثما، كيفما، وإذا الشعريّةُ) — وسيأتي تفصيلُها في الدرسَينِ القادمَينِ إن شاء اللهُ.</li>
+  </ul>
+
+  <div class="box note">
+    <span class="tag">تمَّ الدرسُ</span>
+    <p style="margin:0">وبهذا نكونُ قد أنهينا الكلامَ على فعلَيِ الأمرِ والفعلِ الماضي؛ أما <b>الفعلُ المضارعُ</b> فسنتكلمُ عنه تفصيلًا — مع نواصبِه وجوازمِه — في الدرسَينِ القادمَينِ بإذنِ اللهِ تعالى.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ الثامنِ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=Q1H4_nLmQuQ" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

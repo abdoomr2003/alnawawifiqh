@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>علامات الجزم — الدرس السادس من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">علاماتُ الجزمِ</h1>
+    <div class="cover-sub">الدرس السادس: بابُ معرفةِ علاماتِ الإعرابِ — علامتا الجزمِ (السكونُ والحذفُ) مع التمريناتِ والتطبيقاتِ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=ITrTDFQQZoA" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتن ونظمُ الشنقيطيِّ</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">نظرةٌ عامّةٌ: علامتا الجزمِ وشرطُه</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">العلامةُ الأصليّةُ: السكونُ في المضارعِ الصحيحِ الآخرِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">تنبيهٌ: «لم يكنْ» وحذفُ الواوِ ليس علامةَ الجزمِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">العلامةُ الفرعيّةُ: الحذفُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s5a">النوعُ الأولُ: حذفُ حرفِ العلةِ في المضارعِ المعتلِّ الآخرِ</a></li>
+        <li><a href="#s5b">النوعُ الثاني: حذفُ النونِ في الأمثلةِ الخمسةِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٦</span><a href="#s6">التمريناتُ: أسئلةٌ على العلاماتِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t61">وقفةٌ: «لمْ» و«لمّا» — الفرقُ بينهما</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٧</span><a href="#s7">تأمُّلُ الآياتِ: استخراجُ الأفعالِ المجزومةِ وعلاماتِها</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t71">أدواتُ الجزمِ الواردةُ في الدرسِ</a></li>
+        <li><a href="#t73">الجدولُ التلخيصيُّ للتطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٨</span><a href="#s8">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١ افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+
+  <p>بسمِ اللهِ الرحمنِ الرحيمِ، حمدًا للهِ كما ينبغي لجلالِه وكمالِه، وصلًّى اللهُ وسلَّمَ على النبيِّ المصطفى وعلى آلِه. وبعدُ: فمرحبًا بكم مع هذا الدرس، موضوعُه <b>علاماتُ الجزمِ</b>؛ بعدَ أن أنهينا الكلامَ على علاماتِ الرفعِ وعلاماتِ النصبِ وعلاماتِ الخفضِ — بقيتْ علامةُ <b>الحالةِ الأخيرةِ</b> من الحالاتِ الإعرابيّةِ، وهي <b>حالةُ الجزمِ</b>.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢ المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتن ونظمُ الشنقيطيِّ</h2></div>
+
+  <p>نقرأُ أولًا ما قالَه ابنُ آجرومَ رحمه اللهُ في علاماتِ الجزمِ، ثم أبياتَ ناظمِ متنِ الآجروميّةِ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b> — رحم اللهُ الجميعَ:</p>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«وللجزمِ علامتانِ: السكونُ، والحذفُ.<br>
+    فأما السكونُ فيكونُ علامةً للجزمِ في الفعلِ المضارعِ الصحيحِ الآخرِ.<br>
+    وأما الحذفُ فيكونُ علامةً للجزمِ في الفعلِ المضارعِ المعتلِّ الآخرِ، وفي الأفعالِ الخمسةِ التي رفعُها بثباتِ النونِ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">إنَّ السكونَ يا ذوي الأذهانِ … والحذفَ للجزمِ علامتانِ</div>
+      <div class="ln">فاجزمْ بتسكينِ مضارعًا أتى … صحيحَ الآخرِ كلم يقمْ فتى</div>
+      <div class="ln">واجزمْ بحذفِ ما اكتسى اعتلالا … آخرَه والخمسةَ الأفعالا</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣ نظرة عامة ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>نظرةٌ عامّةٌ: علامتا الجزمِ وشرطُه</h2></div>
+
+  <p>هنا — في حالةِ الجزمِ — <b>علامتانِ أساسيّتانِ</b> هما: علامةُ <b>السكونِ</b> وعلامةُ <b>الحذفِ</b>؛ و<b>السكونُ هو العلامةُ الأصليّةُ للجزمِ</b>، و<b>الحذفُ</b> علامةٌ فرعيّةٌ. ويُشترط لوجودِ الجزمِ أمرانِ: فنحنُ نعلمُ — كما قلنا في الدروسِ السابقةِ — أن <b>حالةَ الجزمِ مختصّةٌ بالأفعالِ المضارعةِ</b>، كما أن حالةَ الخفضِ مختصّةٌ بالأسماءِ؛ فهنا الفعلُ المضارعُ الذي يشغلُ حالةَ الجزمِ <b>لا بدَّ أن يسبقَ أولًا بأداةٍ من أدواتِ الجزمِ</b>، وثانيًا <b>لا بدَّ أن تكونَ هناك علامةٌ تدلُّ على هذا الجزمِ</b>.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">علامتا الجزمِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node green">
+        <div class="n-title">السكونُ</div>
+        <div class="n-sub"><b>العلامةُ الأصليّةُ</b> — في موضعٍ واحدٍ:<br>الفعلُ المضارعُ <b>الصحيحُ الآخرِ</b> الذي ليس من الأمثلةِ الخمسةِ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الحذفُ</div>
+        <div class="n-sub"><b>علامةٌ فرعيّةٌ</b> — لها موضعانِ (نوعانِ):
+          <ul>
+            <li><b>حذفُ حرفِ العلةِ</b>: في المضارعِ <b>المعتلِّ الآخرِ</b></li>
+            <li><b>حذفُ النونِ</b>: في <b>الأمثلةِ الخمسةِ</b> التي رفعُها ثبوتُ النونِ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (١): علامتا الجزمِ — والجزمُ لا يكونُ إلا في الفعلِ المضارعِ المسبوقِ بأداةِ جزمٍ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤ السكون ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>العلامةُ الأصليّةُ: السكونُ في المضارعِ الصحيحِ الآخرِ</h2></div>
+
+  <p><b>السكونُ</b> هو العلامةَ الأصليّةَ للجزمِ، ويكونُ في <b>الفعلِ المضارعِ الصحيحِ الآخرِ</b>؛ يعني يُشترطُ في السكونِ لكي يكونَ علامةً للجزمِ أن يكونَ في الفعلِ المضارعِ الصحيحِ الآخرِ — أي أن يكونَ المضارعُ صحيحَ الآخرِ: <b>ليس معتلَّ الآخرِ، وليس من الأفعالِ الخمسةِ (الأمثلةِ الخمسةِ)</b>:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ﴾<span class="ref">سورةُ الإخلاصِ: ٣–٤</span></p>
+  </div>
+  <p>عندنا هنا <b>ثلاثةُ أفعالٍ مجزومةٍ وعلامةُ جزمِها السكونُ</b> لأنها صحيحةُ الآخرِ: «لم يلدْ ولم يولدْ ولم يكنْ له كفوًا أحدٌ»:</p>
+  <ul>
+    <li><span class="mark">«يلدْ»</span>: هنا الفعلُ «يلدُ» <b>فعلٌ مضارعٌ مجزومٌ</b> لأنه سبقَ بأداةِ جزمٍ هي <b>«لم»</b>، وهو مجزومٌ <b>وعلامةُ جزمِه السكونُ</b> كما رأينا.</li>
+    <li><span class="mark">«يولدْ»</span>: هذا فعلٌ مضارعٌ أيضًا <b>مجزومٌ وعلامةُ جزمِه السكونُ</b>؛ طبعًا لأنه صحيحُ الآخرِ — طالما أنه صحيحُ الآخرِ فتكونُ علامةُ جزمِه السكونَ.</li>
+    <li><span class="mark">«يكنْ»</span>: «لم يكنْ» هذا فعلٌ مضارعٌ <b>مجزومٌ وعلامةُ جزمِه السكونُ</b> لأنه صحيحُ الآخرِ (آخرُه نونٌ والنونُ حرفٌ صحيحٌ).</li>
+  </ul>
+
+  <h3 id="s4a">تنبيهٌ: «لم يكنْ» وحذفُ الواوِ ليس علامةَ الجزمِ</h3>
+  <p>لكنْ ربما يسألُ سائلٌ: إن كلمةَ «يكنْ» فيها حذفٌ؛ لأن أصلَ الكلمةِ «يكونُ»؟ نعم، هذا حذفٌ، <b>لكنه ليس علامةً للجزمِ</b>؛ هذا الحذفُ الحاصلُ ليس علامةً للجزمِ لأنه <b>ليس في الحرفِ الأخيرِ</b>، وإنما هو حدثَ <b>بسببِ التقاءِ الساكنَينِ</b>: فلما جُزمَ الفعلُ سُكِّنَ آخرُه (لأنه صحيحُ الآخرِ)، وقبلَ الأخيرِ الواوُ أيضًا ساكنةٌ؛ فهنا التقى ساكنانِ، والتقاءُ الساكنَينِ في اللغةِ العربيةِ <b>لا يجوزُ</b> في مثلِ هذه المواضعِ؛ فلذلك <b>حُذِفَتِ الواوُ</b> لأنها هي الحرفُ الأضعفُ — حرفُ العلةِ — <b>وبقيتِ النونُ ساكنةً كما هي</b>، ثم كانتِ الكلمةُ «لم يكنْ»؛ ولكن الجزمُ ها هنا كما هو باقٍ على <b>السكونِ</b>؛ علامةُ الجزمِ السكونُ لأن الفعلَ صحيحُ الآخرِ: آخرُه نونٌ والنونُ حرفٌ صحيحٌ.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">حالاتُ الفعلِ المضارعِ المجزومِ الثلاثُ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">صحيحُ الآخرِ</div>
+        <div class="n-sub">وليس من الأمثلةِ الخمسةِ<br>علامةُ جزمِه: <b>السكونُ</b><br>﴿لم يلدْ ولم يولدْ ولم يكنْ﴾ — «لم يقمْ فتى»</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">معتلُّ الآخرِ</div>
+        <div class="n-sub">منتهٍ بحرفِ علةٍ (ألفٌ أو واوٌ أو ياءٌ) وليس من الأمثلةِ الخمسةِ<br>علامةُ جزمِه: <b>حذفُ حرفِ العلةِ</b><br>«لا تخشَ» — ﴿ولا تقفُ﴾ — «لا ترمِ»</div>
+      </div>
+      <div class="node maroon">
+        <div class="n-title">من الأمثلةِ الخمسةِ</div>
+        <div class="n-sub">متصلٌ بواوِ الجماعةِ أو ألفِ الاثنَينِ أو ياءِ المخاطبةِ<br>علامةُ جزمِه: <b>حذفُ النونِ</b><br>﴿ولا تهنوا﴾ — ﴿إن تتوبا﴾ — ﴿لا تخافي﴾</div>
+      </div>
+    </div>
+    <figcaption>شكل (٢): علامةُ الجزمِ تتحددُ بنوعِ الفعلِ المضارعِ المجزومِ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥ الحذف ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>العلامةُ الفرعيّةُ: الحذفُ</h2></div>
+
+  <p>العلامةُ الفرعيّةُ في حالةِ الجزمِ هي <b>الحذفُ</b>، والحذفُ يكونُ على نوعَينِ — أو له موضعانِ: <b>الموضعُ الأولُ</b> أن يكونَ في <b>الفعلِ المضارعِ المعتلِّ الآخرِ</b>، و<b>النوعُ الثاني</b> يكونُ في <b>الأفعالِ الخمسةِ التي رفعُها بثباتِ النونِ</b>.</p>
+
+  <h3 id="s5a">النوعُ الأولُ: حذفُ حرفِ العلةِ في المضارعِ المعتلِّ الآخرِ</h3>
+  <p>إذا كان الفعلُ المضارعُ <b>منتهيًا بحرفِ علةٍ</b> — وطبعًا هو ليس متصلًا بواوِ الجماعةِ أو ألفِ الاثنَينِ أو ياءِ المخاطبةِ، يعني ليس من الأفعالِ الخمسةِ — وكانَ <b>معتلَّ الآخرِ</b>، هنا تكونُ علامةُ الجزمِ هي <b>حذفَ حرفِ العلةِ</b> أيًّا كانَ هذا الحرفُ: يعني سواءٌ كان <b>ألفًا أو واوًا أو ياءً</b>:</p>
+
+  <div class="box example">
+    <span class="tag">مثالٌ: «لا تخشَ إلا اللهَ»</span>
+    <p style="margin:0">إذا قلتُ: <span class="mark">«لا تخشَ إلا اللهَ»</span> — سنلاحظُ أن الفعلَ «تخشَ» هنا هو <b>مجزومٌ بـ«لا» الناهيةِ</b>؛ هذه «لا» الأولى تسمَّى <b>بلا الناهيةِ</b>، ولا الناهيةُ من <b>أدواتِ الجزمِ</b> — أي التي تجزمُ الفعلَ المضارعَ بعدَها — وهي <b>حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ</b>. والفعلُ «تخشَ» — لا تخشَ — هذا <b>فعلٌ مضارعٌ مجزومٌ بلا الناهيةِ وعلامةُ جزمِه حذفُ حرفِ العلةِ</b> لأنه <b>معتلُّ الآخرِ بالألفِ</b>، وأصلُه «تخشى» ولكنْ حُذِفَتْ هذه الألفُ لأنها هي علامةُ الجزمِ؛ لأن الفعلَ مجزومٌ وهي علامةُ الجزمِ.</p>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَا تَقْفُ مَا لَيْسَ لَكَ بِهِ عِلْمٌ ۚ إِنَّ السَّمْعَ وَالْبَصَرَ وَالْفُؤَادَ كُلُّ أُولَٰئِكَ كَانَ عَنْهُ مَسْئُولًا﴾<span class="ref">سورةُ الإسراءِ: ٣٦</span></p>
+  </div>
+  <p>كذلك لو قلتُ كما في قولِه تعالى: «ولا تقفُ ما ليس لك به علمٌ»: <span class="mark">«لا تقفُ»</span> — هي طبعًا مكتوبةٌ «تقفُ»، يعني آخرُ الكلمةِ فاءٌ عليها ضمّةٌ؛ فأين الواوُ؟ أصلُها <b>«تقفو» بالواوِ</b>؛ الواوُ <b>حُذِفَتْ</b> لأن الفعلَ <b>معتلُّ الآخرِ وقد جُزمَ</b>؛ فالفعلُ المضارعُ المعتلُّ الآخرِ يُجزمُ وتكونُ علامةُ جزمِه <b>حذفَ حرفِ العلةِ</b>.</p>
+
+  <div class="box example">
+    <span class="tag">مثالٌ: «لا ترضَ بالدَّنيّةِ»</span>
+    <p style="margin:0">كذلك لو قلتُ: <span class="mark">«لا ترضَ بالدنيّةِ»</span> — أصلُه «لا ترضى» <b>بألفٍ في آخرِه</b> ولكنها حُذِفَتْ لأن الفعلَ معتلُّ الآخرِ وهو مجزومٌ <b>وعلامةُ الجزمِ حذفُ حرفِ العلةِ</b>.</p>
+  </div>
+
+  <div class="box note">
+    <span class="tag">تنبيهٌ: خطأٌ شائعٌ</span>
+    <p style="margin:0">طبعًا هنا يعني بعضُ الطلابِ يخطئُ خطأً شائعًا، وهو أنه <b>يسكِّنُ الآخرَ</b> في مثلِ هذه الأفعالِ المعتلةِ؛ يعني مثلًا في قولِنا «لا تخشَ» يقولُ: «لا تخشْ»، وفي «لا ترضَ» يقولُ: «لا ترضْ» — <b>لا، خطأٌ</b>: هو ليس مبنيًّا على السكونِ ولا مجزومًا وعلامةُ جزمِه السكونُ؛ هو مجزومٌ <b>وعلامةُ جزمِه حذفُ حرفِ العلةِ</b>؛ فيجبُ أن ننتبهَ لمثلِ هذا.</p>
+  </div>
+
+  <div class="box example">
+    <span class="tag">مثالٌ: «لا ترمِ القاذوراتِ في الشارعِ»</span>
+    <p style="margin:0">كذلك إذا قلنا في مثلِ قولِنا: <span class="mark">«لا ترمِ القاذوراتِ في الشارعِ»</span> — «لا ترمِ»: أصلُه «لا ترمي» <b>بياءٍ في آخرِه</b>، ولكنِ الياءَ هنا <b>حُذِفَتْ</b> لأنه مجزومٌ بلا الناهيةِ قبلَه <b>وعلامةُ جزمِه حذفُ حرفِ العلةِ</b> لأنه معتلُّ الآخرِ.</p>
+  </div>
+
+  <h3 id="s5b">النوعُ الثاني: حذفُ النونِ في الأمثلةِ الخمسةِ</h3>
+  <p>أما <b>حذفُ النونِ</b> — وهو الموضعُ الثاني للحذفِ — فيكونُ في <b>الأفعالِ الخمسةِ</b>: هذه الأفعالُ أو الأمثلةُ الخمسةُ — <b>إذا جُزمَتْ فإن علامةَ جزمِها تكونُ بحذفِ النونِ</b>؛ رفعُها كان بثباتِ النونِ، ونصبُها كان بحذفِ النونِ، وأيضًا جزمُها علامتُه <b>حذفُ النونِ</b>. وطبعًا أؤكدُ مرةً أخرى وأذكرُ بأن <b>الأفعالَ الخمسةَ (الأمثلةَ الخمسةَ) هي كلُّ فعلٍ مضارعٍ اتصلتْ به واوُ الجماعةِ أو ألفُ الاثنَينِ أو ياءُ المخاطبةِ</b>، وهذه الأفعالُ كما قلتُ تُرفعُ وعلامةُ رفعِها ثبوتُ النونِ، <b>وتُنصَبُ وتُجزمُ بحذفِها</b>. وهناك أمثلةٌ وشواهدُ على حذفِ النونِ وكونِها علامةً للجزمِ في الفعلِ المضارعِ:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَا تَهِنُوا وَلَا تَحْزَنُوا وَأَنتُمُ الْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ﴾<span class="ref">سورةُ آل عمرانَ: ١٣٩</span></p>
+  </div>
+  <p>كما في قولِه تعالى: «ولا تهنوا ولا تحزنوا وأنتم الأعلونَ إن كنتم مؤمنينَ»: «ولا تهنوا ولا تحزنوا» — هنا <b>«لا» الناهيةُ أيضًا جازمةٌ</b>. <span class="mark">«تهنوا»</span>: هذا الفعلُ «تهنو+نونُ» متصلٌ <b>بواوِ الجماعةِ</b> — اتصلتْ به واوُ الجماعةِ — وواوُ الجماعةِ كما قلتُ إذا اتصلتْ بالفعلِ المضارعِ فهي دليلٌ على أنه من الأمثلةِ الخمسةِ أو من الأفعالِ الخمسةِ، وتكونُ هي الفاعلَ؛ والفعلُ المضارعُ هنا <b>مجزومٌ بلا الناهيةِ وعلامةُ جزمِه حذفُ النونِ</b> — يعني هو أصلُه «تهنو+ن»، لكن لما دخلتْ «لا» الناهيةُ الجازمةُ جزمَتْه <b>فحُذِفَتِ النونُ في آخرِه علامةً على هذا الجزمِ</b>. وكذلك قولُه <span class="mark">«ولا تحزنوا»</span>: يعني الفكرةُ نفسُها فيه: أنه مجزومٌ <b>وعلامةُ جزمِه حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ — وعرفتَ أنه منها لاتصالِ واوِ الجماعةِ به.</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلَا تَقْرَبُوا مَالَ الْيَتِيمِ إِلَّا بِالَّتِي هِيَ أَحْسَنُ﴾<span class="ref">سورةُ الأنعامِ: ١٥٢</span></p>
+  </div>
+  <p>كما رأينا أيضًا في قولِه تعالى: «ولا تقربوا مالَ اليتيمِ»: الفعلُ <span class="mark">«تقربوا»</span> أيضًا هو فعلٌ مضارعٌ <b>مجزومٌ بلا الناهيةِ وعلامةُ جزمِه حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ، وطبعًا الواوُ — واوُ الجماعةِ — فيه هي <b>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</p>
+
+  <p>وبهذا نكونُ قد أنهينا الكلامَ <b>نظريًّا</b> على علاماتِ الجزمِ في النحوِ العربيِّ طبقًا لما عرضَه ابنُ آجرومَ في متنِه، وخلاصةُ القولِ فيه تأتي في خاتمةِ الدرسِ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦ التمرينات ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>التمريناتُ: أسئلةٌ على العلاماتِ</h2></div>
+
+  <p>والآن إلى التطبيقِ على علاماتِ الجزمِ في النحوِ العربيِّ: فنتناولُ عددًا من الأسئلةِ، ثم نتناولُ عددًا بعدَ ذلك من الآياتِ القرآنيّةِ نستخرجُ منها <b>الأفعالَ المضارعةَ المجزومةَ</b>:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ما من علاماتِ الجزمِ: حذفُ حرفِ العلةِ، أمِ الياءُ، أمِ الألفُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا من علاماتِ الجزمِ <b>حذفُ حرفِ العلةِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿وَكَيْفَ تَصْبِرُ عَلَىٰ مَا لَمْ تُحِطْ بِهِ خُبْرًا﴾</span> [الكهفِ: ٦٨] — الفعلُ «تحطْ» فعلٌ مضارعٌ مجزومٌ، وعلامةُ جزمِه: هي السكونُ، أم حذفُ حرفِ العلةِ، أم حذفُ النونِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا علامةُ جزمِه <b>السكونُ</b>. صحيحٌ أنه فيه حذفٌ، لكنه ليس حذفًا في الحرفِ الأخيرِ — لأنه ليس معتلَّ الآخرِ — <b>المحذوفُ هو الحرفُ ما قبلَ الأخيرِ</b>: أصلُه <b>«تحيطُ»</b>، لكن لما دخلتْ «لم» جزمَتِ الفعلَ <b>فسُكِّنَ آخرُه، فالتقى ساكنانِ</b>: الساكنُ الأخيرُ والساكنُ الذي قبلَه الذي هو حرفُ المدِّ (الياءُ في «تحيطُ»)، وهذا لا يصحُّ في اللغةِ العربيةِ، فحذفوا <b>الياءَ</b> لأنها حرفُ العلةِ — الحرفُ الضعيفُ — <b>تخلُّصًا من التقاءِ الساكنَينِ</b>؛ وكان الفعلُ على هذا النحوِ، ولكنه في النهايةِ هو فعلٌ مضارعٌ <b>مجزومٌ وعلامةُ جزمِه السكونُ</b> وليس حذفَ حرفِ العلةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿أَلَمْ تَرَ أَنَّ اللَّهَ يَعْلَمُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ﴾</span> [المجادلةِ: ٧] — هنا الفعلُ «ترَ» فعلٌ مضارعٌ مجزومٌ، فما علامةُ جزمِه: هل هي حذفُ حرفِ العلةِ، أم حذفُ النونِ، أم السكونُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو <b>حذفُ حرفِ العلةِ</b>؛ لأن «ترَ» أصلُه <b>«ترى» بألفٍ في آخرِه</b>؛ فإذا دخلتْ «لم» الجازمةُ أو دخلتْ أداةُ جزمٍ وهو <b>معتلُّ الآخرِ</b> كانت علامةُ جزمِه هي <b>حذفَ حرفِ العلةِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُم بِظُلْمٍ﴾</span> [الأنعامِ: ٨٢] — الفعلُ «يلبسوا» فعلٌ مضارعٌ مجزومٌ طبعًا لأنه مسبوقٌ بـ«لم»؛ وعلامةُ جزمِه: حذفُ حرفِ العلةِ، أم السكونُ، أم حذفُ النونِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا العلامةُ هي <b>حذفُ النونِ</b>؛ لأنه من <b>الأمثلةِ الخمسةِ (الأفعالِ الخمسةِ)</b>؛ وكيف عرفتَ أنه منها؟ <b>باتصالِه بواوِ الجماعةِ</b>؛ طبعًا واوُ الجماعةِ — كما قلنا مرارًا — هي ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ فاعلٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿كَلَّا لَمَّا يَقْضِ مَا أَمَرَهُ﴾</span> [القيامةِ: ٢٣] — الفعلُ «يقضِ» هنا مجزومٌ، وعلامةُ جزمِه: هي السكونُ، أم حذفُ حرفِ العلةِ، أم حذفُ النونِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا <b>حذفُ حرفِ العلةِ</b>؛ لأن أصلَه <b>«يقضي»</b>، ولكن لما دخلتْ أداةُ الجزمِ «لمّا» فهي طبعًا تجزمُ الفعلَ، والفعلُ بعدَها معتلُّ الآخرِ، فتكونُ علامةُ الجزمِ هي <b>حذفَ حرفِ العلةِ</b>.</div>
+  </div>
+
+  <h3 id="t61">وقفةٌ: «لمْ» و«لمّا» — الفرقُ بينهما</h3>
+  <p>«لمّا» هي <b>أُختُ «لم» الجازمةِ</b>، وهي حرفُ <b>نفيٍ وجزمٍ وقلبٍ</b>: <b>حرفُ نفيٍ</b> لأنها تدلُّ على معنى النفيِ، و<b>جزمٍ</b> لأنها تجزمُ الفعلَ المضارعَ بعدَها، و<b>قلبٍ</b> لأنها تقلبُ زمنَ الفعلِ المضارعِ إلى الماضي. وكذلك «لم» أيضًا فيها هذه المعانيَ نفسَها. لكنِ <b>الفرقَ بين «لم» و«لمّا»</b> أن «لمّا» بمجيئِها <b>يتوقَّعُ حدوثُ الحدثِ</b>: يعني حين أقولُ: «هل حضرَ الأستاذُ؟» فتقولُ: «لمّا يحضرْ» — يعني هو إلى الآنَ لم يحضرْ ولكنْ <b>متوقعٌ أن يجيءَ</b>؛ هناك ترجيحٌ بأنه سيأتي؛ إنما لو قلتَ: «لم يحضرْ» — يعني <b>تنفي حضورَه مع عدمِ توقُّعِ مجيئِه</b>: يعني اللهُ أعلمُ سيأتي أم لا. وهكذا. ولكن «لمّا» — كما قلتُ — من أدواتِ الجزمِ وهي أُختُ «لم»، وتجزمُ الفعلَ المضارعَ بعدَها <b>بحسبِ نوعِ الفعلِ</b>: إن كان صحيحَ الآخرِ كان مجزومًا وعلامةُ جزمِه السكونُ، وإن كان معتلَّ الآخرِ كانت علامةُ جزمِه حذفَ حرفِ العلةِ، وإن كان من الأمثلةِ الخمسةِ أو الأفعالِ الخمسةِ كانت علامةُ جزمِه حذفَ النونِ.</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node goldb">
+        <div class="n-title">لمْ</div>
+        <div class="n-sub">حرفُ نفيٍ وجزمٍ وقلبٍ<br>تنفي الفعلَ <b>مع عدمِ توقُّعِ وقوعِه</b>: «لم يحضرْ» (اللهُ أعلمُ سيأتي أم لا)</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">لمّا</div>
+        <div class="n-sub">أُختُ «لم» — حرفُ نفيٍ وجزمٍ وقلبٍ<br>تنفي الفعلَ <b>مع توقُّعِ وقوعِه</b>: «لمّا يحضرْ» (متوقعٌ أن يجيءَ)</div>
+      </div>
+    </div>
+    <div class="dcap">شكل (٣): الفرقُ بين «لمْ» و«لمّا» — وكلتاهما تجزمانِ المضارعَ بحسبِ نوعِه</div>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧ تأمل الآيات ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>تأمُّلُ الآياتِ: استخراجُ الأفعالِ المجزومةِ وعلاماتِها</h2></div>
+
+  <p>نتأمَّلُ معًا هذه الآياتِ القرآنيّةَ لنستخرجَ منها الأفعالَ المضارعةَ المجزومةَ، ونحاولَ أن نتبينَ هذه العلاماتِ وسببَ وجودِها في الفعلِ المضارعِ:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ وَأَقَامَ الصَّلَاةَ وَآتَى الزَّكَاةَ وَلَمْ يَخْشَ إِلَّا اللَّهَ﴾</span> [التوبةِ: ١٨]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا الفعلُ المضارعُ هو <span class="mark">«يخشَ»</span> الآتي بعدَ «لم»، و«لم» هي جازمةٌ. والفعلُ المضارعُ هنا «يخشَ» أصلُه <b>«يخشى» بألفٍ في آخرِه</b> — يعني هو منتهٍ بحرفٍ من حروفِ العلةِ — فلما دخلتْ «لم» وجزمَتْه كانت علامةُ الجزمِ هي <b>حذفَ حرفِ العلةِ</b>، فقلنا: «لم يخشَ».</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَمَن يَدْعُ مَعَ اللَّهِ إِلَٰهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِندَ رَبِّهِ﴾</span> [المؤمنونَ: ١١٧]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هنا الفعلُ <span class="mark">«يدعُ»</span> هو الفعلُ المضارعُ المجزومُ، لكن ما أداةُ الجزمِ؟ أداةُ الجزمِ هي <b>«مَن» الشرطيّةُ قبله</b>؛ و<b>أدواتُ الشرطِ الجازمةُ تجزمُ الفعلَ المضارعَ بعدَها — فعلَ الشرطِ — في جملةِ الشرطِ، وكذلك إذا كان موجودًا في جملةِ جوابِ الشرطِ فعلٌ مضارعٌ أيضًا فهي تجزمُه</b>؛ يعني كأن أقولَ: <span class="mark">«إنْ تذاكرْ تنجحْ»</span>: فـ«إنْ» هنا هي شرطيّةٌ جازمةٌ، و«تذاكرْ» بعدَها فعلٌ مضارعٌ <b>مجزومٌ بها وعلامةُ جزمِه السكونُ</b>، و«تنجحْ» هو فعلٌ مضارعٌ مجزومٌ أيضًا <b>في جملةِ جوابِ الشرطِ بأنْ الشرطيّةِ وعلامةُ جزمِه السكونُ</b>. طبعًا هنا في قولِه تعالى: «ومن يدعُ مع اللهِ إلهًا آخرَ لا برهانَ له به فإنما حسابُه عند ربِّه»: جملةُ الجوابِ هي «فإنما حسابُه عند ربِّه» <b>وليس فيها فعلٌ مضارعٌ</b> فلم يُجزمْ فيها شيءٌ. و«يدعُ» — ومن يدعُ مع اللهِ — كما هو واضحٌ <b>معتلُّ الآخرِ بالواوِ</b> ولكنِ الواوَ حُذِفَتْ لأنه جُزمَ وهو معتلُّ الآخرِ وعلامةُ جزمِه <b>حذفُ حرفِ العلةِ</b> — وهي علامةٌ فرعيّةٌ؛ إذًا: «يدعُ» فعلٌ مضارعٌ <b>مجزومٌ بمن الشرطيّةِ الجازمةِ وعلامةُ جزمِه حذفُ حرفِ العلةِ لأنه معتلُّ الآخرِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿مَن يُضْلِلِ اللَّهُ فَلَا هَادِيَ لَهُ﴾</span> [الأعرافِ: ١٨٦]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>كلمةُ <span class="mark">«يضللْ»</span> أيضًا هي فعلٌ مضارعٌ مجزومٌ — <b>فعلُ الشرطِ</b> — بأداةِ الشرطِ هي «مَن» وهي الجازمةُ؛ وهو طبعًا مجزومٌ <b>وعلامةُ جزمِه السكونُ، لكنه حُرِّكَ بالكسرِ تخلُّصًا من التقاءِ الساكنَينِ</b> (لأن بعدَه ساكنًا: «يضللِ اللهَ»)؛ هكذا نقولُ في إعرابِه: «يضللْ» فعلٌ مضارعٌ <b>مجزومٌ بمن الشرطيّةِ وعلامةُ جزمِه السكونُ المحرَّكُ بالكسرِ تخلُّصًا من التقاءِ الساكنَينِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿إِن تُوبَا إِلَى اللَّهِ فَقَدْ صَغَتْ قُلُوبُكُمَا﴾</span> [التحريمِ: ٤]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«إنْ» الشرطيّةُ الجازمةُ: «إن تتوبا إلى اللهِ» — أصلُه <b>«تتوبانِ»</b>؛ هذا فعلٌ مضارعٌ <b>اتصلتْ به ألفُ الاثنَينِ</b>؛ إذًا هو من الأفعالِ الخمسةِ (الأمثلةِ الخمسةِ) التي تُرفعُ وتكونُ علامةُ رفعِها ثبوتَ النونِ، وتُنصَبُ وتُجزمُ بحذفِها — وعلامتُها فرعيّةٌ كما هو واضحٌ. كيف نُعربُ «تتوبا»؟ <b>فعلٌ مضارعٌ مجزومٌ بأنْ الشرطيّةِ وعلامةُ جزمِه حذفُ النونِ لأنه من الأمثلةِ الخمسةِ</b>؛ وطبعًا الفاعلُ هو <b>ألفُ الاثنَينِ: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَإِن تَصْبِرُوا وَتَتَّقُوا فَإِنَّ ذَٰلِكَ مِنْ عَزْمِ الْأُمُورِ﴾</span> [آل عمرانَ: ١٨٦]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«إنْ» شرطيّةٌ هنا جازمةٌ، والفعلُ <span class="mark">«تصبروا»</span> فعلٌ مضارعٌ <b>مجزومٌ في جملةِ الشرطِ بأنْ الشرطيّةِ وعلامةُ جزمِه حذفُ النونِ</b> لأنه من الأمثلةِ الخمسةِ — لاتصالِ واوِ الجماعةِ به — وطبعًا واوُ الجماعةِ ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ فاعلٌ</b>. وكذلك «تتقوا» معطوفٌ عليه في حكمِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَأَوْحَيْنَا إِلَىٰ أُمِّ مُوسَىٰ أَنْ أَرْضِعِيهِ فَإِذَا خِفْتِ عَلَيْهِ فَأَلْقِيهِ فِي الْيَمِّ وَلَا تَخَافِي وَلَا تَحْزَنِي﴾</span> [القصصِ: ٧]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ولا تخافي ولا تحزني»: هنا <b>«لا» الناهيةُ الجازمةُ</b> أتى بعدَها فعلٌ مضارعٌ، وهذا الفعلُ المضارعُ <b>اتصلتْ به ياءُ المخاطبةِ</b>، وأصلُه «تخافينَ» و«تحزنينَ»، ولكن لما دخلتْ «لا» الناهيةُ الجازمةُ <b>حُذِفَتِ النونُ</b> لأنها هي علامةُ الجزمِ هنا؛ لأن الفعلَ من الأمثلةِ الخمسةِ — اتصل بياءِ المخاطبةِ. فنقولُ في إعرابِ «تخافي» و«تحزني» — كلتاهما: <b>فعلٌ مضارعٌ مجزومٌ بلا الناهيةِ وعلامةُ جزمِه حذفُ النونِ لأنه من الأمثلةِ الخمسةِ (الأفعالِ الخمسةِ)</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِ النبيِّ ﷺ: <span class="ayq">«المرءُ على دينِ خليلِه؛ فلينظرْ أحدُكم من يخاللْ»</span>:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا الفعلُ <span class="mark">«فلينظرْ»</span>: <b>اللامُ لامُ الأمرِ</b>، وهي مبنيةٌ على السكونِ — يعني لامَ الأمرِ طبعًا إذا سبقتْ بحرفِ عطفٍ بُنيتْ على السكونِ («فلينظرْ»: سُبقتْ بالفاءِ). طيبْ هنا «فلينظرْ»: «ينظرْ» هذا <b>فعلٌ مضارعٌ مجزومٌ بلامِ الأمرِ وعلامةُ جزمِه السكونُ</b>، و«أحدُكم» هي <b>الفاعلُ</b> طبعًا مرفوعٌ وعلامةُ رفعِه الضمّةُ الظاهرةُ على آخرِه. ثم «من يخاللْ»: «يخاللْ» فعلٌ مضارعٌ مجزومٌ بـ«مَن» الشرطيّةِ وعلامةُ جزمِه السكونُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿لِيُنفِقْ ذُو سَعَةٍ مِّن سَعَتِهِ﴾</span> [الطلاقِ: ٧]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>أيضًا هذه <b>لامُ الأمرِ</b>: «لينفقْ»؛ لكنها طبعًا هي — لما لم تُسبقْ بحرفِ عطفٍ — <b>بُنيتْ على الكسرِ، وهذا هو الأصلُ فيها</b> («لِينفقْ»). والفعلُ <span class="mark">«ينفقْ»</span> هذا <b>فعلٌ مضارعٌ مجزومٌ بلامِ الأمرِ وعلامةُ جزمِه السكونُ</b>. و<span class="mark">«ذو»</span> طبعًا هي <b>الفاعلُ</b>، وهي <b>فاعلٌ مرفوعٌ وعلامةُ رفعِه الواوُ</b> لأنه من <b>الأسماءِ الخمسةِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿رَبَّنَا لَا تَجْعَلْ فِي قُلُوبِنَا غِلًّا لِّلَّذِينَ آمَنُوا﴾</span> [الحشرِ: ١٠]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ربنا لا تجعلْ»: أيضًا «لا» هنا <b>ناهيةٌ جازمةٌ</b> — حرفٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ — و<span class="mark">«تجعلْ»</span> هذا <b>فعلٌ مضارعٌ مجزومٌ بلا الناهيةِ وعلامةُ جزمِه السكونُ</b>؛ وطبعًا الفاعلُ <b>ضميرٌ مستترٌ تقديرُه «أنتَ»</b> يعودُ على اللهِ سبحانه وتعالى.</div>
+  </div>
+
+  <h3 id="t71">أدواتُ الجزمِ الواردةُ في الدرسِ</h3>
+  <p>مرَّتْ بنا في الشرحِ والتطبيقاتِ جملةٌ من <b>أدواتِ الجزمِ</b> التي تجزمُ الفعلَ المضارعَ بعدَها؛ نجمعُها هنا للمراجعةِ:</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green">
+        <div class="n-title">لمْ</div>
+        <div class="n-sub">حرفُ نفيٍ وجزمٍ وقلبٍ<br>﴿لم يلدْ ولم يولدْ ولم يكنْ﴾ — ﴿ولم يخشَ﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">لمّا</div>
+        <div class="n-sub">أُختُ «لم» — نفيٌ وجزمٌ وقلبٌ مع توقُّعِ الوقوعِ<br>﴿كلا لمّا يقضِ ما أمرَه﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">لا الناهيةُ</div>
+        <div class="n-sub">تطلبُ تركَ الفعلِ — حرفٌ مبنيٌّ على السكونِ<br>«لا تخشَ» — ﴿ولا تقفُ﴾ — ﴿ولا تهنوا﴾ — ﴿لا تخافي ولا تحزني﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">لامُ الأمرِ</div>
+        <div class="n-sub">تطلبُ فعلَ الفعلِ — تُبنى على الكسرِ، فإن سبقتْ بحرفِ عطفٍ بُنيتْ على السكونِ<br>«فلينظرْ» — ﴿لينفقْ﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">أدواتُ الشرطِ الجازمةُ</div>
+        <div class="n-sub">تجزمُ فعلَ الشرطِ وجوابَه إن كانا مضارعَينِ<br>«مَن»: ﴿ومن يدعُ﴾ — ﴿من يضللِ اللهُ﴾ — «من يخاللْ» / «إنْ»: ﴿إن تتوبا﴾ — ﴿وإن تصبروا وتتقوا﴾ — «إنْ تذاكرْ تنجحْ»</div>
+      </div>
+    </div>
+    <div class="dcap">شكل (٤): أدواتُ الجزمِ التي وردتْ في درسِ علاماتِ الجزمِ</div>
+  </figure>
+
+  <h3 id="t73">الجدولُ التلخيصيُّ للتطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الشاهدُ</th><th>الفعلُ المجزومُ</th><th>أداةُ الجزمِ</th><th>علامتُه</th><th>وجهُ العلامةِ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>﴿لم يلدْ ولم يولدْ ولم يكنْ له كفوًا أحدٌ﴾</td><td>يلدْ / يولدْ / يكنْ</td><td>لمْ</td><td>السكونُ</td><td>صحيحُ الآخرِ (وحذفُ الواوِ في «يكنْ» لالتقاءِ الساكنَينِ لا للجزمِ)</td></tr>
+        <tr><td>﴿وكيف تصبرُ على ما لم تحطْ به خبرًا﴾</td><td>تحطْ</td><td>لمْ</td><td>السكونُ</td><td>صحيحُ الآخرِ (أصلُه «تحيطُ»؛ حُذفتْ ياءُ المدِّ لالتقاءِ الساكنَينِ لا للجزمِ)</td></tr>
+        <tr><td>﴿ألم ترَ أنَّ اللهَ يعلمُ…﴾</td><td>ترَ</td><td>لمْ</td><td>حذفُ حرفِ العلةِ</td><td>أصلُه «ترى» — معتلُّ الآخرِ بالألفِ</td></tr>
+        <tr><td>﴿كلا لمّا يقضِ ما أمرَه﴾</td><td>يقضِ</td><td>لمّا</td><td>حذفُ حرفِ العلةِ</td><td>أصلُه «يقضي» — معتلُّ الآخرِ بالياءِ</td></tr>
+        <tr><td>﴿ولم يخشَ إلا اللهَ﴾</td><td>يخشَ</td><td>لمْ</td><td>حذفُ حرفِ العلةِ</td><td>أصلُه «يخشى» — معتلُّ الآخرِ بالألفِ</td></tr>
+        <tr><td>﴿ومن يدعُ مع اللهِ إلهًا آخرَ…﴾</td><td>يدعُ</td><td>مَن الشرطيّةُ</td><td>حذفُ حرفِ العلةِ</td><td>أصلُه «يدعو» — معتلُّ الآخرِ بالواوِ</td></tr>
+        <tr><td>﴿مَن يضللِ اللهُ فلا هاديَ لهُ﴾</td><td>يضللْ</td><td>مَن الشرطيّةُ</td><td>السكونُ</td><td>صحيحُ الآخرِ؛ حُرِّكَ بالكسرِ تخلُّصًا من التقاءِ الساكنَينِ</td></tr>
+        <tr><td>﴿الذين آمنوا ولم يلبسوا إيمانَهم بظلمٍ﴾</td><td>يلبسوا</td><td>لمْ</td><td>حذفُ النونِ</td><td>من الأمثلةِ الخمسةِ (واوُ الجماعةِ فاعلٌ)</td></tr>
+        <tr><td>﴿ولا تهنوا ولا تحزنوا وأنتم الأعلونَ﴾</td><td>تهنوا / تحزنوا</td><td>لا الناهيةُ</td><td>حذفُ النونِ</td><td>من الأمثلةِ الخمسةِ</td></tr>
+        <tr><td>﴿ولا تقربوا مالَ اليتيمِ﴾</td><td>تقربوا</td><td>لا الناهيةُ</td><td>حذفُ النونِ</td><td>من الأمثلةِ الخمسةِ (الواوُ ضميرٌ في محلِّ رفعٍ فاعلٌ)</td></tr>
+        <tr><td>﴿إن تتوبا إلى اللهِ فقد صغتْ قلوبُكما﴾</td><td>تتوبا</td><td>إنْ الشرطيّةُ</td><td>حذفُ النونِ</td><td>أصلُه «تتوبانِ» — ألفُ الاثنَينِ فاعلٌ</td></tr>
+        <tr><td>﴿وإن تصبروا وتتقوا فإنَّ ذلك من عزمِ الأمورِ﴾</td><td>تصبروا (وتتقوا معطوفٌ)</td><td>إنْ الشرطيّةُ</td><td>حذفُ النونِ</td><td>من الأمثلةِ الخمسةِ</td></tr>
+        <tr><td>﴿ولا تخافي ولا تحزني﴾</td><td>تخافي / تحزني</td><td>لا الناهيةُ</td><td>حذفُ النونِ</td><td>أصلُهما «تخافينَ» و«تحزنينَ» — ياءُ المخاطبةِ فاعلٌ</td></tr>
+        <tr><td>«المرءُ على دينِ خليلِه فلينظرْ أحدُكم من يخاللْ»</td><td>ينظرْ / يخاللْ</td><td>لامُ الأمرِ / مَن الشرطيّةُ</td><td>السكونُ</td><td>صحيحا الآخرِ؛ ولامُ الأمرِ سُكِّنتْ لسبقِها بالفاءِ</td></tr>
+        <tr><td>﴿لينفقْ ذو سعةٍ من سعتِه﴾</td><td>ينفقْ</td><td>لامُ الأمرِ</td><td>السكونُ</td><td>صحيحُ الآخرِ (واللامُ مكسورةٌ لعدمِ سبقِها بحرفِ عطفٍ؛ و«ذو» فاعلٌ مرفوعٌ بالواوِ)</td></tr>
+        <tr><td>﴿ربنا لا تجعلْ في قلوبِنا غلًّا للذين آمنوا﴾</td><td>تجعلْ</td><td>لا الناهيةُ</td><td>السكونُ</td><td>صحيحُ الآخرِ؛ والفاعلُ مستترٌ تقديرُه «أنتَ»</td></tr>
+        <tr><td>«لا تخشَ إلا اللهَ» / «لا ترضَ بالدنيّةِ» / «لا ترمِ القاذوراتِ»</td><td>تخشَ / ترضَ / ترمِ</td><td>لا الناهيةُ</td><td>حذفُ حرفِ العلةِ</td><td>أصولُها: تخشى، ترضى، ترمي — معتلةُ الآخرِ</td></tr>
+        <tr><td>«إنْ تذاكرْ تنجحْ»</td><td>تذاكرْ / تنجحْ</td><td>إنْ الشرطيّةُ (فعلُ الشرطِ وجوابُه)</td><td>السكونُ</td><td>صحيحا الآخرِ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨ الخلاصة ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>خلاصةُ الدرس</h2></div>
+
+  <p>بهذا نكونُ قد أنهينا الكلامَ على حالةِ الجزمِ وعلاماتِ الجزمِ <b>نظريًّا وتطبيقيًّا</b>؛ وخلاصةُ القولِ: أن الجزمَ في اللغةِ العربيةِ (أو في النحوِ العربيِّ) له علامتانِ:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>العلامةُ</th><th>نوعُها</th><th>موضعُها</th><th>أمثلةٌ</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>السكونُ</b></td>
+          <td>أصليّةٌ</td>
+          <td>الفعلُ المضارعُ الصحيحُ الآخرِ الذي ليس من الأمثلةِ الخمسةِ</td>
+          <td>﴿لم يلدْ ولم يولدْ ولم يكنْ﴾ — «لم يقمْ فتى» — ﴿لا تجعلْ﴾ — ﴿لينفقْ﴾</td>
+        </tr>
+        <tr>
+          <td><b>حذفُ حرفِ العلةِ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>الفعلُ المضارعُ المعتلُّ الآخرِ (بالألفِ أو الواوِ أو الياءِ)</td>
+          <td>«لا تخشَ» — ﴿ولا تقفُ﴾ — «لا ترضَ» — «لا ترمِ» — ﴿ولم يخشَ﴾ — ﴿لمّا يقضِ﴾</td>
+        </tr>
+        <tr>
+          <td><b>حذفُ النونِ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>الأمثلةُ الخمسةُ (الأفعالُ الخمسةُ) التي رفعُها بثباتِ النونِ وتُنصَبُ وتُجزمُ بحذفِها</td>
+          <td>﴿ولا تهنوا ولا تحزنوا﴾ — ﴿ولم يلبسوا﴾ — ﴿إن تتوبا﴾ — ﴿ولا تخافي ولا تحزني﴾</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="summary-points">
+    <li><b>الجزمُ حالةٌ لا تكونُ إلا في الأفعالِ المضارعةِ</b> (كما أن الخفضَ مختصٌّ بالأسماءِ)؛ فلا بدَّ أن يسبقَ المضارعَ <b>أداةُ جزمٍ</b>، ثم تأتي العلامةُ بحسبِ نوعِ الفعلِ.</li>
+    <li><b>السكونُ</b> العلامةُ الأصليّةُ للجزمِ في المضارعِ <b>الصحيحِ الآخرِ</b> غيرِ الخمسيِّ؛ <b>والحذفُ</b> علامةٌ فرعيّةٌ على نوعَينِ: <b>حذفُ حرفِ العلةِ</b> في المعتلِّ الآخرِ، و<b>حذفُ النونِ</b> في الأمثلةِ الخمسةِ التي رفعُها ثبوتُ النونِ وتُنصَبُ وتُجزمُ بحذفِها.</li>
+    <li><b>انتبهْ للحذفِ الذي ليس علامةَ جزمٍ</b>: ما حُذفَ لالتقاءِ الساكنَينِ في صحيحِ الآخرِ — كـ«لم يكنْ» (أصلُها يكونُ: حُذفتِ الواوُ) و«لم تحطْ» (أصلُها تحيطُ: حُذفتِ الياءُ) — فالعلامةُ فيه السكونُ لا الحذفُ؛ لأن الحذفَ وقعَ في غيرِ الحرفِ الأخيرِ. وكذلك ما حُرِّكَ بالكسرِ تخلُّصًا من التقاءِ الساكنَينِ — كـ﴿مَن يضللِ اللهُ﴾ — فهو مجزومٌ بالسكونِ المحرَّكِ.</li>
+    <li><b>لا تُسكِّنْ آخرَ المعتلِّ الآخرِ</b>: الصوابُ «لا تخشَ / لا ترضَ / لا ترمِ» بحذفِ حرفِ العلةِ، و«لا تخشْ / لا ترضْ» خطأٌ شائعٌ.</li>
+    <li><b>«لمّا» أُختُ «لم»</b>: كلتاهما حرفُ نفيٍ وجزمٍ وقلبٍ (تقلبانِ زمنَ المضارعِ إلى الماضي)؛ والفرقُ أن «لمّا» يُتوقَّعُ معها وقوعُ الفعلِ («لمّا يحضرْ»: لم يقعْ ومتوقعٌ وقوعُه)، و«لم» تنفيه من غيرِ توقُّعٍ.</li>
+    <li><b>أدواتُ الشرطِ الجازمةُ</b> (كـ«مَن» و«إنْ») تجزمُ فعلَ الشرطِ، وتجزمُ جوابَه إن كان مضارعًا: «إنْ تذاكرْ تنجحْ».</li>
+    <li><b>لامُ الأمرِ</b> تُبنى على الكسرِ («لينفقْ»)، فإن سُبقتْ بحرفِ عطفٍ بُنيتْ على السكونِ («فلينظرْ»).</li>
+    <li>والأمثلةُ الخمسةُ: رفعُها <b>ثبوتُ النونِ</b>، ونصبُها وجزمُها <b>بحذفِها</b>؛ والضميرُ المتصلُ فيها (واوٌ أو ألفٌ أو ياءٌ) هو الفاعلُ في محلِّ رفعٍ.</li>
+  </ul>
+
+  <div class="box note">
+    <span class="tag">تمَّ الدرسُ</span>
+    <p style="margin:0">هذا واللهُ تعالى أعلمُ، وإن شاء اللهُ على وعدٍ بلقاءٍ جديدٍ في درسٍ آخرَ من دروسِ الآجروميّةِ.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ السادسِ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=ITrTDFQQZoA" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

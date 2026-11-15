@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مرفوعاتُ الأسماء — الدرس ١١ من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">مرفوعاتُ الأسماءِ</h1>
+    <div class="cover-sub">الدرس ١١: الوظائفُ السبعُ التي تشغلُ حالةَ الرفعِ — بشواهدِها وتطبيقاتٍ قرآنيةٍ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=1lcaFyJ_KEQ" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتنِ وحقيقَةُ المرفوعاتِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s2a">خريطةُ المرفوعاتِ السبعةِ</a></li>
+        <li><a href="#s2b">المرفوعاتُ عمدٌ في التركيبِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٣</span><a href="#s3">الفاعلُ: أوّلُ المرفوعاتِ وأصلُها</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">نائبُ الفاعلِ: «المفعولُ الذي لم يُسَمَّ فاعلُه»</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">مصطلحانِ: ابنُ آجرومَ وابنُ مالكٍ</a></li>
+        <li><a href="#s4b">صناعةُ النيابةِ: من المعلومِ إلى المجهولِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">المبتدأُ وخبرُه</a><span class="dots"></span></li>
+    <li><span class="t-num">٦</span><a href="#s6">اسمُ كانَ وأخواتِها</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s6a">قاعدةُ الضمائرِ: الهاءُ والكافُ وياءُ المتكلمِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٧</span><a href="#s7">خبرُ إنَّ وأخواتِها</a><span class="dots"></span></li>
+    <li><span class="t-num">٨</span><a href="#s8">التابعُ للمرفوعِ: التوابعُ الأربعةُ</a><span class="dots"></span></li>
+    <li><span class="t-num">٩</span><a href="#s9">تطبيقاتٌ وتأمُّلاتٌ في الآياتِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s9a">الضمةُ المقدَّرةُ لمناسبةِ ياءِ المتكلمِ</a></li>
+        <li><a href="#s9b">جدولُ تلخيصِ التطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">١٠</span><a href="#s10">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١: افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+  <p>الحمدُ للهِ حمدًا كما ينبغي لجلالِه وكمالِه، والصلاةُ والسلامُ على النبيِّ المصطفى وعلى آلِه وبعدُ: فحيَّاكم اللهُ أيها الكرامُ وأيتها الكريماتُ، ومعَ درسٍ جديدٍ من دروسِ متنِ الآجروميةِ. ونشرعُ اليومَ بإذنِ اللهِ تعالى في <b>بابٍ جديدٍ من أبوابِ النحوِ العربيِّ</b>، وهو بابُ المرفوعاتِ، وتحديدًا <span class="mark">«المرفوعاتُ من الأسماءِ»</span> — وبهذا ننتقلُ من علاماتِ الإعرابِ وأبوابِ الأفعالِ إلى أوّلِ أبوابِ الأسماءِ المعربةِ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢: المتن وحقيقة المرفوعات ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتنِ وحقيقَةُ المرفوعاتِ</h2></div>
+
+  <p>قالَ ابنُ آجرومٍ رحمهُ اللهُ:</p>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«بابُ مرفوعاتِ الأسماءِ: المرفوعاتُ سبعةٌ: الفاعلُ، والمفعولُ الذي لم يُسَمَّ فاعلُهُ، والمبتدأُ، وخبرُهُ، واسمُ كانَ وأخواتِها، وخبرُ إنَّ وأخواتِها، والتابعُ للمرفوعِ، وهو أربعةُ أشياءَ: النعتُ، والعطفُ، والتوكيدُ، والبدلُ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <h3 id="s2a">خريطةُ المرفوعاتِ السبعةِ</h3>
+  <p>ذكرَ ابنُ آجرومٍ من المرفوعاتِ سبعًا: <b>الفاعلَ</b>، و<b>النائبَ عن الفاعلِ</b> — وهو المفعولُ الذي لم يُسَمَّ فاعلُهُ —، و<b>المبتدأَ وخبرَهُ</b>، ثم <b>اسمَ كانَ وأخواتِها</b>، ثم <b>خبرَ إنَّ وأخواتِها</b>، ثم <b>التابعَ للمرفوعِ</b>: نعتًا كان أو عطفًا أو توكيدًا أو بدلًا. وهذه وظائفُ البابِ كلُّها، وقد بيَّنَ الشيخُ كلَّ وظيفةٍ منها بشاهدِها وإعرابِهِ، على هذه الخريطةِ:</p>
+
+  <figure class="diagram">
+    <div class="tree-root">المرفوعاتُ السبعةُ من الأسماءِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-4">
+      <div class="node green"><div class="n-title">الفاعلُ</div><div class="n-sub">أوّلُ المرفوعاتِ وأصلُها<br><b>﴿يهدي اللهُ﴾</b> اللهُ: فاعلٌ</div></div>
+      <div class="node blue"><div class="n-title">نائبُ الفاعلِ</div><div class="n-sub">المفعولُ الذي لم يُسَمَّ فاعلُهُ<br><b>﴿زلزِلَتِ الأرضُ﴾</b> الأرضُ: نائبُ فاعلٍ</div></div>
+      <div class="node maroon"><div class="n-title">المبتدأُ</div><div class="n-sub">الاسمُ المجرَّدُ المرفوعُ<br><b>﴿اللهُ ربُّنا﴾</b> اللهُ: مبتدأٌ</div></div>
+      <div class="node goldb"><div class="n-title">خبرُ المبتدأِ</div><div class="n-sub">المُتَمِّمُ للمبتدأِ مرفوعًا<br><b>﴿اللهُ ربُّنا﴾</b> ربُّ: خبرٌ</div></div>
+    </div>
+    <div class="tree-stem" style="height:20px"></div>
+    <div class="tree-row cols-3">
+      <div class="node green"><div class="n-title">اسمُ كانَ وأخواتِها</div><div class="n-sub">مرفوعٌ وجوبًا بعدَ الناقصِ<br><b>﴿وما كانَ اللهُ﴾</b> اللهُ: اسمُ كانَ</div></div>
+      <div class="node blue"><div class="n-title">خبرُ إنَّ وأخواتِها</div><div class="n-sub">مرفوعٌ بعدَ الحرفِ الناسخِ<br><b>﴿إنَّ اللهَ غفورٌ﴾</b> غفورٌ: خبرُ إنَّ</div></div>
+      <div class="node maroon"><div class="n-title">التابعُ للمرفوعِ</div><div class="n-sub">أربعةٌ: النعتُ والعطفُ والتوكيدُ والبدلُ<br><b>«حضرَ محمدٌ العاقلُ»</b> العاقلُ: نعتٌ مرفوعٌ</div></div>
+    </div>
+    <figcaption>شكل (١): خريطةُ الوظائفِ السبعِ التي تشغلُ حالةَ الرفعِ — وسيُفصَّلُ القولُ في كلِّ واحدةٍ منها في أبوابِها المستقلةِ</figcaption>
+  </figure>
+
+  <h3 id="s2b">المرفوعاتُ عمدٌ في التركيبِ</h3>
+  <p>المرفوعاتُ — كما قرَّرَ الشيخُ في دروسِ الإعرابِ السابقةِ — هي <b>الوظائفُ النحويةُ التي تشغلُ حالةَ الرفعِ</b>، أو تأتي وتكونُ حالتُها هي الرفعَ في التراكيبِ العربيةِ. وحالةُ الرفعِ هي <span class="mark">الحالةُ الأولى والأهمُّ من حالاتِ الإعرابِ</span>.</p>
+  <div class="box note"><span class="tag">قاعدة</span><p style="margin:0">كلُّ الوظائفِ التي تشغلُ حالةَ الرفعِ تكونُ <b>عمدةً في التركيبِ</b>؛ والعمدةُ هي التي لا يمكنُ أن يستغنيَ عنها التركيبُ.</p></div>
+  <p>والفاعلُ هو أوّلُ المرفوعاتِ وهو <b>أصلُها</b>، وسيأتي تفصيلُ القولِ فيه في الدرسِ القادمِ بإذنِ اللهِ تعالى؛ إذ نبدأُ بهِ التفصيلَ لأنه أولُ المرفوعاتِ وأصلُها.</p>
+
+  <div class="box note"><span class="tag">تنبيهٌ — أين نظمُ هذا البابِ؟</span><p style="margin:0">هذا البابُ عند ابنِ آجرومَ <b>فهرسةٌ وتمهيدٌ</b> للوظائفِ السبعِ لا مسائلُ مستقلةٌ؛ ولذلك لم يُفردْ له الناظمُ محمدُ بنُ آبِّه الشنقيطيُّ أبوابًا في النظمِ، بل انتقلَ من بابِ الجوازمِ إلى <b>بابِ الفاعلِ</b> مباشرةً، ثم أعقبه ببابِ النائبِ عن الفاعلِ، وبابِ المبتدأِ والخبرِ، وبابِ كانَ وأخواتِها — وهي الأبوابُ التي فهرسَها ابنُ آجرومَ هنا. ولم يُنشدِ الشيخُ في هذا الدرسِ شيئًا من النظمِ؛ وأبياتُ هذه الأبوابِ تأتي في دروسِها المفصَّلةِ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣: الفاعل ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>الفاعلُ: أوّلُ المرفوعاتِ وأصلُها</h2></div>
+  <p>الفاعلُ هو أوّلُ المرفوعاتِ وأصلُها، وكلُّ فعلٍ لا بدَّ له من فاعلٍ. وشاهدُهُ من كتابِ اللهِ تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿يَهْدِي اللَّهُ لِنُورِهِ مَنْ يَشَاءُ﴾<span class="ref">سورةُ النورِ: ٣٥</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أينَ الفاعلُ للفعلِ في قولِهِ تعالى ﴿يَهْدِي اللَّهُ لِنُورِهِ مَنْ يَشَاءُ﴾ [النورِ: ٣٥]؟ وما إعرابُ الآيةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«يهدي»</b>: فعلٌ مضارعٌ مرفوعٌ؛ لأنه لم يسبقْهُ ناصبٌ ولا جازمٌ، وعلامةُ رفعِهِ الضمةُ المقدَّرةُ على آخرِهِ <b>للثِّقَلِ</b> — لأن آخرَهُ ياءٌ كما هو واضحٌ. و<b>«اللهُ»</b> لفظُ الجلالةِ هو الفاعلُ: هو الذي يهدي لنورِهِ من يشاءُ؛ فهو <b>فاعلٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>. و<b>«لنورِهِ»</b>: اللامُ حرفُ جرٍّ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ، و«نورِ» اسمٌ مجرورٌ باللامِ وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ، والهاءُ ضميرٌ متصلٌ مبنيٌّ على الكسرِ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤: نائب الفاعل ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>نائبُ الفاعلِ: «المفعولُ الذي لم يُسَمَّ فاعلُهُ»</h2></div>
+
+  <h3 id="s4a">مصطلحانِ: ابنُ آجرومَ وابنُ مالكٍ</h3>
+  <p>سمَّى ابنُ آجرومٍ هذه الوظيفةَ <span class="mark">«المفعولَ الذي لم يُسَمَّ فاعلُهُ»</span>، ويقصدُ بذلكَ أنه <b>نائبٌ عن الفاعلِ في الأصلِ</b>: كان مفعولًا به في الأصلِ، ثم حُوِّلَ إلى نائبٍ عن الفاعلِ؛ فسُمِّيَ بالمفعولِ المرفوعِ، أو بالمفعولِ الذي لم يُسَمَّ فاعلُهُ. وأما مصطلحُ <span class="mark">«نائبِ الفاعلِ»</span> فهو الذي ذكرَهُ الإمامُ ابنُ مالكٍ رحمهُ اللهُ، وهو الشائعُ في الإعرابِ. فالمقصودُ واحدٌ؛ غيرَ أنَّ ابنَ آجرومٍ اعتبرَ في التسميةِ الأصلَ: أنه كانَ مفعولًا به في الأصلِ.</p>
+
+  <h3 id="s4b">صناعةُ النيابةِ: من المعلومِ إلى المجهولِ</h3>
+  <div class="box example"><span class="tag">مثالٌ / تطبيقٌ</span><p style="margin:0">لو قلنا: <b>«ضربَ محمدٌ عليًّا»</b> — فهذا فعلٌ مبنيٌّ للمعلومِ: الجملةُ مبنيَّةٌ للمعلومِ، الفاعلُ مذكورٌ (محمدٌ) والمفعولُ به مذكورٌ (عليًّا). فإن أردنا أن نُحوِّلَها إلى مبنيَّةٍ للمجهولِ — أي لما لم يُسَمَّ فاعلُهُ — قلنا بدلًا من «ضربَ محمدٌ عليًّا»: <b>«ضُرِبَ عليٌّ»</b>؛ فـ<span class="mark">«عليٌّ»</span> هنا هي المفعولُ الذي لم يُسَمَّ فاعلُهُ، أو النائبُ عن الفاعلِ: حُذفَ الفاعلُ الأصليُّ (محمدٌ)، وأقيمَ المفعولُ به مقامَهُ، فرفعَ بعدَ أن كان منصوبًا.</p></div>
+
+  <p>وشاهدُهُ من كتابِ اللهِ تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا﴾<span class="ref">سورةُ الزلزلةِ: ١</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ نائبُ الفاعلِ في قولِهِ تعالى ﴿إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا﴾ [الزلزلةِ: ١]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>بعدَ الفعلِ «زلزِلَتِ» — وهو مبنيٌّ لما لم يُسَمَّ فاعلُهُ — عندَنا <b>«الأرضُ»</b>: هي النائبُ عن الفاعلِ، أو هي المفعولُ الذي لم يُسَمَّ فاعلُهُ؛ إذ الأصلُ: زلزلَ اللهُ الأرضَ، فحُذفَ الفاعلُ وأقيمَ المفعولُ به مقامَهُ مرفوعًا.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥: المبتدأ والخبر ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>المبتدأُ وخبرُهُ</h2></div>
+  <p>ومن المرفوعاتِ السبعةِ التي ذكرَها ابنُ آجرومٍ: <b>المبتدأُ والخبرُ</b>. ومثالُهُما ما استشهدَ بهِ الشيخُ من قولِهِ تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿اللَّهُ رَبُّنَا وَرَبُّكُمْ﴾<span class="ref">سورةُ الشورى: ١٥</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أعرِبْ تركيبَ المبتدأِ والخبرِ في قولِهِ تعالى ﴿اللَّهُ رَبُّنَا وَرَبُّكُمْ﴾ [الشورى: ١٥] — وقد مثَّلَ الشيخُ للوظيفتين بتركيبِ «اللهُ ربُّنا».</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«اللهُ»</b> لفظُ الجلالةِ: <b>مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>. و<b>«ربُّ»</b> من «ربُّنا»: <b>خبرٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>، و«ربُّكم» معطوفٌ عليهِ. و<b>«نا»</b> في «ربُّنا»: ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+
+  <div class="box note"><span class="tag">تذكيرٌ</span><p style="margin:0">هذا التركيبُ — مبتدأٌ ثم خبرٌ — هو أصلُ الجملةِ الاسميةِ العربيةِ، وعليه تُبنى أبوابُ المبتدأِ والخبرِ وأخواتِهما من النواسخِ الآتيةُ في الدروسِ القادمةِ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦: اسم كان وأخواتها ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>اسمُ كانَ وأخواتِها</h2></div>
+  <p>أيضًا من المرفوعاتِ السبعةِ التي ذكرَها ابنُ آجرومٍ: <b>اسمُ كانَ</b>؛ فاسمُ كانَ يكونُ مرفوعًا، وكذلك اسمُ أخواتِها كلِّها. وشاهدُهُ:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَمَا كَانَ اللَّهُ لِيُظْلِمَهُمْ﴾<span class="ref">سورةُ العنكبوتِ: ٤٠</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ المرفوعُ في ﴿وَمَا كَانَ اللَّهُ لِيُظْلِمَهُمْ﴾ [العنكبوتِ: ٤٠]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«اللهُ»</b> لفظُ الجلالةِ هو <b>اسمُ كانَ: مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>.</div>
+  </div>
+
+  <p>وأخواتُ كانَ أيضًا يكونُ لها اسمٌ مرفوعٌ، ومنها ما حُمِلَ عليها في العملِ وإن خرجَ عن حروفِها:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿يَكَادُ زَيْتُهَا يُضِيءُ﴾<span class="ref">سورةُ النورِ: ٣٥</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أعرِبْ: ﴿يَكَادُ زَيْتُهَا يُضِيءُ﴾ [النورِ: ٣٥].</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«يكادُ»</b> من <b>أفعالِ المقاربةِ</b>، وهي محمولةٌ على كانَ في العملِ كما سيأتي تفصيلُهُ بإذنِ اللهِ؛ فهي الفعلُ الناسخُ، يكونُ لها اسمٌ مرفوعٌ وخبرٌ. واسمُها هنا <b>«زيتُها»</b>: كلمةُ «زيتُ» هي <b>اسمُ يكادُ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>، والهاءُ فيها ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ. وأما خبرُها فجملةُ «يضيءُ» في محلِّ نصبٍ — والذي يعنينا هنا اسمُها المرفوعُ.</div>
+  </div>
+
+  <p>ومن أخواتِ كانَ: <b>«ليس»</b>؛ قالَ تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿لَيْسُوا سَوَاءً﴾<span class="ref">سورةُ آل عمرانَ: ١١٣</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ما اسمُ «ليس» في ﴿لَيْسُوا سَوَاءً﴾ [آل عمرانَ: ١١٣]؟ وما محلُّهُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>واوُ الجماعةِ</b> هي اسمُ ليسَ؛ ضميرٌ متصلٌ مبنيٌّ على السكونِ <b>في محلِّ رفعٍ اسمُ ليسَ</b>. و«سواءً» خبرُ ليسَ منصوبٌ — فالشاهدُ هنا في الاسمِ المرفوعِ لا في الخبرِ.</div>
+  </div>
+
+  <h3 id="s6a">قاعدةُ الضمائرِ: الهاءُ والكافُ وياءُ المتكلمِ</h3>
+  <div class="box note"><span class="tag">قاعدةٌ مكرَّرةٌ</span><p style="margin:0">قالَ الشيخُ وأعادَ وكرَّرَ: إنَّ هذه <b>الهاءَ</b> (هاءِ الضميرِ)، ومعَها <b>كافُ الخطابِ</b>، ومعَها <b>ياءُ المتكلمِ</b>: إذا اتصلتْ <b>بأيِّ اسمٍ</b> فهي <b>في محلِّ جرٍّ مضافٍ إليهِ</b>، وإذا اتصلتْ <b>بأيِّ فعلٍ</b> فهي <b>في محلِّ نصبٍ مفعولٌ بهِ</b>. وها هنا في «زيتُها» اتصلتِ الهاءُ بالاسمِ «زيتُ» فهي في محلِّ جرٍّ مضافٍ إليهِ.</p></div>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">هاءُ الضميرِ</div><div class="n-sub">«زيتُـها»: اتصلتْ بالاسمِ<br>← في محلِّ جرٍّ مضافٍ إليهِ</div></div>
+      <div class="node blue"><div class="n-title">كافُ الخطابِ</div><div class="n-sub">«ربُّـكَ»: اتصلتْ بالاسمِ<br>← في محلِّ جرٍّ مضافٍ إليهِ</div></div>
+      <div class="node maroon"><div class="n-title">ياءُ المتكلمِ</div><div class="n-sub">«صديقِـي»: اتصلتْ بالاسمِ<br>← في محلِّ جرٍّ مضافٍ إليهِ</div></div>
+    </div>
+    <div class="flow-lane">
+      <span class="chip plain">اتصلتِ الضمائرُ الثلاثةُ باسمٍ</span><span class="fa">←</span>
+      <span class="chip">في محلِّ جرٍّ مضافٍ إليهِ</span>
+      <span class="chip plain" style="margin-right:14px">اتصلتْ بفعلٍ</span><span class="fa">←</span>
+      <span class="chip gold">في محلِّ نصبٍ مفعولٌ بهِ</span>
+      <div class="lane-note">هذه القاعدةُ تطَّردُ في إعرابِ الضمائرِ المتصلةِ الثلاثةِ، وقد كرَّرها الشيخُ كثيرًا لأهميتِها.</div>
+    </div>
+    <div class="dcap">شكل (٢): مصيرُ هاءِ الضميرِ وكافِ الخطابِ وياءِ المتكلمِ بحسبِ ما اتصلتْ به</div>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧: خبر إن وأخواتها ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>خبرُ إنَّ وأخواتِها</h2></div>
+  <p>أيضًا من المرفوعاتِ: <b>خبرُ إنَّ وأخواتِها</b>؛ في قولِ اللهِ تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ﴾<span class="ref">سورةُ البقرةِ: ١٧٣</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ خبرُ «إنَّ» في ﴿إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ﴾ [البقرةِ: ١٧٣]؟ وما إعرابُهُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندَنا كلمةُ <b>«غفورٌ»</b>، و<b>«رحيمٌ»</b> أيضًا تُعتبرُ <b>خبرًا ثانيًا</b>، وكِلاهما مرفوعٌ: أي كأنَّ الآيةَ «إنَّ اللهَ غفورٌ» و«إنَّ اللهَ رحيمٌ». فـ<b>«غفورٌ» خبرُ إنَّ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>، و<b>«رحيمٌ»</b> كذلك خبرٌ ثانٍ مرفوعٌ. وأما اسمُها فهو لفظُ الجلالةِ <b>«اللهَ»</b> منصوبٌ، و<b>«إنَّ»</b> في ذاتِها حرفٌ مبنيٌّ على الفتحِ لا محلَّ لها من الإعرابِ.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨: التابع للمرفوع ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>التابعُ للمرفوعِ: التوابعُ الأربعةُ</h2></div>
+  <p>أيضًا من المرفوعاتِ التي ذكرَها ابنُ آجرومٍ: <b>التابعُ للمرفوعِ</b>. والتابعُ للمرفوعِ عندَنا أربعةٌ: <b>النعتُ، والعطفُ، والتوكيدُ، والبدلُ</b>. والأصلُ الجامعُ فيها جميعًا: <span class="mark">التابعُ يتبعُ المتبوعَ في إعرابِهِ</span>؛ فما كان مرفوعًا منعوتًا أو معطوفًا عليه أو مؤكَّدًا أو مُبدَلًا منه، فتابعُهُ مرفوعٌ كَمِثلِهِ.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">التابعُ للمرفوعِ أربعةٌ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-4">
+      <div class="node green"><div class="n-title">النعتُ</div><div class="n-sub">«حضرَ محمدٌ العاقلُ»<br>العاقلُ: نعتٌ مرفوعٌ</div></div>
+      <div class="node blue"><div class="n-title">العطفُ</div><div class="n-sub">«حضرَ محمدٌ وخالدٌ»<br>خالدٌ: معطوفٌ مرفوعٌ</div></div>
+      <div class="node maroon"><div class="n-title">التوكيدُ</div><div class="n-sub">«حضرَ محمدٌ نفسُهُ»<br>نفسُهُ: توكيدٌ مرفوعٌ</div></div>
+      <div class="node goldb"><div class="n-title">البدلُ</div><div class="n-sub">«حضرَ محمدٌ أخوكَ»<br>أخوكَ: بدلٌ مرفوعٌ بالواوِ</div></div>
+    </div>
+    <figcaption>شكل (٣): التوابعُ الأربعةُ — كلُّها تتبعُ متبوعَها المرفوعَ في الرفعِ</figcaption>
+  </figure>
+
+  <h3>مثالُ النعتِ</h3>
+  <div class="box example"><span class="tag">مثالٌ</span><p style="margin:0"><b>«حضرَ محمدٌ العاقلُ»</b>: عندَنا مرفوعٌ أوّلُ هو «محمدٌ» لأنه <b>فاعلٌ مرفوعٌ للفعلِ «حضرَ»</b>، و<b>«العاقلُ» نعتٌ لمحمدٍ مرفوعٌ</b> أيضًا؛ لأنَّ النعتَ تابعٌ للمتبوعِ فيكونُ كَمِثلِهِ في الإعرابِ: فكلمةُ «محمدٌ» مرفوعةٌ وهي المنعوتُ المتبوعُ، فتكونُ «العاقلُ» مرفوعةً كَمِثلِها لأنها النعتُ لها؛ فـ<span class="mark">«العاقلُ» نعتٌ لمحمدٍ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</span>.</p></div>
+
+  <h3>مثالُ العطفِ</h3>
+  <div class="box example"><span class="tag">مثالٌ</span><p style="margin:0"><b>«حضرَ محمدٌ وخالدٌ»</b>: «محمدٌ» هي الفاعلُ، و<b>«الواوُ»</b> حرفُ عطفٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>«خالدٌ» اسمٌ معطوفٌ على محمدٍ ومرفوعٌ</b> طبعًا لأنه تابعٌ لما قبلَهُ، <b>وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>.</p></div>
+
+  <h3>مثالُ التوكيدِ</h3>
+  <div class="box example"><span class="tag">مثالٌ</span><p style="margin:0">أما <b>التوكيدُ</b> — والمقصودُ بهِ هنا <b>التوكيدُ المعنويُّ</b> — فمثلًا لو قلنا: <b>«حضرَ محمدٌ نفسُهُ»</b>: «محمدٌ» هي الفاعلُ، و<b>«نفسُهُ» توكيدٌ معنويٌّ لها مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>، والهاءُ طبعًا فيها ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ. فهنا «نفسُهُ» كانت توكيدًا، <b>والتوكيدُ تابعٌ</b>.</p></div>
+
+  <h3>مثالُ البدلِ</h3>
+  <div class="box example"><span class="tag">مثالٌ</span><p style="margin:0"><b>البدلُ</b> من المرفوعِ يكونُ مرفوعًا أيضًا؛ لو قلنا: <b>«حضرَ محمدٌ أخوكَ»</b> أو «صديقُكَ» أو «صاحبُكَ»: «محمدٌ» هي الفاعلُ، و<b>«أخوكَ» بدلٌ من محمدٍ مرفوعٌ وعلامةُ رفعِهِ الواوُ</b> — فالعلامةُ هنا <b>فرعيةٌ</b> لأنه من الأسماءِ الخمسةِ، كما قدَّمنا سابقًا في إعرابِها وأنها تُعربُ بالحروفِ بعلامةٍ فرعيةٍ، والكافُ فيها ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ جرٍّ مضافٍ إليهِ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩: تطبيقات ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>تطبيقاتٌ وتأمُّلاتٌ في الآياتِ</h2></div>
+  <p>إذا أردنا أن نطبِّقَ على هذه المرفوعاتِ في كتابِ اللهِ تعالى، فهناكَ عددٌ منَ الآياتِ التي تشتملُ على المرفوعاتِ الاسميةِ التي ذكرناها؛ فسوقُها الشيخُ واحدًا واحدًا، وتأمَّلْنا معًا لنستخرجَ ما بها من مرفوعاتٍ على النحوِ الآتي:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿مُحَمَّدٌ رَسُولُ اللَّهِ﴾<span class="ref">سورةُ الفتحِ: ٢٩</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أينَ المرفوعاتُ في ﴿مُحَمَّدٌ رَسُولُ اللَّهِ﴾ [الفتحِ: ٢٩]؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندَنا «محمدٌ» وعندَنا «رسولُ» — ولفظُ الجلالةِ «اللهِ» مضافٌ إليهِ مجرورٌ. فـ<b>«محمدٌ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>، ويمكنُ أن نعتبرَ <b>«رسولُ» خبرًا</b> في مثلِ هذا السياقِ، وهو مرفوعٌ بالضمةِ الظاهرةِ.</div>
+  </div>
+
+  <h3 id="s9a">الضمةُ المقدَّرةُ لمناسبةِ ياءِ المتكلمِ</h3>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلنا: <b>«محمدٌ صديقي»</b> — فكلمةُ «صديقي» هنا هي الخبرُ؛ فهل هي مرفوعةٌ وعلامةُ رفعِها الكسرةُ نيابةً عن الضمةِ، أم مرفوعةٌ وعلامتُها الضمةُ الظاهرةُ، أم مرفوعةٌ وعلامةُ رفعِها الضمةُ المقدَّرةُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي <b>مرفوعةٌ وعلامةُ رفعِها الضمةُ المقدَّرةُ</b>. لماذا؟ <b>لمناسبةِ ياءِ المتكلمِ</b>: فكلمةُ «صديقي» في قولِنا «محمدٌ صديقي» <span class="mark">خبرٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ لمناسبةِ ياءِ المتكلمِ</span>، أو لاشتغالِ المحلِّ بحركةِ المناسبةِ لياءِ المتكلمِ. و«محمدٌ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَكَانَ رَبُّكَ قَدِيرًا﴾<span class="ref">سورةُ الفرقانِ: ٥٤</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِهِ تعالى ﴿وَكَانَ رَبُّكَ قَدِيرًا﴾ [الفرقانِ: ٥٤]: كلمةُ «ربُّ» هي اسمُ كانَ مرفوعٌ — فهل العلامةُ ظاهرةٌ أم مقدَّرةٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>العلامةُ <b>الضمةُ الظاهرةُ</b>؛ فـ<span class="mark">«ربُّ» اسمُ كانَ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ</span>، والكافُ ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ جرٍّ مضافٍ إليهِ، و«قديرًا» خبرُ كانَ منصوبٌ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّ هَذَا أَخِي لَهُ تِسْعٌ وَتِسْعُونَ نَعْجَةً﴾<span class="ref">سورةُ ص: ٢٣</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في ﴿إِنَّ هَذَا أَخِي﴾ [ص: ٢٣]: «إنَّ» لها اسمٌ ولها خبرٌ — فهل «أخي» مجرورةٌ فتكونَ خبرًا مجرورًا وعلامةُ جرِّها الكسرةُ الظاهرةُ، أم هي خبرُ «إنَّ» مرفوعٌ وعلامةُ رفعِها الضمةُ المقدَّرةُ، أم مجزومةٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي <b>خبرُ «إنَّ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ</b>، أيضًا <b>لمناسبةِ ياءِ المتكلمِ</b> أو لاشتغالِ المحلِّ بحركةِ المناسبةِ لياءِ المتكلمِ. وأما اسمُ «إنَّ» فهو اسمُ الإشارةِ <b>«هذا»</b>: مبنيٌّ على السكونِ <b>في محلِّ نصبٍ اسمُ إنَّ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>في قولِنا <b>«جاءَ محمدٌ المجتهدُ»</b>: «محمدٌ» فاعلٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ؛ فبمَ تُعربُ كلمةُ «المجتهدُ»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هي هنا <b>نعتٌ مرفوعٌ</b> — نعتٌ لمحمدٍ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ؛ فهي من المرفوعِ <b>بالتبعيةِ</b>، أي أنها تابعٌ للمرفوعاتِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>في قولِنا <b>«جاءَ محمدٌ وأخوهُ»</b>: نلاحظُ أنَّ هنا عطفًا بينَ كلمةِ «أخوهُ» وكلمةِ «محمدٌ» — فما إعرابُ «وأخوهُ»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«محمدٌ» هي الفاعلُ، و<b>«الواوُ»</b> حرفُ عطفٍ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، و<b>«أخوهُ» اسمٌ معطوفٌ على محمدٍ مرفوعٌ وعلامةُ رفعِهِ الواوُ</b> لأنه من الأسماءِ الخمسةِ، والهاءُ المتصلةُ بهِ ضميرٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ. فكلمةُ «أخوهُ» مرفوعةٌ أيضًا لأنها معطوفةٌ على «محمدٌ»، وعلامةُ الرفعِ الواوُ — وهي <b>علامةٌ فرعيةٌ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلتَ <b>«سعدٌ مجتهدٌ»</b> وأردتَ أن تضعَ بدلًا مناسبًا بعدَ كلمةِ «سعدٌ» هو كلمةُ «أخ» — فهل تقولُ: «سعدٌ أخوكَ مجتهدٌ»، أم «سعدٌ أخاكَ مجتهدٌ»، أم «سعدٌ أخيكَ مجتهدٌ»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>قطعًا سأقولُ: <b>«سعدٌ أخوكَ مجتهدٌ»</b>؛ وستكونُ <b>«أخوكَ» بدلًا من كلمةِ «سعدٌ» وهي مرفوعةٌ وعلامةُ رفعِها الواوُ</b>؛ لأنَّ البدلَ من المرفوعِ مرفوعٌ، لكن طبعًا العلامةُ مختلفةٌ: لأنَّ «سعدٌ» مبتدأٌ مرفوعٌ علامةُ رفعِهِ الضمةُ، أما «أخوكَ» فهي بدلٌ منها مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه من الأسماءِ الخمسةِ.</div>
+  </div>
+
+  <h3>تأمُّلاتٌ في آياتٍ من كتابِ اللهِ</h3>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَعَسَى اللَّهُ أَنْ يَأْتِيَ بِالْفَتْحِ أَوْ أَمْرٍ مِنْ عِنْدِهِ﴾<span class="ref">سورةُ المائدةِ: ٥٢</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أوّلًا قولُهُ تعالى ﴿فَعَسَى اللَّهُ أَنْ يَأْتِيَ بِالْفَتْحِ أَوْ أَمْرٍ مِنْ عِنْدِهِ﴾ [المائدةِ: ٥٢]: أينَ المرفوعُ ها هنا في هذه الآيةِ وما إعرابُهُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا سنجدُ أنَّ لفظَ الجلالةِ <b>«اللهُ»</b> هو المرفوعُ. كيف يُعربُ «اللهُ»؟ «عسى» من <b>أفعالِ الرجاءِ</b> وهي تُحمَلُ على <b>كانَ وأخواتِها في العملِ</b>: يكونُ لها <b>اسمٌ مرفوعٌ</b> ويكونُ لها <b>خبرٌ</b> بعدَ ذلك — طبعًا خبرُها سيكونُ جملةً في محلِّ نصبٍ. فالذي يَهُمُّنا هنا أنَّ المرفوعَ هو اسمُها: <span class="mark">«اللهُ» لفظُ الجلالةِ هو اسمُ «عسى» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</span>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّكَ سَمِيعُ الدُّعَاءِ﴾<span class="ref">سورةُ آل عمرانَ: ٣٨</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ثانيًا قولُهُ تعالى — وقرَّبَهُ الشيخُ بلفظِ «إنَّ اللهَ سميعُ الدعاءِ» — وأصلُهُ في كتابِ اللهِ ﴿إِنَّكَ سَمِيعُ الدُّعَاءِ﴾ [آل عمرانَ: ٣٨]: أينَ المرفوعُ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>المرفوعُ <b>«سميعُ»</b>، وهي <b>خبرُ «إنَّ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>، و«الدعاءِ» مضافٌ إليهِ مجرورٌ، واسمُ «إنَّ» في الآيةِ كافُ الخطابِ في محلِّ نصبٍ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿يَوْمَ تَأْتِي كُلُّ نَفْسٍ تُجَادِلُ عَنْ نَفْسِهَا وَتُوَفَّى كُلُّ نَفْسٍ مَا عَمِلَتْ وَهُمْ لَا يُظْلَمُونَ﴾<span class="ref">سورةُ النحلِ: ١١١</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ثالثًا قولُهُ تعالى ﴿يَوْمَ تَأْتِي كُلُّ نَفْسٍ تُجَادِلُ عَنْ نَفْسِهَا وَتُوَفَّى كُلُّ نَفْسٍ مَا عَمِلَتْ وَهُمْ لَا يُظْلَمُونَ﴾ [النحلِ: ١١١]: الأسماءُ الظاهرةُ المرفوعةُ عندَنا «كلُّ نفسٍ» تكرَّرتْ مرتينِ في الآيةِ الكريمةِ — ﴿تأتي كلُّ نفسٍ﴾ ثم قالَ ﴿وتُوَفَّى كلُّ نفسٍ﴾؛ فما الفرقُ بينَ وظيفتِها في الموضعينِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«كلُّ» الأولى مرفوعةٌ و«كلُّ» الثانيةُ مرفوعةٌ، لكن وظيفتُها النحويةُ مختلفةٌ</b>:<br>
+    • في ﴿يَوْمَ تَأْتِي كُلُّ نَفْسٍ﴾: «تأتي» فعلٌ مضارعٌ <b>مبنيٌّ للمعلومِ</b>، ومن ثَمَّ يكونُ المرفوعُ بعدَهُ <b>فاعلًا</b>: فكلمةُ «كلُّ» هنا <b>فاعلٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>، و«نفسٍ» مضافٌ إليهِ.<br>
+    • وفي ﴿وَتُوَفَّى كُلُّ نَفْسٍ مَا عَمِلَتْ﴾: الفعلُ «تُوَفَّى» <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b> — فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ على الألفِ للتعذُّرِ — ومن ثَمَّ لن يكونَ المرفوعُ بعدَهُ فاعلًا، وإنما سيكونُ <b>مفعولًا لم يُسَمَّ فاعلُهُ</b> كما قالَ ابنُ آجرومٍ، أو ما نسميهِ في الإعرابِ الشائعِ <b>نائبَ فاعلٍ</b>؛ فهو نائبٌ عن الفاعلِ: كلمةُ «كلُّ» هنا — بعدَ الفعلِ «تُوَفَّى» — <span class="mark">نائبٌ عن الفاعلِ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</span>، و«نفسٍ» مضافٌ إليهِ مجرورٌ وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَمَا كَانَ الْمُؤْمِنُونَ لِيَنْفِرُوا كَافَّةً﴾<span class="ref">سورةُ التوبةِ: ١٢٢</span></p>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>رابعًا قولُهُ تعالى ﴿وَمَا كَانَ الْمُؤْمِنُونَ لِيَنْفِرُوا كَافَّةً﴾ [التوبةِ: ١٢٢]: أينَ المرفوعُ هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>المرفوعُ الظاهرُ هنا هو <b>«المؤمنونَ»</b>: <b>اسمُ كانَ مرفوعٌ وعلامةُ رفعِهِ الواوُ</b> لأنه <b>جمعُ مذكرٍ سالمٌ</b>.</div>
+  </div>
+
+  <h3 id="s9b">جدولُ تلخيصِ التطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الشاهدُ</th><th>الكلمةُ المرفوعةُ</th><th>الوظيفةُ</th><th>علامةُ الرفعِ</th></tr></thead>
+      <tbody>
+        <tr><td>﴿يهدي اللهُ لنورِهِ من يشاءُ﴾ [النورِ: ٣٥]</td><td>اللهُ</td><td>فاعلٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿إذا زلزِلَتِ الأرضُ زلزالَها﴾ [الزلزلةِ: ١]</td><td>الأرضُ</td><td>نائبُ فاعلٍ (مفعولٌ لم يُسَمَّ فاعلُهُ)</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿اللهُ ربُّنا وربُّكمْ﴾ [الشورى: ١٥]</td><td>اللهُ / ربُّ</td><td>مبتدأٌ / خبرٌ</td><td>الضمةُ الظاهرةُ فيهما</td></tr>
+        <tr><td>﴿وما كانَ اللهُ ليظلمَهم﴾ [العنكبوتِ: ٤٠]</td><td>اللهُ</td><td>اسمُ كانَ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿يكادُ زيتُها يضيءُ﴾ [النورِ: ٣٥]</td><td>زيتُ</td><td>اسمُ يكادُ (من أفعالِ المقاربةِ المحمولةِ على كانَ)</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿ليسوا سواءً﴾ [آل عمرانَ: ١١٣]</td><td>واوُ الجماعةِ</td><td>اسمُ ليسَ</td><td>في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿إنَّ اللهَ غفورٌ رحيمٌ﴾ [البقرةِ: ١٧٣]</td><td>غفورٌ / رحيمٌ</td><td>خبرُ إنَّ وخبرٌ ثانٍ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿محمدٌ رسولُ اللهِ﴾ [الفتحِ: ٢٩]</td><td>محمدٌ / رسولُ</td><td>مبتدأٌ / خبرٌ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>«محمدٌ صديقي»</td><td>صديقي</td><td>خبرٌ</td><td>الضمةُ المقدَّرةُ لمناسبةِ ياءِ المتكلمِ</td></tr>
+        <tr><td>﴿وكانَ ربُّكَ قديرًا﴾ [الفرقانِ: ٥٤]</td><td>ربُّ</td><td>اسمُ كانَ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿إنَّ هذا أخي﴾ [ص: ٢٣]</td><td>أخي</td><td>خبرُ إنَّ</td><td>الضمةُ المقدَّرةُ لمناسبةِ ياءِ المتكلمِ</td></tr>
+        <tr><td>«جاءَ محمدٌ المجتهدُ»</td><td>المجتهدُ</td><td>نعتٌ (مرفوعٌ بالتبعيةِ)</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>«جاءَ محمدٌ وأخوهُ»</td><td>أخوهُ</td><td>معطوفٌ</td><td>الواوُ (فرعيةٌ — من الأسماءِ الخمسةِ)</td></tr>
+        <tr><td>«حضرَ محمدٌ نفسُهُ»</td><td>نفسُهُ</td><td>توكيدٌ معنويٌّ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>«سعدٌ أخوكَ مجتهدٌ»</td><td>أخوكَ</td><td>بدلٌ</td><td>الواوُ (فرعيةٌ — من الأسماءِ الخمسةِ)</td></tr>
+        <tr><td>﴿فعسى اللهُ أن يأتيَ بالفتحِ﴾ [المائدةِ: ٥٢]</td><td>اللهُ</td><td>اسمُ عسى (من أفعالِ الرجاءِ المحمولةِ على كانَ)</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿إنَّكَ سميعُ الدعاءِ﴾ [آل عمرانَ: ٣٨]</td><td>سميعُ</td><td>خبرُ إنَّ</td><td>الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿يومَ تأتي كلُّ نفسٍ… وتُوَفَّى كلُّ نفسٍ﴾ [النحلِ: ١١١]</td><td>كلُّ (مرتينِ)</td><td>الأولى: فاعلٌ / الثانيةُ: نائبُ فاعلٍ</td><td>الضمةُ الظاهرةُ (والفعلُ «تُوفَّى» بضمةٍ مقدَّرةٍ للتعذُّرِ على الألفِ)</td></tr>
+        <tr><td>﴿وما كانَ المؤمنونَ لينفروا كافةً﴾ [التوبةِ: ١٢٢]</td><td>المؤمنونَ</td><td>اسمُ كانَ</td><td>الواوُ (جمعُ مذكرٍ سالمٌ)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ١٠: الخلاصة ==================== -->
+<section id="s10">
+  <div class="sec-head"><span class="sec-num">١٠</span><h2>خلاصةُ الدرس</h2></div>
+  <ul class="summary-points">
+    <li>المرفوعاتُ من الأسماءِ <b>سبعةٌ</b>: الفاعلُ، والمفعولُ الذي لم يُسَمَّ فاعلُهُ (نائبُ الفاعلِ)، والمبتدأُ، وخبرُهُ، واسمُ كانَ وأخواتِها، وخبرُ إنَّ وأخواتِها، والتابعُ للمرفوعِ (النعتُ والعطفُ والتوكيدُ والبدلُ).</li>
+    <li>المرفوعاتُ هي <b>الوظائفُ التي تشغلُ حالةَ الرفعِ</b> — وهي أولى حالاتِ الإعرابِ وأهمُّها — وكلُّها <b>عمدةٌ في التركيبِ</b> لا يستغني عنها.</li>
+    <li>الفاعلُ <b>أولُ المرفوعاتِ وأصلُها</b>، وكلُّ فعلٍ لا بدَّ له من فاعلٍ.</li>
+    <li>اصطلاحا نائبِ الفاعلِ: ابنُ آجرومٍ: <b>«المفعولُ الذي لم يُسَمَّ فاعلُهُ»</b>، وابنُ مالكٍ: <b>«النائبُ عن الفاعلِ»</b> — والتحويلُ: «ضربَ محمدٌ عليًّا» ← «ضُرِبَ عليٌّ».</li>
+    <li>الهاءُ والكافُ وياءُ المتكلمِ: مع الاسمِ <b>في محلِّ جرٍّ مضافٍ إليهِ</b>، ومع الفعلِ <b>في محلِّ نصبٍ مفعولٌ بهِ</b>.</li>
+    <li>مع ياءِ المتكلمِ تُقدَّرُ الضمةُ على ما قبلَها («صديقي»، «أخي») <b>لمناسبةِ الياءِ</b>، والضمةُ على المضارعِ المعتلِّ الآخرِ بالألفِ («تُوَفَّى») مقدَّرةٌ <b>للتعذُّرِ</b>، وعلى المعتلِّ بالياءِ («يهدي») <b>للثِّقَلِ</b>.</li>
+    <li>التابعُ للمرفوعِ مرفوعٌ: نعتًا أو عطفًا أو توكيدًا أو بدلًا، وقد تختلفُ علامةُ رفعِهِ عن متبوعِهِ (كـ«أخوكَ» بدلًا من «سعدٌ»: المتبوعُ بالضمةِ والتابعُ بالواوِ لأنه من الأسماءِ الخمسةِ).</li>
+    <li>أفعالُ المقاربةِ (يكادُ) والرجاءِ (عسى) <b>محمولةٌ على كانَ</b> في العملِ: ترفعُ الاسمَ ويكونُ خبرُها جملةً في محلِّ نصبٍ.</li>
+  </ul>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>المرفوعُ</th><th>حاصلُهُ</th><th>الشاهدُ الأبرزُ</th></tr></thead>
+      <tbody>
+        <tr><td>١</td><td>الفاعلُ</td><td>أولُ المرفوعاتِ وأصلُها، ولكلِّ فعلٍ فاعلٌ</td><td>﴿يهدي اللهُ لنورِهِ من يشاءُ﴾ [النورِ: ٣٥]</td></tr>
+        <tr><td>٢</td><td>نائبُ الفاعلِ</td><td>مفعولٌ أقيمَ مقامَ الفاعلِ المحذوفِ</td><td>﴿إذا زلزِلَتِ الأرضُ زلزالَها﴾ [الزلزلةِ: ١]</td></tr>
+        <tr><td>٣</td><td>المبتدأُ</td><td>اسمٌ مجرَّدٌ مرفوعٌ تبتني عليه الجملةُ الاسميةُ</td><td>﴿اللهُ ربُّنا وربُّكمْ﴾ [الشورى: ١٥]</td></tr>
+        <tr><td>٤</td><td>خبرُ المبتدأِ</td><td>المتمِّمُ للحكمِ مرفوعًا</td><td>﴿محمدٌ رسولُ اللهِ﴾ [الفتحِ: ٢٩]</td></tr>
+        <tr><td>٥</td><td>اسمُ كانَ وأخواتِها</td><td>مرفوعٌ بعدَ الفعلِ الناقصِ</td><td>﴿وما كانَ المؤمنونَ لينفروا كافةً﴾ [التوبةِ: ١٢٢]</td></tr>
+        <tr><td>٦</td><td>خبرُ إنَّ وأخواتِها</td><td>مرفوعٌ بعدَ الحرفِ الناسخِ</td><td>﴿إنَّ اللهَ غفورٌ رحيمٌ﴾ [البقرةِ: ١٧٣]</td></tr>
+        <tr><td>٧</td><td>التابعُ للمرفوعِ</td><td>أربعةٌ: النعتُ والعطفُ والتوكيدُ والبدلُ</td><td>«حضرَ محمدٌ العاقلُ» — «وأخوهُ» — «نفسُهُ» — «أخوكَ»</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box note"><span class="tag">تمَّ الدرسُ</span><p style="margin:0">بهذا نكونُ قد أنهينا الحديثَ عن المرفوعاتِ من الأسماءِ <b>إجمالًا</b>، وسنفصِّلُ القولَ فيها واحدًا تلوَ الآخرِ إن شاءَ اللهُ في الدروسِ القادمةِ، ونبدؤُها <b>بالفاعلِ</b> لأنه أولُ المرفوعاتِ وأصلُ المرفوعاتِ. والدرسُ القادمُ المتوقعُ: <b>«بابُ الفاعلِ»</b>.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ ١١ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=1lcaFyJ_KEQ" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

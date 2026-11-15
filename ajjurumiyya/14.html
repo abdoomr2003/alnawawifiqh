@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المبتدأُ والخبر — الدرس ١٤ من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">المبتدأُ والخبرُ</h1>
+    <div class="cover-sub">الدرس ١٤: الجملةُ الاسميةُ — العاملُ المعنويُّ، والإسنادُ، والصريحُ والمؤوَّلُ والمضمرُ، وأنواعُ الخبرِ وروابطُه، مع تطبيقاتٍ قرآنيةٍ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=KGTHodAxUfM" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتنِ ونظمُ الشنقيطيِّ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s2a">نصُّ ابنِ آجرومَ</a></li>
+        <li><a href="#s2b">أبياتُ الناظمِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٣</span><a href="#s3">تعريفُ المبتدأِ والعاملُ فيه</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">تعريفُ الخبرِ وفكرةُ الإسنادِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">قيدٌ مهمٌّ: الخبرُ تتمُّ به الفائدةُ</a></li>
+        <li><a href="#s4b">إعرابُ أمثلةِ المتنِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">المبتدأُ صريحٌ ومؤوَّلٌ بالصريحِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s5a">تنبيهٌ منهجيٌّ في إعرابِ المصدرِ المؤوَّلِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٦</span><a href="#s6">المبتدأُ ظاهرٌ ومضمرٌ: الضمائرُ الاثنا عشرَ</a><span class="dots"></span></li>
+    <li><span class="t-num">٧</span><a href="#s7">أنواعُ الخبرِ: مفردٌ وغيرُ مفردٍ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s7a">معنى «المفردِ» في بابِ الخبرِ</a></li>
+        <li><a href="#s7b">الخبرُ جملةٌ اسميةٌ</a></li>
+        <li><a href="#s7c">الخبرُ جملةٌ فعليةٌ</a></li>
+        <li><a href="#s7d">الخبرُ شبهُ جملةٍ: الجارُّ والمجرورُ والظرفُ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٨</span><a href="#s8">تطبيقاتٌ على البابِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s8a">شرطُ الرابطِ في جملةِ الخبرِ</a></li>
+        <li><a href="#s8b">تقديمُ الخبرِ شبهِ الجملةِ على المبتدأِ</a></li>
+        <li><a href="#s8c">جدولُ تلخيصِ التطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٩</span><a href="#s9">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١: افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+  <p>الحمدُ للهِ، والصلاةُ والسلامُ على رسولِهِ ومصطفاه، وبعدُ: فحيَّاكم اللهُ أيها الكرامُ وأيتها الكريماتُ، معَ درسٍ جديدٍ من دروسِ متنِ الآجروميةِ، وهو <b>«المبتدأُ والخبرُ»</b> أو <b>«الجملةُ الاسميةُ»</b>.</p>
+  <p>والمبتدأُ والخبرُ ذكرَهما ابنُ آجرومٍ <b>تبعًا للمرفوعاتِ</b>: فبعدما <b>أجملَ</b> المرفوعاتِ في بابِ مرفوعاتِ الأسماءِ <b>فصَّلَ</b>، ومنها المبتدأُ والخبرُ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢: المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتنِ ونظمُ الشنقيطيِّ</h2></div>
+
+  <h3 id="s2a">نصُّ ابنِ آجرومَ</h3>
+  <p>قالَ ابنُ آجرومٍ رحمهُ اللهُ:</p>
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«بابُ المبتدأِ والخبرِ: المبتدأُ هو الاسمُ المرفوعُ العاري عن العواملِ اللفظيةِ. والخبرُ هو الاسمُ المرفوعُ المسندُ إليه، نحوُ قولِكَ: زيدٌ قائمٌ، والزيدانِ قائمانِ، والزيدونَ قائمونَ.<br>
+    والمبتدأُ قسمانِ: ظاهرٌ ومضمرٌ؛ فالظاهرُ ما تقدَّمَ ذكرُهُ، والمضمرُ اثنا عشرَ، وهي: أنا، ونحنُ، وأنتَ، وأنتِ، وأنتُما، وأنتُمْ، وأنتُنَّ، وهو، وهي، وهما، وهم، وهُنَّ، نحوُ قولِكَ: أنا قائمٌ، ونحنُ قائمونَ، وما أشبهَ ذلكَ.<br>
+    والخبرُ قسمانِ: مفردٌ وغيرُ مفردٍ؛ فالمفردُ نحوُ قولِكَ: زيدٌ قائمٌ، وغيرُ المفردِ أربعةُ أشياءَ: الجارُّ والمجرورُ، والظرفُ، والفعلُ معَ فاعلِهِ، والمبتدأُ معَ خبرِهِ، نحوُ قولِكَ: زيدٌ في الدارِ، وزيدٌ عندَكَ، وزيدٌ قامَ أبوهُ، وزيدٌ جاريتُهُ ذاهبةٌ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <h3 id="s2b">أبياتُ الناظمِ</h3>
+  <p>وقالَ الشنقيطيُّ — الناظمُ لمتنِ الآجروميةِ — في بابِ المبتدأِ والخبرِ:</p>
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">المبتدا اسمٌ مِنْ عواملَ سَلِمْ … لفظيةٍ وهْوَ برفعٍ قدْ وُسِمْ</div>
+      <div class="ln">وظاهرًا يأتي ويأتي مُضْمَرا … كالقولُ يُسْتَقْبَحُ وهْوَ مُفْتَرى</div>
+      <div class="ln">والخبرُ الاسمُ الذي قدْ أُسْنِدا … إليهِ وارتفاعَهُ الْزَمْ أبدا</div>
+      <div class="ln">ومفردًا يأتي وغيرَ مفردِ … فأوّلٌ نحوُ سعيدٌ مُهْتَدِ</div>
+      <div class="ln">والثانِ قُلْ أربعةٌ مجرورُ … نحوُ العقوبةُ لِمَنْ يجورُ</div>
+      <div class="ln">والظرفُ نحوُ الخيرُ عندَ أهلِنا … والفعلُ معْ فاعلِهِ كقولِنا</div>
+      <div class="ln">زيدٌ أتى والمبتدا معَ الخبرْ … كقولِهم زيدٌ أبوهُ ذو بَطَرْ</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <p>وابنُ آجرومٍ والناظمُ يتكلَّمانِ على <b>المبتدأِ أولًا وتعريفِهِ، ثم الخبرِ وتعريفِهِ</b>، ثم على قسمةِ المبتدأِ، ثم على أنواعِ الخبرِ؛ وأمثلةُ الناظمِ تقابلُ أمثلةَ المتنِ على هذا النحوِ:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>المسألةُ</th><th>مثالُ ابنِ آجرومَ</th><th>مثالُ الناظمِ</th></tr></thead>
+      <tbody>
+        <tr><td>المبتدأُ الظاهرُ</td><td>زيدٌ قائمٌ</td><td>القولُ يُستقبَحُ</td></tr>
+        <tr><td>المبتدأُ المضمرُ</td><td>أنا قائمٌ — نحنُ قائمونَ</td><td>وهو مُفترى</td></tr>
+        <tr><td>الخبرُ المفردُ</td><td>زيدٌ قائمٌ</td><td>سعيدٌ مهتدٍ</td></tr>
+        <tr><td>الخبرُ جارٌّ ومجرورٌ</td><td>زيدٌ في الدارِ</td><td>العقوبةُ لمَنْ يجورُ</td></tr>
+        <tr><td>الخبرُ ظرفٌ</td><td>زيدٌ عندَكَ</td><td>الخيرُ عندَ أهلِنا</td></tr>
+        <tr><td>الخبرُ فعلٌ معَ فاعلِهِ</td><td>زيدٌ قامَ أبوهُ</td><td>زيدٌ أتى</td></tr>
+        <tr><td>الخبرُ مبتدأٌ معَ خبرِهِ</td><td>زيدٌ جاريتُهُ ذاهبةٌ</td><td>زيدٌ أبوهُ ذو بَطَرْ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣: تعريف المبتدأ ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>تعريفُ المبتدأِ والعاملُ فيه</h2></div>
+  <p>بالنسبةِ للمبتدأِ ذكرَ ابنُ آجرومٍ أنه <span class="mark">«الاسمُ المرفوعُ العاري عن العواملِ اللفظيةِ»</span>، وكذا قولُ الناظمِ: <span class="mark">«المبتدا اسمٌ من عواملَ سلِمْ لفظيةٍ وهو برفعٍ قد وُسِمْ»</span>؛ يقصدُ أنه <b>مرفوعٌ</b>، وقد <b>سلِمَ من العواملِ اللفظيةِ</b> — أو عَرِيَ عنها.</p>
+  <p>ومعنى ذلك: أنَّ <b>كلَّ وظيفةٍ نحويةٍ لا بدَّ أن يكونَ لها عاملٌ</b>؛ والمبتدأُ وظيفةٌ نحويةٌ، فما العاملُ الذي أثَّرَ فيه الإعرابَ — الرفعَ —؟ ليس عاملًا لفظيًّا؛ <b>العاملُ فيه هو الابتداءُ</b>.</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">الفاعلُ</div><div class="n-sub">العاملُ فيه <b>لفظيٌّ</b>:<br>الفعلُ هو الذي رفعَهُ</div></div>
+      <div class="node green"><div class="n-title">نائبُ الفاعلِ</div><div class="n-sub">العاملُ فيه <b>لفظيٌّ</b>:<br>الفعلُ هو الذي رفعَهُ</div></div>
+      <div class="node green"><div class="n-title">الخبرُ</div><div class="n-sub">العاملُ فيه <b>لفظيٌّ</b>:<br>هو المرفوعُ بالمبتدأِ</div></div>
+      <div class="node maroon"><div class="n-title">المبتدأُ</div><div class="n-sub">العاملُ فيه <b>معنويٌّ</b>:<br>«الابتداءُ» — كونُهُ في ابتداءِ الكلامِ</div></div>
+    </div>
+    <div class="dcap">شكل (١): العاملُ اللفظيُّ في الفاعلِ ونائبِهِ والخبرِ، والعاملُ المعنويُّ في المبتدأِ</div>
+  </figure>
+
+  <div class="box note"><span class="tag">قاعدةٌ</span><p style="margin:0">الفاعلُ العاملُ فيه لفظيٌّ لأنه الفعلُ الذي رفعَهُ، وكذلك نائبُ الفاعلِ: الفعلُ هو الذي رفعَهُ، والخبرُ هو المرفوعُ بالمبتدأِ؛ فكلُّ هذه عواملُ لفظيةٌ. <b>أما المبتدأُ ذاتُهُ فليس مرفوعًا بعاملٍ لفظيٍّ</b>، وإنما الذي رفعَهُ هو <b>الابتداءُ</b>، أي كونُهُ في ابتداءِ الكلامِ؛ والابتداءُ <b>ليس عاملًا لفظيًّا، هو عاملٌ معنويٌّ</b> ليس له وجودٌ في اللفظِ كالفعلِ والمبتدأِ وما إلى ذلك.</p></div>
+  <p>والمبتدأُ <b>اسمٌ</b>، وهذا الاسمُ قد يكونُ <b>صريحًا</b> وقد يكونُ <b>مؤوَّلًا بالصريحِ</b> — كما سيأتي —؛ وذكرَ ابنُ آجرومٍ الاسمَ الصريحَ، فعندَنا مثلًا: «زيدٌ قائمٌ»: «زيدٌ» هي المبتدأُ، و«قائمٌ» خبرُها.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤: تعريف الخبر ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>تعريفُ الخبرِ وفكرةُ الإسنادِ</h2></div>
+  <p>قالَ ابنُ آجرومٍ في الخبرِ: <span class="mark">«هو الاسمُ المرفوعُ المسندُ إليه»</span>، يعني: المسندُ إلى المبتدأِ؛ فالمبتدأُ مسندٌ إليه، والخبرُ هو <b>المسندُ</b>: أنا أسندتُ الخبرَ إلى المبتدأِ. فحين أقولُ: <b>«محمدٌ مجتهدٌ»</b>، فأنا أسندتُ الاجتهادَ إلى محمدٍ؛ فـ«محمدٌ» هو المسندُ إليه.</p>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">الجملةُ الاسميةُ</span><span class="fa">←</span>
+      <span class="chip">المسندُ إليه: المبتدأُ</span>
+      <span class="chip blue">المسندُ: الخبرُ</span>
+      <div class="lane-note">«زيدٌ قائمٌ»: أسندتُ القيامَ إلى زيدٍ؛ فـ«زيدٌ» مبتدأٌ مسندٌ إليه، و«قائمٌ» خبرٌ مسندٌ.</div>
+    </div>
+    <div class="flow-lane">
+      <span class="chip plain">الجملةُ الفعليةُ</span><span class="fa">←</span>
+      <span class="chip">المسندُ إليه: الفاعلُ</span>
+      <span class="chip blue">المسندُ: الفعلُ</span>
+      <div class="lane-note">المسندُ إليه عادةً ما يكونُ هو <b>الذاتَ</b>: المبتدأَ أو الفاعلَ؛ لأنني أُسنِدُ شيئًا إلى شيءٍ.</div>
+    </div>
+    <div class="dcap">شكل (٢): ركنا الإسنادِ في الجملتينِ الاسميةِ والفعليةِ</div>
+  </figure>
+
+  <h3 id="s4a">قيدٌ مهمٌّ: الخبرُ تتمُّ به الفائدةُ</h3>
+  <div class="box note"><span class="tag">قيدٌ لم يذكرْه ابنُ آجرومَ</span><p style="margin:0">في تعريفِ الخبرِ <b>قيدٌ مهمٌّ لم يذكرْهُ ابنُ آجرومٍ</b>، وهو: أنَّ الخبرَ هو <b>الجزءُ الذي تتمُّ به الفائدةُ</b>؛ يعني يكتملُ به معنى الجملةِ، أو تفيدُ به الجملةُ معنًى تامًّا كاملًا نقفُ عليه. فلو قلتَ: «زيدٌ قائمٌ» وسكتَّ — هذا معنًى كاملٌ؛ أنت أفدتَني فائدةً تامةً.</p></div>
+
+  <h3 id="s4b">إعرابُ أمثلةِ المتنِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>المثالُ</th><th>المبتدأُ</th><th>الخبرُ</th><th>نوعُ العلامةِ</th></tr></thead>
+      <tbody>
+        <tr><td>زيدٌ قائمٌ</td><td>«زيدٌ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</td><td>«قائمٌ» خبرٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</td><td>أصليةٌ</td></tr>
+        <tr><td>الزيدانِ قائمانِ</td><td>«الزيدانِ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الألفُ لأنه مثنًّى</td><td>«قائمانِ» خبرُها مرفوعٌ وعلامةُ رفعِهِ الألفُ أيضًا لأنه مثنًّى</td><td>فرعيةٌ</td></tr>
+        <tr><td>الزيدونَ قائمونَ</td><td>«الزيدونَ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه جمعُ مذكرٍ سالمٌ</td><td>«قائمونَ» خبرُها مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه أيضًا جمعُ مذكرٍ سالمٌ</td><td>فرعيةٌ — لأنَّ الكلمتينِ جمعُ مذكرٍ سالمٌ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>هذا حين يكونُ المبتدأُ <b>اسمًا صريحًا</b>، والخبرُ يأتي بعدَهُ متمِّمًا لمعناه.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥: صريح ومؤول ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>المبتدأُ صريحٌ ومؤوَّلٌ بالصريحِ</h2></div>
+  <p>قد يكونُ المبتدأُ <b>اسمًا مؤوَّلًا بالصريحِ</b>، أو مصدرًا مؤوَّلًا بالصريحِ، مثلُ قولِهِ تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَأَنْ تَصُومُوا خَيْرٌ لَكُمْ إِنْ كُنْتُمْ تَعْلَمُونَ﴾<span class="ref">سورةُ البقرةِ: ١٨٤</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أينَ المبتدأُ في ﴿وَأَنْ تَصُومُوا خَيْرٌ لَكُمْ﴾؟ وكيف نُعربُهُ بالتفصيلِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>تقديرُ الكلامِ: <span class="mark">«صومُكم خيرٌ لكم»</span>. ونُعربُ بالتفصيلِ أولًا لتفصيلِ الجزئياتِ المفردةِ:<br>
+    • <b>«أنْ»</b> حرفٌ مصدريٌّ ناصبٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ.<br>
+    • <b>«تصوموا»</b> فعلٌ مضارعٌ منصوبٌ بـ«أنْ» وعلامةُ نصبِهِ <b>حذفُ النونِ لأنه من الأمثلةِ الخمسةِ</b>، اتصلتْ به واوُ الجماعةِ، وواوُ الجماعةِ فيه ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ.<br>
+    • و<b>«أنْ» وما دخلتْ عليه في تأويلِ مصدرٍ — «صومُكم» — مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ للحكايةِ</b>.<br>
+    • والخبرُ هو <b>«خيرٌ»</b>: التقديرُ «صومُكم خيرٌ لكم»، فـ«خيرٌ» هي الخبرُ، <b>مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>.</div>
+  </div>
+
+  <h3 id="s5a">تنبيهٌ منهجيٌّ في إعرابِ المصدرِ المؤوَّلِ</h3>
+  <div class="box note"><span class="tag">تنبيهٌ من الشيخِ</span><p style="margin:0">هنا لا يُعربُ أحدٌ فيقولُ: «أنْ تصوموا: مصدرٌ مؤوَّلٌ في محلِّ رفعٍ مبتدأٌ»؛ فالمصدرُ المؤوَّلُ عندَ الشيخِ <b>لا يكونُ في محلٍّ</b>، لأنه مؤوَّلٌ <b>بكلمةٍ مفردةٍ</b> هي «صومُكم»، و«صومُ» مفردةٌ فليس لها محلٌّ، هي <b>معربةٌ</b>؛ ولكن نقولُ في المصدرِ المؤوَّلِ: إنَّ العلامةَ <b>مقدَّرةٌ للحكايةِ</b>. فمرةً أخرى: <span class="mark">«أنْ» وما دخلتْ عليه في تأويلِ مصدرٍ مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ للحكايةِ</span> — وهي الطريقةُ نفسُها التي أعربَ بها الشيخُ الفاعلَ المؤوَّلَ في الدرسِ الثانيَ عشرَ.</p></div>
+
+  <p>أيضًا من المبتدأِ الذي أتى مصدرًا مؤوَّلًا قولُهُ تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَمِنْ آيَاتِهِ أَنَّكَ تَرَى الْأَرْضَ خَاشِعَةً فَإِذَا أَنْزَلْنَا عَلَيْهَا الْمَاءَ اهْتَزَّتْ وَرَبَتْ﴾<span class="ref">سورةُ فُصِّلَتْ: ٣٩</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أينَ المبتدأُ والخبرُ في ﴿وَمِنْ آيَاتِهِ أَنَّكَ تَرَى الْأَرْضَ خَاشِعَةً﴾؟ وكيف نُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>التقديرُ: <span class="mark">«ومن آياتِهِ رؤيتُكَ الأرضَ خاشعةً»</span>؛ إذن «أنكَ ترى الأرضَ» هنا يُؤوَّلُ إلى مصدرٍ يكونُ هو <b>المبتدأَ، وهو مؤخَّرٌ</b>؛ لأنَّ الخبرَ هو المقدَّمُ: «من آياتِهِ» شبهُ جملةٍ <b>خبرٌ مقدَّمٌ</b>. والإعرابُ:<br>
+    • <b>«الواوُ»</b> بحسبِ ما قبلَها: حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ؛ و<b>«مِنْ»</b> حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ؛ و<b>«آياتِ»</b> اسمٌ مجرورٌ بـ«مِنْ» وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ، والهاءُ في «آياتِهِ» ضميرٌ متصلٌ مبنيٌّ على الكسرِ في محلِّ جرٍّ مضافٍ إليهِ؛ و<b>شبهُ الجملةِ «من آياتِهِ» هنا في محلِّ رفعٍ خبرٌ مقدَّمٌ</b>.<br>
+    • ثم قالَ: «أنكَ ترى الأرضَ خاشعةً»: <b>«أنَّ»</b> معروفةٌ، من أخواتِ «إنَّ» — وستأتي إن شاءَ اللهُ في الدروسِ القادمةِ —، هي حرفٌ مبنيٌّ على الفتحِ لا محلَّ له من الإعرابِ، وهي ناسخةٌ ناصبةٌ مؤكِّدةٌ تفيدُ معنى التأكيدِ أو التوكيدِ؛ و<b>الكافُ</b> بعدَها ضميرٌ متصلٌ بها مبنيٌّ على الفتحِ في محلِّ نصبٍ اسمُ «أنَّ».<br>
+    • <b>«ترى»</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ على الألفِ للتعذُّرِ، والفاعلُ ضميرٌ مستترٌ تقديرُهُ «أنتَ»؛ و<b>«الأرضَ»</b> مفعولٌ بهِ للفعلِ «ترى» — لأنَّ الرؤيةَ هنا <b>رؤيةٌ بصريةٌ حسيةٌ</b>، أي رؤيةٌ بالعينِ المجرَّدةِ، فطالما أنه يُرى بالعينِ بهذه الحاسةِ فالفعلُ هنا <b>ينصبُ مفعولًا واحدًا</b> —؛ و<b>«خاشعةً»</b> حالٌ منصوبةٌ وعلامةُ نصبِها الفتحةُ الظاهرةُ على آخرِها. وجملةُ «ترى الأرضَ» في محلِّ رفعٍ خبرُ «أنَّ».<br>
+    • ثم أقولُ: <b>«أنَّ» وما دخلتْ عليه من اسمِها وخبرِها في تأويلِ مصدرٍ مبتدأٌ مؤخَّرٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ للحكايةِ</b>؛ وأصلُ التركيبِ في التقديرِ: «رؤيتُكَ الأرضَ خاشعةً من آياتِهِ»، يعني «من آياتِهِ» الخبرُ، لكنه قُدِّمَ وأُخِّرَ المبتدأُ وأُتيَ به مصدرًا مؤوَّلًا.</div>
+  </div>
+
+  <figure class="diagram">
+    <div class="tree-root">المبتدأُ اسمٌ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node green"><div class="n-title">اسمٌ صريحٌ</div><div class="n-sub">«زيدٌ قائمٌ» — «الزيدانِ قائمانِ» — «الزيدونَ قائمونَ»</div></div>
+      <div class="node blue"><div class="n-title">مؤوَّلٌ بالصريحِ</div><div class="n-sub">حرفٌ مصدريٌّ وما بعدَهُ<br>﴿وأنْ تصوموا خيرٌ لكم﴾<br>﴿ومن آياتِهِ أنكَ ترى الأرضَ﴾ (مبتدأٌ مؤخَّرٌ)</div></div>
+    </div>
+    <div class="flow-lane">
+      <span class="chip plain">أنْ تصوموا</span><span class="fa">←</span>
+      <span class="chip blue">صومُكم</span><span class="fa">←</span>
+      <span class="chip">مبتدأٌ</span>
+      <span class="chip plain" style="margin-right:14px">أنكَ ترى الأرضَ</span><span class="fa">←</span>
+      <span class="chip blue">رؤيتُكَ الأرضَ</span><span class="fa">←</span>
+      <span class="chip">مبتدأٌ مؤخَّرٌ</span>
+      <div class="lane-note">ويُقالُ في كلٍّ منهما: في تأويلِ مصدرٍ مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ للحكايةِ.</div>
+    </div>
+    <figcaption>شكل (٣): المبتدأُ الصريحُ والمؤوَّلُ، وسبكُ المصدرِ في الشاهدينِ</figcaption>
+  </figure>
+  <p>إذن المبتدأُ قد يكونُ <b>اسمًا صريحًا</b> وقد يكونُ <b>اسمًا مؤوَّلًا بالصريحِ</b> كما ذكرْنا.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦: ظاهر ومضمر ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>المبتدأُ ظاهرٌ ومضمرٌ: الضمائرُ الاثنا عشرَ</h2></div>
+  <p>قد يكونُ المبتدأُ <b>ظاهرًا</b> — كما بيَّنّا في بعضِ الأمثلةِ: «زيدٌ قائمٌ، والزيدانِ قائمانِ، والزيدونَ قائمونَ»: هذه كلُّها المبتدأُ فيها أسماءٌ ظاهرةٌ —، وقد يكونُ المبتدأُ <b>ضميرًا مضمرًا</b>؛ والمضمراتُ التي عدَّدَها ابنُ آجرومٍ وتكونُ مبتدأً هي <b>اثنا عشرَ ضميرًا</b>:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الضميرُ</th><th>لِمَن يكونُ</th><th>مثالُ المطابقةِ في الخبرِ</th></tr></thead>
+      <tbody>
+        <tr><td>أنا</td><td>للمتكلمِ المفردِ، المذكرِ أو المؤنثِ</td><td>أنا قائمٌ</td></tr>
+        <tr><td>نحنُ</td><td>للمتكلمِ المثنى والجمعِ بنوعيه، المذكرِ والمؤنثِ</td><td>نحنُ قائمونَ</td></tr>
+        <tr><td>أنتَ</td><td>للمخاطبِ المفردِ المذكرِ</td><td>أنتَ قائمٌ</td></tr>
+        <tr><td>أنتِ</td><td>للمخاطبةِ المفردةِ المؤنثةِ</td><td>أنتِ قائمةٌ</td></tr>
+        <tr><td>أنتُما</td><td>للمثنى المخاطبِ، مذكرًا كانَ أو مؤنثًا</td><td>أنتُما قائمانِ — أنتُما قائمتانِ</td></tr>
+        <tr><td>أنتُمْ</td><td>لجمعِ الذكورِ المخاطبينَ</td><td>أنتُمْ قائمونَ</td></tr>
+        <tr><td>أنتُنَّ</td><td>لجمعِ الإناثِ المخاطباتِ</td><td>أنتُنَّ قائماتٌ</td></tr>
+        <tr><td>هو</td><td>للمفردِ الغائبِ المذكرِ</td><td>هو قائمٌ</td></tr>
+        <tr><td>هي</td><td>للمفردةِ الغائبةِ المؤنثةِ</td><td>هي قائمةٌ</td></tr>
+        <tr><td>هما</td><td>للمثنى الغائبِ، المذكرِ والمؤنثِ</td><td>هما قائمانِ — هما قائمتانِ</td></tr>
+        <tr><td>هم</td><td>للجمعِ المذكرِ الغائبِ</td><td>هم قائمونَ</td></tr>
+        <tr><td>هُنَّ</td><td>للجمعِ المؤنثِ الغائبِ</td><td>هُنَّ قائماتٌ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>فبدأَ بضمائرِ <b>المتكلمِ</b> (أنا، نحنُ)، ثم انتقلَ إلى ضمائرِ <b>المخاطبِ</b> (أنتَ، أنتِ، أنتُما، أنتُمْ، أنتُنَّ)، ثم انتقلَ بعدَ ذلك إلى ضميرِ <b>الغائبِ</b> وأنواعِهِ المتعددةِ (هو، هي، هما، هم، هُنَّ).</p>
+  <div class="box note"><span class="tag">ملاحظةٌ</span><p style="margin:0">نلاحظُ أنَّ هذه الضمائرَ كلَّها <b>ضمائرُ منفصلةٌ وليستْ متصلةً</b>؛ لأنها تقعُ مبتدأً — بخلافِ ضمائرِ الفاعلِ في الدرسِ السابقِ فإنها متصلةٌ بفعلِها.</p></div>
+
+  <div class="box example"><span class="tag">إعرابُ مثالَيِ المتنِ</span><p style="margin:0">ضربَ ابنُ آجرومٍ أمثلةً على ذلك بقولِهِ:<br>
+  • <b>«أنا قائمٌ»</b>: «أنا» ضميرٌ منفصلٌ مبنيٌّ على السكونِ — والضمائرُ كلُّها مبنيةٌ — <b>في محلِّ رفعٍ مبتدأٌ</b>، و«قائمٌ» خبرُها <b>مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>.<br>
+  • <b>«نحنُ قائمونَ»</b>: «نحنُ» ضميرٌ منفصلٌ مبنيٌّ على الضمِّ <b>في محلِّ رفعٍ مبتدأٌ</b>، و«قائمونَ» هي خبرُها <b>مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه جمعُ مذكرٍ سالمٌ</b>.</p></div>
+  <p>ويجوزُ أن أضعَ مكانَها أيَّ ضميرٍ آخرَ — كما في الجدولِ —: «أنتَ قائمٌ، أنتِ قائمةٌ» — نلاحظُ هنا <b>المطابقةَ</b> —، «أنتُما قائمانِ، وأنتُما قائمتانِ» — هنا أيضًا مثنًّى —، «وأنتُمْ قائمونَ، وأنتُنَّ قائماتٌ، وهو قائمٌ، وهي قائمةٌ، وهما قائمانِ، وهما قائمتانِ، وهم قائمونَ، وهُنَّ قائماتٌ»؛ معَ الأخذِ في الاعتبارِ <b>علامةَ الإعرابِ</b>: قد تكونُ <b>أصليةً</b> هي الضمةُ، وقد تكونُ <b>فرعيةً</b>: في المثنى الألفُ، وفي جمعِ المذكرِ السالمِ الواوُ.</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدُ النظمِ</span>ذكرَ الشنقيطيُّ في النظمِ مثالًا يمكنُ أن نتوقفَ عنده: «القولُ يُستقبَحُ وهو مُفترى»؛ فما وجهُ الاستشهادِ به؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>ذكرَ هذا المثالَ ليدلَّ على <b>نوعَيِ المبتدأِ</b>: قد يكونُ ظاهرًا وقد يكونُ مضمرًا؛ «القولُ يُستقبَحُ»: <b>«القولُ» مبتدأٌ ظاهرٌ</b>، وجملةُ «يُستقبَحُ» جملةٌ فعليةٌ في محلِّ رفعٍ خبرُ المبتدأِ. ثم قالَ: «وهو مُفترى»: هنا دلَّ به على أن يكونَ المبتدأُ <b>ضميرًا منفصلًا</b>، وهو هنا كلمةُ <b>«هو»</b>.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧: أنواع الخبر ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>أنواعُ الخبرِ: مفردٌ وغيرُ مفردٍ</h2></div>
+  <p>ننتقلُ بعدَ ذلك إلى الكلامِ على أنواعِ الخبرِ: هل الخبرُ يأتي شيئًا واحدًا؟ لا طبعًا، ليس الخبرُ شيئًا واحدًا، وإنما له <b>قسمانِ كبيرانِ</b>: قد يكونُ الخبرُ <b>مفردًا</b>، وقد يكونُ <b>غيرَ مفردٍ</b>؛ وغيرُ المفردِ له أنواعٌ متعددةٌ: قد يكونُ <b>جملةً اسميةً</b> أو <b>جملةً فعليةً</b> أو <b>شبهَ جملةٍ</b>، وشبهُ الجملةِ على نوعينِ: <b>جارٌّ ومجرورٌ</b>، أو <b>ظرفٌ</b> معَ المضافِ إليه بعدَهُ.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">أنواعُ الخبرِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-5">
+      <div class="node green"><div class="n-title">مفردٌ</div><div class="n-sub">ما ليس جملةً ولا شبهَ جملةٍ<br>«سعيدٌ مهتدٍ»<br>«زيدٌ قائمٌ»</div></div>
+      <div class="node blue"><div class="n-title">جارٌّ ومجرورٌ</div><div class="n-sub">(شبهُ جملةٍ)<br>«العقوبةُ لمَنْ يجورُ»<br>«زيدٌ في الدارِ»</div></div>
+      <div class="node blue"><div class="n-title">ظرفٌ</div><div class="n-sub">(شبهُ جملةٍ)<br>«الخيرُ عندَ أهلِنا»<br>«زيدٌ عندَكَ»</div></div>
+      <div class="node maroon"><div class="n-title">جملةٌ فعليةٌ</div><div class="n-sub">الفعلُ معَ فاعلِهِ<br>«زيدٌ أتى»<br>«زيدٌ قامَ أبوهُ»</div></div>
+      <div class="node maroon"><div class="n-title">جملةٌ اسميةٌ</div><div class="n-sub">المبتدأُ معَ خبرِهِ<br>«زيدٌ أبوهُ ذو بَطَرْ»<br>«زيدٌ جاريتُهُ ذاهبةٌ»</div></div>
+    </div>
+    <figcaption>شكل (٤): الخبرُ مفردٌ، وغيرُ مفردٍ أربعةُ أشياءَ — بأمثلةِ الناظمِ ثم ابنِ آجرومَ</figcaption>
+  </figure>
+
+  <h3 id="s7a">معنى «المفردِ» في بابِ الخبرِ</h3>
+  <p>ذكرَ الناظمُ الشنقيطيُّ مثالًا على الخبرِ المفردِ: <b>«سعيدٌ مهتدٍ»</b>.</p>
+  <div class="box note"><span class="tag">تنبيهٌ مهمٌّ</span><p style="margin:0">كلمةُ «مفردٍ» هنا يجبُ أن أُنبِّهَ إلى أنَّ معناها: <b>ما ليس جملةً ولا شبهَ جملةٍ</b>، وليس معناها العدديَّ الذي في مقابلِ المثنى والجمعِ؛ فقد يكونُ الخبرُ <b>مثنًّى وفي الوقتِ ذاتِهِ هو مفردٌ</b> لأنه ليس جملةً. فلو قلتُ مثلًا: <b>«الزيدانِ قائمانِ»</b> — ما نوعُ الخبرِ ها هنا؟ هو <b>خبرٌ مفردٌ</b>، يعني ليس جملةً، وإنما هو من حيثُ العددُ مثنًّى، لكنه أيضًا مفردٌ لأنه ليس جملةً.</p></div>
+
+  <h3 id="s7b">الخبرُ جملةٌ اسميةٌ</h3>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالٌ</span>لو قلتُ: <b>«محمدٌ أخوهُ ناجحٌ»</b> — فما نوعُ الخبرِ؟ وما إعرابُهُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«محمدٌ» مبتدأٌ، و<b>«أخوهُ» مبتدأٌ ثانٍ</b> مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه من الأسماءِ الخمسةِ، والهاءُ فيها ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ، و<b>«ناجحٌ» خبرٌ للمبتدأِ الثاني</b> «أخوهُ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و<b>الجملةُ كلُّها من المبتدأِ الثاني وخبرِهِ في محلِّ رفعٍ خبرٌ للمبتدأِ الأوّلِ</b>؛ فهنا الخبرُ نوعُهُ <b>جملةٌ اسميةٌ</b>.</div>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ الناظمِ</span>«زيدٌ أبوهُ ذو بَطَرْ» — أعربْهُ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«زيدٌ» مبتدأٌ، و«أبوهُ ذو بَطَرٍ» جملةٌ أخرى: <b>«أبوهُ» مبتدأٌ ثانٍ</b> مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه من الأسماءِ الخمسةِ، والهاءُ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ، و<b>«ذو» خبرٌ للمبتدأِ الثاني</b> «أبوهُ» مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه من الأسماءِ الخمسةِ أيضًا، و<b>«بطرٍ»</b> مضافٌ إليهِ مجرورٌ وعلامةُ جرِّهِ الكسرةُ — لكنَّ الكسرةَ هنا قُدِّرتْ، فقالَ «ذو بطرْ» <b>بتسكينِ الراءِ للقافيةِ</b> لأنَّ هذا نظمٌ. فالخبرُ ها هنا «أبوهُ ذو بطرٍ» نوعُهُ <b>جملةٌ اسميةٌ</b>.</div>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ المتنِ</span>«زيدٌ جاريتُهُ ذاهبةٌ» — أعربْهُ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«جاريتُهُ ذاهبةٌ» هذه جملةٌ مستقلةٌ تكونُ هي الخبرَ، أو في محلِّ رفعٍ خبرٌ للمبتدأِ «زيدٌ»: «زيدٌ» <b>مبتدأٌ</b> مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و<b>«جاريةُ» مبتدأٌ ثانٍ</b> مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، والهاءُ فيها ضميرٌ متصلٌ بها مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ، و<b>«ذاهبةٌ» خبرٌ للمبتدأِ الثاني</b> «جاريةُ» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و<b>الجملةُ الاسميةُ من المبتدأِ الثاني وخبرِهِ في محلِّ رفعٍ خبرٌ للمبتدأِ الأوّلِ «زيدٌ»</b>.</div>
+  </div>
+
+  <h3 id="s7c">الخبرُ جملةٌ فعليةٌ</h3>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ الناظمِ</span>«القولُ يُستقبَحُ» — ما نوعُ الخبرِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«يُستقبَحُ» هذا فعلٌ مضارعٌ <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b>، ونائبُ الفاعلِ بعدَهُ ضميرٌ مستترٌ تقديرُهُ «هو» يعودُ على «القولُ»، و<b>الجملةُ الفعليةُ «يُستقبَحُ» في محلِّ رفعٍ خبرُ «القولُ»</b>؛ فالخبرُ هنا نوعُهُ ليس مفردًا وإنما هو <b>جملةٌ فعليةٌ</b>.</div>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ الناظمِ</span>«زيدٌ أتى» — أعربْهُ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«زيدٌ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و<b>«أتى» فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ للتعذُّرِ على الألفِ</b>، والفاعلُ ضميرٌ مستترٌ تقديرُهُ «هو» يعودُ على «زيدٌ»، و<b>الجملةُ الفعليةُ من الفعلِ الماضي وفاعلِهِ في محلِّ رفعٍ خبرُ المبتدأِ «زيدٌ»</b>؛ فالخبرُ هنا جملةُ «أتى»: جملةٌ فعليةٌ.</div>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ المتنِ</span>ذكرَ ابنُ آجرومٍ مثالًا على الخبرِ الجملةِ الفعليةِ: «زيدٌ قامَ أبوهُ» — أعربْهُ بالتفصيلِ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«زيدٌ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«قامَ» فعلٌ ماضٍ مبنيٌّ على الفتحِ، و<b>«أبوهُ» هو الفاعلُ</b>: فاعلٌ لـ«قامَ» مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه من الأسماءِ الخمسةِ، والهاءُ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ جرٍّ مضافٍ إليهِ، و<b>الجملةُ الفعليةُ من الفعلِ وفاعلِهِ «قامَ أبوهُ» في محلِّ رفعٍ خبرٌ للمبتدأِ «زيدٌ»</b>.</div>
+  </div>
+
+  <h3 id="s7d">الخبرُ شبهُ جملةٍ: الجارُّ والمجرورُ والظرفُ</h3>
+  <p>النوعُ الآخرُ من الخبرِ — بعدَ المفردِ والجملةِ — <b>شبهُ الجملةِ</b>؛ وشبهُ الجملةِ والجملةُ كلاهما «غيرُ مفردٍ»، أي منضويانِ تحتَ النوعِ الذي نسمِّيه غيرَ المفردِ. والخبرُ شبهُ الجملةِ قد يكونُ <b>جارًّا ومجرورًا</b>، وقد يكونُ <b>ظرفًا</b>.</p>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ الناظمِ</span>«العقوبةُ لمَنْ يجورُ» — أعربْهُ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«العقوبةُ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ. و«لمَنْ يجورُ»: <b>اللامُ</b> حرفُ جرٍّ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ، و<b>«مَنْ»</b> اسمٌ موصولٌ عامٌّ بمعنى «الذي» يدلُّ على العاقلِ، مبنيٌّ على السكونِ في محلِّ جرٍّ اسمٌ مجرورٌ باللامِ، و<b>«يجورُ»</b> فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، والفاعلُ ضميرٌ مستترٌ تقديرُهُ «هو» يعودُ على اسمِ الموصولِ «مَنْ»، و<b>جملةُ «يجورُ» من الفعلِ والفاعلِ صلةُ الموصولِ لا محلَّ لها من الإعرابِ</b>. وهنا <b>شبهُ الجملةِ «لمَنْ يجورُ» — الجارُّ والمجرورُ — في محلِّ رفعٍ خبرُ المبتدأِ «العقوبةُ»</b>.</div>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ المتنِ</span>«زيدٌ في الدارِ» — أعربْهُ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«زيدٌ» مبتدأٌ، و«في» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و«الدارِ» اسمٌ مجرورٌ بـ«في» وعلامةُ جرِّهِ الكسرةُ الظاهرةُ، و<b>شبهُ الجملةِ «في الدارِ» في محلِّ رفعٍ خبرٌ للمبتدأِ «زيدٌ»</b>.</div>
+  </div>
+  <p>والنمطُ الثاني من الخبرِ شبهِ الجملةِ هو أن يكونَ <b>ظرفًا</b>:</p>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ الناظمِ</span>«الخيرُ عندَ أهلِنا» — أعربْهُ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«الخيرُ» مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و<b>«عندَ» ظرفُ مكانٍ منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و«أهلِ» اسمٌ مضافٌ إليهِ مجرورٌ وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ، و«نا» في «أهلِنا» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ أيضًا، و<b>شبهُ الجملةِ «عندَ أهلِنا» من الظرفِ والمضافِ إليه بعدَهُ في محلِّ رفعٍ خبرٌ للمبتدأِ «الخيرُ»</b>.</div>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">مثالُ المتنِ</span>«زيدٌ عندَكَ» — أعربْهُ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«زيدٌ» مبتدأٌ، و<b>«عندَ» ظرفُ مكانٍ منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ، والكافُ بعدَهُ ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ جرٍّ مضافٍ إليهِ، و<b>شبهُ الجملةِ «عندَكَ» في محلِّ رفعٍ خبرُ المبتدأِ «زيدٌ»</b>.</div>
+  </div>
+  <p>هذا هو شرحُ البابِ بالتفصيلِ، ونأتي إلى التطبيقاتِ على هذا البابِ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨: تطبيقات ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>تطبيقاتٌ على البابِ</h2></div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿مُحَمَّدٌ رَسُولُ اللَّهِ وَالَّذِينَ مَعَهُ أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَمَاءُ بَيْنَهُمْ﴾<span class="ref">سورةُ الفتحِ: ٢٩</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في ﴿مُحَمَّدٌ رَسُولُ اللَّهِ﴾: ما نوعُ المبتدأِ في الجملةِ؛ هل هو ظاهرٌ أم مضمرٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«محمدٌ» هي المبتدأُ، و«رسولُ» هي الخبرُ، و«اللهِ» لفظُ الجلالةِ مضافٌ إليهِ؛ والمبتدأُ <b>اسمٌ ظاهرٌ</b>: «محمدٌ» اسمٌ ظاهرٌ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلتُ: <b>«أنتَ تكتبُ الدرسَ»</b> — أينَ المبتدأُ هنا وما نوعُهُ؛ هل هو ظاهرٌ أم مضمرٌ؟ وما نوعُ الخبرِ؛ هل هو مفردٌ أم غيرُ مفردٍ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>المبتدأُ هو <b>«أنتَ»</b>: ضميرٌ منفصلٌ مبنيٌّ على الفتحِ في محلِّ رفعٍ مبتدأٌ؛ فهو هنا <b>مضمرٌ</b> أو ضميرٌ. والخبرُ <b>غيرُ مفردٍ</b>، وهو تحديدًا <b>جملةٌ فعليةٌ</b> «تكتبُ الدرسَ»: فـ«تكتبُ» فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، والفاعلُ <b>ضميرٌ مستترٌ تقديرُهُ «أنتَ»</b> يعودُ على المبتدأِ السابقِ، و«الدرسَ» مفعولٌ بهِ منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و<b>جملةُ «تكتبُ الدرسَ» في محلِّ رفعٍ خبرٌ للمبتدأِ «أنتَ»</b>؛ وهو هنا — كما رأينا — جملةٌ فعليةٌ.</div>
+  </div>
+
+  <h3 id="s8a">شرطُ الرابطِ في جملةِ الخبرِ</h3>
+  <div class="box note"><span class="tag">شرطٌ في جملةِ الخبرِ</span><p style="margin:0">عودُ الضميرِ المستترِ في «تكتبُ» على «أنتَ» هو <b>شرطٌ في جملةِ الخبرِ</b>: الخبرُ إذا كانَ <b>جملةً فعليةً أو اسميةً فلا بدَّ أن يكونَ فيها رابطٌ يعودُ على المبتدأِ</b>؛ و<b>أشهرُ الروابطِ أن يكونَ ضميرًا</b>، سواءٌ كانَ بارزًا أو مستترًا، ولكن هناك روابطُ أخرى <b>كاسمِ الإشارةِ</b>، و<b>إعادةِ المبتدأِ بلفظِهِ ومعناه</b>، كما سيأتي في التطبيقاتِ إن شاءَ اللهُ.</p></div>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">الضميرُ — وهو الأشهرُ</div><div class="n-sub">بارزًا أو مستترًا<br>«أنتَ تكتبُ الدرسَ» (المستترُ «أنتَ»)<br>«زيدٌ قامَ أبوهُ» (الهاءُ)</div></div>
+      <div class="node blue"><div class="n-title">اسمُ الإشارةِ</div><div class="n-sub">يعودُ على المبتدأِ الأوّلِ<br>﴿ولباسُ التقوى <b>ذلكَ</b> خيرٌ﴾</div></div>
+      <div class="node maroon"><div class="n-title">إعادةُ المبتدأِ بلفظِهِ ومعناه</div><div class="n-sub">تكرارُ لفظِ المبتدأِ في جملةِ الخبرِ<br>﴿القارعةُ ۝ ما <b>القارعةُ</b>﴾</div></div>
+    </div>
+    <div class="dcap">شكل (٥): الروابطُ التي تربطُ جملةَ الخبرِ بالمبتدأِ</div>
+  </figure>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: أنا أقولُ «أنا <b>أخوكَ</b>» أم «أنا <b>أخاكَ</b>» أم «أنا <b>أخيكَ</b>»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا <b>«أنا أخوكَ»</b>؛ لأنَّ «أخوكَ» هي الخبرُ، وهي مرفوعةٌ وعلامةُ رفعِها الواوُ لأنها من الأسماءِ الخمسةِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span><b>«محمدٌ أخي»</b> — أينَ الخبرُ هنا وما إعرابُهُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الخبرُ هو <b>«أخي»</b>، وهو <span class="mark">مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ لاشتغالِ المحلِّ بحركةِ المناسبةِ لياءِ المتكلمِ</span>، وياءُ المتكلمِ ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ما الفرقُ في نوعِ الخبرِ بينَ قولِنا: «الفتياتُ مهذّباتٌ»، و«زيدٌ أبوهُ عالمٌ»، و«محمدٌ أمامَ المنزلِ»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>• «الفتياتُ مهذّباتٌ»: «مهذّباتٌ» هي الخبرُ، وهو <b>خبرٌ مفردٌ</b>.<br>
+    • «زيدٌ أبوهُ عالمٌ»: الخبرُ هنا «أبوهُ عالمٌ»، وهو <b>جملةٌ اسميةٌ — غيرُ مفردٍ</b>.<br>
+    • «محمدٌ أمامَ المنزلِ»: الخبرُ هنا «أمامَ المنزلِ»، ليس مفردًا وإنما هو <b>شبهُ جملةٍ</b>.</div>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>وكما في قولِنا أيضًا: <b>«العصفورُ فوقَ الشجرةِ»</b> — ما نوعُ الخبرِ هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نوعُ الخبرِ هنا <b>شبهُ جملةٍ</b>: «فوقَ» ظرفُ مكانٍ منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ، و«الشجرةِ» مضافٌ إليهِ، و«العصفورُ» قبلَها هي المبتدأُ، و<b>شبهُ الجملةِ «فوقَ الشجرةِ» في محلِّ رفعٍ خبرُ المبتدأِ «العصفورُ»</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿اللَّهُ يَبْسُطُ الرِّزْقَ لِمَنْ يَشَاءُ وَيَقْدِرُ﴾<span class="ref">سورةُ الرعدِ: ٢٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ما نوعُ الخبرِ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>جملةٌ فعليةٌ</b> بالطبعِ: «اللهُ» لفظُ الجلالةِ هو المبتدأُ، و«يبسطُ» فعلٌ مضارعٌ، والفاعلُ ضميرٌ مستترٌ تقديرُهُ «هو» يعودُ على لفظِ الجلالةِ — وهو الرابطُ —، و«الرزقَ» مفعولٌ بهِ منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و<b>جملةُ «يبسطُ الرزقَ» في محلِّ رفعٍ خبرُ المبتدأِ «اللهُ»</b>، وهي جملةٌ فعليةٌ كما رأينا.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَأَنْ تَعْفُوا أَقْرَبُ لِلتَّقْوَى﴾<span class="ref">سورةُ البقرةِ: ٢٣٧</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ المبتدأُ هنا؟ وكيف يُعربُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا المبتدأُ أتى <b>مصدرًا مؤوَّلًا بالصريحِ</b>، والتقديرُ: <span class="mark">«عفوُكم أقربُ للتقوى»</span>: فـ<b>«أنْ»</b> حرفٌ مصدريٌّ ناصبٌ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<b>«تعفوا»</b> فعلٌ مضارعٌ منصوبٌ بـ«أنْ» وعلامةُ نصبِهِ <b>حذفُ النونِ لأنه من الأفعالِ الخمسةِ أو الأمثلةِ الخمسةِ</b>، والواوُ فيه — واوُ الجماعةِ — ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ فاعلٌ، و<b>«أنْ» وما دخلتْ عليه في تأويلِ مصدرٍ تقديرُهُ «عفوُكم»، وهو مبتدأٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ للحكايةِ</b>، و<b>«أقربُ» هي الخبرُ</b> مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَلِبَاسُ التَّقْوَى ذَلِكَ خَيْرٌ﴾<span class="ref">سورةُ الأعرافِ: ٢٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿وَلِبَاسُ التَّقْوَى ذَلِكَ خَيْرٌ﴾، وبيِّنِ الرابطَ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هذه أيضًا جملةٌ اسميةٌ: <b>«لباسُ» مبتدأٌ</b> مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«التقوى» مضافٌ إليهِ مجرورٌ وعلامةُ جرِّهِ الكسرةُ المقدَّرةُ للتعذُّرِ على الألفِ، و<b>«ذلكَ» مبتدأٌ ثانٍ</b>: اسمُ إشارةٍ مبنيٌّ على الفتحِ في محلِّ رفعٍ مبتدأٌ ثانٍ، و<b>«خيرٌ» خبرٌ للمبتدأِ الثاني «ذلكَ»</b> مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و<b>الجملةُ الاسميةُ من المبتدأِ الثاني وخبرِهِ في محلِّ رفعٍ خبرُ المبتدأِ الأوّلِ</b>. ونلاحظُ هنا أنَّ <b>الرابطَ</b> الذي يربطُ جملةَ الخبرِ بالمبتدأِ هو <b>اسمُ الإشارةِ</b>؛ إذ هو عائدٌ على كلمةِ «لباسُ» التي هي مبتدأٌ أوّلُ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿الْقَارِعَةُ ۝ مَا الْقَارِعَةُ﴾<span class="ref">سورةُ القارعةِ: ١–٢</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿الْقَارِعَةُ ۝ مَا الْقَارِعَةُ﴾، وأينَ الرابطُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نقولُ: <b>«القارعةُ» مبتدأٌ</b> مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و<b>«ما» اسمُ استفهامٍ مبنيٌّ على السكونِ في محلِّ رفعٍ مبتدأٌ ثانٍ</b>، و<b>«القارعةُ» الثانيةُ خبرٌ للمبتدأِ الثاني «ما»</b> مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و<b>الجملةُ الاسميةُ من المبتدأِ الثاني وخبرِهِ «ما القارعةُ» في محلِّ رفعٍ خبرُ المبتدأِ الأوّلِ «القارعةُ» الأولى</b>.<br>
+    فالخبرُ هنا جملةٌ، ونحن اتفقْنا على أنَّ الخبرَ إذا كانَ جملةً فعليةً أو اسميةً فلا بدَّ أن يكونَ في جملةِ الخبرِ رابطٌ يعودُ على المبتدأِ أو يربطُ جملةَ الخبرِ بالمبتدأِ؛ فأينَ الرابطُ هنا؟ الخبرُ جملةٌ اسميةٌ، و<b>الرابطُ هو إعادةُ المبتدأِ بلفظِهِ ومعناه</b>؛ يعني أعدْنا كلمةَ «القارعةُ» مرةً أخرى في جملةِ الخبرِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَالرَّكْبُ أَسْفَلَ مِنْكُمْ﴾<span class="ref">سورةُ الأنفالِ: ٤٢</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿وَالرَّكْبُ أَسْفَلَ مِنْكُمْ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«الركبُ» <b>مبتدأٌ</b>، و<b>«أسفلَ» ظرفُ مكانٍ منصوبٌ</b> وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و«منكم» جارٌّ ومجرورٌ: «مِنْ» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و«كم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ اسمٌ مجرورٌ. و<b>شبهُ الجملةِ هنا هو الظرفُ، وهو في محلِّ رفعٍ خبرٌ للمبتدأِ «الركبُ»</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ﴾<span class="ref">سورةُ الفاتحةِ: ٢</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿الْحَمْدُ لِلَّهِ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا جملةٌ اسميةٌ: <b>«الحمدُ» مبتدأٌ</b> مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«للهِ»: اللامُ حرفُ جرٍّ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ، و«اللهِ» لفظُ الجلالةِ اسمٌ مجرورٌ باللامِ وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ، و<b>شبهُ الجملةِ من الجارِّ والمجرورِ في محلِّ رفعٍ خبرُ المبتدأِ «الحمدُ»</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَهُوَ الْغَفُورُ الْوَدُودُ ۝ ذُو الْعَرْشِ الْمَجِيدُ ۝ فَعَّالٌ لِمَا يُرِيدُ﴾<span class="ref">سورةُ البروجِ: ١٤–١٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>ما نوعُ المبتدأِ هنا؟ وكم خبرًا له؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نلاحظُ هنا أنَّ <b>المبتدأَ ضميرٌ منفصلٌ دالٌّ على الغائبِ</b>: «هو» مبنيٌّ على الفتحِ في محلِّ رفعٍ مبتدأٌ، ثم أتتِ <b>الأخبارُ متعددةً</b>، يعني أخبارًا كثيرةً:<br>
+    • <b>«الغفورُ»</b> خبرٌ أوّلُ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ.<br>
+    • <b>«الودودُ»</b> خبرٌ ثانٍ.<br>
+    • <b>«ذو العرشِ»</b>: «ذو» خبرٌ ثالثٌ مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه من الأسماءِ الخمسةِ، و«العرشِ» مضافٌ إليهِ مجرورٌ وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ.<br>
+    • <b>«المجيدُ»</b> هي أيضًا خبرٌ رابعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ.<br>
+    • <b>«فعّالٌ»</b> خبرٌ خامسٌ لكلمةِ «هو» مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ.</div>
+  </div>
+
+  <h3 id="s8b">تقديمُ الخبرِ شبهِ الجملةِ على المبتدأِ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿خَتَمَ اللَّهُ عَلَى قُلُوبِهِمْ وَعَلَى سَمْعِهِمْ وَعَلَى أَبْصَارِهِمْ غِشَاوَةٌ﴾<span class="ref">سورةُ البقرةِ: ٧</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>أعربْ ﴿وَعَلَى أَبْصَارِهِمْ غِشَاوَةٌ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هذه جملةٌ اسميةٌ حدثَ فيها <b>تقديمٌ وتأخيرٌ</b>: قُدِّمَ الخبرُ شبهُ الجملةِ على المبتدأِ «غشاوةٌ»؛ فكانَ التقديرُ: «غشاوةٌ على أبصارِهم». فـ<b>«غشاوةٌ» مبتدأٌ ولكنه أُخِّرَ</b>، مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ، و«على أبصارِهم»: «على» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و«أبصارِ» اسمٌ مجرورٌ بـ«على» وعلامةُ جرِّهِ الكسرةُ الظاهرةُ على آخرِهِ، والضميرُ «هم» في «أبصارِهم» ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ، و<b>شبهُ الجملةِ من الجارِّ والمجرورِ في محلِّ رفعٍ خبرٌ مقدَّمٌ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ أَمْ عَلَى قُلُوبٍ أَقْفَالُهَا﴾<span class="ref">سورةُ محمدٍ: ٢٤</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>ومثلُها أيضًا ﴿أَمْ عَلَى قُلُوبٍ أَقْفَالُهَا﴾ — أعربْها.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«على قلوبٍ» جارٌّ ومجرورٌ، <b>شبهُ جملةٍ خبرٌ مقدَّمٌ</b>، و<b>«أقفالُ» هي المبتدأُ المؤخَّرُ</b>، وهي مرفوعةٌ طبعًا وعلامةُ رفعِها الضمةُ الظاهرةُ على آخرِها، والهاءُ فيها — «أقفالُها» — ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَرَبُّكَ يَخْلُقُ مَا يَشَاءُ وَيَخْتَارُ﴾<span class="ref">سورةُ القصصِ: ٦٨</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ما نوعُ الخبرِ في هذه الجملةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«ربُّكَ» مبتدأٌ، لكن ما نوعُ الخبرِ؟ الخبرُ هنا <b>جملةٌ فعليةٌ</b>، هو جملةُ «يخلقُ ما يشاءُ ويختارُ»: «يخلقُ ما يشاءُ» جملةٌ فعليةٌ فعلُها مضارعٌ، <b>في محلِّ رفعٍ خبرُ المبتدأِ «ربُّكَ»</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿اللَّهُ يَتَوَفَّى الْأَنْفُسَ حِينَ مَوْتِهَا﴾<span class="ref">سورةُ الزمرِ: ٤٢</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>كذلك في قولِهِ تعالى ﴿اللَّهُ يَتَوَفَّى الْأَنْفُسَ﴾ — أعربْها.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«اللهُ» لفظُ الجلالةِ <b>مبتدأٌ</b>، و«يتوفّى» فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ الضمةُ المقدَّرةُ على الألفِ للتعذُّرِ، والفاعلُ ضميرٌ مستترٌ تقديرُهُ «هو» يعودُ على لفظِ الجلالةِ، و«الأنفسَ» مفعولٌ بهِ للفعلِ «يتوفّى» منصوبٌ وعلامةُ نصبِهِ الفتحةُ الظاهرةُ على آخرِهِ، و<b>الجملةُ الفعليةُ «يتوفّى الأنفسَ» في محلِّ رفعٍ خبرُ المبتدأِ «اللهُ»</b> لفظِ الجلالةِ.</div>
+  </div>
+
+  <h3 id="s8c">جدولُ تلخيصِ التطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الشاهدُ / المثالُ</th><th>المبتدأُ ونوعُهُ</th><th>الخبرُ ونوعُهُ</th><th>ملحظٌ</th></tr></thead>
+      <tbody>
+        <tr><td>﴿وأنْ تصوموا خيرٌ لكم﴾ [البقرةِ: ١٨٤]</td><td>أنْ تصوموا (= صومُكم): مؤوَّلٌ</td><td>خيرٌ: مفردٌ</td><td>الضمةُ المقدَّرةُ للحكايةِ</td></tr>
+        <tr><td>﴿ومن آياتِهِ أنكَ ترى الأرضَ﴾ [فصلتْ: ٣٩]</td><td>أنكَ ترى (= رؤيتُكَ): مؤوَّلٌ مؤخَّرٌ</td><td>من آياتِهِ: شبهُ جملةٍ مقدَّمٌ</td><td>«الأرضَ» مفعولٌ واحدٌ — رؤيةٌ بصريةٌ</td></tr>
+        <tr><td>﴿محمدٌ رسولُ اللهِ﴾ [الفتحِ: ٢٩]</td><td>محمدٌ: ظاهرٌ</td><td>رسولُ: مفردٌ</td><td>—</td></tr>
+        <tr><td>«أنتَ تكتبُ الدرسَ»</td><td>أنتَ: مضمرٌ</td><td>تكتبُ الدرسَ: جملةٌ فعليةٌ</td><td>الرابطُ: المستترُ «أنتَ»</td></tr>
+        <tr><td>«أنا أخوكَ»</td><td>أنا: مضمرٌ</td><td>أخوكَ: مفردٌ</td><td>مرفوعٌ بالواوِ</td></tr>
+        <tr><td>«محمدٌ أخي»</td><td>محمدٌ: ظاهرٌ</td><td>أخي: مفردٌ</td><td>الضمةُ المقدَّرةُ لمناسبةِ الياءِ</td></tr>
+        <tr><td>«الفتياتُ مهذّباتٌ»</td><td>الفتياتُ</td><td>مهذّباتٌ: مفردٌ</td><td>—</td></tr>
+        <tr><td>«زيدٌ أبوهُ عالمٌ»</td><td>زيدٌ</td><td>أبوهُ عالمٌ: جملةٌ اسميةٌ</td><td>الرابطُ: الهاءُ</td></tr>
+        <tr><td>«محمدٌ أمامَ المنزلِ» / «العصفورُ فوقَ الشجرةِ»</td><td>محمدٌ / العصفورُ</td><td>ظرفٌ: شبهُ جملةٍ</td><td>—</td></tr>
+        <tr><td>﴿اللهُ يبسطُ الرزقَ﴾ [الرعدِ: ٢٦]</td><td>اللهُ</td><td>جملةٌ فعليةٌ</td><td>الرابطُ: المستترُ «هو»</td></tr>
+        <tr><td>﴿وأنْ تعفوا أقربُ للتقوى﴾ [البقرةِ: ٢٣٧]</td><td>أنْ تعفوا (= عفوُكم): مؤوَّلٌ</td><td>أقربُ: مفردٌ</td><td>الضمةُ المقدَّرةُ للحكايةِ</td></tr>
+        <tr><td>﴿ولباسُ التقوى ذلكَ خيرٌ﴾ [الأعرافِ: ٢٦]</td><td>لباسُ</td><td>ذلكَ خيرٌ: جملةٌ اسميةٌ</td><td>الرابطُ: اسمُ الإشارةِ</td></tr>
+        <tr><td>﴿القارعةُ ۝ ما القارعةُ﴾ [القارعةِ: ١–٢]</td><td>القارعةُ</td><td>ما القارعةُ: جملةٌ اسميةٌ</td><td>الرابطُ: إعادةُ المبتدأِ بلفظِهِ</td></tr>
+        <tr><td>﴿والركبُ أسفلَ منكم﴾ [الأنفالِ: ٤٢]</td><td>الركبُ</td><td>أسفلَ: ظرفٌ</td><td>—</td></tr>
+        <tr><td>﴿الحمدُ للهِ﴾ [الفاتحةِ: ٢]</td><td>الحمدُ</td><td>للهِ: جارٌّ ومجرورٌ</td><td>—</td></tr>
+        <tr><td>﴿وهو الغفورُ الودودُ…﴾ [البروجِ: ١٤–١٦]</td><td>هو: مضمرٌ</td><td>خمسةُ أخبارٍ مفردةٍ</td><td>تعدُّدُ الخبرِ</td></tr>
+        <tr><td>﴿وعلى أبصارِهم غشاوةٌ﴾ [البقرةِ: ٧]</td><td>غشاوةٌ: مؤخَّرٌ</td><td>على أبصارِهم: مقدَّمٌ</td><td>تقديمُ الخبرِ</td></tr>
+        <tr><td>﴿أم على قلوبٍ أقفالُها﴾ [محمدٍ: ٢٤]</td><td>أقفالُ: مؤخَّرٌ</td><td>على قلوبٍ: مقدَّمٌ</td><td>تقديمُ الخبرِ</td></tr>
+        <tr><td>﴿وربُّكَ يخلقُ ما يشاءُ ويختارُ﴾ [القصصِ: ٦٨]</td><td>ربُّ</td><td>جملةٌ فعليةٌ</td><td>—</td></tr>
+        <tr><td>﴿اللهُ يتوفّى الأنفسَ﴾ [الزمرِ: ٤٢]</td><td>اللهُ</td><td>جملةٌ فعليةٌ</td><td>«يتوفّى» بضمةٍ مقدَّرةٍ للتعذُّرِ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩: الخلاصة ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>خلاصةُ الدرس</h2></div>
+  <ul class="summary-points">
+    <li>المبتدأُ: <b>الاسمُ المرفوعُ العاري عن العواملِ اللفظيةِ</b>، والعاملُ فيه <b>الابتداءُ</b> — عاملٌ معنويٌّ —، بخلافِ الفاعلِ ونائبِهِ (عاملُهما الفعلُ) والخبرِ (عاملُهُ المبتدأُ).</li>
+    <li>الخبرُ: <b>الاسمُ المرفوعُ المسندُ</b> إلى المبتدأِ، وهو <b>الجزءُ الذي تتمُّ به الفائدةُ</b> — قيدٌ مهمٌّ لم يذكرْهُ ابنُ آجرومٍ. والمسندُ إليه: المبتدأُ في الاسميةِ والفاعلُ في الفعليةِ.</li>
+    <li>المبتدأُ <b>صريحٌ</b> أو <b>مؤوَّلٌ بالصريحِ</b> (﴿وأنْ تصوموا﴾ = صومُكم)، ويُعربُ المؤوَّلُ عندَ الشيخِ: <b>مرفوعٌ بضمةٍ مقدَّرةٍ للحكايةِ</b> لا «في محلِّ رفعٍ».</li>
+    <li>والمبتدأُ <b>ظاهرٌ</b> أو <b>مضمرٌ</b>، والمضمرُ اثنا عشرَ ضميرًا <b>منفصلًا</b>: أنا، نحنُ، أنتَ، أنتِ، أنتُما، أنتُمْ، أنتُنَّ، هو، هي، هما، هم، هُنَّ — معَ مطابقةِ الخبرِ لها.</li>
+    <li>الخبرُ <b>مفردٌ</b> — أي ليس جملةً ولا شبهَ جملةٍ، ولو كانَ مثنًّى أو جمعًا —، و<b>غيرُ مفردٍ</b> أربعةٌ: الجارُّ والمجرورُ، والظرفُ، والفعلُ معَ فاعلِهِ، والمبتدأُ معَ خبرِهِ.</li>
+    <li>جملةُ الخبرِ لا بدَّ لها من <b>رابطٍ</b> يعودُ على المبتدأِ: الضميرُ (وهو الأشهرُ)، أو اسمُ الإشارةِ، أو إعادةُ المبتدأِ بلفظِهِ ومعناه.</li>
+    <li>قد <b>يتقدَّمُ الخبرُ شبهُ الجملةِ</b> على المبتدأِ (﴿وعلى أبصارِهم غشاوةٌ﴾)، وقد <b>يتعدَّدُ الخبرُ</b> (﴿وهو الغفورُ الودودُ…﴾).</li>
+  </ul>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>العنصرُ</th><th>التعريفُ</th><th>أقسامُهُ</th><th>مثالٌ</th></tr></thead>
+      <tbody>
+        <tr><td>المبتدأُ</td><td>الاسمُ المرفوعُ العاري عن العواملِ اللفظيةِ</td><td>صريحٌ / مؤوَّلٌ — ظاهرٌ / مضمرٌ (١٢)</td><td>زيدٌ قائمٌ — أنا قائمٌ — ﴿وأنْ تصوموا خيرٌ لكم﴾</td></tr>
+        <tr><td>الخبرُ</td><td>الاسمُ المرفوعُ المسندُ إلى المبتدأِ، تتمُّ به الفائدةُ</td><td>مفردٌ / غيرُ مفردٍ (٤)</td><td>زيدٌ قائمٌ — زيدٌ في الدارِ — زيدٌ عندَكَ — زيدٌ قامَ أبوهُ — زيدٌ جاريتُهُ ذاهبةٌ</td></tr>
+        <tr><td>العاملُ</td><td>المبتدأُ: الابتداءُ (معنويٌّ) / الخبرُ: المبتدأُ (لفظيٌّ)</td><td>—</td><td>—</td></tr>
+        <tr><td>الرابطُ</td><td>ما يربطُ جملةَ الخبرِ بالمبتدأِ</td><td>ضميرٌ / اسمُ إشارةٍ / إعادةُ المبتدأِ</td><td>زيدٌ قامَ أبوهُ — ﴿ولباسُ التقوى ذلكَ خيرٌ﴾ — ﴿القارعةُ ما القارعةُ﴾</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box note"><span class="tag">تمَّ الدرسُ</span><p style="margin:0">وبهذا نكونُ قد أنهينا الكلامَ تفصيلًا على <b>الجملةِ الاسميةِ</b> أو المبتدأِ والخبرِ، وإن شاءَ اللهُ تعالى في الدرسِ القادمِ سيكونُ لنا حديثٌ عن <b>العواملِ الداخلةِ على المبتدأِ والخبرِ</b>، أو <b>النواسخِ</b> التي تنسخُ الجملةَ الاسميةَ — وأوّلُها «كانَ وأخواتُها».</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ ١٤ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=KGTHodAxUfM" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

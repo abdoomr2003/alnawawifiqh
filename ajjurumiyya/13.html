@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نائبُ الفاعل — الدرس ١٣ من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">نائبُ الفاعلِ</h1>
+    <div class="cover-sub">الدرس ١٣: «المفعولُ الذي لم يُسَمَّ فاعلُهُ» — صيغةُ الفعلِ، وخطواتُ التحويلِ، والظاهرُ والمضمرُ، مع تطبيقاتٍ قرآنيةٍ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=L5lFwQuJinA" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس: المصطلحانِ</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتنِ ونظمُ الشنقيطيِّ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s2a">نصُّ ابنِ آجرومَ</a></li>
+        <li><a href="#s2b">أبياتُ الناظمِ ومعانيها</a></li>
+        <li><a href="#s2c">الظاهرُ والمستترُ والمتصلُ في مثالَيِ الناظمِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٣</span><a href="#s3">مسائلُ البابِ الثلاثُ عندَ ابنِ آجرومَ</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">طريقةُ تحويلِ الفعلِ إلى ما لم يُسَمَّ فاعلُهُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">تغييرُ صيغةِ الماضي والمضارعِ</a></li>
+        <li><a href="#s4b">التغييراتُ الثلاثةُ في الجملةِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">نائبُ الفاعلِ الظاهرُ وشواهدُه</a><span class="dots"></span></li>
+    <li><span class="t-num">٦</span><a href="#s6">نائبُ الفاعلِ المضمرُ: اثنا عشرَ</a><span class="dots"></span></li>
+    <li><span class="t-num">٧</span><a href="#s7">تطبيقاتٌ على البابِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s7a">إذا لم يوجدِ المفعولُ بهِ: نيابةُ الجارِّ والمجرورِ</a></li>
+        <li><a href="#s7b">جدولُ تلخيصِ التطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٨</span><a href="#s8">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١: افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس: المصطلحانِ</h2></div>
+  <p>الحمدُ للهِ، والصلاةُ والسلامُ على رسولِهِ ومصطفاه، وبعدُ: فحيَّاكم اللهُ أيها الكرامُ وأيتها الكريماتُ، معَ درسٍ جديدٍ من دروسِ الآجروميةِ، وهو درسُ <span class="mark">«المفعولِ الذي لم يُسَمَّ فاعلُهُ»</span>، أو المصطلحِ عليه بـ<span class="mark">«نائبِ الفاعلِ»</span>.</p>
+  <div class="box note"><span class="tag">المصطلحانِ</span><p style="margin:0">مصطلحُ <b>«نائبِ الفاعلِ»</b> هو <b>الأشهرُ</b>، لكنَّ ابنَ آجرومٍ سمَّاه <b>«المفعولَ الذي لم يُسَمَّ فاعلُهُ»</b> — نظرًا إلى أصلِهِ: أنه كانَ مفعولًا به في الأصلِ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢: المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتنِ ونظمُ الشنقيطيِّ</h2></div>
+
+  <h3 id="s2a">نصُّ ابنِ آجرومَ</h3>
+  <p>قالَ ابنُ آجرومٍ رحمهُ اللهُ:</p>
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«بابُ المفعولِ الذي لم يُسَمَّ فاعلُهُ: وهو الاسمُ المرفوعُ الذي لم يُذكَرْ معه فاعلُهُ.<br>
+    فإن كانَ الفعلُ ماضيًا ضُمَّ أوّلُهُ وكُسِرَ ما قبلَ آخرِهِ، وإن كانَ مضارعًا ضُمَّ أوّلُهُ وفُتِحَ ما قبلَ آخرِهِ.<br>
+    وهو على قسمينِ: ظاهرٍ ومضمرٍ؛ فالظاهرُ نحوُ قولِكَ: ضُرِبَ زيدٌ، ويُضْرَبُ زيدٌ، وأُكْرِمَ عمرٌو، ويُكْرَمُ عمرٌو.<br>
+    والمضمرُ اثنا عشرَ، نحوُ قولِكَ: ضُرِبْتُ، وضُرِبْنا، وضُرِبْتَ، وضُرِبْتِ، وضُرِبْتُما، وضُرِبْتُمْ، وضُرِبْتُنَّ، وضُرِبَ، وضُرِبَتْ، وضُرِبا، وضُرِبوا، وضُرِبْنَ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <h3 id="s2b">أبياتُ الناظمِ ومعانيها</h3>
+  <p>وقالَ الناظمُ الشنقيطيُّ — بابُ المفعولِ الذي لم يُسَمَّ فاعلُهُ —:</p>
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">إذا حذفْتَ في الكلامِ فاعلا … مُخْتَصِرًا أو مُبْهِمًا أو جاهلا</div>
+      <div class="ln">فأوجِبِ التأخيرَ للمفعولِ بِهْ … والرفعَ حيثُ نابَ عنهُ فانتبِهْ</div>
+      <div class="ln">فأوّلَ الفعلِ اضْمُمَنْ وكسْرُ ما … قُبَيْلَ آخِرِ المُضِيِّ حُتِما</div>
+      <div class="ln">وما قُبَيْلَ آخِرِ المضارعِ … يجبُ فتحُهُ بلا مُنازِعِ</div>
+      <div class="ln">وظاهرًا ومضمرًا أيضًا ثبتْ … كأُكْرِمَتْ هندٌ وهندٌ ضُرِبَتْ</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <p>والأبياتُ الخمسةُ تنظمُ مسائلَ المتنِ بترتيبِها:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>البيتُ</th><th>مضمونُهُ</th><th>ما يقابلُهُ في المتنِ</th></tr></thead>
+      <tbody>
+        <tr><td>١</td><td>حذفُ الفاعلِ من الكلامِ، لكونِ المتكلمِ <b>مختصِرًا</b> يريدُ الإيجازَ، أو <b>مبهِمًا</b> يقصدُ إخفاءَهُ، أو <b>جاهلًا</b> به لا يعرفُهُ</td><td>«الذي لم يُذكَرْ معه فاعلُهُ»</td></tr>
+        <tr><td>٢</td><td>إذا نابَ المفعولُ بهِ عن الفاعلِ وجبَ <b>تأخيرُهُ</b> عن الفعلِ ووجبَ <b>رفعُهُ</b></td><td>«الاسمُ المرفوعُ»</td></tr>
+        <tr><td>٣</td><td>الماضي: <b>يُضَمُّ أوّلُهُ ويُكسَرُ ما قبلَ آخرِهِ</b> حتمًا</td><td>«فإن كانَ الفعلُ ماضيًا ضُمَّ أوّلُهُ وكُسِرَ ما قبلَ آخرِهِ»</td></tr>
+        <tr><td>٤</td><td>المضارعُ: <b>يُفتَحُ ما قبلَ آخرِهِ</b> — معَ ضمِّ أوّلِهِ — بلا خلافٍ</td><td>«وإن كانَ مضارعًا ضُمَّ أوّلُهُ وفُتِحَ ما قبلَ آخرِهِ»</td></tr>
+        <tr><td>٥</td><td>يأتي <b>ظاهرًا ومضمرًا</b>: «أُكرِمَتْ هندٌ» و«هندٌ ضُرِبَتْ»</td><td>«وهو على قسمينِ: ظاهرٍ ومضمرٍ»</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2c">الظاهرُ والمستترُ والمتصلُ في مثالَيِ الناظمِ</h3>
+  <p>يشيرُ الناظمُ بالمثالينِ الأخيرينِ إلى كونِ النائبِ عن الفاعلِ — أو المفعولِ الذي لم يُسَمَّ فاعلُهُ — قد يكونُ <b>ظاهرًا</b> وقد يكونُ <b>مضمرًا</b>:</p>
+  <figure class="diagram">
+    <div class="tree-root">نائبُ الفاعلِ في مثالَيِ الناظمِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green"><div class="n-title">ظاهرٌ</div><div class="n-sub">«أُكرِمَتْ <b>هندٌ</b>»<br>«هندٌ» هنا هي نائبُ الفاعلِ، وهي <b>اسمٌ ظاهرٌ</b> كما هو واضحٌ</div></div>
+      <div class="node maroon"><div class="n-title">ضميرٌ مستترٌ</div><div class="n-sub">«هندٌ <b>ضُرِبَتْ</b>»<br>نائبُ الفاعلِ هنا <b>ضميرٌ مستترٌ تقديرُهُ «هي»</b></div></div>
+      <div class="node blue"><div class="n-title">ضميرٌ متصلٌ</div><div class="n-sub">كما أقولُ لهندٍ: «<b>ضُرِبْتِ</b> يا هندُ»<br>التاءُ <b>ضميرٌ متصلٌ</b> في محلِّ رفعٍ نائبُ فاعلٍ</div></div>
+    </div>
+    <figcaption>شكل (١): صورُ نائبِ الفاعلِ الثلاثُ كما شرحَ بها الشيخُ مثالَيِ الناظمِ وزادَ عليهما</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣: مسائل الباب ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>مسائلُ البابِ الثلاثُ عندَ ابنِ آجرومَ</h2></div>
+  <p>في تفصيلِ القولِ في نائبِ الفاعلِ — أو المفعولِ الذي لم يُسَمَّ فاعلُهُ — نلاحظُ أنَّ ابنَ آجرومٍ رحمهُ اللهُ تكلَّمَ في <b>ثلاثِ نقاطٍ مهمةٍ</b>:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">بابُ المفعولِ الذي لم يُسَمَّ فاعلُهُ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green"><div class="n-title">أولًا: التعريفُ</div><div class="n-sub">«هو الاسمُ المرفوعُ الذي لم يُذكَرْ معه فاعلُهُ»</div></div>
+      <div class="node blue"><div class="n-title">ثانيًا: طريقةُ تغييرِ الفعلِ</div><div class="n-sub">تحويلُ الفعلِ من المبنيِّ للمعلومِ إلى المبنيِّ للمجهولِ — معَ الفرقِ بينَ الماضي والمضارعِ في الصيغةِ</div></div>
+      <div class="node maroon"><div class="n-title">ثالثًا: القسمةُ</div><div class="n-sub">ظاهرٌ ومضمرٌ — وهي قسمةٌ <b>لا تختلفُ أبدًا</b> عن قسمتِهِ في بابِ الفاعلِ</div></div>
+    </div>
+    <figcaption>شكل (٢): النقاطُ الثلاثُ التي بنى عليها ابنُ آجرومٍ البابَ</figcaption>
+  </figure>
+
+  <p>فأمّا <b>التعريفُ</b> فقالَ: <span class="mark">«هو الاسمُ المرفوعُ الذي لم يُذكَرْ معه فاعلُهُ»</span>. ثم بيَّنَ <b>طريقةَ تغييرِ الفعلِ</b> لكي يوجدَ نائبُ الفاعلِ؛ أي طريقةَ تحويلِ الفعلِ من مبنيٍّ للمعلومِ إلى مبنيٍّ للمجهولِ — أو لما لم يُسَمَّ فاعلُهُ — حتى يكونَ عندي في التركيبِ نائبُ فاعلٍ، وفرَّقَ هنا بينَ الماضي والمضارعِ من حيثُ الصيغةُ ومن حيثُ التغييرُ الذي سيحدثُ فيه. ثم تكلَّمَ في النقطةِ الثالثةِ على <b>تقسيمِهِ</b> إلى قسمينِ: ظاهرٍ ومضمرٍ.</p>
+  <div class="box note"><span class="tag">لماذا سُمِّيَ «نائبًا»؟</span><p style="margin:0">نائبُ الفاعلِ — أو المفعولُ الذي لم يُسَمَّ فاعلُهُ — <b>حضرَ عندَ غيابِ الفاعلِ</b>؛ ولذلك قلْنا في مصطلحِ ابنِ مالكٍ: «نائبٌ عن الفاعلِ»، و<b>يأخذُ حكمَهُ من حيثُ كونُهُ مرفوعًا</b>.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤: طريقة التحويل ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>طريقةُ تحويلِ الفعلِ إلى ما لم يُسَمَّ فاعلُهُ</h2></div>
+
+  <h3 id="s4a">تغييرُ صيغةِ الماضي والمضارعِ</h3>
+  <p>قالَ ابنُ آجرومٍ: إنك إن أردتَ أن تحوِّلَ الفعلَ <b>الماضيَ</b> المبنيَّ للمعلومِ إلى مبنيٍّ للمجهولِ فعليك أن <b>تضمَّ أوّلَهُ، وأن تكسرَ ما قبلَ آخرِهِ</b>: فالفعلُ «ضَرَبَ» مبنيٌّ للمعلومِ، فتقولُ عندَ التغييرِ: <b>«ضُرِبَ»</b> — تضمُّ الأوّلَ، وتكسرُ ما قبلَ الآخرِ. وإن كانَ الفعلُ <b>مضارعًا</b> <b>ضُمَّ أوّلُهُ وفُتِحَ ما قبلَ آخرِهِ</b>: «يَضْرِبُ» تتحوَّلُ إلى <b>«يُضْرَبُ»</b>. هذا هو التغييرُ من حيثُ الصيغةُ.</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">الماضي</div><div class="n-sub"><b>ضمُّ الأوّلِ + كسرُ ما قبلَ الآخرِ</b><br>ضَرَبَ ← ضُرِبَ<br>أَكْرَمَ ← أُكْرِمَ<br>قَرَأَ ← قُرِئَ<br>قَتَلَ ← قُتِلَ</div></div>
+      <div class="node blue"><div class="n-title">المضارعُ</div><div class="n-sub"><b>ضمُّ الأوّلِ + فتحُ ما قبلَ الآخرِ</b><br>يَضْرِبُ ← يُضْرَبُ<br>يُكْرِمُ ← يُكْرَمُ<br>يَعْرِفُ ← يُعْرَفُ<br>يَأْخُذُ ← يُؤْخَذُ</div></div>
+    </div>
+    <div class="dcap">شكل (٣): تغييرُ صيغةِ الفعلِ عندَ بنائِهِ لما لم يُسَمَّ فاعلُهُ — والأمثلةُ من المتنِ والشواهدِ الآتيةِ</div>
+  </figure>
+
+  <h3 id="s4b">التغييراتُ الثلاثةُ في الجملةِ</h3>
+  <p>فلو قلتُ — كما قلتُ في المثالِ سابقًا —: <b>«ضَرَبَ محمدٌ عليًّا»</b>، ثم أردتُ أن أحوِّلَ الجملةَ إلى مبنيٍّ للمجهولِ، أو لما لم يُسَمَّ فاعلُهُ، فهنا عددٌ من التغييراتِ:</p>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">ضَرَبَ محمدٌ عليًّا</span><span class="fa">←</span>
+      <span class="chip blue">١. تغييرُ صيغةِ الفعلِ: ضُرِبَ</span><span class="fa">←</span>
+      <span class="chip blue">٢. حذفُ الفاعلِ «محمدٌ»</span><span class="fa">←</span>
+      <span class="chip blue">٣. إنابةُ المفعولِ بهِ مرفوعًا</span><span class="fa">←</span>
+      <span class="chip">ضُرِبَ عليٌّ</span>
+      <div class="lane-note">يتحوَّلُ المفعولُ بهِ الذي كانَ <b>منصوبًا</b> («عليًّا») إلى نائبٍ عن الفاعلِ <b>مرفوعٍ</b> («عليٌّ»).</div>
+    </div>
+    <div class="dcap">شكل (٤): التغييراتُ الثلاثةُ لبناءِ الجملةِ لما لم يُسَمَّ فاعلُهُ</div>
+  </figure>
+
+  <div class="box example"><span class="tag">تفصيلُ التغييراتِ</span><p style="margin:0">
+  • <b>التغييرُ الأوّلُ</b> يحدثُ لصيغةِ الفعلِ ذاتِها: يُضَمُّ الأوّلُ ويُكسَرُ ما قبلَ الآخرِ إن كانَ ماضيًا، ويُضَمُّ الأوّلُ ويُفتَحُ ما قبلَ الآخرِ إن كانَ الفعلُ مضارعًا.<br>
+  • <b>التغييرُ الثاني</b>: نحذفُ الفاعلَ.<br>
+  • <b>التغييرُ الثالثُ</b>: نُنيبُ عن الفاعلِ غيرَهُ؛ وعادةً ما يكونُ <b>المفعولُ بهِ — إذا كانَ موجودًا في الجملةِ — هو الذي ينوبُ عن الفاعلِ</b>؛ فيكونُ نائبًا عنه، ويُعربُ «مفعولًا لما لم يُسَمَّ فاعلُهُ» أو «نائبًا عن الفاعلِ»، ويكونُ <b>مرفوعًا</b>.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥: الظاهر ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>نائبُ الفاعلِ الظاهرُ وشواهدُه</h2></div>
+  <p>نائبُ الفاعلِ على قسمينِ: قسمٌ ظاهرٌ وقسمٌ مضمرٌ. ومثالُ الظاهرِ من كتابِ اللهِ تعالى:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَإِذَا قُرِئَ الْقُرْآنُ فَاسْتَمِعُوا لَهُ وَأَنْصِتُوا لَعَلَّكُمْ تُرْحَمُونَ﴾<span class="ref">سورةُ الأعرافِ: ٢٠٤</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أينَ نائبُ الفاعلِ؟ وكيف صِيغَ فعلُهُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نائبُ الفاعلِ هنا <b>«القرآنُ»</b>، والفعلُ <b>«قُرِئَ»</b>: فعلٌ ماضٍ طُبِّقتْ عليه قواعدُ التغييرِ للتحويلِ إلى مبنيٍّ للمجهولِ أو مبنيٍّ لما لم يُسَمَّ فاعلُهُ؛ فكلمةُ «قُرِئَ» أصلُها <b>«قَرَأَ»</b>، فضممْنا الأوّلَ وكسرْنا ما قبلَ الأخيرِ لأنَّ الفعلَ هنا ماضٍ، ثم كانتْ كلمةُ «القرآنُ» بعدَها هي <b>النائبَ عن الفاعلِ</b> — أو المفعولَ الذي لم يُسَمَّ فاعلُهُ —، وهو <b>مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿يَا أَيُّهَا النَّاسُ ضُرِبَ مَثَلٌ فَاسْتَمِعُوا لَهُ﴾<span class="ref">سورةُ الحجِّ: ٧٣</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>أعربْ ﴿ضُرِبَ مَثَلٌ﴾.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«ضُرِبَ»</b> أيضًا مبنيٌّ لما لم يُسَمَّ فاعلُهُ، وهو <b>مضمومُ الأوّلِ ومكسورُ ما قبلَ الأخيرِ</b> — هذا التغييرُ في الصيغةِ —، ثم كلمةُ <b>«مثلٌ»</b> هي المفعولُ الذي لم يُسَمَّ فاعلُهُ، أو نائبُ الفاعلِ: <b>مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قُتِلَ الْخَرَّاصُونَ﴾<span class="ref">سورةُ الذارياتِ: ١٠</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>ما إعرابُ «الخرَّاصونَ»؟ وما أصلُ «قُتِلَ»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«قُتِلَ» أصلُهُ في المبنيِّ للمعلومِ <b>«قَتَلَ»</b>، ولكن حوَّلْناه إلى مبنيٍّ للمجهولِ بضمِّ الأوّلِ وكسرِ ما قبلَ الأخيرِ فقلْنا: «قُتِلَ». و<b>«الخرَّاصونَ»</b> هي <b>نائبُ الفاعلِ</b> — أو المفعولُ الذي لم يُسَمَّ فاعلُهُ —، وهي طبعًا <b>مرفوعةٌ وعلامةُ رفعِها الواوُ لأنها جمعُ مذكرٍ سالمٌ</b> كما هو واضحٌ.</div>
+  </div>
+
+  <p>وقد ذكرَ ابنُ آجرومٍ أمثلةً على الظاهرِ في قولِهِ:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>المثالُ</th><th>الفعلُ وصيغتُهُ</th><th>نائبُ الفاعلِ وإعرابُهُ</th></tr></thead>
+      <tbody>
+        <tr><td>ضُرِبَ زيدٌ</td><td>ماضٍ: ضُمَّ أوّلُهُ وكُسِرَ ما قبلَ آخرِهِ</td><td>«زيدٌ» هي النائبُ عن الفاعلِ</td></tr>
+        <tr><td>يُضْرَبُ زيدٌ</td><td>مضارعٌ: ضُمَّ أوّلُهُ وفُتِحَ ما قبلَ آخرِهِ — بخلافِ الماضي الذي ضُمَّ أوّلُهُ وكُسِرَ ما قبلَ آخرِهِ</td><td>«زيدٌ» نائبٌ عن الفاعلِ للفعلِ «يُضْرَبُ»</td></tr>
+        <tr><td>أُكْرِمَ عمرٌو</td><td>«أُكْرِمَ» فعلٌ ماضٍ مبنيٌّ لما لم يُسَمَّ فاعلُهُ: ضُمَّ أوّلُهُ وكُسِرَ ما قبلَ آخرِهِ</td><td>«عمرٌو» نائبٌ عن الفاعلِ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</td></tr>
+        <tr><td>يُكْرَمُ عمرٌو</td><td>بالمضارعِ: ضُمَّ أوّلُهُ وفُتِحَ ما قبلَ آخرِهِ</td><td>«عمرٌو» نائبٌ عن الفاعلِ مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦: المضمر ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>نائبُ الفاعلِ المضمرُ: اثنا عشرَ</h2></div>
+  <p>أما <b>المضمرُ</b> — أي حين يكونُ النائبُ عن الفاعلِ مضمرًا — فهو واحدٌ من <b>اثنَيْ عشرَ نمطًا</b> أو شكلًا من أشكالِ الضميرِ، وهي <b>نفسُ القسمةِ التي ذكرَها ابنُ آجرومٍ في الفاعلِ</b>، معَ تغييرِ صيغةِ الفعلِ طبعًا إلى مبنيٍّ للمجهولِ:</p>
+
+  <figure class="diagram">
+    <div class="cards">
+      <div class="node green"><div class="n-title">ضُرِبْتُ</div><div class="n-sub">المتكلمُ المفردُ<br>التاءُ مبنيةٌ على <b>الضمِّ</b></div></div>
+      <div class="node green"><div class="n-title">ضُرِبْنا</div><div class="n-sub">المتكلمونَ<br>«نا» مبنيةٌ على <b>السكونِ</b></div></div>
+      <div class="node green"><div class="n-title">ضُرِبْتَ</div><div class="n-sub">المخاطبُ المفردُ المذكرُ<br>التاءُ مبنيةٌ على <b>الفتحِ</b></div></div>
+      <div class="node green"><div class="n-title">ضُرِبْتِ</div><div class="n-sub">المخاطبةُ المفردةُ المؤنثةُ<br>التاءُ مبنيةٌ على <b>الكسرِ</b></div></div>
+      <div class="node blue"><div class="n-title">ضُرِبْتُما</div><div class="n-sub">المثنى المخاطبُ<br>«تُما» ضميرٌ بارزٌ</div></div>
+      <div class="node blue"><div class="n-title">ضُرِبْتُمْ</div><div class="n-sub">جمعُ الذكورِ المخاطبينَ<br>«تُمْ» ضميرٌ بارزٌ</div></div>
+      <div class="node blue"><div class="n-title">ضُرِبْتُنَّ</div><div class="n-sub">جمعُ الإناثِ المخاطباتِ<br>«تُنَّ» ضميرٌ بارزٌ</div></div>
+      <div class="node maroon"><div class="n-title">ضُرِبَ</div><div class="n-sub">ضميرٌ <b>مستترٌ</b><br>تقديرُهُ «هو»</div></div>
+      <div class="node maroon"><div class="n-title">ضُرِبَتْ</div><div class="n-sub">ضميرٌ <b>مستترٌ</b><br>تقديرُهُ «هي»</div></div>
+      <div class="node goldb"><div class="n-title">ضُرِبا</div><div class="n-sub">ألفُ الاثنينِ<br>مبنيةٌ على <b>السكونِ</b></div></div>
+      <div class="node goldb"><div class="n-title">ضُرِبوا</div><div class="n-sub">واوُ الجماعةِ<br>مبنيةٌ على <b>السكونِ</b></div></div>
+      <div class="node goldb"><div class="n-title">ضُرِبْنَ</div><div class="n-sub">نونُ النسوةِ<br>مبنيةٌ على <b>الفتحِ</b></div></div>
+    </div>
+    <div class="dcap">شكل (٥): الضمائرُ الاثنا عشرَ الواقعةُ نائبًا عن الفاعلِ — وكلُّها في محلِّ رفعٍ نائبُ فاعلٍ</div>
+  </figure>
+
+  <div class="box example"><span class="tag">تاءُ الفاعلِ و«نا»</span><p style="margin:0">قالَ: <b>«ضُرِبْتُ»</b>: هنا تاءُ الفاعلِ للمتكلمِ المفردِ، <b>ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ نائبٌ عن الفاعلِ</b>، أو في محلِّ رفعٍ مفعولٌ لم يُسَمَّ فاعلُهُ. كذلك <b>«ضُرِبْنا»</b>: هذا الضميرُ أيضًا في محلِّ رفعٍ مفعولٌ لم يُسَمَّ فاعلُهُ، أو نائبٌ عن الفاعلِ. كذلك <b>«ضُرِبْتَ، وضُرِبْتِ، وضُرِبْتُما، وضُرِبْتُمْ، وضُرِبْتُنَّ»</b>: كلُّها ضمائرُ رفعٍ — تاءُ الفاعلِ طبعًا — في محلِّ رفعٍ نائبٌ عن الفاعلِ أو مفعولٌ لم يُسَمَّ فاعلُهُ.</p></div>
+  <div class="box note"><span class="tag">تنبيهٌ</span><p style="margin:0">هذه التاءُ — وإن سُمِّيتْ «تاءَ الفاعلِ» — <b>ليستْ فاعلًا</b> في هذا البابِ، وإنما هي <b>نائبٌ عن الفاعلِ</b>؛ لأنَّ الفعلَ قبلَها <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b>.</p></div>
+  <div class="box example"><span class="tag">المستترُ</span><p style="margin:0">كذلك الفعلُ <b>«ضُرِبَ»</b>: نلاحظُ أنه ذكرَهُ هنا مثالًا على أنَّ نائبَ الفاعلِ — أو المفعولَ الذي لم يُسَمَّ فاعلُهُ — <b>ضميرٌ مستترٌ تقديرُهُ «هو»</b>، أو <b>«هي»</b> في <b>«ضُرِبَتْ»</b> — أي: ضُرِبَتْ هي.</p></div>
+  <div class="box example"><span class="tag">الضمائرُ البارزةُ</span><p style="margin:0">أما في <b>«ضُرِبا، وضُرِبوا، وضُرِبْنَ»</b> فهذه ضمائرُ <b>ظاهرةٌ، أو بارزةٌ</b>: الألفُ — ألفُ الاثنينِ — في «ضُرِبا»، وواوُ الجماعةِ في «ضُرِبوا»، ونونُ النسوةِ في «ضُرِبْنَ»؛ كلُّها ضمائرُ مبنيةٌ: <b>ألفُ الاثنينِ وواوُ الجماعةِ ضميرانِ مبنيّانِ على السكونِ في محلِّ رفعٍ مفعولٌ لم يُسَمَّ فاعلُهُ أو نائبٌ عن الفاعلِ</b>، و<b>نونُ النسوةِ</b> في «ضُرِبْنَ» <b>ضميرٌ متصلٌ مبنيٌّ على الفتحِ في محلِّ رفعٍ نائبٌ عن الفاعلِ</b>.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧: تطبيقات ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>تطبيقاتٌ على البابِ</h2></div>
+  <p>أردْنا أن نطبِّقَ على بابِ النائبِ عن الفاعلِ — أو المفعولِ الذي لم يُسَمَّ فاعلُهُ — بعددٍ من الأمثلةِ نتأملُها فيما يأتي:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>في قولِنا: <b>«مَنْ طابتْ سريرتُهُ حُمِدَتْ سيرتُهُ»</b> — ميِّزِ الفاعلَ من نائبِ الفاعلِ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«طابتْ سريرتُهُ»: <b>«سريرتُهُ» فاعلٌ لـ«طابتْ»</b>؛ لأنَّ «طابتْ» هنا فعلٌ <b>مبنيٌّ للمعلومِ</b>. أما «حُمِدَتْ سيرتُهُ» فـ«حُمِدَتْ» فعلٌ <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b>، ومن ثَمَّ كانتْ كلمةُ <b>«سيرتُهُ» هي نائبَ الفاعلِ</b> للفعلِ «حُمِدَتْ»؛ لأنه مبنيٌّ لما لم يُسَمَّ فاعلُهُ، وقد ضُمَّ أوّلُهُ وكُسِرَ ما قبلَ آخرِهِ. والهاءُ في الكلمتينِ في محلِّ جرٍّ مضافٍ إليهِ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>في قولِنا: <b>«سُجِنَ اللصُّ»</b> — أينَ نائبُ الفاعلِ؟ وكيف يُضبطُ الفعلُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span><b>«اللصُّ» هنا نائبٌ عن الفاعلِ</b>، و«سُجِنَ» تُضبطُ على النحوِ الآتي: <b>يُضَمُّ أوّلُها ويُكسَرُ ما قبلَ آخرِها لأنها في الماضي</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>لو قلْنا: <b>«الكتابُ كُتِبَ»</b> أو «الكتابُ قد كُتِبَ» — هل نائبُ الفاعلِ هنا ظاهرٌ أم مضمرٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هو <b>مضمرٌ</b>: «الكتابُ» مبتدأٌ، و«كُتِبَ» فعلٌ ماضٍ <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b>؛ فنائبُ الفاعلِ بعدَهُ — أو المفعولُ الذي لم يُسَمَّ فاعلُهُ — <b>ضميرٌ مستترٌ تقديرُهُ «هو» يعودُ على الكتابِ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿هُنَالِكَ ابْتُلِيَ الْمُؤْمِنُونَ وَزُلْزِلُوا زِلْزَالًا شَدِيدًا﴾<span class="ref">سورةُ الأحزابِ: ١١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ما إعرابُ كلمةِ «المؤمنونَ» في ﴿هُنَالِكَ ابْتُلِيَ الْمُؤْمِنُونَ﴾؟ هل هي فاعلٌ أم نائبٌ عن الفاعلِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هي هنا <b>نائبٌ عن الفاعلِ</b>؛ لأنَّ الفعلَ «ابْتُلِيَ» <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b>: فضُمَّ أوّلُهُ وكُسِرَ ما قبلَ آخرِهِ لأنه ماضٍ. و<span class="mark">«المؤمنونَ» نائبٌ عن الفاعلِ مرفوعٌ وعلامةُ رفعِهِ الواوُ لأنه جمعُ مذكرٍ سالمٌ</span>.</div>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>وفي تتمّةِ الآيةِ نفسِها ﴿وَزُلْزِلُوا زِلْزَالًا شَدِيدًا﴾: ما المحلُّ الإعرابيُّ لواوِ الجماعةِ في «زُلْزِلوا»؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«زُلْزِلوا» <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b>؛ فالواوُ — واوُ الجماعةِ — ستكونُ <b>ضميرًا متصلًا مبنيًّا على السكونِ في محلِّ رفعٍ نائبٌ عن الفاعلِ</b>، أو «مفعولٌ لم يُسَمَّ فاعلُهُ» بحسبِ المصطلحِ الذي ذكرَهُ ابنُ آجرومٍ.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿فَإِنْ أُحْصِرْتُمْ فَمَا اسْتَيْسَرَ مِنَ الْهَدْيِ﴾<span class="ref">سورةُ البقرةِ: ١٩٦</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ نائبُ الفاعلِ في هذه الآيةِ الكريمةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>الفعلُ المبنيُّ للمجهولِ هو <b>«أُحْصِرْتُمْ»</b>؛ إذن نائبُ الفاعلِ سيكونُ هو <b>تاءَ الفاعلِ «تُمْ»</b> الدالّةَ على الجمعِ المذكرِ: فهي <b>ضميرٌ متصلٌ مبنيٌّ على الضمِّ</b> — إن أعربْنا التاءَ وحدَها والميمَ علامةَ الجمعِ — <b>أو على السكونِ</b> — إن أعربْنا «تُمْ» كاملةً — <b>في محلِّ رفعٍ نائبٌ عن الفاعلِ</b>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قُضِيَ الْأَمْرُ الَّذِي فِيهِ تَسْتَفْتِيَانِ﴾<span class="ref">سورةُ يوسفَ: ٤١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في الآيةِ فعلانِ: «قُضِيَ» و«تستفتيانِ»؛ فميِّزْ بينهما، وأينَ الشاهدُ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>• <b>«تستفتيانِ»</b> فعلٌ <b>مبنيٌّ للمعلومِ</b> — أو لما سُمِّيَ فاعلُهُ —، ومن ثَمَّ كانَ الضميرُ فيه — <b>ألفُ الاثنينِ</b> — ضميرَ رفعٍ <b>في محلِّ رفعٍ فاعلٌ</b>؛ و«تستفتيانِ» نفسُهُ فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِهِ <b>ثبوتُ النونِ</b> لأنه من الأمثلةِ الخمسةِ أو الأفعالِ الخمسةِ.<br>
+    • و<b>الشاهدُ</b> عندي هنا في قولِهِ: <b>«قُضِيَ الأمرُ»</b>: «قُضِيَ» فعلٌ <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b>، و<span class="mark">«الأمرُ» هي نائبُ الفاعلِ — أو المفعولُ الذي لم يُسَمَّ فاعلُهُ — للفعلِ «قُضِيَ»، مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</span>.</div>
+  </div>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿يُعْرَفُ الْمُجْرِمُونَ بِسِيمَاهُمْ فَيُؤْخَذُ بِالنَّوَاصِي وَالْأَقْدَامِ﴾<span class="ref">سورةُ الرحمنِ: ٤١</span></p>
+  </div>
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>أينَ نائبُ الفاعلِ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندَنا <b>فعلانِ مبنيّانِ للمجهولِ</b> هنا — أو لما لم يُسَمَّ فاعلُهُ —:<br>
+    • أولًا <b>﴿يُعْرَفُ الْمُجْرِمُونَ﴾</b>: الفعلُ «يُعْرَفُ» فعلٌ مضارعٌ <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b>، وهو <b>مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>. وكيف عرفتَ أنه مبنيٌّ للمجهولِ — أو لما لم يُسَمَّ فاعلُهُ —؟ أنه <b>مضمومُ الأوّلِ ومفتوحُ ما قبلَ الآخرِ</b>: «يُعْرَفُ». و<span class="mark">«المجرمونَ» هي النائبُ عن الفاعلِ — أو المفعولُ الذي لم يُسَمَّ فاعلُهُ — للفعلِ «يُعْرَفُ»، مرفوعٌ طبعًا وعلامةُ رفعِهِ الواوُ لأنه جمعُ مذكرٍ سالمٌ</span>.<br>
+    • ثانيًا <b>﴿فَيُؤْخَذُ بِالنَّوَاصِي﴾</b>: الفعلُ «يُؤْخَذُ» فعلٌ مضارعٌ <b>مبنيٌّ لما لم يُسَمَّ فاعلُهُ</b> أيضًا؛ لأنه ضُمَّ أوّلُهُ وفُتِحَ ما قبلَ آخرِهِ، وهو هنا <b>مرفوعٌ وعلامةُ رفعِهِ الضمةُ الظاهرةُ على آخرِهِ</b>. لكن أينَ نائبُ الفاعلِ؟ نائبُ الفاعلِ هنا سيكونُ هو <b>شبهَ الجملةِ «بالنواصي»</b> — الجارَّ والمجرورَ —: <b>الباءُ</b> حرفُ جرٍّ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ، و<b>«النواصي»</b> اسمٌ مجرورٌ بالباءِ وعلامةُ جرِّهِ <b>الكسرةُ المقدَّرةُ على الياءِ للثِّقَلِ</b>، و<span class="mark">شبهُ الجملةِ «بالنواصي» في محلِّ رفعٍ نائبٌ عن الفاعلِ</span>، أو مفعولٌ لم يُسَمَّ فاعلُهُ.</div>
+  </div>
+
+  <h3 id="s7a">إذا لم يوجدِ المفعولُ بهِ: نيابةُ الجارِّ والمجرورِ</h3>
+  <p>وهذا — أعني نيابةَ الجارِّ والمجرورِ — يكونُ <b>إذا لم يكنِ المفعولُ بهِ أصلًا موجودًا في الجملةِ</b>؛ فالذي ينوبُ عن الفاعلِ — في الأصلِ — هو المفعولُ بهِ، فإذا لم يوجدِ المفعولُ بهِ قد ينوبُ عنه شيءٌ آخرُ، مثلُ الجارِّ والمجرورِ مثلًا.</p>
+  <div class="box example"><span class="tag">مثالٌ</span><p style="margin:0">لو أنَّ عندي فعلًا <b>لا ينصبُ مفعولًا بهِ أصلًا</b> — أي هو <b>فعلٌ لازمٌ</b> كالفعلِ «ذهبَ» مثلًا —، أقولُ: <b>«ذهبَ الطالبُ إلى الجامعةِ»</b>؛ فإن أردتُ أن أحوِّلَهُ إلى مبنيٍّ للمجهولِ سأقولُ: <b>«ذُهِبَ إلى الجامعةِ»</b>؛ فالفعلُ أصلًا لم ينصبْ مفعولًا بهِ، فمن ثَمَّ ينوبُ عن الفاعلِ شيءٌ آخرُ، وهو هنا <b>الجارُّ والمجرورُ</b> «إلى الجامعةِ».</p></div>
+
+  <figure class="diagram">
+    <div class="tree-root">ما ينوبُ عن الفاعلِ بعدَ حذفِهِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node green"><div class="n-title">المفعولُ بهِ — وهو الأصلُ</div><div class="n-sub">إذا كانَ موجودًا في الجملةِ<br>«ضُرِبَ عليٌّ» — ﴿قُضِيَ الأمرُ﴾ — ﴿قُتِلَ الخرَّاصونَ﴾</div></div>
+      <div class="node blue"><div class="n-title">الجارُّ والمجرورُ</div><div class="n-sub">إذا لم يوجدْ مفعولٌ بهِ، كالفعلِ اللازمِ<br>«ذُهِبَ إلى الجامعةِ» — ﴿فيُؤخَذُ بالنواصي﴾<br><b>في محلِّ رفعٍ نائبُ فاعلٍ</b></div></div>
+    </div>
+    <figcaption>شكل (٦): المفعولُ بهِ أوّلُ ما ينوبُ عن الفاعلِ، فإن عُدِمَ نابَ الجارُّ والمجرورُ</figcaption>
+  </figure>
+
+  <h3 id="s7b">جدولُ تلخيصِ التطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>الشاهدُ / المثالُ</th><th>الفعلُ وصيغتُهُ</th><th>نائبُ الفاعلِ</th><th>نوعُهُ وإعرابُهُ</th></tr></thead>
+      <tbody>
+        <tr><td>«أُكرِمَتْ هندٌ» (الناظمُ)</td><td>ماضٍ مبنيٌّ للمجهولِ</td><td>هندٌ</td><td>ظاهرٌ: مرفوعٌ بالضمةِ</td></tr>
+        <tr><td>«هندٌ ضُرِبَتْ» (الناظمُ)</td><td>ماضٍ مبنيٌّ للمجهولِ</td><td>«هي» المستترُ</td><td>ضميرٌ مستترٌ</td></tr>
+        <tr><td>«ضُرِبْتِ يا هندُ»</td><td>ماضٍ مبنيٌّ للمجهولِ</td><td>التاءُ</td><td>ضميرٌ متصلٌ في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿وإذا قُرِئَ القرآنُ﴾ [الأعرافِ: ٢٠٤]</td><td>قُرِئَ — أصلُهُ قَرَأَ</td><td>القرآنُ</td><td>ظاهرٌ: الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿ضُرِبَ مثلٌ﴾ [الحجِّ: ٧٣]</td><td>ضُرِبَ</td><td>مثلٌ</td><td>ظاهرٌ: الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿قُتِلَ الخرَّاصونَ﴾ [الذارياتِ: ١٠]</td><td>قُتِلَ — أصلُهُ قَتَلَ</td><td>الخرَّاصونَ</td><td>ظاهرٌ: الواوُ (جمعُ مذكرٍ سالمٌ)</td></tr>
+        <tr><td>«مَنْ طابتْ سريرتُهُ حُمِدَتْ سيرتُهُ»</td><td>طابتْ: للمعلومِ / حُمِدَتْ: للمجهولِ</td><td>سيرتُهُ (و«سريرتُهُ» فاعلٌ)</td><td>ظاهرٌ: الضمةُ الظاهرةُ</td></tr>
+        <tr><td>«سُجِنَ اللصُّ»</td><td>سُجِنَ</td><td>اللصُّ</td><td>ظاهرٌ: الضمةُ الظاهرةُ</td></tr>
+        <tr><td>«الكتابُ كُتِبَ»</td><td>كُتِبَ</td><td>«هو» المستترُ العائدُ على الكتابِ</td><td>ضميرٌ مستترٌ</td></tr>
+        <tr><td>﴿هنالكَ ابْتُلِيَ المؤمنونَ﴾ [الأحزابِ: ١١]</td><td>ابْتُلِيَ</td><td>المؤمنونَ</td><td>ظاهرٌ: الواوُ (جمعُ مذكرٍ سالمٌ)</td></tr>
+        <tr><td>﴿وزُلْزِلوا زلزالًا شديدًا﴾ [الأحزابِ: ١١]</td><td>زُلْزِلوا</td><td>واوُ الجماعةِ</td><td>ضميرٌ متصلٌ مبنيٌّ على السكونِ في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿فإنْ أُحْصِرْتُمْ﴾ [البقرةِ: ١٩٦]</td><td>أُحْصِرْتُمْ</td><td>«تُمْ»</td><td>ضميرٌ متصلٌ في محلِّ رفعٍ</td></tr>
+        <tr><td>﴿قُضِيَ الأمرُ الذي فيه تستفتيانِ﴾ [يوسفَ: ٤١]</td><td>قُضِيَ: للمجهولِ / تستفتيانِ: للمعلومِ</td><td>الأمرُ (وألفُ «تستفتيانِ» فاعلٌ)</td><td>ظاهرٌ: الضمةُ الظاهرةُ</td></tr>
+        <tr><td>﴿يُعْرَفُ المجرمونَ﴾ [الرحمنِ: ٤١]</td><td>يُعْرَفُ: مضارعٌ مضمومُ الأوّلِ مفتوحُ ما قبلَ الآخرِ</td><td>المجرمونَ</td><td>ظاهرٌ: الواوُ (جمعُ مذكرٍ سالمٌ)</td></tr>
+        <tr><td>﴿فيُؤْخَذُ بالنواصي﴾ [الرحمنِ: ٤١]</td><td>يُؤْخَذُ</td><td>بالنواصي</td><td>شبهُ جملةٍ في محلِّ رفعٍ (والنواصي مجرورٌ بكسرةٍ مقدَّرةٍ للثقلِ)</td></tr>
+        <tr><td>«ذُهِبَ إلى الجامعةِ»</td><td>ذُهِبَ — فعلٌ لازمٌ</td><td>إلى الجامعةِ</td><td>جارٌّ ومجرورٌ في محلِّ رفعٍ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨: الخلاصة ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>خلاصةُ الدرس</h2></div>
+  <ul class="summary-points">
+    <li>نائبُ الفاعلِ — وسمَّاه ابنُ آجرومٍ <b>«المفعولَ الذي لم يُسَمَّ فاعلُهُ»</b> — هو <b>الاسمُ المرفوعُ الذي لم يُذكَرْ معه فاعلُهُ</b>؛ حضرَ عندَ غيابِ الفاعلِ فأخذَ حكمَهُ في الرفعِ.</li>
+    <li>يُحذفُ الفاعلُ للاختصارِ أو للإبهامِ أو للجهلِ به، ويجبُ حينئذٍ <b>تأخيرُ</b> النائبِ عن فعلِهِ و<b>رفعُهُ</b>.</li>
+    <li>صيغةُ الفعلِ: <b>الماضي</b> يُضَمُّ أوّلُهُ ويُكسَرُ ما قبلَ آخرِهِ (ضُرِبَ)، و<b>المضارعُ</b> يُضَمُّ أوّلُهُ ويُفتَحُ ما قبلَ آخرِهِ (يُضْرَبُ).</li>
+    <li>التحويلُ ثلاثُ خطواتٍ: <b>تغييرُ صيغةِ الفعلِ، ثم حذفُ الفاعلِ، ثم إنابةُ المفعولِ بهِ مرفوعًا</b>: «ضَرَبَ محمدٌ عليًّا» ← «ضُرِبَ عليٌّ».</li>
+    <li>الأصلُ أن ينوبَ <b>المفعولُ بهِ</b>، فإن لم يوجدْ — كالفعلِ اللازمِ — نابَ غيرُهُ كـ<b>الجارِّ والمجرورِ</b> («ذُهِبَ إلى الجامعةِ»، ﴿فيُؤخَذُ بالنواصي﴾).</li>
+    <li>قسمتُهُ قسمةُ الفاعلِ: <b>ظاهرٌ</b> و<b>مضمرٌ اثنا عشرَ</b> (ضُرِبْتُ… ضُرِبْنَ)، والمضمرُ بارزٌ متصلٌ أو مستترٌ (هو / هي)؛ والتاءُ في «ضُرِبْتُ» <b>نائبُ فاعلٍ لا فاعلٌ</b>.</li>
+  </ul>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>وجهُ المقارنةِ</th><th>الفاعلُ</th><th>نائبُ الفاعلِ</th></tr></thead>
+      <tbody>
+        <tr><td>الفعلُ قبلَهُ</td><td>مبنيٌّ للمعلومِ (لما سُمِّيَ فاعلُهُ)</td><td>مبنيٌّ للمجهولِ (لما لم يُسَمَّ فاعلُهُ)</td></tr>
+        <tr><td>صيغةُ الماضي</td><td>ضَرَبَ — قَرَأَ — قَتَلَ</td><td>ضُرِبَ — قُرِئَ — قُتِلَ</td></tr>
+        <tr><td>صيغةُ المضارعِ</td><td>يَضْرِبُ — يَعْرِفُ — يَأْخُذُ</td><td>يُضْرَبُ — يُعْرَفُ — يُؤْخَذُ</td></tr>
+        <tr><td>حكمُهُ</td><td>الرفعُ</td><td>الرفعُ — يأخذُ حكمَ الفاعلِ</td></tr>
+        <tr><td>أصلُهُ</td><td>مُحدِثُ الفعلِ</td><td>مفعولٌ بهِ في الأصلِ، أو جارٌّ ومجرورٌ إن عُدِمَ المفعولُ بهِ</td></tr>
+        <tr><td>أقسامُهُ</td><td>ظاهرٌ ومضمرٌ (١٢)</td><td>ظاهرٌ ومضمرٌ (١٢) — نفسُ القسمةِ</td></tr>
+        <tr><td>مثالٌ</td><td>«ضَرَبَ محمدٌ عليًّا»</td><td>«ضُرِبَ عليٌّ»</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box note"><span class="tag">تمَّ الدرسُ</span><p style="margin:0">وبهذا يكونُ الشيخُ قد أنهى الكلامَ على <b>نائبِ الفاعلِ</b> أو المفعولِ الذي لم يُسَمَّ فاعلُهُ، وإن شاءَ اللهُ في الدرسِ القادمِ نتكلمُ على <b>المبتدأِ والخبرِ</b>، وهو أيضًا من المرفوعاتِ.</p></div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ ١٣ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=L5lFwQuJinA" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

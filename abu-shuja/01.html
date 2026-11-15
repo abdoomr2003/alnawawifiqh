@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="شرح متن أبي شجاع — الدرس الأول: كتاب الطهارة (فصل المياه وأقسامها، وفصل جلود الميتة والدباغ) — تحرير كتابي كامل للدرس">
+<title>شرح متن أبي شجاع (١) — كتاب الطهارة | الشيخ لبيب نجيب</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf7ef;
+    --card:#ffffff;
+    --ink:#29241c;
+    --muted:#7a7160;
+    --green:#115740;
+    --green-dark:#0a3b2a;
+    --green-soft:#e9f2ec;
+    --green-line:#cfe0d5;
+    --gold:#a9822a;
+    --gold-bright:#d4af5a;
+    --gold-soft:#faf3df;
+    --gold-line:#e5d7ae;
+    --red:#a03325;
+    --red-soft:#fbeeea;
+    --blue:#2e5f8a;
+    --blue-soft:#eef4f9;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Amiri','Scheherazade New','Traditional Arabic',serif;
+    font-size:19px;
+    line-height:2.05;
+    text-align:justify;
+  }
+  ::selection{background:var(--gold-soft)}
+
+  /* ============ الغلاف ============ */
+  .cover{
+    min-height:100vh;
+    background:
+      radial-gradient(1100px 600px at 50% -10%, rgba(212,175,90,.16), transparent 60%),
+      radial-gradient(900px 700px at 50% 115%, rgba(212,175,90,.10), transparent 55%),
+      linear-gradient(160deg,#0e4733 0%, #0a3b2a 55%, #072a1d 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:44px 20px;
+    position:relative;
+    color:#f5eedb;
+  }
+  .cover-frame{
+    width:min(760px,100%);
+    border:1px solid rgba(212,175,90,.75);
+    outline:3px double rgba(212,175,90,.55);
+    outline-offset:8px;
+    border-radius:6px;
+    padding:52px 40px 40px;
+    text-align:center;
+    position:relative;
+    background:
+      radial-gradient(600px 260px at 50% 0%, rgba(255,255,255,.05), transparent 70%);
+  }
+  .basmala{font-size:1.35rem;color:var(--gold-bright);letter-spacing:1px;margin-bottom:6px}
+  .cover-series{
+    display:inline-block;
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    font-size:.85rem;
+    letter-spacing:.5px;
+    color:#dfd3ae;
+    border:1px solid rgba(212,175,90,.5);
+    border-radius:999px;
+    padding:4px 18px;
+    margin:10px 0 26px;
+  }
+  .cover-title{
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    font-weight:700;
+    font-size:clamp(2.1rem,6vw,3.4rem);
+    line-height:1.5;
+    color:#f8f1dd;
+    margin:6px 0 2px;
+    text-shadow:0 2px 14px rgba(0,0,0,.35);
+  }
+  .cover-matn-name{font-size:1.15rem;color:var(--gold-bright);font-style:italic;margin-bottom:22px}
+  .lesson-badge{
+    display:inline-block;
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    background:var(--gold-bright);
+    color:#25301f;
+    border-radius:999px;
+    font-size:1rem;
+    font-weight:600;
+    padding:5px 26px;
+    margin-bottom:14px;
+    box-shadow:0 2px 10px rgba(0,0,0,.3);
+  }
+  .cover-subtitle{
+    font-size:1.3rem;
+    line-height:1.9;
+    color:#e9e1c8;
+    margin:0 auto 26px;
+    max-width:56ch;
+  }
+  .cover-divider{margin:8px auto 22px;display:block}
+  .cover-meta{font-size:1.02rem;color:#e4dcc2;line-height:2.1}
+  .cover-meta .fill-in{
+    color:var(--gold-bright);
+    letter-spacing:2px;
+    border-bottom:1px dotted rgba(212,175,90,.8);
+    padding:0 14px;
+  }
+  .cover-link-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:linear-gradient(180deg,var(--gold-bright),#b8913c);
+    color:#1e291f;
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    text-decoration:none;
+    border-radius:10px;
+    padding:10px 30px;
+    box-shadow:0 3px 12px rgba(0,0,0,.35);
+  }
+  .cover-link-btn:hover{filter:brightness(1.06)}
+  .cover-url{direction:ltr;display:block;font-family:Tahoma,Arial,sans-serif;font-size:.72rem;color:#bfb490;margin-top:10px;letter-spacing:.3px}
+  .cover-note{
+    margin-top:26px;
+    font-size:.9rem;
+    color:#c9bfa0;
+    border-top:1px solid rgba(212,175,90,.35);
+    padding-top:14px;
+    line-height:1.9;
+    text-align:center;
+  }
+
+  /* ============ جسم الكتاب ============ */
+  main{max-width:900px;margin:0 auto;padding:34px 22px 10px}
+  section{scroll-margin-top:18px;background:var(--card);border:1px solid var(--gold-line);border-radius:16px;padding:30px 30px 24px;margin:0 0 34px;box-shadow:0 1px 6px rgba(60,50,20,.05)}
+  h2{
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    font-weight:600;
+    font-size:1.55rem;
+    color:var(--green-dark);
+    margin:0 0 6px;
+    line-height:1.7;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .secnum{
+    flex:0 0 auto;
+    width:44px;height:44px;
+    display:inline-flex;align-items:center;justify-content:center;
+    background:var(--green);
+    color:#f6efdb;
+    border-radius:12px;
+    font-size:1.15rem;
+    box-shadow:inset 0 0 0 2px rgba(212,175,90,.6);
+  }
+  .h-rule{height:3px;border:0;margin:8px 0 20px;background:linear-gradient(to left,var(--gold) 0%,var(--gold-line) 45%,transparent 100%);border-radius:2px}
+  h3{
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    font-weight:600;
+    font-size:1.22rem;
+    color:var(--green);
+    margin:26px 0 10px;
+    padding-right:14px;
+    border-right:4px solid var(--gold);
+    line-height:1.8;
+  }
+  h4{font-family:'Reem Kufi',Tahoma,sans-serif;font-weight:600;font-size:1.02rem;color:var(--green-dark);margin:18px 0 6px}
+  p{margin:10px 0}
+  ul,ol{padding-right:26px;margin:10px 0}
+  li{margin:6px 0}
+  b,strong{color:var(--green-dark)}
+  .muted{color:var(--muted)}
+  .center{text-align:center}
+
+  /* صناديق المحتوى */
+  .box{border-radius:12px;padding:16px 20px;margin:18px 0;position:relative;border:1px solid}
+  .box-label{
+    display:inline-block;
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.5px;
+    border-radius:999px;
+    padding:1px 14px;
+    margin-bottom:8px;
+  }
+  .matn{background:linear-gradient(180deg,#f2f8f4,#ebf3ed);border-color:var(--green-line);border-right:5px solid var(--green)}
+  .matn .box-label{background:var(--green);color:#f4eeda}
+  .matn .txt{font-size:1.18rem;line-height:2.15;color:#123827;font-weight:400}
+  .hadith{background:var(--green-dark);border-color:var(--green-dark);color:#f3ecd6;text-align:center}
+  .hadith .box-label{background:rgba(212,175,90,.25);color:var(--gold-bright)}
+  .hadith .txt{font-size:1.28rem;line-height:2;color:#f8f2df}
+  .hadith .src{font-size:.9rem;color:#cfc5a2;margin-top:6px}
+  .faida{background:var(--gold-soft);border-color:var(--gold-line);border-right:5px solid var(--gold)}
+  .faida .box-label{background:var(--gold);color:#fff}
+  .dabit{background:var(--blue-soft);border-color:#cddfeb;border-right:5px solid var(--blue)}
+  .dabit .box-label{background:var(--blue);color:#fff}
+  .tanbih{background:var(--red-soft);border-color:#eed7cd;border-right:5px solid var(--red)}
+  .tanbih .box-label{background:var(--red);color:#fff}
+  .example{background:#fff;border-style:dashed;border-color:var(--green-line);border-right:5px solid var(--green)}
+  .example .box-label{background:var(--green-soft);color:var(--green-dark);border:1px solid var(--green-line)}
+
+  /* الفهرس */
+  .toc{background:linear-gradient(180deg,#fffdf6,#faf6ea);border:1px solid var(--gold-line);border-radius:16px;padding:28px 30px;margin-bottom:34px}
+  .toc h2{margin-bottom:14px}
+  .toc ol{list-style:none;padding:0;margin:0}
+  .toc li{display:flex;align-items:baseline;gap:10px;margin:0;padding:4px 0}
+  .toc .t-title a{color:var(--ink);text-decoration:none}
+  .toc .t-title a:hover{color:var(--green)}
+  .toc .dots{flex:1;border-bottom:2px dotted var(--gold-line);transform:translateY(-6px)}
+  .toc .t-num{color:var(--gold);font-weight:700;min-width:26px;text-align:center}
+  .toc .sub{padding-right:38px;font-size:.95rem}
+  .toc .sub a{color:#4c4636}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid var(--gold-line)}
+  .legend span{font-family:'Reem Kufi',Tahoma,sans-serif;font-size:.75rem;border-radius:999px;padding:2px 13px}
+  .lg-matn{background:var(--green);color:#f4eeda}
+  .lg-hadith{background:var(--green-dark);color:var(--gold-bright)}
+  .lg-faida{background:var(--gold);color:#fff}
+  .lg-dabit{background:var(--blue);color:#fff}
+  .lg-tanbih{background:var(--red);color:#fff}
+  .lg-example{background:#fff;border:1px dashed var(--green-line);color:var(--green-dark)}
+  .lg-figure{background:var(--gold-soft);border:1px solid var(--gold-line);color:#6d5514}
+
+  /* الأشكال والمخططات */
+  figure.figure{
+    margin:22px 0;
+    background:#fffdf7;
+    border:1px solid var(--gold-line);
+    border-radius:14px;
+    padding:20px 20px 12px;
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+  figure.figure figcaption{
+    text-align:center;
+    color:var(--muted);
+    font-size:.88rem;
+    margin-top:12px;padding-top:10px;
+    border-top:1px dashed var(--gold-line);
+    line-height:1.8;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}
+  .chip{
+    background:var(--green-soft);
+    border:1px solid var(--green-line);
+    border-radius:999px;
+    padding:2px 16px;
+    font-size:.98rem;
+    white-space:nowrap;
+  }
+  .chip.gold{background:var(--gold-soft);border-color:var(--gold-line)}
+  .chip.red{background:var(--red-soft);border-color:#eed7cd}
+  .chip.blue{background:var(--blue-soft);border-color:#cddfeb}
+
+  /* خريطة: مقاصد ووسائل */
+  .mm-root{
+    width:fit-content;margin:0 auto;
+    background:var(--green-dark);color:#f6efdb;
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    font-size:1.1rem;
+    border-radius:14px;
+    padding:10px 34px;
+    text-align:center;
+    box-shadow:inset 0 0 0 2px rgba(212,175,90,.5);
+  }
+  .mm-root small{display:block;font-family:'Amiri',serif;font-size:.85rem;color:#d8cfa9;font-weight:400}
+  .mm-stem{width:3px;height:22px;background:var(--gold);margin:0 auto}
+  .mm-bar{height:3px;background:var(--gold);border-radius:2px;margin:0 12%}
+  .mm-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:0}
+  .mm-col{border:1.5px solid var(--green-line);border-radius:12px;overflow:hidden;background:#fff}
+  .mm-col header{
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    text-align:center;padding:8px 10px;font-size:1rem;
+  }
+  .mm-col.ma header{background:var(--green);color:#f2ecd8}
+  .mm-col.wa header{background:var(--gold);color:#fff}
+  .mm-col ul{list-style:none;margin:0;padding:10px 14px}
+  .mm-col li{margin:4px 0;text-align:center;border-bottom:1px dashed var(--green-line);padding:4px 0}
+  .mm-col li:last-child{border-bottom:0}
+  .mm-note{font-size:.9rem;color:var(--muted);text-align:center;margin-top:8px}
+  .mm-drop{width:3px;height:20px;background:var(--gold);margin:0 auto}
+
+  /* شجرة أقسام المياه */
+  .tree-root{
+    width:fit-content;margin:0 auto;
+    background:var(--green);color:#f6efdb;
+    font-family:'Reem Kufi',Tahoma,sans-serif;
+    font-size:1.15rem;
+    border-radius:999px;
+    padding:6px 40px;
+    box-shadow:inset 0 0 0 2px rgba(212,175,90,.55);
+  }
+  .tree-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:0}
+  .qism{border:1.5px solid;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+  .qism header{font-family:'Reem Kufi',Tahoma,sans-serif;text-align:center;font-size:1rem;padding:8px 10px;line-height:1.6}
+  .qism .items{padding:8px 12px 12px}
+  .qism .item{border-radius:9px;padding:7px 12px;margin:7px 0;font-size:.95rem;line-height:1.9}
+  .qism.q1{border-color:var(--green)}   .qism.q1 header{background:var(--green);color:#f2ecd8}
+  .qism.q1 .item{background:var(--green-soft);border:1px solid var(--green-line)}
+  .qism.q2{border-color:var(--gold)}    .qism.q2 header{background:var(--gold);color:#fff}
+  .qism.q2 .item{background:var(--gold-soft);border:1px solid var(--gold-line)}
+  .qism.q3{border-color:var(--red)}     .qism.q3 header{background:var(--red);color:#fbeee9}
+  .qism.q3 .item{background:var(--red-soft);border:1px solid #eed7cd}
+  .item b{display:block;font-size:.98rem}
+  .item small{color:var(--muted);font-size:.85rem;line-height:1.7;display:block}
+  .arrowdown{color:var(--gold);text-align:center;font-size:1.25rem;line-height:1.4;font-weight:700}
+
+  /* بطاقات الضوابط الثلاثة */
+  .cond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .cond{border:1.5px solid var(--green-line);border-top:5px solid var(--green);border-radius:12px;background:#fff;padding:12px 14px;text-align:center}
+  .cond .n{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:34px;height:34px;border-radius:50%;
+    background:var(--green);color:#f4eeda;
+    font-family:'Reem Kufi',Tahoma,sans-serif;font-weight:700;
+    margin-bottom:6px;
+  }
+  .cond h5{font-family:'Reem Kufi',Tahoma,sans-serif;font-size:.98rem;color:var(--green-dark);margin:4px 0 6px}
+  .cond p{font-size:.9rem;line-height:1.9;margin:0;color:#3d382e;text-align:center}
+
+  /* مقارنة القليل والكثير */
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;border:1.5px solid var(--gold-line);border-radius:14px;overflow:hidden;background:#fff}
+  .vs .side{padding:16px 18px}
+  .vs .side h4{margin:0 0 8px;text-align:center;font-size:1.05rem;border:0;padding:0}
+  .vs .side p{font-size:.95rem;line-height:2;margin:6px 0;text-align:center}
+  .vs .side.qalil{background:var(--red-soft)}
+  .vs .side.kathir{background:var(--green-soft)}
+  .vs .divider{width:1.5px;background:var(--gold-line)}
+  .vs-badge{
+    position:absolute;top:50%;right:50%;transform:translate(50%,-50%);
+    background:var(--gold);color:#fff;border-radius:999px;
+    font-family:'Reem Kufi',Tahoma,sans-serif;font-size:.78rem;
+    padding:4px 16px;box-shadow:0 0 0 5px #fffdf7;
+    white-space:nowrap;
+  }
+
+  /* خطوات أفقية */
+  .steps{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;justify-content:center}
+  .step{
+    flex:1 1 180px;
+    background:#fff;border:1.5px solid var(--green-line);
+    border-radius:11px;padding:10px 14px;text-align:center;font-size:.93rem;line-height:1.9;
+  }
+  .step b{display:block;font-family:'Reem Kufi',Tahoma,sans-serif;font-size:.95rem}
+  .step-arrow{align-self:center;color:var(--gold);font-size:1.3rem;font-weight:700;padding:0 2px}
+
+  /* جدول */
+  table.tbl{width:100%;border-collapse:collapse;margin:14px 0;font-size:.98rem}
+  table.tbl th{
+    background:var(--green);color:#f2ecd8;
+    font-family:'Reem Kufi',Tahoma,sans-serif;font-weight:500;
+    padding:8px 12px;border:1px solid var(--green-dark);
+  }
+  table.tbl td{border:1px solid var(--green-line);padding:8px 12px;line-height:1.9;background:#fff}
+  table.tbl tr:nth-child(even) td{background:#f7faf8}
+  table.tbl td:first-child{font-weight:700;color:var(--green-dark)}
+
+  /* تذييل */
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.9rem;
+    padding:26px 20px 40px;
+    line-height:2;
+  }
+  footer .fin{color:var(--green);font-size:1.05rem}
+
+  /* الطباعة */
+  @page{size:A4;margin:1.7cm 1.5cm}
+  @media print{
+    body{background:#fff;font-size:15px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .cover{min-height:96vh;page-break-after:always}
+    section,.toc,.box,figure.figure{page-break-inside:avoid}
+    h2{page-break-after:avoid}
+    section{box-shadow:none}
+    .cover-link-btn{border-radius:10px}
+    a{color:inherit;text-decoration:none}
+  }
+  @media (max-width:720px){
+    body{font-size:17px}
+    section{padding:22px 16px}
+    .tree-grid,.cond-grid,.vs,.mm-cols{grid-template-columns:1fr}
+    .vs-divider{display:none}
+    .vs-badge{position:static;transform:none;display:block;margin:6px auto;width:fit-content}
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ غلاف الكتاب ═══════════════════════ -->
+<div class="cover" id="cover">
+  <div class="cover-frame">
+    <div class="basmala">بِسْمِ اللهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+    <div class="cover-series">سِلْسِلَةُ دُرُوسِ شَرْحِ المُتُونِ الفِقْهِيَّةِ عَلَى مَذْهَبِ الإِمَامِ الشَّافِعِيِّ</div>
+
+    <h1 class="cover-title">شَرْحُ مَتْنِ أَبِي شُجَاع</h1>
+    <div class="cover-matn-name">«متن الغاية والتقريب» في فقه الإمام الشافعي</div>
+
+    <div class="lesson-badge">الدرسُ الأوَّل ١</div>
+
+    <p class="cover-subtitle">
+      كِتَابُ الطَّهَارَةِ:<br>
+      فَصْلُ المِيَاهِ الَّتِي يُجْزِئُ التَّطْهِيرُ بِهَا وَأَقْسَامُهَا،<br>
+      وَفَصْلُ جُلُودِ المَيْتَةِ وَالدِّبَاغِ
+    </p>
+
+    <svg class="cover-divider" width="260" height="26" viewBox="0 0 260 26" aria-hidden="true">
+      <g fill="none" stroke="#d4af5a" stroke-width="1.4">
+        <line x1="0" y1="13" x2="100" y2="13"/>
+        <line x1="160" y1="13" x2="260" y2="13"/>
+        <rect x="118" y="5" width="16" height="16" transform="rotate(45 126 13)"/>
+        <rect x="122" y="9" width="8" height="8" transform="rotate(45 126 13)" fill="#d4af5a" stroke="none"/>
+        <circle cx="106" cy="13" r="2.4" fill="#d4af5a" stroke="none"/>
+        <circle cx="146" cy="13" r="2.4" fill="#d4af5a" stroke="none"/>
+      </g>
+    </svg>
+
+    <div class="cover-meta">
+      مَتْنُ القَاضِي أَبِي شُجَاعَ أَحْمَدَ بْنِ الحُسَيْنِ الأَصْفَهَانِيِّ <span class="muted" style="color:#bfb490">(ت ٥٩٣هـ)</span><br>
+      الشَّارِحُ الصَّوْتِيُّ: فَضِيلَةُ الشَّيْخِ <span style="color:var(--gold-bright)">لُبَيْبٍ نَجِيبٍ</span>
+    </div>
+
+    <a class="cover-link-btn" href="https://www.youtube.com/watch?v=-41y-lDxE1k">مَصْدَرُ الدَّرْسِ عَلَى يُوتْيُوب ↗</a>
+    <span class="cover-url">https://www.youtube.com/watch?v=-41y-lDxE1k</span>
+
+    <div class="cover-note">
+      مُحَرَّرٌ مِنَ التَّفْرِيغِ الصَّوْتِيِّ الكَامِلِ لِلدَّرْسِ، أُعِيدَتْ صِيَاغَتُهُ بِأُسْلُوبٍ كِتَابِيٍّ مُرَتَّبٍ،<br>
+      مَعَ الحِفَاظِ عَلَى كَامِلِ المَحْتَوَى العِلْمِيِّ مِنْ غَيْرِ حَذْفٍ أَوِ اخْتِزَالٍ.
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══════════════════════ الفهرس ═══════════════════════ -->
+<nav class="toc" id="toc">
+  <h2><span class="secnum">☰</span> فهرسُ المحتويات</h2>
+  <ol>
+    <li><span class="t-num">١</span><span class="t-title"><a href="#s1">الاستفتاحُ ومنهجُ المجلس</a></span><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><span class="t-title"><a href="#s2">مقدمةُ المصنِّفِ وسببُ تأليفِ المتن</a></span><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><span class="t-title"><a href="#s3">أسماءُ المتنِ وشروحُه</a></span><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><span class="t-title"><a href="#s4">غرضُ المتنِ ومنهجُه ومَن وُجِّهَ إليه</a></span><span class="dots"></span></li>
+    <li><span class="t-num">٥</span><span class="t-title"><a href="#s5">مدخلٌ إلى كتابِ الطهارة: تعريفُها ومقاصدُها ووسائلُها</a></span><span class="dots"></span></li>
+    <li><span class="t-num">٦</span><span class="t-title"><a href="#s6">المياهُ التي يجوزُ التطهيرُ بها</a></span><span class="dots"></span></li>
+    <li><span class="t-num">٧</span><span class="t-title"><a href="#s7">أقسامُ المياه</a></span><span class="dots"></span></li>
+    <li class="sub"><a href="#s7a">٧/١　الماءُ الطَّهورُ: أقسامُه وأحكامُه</a></li>
+    <li class="sub"><a href="#s7b">٧/٢　الماءُ الطاهرُ غيرُ المطهِّر</a></li>
+    <li class="sub"><a href="#s7c">٧/٣　الماءُ النجسُ: القليلُ والكثير</a></li>
+    <li class="sub"><a href="#s7d">٧/٤　تقديرُ القُلَّتين</a></li>
+    <li><span class="t-num">٨</span><span class="t-title"><a href="#s8">المائعاتُ غيرُ الماء</a></span><span class="dots"></span></li>
+    <li><span class="t-num">٩</span><span class="t-title"><a href="#s9">فائدةٌ في علةِ كراهةِ الماءِ المُشمَسِ وتطبيقِها المعاصر</a></span><span class="dots"></span></li>
+    <li><span class="t-num">١٠</span><span class="t-title"><a href="#s10">فصلٌ: جلودُ الميتةِ والدِّباغ</a></span><span class="dots"></span></li>
+    <li><span class="t-num">١١</span><span class="t-title"><a href="#s11">الضابطُ الختاميُّ وختامُ الدرس</a></span><span class="dots"></span></li>
+  </ol>
+  <div class="legend">
+    <span class="lg-matn">نصُ المتن</span>
+    <span class="lg-hadith">حديث</span>
+    <span class="lg-faida">فائدة</span>
+    <span class="lg-dabit">ضابط</span>
+    <span class="lg-tanbih">تنبيه / استدراك</span>
+    <span class="lg-example">مثال</span>
+    <span class="lg-figure">شكلٌ ومخطط</span>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ ١ الاستفتاح ═══════════════════════ -->
+<section id="s1">
+  <h2><span class="secnum">١</span> الاستفتاحُ ومنهجُ المجلس</h2>
+  <hr class="h-rule">
+  <p>الحمدُ للهِ ربِّ العالمين، والصلاةُ والسلامُ على سيدِ الأولينَ والآخِرين، سيدِنا محمدٍ وعلى آلِهِ وأصحابِهِ الطَّيِّبينَ الطَّاهِرين، أمَّا بعدُ:</p>
+  <p>فأسألُ اللهَ سبحانه وتعالى أن يَمُنَّ علينا بالعلمِ النافعِ والعملِ الصالحِ، وأن يُفَقِّهَنا في الدِّينِ، وأن يفتحَ لنا فُتُوحَ العارفينَ، وأن يرزُقَنا الإخلاصَ في الأقوالِ والأعمالِ، اللهمَّ آمين.</p>
+  <p>هذا هو المجلسُ الأوَّلُ في شرحِ متنِ أبي شُجاع. وسنمضي في هذا الشرحِ على منهجٍ واضحٍ: <b>نُبيِّنُ مسائلَ هذا المتنِ، ونُوضِّحُ قُيودَها، ونذكرُ الأدلَّةَ أحيانًا</b>. وسيكونُ الشرحُ الموسَّعُ لشرحِ هذا المتنِ في المقرَّرِ القادمِ بإذنِ اللهِ تعالى.</p>
+</section>
+
+<!-- ═══════════════════════ ٢ مقدمة المصنف ═══════════════════════ -->
+<section id="s2">
+  <h2><span class="secnum">٢</span> مقدمةُ المصنِّفِ وسببُ تأليفِ المتن</h2>
+  <hr class="h-rule">
+  <p>افتتحَ القاضي العلامةُ <b>أبو شُجاعٍ أحمدُ بنُ الحُسينِ الأصفهانيُّ</b> — رحمه اللهُ تعالى — مختصرَهُ بمقدمةٍ بيَّنَ فيها سببَ تأليفِهِ لهذا المتنِ، فقال رحمه اللهُ تعالى:</p>
+
+  <div class="box matn">
+    <span class="box-label">نصُ المتن</span>
+    <div class="txt">«سَأَلَنِي بَعْضُ الأَصْدِقَاءِ — حَفِظَهُمُ اللهُ تَعَالَى — أَنْ أَعْمَلَ مُخْتَصَرًا فِي الفِقْهِ عَلَى مَذْهَبِ الإِمَامِ الشَّافِعِيِّ رَحِمَهُ اللهُ تَعَالَى وَرِضْوَانُهُ، فِي غَايَةِ الاخْتِصَارِ وَنِهَايَةِ الإِيجَازِ؛ لِيَقْرُبَ عَلَى المُتَعَلِّمِ دَرْسُهُ، وَيَسْهُلَ عَلَى المُبْتَدِئِ حِفْظُهُ، وَأَنْ أُكْثِرَ مِنَ التَّقْسِيمَاتِ وَحَصْرِ الخِصَالِ. فَأَجَبْتُهُ إِلَى ذَلِكَ طَالِبًا لِلثَّوَابِ، رَاغِبًا إِلَى اللهِ سُبْحَانَهُ وَتَعَالَى فِي التَّوْفِيقِ لِلصَّوَابِ، إِنَّهُ عَلَى مَا يَشَاءُ قَدِيرٌ، وَبِعِبَادِهِ لَطِيفٌ خَبِيرٌ».</div>
+  </div>
+
+  <p>بيَّنَ المصنِّفُ — رحمه اللهُ تعالى — في هذه المقدمةِ <b>سببَ تأليفِ الكتابِ</b>: وهو أنَّ بعضَ الأصدقاءِ سألوهُ أن يصنعَ هذا المختصرَ، ودعا لهم بأن يحفظَهم اللهُ سبحانه وتعالى؛ <b>وهم جديرونَ بالدُّعاءِ؛ لأنهم كانوا سببًا في هذا التأليفِ المباركِ</b> الذي اهتمَّ به أهلُ العلمِ شرحًا وتدريسًا.</p>
+
+  <div class="box faida">
+    <span class="box-label">تَعْرِيف</span>
+    <p style="margin:0"><b>الإمامُ الشافعيُّ</b> هو محمدُ بنُ إدريسَ، المتوفَّى سنةَ <b>٢٠٤</b> من الهجرةِ، رحمه اللهُ تعالى ورضي عنه.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ ٣ أسماء المتن ═══════════════════════ -->
+<section id="s3">
+  <h2><span class="secnum">٣</span> أسماءُ المتنِ وشروحُه</h2>
+  <hr class="h-rule">
+  <p>وبيَّنَ — أيضًا — أنَّ هذا المتنَ في <b>غايةِ الاختصارِ ونهايةِ الإيجازِ</b>. ولعلَّ عددًا من العلماءِ أخذوا من قولِهِ «في غايةِ الاختصارِ» <b>اسمَ هذا المتنِ</b>؛ ولذلك ألَّفَ العلامةُ تقيُّ الدينِ الحِصنيُّ — رحمه اللهُ تعالى — كتابَهُ وسمَّاهُ: <b>«كفايةَ الأخيارِ شرحُ غايةِ الاختصارِ»</b>.</p>
+  <p>وقد اشتهرَ هذا المتنُ باسمِ <b>«متنِ أبي شُجاع»</b> نسبةً إلى مؤلِّفِهِ؛ ولذلك ألَّفَ العلامةُ الكبيرُ الفقيهُ الخطيبُ الشربينيُّ كتابَهُ <b>«الإقناعَ»</b> شرحًا لمتنِ أبي شُجاع، <b>وهو من أحسنِ الشروحِ الموضوعةِ على هذا المتنِ</b>.</p>
+  <p>وعُرِفَ — أيضًا — هذا المتنُ باسمِ <b>«متنِ الغايةِ والتقريب»</b>؛ ولذلك جاءت أسماءُ جملةٍ من شروحِهِ ونظمِهِ مستمدَّةً منه:</p>
+  <ul>
+    <li>شرحُ ابنِ قاسم — رحمه الله — وهو الشرحُ المشهورُ الذي وُضِعَت عليه حواشٍ كثيرةٌ — واسمُهُ: <b>«فتحُ القريبِ المجيبِ شرحُ متنِ الغايةِ والتقريب»</b>.</li>
+    <li>نظمُ العَمْريطيِّ واسمُهُ: <b>«نهايةُ التدريبِ نظمُ الغايةِ والتقريب»</b>.</li>
+    <li>شرحُ العلامةِ الحافظِ ابنِ دقيقٍ العيد واسمُهُ: <b>«تحفةُ اللبيبِ شرحُ الغايةِ والتقريب»</b>.</li>
+  </ul>
+  <p>فعلى كلِّ حالٍ، هذه أسماءُ هذا المتنِ المختصرِ، ويلخِّصُها الجدولُ الآتي:</p>
+
+  <figure class="figure">
+    <table class="tbl">
+      <tr><th>الاسمُ الذي عُرِفَ به المتن</th><th>العملُ المصنَّفُ عليه</th><th>صاحبُه</th></tr>
+      <tr><td>غايةُ الاختصار</td><td>كفايةُ الأخيارِ شرحُ غايةِ الاختصار</td><td>تقيُّ الدينِ الحِصني</td></tr>
+      <tr><td>متنُ أبي شُجاع</td><td>الإقناع — من أحسنِ الشروحِ الموضوعةِ على المتن</td><td>الخطيبُ الشربيني</td></tr>
+      <tr><td>الغايةُ والتقريب</td><td>فتحُ القريبِ المجيب (الشرحُ المشهورُ الذي وُضِعَت عليه حواشٍ كثيرة)</td><td>ابنُ قاسم</td></tr>
+      <tr><td>الغايةُ والتقريب</td><td>نهايةُ التدريب (نظمٌ)</td><td>العَمْريطي</td></tr>
+      <tr><td>الغايةُ والتقريب</td><td>تحفةُ اللبيب</td><td>الحافظُ ابنُ دقيقٍ العيد</td></tr>
+    </table>
+    <figcaption>شكل (١): أسماءُ متنِ أبي شُجاع وآثارُ العلماءِ عليه شرحًا ونظمًا</figcaption>
+  </figure>
+</section>
+
+<!-- ═══════════════════════ ٤ منهج المتن ═══════════════════════ -->
+<section id="s4">
+  <h2><span class="secnum">٤</span> غرضُ المتنِ ومنهجُه ومَن وُجِّهَ إليه</h2>
+  <hr class="h-rule">
+  <p>وبيَّنَ المصنِّفُ — رحمه اللهُ تعالى — <b>الغرضَ والهدفَ</b> من هذا المتنِ: <b>أن يقرُبَ درسُهُ، وأن يسهُلَ حفظُهُ</b>.</p>
+  <p>وهذا البيانُ نستفيدُ منه أنَّ هذا المتنَ وُجِّهَ لشريحةٍ معيَّنةٍ من الطلبةِ، وهم <b>الطلبةُ المبتدئونَ في دراسةِ الفقهِ الشافعيِّ</b>. وحقُّ هذا المتنِ أن يُعرَضَ لهم <b>كما أرادهُ مصنِّفُهُ</b> رحمه اللهُ تعالى؛ فإنَّ حَشْرَ مسائلَ كثيرةٍ في هذا المتنِ ربما يضرُّ بالطالبِ المبتدئِ. فالأصلُ أن يبقى هذا المتنُ على مرادِ مصنِّفِهِ، ومن أرادَ الزيادةَ في المسائلِ فلينتقلْ إلى متنٍ أعلى من هذا المتنِ.</p>
+
+  <div class="box faida">
+    <span class="box-label">فائدةٌ منهجيَّة</span>
+    <p style="margin:0">متنُ أبي شُجاع متنُ <b>مبتدئين</b>: يُدرَّسُ لهم على مرادِ مصنِّفِهِ من غيرِ حَشْوٍ بالمسائلِ الزائدةِ، ومن تعدَّى هذا المستوى وأرادَ التوسُّعَ انتقلَ إلى المتونِ الأعلى منه.</p>
+  </div>
+
+  <p>ثم قالَ — رحمه اللهُ تعالى — مبيِّنًا <b>مميزاتِ هذا المختصرِ</b>: «وأن أُكثِرَ من <b>التقسيماتِ</b> و<b>حَصْرِ الخصالِ</b>». وهذا ملاحَظٌ في هذا المتنِ: فقد التزمَ المصنِّفُ — رحمه اللهُ تعالى — ذلك؛ فيذكرُ التقاسيمَ في كلِّ بابٍ من أبوابِ الكتابِ:</p>
+
+  <figure class="figure">
+    <div class="chips">
+      <span class="chip">كتابُ الطهارة ← أقسامُ المياه</span>
+      <span class="chip">بابُ الوضوء ← فروضُ الوضوء</span>
+      <span class="chip">بابُ الغسل ← موجباتُ الغسل</span>
+      <span class="chip">بابُ الصلاة ← أركانُ الصلاة</span>
+      <span class="chip gold">…وهكذا في كلِّ بابٍ تقاسيمُهُ</span>
+    </div>
+    <figcaption>شكل (٢): التزامُ المصنِّفِ بالإكثارِ من التقسيماتِ في كلِّ بابٍ</figcaption>
+  </figure>
+
+  <p>فرتَّبَ — رحمه اللهُ — مصنَّفَهُ ترتيبًا رائعًا لمن تفهَّمَ مقاصدَ المصنِّفِ في مسائلِ كتابِهِ، <b>فجزاهُ اللهُ خيرَ الجزاءِ، وأجزلَ اللهُ له الأجرَ والثوابَ</b>.</p>
+</section>
+
+<!-- ═══════════════════════ ٥ مدخل إلى الطهارة ═══════════════════════ -->
+<section id="s5">
+  <h2><span class="secnum">٥</span> مدخلٌ إلى كتابِ الطهارة</h2>
+  <hr class="h-rule">
+  <p>وحتى لا نطيلَ في المقدمةِ، نشرعُ مباشرةً في الكلامِ على الطهارةِ. قالَ المصنِّفُ رحمه اللهُ تعالى: «كتابُ الطهارة».</p>
+  <p>شرعَ اللهُ سبحانه وتعالى لنا أعظمَ العباداتِ البدنيَّةِ، وهي <b>عبادةُ الصلاةِ</b>، والصلاةُ <b>لا تُقبَلُ إلا بطهارةٍ</b>، كما قالَ النبيُّ ﷺ:</p>
+
+  <div class="box hadith">
+    <span class="box-label">حديث</span>
+    <div class="txt">«لَا يَقْبَلُ اللهُ صَلَاةً بِغَيْرِ طُهُورٍ»</div>
+  </div>
+
+  <h3>تعريفُ الطهارةِ لغةً واصطلاحًا</h3>
+  <ul>
+    <li><b>في اللغةِ:</b> النَّظافةُ.</li>
+    <li><b>وعندَ الفقهاءِ:</b> فِعلُ ما تُستباحُ به الصلاةُ ونحوُها، أو يحصلُ بها ثوابٌ مجرَّدٌ.</li>
+  </ul>
+  <p>وهذا التعريفُ يشملُ ما تُستباحُ به الصلاةُ — فيُستباحُ به الطَّوافُ أيضًا —. والذي تُستباحُ به الصلاةُ هو <b>الوضوءُ والغسلُ</b> إن وُجِدَ الماءُ، وإلا ف<b>التيمُّمُ</b>. وكذلك تُستباحُ الصلاةُ إذا <b>أُزيلتِ النجاسةُ عن البدنِ والثوبِ والمكانِ</b>. وهذه الأربعةُ — الوضوءُ والغسلُ والتيممُ وإزالةُ النجاسةِ — تسمى <b>«مقاصدَ الطهارةِ»</b>.</p>
+  <p>و<b>المطهِّراتُ أربعةُ أشياءَ</b>: الماءُ، والترابُ، وحجرُ الاستنجاءِ، والدَّابغُ. وهذه الأربعةُ تسمى <b>«وسائلَ الطهارةِ»</b>. وغيرُ هذه الأربعةِ — <b>كالشمسِ والريحِ — ليست من وسائلِ الطهارةِ في مذهبِ الإمامِ الشافعيِّ</b>.</p>
+
+  <figure class="figure">
+    <div class="mm-root">الطهارةُ الشرعيَّة<small>فعلُ ما تُستباحُ به الصلاةُ ونحوُها، أو يحصلُ بها ثوابٌ مجرَّدٌ</small></div>
+    <div class="mm-stem"></div>
+    <div class="mm-bar"></div>
+    <div class="mm-cols">
+      <div class="mm-col ma">
+        <div class="mm-drop"></div>
+        <header>مقاصدُ الطهارةِ (الأفعالُ المطلوبةُ) — أربعةٌ</header>
+        <ul>
+          <li>الوضوءُ</li>
+          <li>الغسلُ</li>
+          <li>التيممُ (عندَ فقدِ الماءِ)</li>
+          <li>إزالةُ النجاسةِ عن البدنِ والثوبِ والمكانِ</li>
+        </ul>
+        <div class="mm-note">بها تُستباحُ الصلاةُ والطوافُ</div>
+      </div>
+      <div class="mm-col wa">
+        <div class="mm-drop"></div>
+        <header>وسائلُ الطهارةِ (الأدواتُ) — أربعةٌ</header>
+        <ul>
+          <li>الماءُ <b>(أهمُّ الوسائلِ)</b></li>
+          <li>الترابُ</li>
+          <li>حجرُ الاستنجاءِ</li>
+          <li>الدَّابغُ</li>
+        </ul>
+        <div class="mm-note">الشمسُ والريحُ ليستا من وسائلِ الطهارةِ عندَ الشافعيَّةِ</div>
+      </div>
+    </div>
+    <figcaption>شكل (٣): خريطةٌ ذهنيَّةٌ لمقاصدِ الطهارةِ ووسائلِها</figcaption>
+  </figure>
+</section>
+
+<!-- ═══════════════════════ ٦ المياه السبعة ═══════════════════════ -->
+<section id="s6">
+  <h2><span class="secnum">٦</span> المياهُ التي يجوزُ التطهيرُ بها</h2>
+  <hr class="h-rule">
+  <p>قالَ المصنِّفُ رحمه اللهُ تعالى:</p>
+
+  <div class="box matn">
+    <span class="box-label">نصُ المتن</span>
+    <div class="txt">«فَصْلٌ: المِيَاهُ الَّتِي يُجْزِئُ التَّطْهِيرُ بِهَا سَبْعَةٌ: مَاءُ السَّمَاءِ، وَمَاءُ البَحْرِ، وَمَاءُ النَّهْرِ، وَمَاءُ البِئْرِ، وَمَاءُ العَيْنِ، وَمَاءُ الثَّلْجِ، وَمَاءُ البَرَدِ».</div>
+  </div>
+
+  <p>ذكرَ المصنِّفُ — رحمه اللهُ تعالى — المياهَ التي يجوزُ التطهيرُ بها — أيِ التي <b>يُشرَعُ</b> التطهيرُ بها — وأنها سبعةٌ: ماءُ السماءِ (أي ماءُ المطرِ)، وماءُ البحرِ، وماءُ النهرِ، وماءُ البئرِ، وماءُ العينِ، وماءُ الثلجِ، وماءُ البَرَدِ.</p>
+
+  <div class="box dabit">
+    <span class="box-label">الضابطُ الجامع</span>
+    <p style="margin:0">يجمعُ ذلك قولُك: <b>كلُّ ماءٍ نزلَ من السماءِ، أو خرجَ من الأرضِ، وبقيَ على أصلِ خِلقتِهِ</b> — فهذا ماءٌ طاهرٌ مطهِّرٌ، يصحُّ به الوضوءُ والغسلُ وإزالةُ النجاسةِ.</p>
+  </div>
+
+  <figure class="figure">
+    <div class="chips">
+      <span class="chip blue">من السماءِ: ماءُ السماءِ (المطرُ)</span>
+      <span class="chip blue">من السماءِ: ماءُ الثلجِ</span>
+      <span class="chip blue">من السماءِ: ماءُ البَرَدِ</span>
+    </div>
+    <div class="chips">
+      <span class="chip">من الأرضِ: ماءُ البحرِ</span>
+      <span class="chip">من الأرضِ: ماءُ النهرِ</span>
+      <span class="chip">من الأرضِ: ماءُ البئرِ</span>
+      <span class="chip">من الأرضِ: ماءُ العينِ</span>
+    </div>
+    <figcaption>شكل (٤): تصنيفٌ إيضاحيٌّ للمياهِ السبعةِ مبنيٌّ على الضابطِ الجامعِ (نزولٌ من السماءِ أو خروجٌ من الأرضِ مع البقاءِ على أصلِ الخِلقةِ)</figcaption>
+  </figure>
+
+  <p>وافتتحَ المصنِّفُ — رحمه اللهُ تعالى — كتابَ الطهارةِ بالكلامِ على المياهِ وأقسامِها؛ <b>لأن الماءَ أهمُّ وسيلةٍ من وسائلِ الطهارةِ</b>.</p>
+</section>
+
+<!-- ═══════════════════════ ٧ أقسام المياه ═══════════════════════ -->
+<section id="s7">
+  <h2><span class="secnum">٧</span> أقسامُ المياه</h2>
+  <hr class="h-rule">
+  <p>ثم بيَّنَ المصنِّفُ رحمه اللهُ تعالى أنَّ المياهَ على أربعةِ أقسامٍ، فقال:</p>
+
+  <div class="box matn">
+    <span class="box-label">نصُ المتن</span>
+    <div class="txt">«ثُمَّ المِيَاهُ عَلَى أَرْبَعَةِ أَقْسَامٍ: طَاهِرٌ مُطَهِّرٌ غَيْرُ مَكْرُوهٍ وَهُوَ المَاءُ المُطْلَقُ، وَطَاهِرٌ مُطَهِّرٌ مَكْرُوهٌ وَهُوَ المَاءُ المُشْمَسُ، وَطَاهِرٌ غَيْرُ مُطَهِّرٍ وَهُوَ المَاءُ المُسْتَعْمَلُ وَالمُتَغَيِّرُ بِمَا خَالَطَهُ مِنَ الطَّاهِرَاتِ، وَنَجِسٌ وَهُوَ الَّذِي حَلَّتْ فِيهِ النَّجَاسَةُ وَهُوَ دُونَ القُلَّتَيْنِ، أَوْ كَانَ قُلَّتَيْنِ فَتَغَيَّرَ. وَالقُلَّةُ خَمْسُمِائَةِ رِطْلٍ بِالبَغْدَادِيِّ تَقْرِيبًا فِي الأَصَحِّ».</div>
+  </div>
+
+  <p>بيَّنَ المصنِّفُ — رحمه اللهُ تعالى — أنَّ المياهَ تنقسمُ إلى أربعةِ أقسامٍ. وفي الحقيقةِ فإنَّ <b>القسمَ الأولَ والثانيَ يمكنُ أن يُضَمَّا في قسمٍ واحدٍ</b>؛ فنقولُ — كما قالَ غيرُ واحدٍ من فقهاءِ الشافعيةِ —: إنَّ الماءَ ينقسمُ إلى <b>ثلاثةِ أقسامٍ</b>:</p>
+
+  <figure class="figure">
+    <div class="tree-root">الماء</div>
+    <div class="arrowdown">▼</div>
+    <div class="tree-grid">
+      <div class="qism q1">
+        <header>طاهرٌ مطهِّرٌ<br>(الماءُ الطَّهورُ)</header>
+        <div class="items">
+          <div class="item"><b>طهورٌ غيرُ مكروهٍ</b><small>وهو الماءُ المطلقُ</small></div>
+          <div class="item"><b>طهورٌ مكروهٌ</b><small>مثالُه — وليس حصرًا —: الماءُ المُشمَسُ</small></div>
+          <div class="item"><b>طهورٌ محرَّمٌ</b><small>لم يذكرهُ المصنِّفُ؛ مثالُه: الماءُ المغصوبُ / المسروقُ</small></div>
+        </div>
+      </div>
+      <div class="qism q2">
+        <header>طاهرٌ غيرُ مطهِّرٍ<br>(نوعانِ)</header>
+        <div class="items">
+          <div class="item"><b>الماءُ المستعمَلُ</b><small>ما استُعمِلَ في فرضِ طهارةٍ وكان دونَ القلتينِ</small></div>
+          <div class="item"><b>المتغيِّرُ بما خالَطَهُ من الطاهراتِ</b><small>بشروطِهِ وضوابطِهِ الثلاثةِ</small></div>
+        </div>
+      </div>
+      <div class="qism q3">
+        <header>ماءٌ نجسٌ<br>(نوعانِ)</header>
+        <div class="items">
+          <div class="item"><b>الماءُ القليلُ (دونَ القلتينِ)</b><small>ينجسُ بمجرَّدِ ملاقاةِ نجاسةٍ غيرِ معفوٍّ عنها ولو لم يتغيَّرْ</small></div>
+          <div class="item"><b>الماءُ الكثيرُ (قلتانِ فأكثرُ)</b><small>لا ينجسُ إلا بتغيُّرِ أحدِ أوصافِهِ الثلاثةِ</small></div>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (٥): شجرةُ أقسامِ الماء — عندَ المصنِّفِ أربعةٌ، وعندَ غيرِ واحدٍ من فقهاءِ الشافعيةِ ثلاثةٌ بضمِّ الأولِ والثاني</figcaption>
+  </figure>
+
+  <!-- ٧/١ -->
+  <h3 id="s7a">٧/١　الماءُ الطَّهورُ: أقسامُهُ وأحكامُهُ</h3>
+  <p><b>القسمُ الأولُ: ماءٌ طاهرٌ مطهِّرٌ</b> — وهذا الماءُ الطاهرُ في نفسِهِ المطهِّرُ لغيرِهِ هو الذي يسمى بـ<b>«الماءِ الطَّهورِ»</b>. وهذا الماءُ الطهورُ ينقسمُ إلى قسمين: إمَّا أن يكونَ ماءً طهورًا <b>غيرَ مكروهٍ</b>، وإمَّا أن يكونَ ماءً طهورًا <b>مكروهًا</b>.</p>
+
+  <h4>أولًا: الماءُ الطهورُ المكروهُ — الماءُ المُشمَسُ</h4>
+  <p>ومثالُ الماءِ الطهورِ المكروهِ — <b>وليس حصرًا</b> — الماءُ المُشمَسُ. فالماءُ المشمسُ ماءٌ طهورٌ مكروهٌ، وإنما يكونُ مكروهًا إذا اجتمعتْ فيه الشروطُ الآتيةُ:</p>
+
+  <figure class="figure">
+    <div class="steps">
+      <div class="step"><b>أن يكونَ في إناءٍ من معدنٍ</b>غيرِ الذهبِ والفضةِ</div>
+      <div class="step-arrow">←</div>
+      <div class="step"><b>وُضِعَ في شدَّةِ الحرِّ</b></div>
+      <div class="step-arrow">←</div>
+      <div class="step"><b>في بلدٍ حارٍّ</b></div>
+    </div>
+    <p class="center" style="margin-top:12px"><span class="chip red">الحكمُ: يُكرَهُ استعمالُهُ في البدنِ</span></p>
+    <figcaption>شكل (٦): شروطُ كراهةِ استعمالِ الماءِ المُشمَسِ في البدنِ</figcaption>
+  </figure>
+
+  <h4>ثانيًا: الماءُ الطهورُ المحرَّمُ (استدراكٌ لم يذكرهُ المصنِّفُ)</h4>
+  <div class="box tanbih">
+    <span class="box-label">استدراك</span>
+    <p style="margin:0">هنالك ماءٌ طهورٌ لكنه <b>محرَّمٌ</b>، <b>ولم يذكرهُ المصنِّفُ</b> رحمه اللهُ تعالى، ومثالُهُ: <b>الماءُ المغصوبُ</b>. فالماءُ المغصوبُ أو الماءُ المسروقُ ماءٌ طهورٌ، لكن يحرُمُ استعمالُهُ.</p>
+  </div>
+
+  <!-- ٧/٢ -->
+  <h3 id="s7b">٧/٢　الماءُ الطاهرُ غيرُ المطهِّر</h3>
+  <p><b>القسمُ الثاني: ماءٌ طاهرٌ غيرُ مطهِّرٍ</b> — كما ذكرهُ المصنِّفُ رحمه اللهُ تعالى بقولِهِ «وطاهرٌ غيرُ مطهِّرٍ» — وهو نوعانِ:</p>
+
+  <h4>النوعُ الأولُ: الماءُ المستعمَلُ</h4>
+  <p><b>الماءُ المستعمَلُ: ما استُعمِلَ في فَرضِ طهارةٍ وكان دونَ القلتينِ.</b></p>
+  <p>ومعنى قولِنا «في فرضِ طهارةٍ»: أن يكونَ قد استُعمِلَ في <b>وضوءٍ واجبٍ</b> — في الغَسلةِ الأولى مثلًا — أو في <b>غسلٍ واجبٍ</b> كغُسلِ الجنابةِ، وكان دونَ القلتينِ، أي وكان قليلًا. وله قيدانِ وشرطٌ ثالثٌ:</p>
+
+  <figure class="figure">
+    <div class="cond-grid">
+      <div class="cond">
+        <span class="n">١</span>
+        <h5>استُعمِلَ في طهارةٍ واجبةٍ (فرضِ طهارةٍ)</h5>
+        <p>فإن استُعمِلَ في طهارةٍ مستحبَّةٍ — كوضوءِ التجديدِ أو غُسلِ الجمعةِ — <b>بقي طهورًا</b></p>
+      </div>
+      <div class="cond">
+        <span class="n">٢</span>
+        <h5>وكان دونَ القلتينِ</h5>
+        <p>فإن استُعمِلَ في طهارةٍ واجبةٍ ثم جُمِعَ فكان قلتينِ فأكثرَ <b>كان طهورًا</b></p>
+      </div>
+      <div class="cond">
+        <span class="n">٣</span>
+        <h5>أن ينفصلَ عن العضوِ</h5>
+        <p>فما دامَ الماءُ متردِّدًا على العضوِ فلا يُحكَمُ عليه بالاستعمالِ</p>
+      </div>
+    </div>
+    <p class="center" style="margin-top:12px"><span class="chip">باجتماعِ القيدَينِ الأوَّلَينِ: ماءٌ طاهرٌ في نفسِهِ غيرُ مطهِّرٍ لغيرِهِ</span></p>
+    <figcaption>شكل (٧): قيدا الماءِ المستعمَلِ وشرطُهُ الثالثُ — فقولُنا «في طهارةٍ واجبةٍ» قيدٌ أخرجَ نَفلَ الطهارةِ، وقولُنا «دونَ القلتينِ» قيدٌ ثانٍ أخرجَ ما لو كان قلتينِ فأكثرَ</figcaption>
+  </figure>
+
+  <div class="box faida">
+    <span class="box-label">إحالة</span>
+    <p style="margin:0">ولعلَّنا إذا درسنا متنًا أوسعَ من هذا المتنِ أن نتكلَّمَ على مسألةِ انفصالِ الماءِ عن العضوِ بشكلٍ أوسعَ؛ لكن الذي يهمُّنا الآنَ أن نعرفَ أنَّ <b>الماءَ المستعمَلَ هو ما استُعمِلَ في طهارةٍ واجبةٍ وكان دونَ القلتينِ</b>.</p>
+  </div>
+
+  <h4>النوعُ الثاني: الماءُ المتغيِّرُ بما خالَطَهُ من الطاهراتِ</h4>
+  <p>فالماءُ إذا اختلطَ بشيءٍ طاهرٍ — <b>كحِبْرٍ أو صابونٍ</b> — فغيَّرَهُ تغيُّرًا كثيرًا <b>بحيثُ لا يُطلَقُ عليه اسمُ الماءِ</b>، فهذا ماءٌ <b>مسلوبُ الطَّهوريةِ</b>؛ بمعنى أنه وإن كان طاهرًا في نفسِهِ، لكنه ليس مطهِّرًا لغيرِهِ.</p>
+  <p>ويُشترَطُ أن يكونَ هذا التغيُّرُ <b>بما يُستغنى الماءُ عنه</b>؛ أمَّا إذا كان هذا التغيُّرُ حاصلًا — مثلًا — <b>بما في مَمَرِّ الماءِ أو بما في مَقَرِّهِ</b> (أي المكانِ الذي يستقرُّ فيه الماءُ)، فإنَّ هذا تغيُّرٌ لا يؤثِّرُ.</p>
+  <p>وضوابطُ المصنِّفِ في ذلك <b>ثلاثةُ ضوابطَ</b> — ونحن نهتمُّ بضوابطِ المصنِّفِ:</p>
+
+  <figure class="figure">
+    <div class="cond-grid">
+      <div class="cond">
+        <span class="n">١</span>
+        <h5>أن يكونَ هناك تغيُّرٌ فاحشٌ كثيرٌ واضحٌ</h5>
+        <p>فإن كان التغيُّرُ يسيرًا فإنه <b>لا يسلبُ الطَّهوريةَ</b></p>
+      </div>
+      <div class="cond">
+        <span class="n">٢</span>
+        <h5>أن يكونَ التغيُّرُ بالمُخالِطِ لا بالمُجاوِرِ</h5>
+        <p><b>المخالِطُ:</b> ما لا يمكنُ فصلُهُ عن الماءِ — كالحِبرِ والصابونِ ونحوِهما.<br><b>المجاوِرُ:</b> ما يمكنُ فصلُهُ عن الماءِ أو ما يتميَّزُ بالعينِ.<br>فلو اكتسبَ الماءُ رائحةً بمجرَّدِ مجاورةِ شيءٍ له، فلا تسلَبُ طُهوريتَهُ</p>
+      </div>
+      <div class="cond">
+        <span class="n">٣</span>
+        <h5>أن يكونَ هذا التغيُّرُ بشيءٍ طاهرٍ</h5>
+        <p>وهذا يُخرِجُ ما لو حصلَ التغيُّرُ بشيءٍ نجسٍ؛ فإن الماءَ إذا تغيَّرَ بشيءٍ محكومٍ بنجاستِهِ — سواءٌ قلَّ التغيُّرُ أو كثرَ — <b>فهو نجسٌ</b> كما سيأتي</p>
+      </div>
+    </div>
+    <figcaption>شكل (٨): الضوابطُ الثلاثةُ لسلبِ الماءِ طُهوريتَهُ بخالطِهِ من الطاهراتِ، ومثالُهُ: الحِبرُ والصابونُ</figcaption>
+  </figure>
+
+  <!-- ٧/٣ -->
+  <h3 id="s7c">٧/٣　الماءُ النجسُ: القليلُ والكثيرُ</h3>
+  <p><b>القسمُ الثالثُ</b> الذي ذكرهُ المصنِّفُ رحمه اللهُ هو <b>الماءُ النجسُ</b>، وهو نوعانِ:</p>
+
+  <h4>النوعُ الأولُ: الماءُ القليلُ (ما كان دونَ القلتينِ)</h4>
+  <p>وهذا الذي يسمى بـ<b>«الماءِ القليلِ»</b>. حكمُهُ أنه <b>ينجسُ إذا لاقَتْهُ نجاسةٌ غيرُ معفوٍّ عنها، حتى ولو لم يتغيَّرْ</b>. ولا يُشترَطُ أن تحِلَّ النجاسةُ في الماءِ، بل يكفي أن <b>تلاقِيَهُ</b> النجاسةُ.</p>
+  <p>وقولُنا «نجاسةٌ <b>غيرُ معفوٍّ عنها</b>» لنُخرِجَ النجاسةَ المعفوَّ عنها، كميتةِ <b>ما لا نفسَ له سائلةٌ</b> — كالذبابِ والنَّملِ والنَّحلِ —؛ فهذه ميتةٌ نجسةٌ في المذهبِ (في معتمَدِ المذهبِ): فميتةُ الذبابِ والنملِ والنحلِ نجسةٌ، لكنها <b>لا تُنجِّسُ الماءَ القليلَ؛ لأنه يُعفى عنها في الماءِ</b>.</p>
+  <p>فنقولُ: الماءُ القليلُ — وهو ما كان دونَ القلتينِ — إذا لاقَتْهُ نجاسةٌ غيرُ معفوٍّ عنها فإنه ينجسُ <b>مُطلقًا</b>. وما معنى قولِنا «مطلقًا»؟ أي: <b>سواءٌ تغيَّرَ أو لم يتغيَّرْ</b>.</p>
+
+  <h4>النوعُ الثاني: الماءُ الكثيرُ (ما كان قلتينِ فأكثرَ)</h4>
+  <p>فإنه <b>لا ينجسُ إلا إذا لاقَتْهُ نجاسةٌ فغيَّرَت أحدَ أوصافِهِ الثلاثةِ</b>: الطعمَ، أو اللونَ، أو الرائحةَ. ويُشترَطُ أن يتغيَّرَ <b>واحدٌ</b> من الأوصافِ الثلاثةِ، <b>ولا يُشترَطُ اجتماعُ</b> التغيُّرِ في الأوصافِ الثلاثةِ.</p>
+
+  <figure class="figure">
+    <div class="vs">
+      <div class="side qalil">
+        <h4>الماءُ القليلُ (دونَ القلتينِ)</h4>
+        <p>ينجسُ <b>بمجرَّدِ ملاقاةِ</b> نجاسةٍ غيرِ معفوٍّ عنها</p>
+        <p><b>ولو لم يتغيَّرْ</b> شيئًا من أوصافِهِ</p>
+        <p>ويُعفى عن ميتةِ ما لا نفسَ له سائلةٌ (الذبابُ والنملُ والنحلُ)</p>
+      </div>
+      <div class="divider vs-divider"></div>
+      <div class="side kathir">
+        <h4>الماءُ الكثيرُ (قلتانِ فأكثرُ)</h4>
+        <p>لا ينجسُ إلا إذا <b>تغيَّرَ أحدُ</b> أوصافِهِ الثلاثةِ</p>
+        <p>الطعمُ · اللونُ · الرائحةُ</p>
+        <p>يكفي تغيُّرُ وصفٍ واحدٍ، ولا يُشترَطُ اجتماعُ الثلاثةِ</p>
+      </div>
+      <div class="vs-badge">حدُّ الفصلِ: القلتانِ</div>
+    </div>
+    <figcaption>شكل (٩): مقارنةٌ بين حكمِ الماءِ القليلِ والماءِ الكثيرِ في التنجُّسِ</figcaption>
+  </figure>
+
+  <p>ودليلُ التفريقِ بين القليلِ والكثيرِ: قولُ النبيِّ ﷺ فيما رواهُ أبو داودَ:</p>
+
+  <div class="box hadith">
+    <span class="box-label">حديث</span>
+    <div class="txt">«إِذَا بَلَغَ المَاءُ قُلَّتَيْنِ لَمْ يَحْمِلْ خَبَثًا»</div>
+    <div class="src">رواه أبو داودَ، وفي روايةٍ: «لم يَنجُسْ»</div>
+  </div>
+
+  <!-- ٧/٤ -->
+  <h3 id="s7d">٧/٤　تقديرُ القُلَّتين</h3>
+  <p>وقُدِّرَت القُلَّتانِ بالمساحةِ بـ<b>ذراعٍ وربعٍ طُولًا وعَرضًا وعُمقًا</b>. والذراعُ تساوي تقريبًا <b>٤٨ سم</b>، فذراعٌ وربعٌ تساوي تقريبًا <b>٦٠ سم</b>.</p>
+  <p>وقد قُدِّرَت القُلَّتانِ — لمَّا شُرِحَ «فتحُ المعينِ» مع الإخوةِ — بما يعادلُ نحوَ <b>٢١٧ لترًا</b>. ومنهم من قدَّرها <b>بمئتي لترٍ (٢٠٠ لتر)</b>، ومنهم من قدَّرها <b>بمئةٍ وثلاثٍ وتسعين لترًا (١٩٣ لترًا)</b>. لكن الذي يظهرُ — واللهُ أعلمُ — أنَّ تقديرَ القلتينِ <b>بـ٢١٦ لترًا هو الأضبطُ</b>:</p>
+
+  <figure class="figure">
+    <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center">
+      <svg width="300" height="245" viewBox="0 0 340 260" aria-label="مكعب القلتين">
+        <!-- الوجه العلوي -->
+        <polygon points="170,28 272,80 170,132 68,80" fill="#cfe3d6" stroke="#115740" stroke-width="2"/>
+        <!-- الوجه الأمامي الأيمن -->
+        <polygon points="170,132 272,80 272,182 170,234" fill="#83b093" stroke="#115740" stroke-width="2"/>
+        <!-- الوجه الأمامي الأيسر -->
+        <polygon points="68,80 170,132 170,234 68,182" fill="#a6c8b1" stroke="#115740" stroke-width="2"/>
+        <!-- خطوط ماء على الوجه العلوي -->
+        <path d="M120,74 q12,-8 25,0 t25,0" fill="none" stroke="#115740" stroke-width="1.2" opacity=".5"/>
+        <path d="M140,90 q12,-8 25,0 t25,0" fill="none" stroke="#115740" stroke-width="1.2" opacity=".5"/>
+        <!-- خط القياس الأفقي -->
+        <line x1="68" y1="212" x2="170" y2="212" stroke="#a9822a" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <line x1="68" y1="204" x2="68" y2="220" stroke="#a9822a" stroke-width="1.5"/>
+        <line x1="170" y1="204" x2="170" y2="220" stroke="#a9822a" stroke-width="1.5"/>
+        <!-- خط القياس العمودي -->
+        <line x1="292" y1="80" x2="292" y2="182" stroke="#a9822a" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <line x1="284" y1="80" x2="300" y2="80" stroke="#a9822a" stroke-width="1.5"/>
+        <line x1="284" y1="182" x2="300" y2="182" stroke="#a9822a" stroke-width="1.5"/>
+        <!-- النصوص -->
+        <text x="119" y="238" font-family="Amiri,serif" font-size="15" fill="#0a3b2a" text-anchor="middle">ذراعٌ وربع ≈ ٦٠ سم</text>
+        <text x="309" y="137" font-family="Amiri,serif" font-size="15" fill="#0a3b2a" text-anchor="middle">٦٠ سم</text>
+        <text x="170" y="86" font-family="Amiri,serif" font-size="15" fill="#0a3b2a" text-anchor="middle">٦٠ سم</text>
+        <text x="170" y="16" font-family="Amiri,serif" font-size="16" font-weight="bold" fill="#0a3b2a" text-anchor="middle">القُلَّتانِ ≈ ٢١٦ لترًا</text>
+      </svg>
+      <table class="tbl" style="max-width:340px">
+        <tr><th colspan="2">تقديراتُ القلتينِ عندَ أهلِ العلمِ</th></tr>
+        <tr><td>٢١٧ لترًا</td><td>كما قُدِّرَت عندَ شرحِ «فتحِ المعينِ»</td></tr>
+        <tr><td>٢٠٠ لتر</td><td>قولٌ لبعضِ أهلِ العلمِ</td></tr>
+        <tr><td>١٩٣ لترًا</td><td>قولٌ لبعضِهم الآخرِ</td></tr>
+        <tr><td><b style="color:#a9822a">٢١٦ لترًا</b></td><td><b style="color:#a9822a">هو الأضبطُ — واللهُ أعلمُ</b></td></tr>
+      </table>
+    </div>
+    <figcaption>شكل (١٠): القُلَّتانِ مقدَّرتانِ بمكعَّبٍ طولُ ضلعِهِ ذراعٌ وربعٌ (نحوُ ٦٠ سم) في كلِّ بُعدٍ</figcaption>
+  </figure>
+
+  <div class="box faida">
+    <span class="box-label">توضيحٌ حسابيٌّ</span>
+    <p style="margin:0">ضلعُ المكعَّبِ ذراعٌ وربعٌ ≈ ٦٠ سم، فحجمُهُ = ٦٠ × ٦٠ × ٦٠ = ٢١٦٬٠٠٠ سم٣ = <b>٢١٦ لترًا تقريبًا</b>؛ ولهذا كان هذا التقديرُ هو الأضبطَ.</p>
+  </div>
+
+  <p>وهذا التقديرُ <b>تقريبيٌّ وليس تحديديًّا</b>؛ ولذلك قالَ المصنِّفُ رحمه اللهُ تعالى: «تقريبًا <b>في الأصحِّ</b>»، أي أنه تقريبيٌّ وليس تحديديًّا؛ <b>فلا يضرُّ نقصُ لترٍ أو لترينِ</b> مثلًا أو نحوِ ذلك.</p>
+</section>
+
+<!-- ═══════════════════════ ٨ المائعات ═══════════════════════ -->
+<section id="s8">
+  <h2><span class="secnum">٨</span> المائعاتُ غيرُ الماء</h2>
+  <hr class="h-rule">
+  <p>وقبلَ أن نختِمَ هذا الدرسَ نتكلَّمْ عن <b>المائعاتِ غيرِ الماءِ</b> — أي السوائلِ الأخرى غيرِ الماءِ — <b>كاللبنِ والزيتِ</b> ونحوِهما. فهذه المائعاتُ الأخرى غيرُ الماءِ <b>لها حكمُ الماءِ القليلِ</b>. وما معنى أنَّ لها حكمَ الماءِ القليلِ؟</p>
+  <p>أي كما قلنا في الماءِ القليلِ: إنه ينجسُ بمجرَّدِ ملاقاةِ النجاسةِ، <b>فكذلك هذه المائعاتُ — كاللبنِ والزيتِ والعصيرِ — تنجسُ بمجرَّدِ ملاقاةِ النجاسةِ وإن لم تتغيَّرْ، وإن كانت قلتينِ فصاعدًا</b>؛ لأن هذه المائعاتِ <b>لا يُشَقُّ حفظُها وإن كثرَتْ</b>.</p>
+
+  <div class="box dabit">
+    <span class="box-label">ضابط</span>
+    <p style="margin:0"><b>المائعاتُ غيرُ الماءِ لها حكمُ الماءِ القليلِ</b> — تنجسُ بمجرَّدِ الملاقاةِ، ولو بلغَت قلتينِ فأكثرَ؛ لأنها لا يُشَقُّ حفظُها.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ ٩ فائدة المشمس ═══════════════════════ -->
+<section id="s9">
+  <h2><span class="secnum">٩</span> فائدةٌ في علةِ كراهةِ الماءِ المُشمَسِ وتطبيقِها المعاصر</h2>
+  <hr class="h-rule">
+  <p>ويمكنُ أن نضيفَ مسألةً أُخرى: وهي أنَّ فقهاءَنا الشافعيةَ — رحمهم اللهُ تعالى — لمَّا ذكروا أنَّ الماءَ المشمسَ مكروهٌ، بيَّنوا أنَّ هذه الكراهةَ <b>كراهةٌ شرعيَّةٌ</b>.</p>
+  <p><b>فيسألُ سائلٌ: لماذا كانت شرعيَّةً؟</b> قالوا: <b>لأنه يورِثُ البَرَصَ</b>، والبَرَصُ من الأمراضِ الجلديَّةِ.</p>
+  <p><b>فيقالُ: فلماذا لا يكونُ حرامًا؟ لماذا لم يقولوا بالتحريمِ؟</b> فالجوابُ: أن فقهاءَ الشافعيةِ رحمهم اللهُ تعالى <b>لم يقولوا بالتحريمِ لندرةِ ترتُّبِ المرضِ</b> — وهو مرضُ البَرَصِ — على استعمالِ الماءِ المشمسِ؛ فلما كان ترتُّبُ المرضِ على استعمالِ الماءِ المشمسِ نادرًا، لم يقولوا بالتحريمِ.</p>
+
+  <div class="box faida">
+    <span class="box-label">تطبيقٌ معاصرٌ من الشارحِ (من قِبَلِ نفسِهِ)</span>
+    <p>يمكنُ أن يقالَ — وهذا أقولُهُ من قِبَلِ نفسي —: إنه <b>يُكرَهُ أيضًا استعمالُ الماءِ الموضوعِ في الأكياسِ البلاستيكيَّةِ والقواريرِ البلاستيكيَّةِ المعرَّضةِ لأشعةِ الشمسِ</b>؛ فإن الأطباءَ قد أخبروا وبيَّنوا أنَّ هذا ممَّا يسبِّبُ عددًا من الأمراضِ.</p>
+    <p>فبالتالي يمكنُ أن يقالَ: إنَّ هذا الماءَ الذي وُضِعَ في أكياسٍ بلاستيكيَّةٍ غيرِ مخصَّصةٍ، أو في قواريرَ بلاستيكيَّةٍ غيرِ مخصَّصةٍ لحفظِ الماءِ، في أشعةِ الشمسِ — وقد ثبتَ طِبًّا أنها تضرُّ بالجسمِ وتسبِّبُ بعضَ الأمراضِ كالسرطاناتِ ونحوِها كما يقولُ الأطباءُ — <b>قد يقالُ: إنَّ هذا يُمنَعُ شرعًا أو يُكرَهُ شرعًا، قياسًا على الماءِ المشمسِ</b>. طبعًا يُكرَهُ إذا كان ممَّا <b>يندرُ</b> ترتُّبُ المرضِ على استعمالِهِ، واللهُ أعلمُ.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ ١٠ جلود الميتة ═══════════════════════ -->
+<section id="s10">
+  <h2><span class="secnum">١٠</span> فصلٌ: جلودُ الميتةِ والدِّباغ</h2>
+  <hr class="h-rule">
+  <p>بيَّنَ المصنِّفُ رحمه اللهُ تعالى بعدَ ذلك ما يتعلَّقُ <b>بأحكامِ الجلودِ</b>. وقد مرَّ معنا أنَّ وسائلَ الطهارةِ أربعةُ أشياءَ: <b>الماءُ والترابُ وحجرُ الاستنجاءِ والدَّابغُ</b>. فتكلمَ المصنِّفُ رحمه اللهُ تعالى على جلودِ الميتةِ، فقال:</p>
+
+  <div class="box matn">
+    <span class="box-label">نصُ المتن</span>
+    <div class="txt">«فَصْلٌ: وَجُلُودُ المَيْتَةِ تَطْهُرُ بِالدِّبَاغِ، إِلَّا جِلْدَ الكَلْبِ وَالخِنْزِيرِ وَمَا تَوَلَّدَ مِنْهُمَا أَوْ مِنْ أَحَدِهِمَا، وَعَظْمُ المَيْتَةِ وَشَعْرُهَا إِلَّا الآدَمِيَّ».</div>
+  </div>
+
+  <h3>مناسبةُ هذا الفصلِ للذي قبلَهُ</h3>
+  <p>مناسبةُ هذا الفصلِ للذي قبلَهُ من جهتينِ:</p>
+  <ol>
+    <li><b>الجهةُ الأولى:</b> أنَّ الدَّابغَ من وسائلِ الطهارةِ؛ فلما تكلمَ على الماءِ — الذي هو الوسيلةُ الأهمُّ — ثنَّى بالكلامِ على أحكامِ الدَّابغِ (أحكامِ دباغِ الجلودِ).</li>
+    <li><b>الجهةُ الثانيةُ:</b> أنَّ الماءَ لا بدَّ له من إناءٍ يُحمَلُ فيه؛ ولما كان الغالبُ في الأواني في ذلك الزمنِ أنها تُصنَعُ من الجلودِ، احتجنا أن نعرفَ هذه الجلودَ <b>متى تكونُ طاهرةً ومتى تكونُ غيرَ طاهرةٍ</b>.</li>
+  </ol>
+
+  <h3>تعريفُ الميتةِ وأمثلتُها</h3>
+  <p><b>الميتةُ: ما فارقَتِ الحياةَ بغيرِ ذكاةٍ شرعيَّةٍ.</b></p>
+
+  <div class="box example">
+    <span class="box-label">أمثلة</span>
+    <ul style="margin:6px 0">
+      <li><b>ذبيحةُ الوثنيِّ:</b> فقد فارقَتِ الحياةَ بغيرِ ذكاةٍ شرعيَّةٍ.</li>
+      <li><b>ما لا تحلُّهُ الذكاةُ</b> — كالحمارِ الأهليِّ — فهو ميتةٌ.</li>
+      <li><b>شاةٌ خُنِقَتْ</b> أو <b>سقطَتْ من عُلوٍّ</b> من شاهقٍ فماتت، فهذه ميتةٌ.</li>
+    </ul>
+  </div>
+
+  <h3>حكمُ جلدِ الميتةِ: يطهُرُ بالدِّباغِ</h3>
+  <p>فما حكمُ جلدِ الميتةِ؟ الميتةُ بجميعِ أجزائِها — كما سيأتي في كلامِ المصنِّفِ لمَّا قالَ: «وعظمُ الميتةِ وشعرُها إلا الآدميَّ» — نجسةٌ بجميعِ أجزائِها: عظمًا وشعرًا وجلدًا ولحمًا وشحمًا ودمًا. <b>لكن جلدَ الميتةِ يطهُرُ بالدِّباغِ</b>، لقولِ النبيِّ ﷺ:</p>
+
+  <div class="box hadith">
+    <span class="box-label">حديث</span>
+    <div class="txt">«إِذَا دُبِغَ الإِهَابُ فَقَدْ طَهُرَ»</div>
+  </div>
+
+  <p>وهذا الحديثُ <b>عامٌّ في جميعِ الجلودِ</b>، لا يُستثنى منه إلا جلدُ الكلبِ والخنزيرِ؛ لأن جلدَ الكلبِ والخنزيرِ <b>لا يطهُرانِ بالدِّباغِ</b>؛ إذ إنَّ الكلبَ والخنزيرَ <b>نجسانِ في حالِ الحياةِ</b>، والدِّباغُ إنما يطهِّرُ الجلدَ الذي نجاستُهُ حصلَت <b>بالموتِ</b>. فالجلدُ الذي نجاستُهُ بالموتِ يطهِّرُهُ الدِّباغُ؛ أمَّا جلدُ الكلبِ وجلدُ الخنزيرِ فهما نجسانِ في حالِ الحياةِ.</p>
+
+  <h3>ما هو الدِّباغُ؟</h3>
+  <p><b>الدِّباغُ: نزعُ فضلاتِ الجلدِ بمادَّةٍ حريفةٍ</b>، سواءٌ كانت هذه المادةُ الحريفةُ:</p>
+  <ul>
+    <li><b>مادةً طاهرةً</b> — كقِشرِ الرمانِ والقَرَظِ —،</li>
+    <li><b>أو مادةً غيرَ طاهرةٍ</b> — مثل زَرْقِ الطيورِ —.</li>
+  </ul>
+  <p>فالمادةُ الحريفةُ، سواءٌ كانت طاهرةً أو غيرَ طاهرةٍ، <b>تصحُّ أن تكونَ آلةً في الدِّباغِ</b>. فمعنى الدَّبغِ: نزعُ فضلاتِ الجلدِ — <b>من شحمٍ وبقايا لحمٍ ودمٍ</b> — بمادةٍ حريفةٍ، بحيثُ تُرفَعُ هذه العفوناتُ عن الجلدِ، وحينئذٍ <b>يطهُرُ ظاهرُ الجلدِ وباطنُهُ</b>.</p>
+  <p>وأمَّا <b>الشعرُ الذي على الجلدِ فيطهُرُ قليلُهُ تبعًا للجلدِ</b>. وبعدَ الدِّباغِ <b>يجبُ غسلُ الجلدِ</b>، سواءٌ دُبِغَ الجلدُ بمادةٍ طاهرةٍ أو بمادةٍ غيرِ طاهرةٍ. <b>ويمكنُ استعمالُ المنظِّفاتِ المعاصرةِ في الدِّباغِ</b>.</p>
+
+  <figure class="figure">
+    <div class="steps">
+      <div class="step"><b>الميتةُ</b>ما فارقَتِ الحياةَ بغيرِ ذكاةٍ شرعيَّةٍ — نجسةٌ بجميعِ أجزائِها</div>
+      <div class="step-arrow">←</div>
+      <div class="step"><b>الدِّباغُ</b>نزعُ فضلاتِ الجلدِ (شحمٍ وبقايا لحمٍ ودمٍ) بمادَّةٍ حريفةٍ: طاهرةٍ كقشرِ الرمانِ والقَرَظِ، أو غيرِ طاهرةٍ كزَرْقِ الطيورِ — وتصلحُ المنظِّفاتُ المعاصرةُ</div>
+      <div class="step-arrow">←</div>
+      <div class="step"><b>يطهُرُ الجلدُ</b>ظاهرُهُ وباطنُهُ، ويطهُرُ الشعرُ القليلُ تبعًا له، ويجبُ غسلُ الجلدِ بعدَ الدِّباغِ مطلقًا</div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+      <span class="chip red">✗ لا يطهُرُ بالدِّباغِ: جلدُ الكلبِ والخنزيرِ — لأنهما نجسانِ في حالِ الحياةِ، والدِّباغُ يطهِّرُ ما نجاستُهُ بالموتِ</span>
+    </div>
+    <figcaption>شكل (١١): مسارُ تطهيرِ جلدِ الميتةِ بالدِّباغِ والاستثناءُ الواردُ فيه</figcaption>
+  </figure>
+
+  <h3>الاستثناءُ: ما لا يطهُرُ بالدِّباغِ</h3>
+  <p>قالَ المصنِّفُ رحمه اللهُ تعالى: «وجلودُ الميتةِ تطهُرُ بالدِّباغِ <b>إلا جلدَ الكلبِ والخنزيرِ</b>» — فهذا استثناءٌ: الذي لا يطهُرُ بالدِّباغِ جلدُ الكلبِ والخنزيرِ <b>وما تولَّدَ منهما أو من أحدِهما</b>:</p>
+  <ul>
+    <li><b>ما تولَّدَ منهما:</b> أي من كلبٍ مع خنزيرةٍ، أو من خنزيرٍ مع كلبةٍ.</li>
+    <li><b>أو من أحدِهما:</b> كأن يتولَّدَ من كلبٍ مع شاةٍ، أو من كبشٍ (ضأنٍ) مع كلبةٍ — لكن هذا غيرُ موجودٍ في الواقعِ، ولكن يذكرهُ الفقهاءُ.</li>
+  </ul>
+
+  <h3>عظمُ الميتةِ وشعرُها</h3>
+  <p>ثم قالَ المصنِّفُ رحمه اللهُ تعالى: «وعظمُ الميتةِ وشعرُها إلا الآدميَّ»؛ فبيَّنَ أنَّ الميتةَ بجميعِ أجزائِها — بما في ذلك <b>شعرُ الميتةِ وعظمُها — نجسانِ</b>، إلا في <b>الآدميِّ</b>؛ فعظمُ ميتةِ الآدميِّ وشعرُها طاهرانِ.</p>
+</section>
+
+<!-- ═══════════════════════ ١١ الخاتمة ═══════════════════════ -->
+<section id="s11">
+  <h2><span class="secnum">١١</span> الضابطُ الختاميُّ وختامُ الدرس</h2>
+  <hr class="h-rule">
+  <div class="box dabit" style="text-align:center">
+    <span class="box-label">الضابطُ الجامعُ في الميتات</span>
+    <p style="margin:0;font-size:1.15rem;line-height:2.2">جميعُ الميتاتِ <b>نجسةٌ</b> — بجميعِ أجزائِها — <b>إلا ثلاثًا</b>:</p>
+    <div class="chips" style="margin-top:10px">
+      <span class="chip">الآدميُّ</span>
+      <span class="chip">السَّمكُ</span>
+      <span class="chip">الجَرادُ</span>
+    </div>
+  </div>
+  <p>نقفُ هنا — واللهُ أعلمُ. وصلِّ اللهمَّ وبارِكْ على سيدِنا محمدٍ وعلى آلِهِ وصحبِهِ أجمعينَ، والسلامُ عليكم ورحمةُ اللهِ تعالى وبركاتُهُ.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="fin">۩ تمَّ بحمدِ اللهِ وتوفيقِه ۩</div>
+  تحريرٌ كتابيٌّ كاملٌ للتفريغِ الصوتيِّ للدرسِ الأولِ من شرحِ متنِ أبي شجاع — كتابِ الطهارة<br>
+  أُعيدت صياغةُ الألفاظِ بأسلوبٍ مؤلَّفيٍّ مع الحفاظِ على كاملِ المعلوماتِ والتفصيلاتِ الواردةِ في الدرسِ من غيرِ اختزالٍ.<br>
+  المصدرُ: <span style="direction:ltr;unicode-bidi:embed">https://www.youtube.com/watch?v=-41y-lDxE1k</span>
+</footer>
+
+</body>
+</html>

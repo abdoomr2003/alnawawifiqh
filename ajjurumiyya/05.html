@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>علامات الخفض — الدرس الخامس من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.ayq{color:var(--green-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:22px;font-weight:700;margin:0;color:#4a3b12;line-height:2.15}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row.cols-5::before{right:10%;left:10%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+@media (max-width:720px){
+  .tree-row{flex-direction:column;gap:26px}
+  .tree-row::before,.node::before{display:none}
+}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 12px;border:1px solid #10402c;font-size:16.5px;
+}
+td{border:1px solid var(--line);padding:8px 12px;background:#fff;vertical-align:top;line-height:1.9}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">علاماتُ الخفضِ</h1>
+    <div class="cover-sub">الدرس الخامس: بابُ معرفةِ علاماتِ الإعرابِ — علاماتُ الخفضِ (الجرِّ) الثلاثُ مع التطبيقاتِ</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b><br>
+      ومنظومتِها للعلامةِ النحويِّ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=FwVNfe4EwRE" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">نصُّ المتن ونظمُ الشنقيطيِّ</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">نظرةٌ عامّةٌ: علاماتُ الخفضِ ثلاثٌ</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">العلامةُ الأصليّةُ: الكسرةُ ومواضعُها الثلاثةُ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s4a">الموضعُ الأولُ: الاسمُ المفردُ المنصرفُ</a></li>
+        <li><a href="#s4b">الموضعُ الثاني: جمعُ التكسيرِ المنصرفُ</a></li>
+        <li><a href="#s4c">الموضعُ الثالثُ: جمعُ المؤنثِ السالمُ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">العلامةُ الفرعيّةُ الأولى: الياءُ ومواضعُها الثلاثةُ</a><span class="dots"></span></li>
+    <li><span class="t-num">٦</span><a href="#s6">العلامةُ الفرعيّةُ الثانيةُ: الفتحةُ في الاسمِ الممنوعِ من الصرفِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#s6a">الممنوعُ من الصرفِ لعلةٍ واحدةٍ</a></li>
+        <li><a href="#s6b">الممنوعُ من الصرفِ لعلّتَينِ</a></li>
+        <li><a href="#s6c">الأثرُ الإعرابيُّ وشواهدُه من القرآنِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٧</span><a href="#s7">التمريناتُ: أسئلةٌ على العلاماتِ</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t71">وقفةٌ: متى يعودُ الممنوعُ من الصرفِ إلى الكسرةِ؟</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٨</span><a href="#s8">تأمُّلُ الآياتِ: استخراجُ المجروراتِ وعلاماتِها</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t81">طرقُ الجرِّ الثلاثةُ</a></li>
+        <li><a href="#t83">الجدولُ التلخيصيُّ للتطبيقاتِ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٩</span><a href="#s9">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١ افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس</h2></div>
+
+  <p>بسمِ اللهِ الرحمنِ الرحيمِ، الحمدُ للهِ كما ينبغي لجلالِه وكمالِه، وصلَّى اللهُ وسلَّمَ على النبيِّ المصطفى وعلى آلِه. وبعدُ: فمرحبًا بكم أيها الإخوةُ الأفاضلُ والأخواتُ الفضلياتُ، ونحنُ الآنَ مع <b>الدرسِ الخامسِ</b> من دروسِ الآجروميّةِ، وهو <b>علاماتُ الخفضِ</b>. وكلمةُ «الخفضِ» — كما ذكرتُ سابقًا — بمعنى <b>الجرِّ</b>؛ فعلاماتُ الخفضِ أي علاماتُ الجرِّ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢ المتن والنظم ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>نصُّ المتن ونظمُ الشنقيطيِّ</h2></div>
+
+  <p>نقرأُ أولًا ما قالَه ابنُ آجرومَ رحمه اللهُ في علاماتِ الخفضِ، ثم أبياتَ الناظمِ <b>محمدِ بنِ آبِّه الشنقيطيِّ</b> — رحم اللهُ الجميعَ:</p>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«وللخفضِ الكسرةُ، والياءُ، والفتحةُ.<br>
+    فأما الكسرةُ فتكونُ علامةً للخفضِ في ثلاثةِ مواضعَ: في الاسمِ المفردِ المنصرفِ، وجمعِ التكسيرِ المنصرفِ، وجمعِ المؤنثِ السالمِ.<br>
+    وأما الياءُ فتكونُ علامةً للخفضِ في ثلاثةِ مواضعَ: في الأسماءِ الخمسةِ، وفي التثنيةِ والجمعِ.<br>
+    وأما الفتحةُ فتكونُ علامةً للخفضِ في الاسمِ الذي لا ينصرفُ»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">علامةُ الخفضِ التي بها يفي … كسرٌ وياءٌ ثم فتحٌ فاقتفي</div>
+      <div class="ln">فالخفضُ بالكسرِ لمفردٍ وفا … وجمعِ تكسيرٍ إذا ما انصرفا</div>
+      <div class="ln">وجمعِ تأنيثٍ سليمِ المبنى … واخفضْ بياءٍ يا أخي المثنى</div>
+      <div class="ln">والجمعِ والخمسةِ فاعرفْ واعترفْ … واخفضْ بفتحٍ كلَّ ما لا ينصرفْ</div>
+    </div>
+    <p class="src">— من نظمِ المقدّمةِ الآجروميّةِ للعلامةِ محمدِ بنِ آبِّه الشنقيطيِّ، كما أنشدَها الشيخُ في الدرسِ</p>
+  </div>
+
+  <p>وسنشرحُ هذا الكلامَ تفصيلًا.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣ نظرة عامة ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>نظرةٌ عامّةٌ: علاماتُ الخفضِ ثلاثٌ</h2></div>
+
+  <p>حصرَ ابنُ آجرومَ علاماتِ الخفضِ في <b>ثلاثِ علاماتٍ</b> هي: <b>الكسرةُ</b>، و<b>الياءُ</b>، و<b>الفتحةُ</b>. و<b>الكسرةُ هي العلامةُ الأصليّةُ للخفضِ (أو الجرِّ)</b>، ولها ثلاثةُ مواضعَ. وأما العلامتانِ الفرعيّتانُ فللجرِّ علامتانِ: <b>الياءُ</b> — ولها ثلاثةُ مواضعَ — و<b>الفتحةُ</b> — ولها موضعٌ واحدٌ هو الاسمُ الذي لا ينصرفُ (الممنوعُ من الصرفِ)، كما سيأتي تفصيلُ ذلك كلِّه.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">علاماتُ الخفضِ (الجرِّ) ثلاثٌ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الكسرةُ</div>
+        <div class="n-sub"><b>العلامةُ الأصليّةُ</b> — في ثلاثةِ مواضعَ:<br>الاسمُ المفردُ المنصرفُ، وجمعُ التكسيرِ المنصرفُ، وجمعُ المؤنثِ السالمُ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الياءُ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في ثلاثةِ مواضعَ:<br>الأسماءُ الخمسةُ، والمثنى، وجمعُ المذكرِ السالمُ</div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">الفتحةُ</div>
+        <div class="n-sub"><b>فرعيّةٌ</b> — في موضعٍ واحدٍ:<br>الاسمُ الممنوعُ من الصرفِ (الذي لا ينصرفُ)</div>
+      </div>
+    </div>
+    <figcaption>شكل (١): الخريطةُ العامّةُ لعلاماتِ الخفضِ — علامةٌ أصليّةٌ واحدةٌ وعلامتانِ فرعيّتانِ تنوبانِ عنها</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤ الكسرة ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>العلامةُ الأصليّةُ: الكسرةُ ومواضعُها الثلاثةُ</h2></div>
+
+  <p>الكسرةُ هي <b>العلامةُ الأصليّةُ</b> للخفضِ أو الجرِّ، وهذه العلامةُ الأصليّةُ تكونُ في <b>ثلاثةِ مواضعَ</b> هي: <b>الاسمُ المفردُ المنصرفُ</b>، و<b>جمعُ التكسيرِ المنصرفُ</b>، و<b>جمعُ المؤنثِ السالمُ</b>:</p>
+
+  <h3 id="s4a">الموضعُ الأولُ: الاسمُ المفردُ المنصرفُ</h3>
+  <p>قيدُ «المنصرفِ» الذي قيَّدَ به ابنُ آجرومَ الاسمَ المفردَ وجمعَ التكسيرِ <b>قيدٌ مهمٌّ</b>؛ لأنه إذا لم يكنْ منصرفًا — أي إذا كان <b>ممنوعًا من الصرفِ</b> — فإن علامةَ الخفضِ ستختلفُ: ستكونُ هي <b>الفتحةَ</b> وهي علامةٌ فرعيّةٌ. فالاسمُ المفردُ إذا كان <b>مصروفًا</b> — أي غيرَ ممنوعٍ من الصرفِ — فيكونُ مخفوضًا أو مجرورًا وعلامةُ خفضِه أو جرِّه هي <b>الكسرةُ الظاهرةُ</b>:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَشَرَوْهُ بِثَمَنٍ بَخْسٍ دَرَاهِمَ مَعْدُودَةٍ﴾<span class="ref">سورةُ يوسفَ: ٢٠</span></p>
+  </div>
+  <p>في قولِه تعالى: «وشروه بثمنٍ بخسٍ» نلاحظُ أن كلمةَ <span class="mark">«بثمنٍ»</span>: الباءُ حرفُ جرٍّ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ، و«ثمنٍ» هي <b>اسمٌ مجرورٌ بالباءِ وعلامةُ جرِّه الكسرةُ الظاهرةُ على آخرِه</b>؛ وطبعًا — كما نرى — هو <b>اسمٌ مصروفٌ</b> يعني <b>منوَّنٌ</b>. وكلمةُ <span class="mark">«بخسٍ»</span> أيضًا هي <b>نعتٌ أو صفةٌ لكلمةِ «ثمنٍ»</b>، وهي مجرورةٌ مثلَها <b>وعلامةُ جرِّها الكسرةُ الظاهرةُ على آخرِها</b>.</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ﴾<span class="ref">سورةُ البقرةِ: ٥</span></p>
+  </div>
+  <p>إذا تاملنا قولَ اللهِ تعالى: «أولئك على هدًى من ربِّهم»: عندنا أولًا «على هدًى»: <b>«على» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ</b>، و<span class="mark">«هدًى»</span> <b>اسمٌ مجرورٌ بعلى وعلامةُ جرِّه الكسرةُ</b> — لكن الكسرةَ ليستْ ظاهرةً هاهنا وإنما هي <b>مقدَّرةٌ للتعذُّرِ</b>؛ لأن آخرَ الكلمةِ ألفٌ، وكما قلنا مرارًا إن الكلمةَ إذا كانت منتهيةً بالألفِ فإن العلامةَ تُقدَّرُ عليها <b>للتعذُّرِ</b> — أي لاستحالةِ ظهورِ هذه العلامةِ عليها. ثم «من ربِّهم»: <b>«من» طبعًا حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ</b>، و<span class="mark">«ربِّ»</span> <b>اسمٌ مجرورٌ بمن وعلامةُ جرِّه الكسرةُ الظاهرةُ على آخرِه</b>. إذًا هذا هو الموضعُ الأولُ من المواضعِ التي تكونُ الكسرةُ فيها علامةً للخفضِ.</p>
+
+  <h3 id="s4b">الموضعُ الثاني: جمعُ التكسيرِ المنصرفُ</h3>
+  <p>الموضعُ الثاني الذي تكونُ فيه الكسرةُ علامةً للخفضِ هو <b>جمعُ التكسيرِ المنصرفُ</b>. نحنُ اتفقنا طبعًا على أن جمعَ التكسيرِ في كلِّ الأحوالِ السابقةِ التي ذكرناها — في حالةِ الرفعِ والنصبِ والخفضِ — <b>يُعرَبُ تمامًا كالمفردِ</b>؛ يعني يُعرَبُ بالعلامةِ الأصليّةِ. فهنا يعربُ بالعلامةِ الأصليّةِ وهي <b>الكسرةُ</b> إذا كان مجرورًا، <b>بشرطِ أن يكون منصرفًا</b>؛ لأنه إذا كان ممنوعًا من الصرفِ ستكونُ له علامةٌ أخرى كما أشرنا:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿لِّلرِّجَالِ نَصِيبٌ مِّمَّا اكْتَسَبُوا وَلِلنِّسَاءِ نَصِيبٌ مِّمَّا اكْتَسَبْنَ﴾<span class="ref">سورةُ النساءِ: ٣٢</span></p>
+  </div>
+  <p>إذا تاملنا قولَه تعالى: «للرجالِ نصيبٌ مما اكتسبوا»: <b>اللامُ حرفُ جرٍّ</b>، و<span class="mark">«الرجالِ»</span> هي <b>جمعُ تكسيرٍ</b>، وهي أُعربَتْ بالحركةِ الأصليّةِ هنا: كانت <b>مجرورةً وعلامةُ جرِّها الكسرةُ الظاهرةُ على آخرِها</b>.</p>
+
+  <h3 id="s4c">الموضعُ الثالثُ: جمعُ المؤنثِ السالمُ</h3>
+  <p>الموضعُ الثالثُ الذي تكونُ فيه الكسرةُ علامةً للجرِّ — وهي العلامةُ الأصليّةُ — هو <b>جمعُ المؤنثِ السالمُ</b>. فلو دققنا في قولِه تعالى مثلًا:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَقُل لِّلْمُؤْمِنَاتِ يَغْضُضْنَ مِنْ أَبْصَارِهِنَّ وَيَحْفَظْنَ فُرُوجَهُنَّ﴾<span class="ref">سورةُ النورِ: ٣١</span></p>
+  </div>
+  <p>«وقل للمؤمناتِ»: <b>اللامُ حرفُ جرٍّ</b>، و<span class="mark">«المؤمناتِ»</span> <b>اسمٌ مجرورٌ باللامِ وعلامةُ جرِّه الكسرةُ الظاهرةُ على آخرِه</b>.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الكسرةُ (العلامةُ الأصليّةُ) في ثلاثةِ مواضعَ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الاسمُ المفردُ المنصرفُ</div>
+        <div class="n-sub">المصروفُ = غيرُ الممنوعِ من الصرفِ (المنوَّنُ)<br>﴿وشروه بثمنٍ بخسٍ﴾ — ﴿على هدًى من ربِّهم﴾ (وهُدًى: كسرةٌ مقدَّرةٌ للتعذُّرِ)</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">جمعُ التكسيرِ المنصرفُ</div>
+        <div class="n-sub">يُعرَبُ في رفعِه ونصبِه وجرِّه كالمفردِ، ما دام منصرفًا<br>﴿للرجالِ نصيبٌ مما اكتسبوا﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">جمعُ المؤنثِ السالمُ</div>
+        <div class="n-sub">﴿وقل للمؤمناتِ يغضضنَ من أبصارهنَّ…﴾</div>
+      </div>
+    </div>
+    <figcaption>شكل (٢): مواضعُ الكسرةِ الثلاثةُ — فإن كان الاسمُ المفردُ أو جمعُ التكسيرِ ممنوعًا من الصرفِ تغيَّرَتِ العلامةُ إلى الفتحةِ كما سيأتي</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥ الياء ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>العلامةُ الفرعيّةُ الأولى: الياءُ ومواضعُها الثلاثةُ</h2></div>
+
+  <p>ننتقلُ بعدَ ذلك إلى الكلامِ على <b>العلاماتِ الفرعيّةِ</b>؛ فقد انتهينا الآنَ من العلامةِ الأصليّةِ وهي الكسرةُ. أما العلاماتُ الفرعيّةُ فعندنا <b>علامتانِ</b> للجرِّ: <b>الياءُ</b> و<b>الفتحةُ</b>. أما <b>الياءُ</b> فهي علامةٌ للخفضِ في <b>ثلاثةِ مواضعَ</b>:</p>
+
+  <h3>الموضعُ الأولُ: الأسماءُ الخمسةُ</h3>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَإِذْ قَالَ إِبْرَاهِيمُ لِأَبِيهِ آزَرَ أَتَتَّخِذُ أَصْنَامًا آلِهَةً﴾<span class="ref">سورةُ الأنعامِ: ٧٤</span></p>
+  </div>
+  <p>إذا تاملنا قولَ اللهِ تعالى: «وإذ قال إبراهيمُ لأبيهِ آزر»: <span class="mark">«لأبيهِ»</span> — «أبيهِ» هنا <b>اسمٌ مجرورٌ باللامِ وعلامةُ جرِّه الياءُ لأنه من الأسماءِ الخمسةِ</b>، وقد تحققتْ فيه <b>شروطُ الأسماءِ الخمسةِ</b> لكي تُعرَبَ بالحروفِ: بالواوِ رفعًا، وبالألفِ نصبًا، وبالياءِ جرًّا؛ فهي طبعًا هنا «لأبيهِ» أُضيفتْ <b>لغيرِ ياءِ المتكلمِ</b>، و<b>ليست مجموعةً ولا مثنًّاةً</b>، و<b>ليست مصغَّرةً بل هي مكبَّرةٌ</b>؛ فإذًا انطبقتْ عليها الشروطُ فصحَّ إعرابُها بالحروفِ، فتكونُ هنا <b>مجرورةً وعلامةُ جرِّها الياءُ</b>.</p>
+
+  <h3>الموضعُ الثاني: المثنى</h3>
+  <p>في <b>المثنى</b> أيضًا من المواضعِ التي تكونُ علامةُ الخفضِ فيها الياءَ:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ﴾<span class="ref">سورةُ الكهفِ: ٦٠</span></p>
+  </div>
+  <p>«حتى أبلغَ مجمعَ البحرينِ»: كلمةُ <span class="mark">«البحرينِ»</span> ها هنا هي <b>المثنى</b>، وهي <b>مضافٌ إليه مجرورٌ وعلامةُ جرِّه الياءُ</b> لأنه مثنًّى.</p>
+
+  <h3>الموضعُ الثالثُ: الجمعُ (جمعُ المذكرِ السالمُ)</h3>
+  <p>وكذلك في <b>الجمعِ</b>:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿قُل لِّلْمُؤْمِنِينَ يَغُضُّوا مِنْ أَبْصَارِهِمْ وَيَحْفَظُوا فُرُوجَهُمْ﴾<span class="ref">سورةُ النورِ: ٣٠</span></p>
+  </div>
+  <p>«قل للمؤمنينَ»: <span class="mark">«المؤمنينَ»</span> <b>اسمٌ مجرورٌ باللامِ وعلامةُ جرِّه الياءُ</b> لأنه <b>جمعُ مذكرٍ سالمٌ</b>. والمقصودُ بالجمعِ طبعًا هو <b>جمعُ المذكرِ السالمُ</b>؛ لأن جمعَ التكسيرِ وجمعَ المؤنثِ السالمِ يُعرَبانِ وتكونُ علامةُ الإعرابِ فيهما عندَ الجرِّ أو الخفضِ هي <b>الكسرةُ</b>، إنما <b>جمعُ المذكرِ السالمِ</b> تكونُ علامتُه فرعيّةً وهي <b>الياءُ</b> عندَ الجرِّ.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الياءُ علامةُ خفضٍ في ثلاثةِ مواضعَ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الأسماءُ الخمسةُ</div>
+        <div class="n-sub">بشروطِها: مضافةٌ لغيرِ ياءِ المتكلمِ، مفردةٌ، مكبَّرةٌ<br>﴿وإذ قال إبراهيمُ لأبيهِ آزرَ﴾</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">المثنى</div>
+        <div class="n-sub">﴿حتى أبلغَ مجمعَ البحرينِ﴾<br>«البحرينِ»: مضافٌ إليه مجرورٌ بالياءِ</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الجمعُ</div>
+        <div class="n-sub">والمقصودُ به جمعُ المذكرِ السالمُ خاصّةً<br>﴿قل للمؤمنينَ يغضوا من أبصارِهم﴾</div>
+      </div>
+    </div>
+    <figcaption>شكل (٣): مواضعُ الياءِ الثلاثةُ — نيابةً عن الكسرةِ في الجرِّ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦ الفتحة والممنوع من الصرف ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>العلامةُ الفرعيّةُ الثانيةُ: الفتحةُ في الاسمِ الممنوعِ من الصرفِ</h2></div>
+
+  <p>العلامةُ الفرعيّةُ الثانيةُ والأخيرةُ من علاماتِ الخفضِ هي <b>الفتحةُ</b>، وتكونُ علامةً للخفضِ في <b>الاسمِ الممنوعِ من الصرفِ</b> — الاسمِ الذي لا ينصرفُ. و<b>الاسمُ الممنوعُ من الصرفِ متعددٌ وهو قسمانِ</b>: هناك أسماءٌ تكونُ ممنوعةً من الصرفِ — يعني ممنوعةً من التنوينِ — <b>لعلةٍ واحدةٍ</b>، وهناك أسماءٌ تُمنعُ من الصرفِ <b>لعلّتَينِ</b>.</p>
+
+  <h3 id="s6a">القسمُ الأولُ: الممنوعُ من الصرفِ لعلةٍ واحدةٍ (ثلاثةُ أنواعٍ)</h3>
+  <ul>
+    <li><b>الاسمُ الذي أتى على صيغةِ منتهى الجموعِ</b>: على <b>وزنِ مفاعلَ أو مفاعيلَ</b> — والوزنُ العامُّ يعني وليس الوزنَ الصرفيَّ — وهي كلُّ جمعِ تكسيرٍ كان على وزنِ مفاعلَ أو مفاعيلَ نسميهِ <b>بصيغةِ منتهى الجموعِ</b>؛ يعني التي تدلُّ على <b>أقصى الجمعِ</b>؛ ولذلك هذه العلةُ <b>قامتْ مقامَ علتَينِ</b>؛ لأنه ليس فقط دالًّا على الجمعِ في نفسِه، وإنما دلَّ على أقصى الجمعِ.</li>
+    <li><b>الاسمُ المؤنثُ بألفِ التأنيثِ المقصورةِ</b>: وهي ألفٌ زائدةٌ تلحقُ آخرَ الكلمةِ وتكونُ زائدةً عليها، وتدلُّ على تأنيثِ الكلمةِ؛ ككلمةِ <span class="mark">«سلمى»</span> و<span class="mark">«نشوى»</span> و<span class="mark">«نجوى»</span>: هذه الكلماتُ كلُّها تُمنعُ من الصرفِ لعلةٍ واحدةٍ هي كونُها مختومةً بألفِ التأنيثِ المقصورةِ.</li>
+    <li><b>الاسماءُ المختومةُ بألفِ التأنيثِ الممدودةِ</b>: وهي التي يكونُ شكلُها أن تأتيَ <b>همزةٌ زائدةٌ قبلَها ألفٌ زائدةٌ</b>؛ ككلمةِ <span class="mark">«صحراء»</span> و<span class="mark">«حمراء»</span> و<span class="mark">«جرداء»</span> إلى آخرِه، و<span class="mark">«نجلاء»</span>: هذه الكلماتُ كلُّها تُمنعُ من الصرفِ لعلةٍ واحدةٍ.</li>
+  </ul>
+
+  <h3 id="s6b">القسمُ الثاني: الممنوعُ من الصرفِ لعلّتَينِ</h3>
+  <p>وهناك الأسماءُ الممنوعةُ من الصرفِ لعلّتَينِ، وهي تنقسمُ أيضًا إلى قسمَينِ:</p>
+  <ul>
+    <li><b>ممنوعٌ من الصرفِ لكونِه علمًا معه علةٌ أخرى</b> — يعني هناك سببٌ آخرُ مع <b>العلميّةِ</b>:
+      <ul>
+        <li>قد تكونُ <b>العلميّةُ مع زيادةِ الألفِ والنونِ</b>، ككلمةِ <span class="mark">«رمضانَ»</span>.</li>
+        <li>قد تكونُ <b>العلميّةُ مع العجمةِ</b>، ككلمةِ <span class="mark">«إبراهيمَ»</span> و<span class="mark">«إسماعيلَ»</span>.</li>
+        <li>قد تكونُ <b>العلميّةُ مع وزنِ الفعلِ</b>، ككلمةِ <span class="mark">«يزيدَ»</span>.</li>
+      </ul>
+      هذه كلُّها كلماتٌ ممنوعةٌ من الصرفِ.
+    </li>
+    <li><b>وقد تكونُ العلةُ هي الوصفيّةَ</b>: أن تكونَ الكلمةُ أتتْ <b>وصفًا مشتقًّا ومعه علةٌ أخرى</b>:
+      <ul>
+        <li>كالوصفيّةِ مع <b>العدلِ</b>، مثلًا في كلمةِ <span class="mark">«أُخَرَ»</span>.</li>
+        <li>وكالوصفيّةِ مع <b>زيادةِ الألفِ والنونِ</b>، كما في كلمةِ <span class="mark">«عطشانَ»</span> مثلًا.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>وهكذا — كلُّ هذه الكلماتِ تكونُ <b>ممنوعةً من الصرفِ، يعني ممنوعةً من التنوينِ</b>.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الاسمُ الممنوعُ من الصرفِ (الذي لا ينصرفُ)</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node blue">
+        <div class="n-title">ممنوعٌ لعلةٍ واحدةٍ</div>
+        <div class="n-sub">
+          <ul>
+            <li><b>صيغةُ منتهى الجموعِ</b>: كلُّ جمعِ تكسيرٍ على وزنِ مفاعلَ أو مفاعيلَ (الوزنُ العامُّ) — لأنها تدلُّ على أقصى الجمعِ فقامَتِ العلةُ مقامَ علتَينِ: «مساجدُ — محاريبُ — تماثيلُ»</li>
+            <li><b>المؤنثُ بألفِ التأنيثِ المقصورةِ</b> (ألفٌ زائدةٌ تدلُّ على التأنيثِ): «سلمى — نشوى — نجوى»</li>
+            <li><b>المختومُ بألفِ التأنيثِ الممدودةِ</b> (ألفٌ زائدةٌ ثم همزةٌ زائدةٌ): «صحراء — حمراء — جرداء — نجلاء»</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node maroon">
+        <div class="n-title">ممنوعٌ لعلّتَينِ</div>
+        <div class="n-sub">
+          <ul>
+            <li><b>العلميّةُ + علةٍ أخرى</b>:
+              <ul>
+                <li>مع زيادةِ الألفِ والنونِ: «رمضانَ»</li>
+                <li>مع العجمةِ: «إبراهيمَ — إسماعيلَ»</li>
+                <li>مع وزنِ الفعلِ: «يزيدَ»</li>
+              </ul>
+            </li>
+            <li><b>الوصفيّةُ (وصفٌ مشتقٌّ) + علةٍ أخرى</b>:
+              <ul>
+                <li>مع العدلِ: «أُخَرَ»</li>
+                <li>مع زيادةِ الألفِ والنونِ: «عطشانَ»</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (٤): صورُ الممنوعِ من الصرفِ — والقاسمُ المشتركُ بينها كلِّها: منعُها من التنوينِ، وجرُّها بالفتحةِ</figcaption>
+  </figure>
+
+  <h3 id="s6c">الأثرُ الإعرابيُّ وشواهدُه من القرآنِ</h3>
+  <p>وبالنسبةِ <b>للأثرِ الإعرابيِّ</b> المترتبِ على كونِ الكلماتِ ممنوعةً من الصرفِ: فهذا الأثرُ <b>لا يكونُ إلا في حالةِ الجرِّ</b> التي معنا الآنَ — حالةِ الخفضِ؛ فعندما تُجرُّ هذه الأسماءُ التي مُنعتْ من الصرفِ تكونُ <b>علامةُ الجرِّ فيها هي الفتحةَ</b>. وإذا أردنا أمثلةً على هذا:</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿إِنَّا أَوْحَيْنَا إِلَيْكَ كَمَا أَوْحَيْنَا إِلَىٰ نُوحٍ وَالنَّبِيِّينَ مِن بَعْدِهِ ۚ وَأَوْحَيْنَا إِلَىٰ إِبْرَاهِيمَ وَإِسْمَاعِيلَ وَإِسْحَاقَ وَيَعْقُوبَ وَالْأَسْبَاطِ﴾<span class="ref">سورةُ النساءِ: ١٦٣</span></p>
+  </div>
+  <p>في قولِ اللهِ سبحانه وتعالى: «وأوحينا إلى إبراهيمَ وإسماعيلَ»: <span class="mark">«إبراهيمَ»</span> هي <b>اسمٌ ممنوعٌ من الصرفِ</b> لأنه <b>علمٌ أعجميٌّ ليس عربيَّ الأصلِ</b>، وهو <b>مجرورٌ هنا بإلى وعلامةُ جرِّه الفتحةُ الظاهرةُ على آخرِه</b>. إذًا متى تكونُ الفتحةُ علامةً للخفضِ أو الجرِّ؟ <b>في الاسمِ الممنوعِ من الصرفِ أو الذي لا ينصرفُ</b>.</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَقَالَ الَّذِي اشْتَرَاهُ مِن مِّصْرَ لِامْرَأَتِهِ أَكْرِمِي مَثْوَاهُ﴾<span class="ref">سورةُ يوسفَ: ٢١</span></p>
+  </div>
+  <p>في قولِه تعالى: «وقالَ الذي اشتراه <b>من مصرَ</b> لامرأتِه أكرِمي مثواه»: كلمةُ <span class="mark">«مصرَ»</span> هنا هي <b>علمٌ مؤنثٌ</b>، فهي <b>ممنوعةٌ من الصرفِ للعلميّةِ والتأنيثِ</b>، ومن ثَمَّ <b>جرَّتْ وكانت علامةُ جرِّها الفتحةَ</b>؛ ولذلك قال «من مصرَ» بالفتحِ.</p>
+
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿أَلَيْسَ لِي مُلْكُ مِصْرَ وَهَٰذِهِ الْأَنْهَارُ تَجْرِي مِن تَحْتِي﴾<span class="ref">سورةُ الزخرفِ: ٥١</span></p>
+  </div>
+  <p>وفي آيةٍ أُخرى على لسانِ فرعونَ: «أليس لي مُلكُ مصرَ وهذه الأنهارُ تجري من تحتي» — «أليس لي مُلكَ مصرَ»: كلمةُ «مُلكٍ» مضافٌ وكلمةُ <span class="mark">«مصرَ»</span> هنا هي <b>مضافٌ إليه مجرورٌ وعلامةُ جرِّه الفتحةُ</b> لأنها <b>ممنوعةٌ من الصرفِ للعلميّةِ والتأنيثِ</b> طبعًا كما ذكرنا.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧ التمرينات: الأسئلة ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>التمريناتُ: أسئلةٌ على العلاماتِ</h2></div>
+
+  <p>بهذا نكونُ قد أنهينا الكلامَ على علاماتِ الخفضِ — وهي كما قلتُ ثلاثُ علاماتٍ: علامةٌ أصليّةٌ هي <b>الكسرةُ</b>، وعلامتانِ فرعيّتانِ هما <b>الياءُ</b> و<b>الفتحةُ</b>. عليه إن شاء اللهُ تعالى نتكلمُ على التطبيقاتِ: تطبيقاتٍ على علاماتِ الخفضِ أو الجرِّ في اللغةِ العربيةِ؛ هنا عدةُ أسئلةٍ نطبِّقُ من خلالِها:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿هُوَ الَّذِي أَرْسَلَ رَسُولَهُ بِالْهُدَىٰ وَدِينِ الْحَقِّ لِيُظْهِرَهُ عَلَى الدِّينِ كُلِّهِ﴾</span> [التوبة: ٣٣] — كلمةُ «الهدى» هي هنا مجرورةٌ بالباءِ، فما علامةُ جرِّها؟ هل هي الألفُ اللينةُ، أم الكسرةُ المقدَّرةُ، أم الفتحةُ الظاهرةُ على الدالِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«بالهدى» طبعًا علامةُ جرِّها <b>الكسرةُ المقدَّرةُ</b>؛ لأن آخرَ الكلمةِ ألفٌ، والألفُ تُقدَّرُ عليها العلامةُ <b>للتعذُّرِ</b> كما ذكرنا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿إِنَّمَا الصَّدَقَاتُ لِلْفُقَرَاءِ وَالْمَسَاكِينِ﴾</span> [التوبة: ٦٠] — إذا علمتَ أن كلمةَ «المساكينِ» مجرورةٌ، فما علامةُ الجرِّ هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا «المساكينُ» هنا هي مجرورةٌ <b>وعلامةُ جرِّها الكسرةُ</b>. طبعًا هنا <b>وقفةٌ</b>: يعني يمكنُ أن يقولَ قائلٌ: أليست كلمةُ «المساكينِ» هذه ممنوعةً من الصرفِ لأنها على <b>وزنِ مفاعيلَ — صيغةِ منتهى الجموعِ</b>؟ هذا صحيحٌ، ولكنها <b>عُرِّفتْ بـ«الـ»</b>، والممنوعُ من الصرفِ يُجرُّ وتكونُ علامةُ جرِّه الفتحةَ <b>إذا لم يكن معرَّفًا بـ«الـ» أو مضافًا</b> — يعني إذا أتى بعدَه مضافٌ إليه — فيُعرَبُ بالحركةِ الأصليّةِ: يُجرُّ وعلامةُ جرِّه <b>الكسرةُ</b>.</div>
+  </div>
+
+  <h3 id="t71">وقفةٌ: متى يعودُ الممنوعُ من الصرفِ إلى الكسرةِ؟</h3>
+  <p>بيانُ ذلك: <b>الممنوعُ من الصرفِ يُجرُّ بالفتحةِ ما دام نكرةً غيرَ مضافةٍ؛ فإذا عُرِّفَ بـ«الـ» أو أُضيفَ عادَ إلى العلامةِ الأصليّةِ للجرِّ وهي الكسرةُ</b>:</p>
+  <ul>
+    <li>«صلَّيتُ <span class="mark">بمساجدِ</span> المدينةِ»: «مساجدُ» أصلًا <b>صيغةُ منتهى الجموعِ</b> فهي في الأصلِ ممنوعةٌ من الصرفِ، لكنها لما <b>أُضيفتْ</b> إلى كلمةِ «المدينةِ» — يعني أتى بعدَها مضافٌ إليه، فالمدينةُ هي مضافٌ إليه مجرورٌ بعدَ «مساجدِ» — فهنا طالما أنها أُضيفتْ <b>تعودُ إلى الحالةِ الأصليّةِ أو العلامةِ الأصليّةِ في الجرِّ وهي الكسرةُ</b>.</li>
+    <li>«صلَّيتُ <span class="mark">بالمساجدِ</span> الكبيرةِ»: كلمةُ «المساجدُ» هنا أيضًا <b>معرَّفةٌ بـ«الـ»</b> فتكونُ علامةُ جرِّها هي <b>الكسرةَ الظاهرةَ</b>.</li>
+    <li>لكن إذا قلتَ: «صلَّيتُ <span class="mark">بمساجدَ</span> كبيرةٍ»: كلمةُ «مساجدُ» هنا هي <b>ممنوعةٌ من الصرفِ وتُجرُّ وعلامةُ جرِّها الفتحةُ</b> — العلامةُ الفرعيّةُ — <b>لأنها لم تُضَفْ ولم تُعرَّفْ بـ«الـ»</b>.</li>
+  </ul>
+  <p>فكذلك الحالُ هنا في كلمةِ «المساكينِ» في قولِه تعالى: ﴿إنما الصدقاتُ للفقراءِ والمساكينِ﴾: هنا <b>لم تُجرَّ كلمةُ «المساكينِ» بالفتحةِ</b> رغمَ أنها على وزنِ مفاعيلَ — صيغةِ منتهى الجموعِ — هذا لأنها <b>عُرِّفتْ بـ«الـ»</b>.</p>
+
+  <figure class="diagram">
+    <div class="flow-lane">
+      <span class="chip plain">«بمساجدَ كبيرةٍ» — نكرةٌ غيرُ مضافةٍ</span>
+      <span class="fa">←</span>
+      <span class="chip">تُجرُّ بالفتحةِ (فرعيّةٌ)</span>
+      <span class="fa">|</span>
+      <span class="chip plain">«بمساجدِ المدينةِ» — مضافةٌ / «بالمساجدِ الكبيرةِ» — معرَّفةٌ بـ«الـ»</span>
+      <span class="fa">←</span>
+      <span class="chip gold">تعودُ إلى الكسرةِ (أصليّةٌ)</span>
+      <div class="lane-note">صيغةُ منتهى الجموعِ نموذجًا — والقاعدةُ عامّةٌ في الممنوعِ من الصرفِ كلِّه: يُجرُّ بالفتحةِ نكرةً، ويعودُ إلى الكسرةِ إذا عُرِّفَ بـ«الـ» أو أُضيفَ (وسيأتي في ﴿من نجواهم﴾ عودةُ المقصورةِ إلى الكسرةِ بالإضافةِ).</div>
+    </div>
+    <div class="dcap">شكل (٥): أثرُ التعريفِ بـ«الـ» والإضافةِ في جرِّ الممنوعِ من الصرفِ</div>
+  </figure>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «أُعجبتُ بأبياتِ الشاعرِ» — كلمةُ «أبياتٍ» هنا هل هي مجرورةٌ وعلامةُ جرِّها الفتحةُ لأنها جمعُ مؤنثٍ سالمٌ، أم الكسرةُ لأنها جمعُ تكسيرٍ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا واضحٌ أنها <b>الكسرةُ</b>؛ والكلمةُ هنا <b>جمعُ تكسيرٍ</b> — كلمةُ «أبياتٍ» جمعُ تكسيرٍ وليستْ جمعًا مؤنثًا — يعني لا أحدَ يَغتَرُّ بوجودِ الألفِ والتاءِ في آخرِها: الألفُ والتاءُ في آخرِها <b>ليستا زائدتَينِ</b>؛ الألفُ زائدةٌ طبعًا، لكن <b>التاءَ ليست زائدةً</b>؛ هي جمعُ «بيتٍ» والتاءُ أصليةٌ في الكلمةِ، ومن ثَمَّ ليستْ جمعَ مؤنثٍ سالمًا؛ لأن جمعَ المؤنثِ السالمِ يُشترطُ فيه أن تكونَ الألفُ والتاءُ في آخرِ الكلمةِ <b>زائدتَينِ</b>. فكلمةُ «أبياتٍ» هنا إذًا ليستْ جمعَ مؤنثٍ سالمٍ وإنما هي <b>جمعُ تكسيرٍ</b>، وهي مجرورةٌ <b>وعلامةُ جرِّها الكسرةُ الظاهرةُ على آخرِها</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «سلَّمتُ على أبيكَ» — كلمةُ «أبي» ها هنا مجرورةٌ، وعلامةُ جرِّها ماذا: الياءُ أم الكسرةُ التي تحتَ الباءِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا علامةُ جرِّها هي <b>الياءُ</b>؛ لأنها <b>من الأسماءِ الخمسةِ</b> وانطبقتْ عليها الشروطُ، فصحَّ أن تُعرَبَ بالحروفِ وأن تكونَ مجرورةً وعلامةُ جرِّها الياءُ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: <span class="ayq">﴿حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ﴾</span> [الكهفِ: ٦٠] — «البحرينِ» مجرورةٌ وعلامةُ جرِّها: الكسرةُ، أم الياءُ، أم ثبوتُ النونِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا علامةُ جرِّها <b>الياءُ</b>؛ لأن «البحرينِ» <b>مثنًى</b> «البحرَينِ»، والمثنى من <b>المُعرَباتِ بالعلاماتِ الفرعيّةِ</b>، وهي هنا <b>مضافٌ إليه</b> مجرورٌ، فتكونُ علامةُ الجرِّ هي <b>الياءَ</b>. (يعني هذا المثالُ ذكرتُه في الشرحِ وأعيدُه في التطبيقِ.)</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِنا: «مررتُ بأحمدَ» — إذا علمتَ أن كلمةَ «أحمدَ» ممنوعةٌ من الصرفِ، وأنها هنا مجرورةٌ طبعًا لأنها سبقتْ بحرفِ الجرِّ الباءِ («بأحمدَ»)، فما علامةُ جرِّها: هل هي الفتحةُ، أم الكسرةُ المقدَّرةُ، أم غيرُ ذلك؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي <b>الفتحةُ</b>. لماذا؟ لأن الكلمةَ <b>ممنوعةٌ من الصرفِ</b> لأنها <b>علمٌ أتى على وزنِ الفعلِ</b>؛ فلذلك هي حين تُجرُّ تكونُ مجرورةً <b>بالفتحةِ</b> كما رأينا.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨ تأمل الآيات ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>تأمُّلُ الآياتِ: استخراجُ المجروراتِ وعلاماتِها</h2></div>
+
+  <p>هنا سأذكرُ بعضَ الآياتِ القرآنيّةِ ونُدقِّقُ النظرَ فيها لنستخرجَ <b>الأسماءَ المجرورةَ</b> ونرى: هل هي مجرورةٌ <b>بعلامةٍ أصليّةٍ</b> أم <b>بعلامةٍ فرعيّةٍ</b>:</p>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>قولُه تعالى في سورةِ الفاتحةِ: <span class="ayq">﴿بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ﴾</span> [الفاتحةِ: ١–٤]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هذه الآياتُ فيها <b>مجروراتٌ كثيرةٌ جدًّا</b>، وسنجدُ أن جُلَّها مجرورٌ <b>بالعلامةِ الأصليّةِ</b> — أي علامةُ الجرِّ فيها هي الأصليّةُ وهي <b>الكسرةُ</b>:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li>«<b>باسمِ</b>»: الباءُ حرفُ جرٍّ، و«اسمٍ» مجرورٌ بالباءِ. و<b>«اللهِ»</b> لفظُ الجلالةِ <b>مجرورٌ بالإضافةِ</b> (مضافٌ إليه).</li>
+        <li>«<b>الرحمنِ الرحيمِ</b>»: مجرورتانِ <b>بالتبعيّةِ</b> (نعتانِ للفظِ الجلالةِ).</li>
+        <li>«الحمدُ <b>للهِ</b>»: مجرورٌ <b>بحرفِ الجرِّ اللامِ</b>.</li>
+        <li>«<b>ربِّ</b> العالمينَ»: مجرورٌ <b>بالتبعيّةِ</b>.</li>
+        <li>وفي هذا كلِّهِ علامةُ الجرِّ هي <b>الكسرةُ</b> — العلامةُ الأصليّةُ — لأنها <b>أسماءٌ مفردةٌ</b> كما رأينا.</li>
+      </ul>
+      لكن قال «ربِّ <b>العالمينَ</b>»: «العالمينَ» طبعًا هنا هي <b>مضافٌ إليه مجرورٌ وعلامةُ جرِّه الياءُ لأنه ملحقٌ بجمعِ المذكرِ السالمِ</b>؛ فكما اتفقنا — كما ذكرنا سابقًا — إن جمعَ المذكرِ السالمِ يكونُ مجرورًا وعلامةُ جرِّه هي <b>الياءُ</b> علامةً فرعيّةً؛ فالعالمينَ مضافٌ إليه مجرورٌ وعلامةُ جرِّه الياءُ لأنه جمعُ مذكرٍ سالمٌ أو ملحقٌ بجمعِ المذكرِ السالمِ. ثم قال «الرحمنِ الرحيمِ» أيضًا: هما مجرورتانِ <b>بالحركةِ الأصليّةِ على التبعيّةِ</b>. و«<b>مالكِ</b> يومِ الدينِ»: كذلك الأمرُ كلُّها — مالكِ (نعتٌ مجرورٌ بالتبعيّةِ) و<b>يومِ</b> و<b>الدينِ</b> — كلُّها مجرورةٌ وعلامةُ جرِّها الكسرةُ الظاهرةُ على آخرِها.
+    </div>
+  </div>
+
+  <h3 id="t81">طرقُ الجرِّ الثلاثةُ</h3>
+  <p>فالجرُّ أو الخفضُ في اللغةِ العربيةِ يكونُ <b>بأحدِ ثلاثةِ طرقٍ</b>:</p>
+  <ul>
+    <li><b>أن يكونَ الاسمُ مجرورًا بحرفِ الجرِّ</b>: حروفُ الجرِّ المعروفةُ، ومعها طبعًا <b>حروفُ القسمِ</b>؛ هذه كلُّها تجرُّ الأسماءَ بعدَها.</li>
+    <li><b>وقد تكونُ الكلمةُ مجرورةً بالإضافةِ</b>: يعني أن تقعَ <b>مضافًا إليه</b>، والمضافُ إليه يكونُ <b>مجرورًا دائمًا</b>.</li>
+    <li><b>وقد تكونُ مجرورةً بالتبعيّةِ</b>: يعني أن تكونَ <b>نعتًا</b> لكلمةٍ مجرورةٍ، أو <b>بدلًا</b> منها، أو <b>توكيدًا</b> له، أو <b>عطفًا</b> عليها، إلى آخرِه؛ فكلُّ التوابعِ تكونُ مرتبطةً في الإعرابِ بما قبلَها، فإذا كان ما قبلَها — يعني المتبوعَ — مجرورًا تكونُ هي أيضًا مجرورةً، وهذا يكونُ بالجرِّ على التبعيّةِ.</li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="tree-root gold">طرقُ الجرِّ (الخفضِ) الثلاثةُ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">الجرُّ بحرفِ الجرِّ</div>
+        <div class="n-sub">حروفُ الجرِّ المعروفةُ ومعها حروفُ القسمِ — تجرُّ الاسمَ بعدَها<br>«بثمنٍ» — «للمؤمناتِ» — «من ربِّهم»</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الجرُّ بالإضافةِ</div>
+        <div class="n-sub">أن تقعَ الكلمةُ مضافًا إليه — والمضافُ إليه مجرورٌ دائمًا<br>«حديثِ الجنودِ» — «مجمعَ البحرينِ»</div>
+      </div>
+      <div class="node green">
+        <div class="n-title">الجرُّ بالتبعيّةِ</div>
+        <div class="n-sub">نعتٌ أو بدلٌ أو توكيدٌ أو عطفٌ على مجرورٍ — فالتابعُ يتبعُ متبوعَه في الإعرابِ<br>«الرحمنِ الرحيمِ» — «فرعونَ» (بدلٌ) — «عامتها» (توكيدٌ)</div>
+      </div>
+    </div>
+    <figcaption>شكل (٦): لا يقعُ الجرُّ في العربيةِ إلا بهذه الطرقِ الثلاثةِ — وعلامتُه الكسرةُ أصلًا، أو الياءُ والفتحةُ فرعًا</figcaption>
+  </figure>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿هَلْ أَتَاكَ حَدِيثُ الْجُنُودِ ۝ فِرْعَوْنَ وَثَمُودَ﴾</span> [البروجِ: ١٧–١٨] — أينَ المجرورُ ها هنا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«هل أتاك حديثُ الجنودِ» — المجرورُ هو كلمةُ <b>«الجنودِ»</b>: «حديثُ الجنودِ»، فالجنودُ هي <b>مضافٌ إليه</b>، مجرورٌ <b>وعلامةُ جرِّه الكسرةُ الظاهرةُ على آخرِه</b>. ثم قال «<b>فرعونَ</b> وثمودَ»: كلمةُ «فرعونَ» هنا هي <b>بدلٌ من «الجنودِ»</b> — يعني تابعٌ لها — والتابعُ يكونُ مثلَ المتبوعِ في الإعرابِ؛ فكلمةُ «الجنودِ» مجرورةٌ إذًا كلمةُ «فرعونَ» مجرورةٌ؛ كلمةُ فرعونَ مجرورةٌ ولكنها <b>ممنوعةٌ من الصرفِ فعلامةُ الجرِّ فيها هي الفتحةُ</b>: «هل أتاك حديثُ الجنودِ فرعونَ» — فرعونَ <b>بدلٌ من الجنودِ مجرورٌ وعلامةُ جرِّه الفتحةُ لأنه ممنوعٌ من الصرفِ</b>؛ طبعًا هو ممنوعٌ من الصرفِ <b>للعلميّةِ والعجمةِ</b>؛ كلمةُ «فرعونَ» علمٌ عجميٌّ ليس عربيًّا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَإِذْ قَالَ إِبْرَاهِيمُ لِأَبِيهِ آزَرَ أَتَتَّخِذُ أَصْنَامًا آلِهَةً﴾</span> [الأنعامِ: ٧٤]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا نحنُ أعرَبنا كلمةَ <span class="mark">«لأبيهِ»</span> قبلَ ذلك في أثناءِ الشرحِ وقلنا إنها <b>اسمٌ مجرورٌ باللامِ وعلامةُ جرِّه الياءُ</b> لأنه من الأسماءِ الخمسةِ. قال بعدَ ذلك: «وإذ قال إبراهيمُ لأبيهِ <b>آزرَ</b>»: كلمةُ <span class="mark">«آزرَ»</span> <b>بدلٌ من كلمةِ «أبيهِ»</b>، وهي هنا <b>مجرورةٌ</b> لأنها بدلٌ من المجرورِ، فتكونُ مجرورةً — هي مجرورةٌ — ولكن <b>علامةُ جرِّها هي الفتحةُ</b> لأنها <b>ممنوعةٌ من الصرفِ</b>؛ طبعًا <b>العلميّةِ والعجمةِ</b> أيضًا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِنا: «مدحتُ جوابَ الطالبَينِ كليهما»:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«جوابَ الطالبينِ كليهما» — هنا كلمتانِ في هذا المثالِ، كلتاهما مجرورةٌ: كلمةُ <b>«الطالبينَ»</b> هي مجرورةٌ لأنها <b>مضافٌ إليه</b> (قبلَها مضافٌ: كلمةُ «جوابٍ» والطالبينَ مضافٌ إليه) <b>مجرورٌ وعلامةُ جرِّه الياءُ</b> لأنه <b>مثنًّى</b>؛ إذًا هنا العلامةُ فرعيّةٌ — علامةُ الجرِّ فرعيّةٌ لأن الكلمةَ مثنًّى والعلامةُ هي الياءُ. و<b>«كليهما»</b>: هذه <b>توكيدٌ</b> لكلمةِ «الطالبينَ» <b>توكيدٌ معنويٌّ</b>، وهي طبعًا طالما أنها توكيدٌ — والتوكيدُ تابعٌ يكونُ كمثلِ المتبوعِ في الإعرابِ — فكليهما هي توكيدٌ للطالبينَ <b>مجرورٌ وعلامةُ جرِّه الياءُ لأنه ملحقٌ بالمثنى</b>؛ فكلمةُ «كلاهما وكلتاهما» — أو «كليهما» — بحسبِ الإعرابِ هي <b>من الملحقاتِ بالمثنى تعربُ إعرابَه</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَبَشَّرْنَاهُ بِإِسْحَاقَ نَبِيًّا مِّنَ الصَّالِحِينَ﴾</span> [الصافاتِ: ١١٢]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا كلمتانِ مجرورتانِ: كلمةُ <b>«إسحاقَ»</b> وكلمةُ <b>«الصالحينَ»</b>، وكلتاهما مجرورةٌ بحرفِ الجرِّ:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li>«<b>بإسحاقَ</b>»: الباءُ حرفُ جرٍّ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ، و«إسحاقَ» <b>اسمٌ مجرورٌ بالباءِ وعلامةُ جرِّه الفتحةُ لأنه ممنوعٌ من الصرفِ</b>؛ إذًا العلامةُ هنا <b>فرعيّةٌ</b>؛ هو طبعًا <b>علمٌ أعجميٌّ</b>.</li>
+        <li>«<b>من الصالحينَ</b>»: «من» حرفُ جرٍّ مبنيٌّ على <b>السكونِ المحرَّكِ بالفتحِ</b> — «مِنَ الصالحينَ» طبعًا لأن بعدَه ساكنًا فلا بدَّ من التحريكِ (التقاءِ الساكنَينِ) — و«الصالحينَ» <b>اسمٌ مجرورٌ بمن وعلامةُ جرِّه الياءُ لأنه جمعُ مذكرٍ سالمٌ</b>؛ إذًا هنا العلامةُ أيضًا <b>فرعيّةٌ وهي الياءُ</b> لأن الكلمةَ جمعُ مذكرٍ سالمٌ.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿يَعْمَلُونَ لَهُ مَا يَشَاءُ مِن مَّحَارِيبَ وَتَمَاثِيلَ﴾</span> [سبأٍ: ١٣]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا <b>مجروراتٌ متعددةٌ</b>: أولًا الضميرُ في «<b>لهُ</b>» هو مجرورٌ بحرفِ الجرِّ — يعني <b>في محلِّ جرٍّ</b>. ثم «من محاريبَ وتماثيلَ»: طبعًا «من» حرفُ جرٍّ، و<span class="mark">«محاريبَ»</span> <b>اسمٌ مجرورٌ بها وهي ممنوعةٌ من الصرفِ</b> لأنها على <b>وزنِ مفاعيلَ — صيغةِ منتهى الجموعِ</b>؛ فهي تكونُ <b>علامةُ جرِّها الفتحةُ الظاهرةُ على آخرِها</b>. وكذلك كلمةُ <span class="mark">«تماثيلَ»</span>: أيضًا هي <b>صيغةُ منتهى الجموعِ</b> فهي <b>ممنوعةٌ من الصرفِ</b>، وهي <b>معطوفةٌ على «محاريبَ» المجرورةِ</b> فتكونُ مجرورةً مثلَها <b>وعلامةُ الجرِّ الفتحةُ الظاهرةُ على آخرِها</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿يَوْمَ نَقُولُ لِجَهَنَّمَ هَلِ امْتَلَأْتِ وَتَقُولُ هَلْ مِن مَّزِيدٍ﴾</span> [ق: ٣٠]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا المجرورُ كلمةُ <span class="mark">«لجهنمَ»</span>: اللامُ حرفُ جرٍّ وهي مبنيّةٌ على الكسرِ لا محلَّ لها من الإعرابِ، و«جهنمَ» <b>اسمٌ مجرورٌ بها</b>، وهي أيضًا <b>ممنوعةٌ من الصرفِ للعلميّةِ والتأنيثِ</b> — وبعضُهم قالَ: العلميّةِ والعجمةِ، يعني أنها علمٌ أعجميٌّ — لكن هي طبعًا واضحٌ فيها <b>التأنيثُ</b>؛ يعني حتى إن الآيةَ بعدَ ذلك قالَتْ: «هلِ امتلأتِ» — تأنيثٌ؛ فهي <b>اسمٌ مجرورٌ باللامِ وعلامةُ جرِّه الفتحةُ الظاهرةُ على آخرِه لأنها ممنوعةٌ من الصرفِ</b>. وتقولُ «هل من مزيدٍ»: طبعًا يعني «من مزيدٍ» هنا <b>في اللفظِ</b> كلمةُ «مزيدٍ» <b>مجرورةٌ بمن</b>، وإن كانت في المحلِّ ليست اسمًا مجرورًا؛ يعني لأن التقديرَ «هل مزيدٌ؟» — يعني «من» <b>حرفُ جرٍّ زائدٌ</b> لأنها وقعتْ في <b>سياقِ استفهامٍ</b> ويصحُّ حذفُها ويستقيمُ المعنى؛ فعلى أيِّ حالٍ هي <b>مجرورةٌ في اللفظِ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَاتْلُ عَلَيْهِمْ نَبَأَ ابْنَيْ آدَمَ بِالْحَقِّ﴾</span> [المائدةِ: ٢٧]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«نبأَ ابني آدمَ بالحقِّ»: هنا المضافُ إليه <b>«ابني»</b> وبعدَه مضافٌ إليه أيضًا ثانٍ: <b>«آدمَ»</b>، وكلاهما مجرورٌ:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li><b>«ابني»</b> مجرورٌ <b>وعلامةُ جرِّه الياءُ</b> لأنه <b>مثنًّى</b>؛ أصلُه «ابنَينِ» وحُذِفَتِ النونُ طبعًا <b>للإضافةِ</b> لأن بعدَه مضافًا إليه.</li>
+        <li>و<b>«آدمَ»</b> مضافٌ إليه <b>مجرورٌ وعلامةُ جرِّه الفتحةُ</b> لأنه <b>ممنوعٌ من الصرفِ للعلميّةِ والعجمةِ</b>.</li>
+        <li>ثم عندنا مجرورٌ آخرُ هو كلمةُ <b>«بالحقِّ»</b>: مجرورةٌ <b>بالحرفِ</b> (الباءِ)، وطبعًا العلامةُ هنا <b>ليست فرعيّةً وإنما هي علامةٌ أصليّةٌ</b> — بخلافِ «ابني آدمَ» فعلامةُ «ابني» فرعيّةٌ هي الياءُ في المثنى، وعلامةُ «آدمَ» فرعيّةٌ هي الفتحةُ في الممنوعِ من الصرفِ.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿لَّا خَيْرَ فِي كَثِيرٍ مِّن نَّجْوَاهُمْ﴾</span> [النساءِ: ١١٤]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>«في كثيرٍ» هي أيضًا مجرورةٌ معنا ولكن لن نتوقفَ عندَها. «<b>من نجواهمْ</b>»: «من» حرفُ جرٍّ مبنيٌّ على السكونِ لا محلَّ له من الإعرابِ، و<span class="mark">«نجواهمْ»</span> هي <b>اسمٌ مجرورٌ بمن</b>؛ ولكن كلمةَ «نجوى» هي طبعًا في الأصلِ <b>ممنوعةٌ من الصرفِ</b> — مختومةٌ بألفِ التأنيثِ المقصورةِ — ولكنها هنا <b>أُضيفتْ</b>، فلن تُجرَّ بالفتحةِ بل <b>تُجرُّ بالعلامةِ الأصليّةِ للجرِّ وهي الكسرةُ لأنها أُضيفتْ</b> («نجواهمْ»: أتى بعدَها مضافٌ إليه هو الضميرُ «همْ»)؛ لكن العلامةَ هنا <b>ستُقدَّرُ</b> لأن آخرَ الكلمةِ ألفٌ — «نجوى» — والألفُ تُقدَّرُ عليها العلامةُ <b>للتعذُّرِ</b>؛ فهي طبعًا <b>اسمٌ مجرورٌ بمن وعلامةُ جرِّه الكسرةُ المقدَّرةُ للتعذُّرِ</b>. وقلتُ: إنها لم تُعرَبْ هنا إعرابَ الممنوعِ من الصرفِ لأنها <b>أُضيفتْ؛ أتى بعدَها مضافٌ إليه هو الضميرُ «همْ»</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">شاهدٌ</span>في قولِه تعالى: <span class="ayq">﴿وَإِنَّكَ لَتَهْدِي إِلَىٰ صِرَاطٍ مُّسْتَقِيمٍ ۝ صِرَاطِ اللَّهِ الَّذِي لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ﴾</span> [الشورى: ٥٢–٥٣]:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هنا مجروراتٌ كثيرةٌ، نتوقفُ فقط عندَ قولِه تعالى: <span class="mark">«صراطِ اللهِ»</span>: «وإنك لتهدي إلى صراطٍ مستقيمٍ، صراطِ اللهِ» — <b>«صراطٍ» الثانيةُ هذه بدلٌ من «صراطٍ» الأولى</b>، والبدلُ من المجرورِ مجرورٌ؛ فهي <b>بدلٌ مجرورٌ وعلامةُ جرِّه الكسرةُ الظاهرةُ على آخرِه</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تطبيقٌ</span>في قولِنا: «بُعِثَ النبيُّ ﷺ إلى البشريّةِ عامّتُها»:</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندنا هنا كلمةُ <b>«البشريّةِ»</b> <b>مجرورةٌ بحرفِ الجرِّ «إلى» وعلامةُ جرِّها العلامةُ الأصليّةُ وهي الكسرةُ</b>؛ لأن الكلمةَ <b>اسمٌ مفردٌ وليست ممنوعةً من الصرفِ</b>. و<b>«عامّتِ»</b> («عامتُها»): هذه <b>توكيدٌ</b> طبعًا <b>معنويٌّ</b> لكلمةِ «البشريّةِ»، وهي مجرورةٌ — والتوكيدُ تابعٌ لما قبلَه فيكونُ مجرورًا كمثلِه — يعني إذا كان المتبوعُ مجرورًا فهي هنا <b>مجرورةٌ وعلامةُ جرِّها الكسرةُ الظاهرةُ على آخرِها</b>؛ والهاءُ طبعًا في «عامتِها» <b>في محلِّ جرٍّ مضافٌ إليه</b> — ضميرٌ متصلٌ مبنيٌّ.</div>
+  </div>
+
+  <h3 id="t83">الجدولُ التلخيصيُّ للتطبيقاتِ</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الشاهدُ</th><th>الكلمةُ المجرورةُ</th><th>سببُ الجرِّ</th><th>علامتُها</th><th>وجهُ العلامةِ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>﴿أرسل رسولَه بالهدى﴾</td><td>الهدى</td><td>حرفُ الجرِّ (الباءِ)</td><td>الكسرةُ المقدَّرةُ</td><td>مفردٌ آخرُه ألفٌ (تُقدَّرُ للتعذُّرِ)</td></tr>
+        <tr><td>﴿إنما الصدقاتُ للفقراءِ والمساكينِ﴾</td><td>المساكينِ</td><td>حرفُ الجرِّ (اللامِ)</td><td>الكسرةُ الظاهرةُ</td><td>صيغةُ منتهى الجموعِ (مفاعيلَ) لكنها <b>عُرِّفتْ بـ«الـ»</b> فعادتْ إلى الأصليّةِ</td></tr>
+        <tr><td>«أعجبتُ بأبياتِ الشاعرِ»</td><td>أبياتِ</td><td>حرفُ الجرِّ (الباءِ)</td><td>الكسرةُ الظاهرةُ</td><td>جمعُ تكسيرٍ (جمعُ «بيتٍ»، والتاءُ أصليةٌ لا زائدةٌ)</td></tr>
+        <tr><td>«سلَّمتُ على أبيكَ»</td><td>أبي</td><td>حرفُ الجرِّ (على)</td><td>الياءُ</td><td>من الأسماءِ الخمسةِ (صحَّتْ فيها الشروطُ)</td></tr>
+        <tr><td>﴿حتى أبلغَ مجمعَ البحرينِ﴾</td><td>البحرينِ</td><td>إضافةٌ (مضافٌ إليه)</td><td>الياءُ</td><td>مثنًّى</td></tr>
+        <tr><td>«مررتُ بأحمدَ»</td><td>أحمدَ</td><td>حرفُ الجرِّ (الباءِ)</td><td>الفتحةُ</td><td>علمٌ على وزنِ الفعلِ — ممنوعٌ من الصرفِ</td></tr>
+        <tr><td>﴿باسمِ اللهِ الرحمنِ الرحيمِ… مالكِ يومِ الدينِ﴾</td><td>اسمِ، اللهِ، الرحمنِ، الرحيمِ، ربِّ، مالكِ، يومِ، الدينِ</td><td>حرفُ جرٍّ / إضافةٌ / تبعيّةٌ</td><td>الكسرةُ الظاهرةُ</td><td>كلُّها أسماءٌ مفردةٌ منصرفةٌ</td></tr>
+        <tr><td>﴿الحمدُ للهِ ربِّ العالمينَ﴾</td><td>العالمينَ</td><td>إضافةٌ (مضافٌ إليه)</td><td>الياءُ</td><td>ملحقٌ بجمعِ المذكرِ السالمِ</td></tr>
+        <tr><td>﴿هل أتاك حديثُ الجنودِ * فرعونَ وثمودَ﴾</td><td>الجنودِ / فرعونَ</td><td>إضافةٌ / بدلٌ (تبعيّةٌ)</td><td>الكسرةُ / الفتحةُ</td><td>جمعُ تكسيرٍ منصرفٌ / ممنوعٌ للعلميّةِ والعجمةِ</td></tr>
+        <tr><td>﴿وإذ قال إبراهيمُ لأبيهِ آزرَ﴾</td><td>أبيهِ / آزرَ</td><td>حرفُ الجرِّ (اللامِ) / بدلٌ</td><td>الياءُ / الفتحةُ</td><td>من الأسماءِ الخمسةِ / ممنوعٌ للعلميّةِ والعجمةِ</td></tr>
+        <tr><td>«مدحتُ جوابَ الطالبينِ كليهما»</td><td>الطالبينَ / كليهما</td><td>إضافةٌ / توكيدٌ معنويٌّ</td><td>الياءُ / الياءُ</td><td>مثنًّى / ملحقٌ بالمثنى</td></tr>
+        <tr><td>﴿وبشَّرناه بإسحاقَ نبيًا من الصالحينَ﴾</td><td>إسحاقَ / الصالحينَ</td><td>حرفُ الجرِّ (الباءِ) / حرفُ الجرِّ (من)</td><td>الفتحةُ / الياءُ</td><td>علمٌ أعجميٌّ / جمعُ مذكرٍ سالمٌ</td></tr>
+        <tr><td>﴿يعملون له ما يشاء من محاريبَ وتماثيلَ﴾</td><td>الهاءُ في «له» / محاريبَ / تماثيلَ</td><td>حرفُ الجرِّ / حرفُ الجرِّ (من) / عطفٌ</td><td>في محلِّ جرٍّ / الفتحةُ / الفتحةُ</td><td>ضميرٌ متصلٌ / و«تماثيلَ»: كلتاهما صيغةُ منتهى الجموعِ ممنوعةٌ من الصرفِ</td></tr>
+        <tr><td>﴿نقول لجهنمَ هل امتلأت وتقول هل من مزيدٍ﴾</td><td>جهنمَ / مزيدٍ</td><td>حرفُ الجرِّ (اللامِ) / حرفُ جرٍّ زائدٌ في سياقِ استفهامٍ</td><td>الفتحةُ / مجرورةٌ في اللفظِ</td><td>ممنوعةٌ للعلميّةِ والتأنيثِ / التقديرُ: «هل مزيدٌ؟» فيصحُّ حذفُ «من»</td></tr>
+        <tr><td>﴿واتلُ عليهم نبأَ ابني آدمَ بالحقِّ﴾</td><td>ابني / آدمَ / الحقِّ</td><td>إضافةٌ / إضافةٌ / حرفُ الجرِّ (الباءِ)</td><td>الياءُ / الفتحةُ / الكسرةُ</td><td>مثنًّى حُذِفَتْ نونُه للإضافةِ / ممنوعٌ للعلميّةِ والعجمةِ / مفردٌ منصرفٌ</td></tr>
+        <tr><td>﴿لا خيرَ في كثيرٍ من نجواهمْ﴾</td><td>نجواهمْ</td><td>حرفُ الجرِّ (من)</td><td>الكسرةُ المقدَّرةُ</td><td>مختومةٌ بألفِ مقصورةٍ لكنها <b>أُضيفتْ</b> («همْ») فعادتْ إلى الكسرةِ، وهي مقدَّرةٌ للتعذُّرِ</td></tr>
+        <tr><td>﴿لتهدي إلى صراطٍ مستقيمٍ * صراطِ اللهِ﴾</td><td>صراطِ (الثانيةُ)</td><td>بدلٌ (تبعيّةٌ)</td><td>الكسرةُ الظاهرةُ</td><td>البدلُ من المجرورِ مجرورٌ، وهو مفردٌ منصرفٌ</td></tr>
+        <tr><td>«بُعث النبيُّ ﷺ إلى البشريّةِ عامّتُها»</td><td>البشريّةِ / عامّتِ</td><td>حرفُ الجرِّ (إلى) / توكيدٌ معنويٌّ</td><td>الكسرةُ الظاهرةُ / الكسرةُ الظاهرةُ</td><td>اسمٌ مفردٌ منصرفٌ / تابعٌ للمجرورِ، والهاءُ في محلِّ جرٍّ مضافٌ إليه</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩ الخلاصة ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>خلاصةُ الدرس</h2></div>
+
+  <div class="box note">
+    <span class="tag">تسميةٌ: الخفضُ والجرُّ</span>
+    <p style="margin:0">بهذا نكونُ قد أنهينا الكلامَ على علاماتِ الخفضِ أو علاماتِ الجرِّ؛ والمصطلحانِ موجودانِ في التعبيراتِ النحويّةِ، وإن كان الأشهرَ طبعًا هو استعمالُ مصطلحِ <b>«الجرِّ»</b> بدلًا من «الخفضِ»، لكن ابنَ آجرومَ رحمه اللهُ <b>آثرَ استعمالَ «الخفضِ»</b> كما ذكرتُ إجمالًا.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>العلامةُ</th><th>نوعُها</th><th>مواضعُها</th><th>أمثلةٌ</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>الكسرةُ</b></td>
+          <td>أصليّةٌ</td>
+          <td>ثلاثةٌ: ① الاسمُ المفردُ المنصرفُ ② جمعُ التكسيرِ المنصرفُ ③ جمعُ المؤنثِ السالمُ</td>
+          <td>﴿وشروه بثمنٍ بخسٍ﴾ — ﴿على هدًى من ربِّهم﴾ — ﴿للرجالِ نصيبٌ﴾ — ﴿وقل للمؤمناتِ﴾</td>
+        </tr>
+        <tr>
+          <td><b>الياءُ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>ثلاثةٌ: ① الأسماءُ الخمسةُ ② المثنى (ومن ملحقاتِه: كلاهما وكلتاهما) ③ الجمعُ — أي جمعُ المذكرِ السالمِ</td>
+          <td>﴿وإذ قال إبراهيمُ لأبيهِ آزرَ﴾ — ﴿مجمعَ البحرينِ﴾ — ﴿قل للمؤمنينَ﴾</td>
+        </tr>
+        <tr>
+          <td><b>الفتحةُ</b></td>
+          <td>فرعيّةٌ</td>
+          <td>واحدٌ: الاسمُ الممنوعُ من الصرفِ (الذي لا ينصرفُ) — إلا إذا عُرِّفَ بـ«الـ» أو أُضيفَ فيعودُ إلى الكسرةِ</td>
+          <td>﴿وأوحينا إلى إبراهيمَ﴾ — ﴿من مصرَ﴾ — ﴿أليس لي ملكُ مصرَ﴾</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="summary-points">
+    <li><b>الخفضُ هو الجرُّ</b>: المصطلحانِ مصطلحٌ واحدٌ، والأشهرُ «الجرِّ»، وابنُ آجرومَ آثرَ لفظَ «الخفضِ». و<b>طرقُ الجرِّ ثلاثةٌ</b>: بحرفِ الجرِّ (ومنها حروفُ القسمِ)، وبالإضافةِ (المضافُ إليه مجرورٌ دائمًا)، وبالتبعيّةِ (نعتٌ أو بدلٌ أو توكيدٌ أو عطفٌ لمجرورٍ).</li>
+    <li><b>الكسرةُ العلامةُ الأصليّةُ للجرِّ</b> في الاسمِ المفردِ المنصرفِ (وقد تُقدَّرُ للتعذُّرِ نحو ﴿على هدًى﴾ و«بالهدى»)، وجمعِ التكسيرِ المنصرفِ (فهو يعربُ في حالاتِه كلِّها كالمفردِ)، وجمعِ المؤنثِ السالمِ.</li>
+    <li><b>الياءُ علامةٌ فرعيّةٌ للجرِّ</b> في الأسماءِ الخمسةِ (بشروطِها)، والمثنى وملحقاتِه (كما في هذا الدرسِ: «كليهما» — كلاهما وكلتاهما)، وجمعِ المذكرِ السالمِ وملحقاتِه (كالعالمينَ).</li>
+    <li><b>الفتحةُ علامةٌ فرعيّةٌ للجرِّ في الممنوعِ من الصرفِ</b> (الذي لا ينصرفُ — الممنوعِ من التنوينِ): وهو إما <b>لعلةٍ واحدةٍ</b>: صيغةُ منتهى الجموعِ (مفاعلَ/مفاعيلَ — لأنها تدلُّ على أقصى الجمعِ فقامَتْ مقامَ علتَينِ)، وألفُ التأنيثِ المقصورةُ (سلمى ونجوى)، وألفُ التأنيثِ الممدودةُ (صحراءُ وحمراءُ)؛ وإما <b>لعلّتَينِ</b>: علميّةٌ مع زيادةِ ألفٍ ونونٍ (رمضانَ) أو عجمةٍ (إبراهيمُ وإسماعيلُ) أو وزنِ فعلٍ (يزيدُ)، ووصفيّةٌ مع عدلٍ (أُخَرَ) أو زيادةِ ألفٍ ونونٍ (عطشانَ).</li>
+    <li><b>الأثرُ الإعرابيُّ لمنعِ الصرفِ لا يظهرُ إلا في الجرِّ</b>: فالممنوعُ من الصرفِ يُجرُّ بالفتحةِ نكرةً (﴿من محاريبَ وتماثيلَ﴾ — «مررتُ بأحمدَ»)، <b>فإذا عُرِّفَ بـ«الـ» أو أُضيفَ عادَ إلى الكسرةِ</b> (﴿للفقراءِ والمساكينِ﴾ — «بمساجدِ المدينةِ» — ﴿من نجواهمْ﴾ بالكسرةِ المقدَّرةِ).</li>
+    <li>و<b>لا يُغتَرُّ بالألفِ والتاءِ في آخرِ الكلمةِ</b>: «أبياتٍ» جمعُ تكسيرٍ لأن تاءَها أصليةٌ (جمعُ بيتٍ)، فلا تكونُ جمعَ مؤنثٍ سالمٍ إلا إذا كانتِ الألفُ والتاءُ <b>زائدتَينِ</b> (المؤمناتِ — السماواتُ).</li>
+    <li>بهذا انتهينا من علاماتِ الخفضِ <b>نظريًّا وتطبيقيًّا</b>، وإلى اللقاءِ في الدرسِ القادمِ إن شاء اللهُ تعالى.</li>
+  </ul>
+
+  <div class="box note">
+    <span class="tag">تمَّ الدرسُ</span>
+    <p style="margin:0">حاصلُ علاماتِ الخفضِ ثلاثٌ: <b>الكسرةُ</b> وهي العلامةُ الأصليّةُ (في الاسمِ المفردِ المنصرفِ وجمعِ التكسيرِ المنصرفِ وجمعِ المؤنثِ السالمِ)، و<b>الياءُ</b> علامةً فرعيّةً (في الأسماءِ الخمسةِ والمثنى وجمعِ المذكرِ السالمِ)، و<b>الفتحةُ</b> علامةً فرعيّةً (في الاسمِ الممنوعِ من الصرفِ أو الذي لا ينصرفُ، إذا خلا من «الـ» والإضافةِ). وبهذا تمَّ الكلامُ على علاماتِ الخفضِ نظريًّا وتطبيقيًّا، وإلى اللقاءِ في الدرسِ القادمِ إن شاء اللهُ تعالى.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ الخامسِ من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=FwVNfe4EwRE" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>

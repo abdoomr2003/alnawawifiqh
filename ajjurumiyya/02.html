@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>باب الإعراب — الدرس الثاني من حقيبة المشجرات والتمرينات على الآجرومية ونظمها — فضيلة الشيخ الدكتور بشير الدماطي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+  --paper:#faf7ef;
+  --card:#ffffff;
+  --ink:#26241d;
+  --muted:#6b6455;
+  --green-900:#0d3b2a;
+  --green-700:#175139;
+  --green-600:#1e6a4f;
+  --green-100:#e6f0e9;
+  --gold-900:#8a6414;
+  --gold-700:#b08a2e;
+  --gold-500:#c9a227;
+  --gold-200:#ead9a8;
+  --gold-050:#faf3df;
+  --blue-700:#31567d;
+  --maroon-700:#7a3040;
+  --line:#e3dbc6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Amiri','Traditional Arabic','Sakkal Majalla',serif;
+  font-size:19px;
+  line-height:2.05;
+  direction:rtl;
+}
+.page{max-width:920px;margin:0 auto;padding:0 20px 70px}
+
+/* ============ الغلاف ============ */
+.cover{
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
+    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+  color:#f3ecd8;
+  padding:64px 22px;
+  min-height:96vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.cover-frame{
+  position:relative;
+  width:100%;max-width:660px;
+  text-align:center;
+  padding:60px 40px 46px;
+  border:1.5px solid rgba(201,162,39,.8);
+  border-radius:4px;
+  box-shadow:0 0 0 7px rgba(201,162,39,.12), inset 0 0 0 1px rgba(201,162,39,.35), inset 0 0 70px rgba(0,0,0,.28);
+}
+.cover-frame::before{
+  content:'';position:absolute;inset:11px;
+  border:3px double rgba(201,162,39,.55);
+  border-radius:3px;pointer-events:none;
+}
+.corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
+.corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
+.corner.c2{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.corner.c3{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.corner.c4{bottom:20px;left:20px;border-bottom-width:3px;border-left-width:3px}
+.cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
+.cover-series{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:15px;letter-spacing:.5px;
+  color:var(--gold-200);
+  margin:18px 0 4px;
+}
+.cover-title{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:58px;font-weight:700;
+  color:#f7ead0;
+  margin:10px 0 2px;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+.cover-sub{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#d9e8dd;margin:6px 0 4px;
+}
+.cover-speaker{
+  font-family:'Reem Kufi',sans-serif;
+  font-size:19px;color:#f7ead0;
+  margin:16px 0 2px;
+}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
+.cover-author b{color:#f7ead0}
+.cover-link{
+  display:inline-block;
+  margin-top:26px;
+  padding:10px 30px;
+  border:1.5px solid var(--gold-500);
+  border-radius:99px;
+  color:#f7ead0;
+  text-decoration:none;
+  font-family:'Reem Kufi',sans-serif;
+  font-size:16px;
+  background:rgba(201,162,39,.10);
+  transition:background .2s;
+}
+.cover-link:hover{background:rgba(201,162,39,.24)}
+.cover-note{margin-top:26px;font-size:14.5px;color:#c8d4c6}
+.orn{display:block;margin:14px auto}
+
+/* ============ الفهرس ============ */
+.toc{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px 34px 24px;
+  margin:40px 0 10px;
+  box-shadow:0 1px 2px rgba(60,50,20,.05);
+}
+.toc h2{
+  font-family:'Reem Kufi',sans-serif;
+  color:var(--green-900);
+  text-align:center;
+  margin:0 0 6px;
+  font-size:29px;
+}
+.toc ol{list-style:none;padding:0;margin:14px 0 0}
+.toc li{display:flex;align-items:center;gap:12px;padding:6px 0}
+.toc .t-num{
+  background:var(--green-700);color:#fff;
+  min-width:32px;height:32px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.toc a{color:var(--ink);text-decoration:none;font-weight:700}
+.toc a:hover{color:var(--green-700)}
+.toc .dots{flex:1;border-bottom:2px dotted var(--gold-500);opacity:.55;transform:translateY(2px)}
+.toc ul.sub{list-style:none;margin:2px 0 6px;padding-right:44px}
+.toc ul.sub li{padding:2px 0}
+.toc ul.sub a{font-weight:400;color:var(--muted);font-size:17px}
+.toc ul.sub li::before{content:'—';color:var(--gold-700);margin-left:8px}
+
+/* ============ العناوين والأقسام ============ */
+section{margin:52px 0}
+.sec-head{
+  display:flex;align-items:center;gap:15px;
+  border-bottom:3px double var(--gold-500);
+  padding-bottom:10px;margin-bottom:20px;
+}
+.sec-num{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-size:23px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);
+}
+h2{font-family:'Reem Kufi',sans-serif;color:var(--green-900);font-size:30px;margin:0}
+h3{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);
+  font-size:23px;margin:34px 0 10px;
+}
+h3::before{
+  content:'';display:inline-block;width:11px;height:11px;
+  background:var(--gold-500);transform:rotate(45deg);
+  margin-left:10px;vertical-align:middle;
+}
+p{margin:0 0 14px}
+b,strong{color:var(--green-900)}
+.term{color:var(--gold-900);font-weight:700}
+.mark{color:var(--gold-900);font-weight:700}
+.back-top{
+  display:block;text-align:left;
+  font-size:14.5px;color:var(--muted);
+  text-decoration:none;margin-top:18px;
+}
+.back-top:hover{color:var(--green-700)}
+
+/* ============ الصناديق ============ */
+.box{border-radius:12px;padding:18px 22px 15px;margin:22px 0;border:1px solid var(--line);background:var(--card)}
+.tag{
+  display:inline-block;font-size:14px;font-weight:600;
+  padding:1px 15px;border-radius:99px;margin-bottom:9px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.matn{
+  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  border:1.5px solid var(--gold-500);border-right-width:6px;
+}
+.matn .tag{background:var(--gold-700);color:#fff}
+.matn p{font-size:23px;font-weight:700;margin:0;color:#4a3b12;line-height:2.1}
+.matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
+.poem{margin:2px 0 0;text-align:center}
+.poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
+.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran .tag{background:var(--green-700);color:#fff}
+.quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
+.quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
+.hadith{background:#fbf5ea;border:1px solid #e3cf9d;border-right:5px solid var(--gold-700)}
+.hadith .tag{background:var(--gold-700);color:#fff}
+.note{background:#fff8e6;border:1.5px dashed var(--gold-500)}
+.note .tag{background:#fff;color:var(--gold-900);border:1px solid var(--gold-500)}
+.example{background:#fff;border:1px dashed #cbbf9d}
+.example .tag{background:#efe5c5;color:#6b5518}
+
+/* ============ أسئلة وأجوبة ============ */
+.qa{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 20px 13px;margin:20px 0}
+.q{font-weight:700;color:var(--green-900)}
+.q .q-badge{background:var(--green-700)}
+.a{margin-top:9px;border-top:1px dashed var(--line);padding-top:10px}
+.a .q-badge{background:var(--gold-700)}
+.q-badge{
+  display:inline-block;color:#fff;font-size:13.5px;font-weight:600;
+  padding:1px 13px;border-radius:99px;margin-left:9px;
+  font-family:'Reem Kufi',sans-serif;vertical-align:middle;
+}
+
+/* ============ المخططات ============ */
+.diagram{
+  background:linear-gradient(180deg,#fffdf7,#faf7ef);
+  border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px 16px;margin:26px 0;
+}
+.diagram figcaption,.diagram .dcap{
+  text-align:center;font-size:15.5px;color:var(--gold-900);
+  margin-top:14px;font-weight:700;
+}
+.tree-root{
+  max-width:420px;margin:0 auto;text-align:center;
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;
+  padding:11px 20px;border-radius:12px;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);
+}
+.tree-root.gold{background:var(--gold-700)}
+.tree-stem{width:3px;height:26px;background:var(--gold-500);margin:0 auto}
+.tree-row{display:flex;gap:14px;position:relative;padding-top:26px}
+.tree-row.cols-2::before{right:25%;left:25%}
+.tree-row.cols-3::before{right:16.66%;left:16.66%}
+.tree-row.cols-4::before{right:12.5%;left:12.5%}
+.tree-row::before{
+  content:'';position:absolute;top:0;height:3px;
+  background:var(--gold-500);
+}
+.node{
+  position:relative;flex:1;background:#fff;
+  border:1.5px solid var(--line);border-radius:12px;
+  padding:13px 13px 11px;text-align:center;
+}
+.node::before{
+  content:'';position:absolute;top:-26px;right:50%;
+  transform:translateX(50%);width:3px;height:26px;
+  background:var(--gold-500);
+}
+.node .n-title{font-family:'Reem Kufi',sans-serif;font-size:18.5px;color:var(--green-900);font-weight:600;margin-bottom:5px}
+.node .n-sub{font-size:16px;color:#54503f;line-height:1.95}
+.node .n-sub ul{margin:4px 0 0;padding-right:18px;text-align:right}
+.node.green{border-color:var(--green-600);background:#f3f9f5}
+.node.blue{border-color:var(--blue-700);background:#eff5fa}
+.node.maroon{border-color:var(--maroon-700);background:#faf1f3}
+.node.goldb{border-color:var(--gold-700);background:#fdf8e9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.chip{
+  display:inline-block;background:var(--green-700);color:#fff;
+  border-radius:99px;padding:3px 18px;font-weight:700;font-size:17px;
+  font-family:'Reem Kufi',sans-serif;
+}
+.chip.blue{background:var(--blue-700)}
+.chip.gold{background:var(--gold-700)}
+.chip.maroon{background:var(--maroon-700)}
+.chip.plain{background:#fff;color:var(--green-900);border:1.5px solid var(--green-600)}
+.flow-lane{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:14px;
+}
+.flow-lane .fa{color:var(--gold-700);font-weight:700;font-size:20px}
+.flow-lane .lane-note{flex-basis:100%;font-size:16px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+
+/* ============ الجداول ============ */
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{width:100%;border-collapse:collapse;font-size:17.5px}
+th{
+  background:var(--green-700);color:#fff;
+  font-family:'Reem Kufi',sans-serif;font-weight:500;
+  padding:9px 13px;border:1px solid #10402c;font-size:17px;
+}
+td{border:1px solid var(--line);padding:9px 13px;background:#fff;vertical-align:top;line-height:1.95}
+tbody tr:nth-child(even) td{background:#f8f5ec}
+.pill{display:inline-block;padding:1px 13px;border-radius:99px;font-size:14.5px;font-weight:700;white-space:nowrap}
+.pill.yes{background:#e0efe6;color:#0d5136;border:1px solid #9fcbaf}
+.pill.no{background:#f7e3e6;color:#8c2f39;border:1px solid #d9aab1}
+.ok{color:#0d5136;font-weight:700}
+.no-x{color:#8c2f39;font-weight:700}
+
+/* ============ الخلاصة ============ */
+.summary-points{margin:0;padding-right:22px}
+.summary-points li{margin-bottom:10px}
+
+/* ============ الطباعة ============ */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{font-size:12.5pt;background:#fff}
+  .no-print{display:none!important}
+  .cover{min-height:auto;padding:90px 20px;page-break-after:always}
+  section{margin:26pt 0}
+  .box,.diagram,.qa,.table-wrap,figure{page-break-inside:avoid}
+  h2,h3{page-break-after:avoid}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ==================== الغلاف ==================== -->
+<header class="cover" id="cover">
+  <div class="cover-frame">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <div class="cover-basmala">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-series">سِلْسِلَة: حقيبة المشجرات والتمرينات على الآجرومية ونظمها</div>
+    <h1 class="cover-title">بابُ الإعرابِ</h1>
+    <div class="cover-sub">الدرس الثاني: مفهومُ الإعرابِ وأركانُه وحالاتُه — مع التمرينات</div>
+    <div class="cover-speaker"><span class="by">إلقاءُ وشرحُ</span> فضيلةِ الشيخِ الدكتورِ بشير الدماطي <span class="by">حفظه الله</span></div>
+    <svg class="orn" width="230" height="18" viewBox="0 0 230 18" aria-hidden="true">
+      <line x1="4" y1="9" x2="88" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+      <circle cx="99" cy="9" r="2.6" fill="#c9a227"/>
+      <path d="M115 1 L123 9 L115 17 L107 9 Z" fill="none" stroke="#c9a227" stroke-width="1.6"/>
+      <circle cx="131" cy="9" r="2.6" fill="#c9a227"/>
+      <line x1="142" y1="9" x2="226" y2="9" stroke="#c9a227" stroke-width="1.4"/>
+    </svg>
+    <div class="cover-author">
+      شرحٌ وتدريباتٌ على متنِ <b>المقدّمةِ الآجروميّةِ</b><br>
+      لصاحبِها الإمامِ <b>محمدِ بنِ محمدِ بنِ داودَ الصنهاجيِّ</b> «ابنِ آجروم» النحويِّ <b>(٦٧٢ – ٧٢٣ هـ)</b>
+    </div>
+    <a class="cover-link" href="https://www.youtube.com/watch?v=WFv2oXWoHdo" target="_blank" rel="noopener">⬥ الدرس الأصلي على يوتيوب ⬥</a>
+    <div class="cover-note">تحريرٌ كتابيٌّ مُعادُ صياغتِه من التفريغ الصوتي للدرس — للمراجعة والاستعمال الدراسي</div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- ==================== الفهرس ==================== -->
+<nav class="toc" id="toc">
+  <h2>فهرسُ المحتويات</h2>
+  <svg class="orn" width="200" height="16" viewBox="0 0 200 16" aria-hidden="true">
+    <line x1="4" y1="8" x2="76" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+    <path d="M100 1 L107 8 L100 15 L93 8 Z" fill="none" stroke="#b08a2e" stroke-width="1.4"/>
+    <line x1="124" y1="8" x2="196" y2="8" stroke="#b08a2e" stroke-width="1.3"/>
+  </svg>
+  <ol>
+    <li><span class="t-num">١</span><a href="#s1">افتتاحيةُ الدرس ومكانةُ بابِ الإعراب</a><span class="dots"></span></li>
+    <li><span class="t-num">٢</span><a href="#s2">أركانُ عمليةِ الإعراب</a><span class="dots"></span></li>
+    <li><span class="t-num">٣</span><a href="#s3">حدُّ الإعراب في المتن وشرحُه</a><span class="dots"></span></li>
+    <li><span class="t-num">٤</span><a href="#s4">الإعرابُ الظاهرُ والمقدَّرُ وأسبابُ التقدير</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#asbab">أسبابُ تقديرِ العلامةِ الخمسةُ</a></li>
+        <li><a href="#mahalli">النوعُ الثالثُ: الإعرابُ المحلِّيُّ</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٥</span><a href="#s5">العواملُ: لفظيةٌ ومعنويةٌ</a><span class="dots"></span></li>
+    <li><span class="t-num">٦</span><a href="#s6">أقسامُ الإعراب: الحالاتُ الأربعُ وتوزيعُها</a><span class="dots"></span></li>
+    <li><span class="t-num">٧</span><a href="#s7">مراجعةُ الباب: من العاملِ إلى العلامة</a><span class="dots"></span></li>
+    <li><span class="t-num">٨</span><a href="#s8">التمريناتُ على الدرس الثاني</a><span class="dots"></span>
+      <ul class="sub">
+        <li><a href="#t81">أسئلةٌ على المصطلحِ والحالات</a></li>
+        <li><a href="#t82">هل هذا التغييرُ إعرابٌ؟</a></li>
+        <li><a href="#t83">إعرابٌ تطبيقيٌّ: «الفتى» و«هدًى» و«يدافع» و«لم يكتبْ»</a></li>
+        <li><a href="#t84">سؤالٌ ختاميٌّ جامع</a></li>
+      </ul>
+    </li>
+    <li><span class="t-num">٩</span><a href="#s9">خلاصةُ الدرس</a><span class="dots"></span></li>
+  </ol>
+</nav>
+
+<!-- ==================== ١ افتتاحية ==================== -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">١</span><h2>افتتاحيةُ الدرس ومكانةُ بابِ الإعراب</h2></div>
+
+  <p>بسمِ اللهِ الرحمنِ الرحيمِ، الحمدُ للهِ كما ينبغي لجلالِه وكمالِه، وصلَّى اللهُ وسلَّمَ على نبيِّهِ المصطفى وعلى آلِه. وبعدُ:</p>
+
+  <p>فهذا الدرسُ الثاني من دروسِ متنِ الآجروميّةِ للإمامِ ابنِ آجرومَ الصنهاجيِّ المغربيِّ المتوفَّى سنةَ <b>٧٢٣هـ</b>. والبابُ الذي معنا عنوانُه: <b>«بابُ الإعرابِ»</b>؛ وهي المقدّمةُ الثانيةُ التي تتكلمُ عنها عمومًا كتبُ النحوِ من المقدّماتِ النحويةِ، وهي مقدّمةٌ خاصّةٌ بالإعرابِ والبناءِ. فسيتكلمُ الشيخُ هنا تفصيلًا على قضيةِ الإعرابِ.</p>
+
+  <p>والإعرابُ في التركيبِ العربيِّ — أو في النظامِ النحويِّ العربيِّ، اللغةِ العربيةِ — هو <b>أهمُّ الظواهرِ النحويةِ</b>. وقد أنشدَ الشيخُ قولَ ناظمِ الآجروميّةِ <b>محمدِ بنِ آيشَ الشنقيطيِّ</b> في بابِ الإعرابِ:</p>
+
+  <div class="box matn">
+    <span class="tag">من نظمِ الآجروميّةِ</span>
+    <div class="poem">
+      <div class="ln">الإعرابُ تغييرُ أواخرِ الكَلِمْ … تقديرًا أو لفظًا فذا الحدُ اغتنمْ</div>
+      <div class="ln">وذلك التغييرُ لاضطرابِ … عواملِ تدخلُ [عليها]؛ وللإعرابِ أقسامٌ:</div>
+      <div class="ln">رفعٌ ونصبٌ ثم خفضٌ وجزمْ … فالأولانِ دونَ ريبٍ وقعا</div>
+      <div class="ln">في الاسمِ والفعلِ المضارعِ معا … والاسمُ قد خُصِّصَ بالخفضِ كما</div>
+      <div class="ln">قد خُصِّصَ الفعلُ بجزمٍ فاعلمْ</div>
+    </div>
+  </div>
+
+  <div class="box note">
+    <span class="tag">إشارةٌ</span>
+    <p style="margin:0">هذا النظمُ يُجملُ ما سيفصِّلُه الدرسُ: <b>حدَّ الإعرابِ</b> (تغييرُ أواخرِ الكلمِ لفظًا أو تقديرًا بسببِ العواملِ)، و<b>أقسامَه الأربعةَ</b> (الرفعُ والنصبُ والخفضُ والجزمُ)، و<b>توزيعَها</b>: فالأولانِ (الرفعُ والنصبُ) يدخلانِ الاسمَ والفعلَ المضارعَ معًا، والاسمُ خُصِّصَ بالخفضِ كما خُصِّصَ الفعلُ بالجزمِ.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٢ أركان الإعراب ==================== -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">٢</span><h2>أركانُ عمليةِ الإعراب</h2></div>
+
+  <p>الإعرابُ — كما سيتبينُ — له مكوناتٌ متعددةٌ أو <b>أركانٌ</b> في التركيبِ العربيِّ:</p>
+
+  <p><b>أولًا: الحالةُ الإعرابيّةُ</b> التي تكونُ عليها الكلمةُ: من <b>رفعٍ ونصبٍ وجرٍّ وجزمٍ</b>.</p>
+  <p><b>ثانيًا: الوظيفةُ النحويّةُ</b> التي تندرجُ تحتَ هذه الحالةِ؛ فكلُّ حالةٍ إعرابيّةٍ عندنا تحتها عددٌ من الوظائفِ النحويةِ:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الحالاتُ الإعرابيّةُ وما يندرجُ تحتَها من وظائفَ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-4">
+      <div class="node green">
+        <div class="n-title">حالةُ الرفعِ</div>
+        <div class="n-sub">تحتها وظائفُ متعددةٌ تسمَّى <b>المرفوعاتِ</b>:
+          <ul>
+            <li>المبتدأُ والخبرُ</li>
+            <li>الفاعلُ</li>
+            <li>نائبُ الفاعلِ</li>
+            <li>اسمُ «كانَ»</li>
+            <li>خبرُ «إنَّ»</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node green">
+        <div class="n-title">حالةُ النصبِ</div>
+        <div class="n-sub"><b>المنصوباتُ</b> — وهي الأكثرُ من حيثُ عددُ الوظائفِ في العربيةِ:
+          <ul>
+            <li>المفاعيلُ الخمسةُ</li>
+            <li>الحالُ</li>
+            <li>التمييزُ</li>
+            <li>المستثنَى بـ«إلّا»</li>
+            <li>خبرُ «كانَ» واسمُ «إنَّ»</li>
+            <li>إلى آخرِها</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node green">
+        <div class="n-title">حالةُ الجرِّ</div>
+        <div class="n-sub"><b>المجروراتُ</b> كلُّها تحتَ حالةِ الجرِّ:
+          <ul>
+            <li>المجرورُ بحرفِ الجرِّ</li>
+            <li>المجرورُ بالإضافةِ</li>
+            <li>المجرورُ بالتبعيّةِ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node green">
+        <div class="n-title">حالةُ الجزمِ</div>
+        <div class="n-sub">تختصُّ بالدخولِ على <b>الفعلِ المضارعِ</b> فحسبُ، ولا تدخلُ الأسماءَ أبدًا</div>
+      </div>
+    </div>
+    <figcaption>شكل (١): كلُّ حالةٍ إعرابيّةٍ تندرجُ تحتها وظائفُ نحويّةٌ متعددةٌ</figcaption>
+  </figure>
+
+  <p><b>ثالثًا: العلامةُ الإعرابيّةُ</b> الدالةُ على الحالةِ: فكلُّ حالةٍ إعرابيّةٍ لها علامةٌ إعرابيّةٌ تدلُّ عليها — لحالةِ الرفعِ علامةٌ، ولها علامةٌ أصليةٌ وعلاماتٌ أخرى فرعيّةٌ، وكذلك حالةُ النصبِ، وكذلك حالةُ الجرِّ والخفضِ، إلى آخرِه.</p>
+  <p><b>رابعًا: المعنى النحويُّ</b> الذي تؤدّيه الكلمةُ في التركيبِ.</p>
+  <p><b>خامسًا: العواملُ</b> — وهو ركنٌ آخرُ من أركانِ عمليةِ الإعرابِ مهمٌّ تكلمَ عنه علماءُ النحوِ وأشارَ إليه ابنُ آجرومَ هنا في متنِ الآجروميّةِ: وهي العواملُ التي تدخلُ على الكلماتِ فتؤثِّرُ فيها الإعرابَ؛ يعني: الكلمةُ مرفوعةٌ — هناك شيءٌ رفعَها، ومنصوبةٌ — هناك شيءٌ نصبَها، وهكذا؛ فهناك عاملٌ يدخلُ على الكلمةِ فيؤثِّرُ فيها الرفعَ، وعاملٌ آخرُ يؤثِّرُ فيها النصبَ، إلى آخرِه.</p>
+
+  <figure class="diagram">
+    <div class="tree-root">مكوِّناتُ عمليةِ الإعرابِ عند تحليلِ التركيبِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node goldb">
+        <div class="n-title">الحالةُ الإعرابيّةُ</div>
+        <div class="n-sub">رفعٌ — نصبٌ — جرٌّ — جزمٌ</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">الوظيفةُ النحويّةُ</div>
+        <div class="n-sub">التي تندرجُ تحتَ الحالةِ: مبتدأٌ، فاعلٌ، مفعولٌ به، مضافٌ إليه…</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">العلامةُ الإعرابيّةُ</div>
+        <div class="n-sub">الدليلُ على الحالةِ: علامةٌ أصليّةٌ أو علاماتٌ فرعيّةٌ</div>
+      </div>
+    </div>
+    <div class="tree-stem" style="height:20px"></div>
+    <div class="tree-row cols-2">
+      <div class="node goldb">
+        <div class="n-title">العاملُ</div>
+        <div class="n-sub">ما يدخلُ على الكلمةِ فيؤثِّرُ فيها إعرابًا (لفظيًّا أو معنويًّا)</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">المعنى النحويُّ</div>
+        <div class="n-sub">الذي تؤدّيه الكلمةُ في التركيبِ بحسبِ موقعِها وعاملِها</div>
+      </div>
+    </div>
+    <figcaption>شكل (٢): مكوناتُ عمليةِ الإعرابِ — فإذا أردنا أن نحلِّلَ التركيبَ تحليلًا إعرابيًّا بدأنا ببيانِ حالتِه الإعرابيّةِ ووظيفتِه النحويّةِ وعلامةِ هذه الحالةِ</figcaption>
+  </figure>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٣ حد الإعراب ==================== -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">٣</span><h2>حدُّ الإعراب في المتن وشرحُه</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«الإعرابُ: هو تغييرُ أواخرِ الكلمِ، لاختلافِ العواملِ الداخلةِ عليها، لفظًا أو تقديرًا»<span class="src">— ابنُ آجرومَ، المقدّمةُ الآجروميّةُ</span></p>
+  </div>
+
+  <p>عرَّفَ ابنُ آجرومَ الإعرابَ هنا بأنه <b>الأثرُ الناتجُ عن العاملِ</b>: فالعاملُ حين يدخلُ على الكلمةَ يؤثِّرُ فيها الإعرابَ، وهذا الإعرابُ متغيِّرٌ بحسبِ ما تشغلُه الكلمةُ من حالةٍ إعرابيّةٍ، وبحسبِ المعنى الذي يريدُ المتكلمُ التعبيرَ عنه.</p>
+
+  <p>مثالُ ذلك كلمةُ <span class="mark">«محمدٌ»</span>: فهي مجرَّدةٌ هكذا لا تدلُّ على معنًى نحويٍّ، فلا بدَّ أن تدخلَ في تركيبٍ ويؤثِّرَ فيها [عاملٌ] لتدلَّ على معنًى نحويٍّ:</p>
+  <ul>
+    <li>فإذا قلتَ: <span class="mark">«جاءَ محمدٌ»</span> — فـ«محمدٌ» قد أدَّت معنى <b>الفاعليّةِ</b>؛ لأنه هو الذي جاءَ، صدرَ عنه المجيءُ.</li>
+    <li>وإذا قلتَ: <span class="mark">«رأيتُ محمدًا»</span> — فـ«محمدٌ» هنا وقعَ عليها فعلُ الفاعلِ: الرؤيةُ. أو <span class="mark">«ضربتُ محمدًا»</span>: وقعَ عليها الضربُ؛ إذًا هي هنا <b>مفعولٌ به</b>، وتكونُ — كما هو واضحٌ — <b>منصوبةً</b>.</li>
+    <li>فإذا قلتَ: <span class="mark">«مررتُ بمحمدٍ»</span> — سُبقتْ «محمدٍ» هنا بحرفِ جرٍّ، وهذا الحرفُ يؤدِّي إلى جرِّ الاسمِ بعدَه، كما قلنا في الدرسِ الماضي في الكلامِ على علاماتِ الأسماءِ: قلنا دخولُ حرفِ الجرِّ. فإذا قلتَ «مررتُ بمحمدٍ» فقَدْ جُرَّتْ كلمةُ «محمدٍ» بعدَها.</li>
+  </ul>
+
+  <p>فنلاحظُ أن كلمةَ «محمدٍ» كلمةٌ واحدةٌ، ولكنها تتغيَّرُ بتغيُّرِ موقعِها الإعرابيِّ في التركيبِ، ويتغيَّرُ آخرُها بتغيُّرِ ما يدخلُ عليها من عواملَ وبتغيُّرِ موقعِها الإعرابيِّ بناءً على ما يدخلُ عليها من عواملَ:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">الكلمةُ الواحدةُ تتغيَّرُ بتبدُّلِ العواملِ والمواقعِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node green">
+        <div class="n-title">جاءَ محمدٌ</div>
+        <div class="n-sub">أدَّت معنى <b>الفاعليّةِ</b> (صدرَ عنه المجيءُ)<br>← <b>مرفوعةٌ</b></div>
+      </div>
+      <div class="node green">
+        <div class="n-title">رأيتُ / ضربتُ محمدًا</div>
+        <div class="n-sub">وقعَ عليها فعلُ الفاعلِ (الرؤيةُ / الضربُ)<br>← <b>مفعولٌ به منصوبٌ</b></div>
+      </div>
+      <div class="node green">
+        <div class="n-title">مررتُ بمحمدٍ</div>
+        <div class="n-sub">سبقَها حرفُ الجرِّ فجرَّها<br>← <b>مجرورةٌ</b></div>
+      </div>
+    </div>
+    <figcaption>شكل (٣): «محمدٌ» كلمةٌ واحدةٌ يقلِّبُ الإعرابُ أواخرَها بتبدُّلِ العواملِ الداخلةِ عليها</figcaption>
+  </figure>
+
+  <p>إذًا: الإعرابُ تغييرُ أواخرِ الكلمِ لاختلافِ العواملِ الداخلةِ عليها لفظًا أو تقديرًا.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٤ الظاهر والمقدر ==================== -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">٤</span><h2>الإعرابُ الظاهرُ والمقدَّرُ وأسبابُ التقدير</h2></div>
+
+  <p>قولُه «لفظًا أو تقديرًا» يعني أن الإعرابَ — ونحن هنا نتكلمُ عن <b>العلامةِ الإعرابيّةِ</b> — قد يكونُ <b>ظاهرًا</b> من خلالِ علامتِه، وقد يكونُ <b>مقدَّرًا</b>: تكونُ علامةُ الإعرابِ ظاهرةً في اللفظِ، أو مقدَّرةً لا تظهرُ وإنما نحن نقدِّرُها للزومِ وجودِها:</p>
+  <ul>
+    <li><b>الظاهرُ</b>: حين أقولُ مثلًا مثالَنا الآنَ: <span class="mark">«جاءَ محمدٌ»</span> — «محمدٌ» فاعلٌ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ.</li>
+    <li><b>المقدَّرُ</b>: لكن لو قلتُ مثلًا: <span class="mark">«جاءتْ سلمى»</span> — كيف نعربُ «سلمى»؟ سلمى فاعلٌ مرفوعٌ وعلامةُ رفعِه الضمةُ المقدَّرةُ على آخرِه، على الألفِ، <b>للتعذُّرِ</b>.</li>
+  </ul>
+
+  <h3 id="asbab">أسبابُ تقديرِ العلامةِ في اللغةِ العربيةِ</h3>
+  <p>أسبابُ التقديرِ في اللغةِ العربيةِ متعددةٌ: قد تُقدَّرُ العلامةُ <b>للتعذُّرِ</b>، و<b>للثقلِ</b>، و<b>للمناسبةِ</b>، و<b>للقافيةِ</b>، و<b>للحكايةِ</b>:</p>
+
+  <h3>السببُ الأولُ: التقديرُ للتعذُّرِ</h3>
+  <p>وذلك إذا كان آخرُ الكلمةِ <b>ألفًا</b>، كمثلِ «سلمى» التي ذكرناها. وحتى في الأفعالِ أيضًا: لو قلتَ الفعلَ <span class="mark">«نادى»</span> — فعلٌ ماضٍ مبنيٌّ على الفتحِ المقدَّرِ <b>للتعذُّرِ</b> لأن آخرَه ألفٌ.</p>
+
+  <h3>السببُ الثاني: التقديرُ للثقلِ</h3>
+  <p>وذلك إذا كان آخرُ الكلمةِ <b>ياءً</b>. والعلاماتُ التي تُقدَّرُ للثقلِ شيئانِ — علامتانِ اثنتانِ فقط: <b>الضمةُ والكسرةُ</b>؛ أما <b>الفتحةُ</b> فلا تُقدَّرُ للثقلِ؛ يعني الفتحةَ علامةٌ خفيفةٌ تظهرُ:</p>
+  <ul>
+    <li>لو قلتَ مثلًا: <span class="mark">«جاءَ القاضي»</span> — «القاضي» فاعلٌ مرفوعٌ وعلامةُ رفعِه الضمةُ المقدَّرةُ [على الياء] <b>للثقلِ</b>.</li>
+    <li>ولو قلتَ: <span class="mark">«مررتُ بالقاضي»</span> — فالقاضي اسمٌ مجرورٌ بالباءِ وعلامةُ جرِّه الكسرةُ المقدَّرةُ <b>للثقلِ</b>.</li>
+    <li>لكن لو نصبتَ فقلتَ: <span class="mark">«رأيتُ القاضيَ»</span> — فلا بدَّ من ذكرِ الفتحةِ؛ لأن الفتحةَ حركةٌ خفيفةٌ لا تسبِّبُ ثقلًا في النطقِ عندِ وجودِها على الياءِ. فلذلك تقديرُ العلامةِ للثقلِ لا يكونُ مع الفتحةِ وإنما يكونُ مع الضمةِ والكسرةِ — يعني في حالتَيِ الرفعِ والجرِّ فقط.</li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="tree-root gold">آخرُ الكلمةِ ياءٌ: ما يُقدَّرُ وما يظهرُ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node blue">
+        <div class="n-title">جاءَ القاضي</div>
+        <div class="n-sub">فاعلٌ مرفوعٌ<br>الضمةُ المقدَّرةُ <b>للثقلِ</b></div>
+      </div>
+      <div class="node blue">
+        <div class="n-title">مررتُ بالقاضي</div>
+        <div class="n-sub">اسمٌ مجرورٌ بالباءِ<br>الكسرةُ المقدَّرةُ <b>للثقلِ</b></div>
+      </div>
+      <div class="node green">
+        <div class="n-title">رأيتُ القاضيَ</div>
+        <div class="n-sub">مفعولٌ به منصوبٌ<br>الفتحةُ <b>الظاهرةُ</b> — لخفَّتِها لا تُقدَّرُ</div>
+      </div>
+    </div>
+    <figcaption>شكل (٤): الضمةُ والكسرةُ تُقدَّرانِ على الياءِ للثقلِ، والفتحةُ تظهرُ لخفَّتِها — فالتقديرُ للثقلِ في حالتَيِ الرفعِ والجرِّ فقط</figcaption>
+  </figure>
+
+  <h3>السببُ الثالثُ: التقديرُ للمناسبةِ</h3>
+  <p>وذلك مع الأسماءِ التي تلحقُها <b>ياءُ المتكلمِ</b>. وياءُ المتكلمِ لا بدَّ وأن تُسبَقَ بكسرةٍ؛ لأنها ياءُ مدٍّ، وياءُ المدِّ لا بدَّ أن تُسبَقَ بحركةٍ من جنسِها وهي الكسرةُ. فإذا قلتَ مثلًا: <span class="mark">«هذا كتابي»</span> — كلمةُ «كتابي» خبرٌ عن المبتدأِ («هذا») وهذا مرفوعٌ، و(كتابي) مرفوعٌ وعلامةُ رفعِه الضمةُ المقدَّرةُ <b>للمناسبةِ</b>؛ يعني مُنِعَ من ظهورِ هذه العلامةِ <b>اشتغالُ المحلِّ بحركةِ المناسبةِ</b>؛ لأن ياءَ المتكلمِ لا يناسبُها قبلَها إلا الكسرةُ، كما قلنا.</p>
+
+  <h3>السببُ الرابعُ: التقديرُ للقافيةِ (حُكمٌ في لغةِ الشعرِ)</h3>
+  <p>وهو تقديرٌ <b>عارضٌ</b> مختصٌّ بلغةِ الشعرِ: إذا كانت القافيةُ مثلًا <b>مقيَّدةً</b> — يعني أن تكونَ القصيدةُ منتهيةً بحرفٍ صحيحٍ ساكنٍ — فلا شكَّ أن هنا العلاماتِ ستُقدَّرُ. إذا تاملنا مثلًا قولَ الشاعرِ أبي القاسمِ الشابيِّ:</p>
+
+  <div class="box matn">
+    <span class="tag">شاهدٌ شعريٌّ</span>
+    <div class="poem">
+      <div class="ln">أحبُّ الطيورَ وأهوى الزهورَ … وأعشقُ ثرثرةَ الساقياتْ</div>
+    </div>
+    <p style="margin-top:10px;font-size:19px;font-weight:400;line-height:2">هنا الشاعرُ أسكنَ الحرفَ الأخيرَ. ولو أردنا أن نعربَ «الساقياتْ» — وأعشقُ ثرثرةَ الساقياتْ — فالأصلُ أنَّها <b>مجرورةٌ</b> لأنها مضافٌ إليهٍ مجرورٌ وعلامةُ جرِّه الكسرةُ، لكن الكسرةَ قُدِّرَتْ <b>للقافيةِ</b>. وهذا تقديرٌ عارضٌ — أو سببٌ عارضٌ للتقديرِ — وكما قلنا هو مختصٌّ بلغةِ الشعرِ.</p>
+  </div>
+
+  <h3>السببُ الخامسُ: التقديرُ للحكايةِ</h3>
+  <p>وكذلك تُقدَّرُ العلامةُ <b>للحكايةِ</b>، كمثلِ <b>الأعلامِ المركَّبةِ تركيبًا إسناديًّا</b>؛ مثالُ ذلك شخصٌ سمَّيناه «جادَ الحقِّ»، أو الشاعرُ الشهيرُ «تأبَّطَ شرًّا». فلو قلتَ: <span class="mark">«جاءَ تأبَّطَ شرًّا»</span> — كيف نعربُ «تأبَّطَ شرًّا»؟ «تأبَّطَ شرًّا» هي الفاعلُ؛ لأنه هو الذي جاءَ، وهي اسمُ شاعرٍ — اسمُ عَلَمٍ على ذاتٍ — يدلُّ على شخصٍ واحدٍ. فتأبَّطَ شرًّا فاعلٌ للفعلِ «جاءَ» مرفوعٌ وعلامةُ رفعِه الضمةُ المقدَّرةُ <b>للحكايةِ</b>.</p>
+
+  <p>وكذلك تُقدَّرُ العلامةُ للحكايةِ في إعرابِ <b>المصادرِ المؤوَّلةِ</b>؛ يعني مثلًا في قولِه تعالى:</p>
+  <div class="box quran">
+    <span class="tag">آيةٌ كريمةٌ</span>
+    <p class="ayah">﴿وَأَن تَصُومُوا خَيْرٌ لَّكُمْ﴾<span class="ref">سورةُ البقرةِ: ١٨٤</span></p>
+  </div>
+  <p>التقديرُ: <span class="mark">«صومُكم خيرٌ لكم»</span>. فبناءً على هذا نقولُ: «أنْ» — بعدَ أن نعربَها تفصيلًا: «أنْ» حرفٌ مصدريٌّ ناصبٌ، و«تصوموا» فعلٌ مضارعٌ منصوبٌ بها — نقولُ: و«أنْ» وما دخلتْ عليه في تأويلِ مصدرٍ: <b>مبتدأٌ</b> — الذي هو بتقديرِ «صومُكم» — مبتدأٌ مرفوعٌ وعلامةُ رفعِه الضمةُ المقدَّرةُ <b>للحكايةِ</b>. وليس صوابًا أن تقولَ: إن المصدرَ المؤوَّلَ «في محلِّ رفعٍ مبتدأٌ»؛ لا، هو ليس في محلٍّ؛ لأنه في تقديرِ مفردٍ — كلمةٍ واحدةٍ: «صومُكم» — فبناءً على هذا نقولُ: إنه مبتدأٌ مباشرةً مرفوعٌ وعلامةُ رفعِه الضمةُ المقدَّرةُ للحكايةِ، هكذا يقالُ في إعرابِه.</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">أسبابُ تقديرِ العلامةِ الإعرابيّةِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-3">
+      <div class="node goldb">
+        <div class="n-title">التعذُّرُ</div>
+        <div class="n-sub">آخرُ الكلمةِ <b>ألفٌ</b> (والألفُ دائمًا ساكنةٌ)<br>«جاءتْ سلمى» — والفعلُ «نادى» مبنيٌّ على الفتحِ المقدَّرِ للتعذُّرِ</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">الثقلُ</div>
+        <div class="n-sub">آخرُ الكلمةِ <b>ياءٌ</b>؛ وتُقدَّرُ فيه الضمةُ والكسرةُ فقط دونَ الفتحةِ الخفيفةِ<br>«جاءَ القاضي» — «مررتُ بالقاضي»</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">المناسبةُ</div>
+        <div class="n-sub">الأسماءُ الملحقةُ بـ<b>ياءِ المتكلمِ</b> (تُسبَقُ بكسرةٍ من جنسِها)<br>«هذا كتابي»</div>
+      </div>
+    </div>
+    <div class="tree-stem" style="height:20px"></div>
+    <div class="tree-row cols-2">
+      <div class="node goldb">
+        <div class="n-title">القافيةُ (لغةُ الشعرِ)</div>
+        <div class="n-sub">تقديرٌ عارضٌ إذا كانت القافيةُ مقيَّدةً بحرفٍ صحيحٍ ساكنٍ<br>«…وأعشقُ ثرثرةَ الساقياتْ»</div>
+      </div>
+      <div class="node goldb">
+        <div class="n-title">الحكايةُ</div>
+        <div class="n-sub">الأعلامُ المركَّبةُ تركيبًا إسناديًّا: «جاءَ تأبَّطَ شرًّا»<br>والمصادرُ المؤوَّلةُ: ﴿وأن تصوموا خيرٌ لكم﴾ بتقديرِ «صومُكم»</div>
+      </div>
+    </div>
+    <figcaption>شكل (٥): أسبابُ التقديرِ الخمسةُ — فالإعرابُ التقديريُّ قد تتعدَّدُ أسبابُه</figcaption>
+  </figure>
+
+  <h3 id="mahalli">النوعُ الثالثُ من الإعرابِ: الإعرابُ المحلِّيُّ</h3>
+  <p>إذًا الإعرابُ عندنا إلى الآن نوعان: <b>الإعرابُ الظاهريُّ</b> و<b>الإعرابُ التقديريُّ</b>. وهناك نوعٌ ثالثٌ من الإعرابِ نسمِّيه <b>الإعرابَ المحلِّيَّ</b>، وهذا يكونُ في <b>المبنياتِ</b> وفي <b>الجملِ وأشباهِ الجملِ</b> — ويمكنُ أن نعرضَ له بعدَ ذلك إن شاء اللهُ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٥ العوامل ==================== -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">٥</span><h2>العواملُ: لفظيةٌ ومعنويةٌ</h2></div>
+
+  <p>العواملُ التي تدخلُ على الكلمةِ فتؤثِّرُ فيها الإعرابَ متعددةٌ، والعلماءُ النحاةُ قسَّموها قسمينِ: هناك <b>عواملُ لفظيّةٌ</b> — وهي الغالبةُ والأكثرُ والشائعةُ في النحوِ العربيِّ — وهناك <b>عواملُ معنويّةٌ</b>:</p>
+
+  <figure class="diagram">
+    <div class="tree-root gold">العواملُ المؤثِّرةُ في الكلماتِ نوعانِ</div>
+    <div class="tree-stem"></div>
+    <div class="tree-row cols-2">
+      <div class="node blue">
+        <div class="n-title">العواملُ اللفظيّةُ (الغالبةُ والشائعةُ)</div>
+        <div class="n-sub">
+          <ul>
+            <li><b>حروفُ الجرِّ</b>: تؤثِّرُ في الاسمِ بعدَها الجرَّ</li>
+            <li><b>الفعلُ</b>: يؤثِّرُ في الفاعلِ رفعًا وفي المفعولِ به نصبًا</li>
+            <li><b>المبتدأُ</b>: الخبرُ مرفوعٌ بالمبتدأِ، فهو هنا عاملٌ لفظيٌّ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="node maroon">
+        <div class="n-title">العواملُ المعنويّةُ</div>
+        <div class="n-sub">
+          <ul>
+            <li><b>الابتداءُ</b>: الذي رفعَ المبتدأَ (وفي تفسيرِ العاملِ في المبتدأِ والخبرِ خلافٌ بينَ النحاةِ، والشائعُ أن المبتدأَ مرفوعٌ بالابتداءِ)</li>
+            <li><b>التجرُّدُ من الناصبِ والجازمِ</b>: الذي رفعَ الفعلَ المضارعَ المتجرِّدَ من أدواتِ النصبِ والجزمِ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figcaption>شكل (٦): العواملُ اللفظيّةُ هي الأكثرُ — وأشهرُ كتبِها «العواملُ المئةُ» للإمامِ عبدِ القاهرِ الجرجانيِّ</figcaption>
+  </figure>
+
+  <p>فالعواملُ اللفظيّةُ معروفةٌ: فحروفُ الجرِّ التي تؤثِّرُ في الاسمِ بعدَها الجرَّ هي عواملُ لفظيّةٌ، والفعلُ الذي يؤثِّرُ في الفاعلِ رفعًا وفي المفعولِ به نصبًا هو عاملٌ لفظيٌّ، والخبرُ مرفوعٌ بالمبتدأِ: فالمبتدأُ هنا عاملٌ لفظيٌّ. لكنِ المبتدأُ نفسُه مثلًا هو معربٌ مرفوعٌ، وقالوا: الذي رفعَه هو <b>الابتداءُ</b> — وطبعًا هناك خلافٌ بينَ النحاةِ في تفسيرِ العاملِ هنا في المبتدأِ والخبرِ، لكنَّ الشائعَ أن المبتدأَ مرفوعٌ بالابتداءِ. وأينَ الابتداءُ؟ الابتداءُ عاملٌ <b>معنويٌّ</b> وليس عاملًا لفظيًّا.</p>
+  <p>وكذلكَ الفعلُ المضارعُ حين يُرفَعُ: يقولونَ ما سببُ رفعِه؟ ما العاملُ الذي أثَّرَ فيه الرفعَ؟ قالوا: <b>تجرُّدُه من الناصبِ أو الجازمِ</b>؛ يعني: الفعلُ المضارعُ إذا كان منصوبًا فلا بدَّ أن يُسبَقَ بأداةِ نصبٍ هي العاملُ اللفظيُّ، وإذا كان مجزومًا فإنه يُسبَقُ بأداةِ جزمٍ هي العاملُ اللفظيُّ. طبْ ماذا لو كان مرفوعًا؟ لو كان مرفوعًا فليس هناك — ليس قبله — عاملٌ لفظيٌّ وإنما عاملُه معنويٌّ؛ قالوا: هو <b>التجرُّدُ من الناصبِ والجازمِ</b>. فالتجرُّدُ هنا عاملٌ معنويٌّ.</p>
+  <p>فالعواملُ المتعددةُ التي تؤثِّرُ في الكلماتِ إعرابًا — كما قلنا — متعددةٌ، نوعانِ عندنا: العواملُ المعنويّةُ والعواملُ اللفظيّةُ، واللفظيّةُ هي الأكثرُ كما أشرنا. وطبعًا أشهرُ كتابٍ فيها كتابُ الإمامِ العَلَمِ <b>عبدِ القاهرِ الجرجانيِّ</b>: <b>«العواملُ المئةُ»</b>.</p>
+
+  <div class="box note">
+    <span class="tag">هذا ما يخصُّ التعريفَ</span>
+    <p style="margin:0">هذا فيما يخصُّ تعريفَ الإعرابِ ومفهومَه كما ذكرَه ابنُ آجرومَ رحمه الله.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٦ الحالات الأربع ==================== -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">٦</span><h2>أقسامُ الإعراب: الحالاتُ الأربعُ وتوزيعُها</h2></div>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«وأقسامُه أربعةٌ: رفعٌ، ونصبٌ، وخفضٌ، وجزمٌ»</p>
+  </div>
+
+  <p>بعدَ ذلك تكلمَ ابنُ آجرومَ على تقسيمِ الإعرابِ، والتقسيمُ هنا هو <b>الحالاتُ</b>: يعني يبينُ هنا الحالاتِ الإعرابيّةَ التي أشرنا إليها في حديثِه عن الإعرابِ بالتفصيلِ. هذه هي الحالاتُ الإعرابيّةُ الأربعُ في اللغةِ العربيةِ: <b>الرفعُ والنصبُ والخفضُ والجزمُ</b>. وهناك حالتانِ منها تدخلانِ الأسماءَ والأفعالَ، وهناك حالةٌ مختصّةٌ بالأسماءِ وحالةٌ مختصّةٌ بالأفعالِ:</p>
+  <ul>
+    <li><b>الرفعُ والنصبُ</b>: حالتانِ تشتركُ فيهما الأسماءُ والأفعالُ؛ يعني الرفعَ يدخلُ الأسماءَ ويدخلُ الأفعالَ المضارعةَ — طبعًا نحن نتكلمُ على الأفعالِ المضارعةِ، وسيكونُ إن شاء اللهُ هناك حديثٌ عن أحوالِ الأفعالِ من حيثُ الإعرابُ والبناءُ. ثم:</li>
+    <li><b>الخفضُ أو الجرُّ</b>: حالةٌ إعرابيّةٌ مختصّةٌ <b>بالأسماءِ</b>؛ يعني الأسماءُ هي التي يدخلُها الجرُّ أو الخفضُ فقط. ثم:</li>
+    <li><b>الجزمُ</b>: في <b>الأفعالِ المضارعةِ</b> فقط، لا يدخلُ الأسماءَ. والجزمُ في الأفعالِ المضارعةِ يقابلُ الخفضَ (أو الجرَّ) في الأسماءِ.</li>
+  </ul>
+
+  <div class="box matn">
+    <span class="tag">نصُّ المتن</span>
+    <p>«فللأسماءِ من ذلك: الرفعُ، والنصبُ، والخفضُ، ولا جزمَ فيها. وللأفعالِ منه: الرفعُ، والنصبُ، والجزمُ، ولا خفضَ فيها»</p>
+  </div>
+
+  <p>قال ابنُ آجرومَ رحمه الله: فللأسماءِ الرفعُ والنصبُ والخفضُ، ولا جزمَ فيها — <b>الأسماءُ لا تُجزَمُ</b> — وللأفعالِ الرفعُ والنصبُ والجزمُ ولا خفضَ فيها؛ <b>عوضًا عن الخفضِ أخذتِ الأفعالُ المضارعةُ حالةَ الجزمِ</b>. وطبعًا الأفعالُ ليس كلُّها على هذا النحوِ: المختصُّ بالإعرابِ من الأفعالِ هو <b>الفعلُ المضارعُ فقط</b>، إنما الفعلُ الماضي والفعلُ الأمرُ فهما مبنيانِ — وإن كان ابنُ آجرومَ رأى في الأمرِ أنه <b>مجزومٌ</b>، وسنرى ذلك بعدَ قليلٍ إن شاء الله.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الحالةُ الإعرابيّةُ</th><th>هل تدخلُ الأسماءَ؟</th><th>هل تدخلُ الأفعالَ (المضارعةَ)؟</th><th>ملاحظةٌ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>الرفعُ</b></td><td><span class="ok">نعم</span></td><td><span class="ok">نعم</span></td><td>مشتركةٌ بينَ القسمَينِ</td></tr>
+        <tr><td><b>النصبُ</b></td><td><span class="ok">نعم</span></td><td><span class="ok">نعم</span></td><td>مشتركةٌ بينَ القسمَينِ</td></tr>
+        <tr><td><b>الخفضُ (الجرُّ)</b></td><td><span class="ok">نعم</span></td><td><span class="no-x">لا</span></td><td>مختصّةٌ بالأسماءِ فقط</td></tr>
+        <tr><td><b>الجزمُ</b></td><td><span class="no-x">لا</span></td><td><span class="ok">نعم</span></td><td>مختصّةٌ بالأفعالِ المضارعةِ، وتقابلُ الخفضَ في الأسماءِ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>أين موقعُ الحروفِ من قضيةِ الإعرابِ؟</h3>
+  <p>قد يسألُ سائلٌ الآنَ: أين موقعُ الحروفِ من قضيةِ الإعرابِ؟ <b>الحروفُ ليست معربةً؛ الحروفُ دائمًا مبنيةٌ</b>؛ لأنها ليس لها معنًى في نفسِها، وإنما معناها يظهرُ فيما بعدَها، فلذلك هي ثابتةُ الشكلِ. أما الإعرابُ فتغييرٌ يأتي في آخرِ الكلمةِ بسببِ المعاني التي تطرأُ على الكلمةِ المتعددةِ — كما قلتُ: «محمدٌ» قد تكونُ فاعلًا وقد تكونُ مفعولًا وقد تكونُ مضافًا إليه أو اسمًا مجرورًا؛ طيبْ، ما الذي يحدِّدُ هذا المعنى الذي تعبِّرُ عنه هذه الكلمةُ «محمدٌ»؟ الذي يحدِّدُه هو <b>الإعرابُ</b>: تدخلُ في التركيبِ، تنشغلُ بعلاقةٍ معيّنةٍ مع عاملِها، ثم تكونُ هناك علامةٌ دالّةٌ على هذا المعنى أو هذه الحالةِ الإعرابيّةِ التي تؤدّيها الكلمةُ في التركيبِ. أما المبنيُّ فلا حاجةَ لنا بهذا؛ لأنه — بالنسبةِ للحروفِ — لا يدلُّ على معنًى في نفسِه، أو يدلُّ على معنًى ثابتٍ لا يتغيَّرُ. وسنرى كلَّ هذا إن شاء اللهُ بعدُ.</p>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٧ مراجعة ==================== -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">٧</span><h2>مراجعةُ الباب: من العاملِ إلى العلامة</h2></div>
+
+  <p>هذا ما يخصُّ الإعرابَ بحالاتِه: عندنا العواملُ التي تؤثِّرُ في الكلمةِ إعرابًا، ثم الحالاتُ الإعرابيّةُ التي تنتجُ عن العواملِ — الرفعُ والنصبُ في الأسماءِ والأفعالِ المضارعةِ، ثم الخفضُ في الأسماءِ فقط، والجزمُ في الأفعالِ المضارعةِ فقط — ثم تكونُ هناك <b>وظائفُ نحويّةٌ</b> تشغلُها الكلماتُ تحتَ الحالاتِ الإعرابيّةِ: فالكلمةُ قد تكونُ مرفوعةً لأنها مبتدأٌ، أو لأنها فاعلٌ، أو لأنها خبرٌ، أو لأنها نائبُ فاعلٍ، أو لأنها اسمُ «كانَ»، أو لأنها خبرُ «إنَّ» — فتتعدَّدُ الوظائفُ تحتَ الحالةِ الإعرابيّةِ الواحدةِ — وكلُّ حالةٍ إعرابيّةٍ لها <b>علامةٌ إعرابيّةٌ</b> تدلُّ عليها: علامةٌ أصليّةٌ أو علاماتٌ فرعيّةٌ.</p>
+
+  <div class="flow-lane">
+    <span class="chip gold">العاملُ</span><span class="fa">←</span>
+    <span class="chip">الحالةُ الإعرابيّةُ</span><span class="fa">←</span>
+    <span class="chip">الوظيفةُ النحويّةُ</span><span class="fa">←</span>
+    <span class="chip gold">العلامةُ الأصليّةُ أو الفرعيّةُ</span><span class="fa">←</span>
+    <span class="chip">المعنى النحويُّ في التركيبِ</span>
+    <div class="lane-note">مسارُ التحليلِ الإعرابيِّ للتركيبِ: يبدأُ من دخولِ العاملِ، فتنتجُ الحالةُ، وتشغلُ الكلمةُ تحتها وظيفتَها النحويّةَ، وتدلُّ عليها علامتُها، فيتحدَّدُ المعنى النحويُّ الذي تؤدّيه الكلمةُ.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٨ التمرينات ==================== -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">٨</span><h2>التمريناتُ على الدرس الثاني</h2></div>
+
+  <p>والآن سنعملُ على بعضِ التمريناتِ والتطبيقاتِ العمليّةِ على درسِ الإعرابِ الذي شرحناه في كلامِ ابنِ آجرومَ:</p>
+
+  <h3 id="t81">أولًا: أسئلةٌ على المصطلحِ والحالاتِ</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>«تغييرٌ يحدثُ في شكلِ آخرِ الكلمةِ بسببِ ما يسبقُه من عواملَ، أو بسببِ اختلافِ العواملِ التي تدخلُ عليه» — فما هو؟ هذا مفهومٌ وتعريفٌ؛ فما المصطلحُ الدالُّ عليه؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو مصطلحُ <b>الإعرابِ</b>. ويقابلُ الإعرابَ — الذي هو تغييرٌ — <b>اللزومُ</b> أو <b>البناءُ</b>، ومعناهُ أن يلزمَ آخرُ الكلمةِ شكلًا واحدًا لا يتغيَّرُ عنه، خلافِ الإعرابِ الذي هو تغيُّرٌ يحدثُ في شكلِ آخرِ الكلمةِ بسببِ ما يسبقُه من عواملَ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>نوعانِ للإعرابِ يكونانِ في الأسماءِ والأفعالِ — يعني يشتركُ فيهما الأسماءُ والأفعالُ المضارعةُ — فما هما؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>هما حالةُ <b>الرفعِ</b> وحالةُ <b>النصبِ</b>؛ فالرفعُ والنصبُ يدخلانِ الأفعالَ والأسماءَ.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>نوعٌ من الإعرابِ يختصُّ بالأسماءِ فقط — فما هو؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هذا النوعُ هو <b>الخفضُ</b> أو <b>الجرُّ</b>.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>نريدُ أن نعدِّدَ الآنَ حالاتِ الإعرابِ: كم عددُها؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>أربعٌ: حالةُ الرفعِ، وحالةُ النصبِ، وحالةُ الجرِّ، وحالةُ الجزمِ — كما قلنا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ما النوعُ الذي يختصُّ بالأفعالِ من هذه الحالاتِ الإعرابيّةِ؟ ما الحالةُ المختصّةُ بالأفعالِ المضارعةِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هي حالةُ <b>الجزمِ</b>.</div>
+  </div>
+
+  <h3 id="t82">ثانيًا: هل هذا التغييرُ إعرابٌ؟</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تأمُّلٌ</span>نتأملُ معًا هذه الجملَ والعباراتِ ونرى فيها: كلمةُ «أسدٍ» تجمعُ على «آسادٍ» — الكلمةُ هنا تغيَّرَتْ: فهل هذا التغييرُ من «أسدٍ» إلى «آسادٍ» يُعدُّ إعرابًا؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا لا يُعدُّ إعرابًا؛ لأن هذا التغييرَ في <b>بنيةِ الكلمةِ</b>، والإعرابُ تغييرٌ في شكلِ <b>آخرِ الكلمةِ</b>، لا تغييرًا في بنيةِ الكلمةِ نفسِها. هنا نلاحظُ أن «أسدًا» تحوَّلَتْ إلى «آسادٍ» جمعًا — يعني التشكيلَ هو الذي تغيَّرَ في أولِ حرفٍ وفي الحرفِ الثاني، إنما الحرفُ الأخيرُ لم يتغيَّرْ [بذلك التغييرِ المُعتبَرِ للإعرابِ].</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">تأمُّلٌ</span>لكن لو قلتَ: «هذا أسدٌ»، و«رأيتُ أسدًا»، و«مررتُ بأسدٍ» — هذا التغييرُ الحاصلُ في كلمةِ «أسدٍ» هل هو إعرابٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>نعم، هو إعرابٌ. لماذا؟ لأنه تغييرٌ لحقَ <b>أواخرَ الكلمةِ</b> — أو آخرَ الكلمةِ — فمن ثَمَّ فهو إعرابٌ.</div>
+  </div>
+
+  <h3 id="t83">ثالثًا: إعرابٌ تطبيقيٌّ</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>ماذا لو قلتُ: «جاءَ الفتى»، و«رأيتُ الفتى»، و«مررتُ بالفتى»؟ نريدُ شيئَينِ: أولًا أن نحدِّدَ نوعَ الإعرابِ في كلمةِ «الفتى»، ثم نعربَ كلمةَ «الفتى» في كلِّ جملةٍ.</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>أولًا: نوعُ الإعرابِ هو <b>إعرابٌ تقديريٌّ</b>؛ يعني العلامةَ فيه مقدَّرةٌ على الألفِ في آخرِ كلمةِ «الفتى» <b>للتعذُّرِ</b> — والتعذُّرُ معناه استحالةُ ظهورِ العلامةِ؛ يعني لا يمكنُ أن تظهرَ العلامةُ لأن الألفَ في العربيةِ دائمًا ساكنةٌ.
+      <p style="margin:12px 0 0"><b>«جاءَ الفتى»</b>: جاءَ طبعًا فعلٌ ماضٍ مبنيٌّ على الفتحِ، و«الفتى» هي الفاعلُ مرفوعٌ وعلامةُ رفعِه الضمةُ المقدَّرةُ على الألفِ للتعذُّرِ.</p>
+      <p style="margin:10px 0 0"><b>«رأيتُ الفتى»</b>: «رأيتُ» فعلٌ ماضٍ مبنيٌّ على السكونِ لاتصالِه بتاءِ الفاعلِ، وتاءُ الفاعلِ في «رأيتُ» ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ. و«الفتى» هي هنا <b>مفعولٌ به</b> — تغيَّرَتْ وظيفتُها النحويّةُ وحالتُها الإعرابيّةُ عن المثالِ السابقِ — فالفتى في «رأيتُ الفتى» مفعولٌ به منصوبٌ وعلامةُ نصبِه الفتحةُ المقدَّرةُ للتعذُّرِ. ونحن قلنا إن كلَّ العلاماتِ الإعرابيّةِ تُقدَّرُ للتعذُّرِ هنا؛ لأن آخرَ الكلمةِ سيكونُ ألفًا، والألفُ دائمًا ساكنةٌ لا تظهرُ عليها حركةٌ أبدًا.</p>
+      <p style="margin:10px 0 0"><b>«مررتُ بالفتى»</b>: «مررتُ» فعلٌ ماضٍ مبنيٌّ على السكونِ لاتصالِه بتاءِ الفاعلِ، وتاءُ الفاعلِ ضميرٌ متصلٌ مبنيٌّ على الضمِّ في محلِّ رفعٍ فاعلٌ. و«الباءُ»: حرفُ جرٍّ مبنيٌّ على الكسرِ لا محلَّ له من الإعرابِ. و«الفتى» اسمٌ مجرورٌ بالباءِ وعلامةُ جرِّه الكسرةُ المقدَّرةُ على الألفِ للتعذُّرِ — فالألفُ لا تظهرُ عليها العلامةُ بسببِ التعذُّرِ.</p>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الجملةُ</th><th>وظيفةُ «الفتى»</th><th>حكمُه</th><th>علامتُه</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>«جاءَ الفتى»</td><td>فاعلٌ</td><td><span class="pill yes">مرفوعٌ</span></td><td>الضمةُ المقدَّرةُ على الألفِ للتعذُّرِ</td></tr>
+        <tr><td>«رأيتُ الفتى»</td><td>مفعولٌ به</td><td><span class="pill no">منصوبٌ</span></td><td>الفتحةُ المقدَّرةُ على الألفِ للتعذُّرِ</td></tr>
+        <tr><td>«مررتُ بالفتى»</td><td>اسمٌ مجرورٌ بالباءِ</td><td><span class="pill yes" style="background:#eef1f6;color:#31567d;border-color:#aebfd4">مجرورٌ</span></td><td>الكسرةُ المقدَّرةُ على الألفِ للتعذُّرِ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>في قولِه تعالى: ﴿هُدًى لِّلْمُتَّقِينَ﴾ — الاسمُ «هدًى» اسمٌ معربٌ، لكنه من أي أقسامِ الإعرابِ؟ هل هو رفعٌ أم جزمٌ أم نصبٌ أم جرٌّ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا كما نرى — «هدًى للمتقينَ» — هي طبعًا في حالةِ <b>رفعٍ</b>: قد تكونُ <b>مبتدأً</b> وخبرُها شبهُ الجملةِ «للمتقينَ»، أو قد تكونُ هي <b>خبرًا لمبتدأٍ محذوفٍ</b> تقديرُه «هذا هدًى» مثلًا أو «هو هدًى». فهي في كلِّ الأحوالِ مرفوعةٌ، لكن علامةَ الإعرابِ ستكونُ مقدَّرةً على الألفِ للتعذُّرِ لأن الكلمةَ منتهيةٌ بألفٍ؛ فهي مرفوعةٌ وعلامةُ رفعِها الضمةُ المقدَّرةُ على الألفِ للتعذُّرِ أيضًا.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>وفي قولِه تعالى: ﴿إِنَّ اللَّهَ يُدَافِعُ عَنِ الَّذِينَ آمَنُوا﴾ — الفعلُ «يدافعُ» فعلٌ معربٌ، لكن من أي أقسامِ الإعرابِ هو؟ هل هو رفعٌ أم جرٌّ أم نصبٌ أم جزمٌ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>طبعًا هو فعلٌ مضارعٌ لا يدخلُه الجرُّ، إذن نستبعدُ الجرَّ. وقد يكونُ مرفوعًا وقد يكونُ منصوبًا وقد يكونُ مجزومًا؛ لكنَّ الفعلَ المضارعَ <b>لا يُنصَبُ إلا إذا سبقَته أداةُ نصبٍ، ولا يُجزَمُ إلا إذا سبقَته أداةُ جزمٍ</b>، وإذا تجرَّدَ من أدواتِ الجزمِ أو النصبِ — يعني لم يسبقْه شيءٌ منها — فهو مرفوعٌ. وطبعًا هو هنا في «إنَّ اللهَ يدافعُ» لم يسبقْه حرفٌ ينصبُه أو حرفٌ يجزمُه، فهو فعلٌ مضارعٌ مرفوعٌ وعلامةُ رفعِه الضمةُ الظاهرةُ على آخرِه.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>وكما تعلمونَ أن حالةَ الجزمِ للفعلِ المضارعِ — وسنأتي للعلاماتِ بالتفصيلِ — العلامةُ الأصليّةُ فيها السكونُ. فحين أقولُ مثلًا: «لم يكتبْ محمدٌ الدرسَ» — نلاحظُ أن الفعلَ «يكتبُ» هنا سبقَ بأداةِ جزمٍ هي «لم» الجازمةُ. فماذا تفعلُ «لم» في الفعلِ المضارعِ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>يقولونَ عن «لم» إنها حرفُ <b>جزمٍ ونفيٍ وقلبٍ</b>:
+      <ul style="margin:8px 0 0;padding-right:22px">
+        <li><b>جزمٌ</b>: لأنها تؤثِّرُ في الفعلِ المضارعِ بعدَها إعرابًا؛ ونحن نعلمُ أن حالةَ الجزمِ من الحالاتِ التي يختصُّ بها الفعلُ المضارعُ — أو تختصُ هي بالفعلِ المضارعِ — ولا تدخلُ الأسماءَ أبدًا. فـ«لم» أداةُ جزمٍ تجزمُ الفعلَ المضارعَ بعدَها.</li>
+        <li><b>نفيٌ</b>: لأنها تفيدُ معنى النفيِ.</li>
+        <li><b>قلبٌ</b>: تقلبُ زمنَ الفعلِ المضارعِ إلى <b>الماضي</b>؛ ومعلومٌ أن الفعلَ المضارعَ يدلُّ على الحالِ أو الاستقبالِ، لكن كونَه يدلُّ على الماضي ليس حاصلًا إلا بدخولِ «لم». فـ«لم» تقلبُ زمنَ الفعلِ المضارعِ إلى الزمانِ الماضي؛ فحين تقولُ «لم يكتبْ محمدٌ الدرسَ» فهذا يعني أنه <b>ما كتبَ الدرسَ</b> — تنفي حدوثَ الفعلِ في الماضي.</li>
+      </ul>
+      <p style="margin:10px 0 0">وطبعًا هي — كما قلتُ — مختصّةٌ بالدخولِ على الفعلِ المضارعِ وتجزمُه. وهنا طبعًا في «لم يكتبْ محمدٌ الدرسَ»: «يكتبْ» فعلٌ مضارعٌ مجزومٌ بـ«لم» وعلامةُ جزمِه السكونُ.</p>
+    </div>
+  </div>
+
+  <h3 id="t84">رابعًا: سؤالٌ ختاميٌّ جامع</h3>
+
+  <div class="qa">
+    <div class="q"><span class="q-badge">سؤالٌ</span>سؤالٌ مرةً أخرى: كم حالةً إعرابيّةً في النحوِ العربيِّ تعتري الأسماءَ أو الأفعالَ؟</div>
+    <div class="a"><span class="q-badge">الجوابُ</span>عندنا أربعُ حالاتٍ: <b>الرفعُ والنصبُ</b> وهما حالتانِ مشتركتانِ في الأسماءِ والأفعالِ المضارعةِ، ثم عندنا حالةُ <b>الخفضِ أو الجرِّ</b> وهي حالةٌ مختصّةٌ بالأسماءِ — فالأفعالُ لا تُجرُّ — ثم بعدَ ذلك عندنا حالةُ <b>الجزمِ</b> وهي الحالةُ الرابعةُ والأخيرةُ، وحالةُ الجزمِ هذه مقابلةٌ لحالةِ الجرِّ وهي مختصّةٌ بالأفعالِ المضارعةِ؛ فالجزمُ في الأفعالِ المضارعةِ يقابلُ الخفضَ أو الجرَّ في الأسماءِ.</div>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<!-- ==================== ٩ الخلاصة ==================== -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">٩</span><h2>خلاصةُ الدرس</h2></div>
+
+  <ul class="summary-points">
+    <li><b>الإعرابُ</b> — في المتنِ — هو: تغييرُ أواخرِ الكلمِ لاختلافِ العواملِ الداخلةِ عليها لفظًا أو تقديرًا؛ وهو <b>أهمُّ ظواهرِ النحوِ العربيِّ</b>، وعرَّفه ابنُ آجرومَ بأنه <b>الأثرُ الناتجُ عن العاملِ</b>.</li>
+    <li>أركانُ عمليةِ الإعرابِ: <b>الحالةُ الإعرابيّةُ</b> (رفعٌ ونصبٌ وجرٌّ وجزمٌ)، و<b>الوظيفةُ النحويّةُ</b> الواقعةُ تحتَ كلِّ حالةٍ (المرفوعاتُ والمنصوباتُ والمجروراتُ)، و<b>العلامةُ الإعرابيّةُ</b> الدالّةُ على الحالةِ (أصليّةٌ أو فرعيّةٌ)، و<b>المعنى النحويُّ</b>، و<b>العواملُ</b>.</li>
+    <li>العلامةُ إما <b>ظاهرةٌ</b> («جاءَ محمدٌ») وإما <b>مقدَّرةٌ</b>، وأسبابُ التقديرِ خمسةٌ: <b>التعذُّرُ</b> (آخرُ الكلمةِ ألفٌ)، و<b>الثقلُ</b> (آخرُها ياءٌ — وتُقدَّرُ فيه الضمةُ والكسرةُ فقط دونَ الفتحةِ الخفيفةِ)، و<b>المناسبةُ</b> (ياءُ المتكلمِ: «كتابي»)، و<b>القافيةُ</b> (تقديرٌ عارضٌ في الشعرِ ذي القافيةِ المقيَّدةِ)، و<b>الحكايةُ</b> (الأعلامُ المركَّبةُ تركيبًا إسناديًّا كـ«تأبَّطَ شرًّا»، والمصادرُ المؤوَّلةُ: ﴿وأن تصوموا خيرٌ لكم﴾ بتقديرِ «صومُكم»).</li>
+    <li>وهناك نوعٌ ثالثٌ هو <b>الإعرابُ المحلِّيُّ</b> في المبنياتِ والجملِ وأشباهِ الجملِ — سيُعرَضُ له لاحقًا.</li>
+    <li><b>العواملُ نوعانِ</b>: لفظيّةٌ (حروفُ الجرِّ، والفعلُ في الفاعلِ والمفعولِ، والمبتدأُ في الخبرِ) وهي الغالبةُ، ومعنويّةٌ (الابتداءُ في رفعِ المبتدأِ، والتجرُّدُ من الناصبِ والجازمِ في رفعِ المضارعِ)؛ وأشهرُ كتبِها «العواملُ المئةُ» لعبدِ القاهرِ الجرجانيِّ.</li>
+    <li><b>الحالاتُ الأربعُ</b>: الرفعُ والنصبُ مشتركتانِ بينَ الأسماءِ والأفعالِ المضارعةِ، والخفضُ (الجرُّ) مختصٌّ بالأسماءِ، والجزمُ مختصٌّ بالأفعالِ المضارعةِ ويقابلُ الخفضَ — فالأسماءُ لا تُجزَمُ والأفعالُ لا تُجرُّ، وقد أخذتِ المضارعةُ الجزمَ عوضًا عن الخفضِ.</li>
+    <li>المعربُ من الأفعالِ <b>المضارعُ وحدَه</b>؛ أما الماضي والأمرُ فمبنيانِ — على أنَّ ابنَ آجرومَ رأى في الأمرِ أنه مجزومٌ. و<b>الحروفُ كلُّها مبنيةٌ</b>؛ لأن معناها فيما بعدَها لا في نفسِها، فهي ثابتةُ الشكلِ لا حاجةَ بها إلى تغيُّرِ الأواخرِ.</li>
+    <li>و«لم» حرفُ <b>جزمٍ ونفيٍ وقلبٍ</b>: تجزمُ المضارعَ، وتنفي، وتقلبُ زمنَه إلى الماضي: «لم يكتبْ» = «ما كتبَ».</li>
+  </ul>
+
+  <div class="box note">
+    <span class="tag">الدرسُ القادمُ إن شاء اللهُ</span>
+    <p style="margin:0">هذه كانت بعضَ الأسئلةِ على درسِ الإعرابِ، ونلقاكم على خيرٍ إن شاء اللهُ في درسِ <b>«علاماتِ الإعرابِ»</b>.</p>
+  </div>
+  <a class="back-top no-print" href="#toc">↩ عودة إلى الفهرس</a>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:15px;margin-top:50px;border-top:1px solid var(--line);padding-top:18px">
+  صِيغَ هذا الملفُ كتابيًّا من التفريغِ الصوتيِّ للدرسِ الثاني من سلسلةِ «حقيبة المشجرات والتمرينات على الآجرومية ونظمها» بإلقاءِ فضيلةِ الشيخِ الدكتورِ بشير الدماطي حفظه الله —
+  <a href="https://www.youtube.com/watch?v=WFv2oXWoHdo" target="_blank" rel="noopener" style="color:var(--green-700)">رابطُ الدرسِ الأصليِّ</a>
+</footer>
+
+</main>
+</body>
+</html>
