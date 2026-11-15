@@ -42,7 +42,7 @@ body{
 .meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
 .meta span{
   background:rgba(250,247,239,.12); border:1px solid rgba(201,162,39,.5);
-  color:#f4ecd4; border-radius:999px; padding:2px 14px; font-size:.85rem; font-family:var(--f-head);
+  color:#f4ecd4; border-radius:8px; padding:2px 14px; font-size:.85rem; font-family:var(--f-head);
 }
 .how{
   margin:18px auto 0; max-width:720px; background:rgba(250,247,239,.08);
@@ -62,7 +62,7 @@ body{
 .chip{
   font-family:var(--f-head); font-size:.82rem; cursor:pointer; user-select:none;
   border:1px solid var(--line); background:var(--paper); color:var(--ink-soft);
-  border-radius:999px; padding:3px 13px; transition:.15s;
+  border-radius:8px; padding:3px 13px; transition:.15s;
 }
 .chip:hover{border-color:var(--gold); color:var(--g)}
 .chip.on{background:var(--g); color:#fff; border-color:var(--g)}
@@ -80,7 +80,7 @@ body{
 }
 .qtop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
 .badge{
-  font-family:var(--f-head); font-size:.78rem; border-radius:999px; padding:2px 12px;
+  font-family:var(--f-head); font-size:.78rem; border-radius:6px; padding:2px 12px;
   border:1px solid transparent; white-space:nowrap;
 }
 .b-lesson{background:#eef4ee; color:var(--g); border-color:#cfdccf}
@@ -219,7 +219,7 @@ a.srcbtn:hover{background:var(--g3)}
   <header class="cover">
     <div class="series">سِلْسِلَةُ دُرُوسِ شَرْحِ المُتُونِ الفِقْهِيَّةِ عَلَى مَذْهَبِ الإِمَامِ الشَّافِعِيِّ — شرحُ متنِ أبي شجاع</div>
     <h1 class="title">التدريبُ الفقهيُّ التفاعليُّ</h1>
-    <div class="series" style="margin-top:6px;border:1px dashed rgba(201,162,39,.6);border-radius:999px;display:inline-block;padding:2px 16px">نسخةٌ للمشاركةِ — تعملُ على أيِّ جهازٍ بملفٍّ واحدٍ</div>
+    <div class="series" style="margin-top:6px;border:1px dashed rgba(201,162,39,.6);border-radius:8px;display:inline-block;padding:2px 16px">نسخةٌ للمشاركةِ — تعملُ على أيِّ جهازٍ بملفٍّ واحدٍ</div>
     <div class="subtitle">الدروسُ ٠١ – ١٥ • من «كتابِ الطهارةِ: المياهُ وجلودُ الميتةِ» إلى «صلاةُ العيدينَ والكسوفِ والاستسقاءِ»</div>
     <div class="byline">تدريبٌ تعليميٌّ مراجِعٌ — أسئلتُه وتعليلاتُه مبنِيَّةٌ حصريًّا على شرحِ فضيلةِ الشيخِ لُبَيْبٍ نَجِيبٍ حفظه الله لمتنِ «الغايةِ والتقريبِ»</div>
     <div class="meta">
@@ -2398,7 +2398,7 @@ function paintAnswer(qi, animate){
   h += '<div class="block"><div class="h">' + (r.ok ? "لمَ صحيحةٌ؟" : "تعليلُ الإجابةِ الصوابِ") + "</div><div class=\"why\"><b>" + q.o[correctIdx].t + ":</b> " + q.o[correctIdx].w + "</div></div>";
 
   /* مصدر المراجعة */
-  h += '<div class="srcline"><span class="s">📖 <b>مصدرُ المراجعةِ:</b> ' + src.text + "</span>";
+  h += '<div class="srcline"><span class="s"><b>مصدرُ المراجعةِ:</b> ' + src.text + "</span>";
   h += '<a class="srcbtn" href="' + src.url + '" target="_blank" rel="noopener">مشاهدةُ الدرسِ على يوتيوب ↗</a></div>';
 
   /* تعليلات بقية الخيارات */

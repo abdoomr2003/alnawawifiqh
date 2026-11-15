@@ -42,7 +42,7 @@ body{
 .meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
 .meta span{
   background:rgba(250,247,239,.12); border:1px solid rgba(201,162,39,.5);
-  color:#f4ecd4; border-radius:999px; padding:2px 14px; font-size:.85rem; font-family:var(--f-head);
+  color:#f4ecd4; border-radius:8px; padding:2px 14px; font-size:.85rem; font-family:var(--f-head);
 }
 .how{
   margin:18px auto 0; max-width:720px; background:rgba(250,247,239,.08);
@@ -62,7 +62,7 @@ body{
 .chip{
   font-family:var(--f-head); font-size:.82rem; cursor:pointer; user-select:none;
   border:1px solid var(--line); background:var(--paper); color:var(--ink-soft);
-  border-radius:999px; padding:3px 13px; transition:.15s;
+  border-radius:8px; padding:3px 13px; transition:.15s;
 }
 .chip:hover{border-color:var(--gold); color:var(--g)}
 .chip.on{background:var(--g); color:#fff; border-color:var(--g)}
@@ -80,7 +80,7 @@ body{
 }
 .qtop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
 .badge{
-  font-family:var(--f-head); font-size:.78rem; border-radius:999px; padding:2px 12px;
+  font-family:var(--f-head); font-size:.78rem; border-radius:6px; padding:2px 12px;
   border:1px solid transparent; white-space:nowrap;
 }
 .b-lesson{background:#eef4ee; color:var(--g); border-color:#cfdccf}
@@ -2291,7 +2291,7 @@ function paintAnswer(qi, animate){
   h += '<div class="block"><div class="h">' + (r.ok ? "لمَ صحيحةٌ؟" : "تعليلُ الإجابةِ الصوابِ") + "</div><div class=\"why\"><b>" + q.o[correctIdx].t + ":</b> " + q.o[correctIdx].w + "</div></div>";
 
   /* مصدر المراجعة */
-  h += '<div class="srcline"><span class="s">📖 <b>مصدرُ المراجعةِ:</b> ' + src.text + "</span></div>";
+  h += '<div class="srcline"><span class="s"><b>مصدرُ المراجعةِ:</b> ' + src.text + "</span></div>";
 
   /* تعليلات بقية الخيارات */
   h += '<details class="allopts"><summary>اعرضْ تعليلاتِ الخياراتِ الأربعةِ جميعِها</summary><div class="items">';
