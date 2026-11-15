@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التدريبات الشرعية التفاعلية</title>
+<style>
+  :root{
+    --f-body:"Amiri","Traditional Arabic","Sakkal Majalla",serif;
+    --f-head:"Sakkal Majalla","Reem Kufi","Segoe UI",sans-serif;
+    --c-bg:#faf6ee;
+    --c-card:#ffffff;
+    --c-primary:#1b5e4b;
+    --c-primary-dark:#123f33;
+    --c-gold:#b08d3e;
+    --c-text:#2c2a26;
+    --c-muted:#6f6a5f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:var(--f-body);
+    background:var(--c-bg);
+    color:var(--c-text);
+    min-height:100vh;
+    line-height:1.8;
+  }
+  header{
+    background:linear-gradient(135deg,var(--c-primary-dark) 0%,var(--c-primary) 60%,#2a7a63 100%);
+    color:#fdfaf2;
+    text-align:center;
+    padding:3.2rem 1.2rem 2.8rem;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:"﴿ وَقُل رَّبِّ زِدْنِي عِلْمًا ﴾";
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    font-size:clamp(3rem,10vw,7rem);
+    color:rgba(255,255,255,.05);
+    font-family:var(--f-body);
+    white-space:nowrap;
+    pointer-events:none;
+  }
+  header h1{
+    font-family:var(--f-head);
+    font-size:clamp(1.7rem,5vw,2.6rem);
+    letter-spacing:.5px;
+    position:relative;
+  }
+  header p{
+    margin-top:.6rem;
+    font-size:clamp(1rem,3vw,1.25rem);
+    color:#e8dfc8;
+    position:relative;
+  }
+  .divider{
+    width:90px;height:3px;background:var(--c-gold);
+    margin:1.1rem auto 0;border-radius:2px;position:relative;
+  }
+  main{
+    max-width:880px;
+    margin:0 auto;
+    padding:2.6rem 1.2rem 3.5rem;
+  }
+  .section-title{
+    font-family:var(--f-head);
+    color:var(--c-primary);
+    font-size:1.45rem;
+    margin:2.2rem 0 1rem;
+    display:flex;
+    align-items:center;
+    gap:.7rem;
+  }
+  .section-title::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:linear-gradient(to left,var(--c-gold),transparent);
+  }
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:1.3rem;
+  }
+  a.card{
+    display:block;
+    background:var(--c-card);
+    border:1px solid #e7dfcd;
+    border-radius:14px;
+    padding:1.5rem 1.6rem;
+    text-decoration:none;
+    color:var(--c-text);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  a.card::before{
+    content:"";
+    position:absolute;
+    inset-inline-start:0;top:0;bottom:0;
+    width:5px;
+    background:linear-gradient(to bottom,var(--c-primary),var(--c-gold));
+  }
+  a.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 26px rgba(27,94,75,.13);
+    border-color:var(--c-primary);
+  }
+  .card .tag{
+    display:inline-block;
+    font-family:var(--f-head);
+    font-size:.8rem;
+    background:rgba(27,94,75,.09);
+    color:var(--c-primary);
+    border-radius:999px;
+    padding:.1rem .8rem;
+    margin-bottom:.55rem;
+  }
+  .card .tag.exam{background:rgba(176,141,62,.13);color:#8a6c25}
+  .card h2{
+    font-family:var(--f-head);
+    font-size:1.25rem;
+    color:var(--c-primary-dark);
+    margin-bottom:.35rem;
+  }
+  .card p{
+    font-size:1rem;
+    color:var(--c-muted);
+  }
+  .card .meta{
+    margin-top:.8rem;
+    font-size:.9rem;
+    color:var(--c-gold);
+    font-family:var(--f-head);
+  }
+  footer{
+    text-align:center;
+    padding:1.6rem 1rem 2.2rem;
+    color:var(--c-muted);
+    font-size:.9rem;
+    border-top:1px solid #e7dfcd;
+  }
+  footer .dua{font-family:var(--f-body);color:var(--c-primary);font-size:1.05rem}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>التدريبات الشرعية التفاعلية</h1>
+  <div class="divider"></div>
+  <p>تدريب وامتحانات إلكترونية في الفقه والنحو — أجب مباشرة من المتصفح، وصحّح لنفسك فورًا</p>
+</header>
+
+<main>
+
+  <div class="section-title">التدريبات التعليمية</div>
+  <div class="cards">
+    <a class="card" href="tadreeb-ajjurumiyya.html">
+      <span class="tag">نحو</span>
+      <h2>تدريب الآجرومية التفاعلي</h2>
+      <p>حقيبة مشجرات وتمرينات على الآجرومية ونظمها — بشرح الشيخ بشير الدماطي، الدروس ٠١–١٧، مع تعليل لكل خيار.</p>
+      <div class="meta">١٤٩ سؤالًا · ١٧ درسًا</div>
+    </a>
+    <a class="card" href="tadreeb-abu-shuja.html">
+      <span class="tag">فقه شافعي</span>
+      <h2>التدريب الفقهي — شرح متن أبي شجاع</h2>
+      <p>سلسلة شرح مختصر أبي شجاع بشرح الشيخ لبيب نجيب، الدروس ٠١–١٥، أسئلة متنوعة مع التصحيح الفوري.</p>
+      <div class="meta">١٥٧ سؤالًا · ١٥ درسًا</div>
+    </a>
+  </div>
+
+  <div class="section-title">الامتحانات</div>
+  <div class="cards">
+    <a class="card" href="imtihan-ajjurumiyya-001.html">
+      <span class="tag exam">امتحان</span>
+      <h2>امتحان الآجرومية — الأسبوع ٠٠١</h2>
+      <p>امتحان تفاعلي شامل على مقدمة الآجرومية والكلام وأقسامه.</p>
+      <div class="meta">تصحيح فوري · يعمل بدون إنترنت</div>
+    </a>
+    <a class="card" href="imtihan-abu-shuja-001.html">
+      <span class="tag exam">امتحان</span>
+      <h2>امتحان مختصر أبي شجاع — الأسبوع ٠٠١</h2>
+      <p>امتحان تفاعلي شامل على مقدمة المختصر وأركان الوضوء وسننه.</p>
+      <div class="meta">تصحيح فوري · يعمل بدون إنترنت</div>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <p class="dua">نسأل الله أن ينفع بها طلبة العلم</p>
+  <p>تعمل الصفحات كاملة من المتصفح — لا تحتاج تسجيلًا ولا تثبيتًا</p>
+</footer>
+
+</body>
+</html>
