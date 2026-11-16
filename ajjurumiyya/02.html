@@ -41,8 +41,7 @@ body{
 /* ============ الغلاف ============ */
 .cover{
   background:
-    radial-gradient(1100px 520px at 50% -8%, rgba(201,162,39,.20), transparent 62%),
-    linear-gradient(168deg,#10402c 0%, #175139 48%, #0a2c1f 100%);
+    #175139;
   color:#f3ecd8;
   padding:64px 22px;
   min-height:96vh;
@@ -60,7 +59,7 @@ body{
 .cover-frame::before{
   content:'';position:absolute;inset:11px;
   border:3px double rgba(201,162,39,.55);
-  border-radius:3px;pointer-events:none;
+  border-radius:4px;pointer-events:none;
 }
 .corner{position:absolute;width:26px;height:26px;border:0 solid var(--gold-500)}
 .corner.c1{top:20px;right:20px;border-top-width:3px;border-right-width:3px}
@@ -70,7 +69,7 @@ body{
 .cover-basmala{font-size:22px;color:var(--gold-200);margin-bottom:6px}
 .cover-series{
   font-family:'Reem Kufi',sans-serif;
-  font-size:15px;letter-spacing:.5px;
+  font-size:15px;
   color:var(--gold-200);
   margin:18px 0 4px;
 }
@@ -90,7 +89,7 @@ body{
   font-size:19px;color:#f7ead0;
   margin:16px 0 2px;
 }
-.cover-speaker .by{color:var(--gold-200);font-size:14.5px;letter-spacing:.4px}
+.cover-speaker .by{color:var(--gold-200);font-size:14.5px;}
 .cover-author{font-size:18px;color:#e9dfc2;margin-top:22px;line-height:1.9}
 .cover-author b{color:#f7ead0}
 .cover-link{
@@ -114,7 +113,7 @@ body{
 .toc{
   background:var(--card);
   border:1px solid var(--line);
-  border-radius:14px;
+  border-radius:12px;
   padding:30px 34px 24px;
   margin:40px 0 10px;
   box-shadow:0 1px 2px rgba(60,50,20,.05);
@@ -151,7 +150,7 @@ section{margin:52px 0}
   padding-bottom:10px;margin-bottom:20px;
 }
 .sec-num{
-  width:46px;height:46px;flex:none;border-radius:13px;
+  width:46px;height:46px;flex:none;border-radius:12px;
   background:var(--green-700);color:#fff;
   font-family:'Reem Kufi',sans-serif;font-size:23px;
   display:flex;align-items:center;justify-content:center;
@@ -186,7 +185,7 @@ b,strong{color:var(--green-900)}
   font-family:'Reem Kufi',sans-serif;
 }
 .matn{
-  background:linear-gradient(180deg,#fdf9ee,#f9f1da);
+  background:#f9f1da;
   border:1.5px solid var(--gold-500);border-right-width:6px;
 }
 .matn .tag{background:var(--gold-700);color:#fff}
@@ -194,7 +193,7 @@ b,strong{color:var(--green-900)}
 .matn p .src{display:block;font-size:15px;font-weight:400;color:var(--gold-900);margin-top:6px}
 .poem{margin:2px 0 0;text-align:center}
 .poem .ln{font-size:21px;font-weight:700;color:#4a3b12;line-height:2.35}
-.quran{background:linear-gradient(180deg,#eff6f1,#e8f1eb);border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
+.quran{background:#e8f1eb;border:1px solid #bcd8c6;border-right:5px solid var(--green-700)}
 .quran .tag{background:var(--green-700);color:#fff}
 .quran .ayah{font-size:23px;font-weight:700;color:var(--green-900);margin:0;line-height:2.1}
 .quran .ref{display:block;font-size:15px;color:var(--gold-900);margin-top:7px;font-weight:700}
@@ -219,8 +218,8 @@ b,strong{color:var(--green-900)}
 
 /* ============ المخططات ============ */
 .diagram{
-  background:linear-gradient(180deg,#fffdf7,#faf7ef);
-  border:1px solid var(--line);border-radius:14px;
+  background:#faf7ef;
+  border:1px solid var(--line);border-radius:12px;
   padding:22px 20px 16px;margin:26px 0;
 }
 .diagram figcaption,.diagram .dcap{

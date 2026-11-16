@@ -44,9 +44,7 @@
   .cover{
     min-height:100vh;
     background:
-      radial-gradient(1100px 600px at 50% -10%, rgba(212,175,90,.16), transparent 60%),
-      radial-gradient(900px 700px at 50% 115%, rgba(212,175,90,.10), transparent 55%),
-      linear-gradient(160deg,#0e4733 0%, #0a3b2a 55%, #072a1d 100%);
+      #0a3b2a;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -63,18 +61,16 @@
     padding:52px 40px 40px;
     text-align:center;
     position:relative;
-    background:
-      radial-gradient(600px 260px at 50% 0%, rgba(255,255,255,.05), transparent 70%);
-  }
-  .basmala{font-size:1.35rem;color:var(--gold-bright);letter-spacing:1px;margin-bottom:6px}
+      }
+  .basmala{font-size:1.35rem;color:var(--gold-bright);margin-bottom:6px}
   .cover-series{
     display:inline-block;
     font-family:'Reem Kufi',Tahoma,sans-serif;
     font-size:.85rem;
-    letter-spacing:.5px;
+    
     color:#dfd3ae;
     border:1px solid rgba(212,175,90,.5);
-    border-radius:999px;
+    border-radius:6px;
     padding:4px 18px;
     margin:10px 0 26px;
   }
@@ -93,7 +89,7 @@
     font-family:'Reem Kufi',Tahoma,sans-serif;
     background:var(--gold-bright);
     color:#25301f;
-    border-radius:999px;
+    border-radius:6px;
     font-size:1rem;
     font-weight:600;
     padding:5px 26px;
@@ -111,14 +107,14 @@
   .cover-meta{font-size:1.02rem;color:#e4dcc2;line-height:2.1}
   .cover-meta .fill-in{
     color:var(--gold-bright);
-    letter-spacing:2px;
+    
     border-bottom:1px dotted rgba(212,175,90,.8);
     padding:0 14px;
   }
   .cover-link-btn{
     display:inline-block;
     margin-top:20px;
-    background:linear-gradient(180deg,var(--gold-bright),#b8913c);
+    background:#b8913c;
     color:#1e291f;
     font-family:'Reem Kufi',Tahoma,sans-serif;
     font-weight:600;
@@ -142,7 +138,7 @@
 
   /* ============ جسم الكتاب ============ */
   main{max-width:900px;margin:0 auto;padding:34px 22px 10px}
-  section{scroll-margin-top:18px;background:var(--card);border:1px solid var(--gold-line);border-radius:16px;padding:30px 30px 24px;margin:0 0 34px;box-shadow:0 1px 6px rgba(60,50,20,.05)}
+  section{scroll-margin-top:18px;background:var(--card);border:1px solid var(--gold-line);border-radius:12px;padding:30px 30px 24px;margin:0 0 34px;box-shadow:0 1px 6px rgba(60,50,20,.05)}
   h2{
     font-family:'Reem Kufi',Tahoma,sans-serif;
     font-weight:600;
@@ -164,7 +160,7 @@
     font-size:1.15rem;
     box-shadow:inset 0 0 0 2px rgba(212,175,90,.6);
   }
-  .h-rule{height:3px;border:0;margin:8px 0 20px;background:linear-gradient(to left,var(--gold) 0%,var(--gold-line) 45%,transparent 100%);border-radius:2px}
+  .h-rule{height:2px;border:0;margin:8px 0 20px;background:var(--gold);border-radius:2px}
   h3{
     font-family:'Reem Kufi',Tahoma,sans-serif;
     font-weight:600;
@@ -190,12 +186,12 @@
     font-family:'Reem Kufi',Tahoma,sans-serif;
     font-size:.75rem;
     font-weight:600;
-    letter-spacing:.5px;
-    border-radius:999px;
+    
+    border-radius:6px;
     padding:1px 14px;
     margin-bottom:8px;
   }
-  .matn{background:linear-gradient(180deg,#f2f8f4,#ebf3ed);border-color:var(--green-line);border-right:5px solid var(--green)}
+  .matn{background:#ebf3ed;border-color:var(--green-line);border-right:5px solid var(--green)}
   .matn .box-label{background:var(--green);color:#f4eeda}
   .matn .txt{font-size:1.18rem;line-height:2.15;color:#123827;font-weight:400}
   .hadith{background:var(--green-dark);border-color:var(--green-dark);color:#f3ecd6;text-align:center}
@@ -212,7 +208,7 @@
   .example .box-label{background:var(--green-soft);color:var(--green-dark);border:1px solid var(--green-line)}
 
   /* الفهرس */
-  .toc{background:linear-gradient(180deg,#fffdf6,#faf6ea);border:1px solid var(--gold-line);border-radius:16px;padding:28px 30px;margin-bottom:34px}
+  .toc{background:#faf6ea;border:1px solid var(--gold-line);border-radius:12px;padding:28px 30px;margin-bottom:34px}
   .toc h2{margin-bottom:14px}
   .toc ol{list-style:none;padding:0;margin:0}
   .toc li{display:flex;align-items:baseline;gap:10px;margin:0;padding:4px 0}
@@ -223,7 +219,7 @@
   .toc .sub{padding-right:38px;font-size:.95rem}
   .toc .sub a{color:#4c4636}
   .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid var(--gold-line)}
-  .legend span{font-family:'Reem Kufi',Tahoma,sans-serif;font-size:.75rem;border-radius:999px;padding:2px 13px}
+  .legend span{font-family:'Reem Kufi',Tahoma,sans-serif;font-size:.75rem;border-radius:6px;padding:2px 13px}
   .lg-matn{background:var(--green);color:#f4eeda}
   .lg-hadith{background:var(--green-dark);color:var(--gold-bright)}
   .lg-faida{background:var(--gold);color:#fff}
@@ -237,7 +233,7 @@
     margin:22px 0;
     background:#fffdf7;
     border:1px solid var(--gold-line);
-    border-radius:14px;
+    border-radius:12px;
     padding:20px 20px 12px;
     break-inside:avoid;
     page-break-inside:avoid;
@@ -254,7 +250,7 @@
   .chip{
     background:var(--green-soft);
     border:1px solid var(--green-line);
-    border-radius:999px;
+    border-radius:6px;
     padding:2px 16px;
     font-size:.98rem;
     white-space:nowrap;
@@ -269,7 +265,7 @@
     background:var(--green-dark);color:#f6efdb;
     font-family:'Reem Kufi',Tahoma,sans-serif;
     font-size:1.1rem;
-    border-radius:14px;
+    border-radius:12px;
     padding:10px 34px;
     text-align:center;
     box-shadow:inset 0 0 0 2px rgba(212,175,90,.5);
@@ -297,7 +293,7 @@
     background:var(--green);color:#f6efdb;
     font-family:'Reem Kufi',Tahoma,sans-serif;
     font-size:1.15rem;
-    border-radius:999px;
+    border-radius:6px;
     padding:6px 40px;
     box-shadow:inset 0 0 0 2px rgba(212,175,90,.55);
   }
@@ -330,7 +326,7 @@
   .cond p{font-size:.9rem;line-height:1.9;margin:0;color:#3d382e;text-align:center}
 
   /* مقارنة القليل والكثير */
-  .vs{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;border:1.5px solid var(--gold-line);border-radius:14px;overflow:hidden;background:#fff}
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;border:1.5px solid var(--gold-line);border-radius:12px;overflow:hidden;background:#fff}
   .vs .side{padding:16px 18px}
   .vs .side h4{margin:0 0 8px;text-align:center;font-size:1.05rem;border:0;padding:0}
   .vs .side p{font-size:.95rem;line-height:2;margin:6px 0;text-align:center}
@@ -339,7 +335,7 @@
   .vs .divider{width:1.5px;background:var(--gold-line)}
   .vs-badge{
     position:absolute;top:50%;right:50%;transform:translate(50%,-50%);
-    background:var(--gold);color:#fff;border-radius:999px;
+    background:var(--gold);color:#fff;border-radius:6px;
     font-family:'Reem Kufi',Tahoma,sans-serif;font-size:.78rem;
     padding:4px 16px;box-shadow:0 0 0 5px #fffdf7;
     white-space:nowrap;
