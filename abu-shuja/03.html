@@ -1228,7 +1228,18 @@
 "use strict";
 var AR="٠١٢٣٤٥٦٧٨٩";
 function arNum(n){return String(n).replace(/\d/g,function(d){return AR[+d];});}
-document.querySelectorAll(".tq-wrap").forEach(function(w){
+document.querySelectorAll(".tq-wrap").forEach(function(w,wi){
+  /* خلطُ ترتيبِ الخياراتِ حتمائيًّا (من رقمِ الصندوقِ والسؤالِ) حتى لا يظهرَ الصوابُ أولًا دائمًا */
+  w.querySelectorAll(".tq-q").forEach(function(q,qi){
+    var seed=((wi+1)*2654435761+(qi+1)*40503)%4294967296;
+    var rnd=function(){seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296;};
+    var opts=[].slice.call(q.querySelectorAll(".tq-opt"));
+    for(var i=opts.length-1;i>0;i--){
+      var j=Math.floor(rnd()*(i+1));
+      q.appendChild(opts[j]);
+      opts.splice(j,1);
+    }
+  });
   var btn=w.querySelector("[data-tq-toggle]"),body=w.querySelector(".tq-body"),score=w.querySelector(".tq-score");
   var total=w.querySelectorAll(".tq-q").length;
   btn.addEventListener("click",function(){
@@ -1265,6 +1276,7 @@ document.querySelectorAll(".tq-wrap").forEach(function(w){
 });
 })();
 </script>
+
 
 
 </body>

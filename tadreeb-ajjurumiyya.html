@@ -2124,6 +2124,21 @@ let S = {
   ans: {}            /* idx -> {c: رقم الخيار أو -1 للتخطي, ok} */
 };
 
+
+/* ====== تبديلُ حتمائيٌّ لترتيبِ الخياراتِ (مشتقٌّ من رقمِ السؤالِ) ====== */
+/* حتى لا يظهرَ الصوابُ في موضعٍ ثابتٍ، ويظلُّ التقدُّمُ المحفوظُ صحيحًا:
+   data-i وc يعملان بمؤشرِ البنكِ، والحروفُ (أ ب ج د) بموضعِ العرضِ */
+function optPerm(qi, n){
+  let seed = ((qi + 1) * 2654435761) % 4294967296;
+  const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+  const idx = [];
+  for(let i = 0; i < n; i++) idx.push(i);
+  for(let i = n - 1; i > 0; i--){
+    const j = Math.floor(rnd() * (i + 1));
+    const t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+  }
+  return idx;
+}
 function buildOrder(){
   const list = [];
   QS.forEach((q, i)=>{ if(S.filter === "all" || q.l === S.filter) list.push(i); });
@@ -2200,10 +2215,10 @@ function render(){
   h += '<div class="qtext">' + q.q + "</div>";
 
   h += '<div class="opts" id="optsBox">';
-  q.o.forEach((o, i)=>{
-    h += '<button class="opt" data-i="' + i + '" ' + (answered ? "disabled" : "") + ">";
-    h += '<span class="letter">' + LETTERS[i] + "</span>";
-    h += '<span class="otext">' + o.t + "</span>";
+  optPerm(qi, q.o.length).forEach((bi, d)=>{
+    h += '<button class="opt" data-i="' + bi + '" ' + (answered ? "disabled" : "") + ">";
+    h += '<span class="letter">' + LETTERS[d] + "</span>";
+    h += '<span class="otext">' + q.o[bi].t + "</span>";
     h += '<span class="tickmark"></span>';
     h += "</button>";
   });
@@ -2294,8 +2309,10 @@ function paintAnswer(qi, animate){
 
   /* تعليلات بقية الخيارات */
   h += '<details class="allopts"><summary>اعرضْ تعليلاتِ الخياراتِ الأربعةِ جميعِها</summary><div class="items">';
-  q.o.forEach((o, i)=>{
-    h += '<div class="it' + (o.ok ? " g" : "") + '"><span class="l">' + LETTERS[i] + (o.ok ? " ✓" : "") + "</span>" + o.t + ' <div style="color:var(--ink-soft);font-size:.95rem">' + o.w + "</div></div>";
+  const perm = optPerm(qi, q.o.length);
+  perm.forEach((bi, d)=>{
+    const o = q.o[bi];
+    h += '<div class="it' + (o.ok ? " g" : "") + '"><span class="l">' + LETTERS[d] + (o.ok ? " ✓" : "") + "</span>" + o.t + ' <div style="color:var(--ink-soft);font-size:.95rem">' + o.w + "</div></div>";
   });
   h += "</div></details>";
 
