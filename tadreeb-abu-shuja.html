@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-tour="1">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -3307,5 +3307,166 @@ document.addEventListener("keydown", e=>{
   }
 })();
 </script>
+
+
+
+
+
+
+
+<!-- ✦ الجولة التعليمية (Tutor) -->
+<style>
+.tour-fab{position:fixed;inset-inline-end:16px;bottom:16px;z-index:9990;width:40px;height:40px;border-radius:50%;
+  background:var(--c-primary,#1b5e4b);color:#fdfaf2;border:none;cursor:pointer;
+  font-family:var(--f-head,"Sakkal Majalla","Segoe UI",sans-serif);font-size:1.15rem;font-weight:600;line-height:1;
+  box-shadow:0 1px 2px rgba(0,0,0,.12);transition:background 150ms cubic-bezier(0.22,1,0.36,1)}
+.tour-fab:hover{background:var(--c-primary-dark,#123f33)}
+.tour-banner{position:fixed;inset-inline:16px;bottom:16px;z-index:9991;max-width:520px;margin-inline:auto;
+  background:var(--c-card,#fff);border:1px solid var(--c-line,rgba(44,42,38,.09));border-inline-start:2px solid var(--c-primary,#1b5e4b);
+  border-radius:12px;padding:14px 18px;box-shadow:0 8px 24px rgba(0,0,0,.1);
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--f-body,"Amiri",serif);color:var(--c-text,#2c2a26)}
+.tour-banner .tb-txt{flex:1;min-width:200px}
+.tour-banner .tb-title{font-weight:600;color:var(--c-primary-dark,#123f33);font-size:1.05rem}
+.tour-banner .tb-body{font-size:.92rem;color:var(--c-muted,#6f6a5f);line-height:1.7}
+.tour-banner .tb-btns{display:flex;gap:8px}
+.tour-bstart{cursor:pointer;font-family:inherit;font-size:.92rem;font-weight:600;color:#fdfaf2;background:var(--c-primary,#1b5e4b);
+  border:none;border-radius:8px;padding:8px 18px;transition:background 150ms cubic-bezier(0.22,1,0.36,1)}
+.tour-bstart:hover{background:var(--c-primary-dark,#123f33)}
+.tour-blater{cursor:pointer;font-family:inherit;font-size:.92rem;font-weight:600;color:var(--c-primary,#1b5e4b);background:none;
+  border:1px solid var(--c-line,rgba(44,42,38,.18));border-radius:8px;padding:8px 14px}
+.tour-overlay{position:fixed;inset:0;z-index:9992;display:none}
+.tour-overlay.on{display:block}
+.tour-spot{position:fixed;border-radius:10px;box-shadow:0 0 0 9999px rgba(18,32,27,.55);border:2px solid var(--c-gold,#b08d3e);
+  pointer-events:none;transition:all 200ms cubic-bezier(0.22,1,0.36,1)}
+.tour-card{position:fixed;z-index:9993;max-width:340px;background:var(--c-card,#fff);border:1px solid var(--c-line,rgba(44,42,38,.09));
+  border-radius:12px;padding:16px 18px;box-shadow:0 8px 24px rgba(0,0,0,.18);
+  font-family:var(--f-body,"Amiri",serif);color:var(--c-text,#2c2a26)}
+.tour-card .tc-step{font-size:.78rem;color:var(--c-gold-ink,#8a6c25);font-family:var(--f-head,"Sakkal Majalla",sans-serif);margin-bottom:6px}
+.tour-card .tc-title{font-weight:600;font-size:1.1rem;color:var(--c-primary-dark,#123f33);margin-bottom:6px;line-height:1.5}
+.tour-card .tc-body{font-size:.95rem;line-height:1.8;color:var(--c-muted,#6f6a5f)}
+.tour-card .tc-nav{display:flex;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap}
+.tour-card .tc-skip{cursor:pointer;font-family:inherit;font-size:.82rem;color:var(--c-muted,#6f6a5f);background:none;border:none;padding:6px 4px;text-decoration:underline;text-underline-offset:3px}
+.tour-card .tc-grow{flex:1}
+.tour-card .tc-prev,.tour-card .tc-next{cursor:pointer;font-family:inherit;font-size:.88rem;font-weight:600;border-radius:8px;padding:7px 16px;transition:background 150ms cubic-bezier(0.22,1,0.36,1),color 150ms cubic-bezier(0.22,1,0.36,1)}
+.tour-card .tc-prev{color:var(--c-primary,#1b5e4b);background:none;border:1px solid var(--c-line,rgba(44,42,38,.18))}
+.tour-card .tc-next{color:#fdfaf2;background:var(--c-primary,#1b5e4b);border:none}
+.tour-card .tc-next:hover{background:var(--c-primary-dark,#123f33)}
+.tour-card .tc-prev:disabled{opacity:.35;cursor:default}
+@media print{.tour-fab,.tour-banner,.tour-overlay{display:none!important}}
+</style>
+<script>
+(function(){
+"use strict";
+var STEPS=[{"title":"التدريبُ الفقهيُّ التفاعلي","body":"٢١٧ سؤالًا على الدروسِ العشرينَ بتصحيحٍ فوريٍّ. اخترْ إجابتَكَ فيظهرُ لكَ الصوابُ والخطأُ معَ تعليلِ كلِّ خيارٍ."},{"sel":".how","title":"طريقةُ الإجابة","body":"اخترْ خيارًا فيُصحَّحْ فورًا أمامَكَ، وإنْ شئتَ «تخطَّ وأظهرِ الصوابَ». ومعَ كلِّ سؤالٍ زرُّ مشاهدةِ الدرسِ على يوتيوب."},{"sel":"#toolbar","title":"فلترةُ النطاق","body":"من شريطِ «النطاقِ» اخترْ درسًا بعينِهِ أو كلَّ الدروسِ — عدَّادُ كلِّ شريحةٍ يُظهرُ عددَ أسئلتِها."},{"sel":"#btnShuffle","title":"الترتيبُ العشوائيُّ","body":"زرٌّ يبعثرُ ترتيبَ الأسئلةِ — وترتيبُ الخياراتِ داخلَ كلِّ سؤالٍ مبدَّدٌ أصلًا حتى لا تحفظَ مواضعَ الإجاباتِ."},{"sel":".foot","title":"تقدُّمُكَ محفوظٌ","body":"يُحفَظُ تقدُّمُكَ تلقائيًّا في متصفحِكَ وتستأنفُهُ لاحقًا. وفي النهايةِ شاشةُ نتائجَ بأدائِكَ حسبَ الدرسِ والمهارةِ، مع زرِّ إعادةِ الأخطاءِ وحدَها."}];
+var KEY="tour-seen-train-abu";
+var L={"dir":"rtl","lang":"ar","fab":"؟","fabLabel":"دليل الاستخدام","bannerTitle":"أول مرة معك؟","bannerBody":"خذ جولةً سريعةً (أقل من دقيقة) تعرّفك بكل ما في الصفحة.","bannerStart":"ابدأ الجولة","bannerLater":"لاحقًا","skip":"تخطي الجولة","prev":"السابق","next":"التالي","done":"إنهاء","stepFmt":"الخطوة {n} من {t}"};
+var cur=0,active=false,els={};
+function h(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
+function markSeen(){try{localStorage.setItem(KEY,"1");}catch(e){}}
+function removeBanner(){var b=document.querySelector(".tour-banner");if(b)b.remove();}
+
+/* زر الدليل الدائم */
+var fab=h("button","tour-fab",L.fab);fab.title=L.fabLabel;fab.setAttribute("aria-label",L.fabLabel);
+fab.onclick=function(){removeBanner();start();};document.body.appendChild(fab);
+
+/* بانر أول زيارة */
+try{if(!localStorage.getItem(KEY)){
+  var bn=h("div","tour-banner");bn.dir=L.dir;bn.lang=L.lang;
+  bn.innerHTML='<div class="tb-txt"><div class="tb-title">'+L.bannerTitle+'</div><div class="tb-body">'+L.bannerBody+'</div></div>'+
+    '<div class="tb-btns"><button type="button" class="tour-bstart">'+L.bannerStart+'</button><button type="button" class="tour-blater">'+L.bannerLater+'</button></div>';
+  bn.querySelector(".tour-bstart").onclick=function(){removeBanner();start();};
+  bn.querySelector(".tour-blater").onclick=function(){removeBanner();markSeen();};
+  document.body.appendChild(bn);
+}}catch(e){}
+
+function target(step){
+  if(!step.sel)return null;
+  var list=document.querySelectorAll(step.sel);
+  if(!list.length)return null;
+  return list[step.nth||0];
+}
+function build(){
+  var ov=h("div","tour-overlay");
+  ov.appendChild(h("div","tour-spot"));
+  var card=h("div","tour-card");card.dir=L.dir;card.lang=L.lang;
+  ov.appendChild(card);
+  document.body.appendChild(ov);
+  els.ov=ov;els.spot=ov.querySelector(".tour-spot");els.card=card;
+}
+function render(){
+  els.card.innerHTML=
+    '<div class="tc-step">'+L.stepFmt.replace("{n}",cur+1).replace("{t}",STEPS.length)+'</div>'+
+    '<div class="tc-title">'+STEPS[cur].title+'</div>'+
+    '<div class="tc-body">'+STEPS[cur].body+'</div>'+
+    '<div class="tc-nav">'+
+      '<button type="button" class="tc-skip">'+L.skip+'</button><span class="tc-grow"></span>'+
+      '<button type="button" class="tc-prev"'+(cur===0?" disabled":"")+'>'+L.prev+'</button>'+
+      '<button type="button" class="tc-next">'+(cur===STEPS.length-1?L.done:L.next)+'</button>'+
+    '</div>';
+  els.card.querySelector(".tc-skip").onclick=end;
+  els.card.querySelector(".tc-prev").onclick=function(){if(cur>0){cur--;show();}};
+  els.card.querySelector(".tc-next").onclick=function(){if(cur<STEPS.length-1){cur++;show();}else end();};
+}
+function positionCard(rect){
+  var vw=window.innerWidth,vh=window.innerHeight,gap=14;
+  if(!rect){
+    var cw=els.card.offsetWidth,ch=els.card.offsetHeight;
+    els.card.style.left=Math.max(12,(vw-cw)/2)+"px";
+    els.card.style.top=Math.max(12,(vh-ch)/2)+"px";
+    return;
+  }
+  var x=rect.left,y=rect.top,w=rect.width,hh=rect.height;
+  els.card.style.left="";els.card.style.top="";
+  var cw=els.card.offsetWidth,ch=els.card.offsetHeight;
+  var below=y+hh+gap+ch+20<vh;
+  var top=below?y+hh+gap:y-gap-ch;
+  top=Math.min(Math.max(12,top),Math.max(12,vh-ch-12));
+  var left=x+w/2-cw/2;
+  left=Math.min(Math.max(12,left),Math.max(12,vw-cw-12));
+  els.card.style.left=left+"px";els.card.style.top=top+"px";
+}
+var placeTok=0;
+function place(step){
+  var t=target(step);
+  render();
+  var tok=++placeTok;
+  if(t){
+    if(t.scrollIntoView)t.scrollIntoView({behavior:"smooth",block:"center"});
+    setTimeout(function(){
+      if(tok!==placeTok||!active)return;
+      var r=t.getBoundingClientRect();
+      els.spot.style.display="block";
+      els.spot.style.left=(r.left-6)+"px";els.spot.style.top=(r.top-6)+"px";
+      els.spot.style.width=(r.width+12)+"px";els.spot.style.height=(r.height+12)+"px";
+      positionCard(r);
+    },320);
+  }else{
+    els.spot.style.display="none";
+    positionCard(null);
+  }
+}
+function show(){
+  place(STEPS[cur]);
+}
+function start(){
+  if(active)return;active=true;cur=0;
+  build();els.ov.classList.add("on");show();
+  window.addEventListener("resize",onR);
+}
+function onR(){if(active)show();}
+function end(){
+  active=false;markSeen();
+  window.removeEventListener("resize",onR);
+  if(els.ov)els.ov.remove();
+}
+document.addEventListener("keydown",function(e){
+  if(!active)return;
+  if(e.key==="Escape")end();
+  else if(e.key==="ArrowLeft"&&L.dir==="rtl"||e.key==="ArrowRight"&&L.dir==="ltr"){if(cur<STEPS.length-1){cur++;show();}}
+  else if(e.key==="ArrowRight"&&L.dir==="rtl"||e.key==="ArrowLeft"&&L.dir==="ltr"){if(cur>0){cur--;show();}}
+});
+})();
+</script>
+
 </body>
 </html>
